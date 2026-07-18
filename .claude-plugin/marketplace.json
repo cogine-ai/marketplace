@@ -1,0 +1,17 @@
+{
+  "name": "cogine-ai",
+  "description": "Plugins packaged and maintained by Cogine AI.",
+  "owner": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "plugins": [
+    {
+      "name": "design-engineer-skills",
+      "source": "./plugins/design-engineer-skills",
+      "description": "Six design-engineering and UI motion skills, packaged by Cogine AI.",
+      "version": "0.1.0",
+      "category": "development"
+    }
+  ]
+}
