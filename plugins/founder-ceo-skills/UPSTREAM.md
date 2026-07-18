@@ -58,8 +58,8 @@ its `origin` metadata; the skill body matches this reference commit.
 
 The activation description was narrowed so this large generalist skill loads
 after an explicit request for comprehensive CEO advice. Its financial scenario
-script also fixes repeated multi-year compounding and includes a regression
-test.
+script also fixes repeated multi-year compounding, NPV, and IRR calculations
+and includes regression tests.
 
 ## David Turner Product Skills — 1 skill
 
@@ -82,5 +82,6 @@ scenarios, unit economics, hiring, and fundraising tradeoffs.
 `planmode-ceo` remains byte-for-byte identical to its source.
 `investor-materials` only moves its origin marker into supported metadata.
 `ceo-advisor` narrows its activation description and corrects repeated
-compounding in its financial scenario script. Other imported content is
-preserved with line endings and trailing whitespace normalized.
+compounding, NPV, and IRR calculations in its financial scenario script.
+Other imported content is preserved with line endings and trailing whitespace
+normalized.

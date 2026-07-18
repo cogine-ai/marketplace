@@ -4,7 +4,7 @@ Financial Scenario Analyzer - Model different business scenarios and their finan
 """
 
 import json
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 import math
 
 class FinancialScenarioAnalyzer:
@@ -112,8 +112,13 @@ class FinancialScenarioAnalyzer:
 
         # Calculate NPV and IRR
         cash_flows = [p['free_cash_flow'] for p in projections]
-        npv = self._calculate_npv(cash_flows, scenario.get('discount_rate', 0.1))
-        irr = self._calculate_irr(cash_flows, base_case.get('initial_investment', 0))
+        initial_investment = base_case.get('initial_investment', 0)
+        npv = self._calculate_npv(
+            cash_flows,
+            scenario.get('discount_rate', 0.1),
+            initial_investment
+        )
+        irr = self._calculate_irr(cash_flows, initial_investment)
 
         return {
             'name': name,
@@ -194,25 +199,63 @@ class FinancialScenarioAnalyzer:
             'cumulative_cash_flow': previous_state.get('cumulative_cash_flow', 0) + free_cash_flow
         }
 
-    def _calculate_npv(self, cash_flows: List[float], discount_rate: float) -> float:
+    def _calculate_npv(
+        self,
+        cash_flows: List[float],
+        discount_rate: float,
+        initial_investment: float = 0
+    ) -> float:
         """Calculate Net Present Value"""
-        npv = 0
+        if discount_rate <= -1:
+            raise ValueError("discount_rate must be greater than -1")
+
+        npv = -initial_investment
         for i, cf in enumerate(cash_flows):
             npv += cf / math.pow(1 + discount_rate, i + 1)
         return npv
 
-    def _calculate_irr(self, cash_flows: List[float], initial_investment: float) -> float:
-        """Calculate Internal Rate of Return (simplified)"""
-        if not cash_flows or initial_investment == 0:
-            return 0
+    def _calculate_irr(
+        self,
+        cash_flows: List[float],
+        initial_investment: float
+    ) -> Optional[float]:
+        """Calculate IRR for a conventional investment cash-flow series."""
+        if not cash_flows or initial_investment <= 0 or not any(cf > 0 for cf in cash_flows):
+            return None
 
-        # Simple IRR approximation
-        total_return = sum(cash_flows)
-        years = len(cash_flows)
+        timed_cash_flows = [-initial_investment, *cash_flows]
 
-        if initial_investment > 0:
-            return math.pow(total_return / initial_investment, 1/years) - 1
-        return 0
+        def value_at(rate: float) -> float:
+            return sum(
+                cash_flow / math.pow(1 + rate, period)
+                for period, cash_flow in enumerate(timed_cash_flows)
+            )
+
+        lower = -0.9999
+        upper = 1.0
+        lower_value = value_at(lower)
+        upper_value = value_at(upper)
+
+        while lower_value * upper_value > 0 and upper < 1_000_000:
+            upper *= 2
+            upper_value = value_at(upper)
+
+        if lower_value * upper_value > 0:
+            return None
+
+        for _ in range(200):
+            midpoint = (lower + upper) / 2
+            midpoint_value = value_at(midpoint)
+
+            if abs(midpoint_value) < 1e-9:
+                return midpoint
+            if lower_value * midpoint_value <= 0:
+                upper = midpoint
+            else:
+                lower = midpoint
+                lower_value = midpoint_value
+
+        return (lower + upper) / 2
 
     def _find_break_even(self, projections: List[Dict]) -> int:
         """Find break-even month"""
@@ -321,8 +364,9 @@ class FinancialScenarioAnalyzer:
         if best_risk_adjusted['npv'] > 0:
             recommendation['rationale'].append(f"Positive NPV of ${best_risk_adjusted['npv']:,.0f}")
 
-        if best_risk_adjusted['irr'] > 0.15:
-            recommendation['rationale'].append(f"Strong IRR of {best_risk_adjusted['irr']:.1%}")
+        scenario_irr = best_risk_adjusted.get('irr')
+        if scenario_irr is not None and scenario_irr > 0.15:
+            recommendation['rationale'].append(f"Strong IRR of {scenario_irr:.1%}")
 
         if best_risk_adjusted['break_even_month'] > 0 and best_risk_adjusted['break_even_month'] < 24:
             recommendation['rationale'].append(f"Quick path to profitability ({best_risk_adjusted['break_even_month']} months)")
@@ -369,7 +413,11 @@ def analyze_financial_scenarios(base_case: Dict, scenarios: List[Dict]) -> str:
     for scenario in results['scenario_analysis']:
         output.append(f"\n{scenario['name']} (Probability: {scenario['probability']:.0%})")
         output.append(f"  NPV: ${scenario['npv']:,.0f}")
-        output.append(f"  IRR: {scenario['irr']:.1%}")
+        output.append(
+            f"  IRR: {scenario['irr']:.1%}"
+            if scenario['irr'] is not None
+            else "  IRR: N/A"
+        )
         output.append(f"  Break-even: {scenario['break_even_month']} months")
         output.append(f"  Return Multiple: {scenario['total_return']:.1f}x")
 

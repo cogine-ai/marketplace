@@ -6,7 +6,10 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPT_DIR))
 
-from financial_scenario_analyzer import FinancialScenarioAnalyzer
+from financial_scenario_analyzer import (
+    FinancialScenarioAnalyzer,
+    analyze_financial_scenarios,
+)
 
 
 class FinancialScenarioAnalyzerTest(unittest.TestCase):
@@ -43,6 +46,30 @@ class FinancialScenarioAnalyzerTest(unittest.TestCase):
             [110.0, 120.0, 130.0],
         )
         self.assertAlmostEqual(exponential[1]["operating_expenses"], 57.6)
+
+    def test_irr_uses_cash_flow_timing(self):
+        irr = self.analyzer._calculate_irr([0.0, 0.0, 133.1], 100.0)
+
+        self.assertAlmostEqual(irr, 0.10, places=7)
+        self.assertIsNone(self.analyzer._calculate_irr([10.0], 0))
+        self.assertIsNone(self.analyzer._calculate_irr([-10.0], 100.0))
+
+    def test_npv_includes_the_initial_investment(self):
+        npv = self.analyzer._calculate_npv(
+            [0.0, 0.0, 133.1],
+            discount_rate=0.10,
+            initial_investment=100.0,
+        )
+
+        self.assertAlmostEqual(npv, 0.0, places=7)
+
+    def test_report_marks_irr_unavailable_without_an_investment(self):
+        report = analyze_financial_scenarios(
+            self.base_case,
+            [{"name": "Base", "growth_rate": 0.10}],
+        )
+
+        self.assertIn("IRR: N/A", report)
 
 
 if __name__ == "__main__":

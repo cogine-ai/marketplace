@@ -9,8 +9,8 @@
   `startup-finance` skill for burn, runway, scenarios, and unit economics.
 - Keep `planmode-ceo` unchanged and reserve the broad `ceo-advisor` skill
   for explicit requests for comprehensive CEO advice.
-- Correct repeated multi-year compounding in the bundled CEO financial
-  scenario analyzer and add a regression test.
+- Correct repeated multi-year compounding, NPV, and IRR calculations in the
+  bundled CEO financial scenario analyzer and add regression tests.
 
 ## 0.5.0 - 2026-07-19
 
