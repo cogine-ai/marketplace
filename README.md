@@ -10,8 +10,9 @@ A curated internal marketplace of role-based skills for Codex and Claude Code.
 codex plugin marketplace add cogine-ai/marketplace
 ```
 
-Then open **Plugins**, choose **Cogine AI**, and install only the role plugins
-you want. If the Marketplace does not appear immediately, restart Codex once.
+Then open the Codex App's **Plugins** page, choose **Cogine AI**, and install
+only the role plugins you want. If the Marketplace does not appear immediately,
+restart Codex once.
 
 ![Cogine AI Marketplace in Codex](docs/images/cogine-ai-marketplace.png)
 
