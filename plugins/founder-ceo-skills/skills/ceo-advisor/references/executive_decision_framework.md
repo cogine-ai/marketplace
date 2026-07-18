@@ -74,25 +74,28 @@
 3. **Efficiency** - Cost reduction, productivity
 4. **Experimental** - Innovation, R&D
 
-**Allocation Guidelines**:
-- Essential: 40-50%
-- Strategic: 30-40%
-- Efficiency: 10-15%
-- Experimental: 5-10%
+**Allocation Guardrails**:
+- Fund the minimum safe level of essential operations and commitments first.
+- Protect the cash buffer and downside runway established by
+  `startup-finance`.
+- Fund strategic work against explicit evidence, milestones, and stop
+  conditions.
+- Compare efficiency work against the company’s actual runway and decision
+  horizon.
+- Cap experiments by affordable downside, not a generic portfolio percentage.
+- Reconcile all allocations to one cash plan before approval.
 
 #### Budget Decision Tree
 ```
-Is it required for operations?
-├─ Yes → Essential (Auto-approve if <$X)
-└─ No → Does it drive growth?
-    ├─ Yes → What's the ROI?
-    │   ├─ >30% → Strategic (Approve)
-    │   └─ <30% → Defer/Reject
-    └─ No → Does it reduce costs?
-        ├─ Yes → Payback period?
-        │   ├─ <12 months → Efficiency (Approve)
-        │   └─ >12 months → Defer
-        └─ No → Experimental (Limited budget)
+Is it required for safe operations or a binding commitment?
+├─ Yes → Fund the minimum viable level and reflect it in the cash plan
+└─ No → Does it advance an explicit strategic priority?
+    ├─ Yes → Compare evidence, time-to-impact, and scenario-adjusted return
+    │   ├─ Clears the agreed decision criteria → Fund with milestones
+    │   └─ Does not clear them → Defer, redesign, or reject
+    └─ No → Does it produce a measurable efficiency gain?
+        ├─ Yes → Compare payback with runway and opportunity cost
+        └─ No → Treat as an experiment with a cap and stop condition
 ```
 
 ### 3. Organizational Decisions

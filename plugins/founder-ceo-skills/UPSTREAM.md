@@ -83,6 +83,8 @@ scenarios, unit economics, hiring, and fundraising tradeoffs.
 `investor-materials` only moves its origin marker into supported metadata.
 `ceo-advisor` narrows its activation description and routes analysis to
 `competitive-strategy`, `seven-powers`, `planning-cadence`, and
-`startup-finance` instead of bundling the upstream analyzers.
+`startup-finance` instead of bundling the upstream analyzers. Its decision
+reference also replaces generic capital-allocation percentages with
+runway-aware guardrails.
 Other imported content is preserved with line endings and trailing whitespace
 normalized.

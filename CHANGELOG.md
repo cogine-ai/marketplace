@@ -10,7 +10,8 @@
 - Keep `planmode-ceo` unchanged and reserve the broad `ceo-advisor` skill
   for explicit requests for comprehensive CEO advice.
 - Route `ceo-advisor` analysis to focused strategy, planning, and finance
-  skills instead of bundling duplicate upstream Python models.
+  skills instead of bundling duplicate upstream Python models, and replace
+  fixed capital-allocation recipes with runway-aware guardrails.
 
 ## 0.5.0 - 2026-07-19
 
