@@ -19,6 +19,13 @@
       "description": "Twenty-four focused engineering skills for specs, coding, frontend work, debugging, review, security, CI, and orchestration.",
       "version": "0.1.3",
       "category": "development"
+    },
+    {
+      "name": "product-manager-skills",
+      "source": "./plugins/product-manager-skills",
+      "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
+      "version": "0.1.0",
+      "category": "productivity"
     }
   ]
 }

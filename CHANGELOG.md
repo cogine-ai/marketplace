@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.0 - 2026-07-19
+
+- Add the cross-platform `product-manager-skills` plugin with 14 focused
+  product discovery, research, PRD, prototype, roadmap, metrics, design, spec,
+  and ticketing skills.
+- Add current `interface-design` and `ui-ux-pro-max` snapshots, keeping the
+  larger design database explicit-only to limit routine prompt overhead.
+- Condense product-management workflows into portable, connector-independent
+  skills for Codex and Claude Code.
+
 ## 0.2.3 - 2026-07-18
 
 - Let `tdd` apply to suitable feature work without an explicit test-first request.

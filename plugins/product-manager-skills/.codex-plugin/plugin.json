@@ -1,0 +1,43 @@
+{
+  "name": "product-manager-skills",
+  "version": "0.1.0",
+  "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/product-manager-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "product-management",
+    "product-research",
+    "prd",
+    "roadmap",
+    "prototyping",
+    "ui-ux"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Product Manager Skills",
+    "shortDescription": "A focused product-management toolkit for Cogine.",
+    "longDescription": "Fourteen curated skills for product discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills and two high-quality design systems.",
+    "developerName": "Cogine AI",
+    "category": "Productivity",
+    "capabilities": [
+      "Product discovery",
+      "Research",
+      "Planning",
+      "Prototyping",
+      "Design",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/cogine-ai/marketplace",
+    "defaultPrompt": [
+      "Stress-test this product idea, then turn the decision into a PRD.",
+      "Synthesize this research and update the product roadmap.",
+      "Prototype three product-interface directions for this workflow."
+    ]
+  }
+}

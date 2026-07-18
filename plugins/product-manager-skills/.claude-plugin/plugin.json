@@ -1,0 +1,20 @@
+{
+  "name": "product-manager-skills",
+  "version": "0.1.0",
+  "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/product-manager-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "product-management",
+    "product-research",
+    "prd",
+    "roadmap",
+    "prototyping",
+    "ui-ux"
+  ]
+}

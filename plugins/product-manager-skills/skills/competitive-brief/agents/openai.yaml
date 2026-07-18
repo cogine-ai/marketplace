@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitive Brief"
+  short_description: "Build an evidence-based competitor brief"
+  default_prompt: "Use $competitive-brief to compare these competitors and derive product strategy implications."

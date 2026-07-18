@@ -1,0 +1,6 @@
+interface:
+  display_name: "UI UX Pro Max"
+  short_description: "Search a deep UI and UX design database"
+  default_prompt: "Use $ui-ux-pro-max to look up a design system for this product and stack."
+policy:
+  allow_implicit_invocation: false

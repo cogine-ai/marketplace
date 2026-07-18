@@ -1,0 +1,4 @@
+interface:
+  display_name: "Synthesize Research"
+  short_description: "Turn research into prioritized evidence"
+  default_prompt: "Use $synthesize-research to turn these research inputs into prioritized findings, opportunities, and open questions."

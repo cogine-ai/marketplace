@@ -1,0 +1,4 @@
+interface:
+  display_name: "Metrics Review"
+  short_description: "Turn product metrics into actions"
+  default_prompt: "Use $metrics-review to analyze these product metrics and recommend the next actions."
