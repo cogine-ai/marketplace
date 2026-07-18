@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Enablement"
+  short_description: "Create collateral that advances active deals"
+  default_prompt: "Use $sales-enablement to create the right asset for this sales stage."

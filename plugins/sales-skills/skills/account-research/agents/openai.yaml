@@ -1,0 +1,4 @@
+interface:
+  display_name: "Account Research"
+  short_description: "Research one account for actionable sales intel"
+  default_prompt: "Use $account-research to research this account before outreach."

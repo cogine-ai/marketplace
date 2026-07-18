@@ -15,12 +15,12 @@ plugin so Codex and Claude Code can discover the same bundle.
   programmatic-seo; growth-experiments from ab-testing
 - License: MIT
 
-## Lenny skills by Refound AI — 2 skills
+## Lenny skills by Refound AI — 3 skills
 
 - Repository: https://github.com/RefoundAI/lenny-skills
 - Branch: main
 - Pinned commit: 13598cc54e09399bc1bc1398b0fca284110efb2f
-- Skills: growth-model, acquisition-channels
+- Skills: growth-model, acquisition-channels, plg-sales-integration
 - License: MIT
 
 ## David Turner product skills — experiment safeguards
@@ -41,3 +41,5 @@ Tool-registry links and hard connector assumptions were removed.
 marketing-loops now describes both Codex and Claude Code scheduling.
 search-visibility routes to on-demand source references, and
 growth-experiments adds validity checks before outcome interpretation.
+plg-sales-integration is deliberately shared with Sales Skills at the
+cross-functional PQL and sales-assist boundary.

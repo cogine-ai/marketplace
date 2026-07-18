@@ -30,7 +30,21 @@
     {
       "name": "growth-and-gtm-skills",
       "source": "./plugins/growth-and-gtm-skills",
-      "description": "Seventeen focused growth and GTM skills for strategy, channels, acquisition, conversion, retention, measurement, and recurring execution.",
+      "description": "Eighteen focused growth and GTM skills for strategy, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution.",
+      "version": "0.1.1",
+      "category": "productivity"
+    },
+    {
+      "name": "sales-skills",
+      "source": "./plugins/sales-skills",
+      "description": "Twelve focused sales skills for founder-led selling, prospecting, outreach, calls, enterprise accounts, pipeline management, and PLG sales assist.",
+      "version": "0.1.0",
+      "category": "productivity"
+    },
+    {
+      "name": "founder-ceo-skills",
+      "source": "./plugins/founder-ceo-skills",
+      "description": "Sixteen focused founder and CEO skills for product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication.",
       "version": "0.1.0",
       "category": "productivity"
     }

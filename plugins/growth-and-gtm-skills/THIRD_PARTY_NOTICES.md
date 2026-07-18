@@ -13,7 +13,7 @@ LICENSES/MIT-Corey-Haines.txt.
 
 ## Refound AI
 
-growth-model and acquisition-channels are copied from
+growth-model, acquisition-channels, and plg-sales-integration are copied from
 [RefoundAI/lenny-skills](https://github.com/RefoundAI/lenny-skills), copyright
 (c) 2025 Refound AI, under the MIT License. The license text is in
 LICENSES/MIT-Refound-AI.txt.

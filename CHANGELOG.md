@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.6.0 - 2026-07-19
+
+- Add the cross-platform `founder-ceo-skills` plugin with 16 focused
+  workflows for founder judgment, PMF, strategy, planning, organization,
+  finance, fundraising, and board communication.
+- Add `measuring-pmf`, `seven-powers`, and a compact, tool-neutral
+  `startup-finance` skill for burn, runway, scenarios, and unit economics.
+- Keep `planmode-ceo` unchanged and reserve the broad `ceo-advisor` skill
+  for explicit requests for comprehensive CEO advice.
+
+## 0.5.0 - 2026-07-19
+
+- Add the cross-platform `sales-skills` plugin with 12 focused workflows for
+  founder-led sales, first customers, prospecting, outreach, calls, enablement,
+  enterprise execution, pipeline review, and PLG sales assist.
+- Replace a basic post-call summary with a compact `call-review` workflow that
+  preserves follow-up output and adds evidence-based coaching on request.
+- Add `enterprise-account-planning` for stakeholder maps, MEDDPICC, stage
+  gates, and mutual action plans without importing the long upstream narrative.
+- Expand `growth-and-gtm-skills` from 17 to 18 skills by intentionally sharing
+  `plg-sales-integration` across the Growth and Sales role bundles.
+
 ## 0.4.1 - 2026-07-19
 
 - Expand `product-manager-skills` from 14 to 16 skills with Lenny's

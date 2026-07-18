@@ -1,0 +1,22 @@
+{
+  "name": "founder-ceo-skills",
+  "version": "0.1.0",
+  "description": "Sixteen focused founder and CEO skills for product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/founder-ceo-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "founder",
+    "ceo",
+    "product-market-fit",
+    "strategy",
+    "organizational-design",
+    "startup-finance",
+    "fundraising",
+    "board-communication"
+  ]
+}
