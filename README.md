@@ -1,49 +1,62 @@
 # Cogine AI Marketplace
 
-Cogine AI's INTERNAL plugin marketplace for Codex and Claude Code.
+A curated internal marketplace of role-based skills for Codex and Claude Code.
 
-## Available plugins
+## Install the Marketplace
 
-- `design-engineer-skills` — six design-engineering and UI motion skills.
-- `coding-engineer-skills` — 24 skills for specs, implementation, frontend and
-  React work, architecture, debugging, testing, review, security, Git/CI, and
-  Cogine multi-repository orchestration.
-- `product-manager-skills` — 16 skills for strategy, product judgment,
-  discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and
-  tickets.
-- `growth-and-gtm-skills` — 18 skills for product marketing, growth models,
-  channels, acquisition, conversion, retention, measurement, PLG sales assist,
-  and recurring execution.
-- `sales-skills` — 12 skills for founder-led selling, first customers,
-  prospecting, outreach, calls, enablement, enterprise accounts, pipeline
-  review, and PLG sales integration.
-- `founder-ceo-skills` — 16 skills for founder judgment, product-market fit,
-  strategy, decisions, planning, organization, finance, fundraising, and board
-  communication.
-
-## Install in Codex
+### Codex (recommended)
 
 ```bash
 codex plugin marketplace add cogine-ai/marketplace
-codex plugin add design-engineer-skills@cogine-ai
-codex plugin add coding-engineer-skills@cogine-ai
-codex plugin add product-manager-skills@cogine-ai
-codex plugin add growth-and-gtm-skills@cogine-ai
-codex plugin add sales-skills@cogine-ai
-codex plugin add founder-ceo-skills@cogine-ai
 ```
 
-## Install in Claude Code
+Then open **Plugins**, choose **Cogine AI**, and install only the role plugins
+you want. If the Marketplace does not appear immediately, restart Codex once.
+
+![Cogine AI Marketplace in Codex](docs/images/cogine-ai-marketplace.png)
+
+### Claude Code
 
 ```bash
 claude plugin marketplace add cogine-ai/marketplace
-claude plugin install design-engineer-skills@cogine-ai
-claude plugin install coding-engineer-skills@cogine-ai
-claude plugin install product-manager-skills@cogine-ai
-claude plugin install growth-and-gtm-skills@cogine-ai
-claude plugin install sales-skills@cogine-ai
-claude plugin install founder-ceo-skills@cogine-ai
 ```
+
+Adding the Marketplace registers its catalog; it does not install every plugin.
+This is a private repository, so Git must already have access to
+`cogine-ai/marketplace`.
+
+## Available plugins
+
+| Plugin | Skills | Focus |
+| --- | ---: | --- |
+| `design-engineer-skills` | 6 | UI polish, animation review, and motion design. |
+| `coding-engineer-skills` | 24 | Specs, implementation, frontend and React work, architecture, debugging, testing, security, Git/CI, and multi-repository orchestration. |
+| `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
+| `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
+| `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
+| `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
+
+Install any plugin from the table with its ID:
+
+```bash
+# Codex
+codex plugin add coding-engineer-skills@cogine-ai
+
+# Claude Code
+claude plugin install coding-engineer-skills@cogine-ai
+```
+
+In an existing Claude Code session, run `/reload-plugins` after installation.
+
+## Compatibility
+
+Codex is the primary target. The repository also ships native Claude Code
+manifests while sharing the same skill folders:
+
+- Codex catalog: `.agents/plugins/marketplace.json`
+- Codex manifests: `plugins/*/.codex-plugin/plugin.json`
+- Claude Code catalog: `.claude-plugin/marketplace.json`
+- Claude Code manifests: `plugins/*/.claude-plugin/plugin.json`
 
 ## Update
 
@@ -57,10 +70,11 @@ claude plugin marketplace update cogine-ai
 ```text
 .agents/plugins/marketplace.json       # Codex catalog
 .claude-plugin/marketplace.json        # Claude Code catalog
+docs/images/                           # Marketplace screenshots
 plugins/design-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # Shared skills
+  skills/                              # 6 shared skills
 plugins/coding-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
