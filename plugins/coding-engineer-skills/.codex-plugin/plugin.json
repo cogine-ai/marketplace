@@ -1,0 +1,44 @@
+{
+  "name": "coding-engineer-skills",
+  "version": "0.1.0",
+  "description": "Twenty-six focused engineering skills for planning, implementation, frontend work, debugging, review, security, CI, and multi-repository orchestration.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/coding-engineer-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "coding-engineering",
+    "software-development",
+    "react",
+    "code-review",
+    "debugging",
+    "ci",
+    "orchestration"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Coding Engineer Skills",
+    "shortDescription": "A focused software-engineering toolkit for Cogine.",
+    "longDescription": "Twenty-six curated skills for moving from PRD or conversation to implementation, frontend and React work, architecture, debugging, testing, review, security, Git and CI delivery, and Cogine multi-repository orchestration. Prioritizes Cogine-authored workflows and Matt Pocock's lightweight engineering skills; superpowers is intentionally excluded.",
+    "developerName": "Cogine AI",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Planning",
+      "Read",
+      "Write",
+      "Testing",
+      "Code review",
+      "Orchestration"
+    ],
+    "websiteURL": "https://github.com/cogine-ai/marketplace",
+    "defaultPrompt": [
+      "Turn this conversation into an implementation-ready spec and tickets.",
+      "Implement this ticket, validate it, and prepare the pull request.",
+      "Review and improve this React interface.",
+      "Diagnose this failure and find the root cause."
+    ]
+  }
+}

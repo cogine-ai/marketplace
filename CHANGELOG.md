@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 - 2026-07-18
+
+- Add the cross-platform `coding-engineer-skills` plugin with 26 skills.
+- Prioritize Cogine workflows and Matt Pocock's lightweight engineering chain.
+- Include frontend design, React, shadcn, review, security, CI, and Auto Agents
+  orchestration skills while explicitly excluding `superpowers`.
+
 ## 0.1.0 - 2026-07-18
 
 - Add the cross-platform `design-engineer-skills` plugin.

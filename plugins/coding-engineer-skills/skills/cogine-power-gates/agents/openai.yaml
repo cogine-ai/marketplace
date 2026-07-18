@@ -1,0 +1,7 @@
+interface:
+  display_name: "CoginePowerGates"
+  short_description: "Gate material engineering decisions"
+  default_prompt: "Use $cogine-power-gates to select the appropriate mode and gate only material decisions for this task."
+
+policy:
+  allow_implicit_invocation: true

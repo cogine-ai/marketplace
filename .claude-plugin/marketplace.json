@@ -12,6 +12,13 @@
       "description": "Six design-engineering and UI motion skills, packaged by Cogine AI.",
       "version": "0.1.0",
       "category": "development"
+    },
+    {
+      "name": "coding-engineer-skills",
+      "source": "./plugins/coding-engineer-skills",
+      "description": "Twenty-six focused engineering skills for specs, coding, frontend work, debugging, review, security, CI, and orchestration.",
+      "version": "0.1.0",
+      "category": "development"
     }
   ]
 }
