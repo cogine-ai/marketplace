@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Call Review"
+  short_description: "Summarize calls and coach the next move"
+  default_prompt: "Use $call-review to review this sales call and draft the follow-up."

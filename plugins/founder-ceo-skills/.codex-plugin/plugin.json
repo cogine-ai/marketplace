@@ -1,0 +1,45 @@
+{
+  "name": "founder-ceo-skills",
+  "version": "0.1.0",
+  "description": "Sixteen focused founder and CEO skills for product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/founder-ceo-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "founder",
+    "ceo",
+    "product-market-fit",
+    "strategy",
+    "organizational-design",
+    "startup-finance",
+    "fundraising",
+    "board-communication"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Founder/CEO",
+    "shortDescription": "A focused founder and CEO operating toolkit.",
+    "longDescription": "Sixteen curated skills for founder judgment, product-market fit, high-stakes decisions, competitive power, planning cadence, risk, organization design, executive hiring and change, startup finance, fundraising, investor materials, and board communication.",
+    "developerName": "Cogine AI",
+    "category": "Productivity",
+    "capabilities": [
+      "Strategy",
+      "Decision support",
+      "Planning",
+      "Financial analysis",
+      "Organization design",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/cogine-ai/marketplace",
+    "defaultPrompt": [
+      "Assess our PMF and identify the next founder-level decision.",
+      "Stress-test this strategy and its durable competitive power.",
+      "Model runway scenarios and prepare the board narrative."
+    ]
+  }
+}

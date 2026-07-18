@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pipeline Review"
+  short_description: "Prioritize deals and surface pipeline risk"
+  default_prompt: "Use $pipeline-review to review this pipeline and set weekly actions."

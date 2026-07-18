@@ -1,0 +1,45 @@
+{
+  "name": "sales-skills",
+  "version": "0.1.0",
+  "description": "Twelve focused sales skills for founder-led selling, prospecting, outreach, calls, enablement, enterprise accounts, pipeline management, and PLG sales assist.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/sales-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "sales",
+    "founder-led-sales",
+    "prospecting",
+    "cold-email",
+    "sales-calls",
+    "enterprise-sales",
+    "pipeline",
+    "product-led-growth"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Sales Skills",
+    "shortDescription": "A focused end-to-end sales toolkit for Cogine.",
+    "longDescription": "Twelve curated skills for founder-led selling, first B2B customers, sourced prospecting, account research, cold email, call preparation and review, sales enablement, enterprise motion and account planning, pipeline review, and PLG sales integration.",
+    "developerName": "Cogine AI",
+    "category": "Productivity",
+    "capabilities": [
+      "Research",
+      "Sales strategy",
+      "Outreach",
+      "Planning",
+      "Coaching",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/cogine-ai/marketplace",
+    "defaultPrompt": [
+      "Find and qualify prospects, then draft a concise outreach sequence.",
+      "Prepare for this account call and review the transcript afterward.",
+      "Build a MEDDPICC account plan and prioritize the pipeline."
+    ]
+  }
+}

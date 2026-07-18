@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prospecting"
+  short_description: "Build a sourced and qualified prospect list"
+  default_prompt: "Use $prospecting to build a sourced list of qualified prospects."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Startup Finance"
+  short_description: "Model runway and startup finance decisions"
+  default_prompt: "Use $startup-finance to model our runway scenarios and explain the decision implications."

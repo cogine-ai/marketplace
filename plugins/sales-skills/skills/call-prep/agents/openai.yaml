@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Call Prep"
+  short_description: "Prepare a focused brief for the next sales call"
+  default_prompt: "Use $call-prep to prepare me for this sales meeting."

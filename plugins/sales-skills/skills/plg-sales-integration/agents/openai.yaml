@@ -1,0 +1,4 @@
+interface:
+  display_name: "PLG Sales Integration"
+  short_description: "Connect product signals to sales-assisted growth"
+  default_prompt: "Use $plg-sales-integration to design our PQL and sales-assist motion."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enterprise Sales Motion"
+  short_description: "Design a repeatable enterprise sales engine"
+  default_prompt: "Use $enterprise-sales-motion to design our enterprise sales motion."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enterprise Account Planning"
+  short_description: "Build an actionable enterprise account plan"
+  default_prompt: "Use $enterprise-account-planning to map this account and advance the deal."

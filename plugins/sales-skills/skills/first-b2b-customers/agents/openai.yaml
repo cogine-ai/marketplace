@@ -1,0 +1,4 @@
+interface:
+  display_name: "First B2B Customers"
+  short_description: "Win the first ten B2B customers"
+  default_prompt: "Use $first-b2b-customers to plan how we will win our first B2B customers."

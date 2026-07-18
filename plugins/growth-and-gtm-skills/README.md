@@ -2,8 +2,8 @@
 
 Growth & GTM Skills is a focused, cross-platform toolkit for Codex and Claude
 Code. It covers the path from product and customer context to channel choice,
-launch, acquisition, conversion, retention, measurement, and recurring
-execution.
+launch, acquisition, conversion, retention, measurement, recurring execution,
+and the handoff from product-qualified usage to sales assist.
 
 ## Included skills
 
@@ -33,6 +33,10 @@ execution.
 - growth-experiments
 - marketing-loops
 
+### Product-led revenue handoff — 1
+
+- plg-sales-integration
+
 ## Design choices
 
 - The bundle keeps only broadly useful growth and GTM workflows from the larger
@@ -46,6 +50,8 @@ execution.
   sample-size, sample-ratio-mismatch, and suspicious-result safeguards.
 - marketing-loops remains separate from growth-model: one models business
   mechanics, while the other schedules bounded recurring execution.
+- plg-sales-integration is intentionally shared with Sales Skills because PQL
+  design and sales-assisted expansion sit at the boundary of both roles.
 - Tool-specific integrations are optional. The skills work without assuming a
   particular connector, analytics vendor, or scheduler.
 

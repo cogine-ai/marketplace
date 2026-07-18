@@ -1,0 +1,4 @@
+interface:
+  display_name: "Founder-Led Sales"
+  short_description: "Build a repeatable founder-led sales motion"
+  default_prompt: "Use $founder-sales to turn this founder insight into a concrete sales motion."
