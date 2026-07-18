@@ -1,18 +1,6 @@
 # Cogine AI Marketplace
 
-A cross-platform plugin marketplace for Codex and Claude Code.
-
-## Available plugins
-
-### Design Engineer Skills
-
-Six design-engineering skills covering UI polish, animation review, motion
-audits, animation opportunities, motion vocabulary, and Apple-inspired web
-interaction design.
-
-The original skill content is by [Emil Kowalski](https://github.com/emilkowalski)
-and comes from [emilkowalski/skills](https://github.com/emilkowalski/skills).
-Cogine AI maintains the cross-platform plugin packaging.
+Cogine AI's INTERNAL plugin marketplace for Codex and Claude Code.
 
 ## Install in Codex
 
@@ -27,9 +15,6 @@ codex plugin add design-engineer-skills@cogine-ai
 claude plugin marketplace add cogine-ai/marketplace
 claude plugin install design-engineer-skills@cogine-ai
 ```
-
-This repository is private. Installers need GitHub access to the `cogine-ai`
-organization and working Git credentials on their machine.
 
 ## Update
 
