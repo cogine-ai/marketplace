@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.1 - 2026-07-19
+
+- Expand `product-manager-skills` from 14 to 16 skills with Lenny's
+  `defining-product-strategy` and `product-taste`.
+- Keep both skills' sourced insight and framework references available on
+  demand without adding more overlapping PRD or roadmap workflows.
+
 ## 0.4.0 - 2026-07-19
 
 - Add the cross-platform `growth-and-gtm-skills` plugin with 17 focused

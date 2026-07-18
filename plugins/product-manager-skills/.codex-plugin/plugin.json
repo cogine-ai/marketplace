@@ -1,7 +1,7 @@
 {
   "name": "product-manager-skills",
-  "version": "0.1.0",
-  "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
+  "version": "0.1.1",
+  "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -11,6 +11,8 @@
   "license": "Apache-2.0 AND MIT",
   "keywords": [
     "product-management",
+    "product-strategy",
+    "product-taste",
     "product-research",
     "prd",
     "roadmap",
@@ -21,7 +23,7 @@
   "interface": {
     "displayName": "Product Manager Skills",
     "shortDescription": "A focused product-management toolkit for Cogine.",
-    "longDescription": "Fourteen curated skills for product discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills and two high-quality design systems.",
+    "longDescription": "Sixteen curated skills for product strategy, product judgment, discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills, two high-quality design systems, and two focused Lenny product skills.",
     "developerName": "Cogine AI",
     "category": "Productivity",
     "capabilities": [
@@ -35,7 +37,8 @@
     ],
     "websiteURL": "https://github.com/cogine-ai/marketplace",
     "defaultPrompt": [
-      "Stress-test this product idea, then turn the decision into a PRD.",
+      "Define a clear product strategy and stress-test its key choices.",
+      "Apply a product-taste review before turning this idea into a PRD.",
       "Synthesize this research and update the product roadmap.",
       "Prototype three product-interface directions for this workflow."
     ]

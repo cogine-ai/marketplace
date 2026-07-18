@@ -50,6 +50,14 @@ plugin so Codex and Claude Code can discover the same bundle.
 - Pinned commit: `f8ac5e1266dba8354ea96e19994d9f4345e7ec31`
 - License: MIT
 
+## Lenny skills by Refound AI — 2 skills
+
+- Repository: https://github.com/RefoundAI/lenny-skills
+- Branch: `main`
+- Pinned commit: `13598cc54e09399bc1bc1398b0fca284110efb2f`
+- Skills: `defining-product-strategy`, `product-taste`
+- License: MIT
+
 ## Cross-platform compatibility adjustments
 
 Unsupported frontmatter and Claude-only command syntax were removed. Matt
@@ -58,3 +66,4 @@ Anthropic workflows and GitHub PRD workflow were condensed and made
 connector-independent. `prototype` gained four concise design gates and a
 standalone HTML fallback. `ui-ux-pro-max` resolves its own skill directory
 instead of relying on `CLAUDE_PLUGIN_ROOT`, and Codex treats it as explicit-only.
+The two Lenny skills retain their full evidence references as on-demand material.

@@ -37,3 +37,10 @@ in `LICENSES/MIT-Interface-Design.txt`.
 [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill),
 copyright (c) 2024 Next Level Builder, under the MIT License. The license text
 is in `LICENSES/MIT-UI-UX-Pro-Max.txt`.
+
+## Refound AI
+
+`defining-product-strategy` and `product-taste` are copied from
+[RefoundAI/lenny-skills](https://github.com/RefoundAI/lenny-skills), copyright
+(c) 2025 Refound AI, under the MIT License. The license text is in
+`LICENSES/MIT-Refound-AI.txt`.

@@ -23,8 +23,8 @@
     {
       "name": "product-manager-skills",
       "source": "./plugins/product-manager-skills",
-      "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
-      "version": "0.1.0",
+      "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
+      "version": "0.1.1",
       "category": "productivity"
     },
     {

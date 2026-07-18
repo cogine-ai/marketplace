@@ -1,7 +1,7 @@
 {
   "name": "product-manager-skills",
-  "version": "0.1.0",
-  "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
+  "version": "0.1.1",
+  "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -11,6 +11,8 @@
   "license": "Apache-2.0 AND MIT",
   "keywords": [
     "product-management",
+    "product-strategy",
+    "product-taste",
     "product-research",
     "prd",
     "roadmap",

@@ -8,8 +8,9 @@ Cogine AI's INTERNAL plugin marketplace for Codex and Claude Code.
 - `coding-engineer-skills` — 24 skills for specs, implementation, frontend and
   React work, architecture, debugging, testing, review, security, Git/CI, and
   Cogine multi-repository orchestration.
-- `product-manager-skills` — 14 skills for discovery, research, PRDs,
-  prototypes, roadmaps, metrics, product-interface design, specs, and tickets.
+- `product-manager-skills` — 16 skills for strategy, product judgment,
+  discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and
+  tickets.
 - `growth-and-gtm-skills` — 17 skills for product marketing, growth models,
   channels, acquisition, conversion, retention, measurement, and recurring
   execution.
@@ -57,7 +58,7 @@ plugins/coding-engineer-skills/
 plugins/product-manager-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 14 shared skills
+  skills/                              # 16 shared skills
 plugins/growth-and-gtm-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
