@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Loops"
+  short_description: "Build safe recurring marketing workflows"
+  default_prompt: "Use $marketing-loops to turn this review into a safe recurring workflow."

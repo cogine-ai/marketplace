@@ -1,0 +1,4 @@
+interface:
+  display_name: "Growth Model"
+  short_description: "Map and quantify sustainable growth loops"
+  default_prompt: "Use $growth-model to map and quantify our sustainable growth engines."

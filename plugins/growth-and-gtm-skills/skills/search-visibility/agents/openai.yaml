@@ -1,0 +1,4 @@
+interface:
+  display_name: "Search Visibility"
+  short_description: "Improve organic and AI search visibility"
+  default_prompt: "Use $search-visibility to audit our organic and AI search presence."

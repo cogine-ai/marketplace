@@ -26,6 +26,13 @@
       "description": "Fourteen focused product-management skills for discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets.",
       "version": "0.1.0",
       "category": "productivity"
+    },
+    {
+      "name": "growth-and-gtm-skills",
+      "source": "./plugins/growth-and-gtm-skills",
+      "description": "Seventeen focused growth and GTM skills for strategy, channels, acquisition, conversion, retention, measurement, and recurring execution.",
+      "version": "0.1.0",
+      "category": "productivity"
     }
   ]
 }

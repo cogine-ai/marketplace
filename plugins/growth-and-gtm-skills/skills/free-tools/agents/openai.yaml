@@ -1,0 +1,4 @@
+interface:
+  display_name: "Free Tool Strategy"
+  short_description: "Plan useful engineering-as-marketing tools"
+  default_prompt: "Use $free-tools to evaluate this engineering-as-marketing idea."

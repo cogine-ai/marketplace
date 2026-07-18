@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launch Strategy"
+  short_description: "Plan a focused product or feature launch"
+  default_prompt: "Use $launch to build a focused go-to-market launch plan."

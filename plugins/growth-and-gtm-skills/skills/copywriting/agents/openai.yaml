@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Write clear persuasive product marketing copy"
+  default_prompt: "Use $copywriting to rewrite this page with clearer persuasive copy."

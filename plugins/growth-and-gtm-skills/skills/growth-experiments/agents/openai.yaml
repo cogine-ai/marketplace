@@ -1,0 +1,4 @@
+interface:
+  display_name: "Growth Experiments"
+  short_description: "Design reliable tests for growth learning"
+  default_prompt: "Use $growth-experiments to design a reliable test for this growth idea."

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0 - 2026-07-19
+
+- Add the cross-platform `growth-and-gtm-skills` plugin with 17 focused
+  strategy, channel, acquisition, conversion, retention, measurement, and
+  recurring-execution skills.
+- Add Lenny's `growth-model` and `acquisition-channels` skills with their
+  full on-demand evidence references.
+- Consolidate traditional SEO, AI discovery, and programmatic search behind
+  `search-visibility`, and harden `growth-experiments` with sample-size,
+  SRM, pre-registration, and suspicious-result safeguards.
+
 ## 0.3.0 - 2026-07-19
 
 - Add the cross-platform `product-manager-skills` plugin with 14 focused

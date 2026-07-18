@@ -1,0 +1,21 @@
+{
+  "name": "growth-and-gtm-skills",
+  "version": "0.1.0",
+  "description": "Seventeen focused growth and go-to-market skills for positioning, research, channels, acquisition, conversion, retention, measurement, and recurring execution.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/growth-and-gtm-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "growth",
+    "go-to-market",
+    "product-marketing",
+    "acquisition",
+    "conversion",
+    "retention",
+    "experimentation"
+  ]
+}

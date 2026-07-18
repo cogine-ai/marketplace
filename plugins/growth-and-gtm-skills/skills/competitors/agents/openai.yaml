@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitor Positioning"
+  short_description: "Build credible competitor comparison content"
+  default_prompt: "Use $competitors to create an evidence-based competitor comparison."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pricing Strategy"
+  short_description: "Design evidence-based pricing and packaging"
+  default_prompt: "Use $pricing to evaluate our pricing and packaging options."

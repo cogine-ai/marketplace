@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Strategy"
+  short_description: "Choose content that advances GTM outcomes"
+  default_prompt: "Use $content-strategy to choose our highest-value content priorities."

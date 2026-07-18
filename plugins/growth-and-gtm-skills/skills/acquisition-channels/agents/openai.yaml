@@ -1,0 +1,4 @@
+interface:
+  display_name: "Acquisition Channels"
+  short_description: "Choose test and scale distribution channels"
+  default_prompt: "Use $acquisition-channels to choose the next distribution channel to test."

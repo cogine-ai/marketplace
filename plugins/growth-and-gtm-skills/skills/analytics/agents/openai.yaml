@@ -1,0 +1,4 @@
+interface:
+  display_name: "Growth Analytics"
+  short_description: "Design reliable growth measurement and tracking"
+  default_prompt: "Use $analytics to create a reliable tracking and measurement plan."

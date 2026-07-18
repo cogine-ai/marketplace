@@ -1,0 +1,43 @@
+{
+  "name": "growth-and-gtm-skills",
+  "version": "0.1.0",
+  "description": "Seventeen focused growth and go-to-market skills for positioning, research, channels, acquisition, conversion, retention, measurement, and recurring execution.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/growth-and-gtm-skills",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "growth",
+    "go-to-market",
+    "product-marketing",
+    "acquisition",
+    "conversion",
+    "retention",
+    "experimentation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Growth & GTM Skills",
+    "shortDescription": "A focused growth and go-to-market toolkit for Cogine.",
+    "longDescription": "Seventeen curated skills for product-marketing context, customer and competitor research, pricing, launch, content, channel selection, sustainable growth models, copy, search visibility, conversion, activation, retention, analytics, reliable experiments, and recurring marketing loops.",
+    "developerName": "Cogine AI",
+    "category": "Productivity",
+    "capabilities": [
+      "Research",
+      "Strategy",
+      "Planning",
+      "Measurement",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/cogine-ai/marketplace",
+    "defaultPrompt": [
+      "Build a growth model and choose the best acquisition channels.",
+      "Turn this product context into a launch and content strategy.",
+      "Audit this funnel and design a reliable growth experiment."
+    ]
+  }
+}
