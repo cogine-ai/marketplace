@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 - 2026-07-18
+
+- Remove Matt Pocock's `code-review` skill from `coding-engineer-skills`.
+- Make `implement` perform a focused final self-review without depending on a
+  separate review skill.
+
 ## 0.2.1 - 2026-07-18
 
 - Remove `setup-matt-pocock-skills` from `coding-engineer-skills`.

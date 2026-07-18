@@ -5,7 +5,7 @@ Cogine AI's INTERNAL plugin marketplace for Codex and Claude Code.
 ## Available plugins
 
 - `design-engineer-skills` — six design-engineering and UI motion skills.
-- `coding-engineer-skills` — 25 skills for specs, implementation, frontend and
+- `coding-engineer-skills` — 24 skills for specs, implementation, frontend and
   React work, architecture, debugging, testing, review, security, Git/CI, and
   Cogine multi-repository orchestration.
 
@@ -44,5 +44,5 @@ plugins/design-engineer-skills/
 plugins/coding-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 25 shared skills
+  skills/                              # 24 shared skills
 ```

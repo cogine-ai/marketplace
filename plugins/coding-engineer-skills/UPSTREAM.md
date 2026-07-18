@@ -24,7 +24,7 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - Source: Cogine-authored global Codex installation
 - Snapshot date: 2026-07-18
 
-## Matt Pocock skills — 7 skills
+## Matt Pocock skills — 6 skills
 
 - Repository: https://github.com/mattpocock/skills
 - Branch: `main`
@@ -61,6 +61,6 @@ skills. All skill descriptions were normalized into shorter trigger summaries
 to reduce always-on plugin token cost; manually invoked skills retain explicit
 invocation wording. One `diagnosing-bugs` handoff was generalized because the
 larger architecture-audit skill is intentionally outside this core bundle.
-`to-spec`, `to-tickets`, and `code-review` were adjusted to discover repository
-tracker conventions directly, so they do not require a separate setup skill.
-No other workflow steps or reference files were changed.
+`to-spec` and `to-tickets` were adjusted to discover repository tracker
+conventions directly, so they do not require a separate setup skill. No other
+workflow steps or reference files were changed.

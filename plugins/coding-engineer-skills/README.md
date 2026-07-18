@@ -32,9 +32,8 @@ lightweight engineering skills. It does not bundle `superpowers`.
 - `vercel-react-best-practices`
 - `shadcn`
 
-### Review, security, and developer experience — 7
+### Review, security, and developer experience — 6
 
-- `code-review`
 - `local-ultra-review`
 - `ai-app-security-audit`
 - `security-best-practices`
@@ -61,8 +60,8 @@ lightweight engineering skills. It does not bundle `superpowers`.
 - Some skills need local tools or services for their full workflow, such as
   GitHub CLI, Playwright, or a browser-capable host. Their instructions retain
   their own capability checks and fallbacks.
-- Claude Code's plugin inspector estimates about 1,247 always-on tokens for the
-  25 skill names and trigger summaries. Full skill bodies are paid only when a
+- Claude Code's plugin inspector estimates about 1,204 always-on tokens for the
+  24 skill names and trigger summaries. Full skill bodies are paid only when a
   skill is invoked. This selection was reduced from a broader 44-skill draft
   after measuring its 3,571-token always-on index.
 
