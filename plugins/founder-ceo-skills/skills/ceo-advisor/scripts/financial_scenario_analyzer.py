@@ -97,16 +97,18 @@ class FinancialScenarioAnalyzer:
 
         # Calculate metrics for each year
         projections = []
-        current_state = projected_financials.copy()
+        base_state = projected_financials.copy()
+        previous_state = None
 
         for year in range(1, 4):  # 3-year projection
             year_projection = self._project_year(
-                current_state,
+                base_state,
                 scenario,
-                year
+                year,
+                previous_state
             )
             projections.append(year_projection)
-            current_state = year_projection
+            previous_state = year_projection
 
         # Calculate NPV and IRR
         cash_flows = [p['free_cash_flow'] for p in projections]
@@ -143,30 +145,41 @@ class FinancialScenarioAnalyzer:
 
         return result
 
-    def _project_year(self, current_state: Dict, scenario: Dict, year: int) -> Dict:
+    def _project_year(
+        self,
+        base_state: Dict,
+        scenario: Dict,
+        year: int,
+        previous_state: Dict = None
+    ) -> Dict:
         """Project financials for a specific year"""
         growth_model = scenario.get('growth_model', 'exponential')
         growth_rate = scenario.get('growth_rate', 0.3)
+        previous_state = previous_state or base_state
 
-        # Apply growth model
+        # Apply each growth model from the scenario baseline. Applying the
+        # multi-year factor to the prior year's projection compounds twice.
         model_func = self.growth_models.get(growth_model, self.growth_models['linear'])
 
         revenue = model_func(
-            current_state.get('revenue', 0),
+            base_state.get('revenue', 0),
             growth_rate,
             year
         )
 
         # Scale other metrics
         cogs = revenue * scenario.get('cogs_ratio', 0.3)
-        opex = current_state.get('operating_expenses', 0) * (1 + scenario.get('opex_growth', 0.15))
+        opex = base_state.get('operating_expenses', 0) * math.pow(
+            1 + scenario.get('opex_growth', 0.15),
+            year
+        )
 
         gross_profit = revenue - cogs
         ebitda = gross_profit - opex
 
         # Calculate free cash flow (simplified)
         capex = revenue * scenario.get('capex_ratio', 0.05)
-        working_capital_change = (revenue - current_state.get('revenue', 0)) * 0.1
+        working_capital_change = (revenue - previous_state.get('revenue', 0)) * 0.1
         free_cash_flow = ebitda - capex - working_capital_change
 
         return {
@@ -178,7 +191,7 @@ class FinancialScenarioAnalyzer:
             'ebitda': ebitda,
             'ebitda_margin': (ebitda / revenue * 100) if revenue > 0 else 0,
             'free_cash_flow': free_cash_flow,
-            'cumulative_cash_flow': current_state.get('cumulative_cash_flow', 0) + free_cash_flow
+            'cumulative_cash_flow': previous_state.get('cumulative_cash_flow', 0) + free_cash_flow
         }
 
     def _calculate_npv(self, cash_flows: List[float], discount_rate: float) -> float:
