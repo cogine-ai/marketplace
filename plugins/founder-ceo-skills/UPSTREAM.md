@@ -57,9 +57,9 @@ its `origin` metadata; the skill body matches this reference commit.
 - License: MIT
 
 The activation description was narrowed so this large generalist skill loads
-after an explicit request for comprehensive CEO advice. The upstream financial
-scenario script is intentionally omitted; the smaller `startup-finance` skill
-handles those decisions without maintaining a duplicate model.
+after an explicit request for comprehensive CEO advice. Both upstream Python
+analyzers are intentionally omitted; focused strategy, planning, and finance
+skills handle those decisions without maintaining duplicate models.
 
 ## David Turner Product Skills — 1 skill
 
@@ -81,7 +81,8 @@ scenarios, unit economics, hiring, and fundraising tradeoffs.
 
 `planmode-ceo` remains byte-for-byte identical to its source.
 `investor-materials` only moves its origin marker into supported metadata.
-`ceo-advisor` narrows its activation description and routes financial
-analysis to `startup-finance` instead of bundling the upstream analyzer.
+`ceo-advisor` narrows its activation description and routes analysis to
+`competitive-strategy`, `seven-powers`, `planning-cadence`, and
+`startup-finance` instead of bundling the upstream analyzers.
 Other imported content is preserved with line endings and trailing whitespace
 normalized.

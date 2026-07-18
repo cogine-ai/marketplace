@@ -8,7 +8,6 @@ metadata:
   category: c-level
   domain: ceo-leadership
   updated: 2025-10-20
-  python-tools: strategy_analyzer.py
   frameworks: executive-decision-framework, board-governance, investor-relations
 ---
 
@@ -22,10 +21,9 @@ CEO, chief executive officer, executive leadership, strategic planning, board go
 ## Quick Start
 
 ### For Strategic Planning
-```bash
-python scripts/strategy_analyzer.py
-```
-Analyzes strategic position and generates actionable recommendations.
+Use `competitive-strategy` and `seven-powers` for the strategic position,
+then `planning-cadence` for the user’s actual horizon. Return here to
+synthesize the implications across the CEO’s responsibilities.
 
 ### For Financial Scenarios
 Use `startup-finance` for burn, runway, unit economics, and financial
