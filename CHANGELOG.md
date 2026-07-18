@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.3 - 2026-07-18
+
+- Let `tdd` apply to suitable feature work without an explicit test-first request.
+- Add three concise red/green safeguards without importing Superpowers.
+
 ## 0.2.2 - 2026-07-18
 
 - Remove Matt Pocock's `code-review` skill from `coding-engineer-skills`.

@@ -1,6 +1,6 @@
 ---
 name: tdd
-description: Use test-driven development for explicitly requested test-first features, bug fixes, or regression coverage.
+description: Use test-driven development for suitable feature development, bug fixes, and regressions, even without an explicit test-first request.
 ---
 
 # Test-Driven Development
@@ -31,6 +31,6 @@ Ask: "What's the public interface, and which seams should we test?"
 
 ## Rules of the loop
 
-- **Red before green.** Write the failing test first, then only enough code to pass it. Don't anticipate future tests or add speculative features.
-- **One slice at a time.** One seam, one test, one minimal implementation per cycle.
-- **Refactoring is not part of the loop.** It belongs to the review stage after the code is green, not the red → green implementation cycle.
+- **Red before green.** Write and run the failing test first; confirm it fails for the expected reason. Then write only enough code to pass it. Don't anticipate future tests or add speculative features.
+- **One slice at a time.** One seam, one test, one minimal implementation per cycle. After green, rerun the target and related tests.
+- **Refactor only while green.** Keep tests passing throughout; do not refactor during red.
