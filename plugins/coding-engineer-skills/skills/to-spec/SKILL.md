@@ -5,7 +5,11 @@ description: Explicitly synthesize the current conversation into a PRD or spec a
 
 This skill takes the current conversation context and codebase understanding and produces a spec (you may know this document as a PRD). Do NOT interview the user — just synthesize what you already know.
 
-The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.
+Discover the publishing target from repository evidence. Prefer an existing
+`docs/agents/issue-tracker.md`; otherwise use GitHub Issues for a GitHub remote.
+If no safe remote tracker can be inferred, write a local Markdown spec under
+`.scratch/<feature-slug>/`. Ask only when multiple plausible trackers would
+materially change the result.
 
 ## Process
 
@@ -15,7 +19,7 @@ The issue tracker and triage label vocabulary should have been provided to you �
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+3. Write the spec using the template below, then publish it to the discovered target. Apply an existing `ready-for-agent` label only when the repository already defines it; do not create new labels as part of this skill.
 
 <spec-template>
 

@@ -6,10 +6,9 @@ lightweight engineering skills. It does not bundle `superpowers`.
 
 ## Included skills
 
-### Specs and delivery — 5
+### Specs and delivery — 4
 
 - `backlog-ready-spec`
-- `setup-matt-pocock-skills`
 - `to-spec`
 - `to-tickets`
 - `implement`
@@ -62,8 +61,8 @@ lightweight engineering skills. It does not bundle `superpowers`.
 - Some skills need local tools or services for their full workflow, such as
   GitHub CLI, Playwright, or a browser-capable host. Their instructions retain
   their own capability checks and fallbacks.
-- Claude Code's plugin inspector estimates about 1,308 always-on tokens for the
-  26 skill names and trigger summaries. Full skill bodies are paid only when a
+- Claude Code's plugin inspector estimates about 1,247 always-on tokens for the
+  25 skill names and trigger summaries. Full skill bodies are paid only when a
   skill is invoked. This selection was reduced from a broader 44-skill draft
   after measuring its 3,571-token always-on index.
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 - 2026-07-18
+
+- Remove `setup-matt-pocock-skills` from `coding-engineer-skills`.
+- Make `to-spec`, `to-tickets`, and `code-review` discover repository tracker
+  conventions without a separate setup step.
+
 ## 0.2.0 - 2026-07-18
 
 - Add the cross-platform `coding-engineer-skills` plugin with 26 skills.

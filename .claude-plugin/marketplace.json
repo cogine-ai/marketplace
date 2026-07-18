@@ -16,8 +16,8 @@
     {
       "name": "coding-engineer-skills",
       "source": "./plugins/coding-engineer-skills",
-      "description": "Twenty-six focused engineering skills for specs, coding, frontend work, debugging, review, security, CI, and orchestration.",
-      "version": "0.1.0",
+      "description": "Twenty-five focused engineering skills for specs, coding, frontend work, debugging, review, security, CI, and orchestration.",
+      "version": "0.1.1",
       "category": "development"
     }
   ]
