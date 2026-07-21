@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worktree Management"
+  short_description: "Create, use, and safely clean isolated worktrees"
+  default_prompt: "Use $worktree-management to isolate this coding task in a worktree and clean it up safely when finished."

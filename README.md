@@ -31,7 +31,7 @@ This is a private repository, so Git must already have access to
 | Plugin | Skills | Focus |
 | --- | ---: | --- |
 | `design-engineer-skills` | 6 | UI polish, animation review, and motion design. |
-| `coding-engineer-skills` | 24 | Specs, implementation, frontend and React work, architecture, debugging, testing, security, Git/CI, and multi-repository orchestration. |
+| `coding-engineer-skills` | 25 | Specs, implementation, isolated worktrees, frontend and React work, architecture, debugging, testing, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |

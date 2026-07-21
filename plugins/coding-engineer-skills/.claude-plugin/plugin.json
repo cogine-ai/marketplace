@@ -1,7 +1,7 @@
 {
   "name": "coding-engineer-skills",
-  "version": "0.1.3",
-  "description": "Twenty-four focused engineering skills for planning, implementation, frontend work, debugging, review, security, CI, and multi-repository orchestration.",
+  "version": "0.1.4",
+  "description": "Twenty-five focused engineering skills for planning, implementation, isolation, frontend work, debugging, review, security, CI, and multi-repository orchestration.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -16,6 +16,7 @@
     "code-review",
     "debugging",
     "ci",
+    "worktrees",
     "orchestration"
   ]
 }

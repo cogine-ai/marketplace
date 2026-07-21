@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.1 - 2026-07-22
+
+- Add `worktree-management` to `coding-engineer-skills` as a narrowly triggered
+  adaptation of Superpowers' worktree isolation workflow.
+- Preserve existing-worktree detection and native-tool preference, make setup
+  proportional, and add confirmation-gated cleanup for manual worktrees.
+
 ## 0.6.0 - 2026-07-19
 
 - Add the cross-platform `founder-ceo-skills` plugin with 16 focused

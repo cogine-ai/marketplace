@@ -24,6 +24,13 @@ repository license are retained.
 That package declares the MIT License and points to
 [openai/plugins](https://github.com/openai/plugins) as its repository.
 
+## Superpowers
+
+`worktree-management` is adapted from `using-git-worktrees` in
+[obra/superpowers](https://github.com/obra/superpowers), copyright (c) 2025
+Jesse Vincent, under the MIT License. The license text is retained in
+`LICENSES/MIT-Superpowers.txt`.
+
 ## Cogine adaptations
 
 The Cogine Dev Skillset includes adaptations informed by other open-source

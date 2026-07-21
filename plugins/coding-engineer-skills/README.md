@@ -1,8 +1,8 @@
 # Coding Engineer Skills
 
 Coding Engineer Skills is a deliberately curated engineering toolkit for
-Codex and Claude Code. It favors Cogine's own workflows and Matt Pocock's
-lightweight engineering skills. It does not bundle `superpowers`.
+Codex and Claude Code. It favors Cogine's own workflows and lightweight
+engineering skills. It does not bundle the full `superpowers` workflow pack.
 
 ## Included skills
 
@@ -41,8 +41,9 @@ lightweight engineering skills. It does not bundle `superpowers`.
 - `plan-devex-review`
 - `planmode-engineer`
 
-### Git, CI, and shipping — 4
+### Git, CI, worktrees, and shipping — 5
 
+- `worktree-management`
 - `fix-ci`
 - `loop-on-ci`
 - `fix-merge-conflicts`
@@ -60,10 +61,9 @@ lightweight engineering skills. It does not bundle `superpowers`.
 - Some skills need local tools or services for their full workflow, such as
   GitHub CLI, Playwright, or a browser-capable host. Their instructions retain
   their own capability checks and fallbacks.
-- Claude Code's plugin inspector estimates about 1,204 always-on tokens for the
-  24 skill names and trigger summaries. Full skill bodies are paid only when a
-  skill is invoked. This selection was reduced from a broader 44-skill draft
-  after measuring its 3,571-token always-on index.
+- Only the 25 skill names and trigger summaries are always visible. Full skill
+  bodies are paid only when invoked; the larger `superpowers` pack remains out
+  of the always-on index.
 
 See [UPSTREAM.md](./UPSTREAM.md) and
 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for provenance.

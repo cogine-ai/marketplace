@@ -44,10 +44,17 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - Skill: `shadcn`
 - License declared by the package: MIT
 
+## Superpowers — 1 adapted skill
+
+- Repository: https://github.com/obra/superpowers
+- Package version: `6.1.1`
+- Source skill: `using-git-worktrees`; packaged as `worktree-management`
+- License: MIT
+
 ## Explicit exclusions
 
-- `superpowers` is intentionally excluded because this bundle favors lower
-  prompt overhead and smaller, directly triggered workflows.
+- The full `superpowers` workflow pack is intentionally excluded. Only its
+  worktree isolation workflow is adapted as a narrowly triggered lifecycle.
 - iOS, macOS, Cloudflare, Lark, calendar, email, storage, and other
   platform/vendor companion packs are not part of the Coding Engineer core.
 - Temporary, deprecated, in-progress, and one-repository-only skills are not
@@ -63,4 +70,7 @@ invocation wording. One `diagnosing-bugs` handoff was generalized because the
 larger architecture-audit skill is intentionally outside this core bundle.
 `to-spec` and `to-tickets` were adjusted to discover repository tracker
 conventions directly, so they do not require a separate setup skill. No other
-workflow steps or reference files were changed.
+workflow steps or reference files were changed. `worktree-management` retains
+the upstream isolation detection and native-tool-first flow, narrows automatic
+triggering, makes dependency setup proportional, and adds confirmation-gated
+cleanup for manually created worktrees.
