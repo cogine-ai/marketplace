@@ -18,11 +18,13 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - Skills: `cogine-orchestrator`, `cogine-multirepo-worker`
 - Maintainer: Cogine AI
 
-## Cogine local skill — 1 skill
+## Cogine local skills — 4 skills
 
 - Skill: `cogine-power-gates`
 - Source: Cogine-authored global Codex installation
 - Snapshot date: 2026-07-18
+- Skills refreshed from newer global Codex installations on 2026-07-22:
+  `fix-ci`, `loop-on-ci`, and `review-and-ship`
 
 ## Matt Pocock skills — 6 skills
 
@@ -43,6 +45,14 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - Package: `build-web-apps` version `0.1.2`
 - Skill: `shadcn`
 - License declared by the package: MIT
+
+## Vercel React Best Practices — 1 skill
+
+- Source: Vercel Engineering agent skill snapshot
+- Skill: `vercel-react-best-practices`
+- Snapshot version: `1.0.0` with 70 rules
+- Snapshot date: 2026-07-22
+- License declared by the skill: MIT
 
 ## Superpowers — 1 adapted skill
 

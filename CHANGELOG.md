@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.2 - 2026-07-22
+
+- Refresh `fix-ci`, `loop-on-ci`, and `review-and-ship` from their newer local
+  Cogine snapshots.
+- Update `vercel-react-best-practices` from 58 to 70 rules.
+- Release `coding-engineer-skills` version `0.1.5`.
+
 ## 0.6.1 - 2026-07-22
 
 - Add `worktree-management` to `coding-engineer-skills` as a narrowly triggered

@@ -24,6 +24,11 @@ repository license are retained.
 That package declares the MIT License and points to
 [openai/plugins](https://github.com/openai/plugins) as its repository.
 
+## Vercel
+
+`vercel-react-best-practices` is the Vercel Engineering agent skill snapshot
+version `1.0.0`, which declares the MIT License.
+
 ## Superpowers
 
 `worktree-management` is adapted from `using-git-worktrees` in

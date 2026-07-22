@@ -1,6 +1,6 @@
 {
   "name": "coding-engineer-skills",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Twenty-five focused engineering skills for planning, implementation, isolation, frontend work, debugging, review, security, CI, and multi-repository orchestration.",
   "author": {
     "name": "Cogine AI",
