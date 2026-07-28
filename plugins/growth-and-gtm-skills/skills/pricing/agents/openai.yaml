@@ -1,4 +1,4 @@
 interface:
   display_name: "Pricing Strategy"
-  short_description: "Design evidence-based pricing and packaging"
-  default_prompt: "Use $pricing to evaluate our pricing and packaging options."
+  short_description: "Design pricing or audit a pricing page"
+  default_prompt: "Use $pricing to evaluate our pricing, packaging, or pricing-page clarity."

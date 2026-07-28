@@ -12,6 +12,9 @@ under Apache License 2.0. `startup-finance` and the plugin packaging are
 Cogine-authored material under the same license. The license text is in
 `LICENSES/Apache-2.0-Cogine.txt`.
 
+`founder-office-hours` is informed by GStack's `office-hours` workflow.
+GStack is copyright (c) 2026 Garry Tan under the MIT License.
+
 ## Refound AI
 
 `high-stakes-decisions`, `competitive-strategy`, `planning-cadence`,

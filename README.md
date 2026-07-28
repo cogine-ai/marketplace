@@ -30,7 +30,7 @@ This is a private repository, so Git must already have access to
 
 | Plugin | Skills | Focus |
 | --- | ---: | --- |
-| `design-engineer-skills` | 6 | UI polish, animation review, and motion design. |
+| `design-engineer-skills` | 8 | UI prototyping, frontend library selection, polish, animation review, and motion design. |
 | `coding-engineer-skills` | 25 | Specs, implementation, isolated worktrees, frontend and React work, architecture, debugging, testing, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
@@ -75,11 +75,11 @@ docs/images/                           # Marketplace screenshots
 plugins/design-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 6 shared skills
+  skills/                              # 8 shared skills
 plugins/coding-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 24 shared skills
+  skills/                              # 25 shared skills
 plugins/product-manager-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest

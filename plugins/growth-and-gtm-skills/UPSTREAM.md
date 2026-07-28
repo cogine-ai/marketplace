@@ -7,7 +7,7 @@ plugin so Codex and Claude Code can discover the same bundle.
 
 - Repository: https://github.com/coreyhaines31/marketingskills
 - Branch: main
-- Pinned commit: 67264763cb107d61749f418d081c56e5bcbc0209
+- Pinned commit: 7868cb9251fad80a73d26e488a5ad5f6c4a9f335
 - Copied skills: product-marketing, customer-research, competitors, pricing,
   launch, content-strategy, copywriting, free-tools, cro, onboarding,
   churn-prevention, analytics, marketing-loops
@@ -42,4 +42,6 @@ marketing-loops now describes both Codex and Claude Code scheduling.
 search-visibility routes to on-demand source references, and
 growth-experiments adds validity checks before outcome interpretation.
 plg-sales-integration is deliberately shared with Sales Skills at the
-cross-functional PQL and sales-assist boundary.
+cross-functional PQL and sales-assist boundary. `pricing` 2.1.0 is adapted to
+route AI-readability checks through the bundled `search-visibility` skill and
+direct `Product`/`Offer` JSON-LD guidance instead of unbundled skills.

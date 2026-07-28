@@ -30,8 +30,14 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 
 - Repository: https://github.com/mattpocock/skills
 - Branch: `main`
-- Pinned commit: `9603c1cc8118d08bc1b3bf34cf714f62178dea3b`
+- Pinned commit: `2ab958093e83e0ec752e6c1c5932da465bf23e0c`
 - License: MIT
+
+`to-spec` is a Matt Pocock skill. `backlog-ready-spec` is not: it is a
+Cogine-authored adaptation from Cogine Dev Skillset, informed by GStack's
+`spec` workflow.
+On 2026-07-29, `backlog-ready-spec` and `devex-review` selectively absorbed
+current GStack checks without importing its runtime or preamble.
 
 ## Frontend Design — 1 skill
 

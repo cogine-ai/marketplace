@@ -1,7 +1,7 @@
 {
   "name": "design-engineer-skills",
-  "version": "0.1.0",
-  "description": "Six design-engineering and UI motion skills, packaged for Claude Code by Cogine AI.",
+  "version": "0.1.1",
+  "description": "Eight design-engineering, UI prototyping, library selection, and motion skills, packaged for Claude Code by Cogine AI.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"

@@ -1,6 +1,6 @@
 ---
 name: pricing
-description: Design or evaluate pricing, packaging, tiers, trials, freemium, value metrics, willingness-to-pay research, and price changes. Use whenever deciding what to charge or how to structure monetization.
+description: Design or evaluate pricing, packaging, tiers, trials, freemium, value metrics, willingness-to-pay research, price changes, or a pricing-page teardown for human buyers and AI agents.
 ---
 
 # Pricing Strategy
@@ -189,6 +189,33 @@ Identifies which features customers value most:
 
 ---
 
+## Pricing Page Teardown
+
+When someone wants to audit an existing pricing *page* for **clarity,
+transparency, and AI-readability**—not pricing strategy itself and not
+conversion-rate optimization—score it across two axes and return prioritized
+fixes:
+
+- **Human buyer experience** — value-prop clarity, plan differentiation,
+  cognitive load, trust signals, pricing psychology, and price transparency.
+- **AI-agent readiness** — whether LLMs and agents can read and quote the
+  pricing: machine-readable prices, extractable FAQ and objection coverage,
+  per-tier details stated in text, and structured data.
+
+**Fast check — the paste test:** give the pricing URL to a browsing-capable AI,
+or paste the rendered page text, and ask, “What are the plans and prices?” A
+clean miss means similarly equipped agents are likely to struggle too. Treat
+this as a useful heuristic, not proof that every agent fails.
+
+AI-readiness fixes are often high impact and low effort: put prices in text,
+add `Product`/`Offer` JSON-LD, and make the rendered page extractable. Use
+`search-visibility` for crawl and AI-discovery checks.
+
+For the full 10-dimension rubric, scoring, and report template, read
+[references/pricing-page-teardown.md](references/pricing-page-teardown.md).
+
+---
+
 ## Pricing Checklist
 
 ### Before Setting Prices
@@ -222,6 +249,7 @@ Identifies which features customers value most:
 
 - **churn-prevention**: For cancel flows, save offers, and reducing revenue churn
 - **cro**: For optimizing pricing page conversion
+- **search-visibility**: For extractability, AI-bot access, and AI discovery
 - **copywriting**: For pricing page copy
 - **customer-research**: For willingness-to-pay and value evidence
 - **growth-experiments**: For testing reversible pricing changes

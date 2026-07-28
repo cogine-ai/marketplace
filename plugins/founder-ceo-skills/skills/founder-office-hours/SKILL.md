@@ -24,8 +24,7 @@ Ask the user before writing the final handoff when any of these are unresolved:
 ## Workflow
 
 1. Restate the real observation.
-   - Separate the observed change from the user's interpretation.
-   - Name what the observation does not prove.
+   - Separate observed behavior from interpretation; interest, signups, and praise are signals, not demand.
 
 2. Split the layers.
    - Observation: what changed.
@@ -36,12 +35,13 @@ Ask the user before writing the final handoff when any of these are unresolved:
    - Execution surface: browser, repo, terminal, database, SaaS account, documents, chat, local machine, or cloud.
    - Business motion: distribution, pricing, support burden, and defensibility.
 
-3. Pressure-test six founder questions.
-   - Who is the first high-frequency user?
-   - What painful workflow happens today without this product?
-   - Why would this user switch now?
+3. Pressure-test the founder questions that matter.
+   - Who is the first named high-frequency user, and what consequence do they face?
+   - What is the strongest behavioral evidence of demand?
+   - What workaround is the status quo, and what does it cost?
+   - What surprised you when watching unassisted use? If it has not been observed, say so.
    - What is the smallest useful version that proves demand?
-   - What existing surface already contains the user's state, permissions, context, and habit?
+   - What existing surface contains the user's state, permissions, context, and habit, and why switch now?
    - What breaks if model capability, platform rules, or distribution changes in 3-12 months?
 
 4. Generate alternatives before recommending.

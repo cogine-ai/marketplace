@@ -9,29 +9,29 @@
     {
       "name": "design-engineer-skills",
       "source": "./plugins/design-engineer-skills",
-      "description": "Six design-engineering and UI motion skills, packaged by Cogine AI.",
-      "version": "0.1.0",
+      "description": "Eight design-engineering skills for UI prototyping, library selection, polish, and motion.",
+      "version": "0.1.1",
       "category": "development"
     },
     {
       "name": "coding-engineer-skills",
       "source": "./plugins/coding-engineer-skills",
       "description": "Twenty-five focused engineering skills for specs, coding, isolated worktrees, frontend work, debugging, review, security, CI, and orchestration.",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "category": "development"
     },
     {
       "name": "product-manager-skills",
       "source": "./plugins/product-manager-skills",
       "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "productivity"
     },
     {
       "name": "growth-and-gtm-skills",
       "source": "./plugins/growth-and-gtm-skills",
       "description": "Eighteen focused growth and GTM skills for strategy, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "productivity"
     },
     {
@@ -45,7 +45,7 @@
       "name": "founder-ceo-skills",
       "source": "./plugins/founder-ceo-skills",
       "description": "Sixteen focused founder and CEO skills for product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "productivity"
     }
   ]

@@ -37,6 +37,7 @@ If the source is ambiguous, ask only for the missing decision that changes the s
 
 3. Read enough code to make the spec executable.
    - Identify likely files, modules, APIs, routes, database tables, prompts, jobs, or tests.
+   - Record current behavior that is correct and must remain unchanged.
    - Do not invent file paths.
    - If the affected area cannot be identified, mark that as an open question.
 
@@ -46,7 +47,8 @@ If the source is ambiguous, ask only for the missing decision that changes the s
    - Out-of-scope behavior.
    - Acceptance criteria.
    - Validation commands or manual checks.
-   - Risks and dependencies.
+   - Risks, dependencies, and required sequencing.
+   - Rollback for data, migration, compatibility, or other hard-to-reverse changes.
 
 5. Redact and tighten.
    - Remove secrets, customer data, internal-only links, and unrelated conversation context.
@@ -90,6 +92,7 @@ Out:
 Likely files/modules:
 Implementation notes:
 Reuse existing code:
+Preserve / do not touch:
 
 ### Acceptance Criteria
 - [ ] <criterion>
@@ -104,6 +107,8 @@ Manual:
 
 ### Risks And Dependencies
 - <risk or dependency>
+Required sequence:
+Rollback (only for hard-to-reverse changes):
 
 ### Open Questions
 - <question>

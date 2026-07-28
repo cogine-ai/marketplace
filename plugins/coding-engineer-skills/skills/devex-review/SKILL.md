@@ -27,6 +27,7 @@ Do not use this for end-user web UX, landing-page copy alone, or implementation-
 
 1. Define the developer persona.
    - First-time evaluator, integrating engineer, internal maintainer, API customer, plugin author, or open-source contributor.
+   - State what they already know, expect, and how much setup they tolerate.
 
 2. Measure TTHW.
    - TTHW means time to a credible first successful result.
@@ -34,11 +35,13 @@ Do not use this for end-user web UX, landing-page copy alone, or implementation-
    - Note where a real developer would abandon.
 
 3. Test the core path.
-   - Install or setup.
-   - Authentication or configuration.
-   - Minimal example.
-   - First useful output.
-   - Next likely task after success.
+   - Run without insider knowledge; record timing, evidence, confusion, and abandonment points.
+   - Discover.
+   - Install and configure.
+   - Reach Hello World or the first useful output.
+   - Complete the first real task.
+   - Debug and recover from failure.
+   - Upgrade or complete the next likely task.
 
 4. Test failure paths.
    - Missing credential.

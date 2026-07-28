@@ -11,11 +11,16 @@ plugin so Codex and Claude Code can discover the same bundle.
 - Skills: `founder-office-hours`, `backlog-ready-spec`
 - License: Apache-2.0
 
+`backlog-ready-spec` is a Cogine-authored adaptation informed by GStack's
+`spec` workflow; it is not derived from Matt Pocock's `to-spec`.
+On 2026-07-29, `founder-office-hours` and `backlog-ready-spec` selectively
+absorbed current GStack checks without importing its runtime or preamble.
+
 ## Matt Pocock skills — 5 skills
 
 - Repository: https://github.com/mattpocock/skills
 - Branch: `main`
-- Pinned commit: `9603c1cc8118d08bc1b3bf34cf714f62178dea3b`
+- Pinned commit: `2ab958093e83e0ec752e6c1c5932da465bf23e0c`
 - Skills: `grilling`, `grill-me`, `prototype`, `to-spec`, `to-tickets`
 - License: MIT
 
@@ -66,4 +71,6 @@ Anthropic workflows and GitHub PRD workflow were condensed and made
 connector-independent. `prototype` gained four concise design gates and a
 standalone HTML fallback. `ui-ux-pro-max` resolves its own skill directory
 instead of relying on `CLAUDE_PLUGIN_ROOT`, and Codex treats it as explicit-only.
-The two Lenny skills retain their full evidence references as on-demand material.
+The two Lenny skills retain their full evidence references as on-demand
+material. The current `to-tickets` snapshot omits its former final `/implement`
+handoff sentence.

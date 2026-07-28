@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.6.3 - 2026-07-29
+
+- Update `design-engineer-skills` to the latest Emil Kowalski snapshot, add
+  explicit-only `prototype` and `pick-ui-library`, and release version `0.1.1`.
+- Update Growth `pricing` to 2.1.0 with human-buyer and AI-agent pricing-page
+  review, the paste test, and `Product`/`Offer` structured-data guidance;
+  release `growth-and-gtm-skills` version `0.1.2`.
+- Refresh `to-tickets` in Coding Engineer and Product Manager by removing the
+  obsolete final `/implement` handoff; release versions `0.1.6` and `0.1.2`.
+- Clarify that `to-spec` comes from Matt Pocock while `backlog-ready-spec` is a
+  Cogine adaptation informed by GStack's `spec` workflow.
+- Selectively strengthen GStack-derived workflows: behavioral demand evidence
+  in `founder-office-hours`, preserve/sequence/rollback contracts in
+  `backlog-ready-spec`, and a complete evidence-based journey in
+  `devex-review`; release `founder-ceo-skills` version `0.1.1`.
+
 ## 0.6.2 - 2026-07-22
 
 - Refresh `fix-ci`, `loop-on-ci`, and `review-and-ship` from their newer local

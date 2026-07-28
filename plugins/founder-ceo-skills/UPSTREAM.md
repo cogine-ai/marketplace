@@ -11,6 +11,11 @@ plugin so Codex and Claude Code can discover the same bundle.
 - Skills: founder-office-hours, planmode-ceo
 - License: Apache-2.0
 
+`founder-office-hours` is a Cogine-authored adaptation informed by GStack's
+`office-hours` workflow. On 2026-07-29 it selectively absorbed demand-evidence,
+status-quo, and observed-use checks from GStack commit
+`a3259400a366593e0c909dd9ac3e59752efd2488` without importing its runtime.
+
 ## Lenny skills by Refound AI — 8 skills
 
 - Repository: https://github.com/RefoundAI/lenny-skills

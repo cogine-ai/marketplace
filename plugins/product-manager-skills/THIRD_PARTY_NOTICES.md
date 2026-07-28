@@ -44,3 +44,9 @@ is in `LICENSES/MIT-UI-UX-Pro-Max.txt`.
 [RefoundAI/lenny-skills](https://github.com/RefoundAI/lenny-skills), copyright
 (c) 2025 Refound AI, under the MIT License. The license text is in
 `LICENSES/MIT-Refound-AI.txt`.
+
+## Cogine adaptations
+
+`founder-office-hours` and `backlog-ready-spec` are Cogine-authored adaptations
+from Cogine Dev Skillset informed by GStack's `office-hours` and `spec`
+workflows. GStack is copyright (c) 2026 Garry Tan under the MIT License.
