@@ -23,8 +23,8 @@
     {
       "name": "product-manager-skills",
       "source": "./plugins/product-manager-skills",
-      "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
-      "version": "0.1.2",
+      "description": "Fifteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
+      "version": "0.2.0",
       "category": "productivity"
     },
     {

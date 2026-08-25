@@ -12,11 +12,10 @@ implementation handoff, with explicit support for product strategy and taste.
 - `defining-product-strategy`
 - `product-taste`
 
-### Discovery and evidence — 5
+### Discovery and evidence — 4
 
 - `founder-office-hours`
 - `grilling`
-- `grill-me`
 - `synthesize-research`
 - `competitive-brief`
 
@@ -41,6 +40,11 @@ implementation handoff, with explicit support for product strategy and taste.
   `product-taste` supplies a quality bar before execution starts.
 - Product discovery and requirements stay separate: validate the decision before
   writing the PRD, then verify implementation readiness before ticketing.
+- `grilling` follows Matt Pocock's current design-tree workflow, asking each
+  dependency-ready frontier as a numbered round. The redundant `grill-me` alias
+  is intentionally omitted.
+- `to-spec` and `to-tickets` are explicit-only in both Codex and Claude Code
+  because they publish artifacts to a tracker or the local workspace.
 - `prototype` supports logic and UI exploration and includes a standalone HTML
   fallback when no host application exists.
 - `interface-design` supplies the everyday craft discipline for product UI.
