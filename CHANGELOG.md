@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.1 - 2026-08-26
+
+- Prepare `product-manager-skills` version `0.2.0` with 15 focused skills.
+- Refresh `grilling` and its Codex metadata exactly from Matt Pocock's current
+  pinned snapshot, replacing one-question-at-a-time interviews with numbered
+  design-tree frontier rounds.
+- Make `to-spec` and `to-tickets` explicit-only in both Claude Code and Codex.
+- Remove the redundant explicit-only `grill-me` alias; `grilling` remains the
+  single interview skill.
+
 ## 0.7.0 - 2026-08-25
 
 - Expand `coding-engineer-skills` from 25 to 30 skills and prepare plugin

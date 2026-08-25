@@ -32,7 +32,7 @@ This is a private repository, so Git must already have access to
 | --- | ---: | --- |
 | `design-engineer-skills` | 8 | UI prototyping, frontend library selection, polish, animation review, and motion design. |
 | `coding-engineer-skills` | 30 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
-| `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
+| `product-manager-skills` | 15 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
@@ -98,7 +98,7 @@ plugins/coding-engineer-skills/
 plugins/product-manager-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 16 shared skills
+  skills/                              # 15 shared skills
 plugins/growth-and-gtm-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest

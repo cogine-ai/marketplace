@@ -6,7 +6,7 @@ packaging and material unless a source states otherwise.
 
 ## Matt Pocock
 
-Five skills derive from [mattpocock/skills](https://github.com/mattpocock/skills),
+Four skills derive from [mattpocock/skills](https://github.com/mattpocock/skills),
 copyright (c) 2026 Matt Pocock, under the MIT License. The license text is in
 `LICENSES/MIT-Matt-Pocock.txt`.
 

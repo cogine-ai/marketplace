@@ -1,7 +1,7 @@
 {
   "name": "product-manager-skills",
-  "version": "0.1.2",
-  "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
+  "version": "0.2.0",
+  "description": "Fifteen focused product-management skills for strategy, product judgment, discovery, research, design, planning, and delivery handoff.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -23,7 +23,7 @@
   "interface": {
     "displayName": "Product Manager Skills",
     "shortDescription": "A focused product-management toolkit for Cogine.",
-    "longDescription": "Sixteen curated skills for product strategy, product judgment, discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills, two high-quality design systems, and two focused Lenny product skills.",
+    "longDescription": "Fifteen curated skills for product strategy, product judgment, discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills, two high-quality design systems, and two focused Lenny product skills.",
     "developerName": "Cogine AI",
     "category": "Productivity",
     "capabilities": [

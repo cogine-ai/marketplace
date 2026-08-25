@@ -1,7 +1,8 @@
 # Upstream sources
 
-Packaged on 2026-07-19. Skill directories are copied or adapted into this
-plugin so Codex and Claude Code can discover the same bundle.
+Packaged on 2026-07-19 and updated on 2026-08-26. Skill directories are copied
+or adapted into this plugin so Codex and Claude Code can discover the same
+bundle.
 
 ## Cogine Dev Skillset — 2 skills
 
@@ -16,12 +17,12 @@ plugin so Codex and Claude Code can discover the same bundle.
 On 2026-07-29, `founder-office-hours` and `backlog-ready-spec` selectively
 absorbed current GStack checks without importing its runtime or preamble.
 
-## Matt Pocock skills — 5 skills
+## Matt Pocock skills — 4 skills
 
 - Repository: https://github.com/mattpocock/skills
 - Branch: `main`
-- Pinned commit: `2ab958093e83e0ec752e6c1c5932da465bf23e0c`
-- Skills: `grilling`, `grill-me`, `prototype`, `to-spec`, `to-tickets`
+- Pinned commit: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`
+- Skills: `grilling`, `prototype`, `to-spec`, `to-tickets`
 - License: MIT
 
 ## Anthropic Knowledge Work Plugins — 4 adapted skills
@@ -65,9 +66,11 @@ absorbed current GStack checks without importing its runtime or preamble.
 
 ## Cross-platform compatibility adjustments
 
-Unsupported frontmatter and Claude-only command syntax were removed. Matt
-Pocock's tracker-aware skills reuse Cogine's portable adaptations. The four
-Anthropic workflows and GitHub PRD workflow were condensed and made
+Matt Pocock's `grilling` skill and Codex metadata match the pinned upstream
+snapshot exactly. The redundant `grill-me` alias is intentionally omitted.
+Matt Pocock's tracker-aware skills reuse Cogine's portable adaptations;
+`to-spec` and `to-tickets` are explicit-only in both Claude Code and Codex.
+The four Anthropic workflows and GitHub PRD workflow were condensed and made
 connector-independent. `prototype` gained four concise design gates and a
 standalone HTML fallback. `ui-ux-pro-max` resolves its own skill directory
 instead of relying on `CLAUDE_PLUGIN_ROOT`, and Codex treats it as explicit-only.
