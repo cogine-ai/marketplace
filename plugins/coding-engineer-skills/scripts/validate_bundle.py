@@ -97,6 +97,16 @@ def load_frontmatter(path: Path):
     return data, text
 
 
+def contains_bare_skill_call(text: str, target: str) -> bool:
+    return bool(
+        re.search(
+            rf"(?:^|[\s`])/{re.escape(target)}(?![A-Za-z0-9_/-])",
+            text,
+            flags=re.MULTILINE,
+        )
+    )
+
+
 def validate_inventory(errors):
     expected = USER_ONLY | MODEL_INVOKED
     actual = {path.name for path in SKILLS_ROOT.iterdir() if path.is_dir()}
@@ -179,7 +189,7 @@ def validate_cross_skill_calls(errors):
         for target in targets:
             if target not in expected:
                 errors.append(f"{source}: references missing skill {target}")
-            if re.search(rf"(?<!coding-engineer-skills:)/{re.escape(target)}\b", text):
+            if contains_bare_skill_call(text, target):
                 errors.append(f"{source}: contains bare operational /{target} reference")
 
 

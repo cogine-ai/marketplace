@@ -24,7 +24,8 @@ Only include these when they add genuine value. Most ADRs won't need them.
 
 ## Numbering
 
-Scan `docs/adr/` for the highest existing number and increment by one.
+Scan `docs/adr/` for the highest existing number, increment by one, and format
+the result as a four-digit, zero-padded number (for example, `0003`).
 
 ## When to offer an ADR
 

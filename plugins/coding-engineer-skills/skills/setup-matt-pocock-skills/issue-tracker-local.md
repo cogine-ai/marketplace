@@ -12,7 +12,8 @@ Issues and specs for this repo live as markdown files in `.scratch/`.
 
 ## When a skill says "publish to the issue tracker"
 
-Create a new file under `.scratch/<feature-slug>/` (creating the directory if needed).
+Create `.scratch/<feature-slug>/issues/<NN>-<slug>.md` using the next available
+two-digit number, creating the directories if needed.
 
 ## When a skill says "fetch the relevant ticket"
 

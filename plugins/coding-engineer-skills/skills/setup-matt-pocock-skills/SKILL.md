@@ -27,13 +27,13 @@ Look at the current repo to understand its starting state. Read whatever exists;
 - `docs/agents/`: does this skill's prior output already exist?
 - `.scratch/`: a sign that a local-markdown issue tracker convention is already in use
 - Is the `triage` skill installed? (a `triage` skill folder alongside this one, or `triage` in your available skills.) This decides whether Section B runs at all.
-- Monorepo signals: a `pnpm-workspace.yaml`, a `workspaces` field in `package.json`, or a populated `packages/*` with its own `src/`. These are present only in a genuinely large multi-package repo; their absence means single-context, which is almost every repo.
+- Domain-layout signals: if `CONTEXT-MAP.md` already exists, preserve its multi-context layout. Otherwise look for multiple business contexts during exploration; workspace files and populated package directories are supporting signals, not proof by themselves. When multiple contexts are plausible, ask instead of writing a root `CONTEXT.md` automatically.
 
 ### 2. Present findings and ask
 
 Summarise what's present and what's missing. Then take the sections in order. One section, one answer, then the next.
 
-Lead each section with the recommended answer so the user can accept it in a word. Give a one-line explainer only when the choice genuinely branches; skip the section entirely when exploration already settled it (Section B when `triage` isn't installed, Section C when there's no monorepo).
+Lead each section with the recommended answer so the user can accept it in a word. Give a one-line explainer only when the choice genuinely branches; skip the section entirely when exploration already settled it (Section B when `triage` isn't installed, or Section C when an existing map or a clearly single-context layout settles the choice).
 
 **Section A: Issue tracker.**
 
@@ -56,9 +56,12 @@ If it is installed, ask exactly one question:
 
 The defaults are the five canonical roles, each label string equal to its name: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. On **yes**, write them as-is. Only if the user says no, usually because their tracker already uses other names (e.g. `bug:triage` for `needs-triage`), collect the overrides so `triage` applies existing labels instead of creating duplicates.
 
-**Section C: Domain docs.** Default to **single-context** (one `CONTEXT.md` + `docs/adr/` at the repo root). This fits almost every repo; write it without asking.
-
-Offer **multi-context** (a root `CONTEXT-MAP.md` pointing to per-context `CONTEXT.md` files) only when exploration found monorepo signals. Then confirm which layout they want.
+**Section C: Domain docs.** If a root `CONTEXT-MAP.md` already exists, its
+multi-context layout is settled: preserve it. If exploration found multiple
+business contexts but no map, recommend a root `CONTEXT-MAP.md` pointing to
+per-context `CONTEXT.md` files and confirm the choice. Otherwise default to
+**single-context** (one root `CONTEXT.md` + `docs/adr/`) and write it without
+asking; this fits almost every repo.
 
 ### 3. Confirm and edit
 

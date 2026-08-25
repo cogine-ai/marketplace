@@ -1,4 +1,5 @@
 import hashlib
+import importlib.util
 import json
 import re
 import unittest
@@ -9,6 +10,10 @@ import yaml
 
 PLUGIN_ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = PLUGIN_ROOT / "skills"
+VALIDATOR_PATH = PLUGIN_ROOT / "scripts" / "validate_bundle.py"
+VALIDATOR_SPEC = importlib.util.spec_from_file_location("bundle_validator", VALIDATOR_PATH)
+VALIDATOR = importlib.util.module_from_spec(VALIDATOR_SPEC)
+VALIDATOR_SPEC.loader.exec_module(VALIDATOR)
 
 USER_ONLY = {
     "cogine-multirepo-worker",
@@ -113,6 +118,19 @@ class BundleContractTests(unittest.TestCase):
             for target in targets:
                 self.assertIn(f"coding-engineer-skills:{target}", text, f"{source} -> {target}")
 
+    def test_bare_skill_call_detection_ignores_paths_and_urls(self):
+        self.assertTrue(VALIDATOR.contains_bare_skill_call("/tdd", "tdd"))
+        self.assertTrue(VALIDATOR.contains_bare_skill_call("Use `/tdd` now", "tdd"))
+        self.assertFalse(
+            VALIDATOR.contains_bare_skill_call("Read skills/tdd/SKILL.md", "tdd")
+        )
+        self.assertFalse(
+            VALIDATOR.contains_bare_skill_call("See https://example.test/tdd", "tdd")
+        )
+        self.assertFalse(
+            VALIDATOR.contains_bare_skill_call("Open /tdd/SKILL.md", "tdd")
+        )
+
     def test_implement_uses_the_local_pre_commit_review_instead_of_code_review(self):
         text = (SKILLS_ROOT / "implement" / "SKILL.md").read_text(encoding="utf-8")
         review = "review the work against the originating spec or tickets"
@@ -167,6 +185,61 @@ class BundleContractTests(unittest.TestCase):
                 actual = hashlib.sha256(local_path.read_bytes()).hexdigest()
                 self.assertEqual(expected["local_sha256"], actual, str(local_path))
                 self.assertRegex(expected["upstream_sha256"], r"^[0-9a-f]{64}$")
+
+    def test_reviewed_upstream_adaptations_preserve_local_safety_contracts(self):
+        lock = json.loads((PLUGIN_ROOT / "UPSTREAM_LOCK.json").read_text(encoding="utf-8"))
+        self.assertEqual([], lock["skills"]["codebase-design"]["adaptations"])
+        self.assertTrue(
+            any(
+                "CONTEXT-MAP.md" in adaptation
+                for adaptation in lock["skills"]["domain-modeling"]["adaptations"]
+            )
+        )
+
+        merge_skill = (SKILLS_ROOT / "fix-merge-conflicts" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotIn("Stage everything", merge_skill)
+        self.assertIn("Stage only", merge_skill)
+        self.assertIn("abort", merge_skill.lower())
+        self.assertIn("confirmation", merge_skill.lower())
+
+        domain_skill = (SKILLS_ROOT / "domain-modeling" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        adr_format = (SKILLS_ROOT / "domain-modeling" / "ADR-FORMAT.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("selected context", domain_skill)
+        self.assertIn("zero-padded", adr_format)
+
+        architecture_skill = (
+            SKILLS_ROOT / "improve-codebase-architecture" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        html_report = (
+            SKILLS_ROOT / "improve-codebase-architecture" / "HTML-REPORT.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("secure unique temporary-file", architecture_skill)
+        self.assertNotIn("self-contained HTML", architecture_skill)
+        self.assertIn('securityLevel: "strict"', html_report)
+        self.assertIn("HTML-escape", html_report)
+
+        setup_skill = (
+            SKILLS_ROOT / "setup-matt-pocock-skills" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        github_tracker = (
+            SKILLS_ROOT / "setup-matt-pocock-skills" / "issue-tracker-github.md"
+        ).read_text(encoding="utf-8")
+        local_tracker = (
+            SKILLS_ROOT / "setup-matt-pocock-skills" / "issue-tracker-local.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("author_association", github_tracker)
+        self.assertNotIn("authorAssociation", github_tracker)
+        self.assertIn("--json blockedBy", github_tracker)
+        self.assertIn(
+            ".scratch/<feature-slug>/issues/<NN>-<slug>.md", local_tracker
+        )
+        self.assertIn("CONTEXT-MAP.md` already exists", setup_skill)
 
 
 if __name__ == "__main__":

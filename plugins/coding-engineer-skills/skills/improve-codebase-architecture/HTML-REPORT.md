@@ -1,6 +1,11 @@
 # HTML Report Format
 
-The architectural review is rendered as a single self-contained HTML file in the OS temp directory. Tailwind and Mermaid both come from CDNs. Mermaid handles graph-shaped diagrams reliably; hand-built divs and inline SVG handle the more editorial visuals (mass diagrams, cross-sections). Mix the two: don't lean on Mermaid for everything, it'll start to look generic.
+The architectural review is rendered as a single HTML file in the OS temp
+directory. It requires network access when opened because Tailwind and Mermaid
+come from CDNs. Mermaid handles graph-shaped diagrams reliably; hand-built divs
+and inline SVG handle the more editorial visuals (mass diagrams,
+cross-sections). Mix the two: don't lean on Mermaid for everything, it'll start
+to look generic.
 
 ## Scaffold
 
@@ -13,7 +18,7 @@ The architectural review is rendered as a single self-contained HTML file in the
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-      mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
+      mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "strict" });
     </script>
     <style>
       /* small custom layer for things Tailwind doesn't cover cleanly:
@@ -32,6 +37,11 @@ The architectural review is rendered as a single self-contained HTML file in the
   </body>
 </html>
 ```
+
+HTML-escape every repository-derived value before inserting it into the
+document, including repository names, paths, module labels, and prose. Treat
+Mermaid source as untrusted too: use quoted, escaped labels and never generate
+click handlers, links, directives, or raw HTML from repository content.
 
 ## Header
 

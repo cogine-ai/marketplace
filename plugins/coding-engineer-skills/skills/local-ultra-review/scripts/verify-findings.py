@@ -275,7 +275,6 @@ def reviewer_execution_state(manifest, candidate_count):
         )
         if not receipt_valid:
             errors.append("reviewer completion receipt is missing or invalid")
-            break
     reported_candidates = sum(
         row.get("candidates", 0)
         for row in reviewers

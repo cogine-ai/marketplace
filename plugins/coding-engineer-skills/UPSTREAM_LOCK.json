@@ -66,11 +66,14 @@
     },
     "domain-modeling": {
       "upstream_path": "skills/engineering/domain-modeling",
-      "adaptations": [],
+      "adaptations": [
+        "ADR-FORMAT.md: require four-digit zero-padded sequential numbers",
+        "SKILL.md: resolve the selected context from CONTEXT-MAP.md before reads and writes"
+      ],
       "files": {
         "ADR-FORMAT.md": {
           "upstream_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
-          "local_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0"
+          "local_sha256": "62cad402bec5e6bf10b6eca047e6ca9dc7e18efb1ba898e0ac666784c781a06b"
         },
         "CONTEXT-FORMAT.md": {
           "upstream_sha256": "17ab16ce783e4d2801ee52fd9acdf550cbf44de65ae76797a93943bbedf22a13",
@@ -78,7 +81,7 @@
         },
         "SKILL.md": {
           "upstream_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
-          "local_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e"
+          "local_sha256": "b51919704dd4953dc216ba6219bad9ed0c2603816bfd02d6922097cbb885dd95"
         },
         "agents/openai.yaml": {
           "upstream_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
@@ -90,12 +93,13 @@
       "upstream_path": "skills/engineering/resolving-merge-conflicts",
       "adaptations": [
         "SKILL.md: retain the public name fix-merge-conflicts",
+        "SKILL.md: preserve abort as a recoverable path, stage only verified conflict files, and require confirmation before changing history",
         "agents/openai.yaml: adapt the display name to Fix Merge Conflicts"
       ],
       "files": {
         "SKILL.md": {
           "upstream_sha256": "9d8114f8ef0b31f535a265fc05c364bd8cf2e2895a830040e06c22acb11f54b0",
-          "local_sha256": "e49e0948354f3da7a00d2f1acbc18783069ade3a19f6630c51ccd738b8e06efe"
+          "local_sha256": "c8908f1ba68732fce0abaa0cd48e25a5dcb98d082b98403f7a30487199998199"
         },
         "agents/openai.yaml": {
           "upstream_sha256": "a1f4f96838f2ed6282eb28abbbf99029cb8fadce552baf53da90a025b8bffddf",
@@ -138,16 +142,18 @@
       "upstream_path": "skills/engineering/improve-codebase-architecture",
       "adaptations": [
         "SKILL.md: qualify codebase-design, grilling, and domain-modeling with the local plugin namespace",
-        "HTML-REPORT.md: qualify codebase-design glossary references with the local plugin namespace"
+        "SKILL.md: resolve multi-context domain paths and use secure unique temporary report files",
+        "HTML-REPORT.md: qualify codebase-design glossary references with the local plugin namespace",
+        "HTML-REPORT.md: state CDN requirements, HTML-escape repository data, and use Mermaid strict mode"
       ],
       "files": {
         "HTML-REPORT.md": {
           "upstream_sha256": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
-          "local_sha256": "c7297c1522ac4d2f0f2c96257ecfc4a3b300a20881cce0f17cdb4336ef176310"
+          "local_sha256": "c1f0343bfdaee8711be2357dbcb528438dd309407b413edbb517206dc5e6d5c3"
         },
         "SKILL.md": {
           "upstream_sha256": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
-          "local_sha256": "13f75ce83fc2c0ed2053bb16159ef129d0b7a7bfd0a04a873992efa0e3eead95"
+          "local_sha256": "2cc188865e45c03114953df53550d5a855f4cfa0d3429b0a2820e0b1cf5255a2"
         },
         "agents/openai.yaml": {
           "upstream_sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
@@ -159,12 +165,15 @@
       "upstream_path": "skills/engineering/setup-matt-pocock-skills",
       "adaptations": [
         "SKILL.md: qualify bundled to-spec and to-tickets references",
+        "SKILL.md: preserve existing CONTEXT-MAP.md layouts and ask when multiple business contexts are plausible",
+        "issue-tracker-github.md: use supported GitHub CLI and API fields for external PR and dependency queries",
+        "issue-tracker-local.md: publish implementation issues to the standard numbered issues directory",
         "domain.md: qualify bundled domain-modeling and improve-codebase-architecture references and remove the excluded grill-with-docs alias"
       ],
       "files": {
         "SKILL.md": {
           "upstream_sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
-          "local_sha256": "6b807a1c9fd1c9dffe4de825cb16dc95718a0d17ce37408cc804c42fccfa8b65"
+          "local_sha256": "a885ce3c08a4d50cc126f5bf33ef20989b183d3641b62dafb92f7e39b1d98614"
         },
         "agents/openai.yaml": {
           "upstream_sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
@@ -176,7 +185,7 @@
         },
         "issue-tracker-github.md": {
           "upstream_sha256": "afd6852a80185217bd28aa5cbe456bef1e85be25be7bd1fba382d5b8ee428325",
-          "local_sha256": "afd6852a80185217bd28aa5cbe456bef1e85be25be7bd1fba382d5b8ee428325"
+          "local_sha256": "91a3a92d893855d31e9ac306eed23d30f0292d19952d644201c713f0342655f4"
         },
         "issue-tracker-gitlab.md": {
           "upstream_sha256": "ea175f73d193b3f55819c0ed9bbccf6ee0e70ad8f928e3d7607596c53380acd6",
@@ -184,7 +193,7 @@
         },
         "issue-tracker-local.md": {
           "upstream_sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
-          "local_sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e"
+          "local_sha256": "aa9d5636aa2e17d7b070598a5f8833fe0f368038c76ef627ab3942d191880019"
         },
         "triage-labels.md": {
           "upstream_sha256": "4f53c9b40ce2651e3611aa090eaedbd6dbc9b71ef8c5f7e65eac0d8263190d0d",

@@ -84,6 +84,28 @@ class ReviewerExecutionContractTests(unittest.TestCase):
             )
             self.assertTrue((out / "security.prompt.md").is_file())
 
+    def test_documented_reviewer_flow_preserves_the_selected_mode(self):
+        skill_text = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+        reviewer_phase = skill_text.split("### Phase 5: Reviewer Passes", 1)[1].split(
+            "### Phase 6: Verification", 1
+        )[0]
+        self.assertIn('--mode "<mode>"', reviewer_phase)
+        self.assertNotIn('--mode "deep"', reviewer_phase)
+        self.assertIn("required reviewer packets", reviewer_phase)
+
+    def test_optional_script_usage_marks_host_and_pr_only_steps(self):
+        readme = (SKILL_ROOT / "README.md").read_text(encoding="utf-8")
+        usage = readme.split("## Optional Script Usage", 1)[1]
+        self.assertRegex(usage, r"dispatch the\s+generated reviewer packets")
+        self.assertIn("dispatch the independent verifier", usage)
+        self.assertIn("GitHub PR targets only", usage)
+
+    def test_verifier_prompt_requires_a_summary_for_each_verdict(self):
+        prompt = (SKILL_ROOT / "prompts" / "07-verifier.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("`summary`", prompt)
+
     def test_cli_backend_rejects_a_noop_command_that_emits_no_completion_receipt(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -684,6 +706,12 @@ class IndependentVerifierContractTests(unittest.TestCase):
             self.assertIn(
                 "reviewer completion receipt is missing or invalid",
                 payload["execution"]["errors"],
+            )
+            self.assertEqual(
+                5,
+                payload["execution"]["errors"].count(
+                    "reviewer completion receipt is missing or invalid"
+                ),
             )
 
     def test_candidate_input_ignores_the_terminal_reviewer_receipt(self):

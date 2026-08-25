@@ -109,7 +109,8 @@ Invocation policy is expressed natively for both hosts:
 - Every skill has `agents/openai.yaml`.
 
 For the 10 current Matt imports, upstream bodies and supporting files are
-otherwise retained. The whitelist is limited to:
+otherwise retained. The adaptation whitelist is limited to local namespace and
+host-safety requirements plus verified functional corrections:
 
 1. Fully qualifying operational cross-skill calls as
    `coding-engineer-skills:<skill>`.
@@ -123,10 +124,20 @@ otherwise retained. The whitelist is limited to:
 5. Keeping the established `fix-merge-conflicts` folder/frontmatter name for
    upstream `resolving-merge-conflicts`.
 6. Adjusting the corresponding user-facing display name.
+7. Resolving `CONTEXT-MAP.md` before domain reads and writes, and preserving an
+   existing multi-context setup.
+8. Keeping conflict resolution recoverable, staging only verified conflict
+   files, and requiring confirmation before changing Git history.
+9. Correcting the GitHub triage command, dependency query, local issue path,
+   and ADR zero-padding instructions so their documented contracts execute as
+   written.
+10. Creating architecture reports through a secure unique temporary file,
+    stating their CDN requirement, HTML-escaping repository-derived content,
+    and using Mermaid's strict security mode.
 
 `local-ultra-review` is Cogine-owned and separately hardened for portable
 skill-root resolution, explicit argv, honest packet-versus-execution status,
-and a sixth independent verifier context. `worktree-management` retains the
+and a separate independent verifier context. `worktree-management` retains the
 upstream isolation detection and native-tool-first flow, narrows automatic
 triggering, makes dependency setup proportional, and adds confirmation-gated
 cleanup for manually created worktrees.

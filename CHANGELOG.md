@@ -21,6 +21,9 @@
   reviewer, light mode retains a dedicated security/privacy pass, all worktree
   phases retain one absolute session artifact root, reports expose incomplete
   execution, and GitHub output refuses to render or post an incomplete review.
+- Apply narrow reviewed corrections to the pinned Matt workflows for
+  multi-context routing, recoverable conflict handling, executable issue
+  tracker commands, and secure architecture report generation.
 - Add deterministic inventory, invocation-policy, runtime-placeholder,
   execution, verifier, manifest, and upstream-hash contracts.
 

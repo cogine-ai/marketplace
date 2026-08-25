@@ -37,13 +37,23 @@ If a `CONTEXT-MAP.md` exists at the root, the repo has multiple contexts. The ma
 │       └── docs/adr/
 ```
 
-Create files lazily: only when you have something to write. If no `CONTEXT.md` exists, create one when the first term is resolved. If no `docs/adr/` exists, create it when the first ADR is needed.
+Resolve the active context before writing. If `CONTEXT-MAP.md` exists, read it,
+infer which listed context the topic belongs to, and use that context's
+`CONTEXT.md` and context-specific `docs/adr/`; ask when the context is unclear.
+Use the root `docs/adr/` only for system-wide decisions. Without a context map,
+use the root `CONTEXT.md` and `docs/adr/`.
+
+Create files lazily: only when you have something to write. If the selected
+context has no `CONTEXT.md`, create it when the first term is resolved. If its
+ADR directory does not exist, create it when the first ADR is needed.
 
 ## During the session
 
 ### Challenge against the glossary
 
-When the user uses a term that conflicts with the existing language in `CONTEXT.md`, call it out immediately. "Your glossary defines 'cancellation' as X, but you seem to mean Y. Which is it?"
+When the user uses a term that conflicts with the existing language in the
+selected context's `CONTEXT.md`, call it out immediately. "Your glossary
+defines 'cancellation' as X, but you seem to mean Y. Which is it?"
 
 ### Sharpen fuzzy language
 
@@ -59,7 +69,9 @@ When the user states how something works, check whether the code agrees. If you 
 
 ### Update CONTEXT.md inline
 
-When a term is resolved, update `CONTEXT.md` right there. Don't batch these up: capture them as they happen. Use the format in [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md).
+When a term is resolved, update the selected context's `CONTEXT.md` right
+there. Don't batch these up: capture them as they happen. Use the format in
+[CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md).
 
 `CONTEXT.md` should be totally devoid of implementation details. Do not treat `CONTEXT.md` as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
 
