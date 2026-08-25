@@ -1,6 +1,7 @@
 ---
 name: cogine-orchestrator
 description: "Use for Cogine's WORK/TEST multi-repository control plane with per-repo work and shared independent verification."
+disable-model-invocation: true
 ---
 
 # Cogine Orchestrator

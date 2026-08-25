@@ -1,6 +1,7 @@
 ---
 name: review-and-ship
-description: Final self-review and shipping workflow for completed code tasks. Use when Codex is ready to review an entire task branch, resolve blockers, run verification, commit focused changes, push to the correct remote branch, and open or update a GitHub pull request.
+description: Explicitly run final self-review and shipping for a completed task branch, including verification, commit, push, and pull-request preparation.
+disable-model-invocation: true
 ---
 
 # Review and ship

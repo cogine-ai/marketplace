@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from execution_state import require_complete_execution
+
 
 DEFAULT_TIMEOUT_SECONDS = 120
 VALID_EVENTS = {"COMMENT", "REQUEST_CHANGES", "APPROVE"}
@@ -241,6 +243,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pr-context", required=True)
     parser.add_argument("--findings", required=True)
+    parser.add_argument("--execution", required=True)
     parser.add_argument("--pr-files", default="", help="Optional cached gh PR files JSON for deterministic dry runs")
     parser.add_argument("--repo", default="")
     parser.add_argument("--mode", default="deep")
@@ -252,6 +255,7 @@ def main():
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
     args = parser.parse_args()
 
+    require_complete_execution(args.execution)
     pr_context = load_json(args.pr_context, {})
     findings = load_json(args.findings, {})
     repo = args.repo or pr_context.get("repo") or ""

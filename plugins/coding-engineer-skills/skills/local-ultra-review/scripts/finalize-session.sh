@@ -34,6 +34,10 @@ if [ -n "$SESSION_DIR" ] && [ -z "$WORKTREE" ] && [ -f "$SESSION_DIR/worktree-pa
   WORKTREE="$(cat "$SESSION_DIR/worktree-path.txt")"
 fi
 
+if [ -n "$WORKTREE" ] && [ -d "$WORKTREE" ]; then
+  WORKTREE="$(cd "$WORKTREE" && pwd -P)"
+fi
+
 if [ "$KEEP_WORKTREE" = "true" ] || [ "$STATUS" != "success" ]; then
   printf '{"ok":true,"removed":false,"kept":true,"status":"%s","worktree":"%s"}\n' "$STATUS" "$WORKTREE"
   exit 0

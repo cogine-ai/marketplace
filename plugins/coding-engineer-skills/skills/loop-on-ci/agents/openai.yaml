@@ -1,0 +1,7 @@
+interface:
+  display_name: "Loop on CI"
+  short_description: "Monitor and repair PR checks until green"
+  default_prompt: "Use $loop-on-ci to monitor this pull request and fix its checks until they are green."
+
+policy:
+  allow_implicit_invocation: false

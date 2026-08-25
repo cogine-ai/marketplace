@@ -1,32 +1,14 @@
 ---
 name: fix-merge-conflicts
-description: Resolve merge conflicts non-interactively, validate build and tests, and finalize conflict resolution
+description: "Use when you need to resolve an in-progress git merge/rebase conflict."
 ---
 
-# Fix merge conflicts
+1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.
 
-## Trigger
+2. **Find the primary sources** for each conflict. Understand deeply why each change was made, and what the original intent was. Read the commit messages, check the PRs, check original issues/tickets.
 
-Branch has unresolved merge conflicts and needs a reliable path to a buildable state.
+3. **Resolve each hunk.** Preserve both intents where possible. Where incompatible, pick the one matching the merge's stated goal and note the trade-off. Do **not** invent new behaviour. If primary sources do not establish the intended result, stop and offer the recoverable `git merge --abort` or `git rebase --abort` path rather than guessing.
 
-## Workflow
+4. Discover the project's **automated checks** and run them, typically typecheck, then tests, then format. Fix anything the merge broke.
 
-1. Detect all conflicting files from git status and conflict markers.
-2. Resolve each conflict with minimal, correctness-first edits.
-3. Prefer preserving both sides when safe. Otherwise, choose the variant that compiles and keeps public behavior stable.
-4. Regenerate lockfiles with package manager tools instead of hand-editing.
-5. Run compile, lint, and relevant tests.
-6. Stage resolved files and summarize key decisions.
-
-## Guardrails
-
-- Keep changes minimal and readable.
-- Do not leave conflict markers in any file.
-- Avoid broad refactors while resolving conflicts.
-- Do not push or tag during conflict resolution.
-
-## Output
-
-- Files resolved
-- Notable resolution choices
-- Build/test outcome
+5. **Finish the merge/rebase.** Stage only the verified conflict-resolution files, show the resulting diff, and obtain user confirmation before committing or continuing the merge/rebase. If rebasing, continue until all commits are rebased only after that confirmation.

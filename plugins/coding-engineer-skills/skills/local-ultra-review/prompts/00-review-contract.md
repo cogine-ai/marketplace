@@ -32,7 +32,7 @@ Do not report:
 
 ## Candidate Output
 
-Return candidates as JSON objects matching `schemas/candidate-finding.schema.json`. Use JSONL if returning multiple candidates.
+Return candidates as JSON objects matching `schemas/candidate-finding.schema.json`, one object per JSONL line. After the final candidate, return exactly one terminal object matching `schemas/reviewer-completion.schema.json`. A zero-finding review returns the terminal object with `candidate_count: 0`; it is never represented by an empty response.
 
 Allowed severities:
 

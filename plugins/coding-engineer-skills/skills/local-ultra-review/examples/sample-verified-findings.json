@@ -5,6 +5,7 @@
   "findings": [
     {
       "candidate_id": "candidate-001",
+      "reviewer": "security",
       "status": "confirmed",
       "title": "Deleted user lookup now skips tenant scope",
       "severity": "Important",
@@ -22,13 +23,32 @@
       ],
       "verification": {
         "summary": "Base used the scoped helper; head queries by id only. A cross-workspace request reaches the changed path.",
-        "method": "base_comparison",
+        "method": "independent_verifier",
+        "verifier_id": "verifier-01",
+        "independent": true,
         "commands": [],
         "notes": [
-          "Static verification only in this sample."
+          "The verifier compared the base and head paths in a separate context."
         ]
       },
       "suggested_fix_direction": "Restore workspaceId scoping or call the scoped helper."
     }
-  ]
+  ],
+  "execution": {
+    "execution_complete": true,
+    "reviewers_complete": true,
+    "verifier_complete": true,
+    "candidate_count": 1,
+    "verdict_count": 1,
+    "verifier_id": "verifier-01",
+    "mode": "deep",
+    "reviewers": [
+      {"reviewer": "correctness", "status": "completed", "candidates": 0, "completion_receipt": {"type": "reviewer_complete", "reviewer": "correctness", "candidate_count": 0}},
+      {"reviewer": "security", "status": "completed", "candidates": 1, "completion_receipt": {"type": "reviewer_complete", "reviewer": "security", "candidate_count": 1}},
+      {"reviewer": "integration", "status": "completed", "candidates": 0, "completion_receipt": {"type": "reviewer_complete", "reviewer": "integration", "candidate_count": 0}},
+      {"reviewer": "state-concurrency", "status": "completed", "candidates": 0, "completion_receipt": {"type": "reviewer_complete", "reviewer": "state-concurrency", "candidate_count": 0}},
+      {"reviewer": "tests", "status": "completed", "candidates": 0, "completion_receipt": {"type": "reviewer_complete", "reviewer": "tests", "candidate_count": 0}}
+    ],
+    "errors": []
+  }
 }

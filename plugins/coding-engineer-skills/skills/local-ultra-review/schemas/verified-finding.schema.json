@@ -6,6 +6,7 @@
   "additionalProperties": true,
   "required": [
     "candidate_id",
+    "reviewer",
     "status",
     "title",
     "severity",
@@ -19,6 +20,10 @@
   ],
   "properties": {
     "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewer": {
       "type": "string",
       "minLength": 1
     },
@@ -121,7 +126,8 @@
             "lint",
             "base_comparison",
             "manual",
-            "mixed"
+            "mixed",
+            "independent_verifier"
           ]
         },
         "commands": {

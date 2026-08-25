@@ -1,11 +1,12 @@
 ---
 name: implement
-description: "Explicitly implement a piece of work from a spec or set of tickets."
+description: "Implement a piece of work based on a spec or set of tickets."
+disable-model-invocation: true
 ---
 
 Implement the work described by the user in the spec or tickets.
 
-Use /tdd where possible, at pre-agreed seams.
+Use the `coding-engineer-skills:tdd` skill where possible, at pre-agreed seams.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 

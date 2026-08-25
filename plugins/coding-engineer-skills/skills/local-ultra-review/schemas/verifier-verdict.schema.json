@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/local-ultra-review/verifier-verdict.schema.json",
+  "title": "VerifierVerdict",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "candidate_id",
+    "reviewer",
+    "status",
+    "verifier_id",
+    "independent",
+    "summary"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "false_positive",
+        "pre_existing",
+        "needs_manual_review"
+      ]
+    },
+    "verifier_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "independent": {
+      "const": true
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

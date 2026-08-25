@@ -3,6 +3,8 @@ import argparse
 import json
 from pathlib import Path
 
+from execution_state import load_execution
+
 
 def load_json(path, default):
     if not path:
@@ -54,15 +56,17 @@ def main():
     parser.add_argument("--bundle", default="")
     parser.add_argument("--findings", required=True)
     parser.add_argument("--checks", default="")
-    parser.add_argument("--reviewers", default="")
+    parser.add_argument("--execution", required=True)
     parser.add_argument("--out", required=True)
     args = parser.parse_args()
 
     findings = load_json(args.findings, {})
     bundle = load_json(args.bundle, {})
     checks = load_json(args.checks, {})
-    reviewers = load_json(args.reviewers, {})
+    execution = load_execution(args.execution)
     counts = findings.get("counts", {})
+    execution_complete = execution.get("execution_complete") is True
+    execution_status = "COMPLETE" if execution_complete else "INCOMPLETE"
 
     commands = []
     for item in checks.get("commands", []):
@@ -78,14 +82,22 @@ def main():
         f"- Head: `{bundle.get('head_ref', '')}`",
         f"- Files changed: `{bundle.get('diff_stats', {}).get('files', len(bundle.get('changed_files', [])))}`",
         f"- Lines changed: `+{bundle.get('diff_stats', {}).get('additions', 0)} / -{bundle.get('diff_stats', {}).get('deletions', 0)}`",
-        f"- Mode: `{reviewers.get('mode', '')}`",
+        f"- Mode: `{execution.get('mode', '')}`",
+        f"- Execution status: `{execution_status}`",
         f"- Worktree: `{bundle.get('repo_root', '')}`",
         f"- Commands run: `{', '.join(commands) if commands else 'none recorded'}`",
         "",
         "## Summary",
         "",
     ]
-    if counts.get("important", 0) or counts.get("nits", 0):
+    if not execution_complete:
+        lines.append(
+            "Review execution is INCOMPLETE and must not be treated as a clean review. "
+            "Its finding counts are not final."
+        )
+        for error in execution.get("errors", []):
+            lines.append(f"- {error}")
+    elif counts.get("important", 0) or counts.get("nits", 0):
         lines.append(f"Confirmed findings: {counts.get('important', 0)} Important, {counts.get('nits', 0)} Nit.")
     else:
         lines.append("No confirmed Important or Nit findings passed verification.")
@@ -97,9 +109,9 @@ def main():
     lines.extend(section("Needs Manual Review", findings.get("needs_manual_review", []), "No Needs Manual Review items."))
 
     lines.extend(["## Reviewer Coverage", ""])
-    for reviewer in reviewers.get("reviewers", []):
+    for reviewer in execution.get("reviewers", []):
         lines.append(f"- `{reviewer.get('reviewer')}`: {reviewer.get('status')} ({reviewer.get('candidates', 0)} candidates)")
-    if not reviewers.get("reviewers"):
+    if not execution.get("reviewers"):
         lines.append("- No reviewer manifest recorded.")
     lines.append("")
 
@@ -116,7 +128,7 @@ def main():
         ("Review bundle", args.bundle),
         ("Findings JSON", args.findings),
         ("Checks JSON", args.checks),
-        ("Reviewer manifest", args.reviewers),
+        ("Execution artifact", args.execution),
     ]:
         if path:
             lines.append(f"- {label}: `{path}`")
@@ -125,7 +137,18 @@ def main():
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("\n".join(lines), encoding="utf-8")
-    print(json.dumps({"ok": True, "out": str(out), "counts": counts}, indent=2, sort_keys=True))
+    print(
+        json.dumps(
+            {
+                "ok": True,
+                "out": str(out),
+                "counts": counts,
+                "execution_status": execution_status,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
 
 
 if __name__ == "__main__":

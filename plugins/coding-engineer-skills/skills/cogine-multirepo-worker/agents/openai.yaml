@@ -2,3 +2,6 @@ interface:
   display_name: "Cogine Multirepo Worker"
   short_description: "Coordinate one worker thread per Cogine repo"
   default_prompt: "Use $cogine-multirepo-worker to coordinate one guarded worker thread per active Cogine repository, keep the root thread stable, maintain the isolated ledger, and stop at owner approval boundaries."
+
+policy:
+  allow_implicit_invocation: false
