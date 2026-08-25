@@ -6,10 +6,16 @@ packaging and material unless a skill or source states otherwise.
 
 ## Matt Pocock
 
-Six skills are copied from
+Twelve skills are copied or adapted from
 [mattpocock/skills](https://github.com/mattpocock/skills), copyright (c) 2026
 Matt Pocock, under the MIT License. The license text is retained in
 `LICENSES/MIT-Matt-Pocock.txt`.
+
+The skills are `code-review`, `codebase-design`, `diagnosing-bugs`,
+`domain-modeling`, `fix-merge-conflicts` (upstream
+`resolving-merge-conflicts`), `grilling`,
+`implement`, `improve-codebase-architecture`,
+`setup-matt-pocock-skills`, `tdd`, `to-spec`, and `to-tickets`.
 
 ## Anthropic
 

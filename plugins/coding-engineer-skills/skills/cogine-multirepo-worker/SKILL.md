@@ -1,6 +1,7 @@
 ---
 name: cogine-multirepo-worker
 description: "Use for Cogine's classic one-worker-per-repository control plane; use cogine-orchestrator for shared WORK/TEST lanes."
+disable-model-invocation: true
 ---
 
 # Cogine Multirepo Worker

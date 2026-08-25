@@ -2,3 +2,6 @@ interface:
   display_name: "Cogine Orchestrator"
   short_description: "Coordinate WORK and TEST lanes"
   default_prompt: "Use $cogine-orchestrator to coordinate non-archived cogine-ai repos through one all-round WORK thread per active repository plus one shared Auto-agents TEST thread that independently verifies one immutable SHA at a time. Keep incoming reports as milestone inbox events, never interrupt an active TEST candidate, maintain ~/cogine-orchestrator.md, and stop for owner decisions with refreshed URLs, proof, risks, and exact choices."
+
+policy:
+  allow_implicit_invocation: false

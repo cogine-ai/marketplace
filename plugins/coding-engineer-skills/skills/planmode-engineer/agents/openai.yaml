@@ -1,0 +1,7 @@
+interface:
+  display_name: "Planmode Engineer"
+  short_description: "Review an engineering execution plan"
+  default_prompt: "Use $planmode-engineer to review this execution plan for architecture, edge cases, tests, and performance."
+
+policy:
+  allow_implicit_invocation: false

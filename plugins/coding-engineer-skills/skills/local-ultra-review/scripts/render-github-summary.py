@@ -3,6 +3,8 @@ import argparse
 import json
 from pathlib import Path
 
+from execution_state import require_complete_execution
+
 
 def load_json(path, default=None):
     if not path:
@@ -89,12 +91,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pr-context", required=True)
     parser.add_argument("--findings", required=True)
+    parser.add_argument("--execution", required=True)
     parser.add_argument("--report", default="")
     parser.add_argument("--out", required=True)
     parser.add_argument("--mode", default="deep")
     parser.add_argument("--session-id", default="")
     args = parser.parse_args()
 
+    require_complete_execution(args.execution)
     pr_context = load_json(args.pr_context, {})
     findings = load_json(args.findings, {})
     important = findings.get("important", [])

@@ -1,7 +1,7 @@
 {
   "name": "coding-engineer-skills",
-  "version": "0.1.6",
-  "description": "Twenty-five focused engineering skills for planning, implementation, isolation, frontend work, debugging, review, security, CI, and multi-repository orchestration.",
+  "version": "0.2.0",
+  "description": "Thirty focused engineering skills for planning, implementation, architecture, review, CI, and orchestration.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -23,7 +23,7 @@
   "interface": {
     "displayName": "Coding Engineer Skills",
     "shortDescription": "A focused software-engineering toolkit for Cogine.",
-    "longDescription": "Twenty-five curated skills for moving from PRD or conversation to implementation, isolated worktrees, frontend and React work, architecture, debugging, testing, review, security, Git and CI delivery, and Cogine multi-repository orchestration. Prioritizes Cogine-authored workflows and lightweight engineering skills; the full Superpowers workflow pack remains excluded.",
+    "longDescription": "Thirty curated skills for moving from PRD or conversation to implementation, domain and deep-module design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git and CI delivery, and Cogine multi-repository orchestration. Twelve commands are explicit-only; eighteen focused skills remain available for model invocation. The full Superpowers workflow pack remains excluded.",
     "developerName": "Cogine AI",
     "category": "Developer Tools",
     "capabilities": [

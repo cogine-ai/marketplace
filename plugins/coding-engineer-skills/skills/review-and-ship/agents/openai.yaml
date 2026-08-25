@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review and Ship"
+  short_description: "Verify and ship a completed task branch"
+  default_prompt: "Use $review-and-ship to review, verify, and prepare this completed task branch for delivery."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,2 @@
+{"candidate_id":"candidate-001","reviewer":"security","status":"confirmed","verifier_id":"verifier-01","independent":true,"summary":"Base used the scoped helper; head queries by id only. A cross-workspace request reaches the changed path.","notes":["Compared base and head in an independent verifier context."]}
+{"type":"verifier_complete","verifier_id":"verifier-01","candidate_count":1,"verdict_count":1}

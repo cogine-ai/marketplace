@@ -31,7 +31,7 @@ This is a private repository, so Git must already have access to
 | Plugin | Skills | Focus |
 | --- | ---: | --- |
 | `design-engineer-skills` | 8 | UI prototyping, frontend library selection, polish, animation review, and motion design. |
-| `coding-engineer-skills` | 25 | Specs, implementation, isolated worktrees, frontend and React work, architecture, debugging, testing, security, Git/CI, and multi-repository orchestration. |
+| `coding-engineer-skills` | 30 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
@@ -61,10 +61,25 @@ manifests while sharing the same skill folders:
 
 ## Update
 
+### Codex
+
 ```bash
 codex plugin marketplace upgrade cogine-ai
-claude plugin marketplace update cogine-ai
+codex plugin list --json
 ```
+
+Confirm that `coding-engineer-skills@cogine-ai` reports the expected version.
+Start a new task after upgrading so its skill index is rebuilt.
+
+### Claude Code
+
+```bash
+claude plugin marketplace update cogine-ai
+claude plugin update coding-engineer-skills@cogine-ai
+claude plugin list --json
+```
+
+Restart Claude Code after the plugin update so the new version is loaded.
 
 ## Repository layout
 
@@ -79,7 +94,7 @@ plugins/design-engineer-skills/
 plugins/coding-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 25 shared skills
+  skills/                              # 30 shared skills
 plugins/product-manager-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/local-ultra-review/reviewer-completion.schema.json",
+  "title": "ReviewerCompletion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "reviewer",
+    "candidate_count"
+  ],
+  "properties": {
+    "type": {
+      "const": "reviewer_complete"
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

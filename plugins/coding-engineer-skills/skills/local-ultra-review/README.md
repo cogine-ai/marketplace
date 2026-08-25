@@ -74,7 +74,7 @@ Default behavior:
 
 | Mode | Use when | Reviewer coverage |
 | --- | --- | --- |
-| `light` | You want a faster pre-merge bug pass | correctness, security/integration, tests/verification |
+| `light` | You want a faster pre-merge bug pass | correctness, security/privacy, integration, tests/verification (four reviewers) |
 | `deep` | Default. You want high confidence before merge | correctness, security/privacy, integration, state/concurrency/migration, tests |
 | `max` | Large or high-risk changes | same core reviewers, with room for domain-specific expansion |
 
@@ -147,9 +147,9 @@ I did not identify any verified, discrete, actionable bugs introduced by this PR
 | Claude Code `/ultrareview` mechanic | Local Ultra Review equivalent |
 | --- | --- |
 | Remote sandbox | Local `git worktree` review workspace |
-| Fleet of reviewer agents | Reviewer lens prompts or independent model/CLI calls |
+| Fleet of reviewer agents | Five independent reviewer subagents or five successful CLI contexts, each with an explicit completion receipt; packets and empty responses never count as execution |
 | Full codebase context | Diff bundle with changed files, nearby code, tests, project instructions, and package metadata |
-| Independent finding verification | Dedicated verifier pass with evidence and base/head checks |
+| Independent finding verification | Dedicated verifier pass with reviewer-scoped candidate identities, evidence, base/head checks, and its own completion receipt |
 | Dedupe and severity ranking | Local scripts merge findings and sort by impact |
 | Background task | Optional local runner that writes artifacts and report files |
 
@@ -160,8 +160,8 @@ I did not identify any verified, discrete, actionable bugs introduced by this PR
 3. **Worktree isolation** creates a temporary review workspace and applies local tracked patches.
 4. **Context collection** builds a reproducible review bundle instead of loading the whole repo.
 5. **Impact mapping** identifies changed modules, public contracts, consumers, and risk areas.
-6. **Reviewer lenses** inspect correctness, security, integration, state/concurrency/migration, and tests.
-7. **Verification** filters candidates into confirmed, false positive, pre-existing, or needs manual review.
+6. **Reviewer lenses** run in five independent contexts for correctness, security, integration, state/concurrency/migration, and tests.
+7. **Verification** runs in a sixth independent context and filters candidates into confirmed, false positive, pre-existing, or needs manual review.
 8. **Dedupe/ranking** merges duplicate root causes and ranks Important findings before Nits.
 9. **Report rendering** writes Markdown and JSON artifacts.
 
@@ -229,30 +229,47 @@ Key files:
 
 ## Optional Script Usage
 
-Most users should invoke the skill from an agent. The scripts are included so agents can run deterministic steps instead of rewriting glue code.
+Most users should invoke the skill from an agent. The scripts are included so agents can run deterministic steps instead of rewriting glue code. Resolve `<skill-root>` to the absolute directory containing this README or `SKILL.md`, resolve `<repo-root>` before creating the worktree, and set `<session-dir>` to the absolute path `<repo-root>/.local-ultra-review/session`. Retain the absolute `session_dir` and `worktree` returned by `prepare-worktree.sh`; run repository-sensitive steps in that returned worktree but keep every artifact path under `<session-dir>`. Pass each option as a separate argv value.
 
 ```bash
-bash scripts/preflight.sh --base origin/main
-bash scripts/detect-target.sh --base origin/main --mode deep
-bash scripts/prepare-worktree.sh --base origin/main
-python3 scripts/collect-context.py --base origin/main --out .local-ultra-review/session/review-bundle.json
-bash scripts/run-checks.sh --dry-run --out .local-ultra-review/session/checks
-python3 scripts/run-reviewers.py --bundle .local-ultra-review/session/review-bundle.json --mode deep --backend sequential --out .local-ultra-review/session/reviewers
-python3 scripts/verify-findings.py --bundle .local-ultra-review/session/review-bundle.json --candidates .local-ultra-review/session/candidates --out-jsonl .local-ultra-review/session/verification.jsonl --out-json .local-ultra-review/session/verification.json
-python3 scripts/dedupe-rank.py --verification .local-ultra-review/session/verification.jsonl --out .local-ultra-review/session/findings.json
-python3 scripts/render-report.py --bundle .local-ultra-review/session/review-bundle.json --findings .local-ultra-review/session/findings.json --out .local-ultra-review/session/report.md
-python3 scripts/render-github-summary.py --pr-context .local-ultra-review/session/pr-context.json --findings .local-ultra-review/session/findings.json --report .local-ultra-review/session/report.md --out .local-ultra-review/session/github-pr-comment.md
-python3 scripts/post-github-review.py --pr-context .local-ultra-review/session/pr-context.json --findings .local-ultra-review/session/findings.json --mode deep --session-id session --out .local-ultra-review/session/github-pr-review-payload.json
-bash scripts/finalize-session.sh --session-dir .local-ultra-review/session --status success
+bash "<skill-root>/scripts/preflight.sh" --base "origin/main"
+bash "<skill-root>/scripts/detect-target.sh" --base "origin/main" --mode "deep"
+bash "<skill-root>/scripts/prepare-worktree.sh" --base "origin/main" --session-id "session" --output-dir "<repo-root>/.local-ultra-review"
+python3 "<skill-root>/scripts/collect-context.py" --base "origin/main" --out "<session-dir>/review-bundle.json"
+bash "<skill-root>/scripts/run-checks.sh" --dry-run --out "<session-dir>/checks"
+python3 "<skill-root>/scripts/run-reviewers.py" --bundle "<session-dir>/review-bundle.json" --mode "deep" --backend "packets" --out "<session-dir>/reviewers"
+python3 "<skill-root>/scripts/verify-findings.py" --bundle "<session-dir>/review-bundle.json" --candidates "<session-dir>/candidates" --verdicts "<session-dir>/verifier-verdicts.jsonl" --reviewers "<session-dir>/host-dispatch.json" --out-jsonl "<session-dir>/verification.jsonl" --out-json "<session-dir>/verification.json"
+python3 "<skill-root>/scripts/dedupe-rank.py" --verification "<session-dir>/verification.jsonl" --out "<session-dir>/findings.json"
+python3 "<skill-root>/scripts/render-report.py" --bundle "<session-dir>/review-bundle.json" --findings "<session-dir>/findings.json" --execution "<session-dir>/verification.json" --out "<session-dir>/report.md"
+python3 "<skill-root>/scripts/render-github-summary.py" --pr-context "<session-dir>/pr-context.json" --findings "<session-dir>/findings.json" --execution "<session-dir>/verification.json" --report "<session-dir>/report.md" --out "<session-dir>/github-pr-comment.md"
+python3 "<skill-root>/scripts/post-github-review.py" --pr-context "<session-dir>/pr-context.json" --findings "<session-dir>/findings.json" --execution "<session-dir>/verification.json" --mode "deep" --session-id "session" --out "<session-dir>/github-pr-review-payload.json"
+bash "<skill-root>/scripts/finalize-session.sh" \
+  --session-dir "<session-dir>" \
+  --status "success"
 ```
 
-`run-reviewers.py` supports three backend shapes:
+Run the finalizer with `<repo-root>` as its working directory, not from inside
+the worktree it is removing.
+
+For `--reviewers`, pass `reviewers/manifest.json` after a successful CLI run or
+`host-dispatch.json` after the host has validated all five subagent completion
+receipts.
+
+`run-reviewers.py` supports two honest backend shapes:
 
 | Backend | Status | Purpose |
 | --- | --- | --- |
-| `sequential` | available now | generates independent reviewer prompt packets for agent/manual execution |
-| `cli` | available now | runs reviewer prompts through a configured CLI command |
-| `subagent` | packet mode now | prepares isolated reviewer packets for host tools that support subagents |
+| `packets` | preparation only | generates five reviewer packets and records `execution_complete: false`; the host must dispatch them |
+| `cli` | execution | runs all reviewer prompts through an explicit CLI argv and records complete only when every reviewer succeeds with a valid terminal receipt |
+
+For `cli`, put `--command` last and pass the executable plus each argument as
+separate argv entries. If neither five subagents nor a working CLI is
+available, the review is `INCOMPLETE`; packet generation must never be
+reported as a finished review. Every reviewer returns a
+`reviewer_complete` record, and the independent verifier returns a
+`verifier_complete` record even when there are zero candidates. The generated
+`verification.json` is the only execution state consumed by reports and
+GitHub output.
 
 ## Output
 
@@ -263,12 +280,15 @@ Expected session artifacts:
 ├── report.md
 ├── findings.json
 ├── candidates.jsonl
+├── verifier-verdicts.jsonl
 ├── verification.jsonl
+├── verification.json
 ├── review-bundle.json
 ├── pr-context.json
 ├── github-pr-comment.md
 ├── github-pr-review-payload.json
 ├── logs/
+├── host-dispatch.json
 └── worktree-path.txt
 ```
 

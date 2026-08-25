@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/local-ultra-review/verifier-completion.schema.json",
+  "title": "VerifierCompletion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "verifier_id",
+    "candidate_count",
+    "verdict_count"
+  ],
+  "properties": {
+    "type": {
+      "const": "verifier_complete"
+    },
+    "verifier_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verdict_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

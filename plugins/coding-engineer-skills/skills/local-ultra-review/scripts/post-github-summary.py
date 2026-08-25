@@ -5,6 +5,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from execution_state import require_complete_execution
+
 
 DEFAULT_TIMEOUT_SECONDS = 120
 
@@ -23,11 +25,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pr-context", required=True)
     parser.add_argument("--body-file", required=True)
+    parser.add_argument("--execution", required=True)
     parser.add_argument("--repo", required=False)
     parser.add_argument("--edit-last", action="store_true")
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
     args = parser.parse_args()
 
+    require_complete_execution(args.execution)
     pr_context = json.loads(Path(args.pr_context).read_text(encoding="utf-8"))
     pr_number = str(pr_context.get("number") or "")
     repo = args.repo or pr_context.get("repo") or ""

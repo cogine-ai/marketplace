@@ -15,7 +15,8 @@
     "failure_scenario",
     "evidence",
     "verification_plan",
-    "confidence"
+    "confidence",
+    "reviewer"
   ],
   "properties": {
     "id": {
@@ -107,7 +108,8 @@
       ]
     },
     "reviewer": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "suggested_fix_direction": {
       "type": "string"

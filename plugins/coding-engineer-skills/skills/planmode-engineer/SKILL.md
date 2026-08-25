@@ -1,6 +1,7 @@
 ---
 name: planmode-engineer
 description: Review an execution plan for architecture, data flow, edge cases, tests, and performance.
+disable-model-invocation: true
 ---
 # planmode-engineer
 

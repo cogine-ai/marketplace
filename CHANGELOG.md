@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.7.0 - 2026-08-25
+
+- Expand `coding-engineer-skills` from 25 to 30 skills and prepare plugin
+  version `0.2.0`.
+- Restore Matt Pocock's current implementation and architecture stack:
+  `code-review`, `setup-matt-pocock-skills`, `domain-modeling`,
+  `improve-codebase-architecture`, and `grilling`;
+  refresh `diagnosing-bugs`, `tdd`, `codebase-design`, and `implement`;
+  and align `fix-merge-conflicts` with upstream
+  `resolving-merge-conflicts`.
+- Keep `grill-with-docs` out of the bundle because it only aliases the
+  separately available `grilling` and `domain-modeling` skills, and retain the
+  local `implement` pre-commit review instead of chaining fixed-point review.
+- Make 12 workflow commands explicit-only in both Claude Code and Codex while
+  keeping 18 focused skills model-invokable, and namespace operational
+  cross-skill calls to the local plugin.
+- Make Local Ultra Review fail closed: reviewer and verifier contexts emit
+  explicit completion receipts, candidate ids are scoped to their originating
+  reviewer, light mode retains a dedicated security/privacy pass, all worktree
+  phases retain one absolute session artifact root, reports expose incomplete
+  execution, and GitHub output refuses to render or post an incomplete review.
+- Add deterministic inventory, invocation-policy, runtime-placeholder,
+  execution, verifier, manifest, and upstream-hash contracts.
+
 ## 0.6.3 - 2026-07-29
 
 - Update `design-engineer-skills` to the latest Emil Kowalski snapshot, add

@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -13,7 +14,11 @@ def load_review_module():
     module_path = REPO_ROOT / "scripts" / "post-github-review.py"
     spec = importlib.util.spec_from_file_location("post_github_review", module_path)
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    sys.path.insert(0, str(module_path.parent))
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        sys.path.remove(str(module_path.parent))
     return module
 
 
@@ -148,6 +153,7 @@ class ReviewPayloadTests(unittest.TestCase):
             pr_context = tmpdir / "pr-context.json"
             findings = tmpdir / "findings.json"
             pr_files = tmpdir / "pr-files.json"
+            execution = tmpdir / "verification.json"
             out = tmpdir / "payload.json"
 
             pr_context.write_text(
@@ -177,6 +183,10 @@ class ReviewPayloadTests(unittest.TestCase):
                 json.dumps([[{"filename": "app.py", "patch": "@@ -5,1 +7,2 @@\n+boom()\n"}]]),
                 encoding="utf-8",
             )
+            execution.write_text(
+                json.dumps({"execution": {"execution_complete": True}}),
+                encoding="utf-8",
+            )
 
             proc = subprocess.run(
                 [
@@ -186,6 +196,8 @@ class ReviewPayloadTests(unittest.TestCase):
                     str(pr_context),
                     "--findings",
                     str(findings),
+                    "--execution",
+                    str(execution),
                     "--pr-files",
                     str(pr_files),
                     "--mode",
@@ -208,6 +220,73 @@ class ReviewPayloadTests(unittest.TestCase):
             self.assertTrue(result["ok"])
             self.assertEqual(result["posted"], False)
             self.assertEqual(payload["comments"][0]["path"], "app.py")
+
+    def test_github_posters_refuse_incomplete_execution_before_network_access(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmpdir = Path(tmp)
+            pr_context = tmpdir / "pr-context.json"
+            findings = tmpdir / "findings.json"
+            pr_files = tmpdir / "pr-files.json"
+            execution = tmpdir / "verification.json"
+            body = tmpdir / "summary.md"
+
+            pr_context.write_text(
+                json.dumps(
+                    {
+                        "repo": "cogine-ai/local-ultra-review",
+                        "number": 12,
+                        "commit_sha": "abc123",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            findings.write_text(
+                json.dumps({"important": [], "nits": []}),
+                encoding="utf-8",
+            )
+            pr_files.write_text(json.dumps([]), encoding="utf-8")
+            execution.write_text(
+                json.dumps({"execution": {"execution_complete": False}}),
+                encoding="utf-8",
+            )
+            body.write_text("must not be posted", encoding="utf-8")
+
+            commands = [
+                [
+                    "python3",
+                    "scripts/post-github-review.py",
+                    "--pr-context",
+                    str(pr_context),
+                    "--findings",
+                    str(findings),
+                    "--execution",
+                    str(execution),
+                    "--pr-files",
+                    str(pr_files),
+                    "--dry-run",
+                ],
+                [
+                    "python3",
+                    "scripts/post-github-summary.py",
+                    "--pr-context",
+                    str(pr_context),
+                    "--body-file",
+                    str(body),
+                    "--execution",
+                    str(execution),
+                ],
+            ]
+            for command in commands:
+                with self.subTest(command=command[1]):
+                    proc = subprocess.run(
+                        command,
+                        cwd=REPO_ROOT,
+                        text=True,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                    )
+                    self.assertNotEqual(0, proc.returncode)
+                    self.assertIn("review execution is incomplete", proc.stderr)
 
 
 if __name__ == "__main__":

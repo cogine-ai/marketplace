@@ -1,6 +1,7 @@
 ---
 name: security-best-practices
 description: Perform explicitly requested secure-coding or security reviews for Python, JavaScript/TypeScript, or Go.
+disable-model-invocation: true
 ---
 
 # Security Best Practices
