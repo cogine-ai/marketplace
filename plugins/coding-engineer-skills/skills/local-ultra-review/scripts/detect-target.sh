@@ -21,30 +21,6 @@ def git_ok(ref):
     return run(["git", "rev-parse", "--verify", f"{ref}^{{commit}}"]).returncode == 0
 
 
-def normalize_repo_slug(value):
-    raw = (value or "").strip().rstrip("/")
-    if not raw:
-        return ""
-    if raw.startswith("git@github.com:"):
-        slug = raw.split(":", 1)[1]
-    elif "github.com/" in raw:
-        slug = raw.split("github.com/", 1)[1]
-    else:
-        return ""
-    slug = slug.split("?", 1)[0].split("#", 1)[0].strip("/")
-    if slug.endswith(".git"):
-        slug = slug[:-4]
-    parts = [part for part in slug.split("/") if part]
-    if len(parts) < 2:
-        return ""
-    return f"{parts[0]}/{parts[1]}"
-
-
-def current_repo_slug():
-    proc = run(["git", "config", "--get", "remote.origin.url"])
-    return normalize_repo_slug(proc.stdout) if proc.returncode == 0 else ""
-
-
 def default_base():
     proc = run(["git", "symbolic-ref", "--quiet", "--short", "refs/remotes/origin/HEAD"])
     refs = []
@@ -87,9 +63,7 @@ base = None
 target = None
 target_type = None
 repo = None
-post_mode = None
-post_mode_explicit = False
-pr_target_was_url = False
+post_mode = "none"
 include_uncommitted = True
 include_untracked = False
 keep_worktree = False
@@ -127,14 +101,12 @@ while i < len(args):
         i += 1
     elif arg == "--post" and i + 1 < len(args):
         post_mode = args[i + 1]
-        post_mode_explicit = True
         i += 2
     elif arg == "--post":
         errors.append("missing value for --post")
         i += 1
     elif arg.startswith("--post="):
         post_mode = arg.split("=", 1)[1]
-        post_mode_explicit = True
         i += 1
     elif arg == "--include-untracked":
         include_untracked = True
@@ -159,7 +131,6 @@ while i < len(args):
         target = pr_number
         if repo_from_url:
             repo = repo or repo_from_url
-            pr_target_was_url = True
         include_uncommitted = False
         i += 2
     elif re.fullmatch(r"#?\d+", arg):
@@ -177,7 +148,6 @@ while i < len(args):
         target = pr_number
         if repo_from_url:
             repo = repo or repo_from_url
-            pr_target_was_url = True
         include_uncommitted = False
         i += 1
     elif ".." in arg:
@@ -197,21 +167,8 @@ while i < len(args):
 if mode not in {"light", "deep", "max"}:
     errors.append(f"unsupported mode: {mode}")
 
+# Keep the output field for compatibility; target identity never authorizes posting.
 auto_post = False
-current_repo = current_repo_slug()
-if post_mode is None:
-    post_mode = "none"
-    if (
-        target_type == "pr"
-        and pr_target_was_url
-        and repo
-        and current_repo
-        and repo.lower() == current_repo.lower()
-    ):
-        post_mode = "review"
-        auto_post = True
-elif post_mode_explicit:
-    auto_post = False
 
 if post_mode not in {"none", "summary", "review"}:
     errors.append(f"unsupported post mode: {post_mode}")

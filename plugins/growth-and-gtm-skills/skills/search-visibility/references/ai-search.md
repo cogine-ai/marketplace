@@ -103,7 +103,7 @@ Google's own example: a user asking "how to fix lawns" triggers fan-out queries 
 - Long-tail intent matters less than topical authority — Google's AI systems understand synonyms and semantic equivalence.
 - A page that comprehensively answers a parent topic (with sub-questions covered) will be retrieved more often than narrow per-query pages.
 
-**Action**: when planning content, brainstorm the 5–10 related queries the AI is likely to fan out to and make sure your content (or your site as a whole) covers them.
+**Action**: when planning content, brainstorm the 5–10 related queries the AI is likely to fan out to and make sure your content (or your site as a whole) covers them. Label these as hypotheses. If actual retrieval queries are visible in available tool traces, record those separately; do not describe inferred queries as observed. See [format-volatility.md](format-volatility.md).
 
 ---
 
@@ -115,10 +115,13 @@ Before optimizing, assess your current AI search presence.
 
 Test 10-20 of your most important queries across platforms:
 
-| Query | Google AI Overview | ChatGPT | Perplexity | You Cited? | Competitors Cited? |
-|-------|:-----------------:|:-------:|:----------:|:----------:|:-----------------:|
-| [query 1] | Yes/No | Yes/No | Yes/No | Yes/No | [who] |
-| [query 2] | Yes/No | Yes/No | Yes/No | Yes/No | [who] |
+Repeat each query 3–5 times per platform as an initial sample. Record individual runs and aggregate counts; report errors and unavailable access separately from valid answers with no citation.
+
+| Query | Platform / model / settings | Date | Valid runs | Cited | Recommended | Cited pages / competitors |
+| --- | --- | --- | ---: | --- | --- | --- |
+| [query] | [record observed settings] | [date] | [n] | [k/n] | [k/n] | [sources] |
+
+Use the same query set and comparable settings over time. A small sample describes the observed runs; it does not prove a stable platform-wide rate. See [format-volatility.md](format-volatility.md).
 
 **Query types to test:**
 - "What is [your product category]?"
@@ -251,10 +254,10 @@ AI systems don't just cite your website — they cite where you appear.
 
 **Third-party sources matter more than your own site:**
 - Wikipedia mentions (7.8% of all ChatGPT citations)
-- Reddit discussions (1.8% of ChatGPT citations)
+- Reddit discussions, assessed from current platform-specific observations rather than a fixed historical share
 - Industry publications and guest posts
 - Review sites (G2, Capterra, TrustRadius for B2B SaaS)
-- YouTube (frequently cited by Google AI Overviews)
+- YouTube and podcast text layers, where observed in the relevant query set
 - Quora answers
 
 **Actions:**
@@ -262,7 +265,7 @@ AI systems don't just cite your website — they cite where you appear.
 - Participate authentically in Reddit communities
 - Get featured in industry roundups and comparison articles
 - Maintain updated profiles on relevant review platforms
-- Create YouTube content for key how-to queries
+- For relevant how-to queries, assess video transcripts, captions, chapters, and descriptions using [youtube-ai-citations.md](youtube-ai-citations.md)
 - Answer relevant Quora questions with depth
 
 ### Machine-Readable Files for AI Agents
@@ -273,7 +276,7 @@ AI systems don't just cite your website — they cite where you appear.
 
 AI agents aren't just answering questions — they're becoming buyers. When an AI agent evaluates tools on behalf of a user, it needs structured, parseable information. If your pricing is locked in a JavaScript-rendered page or a "contact sales" wall, agents will skip you and recommend competitors whose information they can actually read.
 
-Add these machine-readable files to your site root:
+First check [agent-readiness.md](agent-readiness.md): access, discovery, and parseability. Verify the actual target agent's behavior before assuming a file or rendering format improves retrieval. The following are optional surfaces when they solve an observed access problem, not requirements or guarantees of citation:
 
 **`/pricing.md` or `/pricing.txt`** — Structured pricing data for AI agents
 
@@ -362,24 +365,9 @@ For ecom and local business specifically, Google highlights:
 
 ## Content Types That Get Cited Most
 
-Not all content is equally citable. Prioritize these formats:
+Citation format mixes vary by platform, query, audience, and time. Choose formats from current observations of the intended surface, not a fixed ranking of comparison pages, listicles, or guides. Compare the cited sources' usefulness, original evidence, extractable structure, and fit for the user's question. See [format-volatility.md](format-volatility.md) for a repeatable measurement method.
 
-| Content Type | Citation Share | Why AI Cites It |
-|-------------|:------------:|----------------|
-| **Comparison articles** | ~33% | Structured, balanced, high-intent |
-| **Definitive guides** | ~15% | Comprehensive, authoritative |
-| **Original research/data** | ~12% | Unique, citable statistics |
-| **Best-of/listicles** | ~10% | Clear structure, entity-rich |
-| **Product pages** | ~10% | Specific details AI can extract |
-| **How-to guides** | ~8% | Step-by-step structure |
-| **Opinion/analysis** | ~10% | Expert perspective, quotable |
-
-**Underperformers for AI citation:**
-- Generic blog posts without structure
-- Thin product pages with marketing fluff
-- Gated content (AI can't access it)
-- Content without dates or author attribution
-- PDF-only content (harder for AI to parse)
+Original research, clear explanations, and accurate owned product/docs/pricing pages are useful candidates to evaluate. Thin, inaccessible, or unsupported content needs an evidence-based diagnosis regardless of format. Do not infer a guaranteed win or penalty from the format name alone.
 
 **Citation ≠ recommendation.** Getting cited means your content was useful to consult; getting *recommended* — onto the buyer's actual shortlist — is governed by web-wide consensus (reviews, forums, analysts, press) and is largely independent of your own content. Self-promotional "best [category]" listicles can even backfire for emerging brands. See [citations-vs-recommendations.md](citations-vs-recommendations.md) for the visibility ladder, stage-dependent buyer's-guide strategy, what earns recommendations, and the attribution blind spot.
 
@@ -412,8 +400,8 @@ Not all content is equally citable. Prioritize these formats:
 Monthly manual check:
 1. Pick your top 20 queries
 2. Run each through ChatGPT, Perplexity, and Google
-3. Record: Are you cited? Who is? What page?
-4. Log in a spreadsheet, track month-over-month
+3. Repeat each query 3–5 times per platform and record valid answers, cited pages, brand mentions, and recommendations separately.
+4. Log the date, platform/model/settings, raw counts, and sample size (for example, “cited 3/5 valid runs; n=5”). Compare like-for-like samples over time; report failed runs separately and label small samples as directional.
 
 ### Search Console expectations
 

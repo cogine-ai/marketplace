@@ -342,3 +342,21 @@ Avoid testimonials that just say:
 - "Great product!"
 - "Love it!"
 - "Easy to use!"
+
+## Clarity & Message-Market Fit
+
+Use these checks on a drafted headline or hero; they supplement the existing writing process.
+
+### The "Now you can" test
+
+Mentally prefix the benefit with “Now you can…”. Does it name a concrete ability that is both useful to this audience and true of the product? “Have a powerful platform” describes a product; “See which invoices need follow-up” names an ability. Use the test as a filter, not a phrase required in the final copy.
+
+### Human Action Model
+
+Check whether the hero connects the reader's current discomfort, a credible better outcome, and a specific next action that can close the gap. Reuse the existing problem, benefit, and CTA sections rather than adding a duplicate narrative. Claims about the path need product evidence.
+
+### The perception gap
+
+Ask what the intended audience actually hears. “Move fast” may appeal to one segment while another needs evidence of reliability and implementation support. Use research to adjust the emphasis for each segment without changing the underlying facts or inventing proof. Do not average conflicting needs into vague copy, or assume the framing guarantees a conversion increase.
+
+These checks are adapted from [Corey Haines copy frameworks](https://github.com/coreyhaines31/marketingskills/blob/5b2c0007766c6a1cf1d53fd8fc73e979e0821022/skills/copywriting/references/copy-frameworks.md) at `5b2c000`; case-study uplift figures are not adopted.

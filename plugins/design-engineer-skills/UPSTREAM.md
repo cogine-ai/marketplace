@@ -10,8 +10,9 @@
 
 ## Compatibility adjustment
 
-The upstream `review-animations`, `prototype`, and `pick-ui-library` skills set
-explicit-invocation frontmatter that the current shared Codex skill schema does
-not accept. The package removes those fields. Codex policy metadata keeps
-`prototype` and `pick-ui-library` explicit-only; the skill bodies and bundled
-references otherwise match the pinned upstream snapshot.
+On 2026-09-08, `prototype` and `pick-ui-library` gained Claude Code's
+`disable-model-invocation: true`, matching their existing explicit-only
+descriptions and Codex `policy.allow_implicit_invocation: false` metadata.
+`review-animations` retains its current invocation policy. The skill bodies
+and bundled references otherwise match the pinned upstream snapshot; this is
+a local host-policy correction, not an upstream body refresh.

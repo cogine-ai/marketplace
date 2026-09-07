@@ -17,6 +17,7 @@ Before providing recommendations, understand:
 1. **Product Context** - What type of product? B2B or B2C? Core value proposition?
 2. **Activation Definition** - What's the "aha moment"? What action indicates a user "gets it"?
 3. **Current State** - What happens after signup? Where do users drop off?
+4. **Activation Model** - Freemium, free trial, paid trial, refund-backed purchase, or consultation? Read [activation-models.md](references/activation-models.md) when selecting or reassessing the model.
 
 ---
 
@@ -57,6 +58,10 @@ The action that correlates most strongly with retention:
 - Activation by cohort/source
 
 ---
+
+## Minimum Path to Value
+
+Once the activation event and model are clear, inventory the steps between signup and a convincing value outcome, remove or defer nonessential steps, and reconstruct the remaining path in value-first order. Use [minimum-path-to-value.md](references/minimum-path-to-value.md) for the method. Keep validated activation metrics and the product's observation window; do not substitute a universal time window or mark unfinished actions as completed progress.
 
 ## Onboarding Flow Design
 

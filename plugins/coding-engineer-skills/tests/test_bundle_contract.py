@@ -151,6 +151,7 @@ class BundleContractTests(unittest.TestCase):
             text = skill_md.read_text(encoding="utf-8")
             self.assertNotIn("${CLAUDE_SKILL_DIR}", text, str(skill_md))
             self.assertNotIn("$ARGUMENTS", text, str(skill_md))
+            self.assertNotRegex(text, r"!`[^`]+`", str(skill_md))
 
     def test_readme_and_manifests_publish_the_same_inventory_and_version(self):
         readme = (PLUGIN_ROOT / "README.md").read_text(encoding="utf-8")
@@ -162,7 +163,7 @@ class BundleContractTests(unittest.TestCase):
             PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
         ]:
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            self.assertEqual("0.2.0", manifest["version"])
+            self.assertEqual("0.2.1", manifest["version"])
             self.assertIn("Thirty focused", manifest["description"])
 
     def test_host_specific_update_instructions_verify_the_installed_version(self):

@@ -65,6 +65,10 @@ Price should be based on value delivered, not cost to serve:
 
 ---
 
+## Initial Pricing as a Learning Hypothesis
+
+For a first price, name the buyer segment, value delivered, alternatives, cost constraints, and the price/model you expect that segment to accept. Use a concrete offer to learn from real decisions; record what evidence would support or challenge it. Select the value metric below, then use [pricing-models.md](references/pricing-models.md) to choose how to charge. Avoid treating a generic dollar amount as the right starting price for every market.
+
 ## Value Metrics
 
 ### What is a Value Metric?
@@ -164,6 +168,12 @@ Identifies which features customers value most:
 4. **Plan restructure** — Change plans entirely
 
 ---
+
+## Roll Out Price Changes in Stages
+
+When feasible, start with a defined new-customer cohort. Record the offer, effective date, comparison cohort, and observation window; watch conversion, realized revenue, retention/refunds, and customer feedback together. Cohort differences are not automatically caused by price.
+
+Specify what evidence would justify extending the change, adjusting it, or continuing observation before applying it more broadly. Evaluate existing customers separately against their contracts, lifetime/grandfathered commitments, and communicated terms. Do not cancel those commitments by default. A proposed rollout is not authorization to change billing or send announcements.
 
 ## Pricing Page Best Practices
 

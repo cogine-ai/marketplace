@@ -1,6 +1,6 @@
 # Upstream sources
 
-Packaged on 2026-08-25. Skill directories are copied into this plugin so that
+Packaged on 2026-08-25; selectively updated on 2026-09-08. Skill directories are copied into this plugin so that
 Codex and Claude Code can discover the same bundle from one Marketplace entry.
 
 ## Cogine Dev Skillset — 13 skills
@@ -58,8 +58,14 @@ in the 10 current imports, and the complete adaptation whitelist.
 ## Frontend Design — 1 skill
 
 - Repository: https://github.com/anthropics/claude-plugins-official
-- Pinned commit: `81500db67345a66d99f8330eafff911553475217`
+- Baseline commit: `81500db67345a66d99f8330eafff911553475217`
+- Selective update: `85cce0381e7860082641b59d961a2b8c368b8b79`
 - License: Apache-2.0
+
+The update adopts typography roles, reading measure, explicit alignment,
+information-led grouping, and action-responsive motion. It retains brief/brand
+priority without importing blanket aesthetic bans or mandatory reconfirmation
+of a supplied subject. This is an adaptation, not a byte-identical snapshot.
 
 ## Build Web Apps — 1 skill
 
@@ -141,3 +147,21 @@ and a separate independent verifier context. `worktree-management` retains the
 upstream isolation detection and native-tool-first flow, narrows automatic
 triggering, makes dependency setup proportional, and adds confirmation-gated
 cleanup for manually created worktrees.
+
+## Approved selective update — 2026-09-08
+
+- `backlog-ready-spec` adopts issue-data trust boundaries and the distinction
+  between successful zero matches, successful matches, and failed lookups from
+  [GStack spec](https://github.com/garrytan/gstack/blob/0530392821c277b95e5cd65aa9d9fda4248718b2/spec/SKILL.md.tmpl).
+  This is a secondary upstream reference, not a wholesale GStack sync. The
+  Product Manager copy remains identical; no GStack runtime is imported.
+- `shadcn` replaces the Claude-only dynamic shell injection with an explicit
+  project-runner command and distinguishes lookup failures from an absent
+  project. Its source snapshot is otherwise retained.
+- `local-ultra-review` defaults every target, including a current-repo PR URL,
+  to local output. Posting requires explicit arguments reflecting user
+  authorization; the existing independent execution and verification contract
+  is retained.
+
+The Matt lock and the other skill entries are unchanged. See the marketplace
+[update record](../../docs/skill-updates-2026-09-08.md) for scope and validation.

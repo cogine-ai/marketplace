@@ -49,3 +49,8 @@ and all external integrations remain optional. call-review keeps the concise
 summary and customer follow-up while adding an evidence-based, stage-aware
 coaching mode. enterprise-account-planning retains the stakeholder, MEDDPICC,
 mutual-action-plan, and stage-gate core without the upstream's long narrative.
+
+On 2026-09-08, `pipeline-review` was locally adapted to read CRM data and draft
+changes by default. Writes require user authorization (including existing
+session authorization) and a readback of affected records/tasks. The pipeline
+health model and source snapshot remain unchanged.

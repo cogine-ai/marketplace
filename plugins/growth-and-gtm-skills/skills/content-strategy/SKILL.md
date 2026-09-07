@@ -314,6 +314,12 @@ Score each idea on four factors:
 
 ---
 
+## Plan Production and Distribution Together
+
+Choose a production format for the audience and available capacity: a written guide, original research, a video, a podcast, or an interactive asset. Design the source piece so useful sections, quotes, and demonstrations can be reused in channel-native cuts. Plan promotion and maintenance before production, using [content-distribution.md](references/content-distribution.md).
+
+A content mix can combine evergreen material, timely topics, and experiments; an example split such as 60/30/10 is an adjustable starting point, not a quota or a scoring weight. Retain the prioritization criteria above and revise the mix from observed audience and business results.
+
 ## Output Format
 
 When creating a content strategy, provide:
@@ -330,6 +336,9 @@ For each recommended piece:
 - Content type (use-case, hub/spoke, thought leadership, etc.)
 - Target keyword and buyer stage
 - Why this topic (customer research backing)
+- Production format, owner, and required source material
+- Distribution channels, reusable cuts, and the next action for the audience
+- Promotion schedule, success measure, and refresh/maintenance owner
 
 ### 3. Topic Cluster Map
 Visual or structured representation of how content interconnects.

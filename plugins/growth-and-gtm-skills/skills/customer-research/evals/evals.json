@@ -1,0 +1,33 @@
+{
+  "skill_name": "customer-research",
+  "evals": [
+    {
+      "id": 12,
+      "prompt": "I have no existing research and don't know who my best customers are yet.",
+      "expected_output": "Read existing product-marketing context, identify the decision and assumptions, and propose a scoped interview/survey and public-signal plan. Explain who to recruit and what to ask. Do not invent personas or claim interviews have already happened. Choose sample size from the research question and segments.",
+      "assertions": [
+        "Uses existing product-marketing context before asking for missing information",
+        "Recognizes a zero-research scenario and forms disconfirmable hypotheses",
+        "Routes to the primary-research playbook and includes relevant public sources",
+        "Chooses participant segments and sample size for the research question",
+        "Produces a plan and recruiting drafts, not fictional findings or completed interviews",
+        "Does not send recruitment messages without explicit authorization"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "I want to interview and survey my customers to understand product/market fit. How should I run this?",
+      "expected_output": "Use the primary-research playbook for a PMF interview/survey plan. Propose the disappointment question and follow-ups, recruitment suited to the decision, disconfirming questions, and follow-up probing. Treat any external benchmark or incentive as context to evaluate rather than a universal threshold. Keep outreach as a draft unless already authorized.",
+      "assertions": [
+        "Reads relevant product-marketing context and references/interviews-and-surveys.md",
+        "Proposes the PMF disappointment question and benefit/improvement follow-ups",
+        "Reports cohort and sample size rather than declaring PMF from a benchmark alone",
+        "Explains relevant recruitment segments, referrals, and sample/incentive choices",
+        "Uses disconfirming questions and follow-up probing without a mandatory five-question count",
+        "Explains the purpose honestly and does not send outreach or promise unapproved incentives"
+      ],
+      "files": []
+    }
+  ]
+}

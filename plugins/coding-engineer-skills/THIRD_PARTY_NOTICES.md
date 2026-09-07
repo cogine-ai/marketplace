@@ -19,14 +19,14 @@ The skills are `code-review`, `codebase-design`, `diagnosing-bugs`,
 
 ## Anthropic
 
-`frontend-design` is copied from
+`frontend-design` is adapted from
 [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
 under Apache License 2.0. Its in-skill `LICENSE.txt` and a copy of the
 repository license are retained.
 
 ## OpenAI
 
-`shadcn` is copied from the OpenAI `build-web-apps` plugin version `0.1.2`.
+`shadcn` is adapted from the OpenAI `build-web-apps` plugin version `0.1.2`.
 That package declares the MIT License and points to
 [openai/plugins](https://github.com/openai/plugins) as its repository.
 
@@ -48,3 +48,8 @@ The Cogine Dev Skillset includes adaptations informed by other open-source
 work. Its bundled skill-level licenses, reference files, and attribution are
 retained in the copied directories. See the source repository's
 `THIRD_PARTY_NOTICES.md` for the full upstream record.
+
+`backlog-ready-spec` selectively incorporates workflow ideas from
+[GStack spec](https://github.com/garrytan/gstack), copyright (c) 2026 Garry Tan,
+under the MIT License. It remains a Cogine-authored adaptation, without the
+GStack runtime.

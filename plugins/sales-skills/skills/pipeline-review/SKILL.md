@@ -24,7 +24,7 @@ Analyze your pipeline health, prioritize deals, and get actionable recommendatio
 │  ✓ Weekly action plan: what to focus on                        │
 ├─────────────────────────────────────────────────────────────────┤
 │  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Pull pipeline automatically, update records             │
+│  + CRM: Read pipeline, draft record changes and next steps      │
 │  + Activity data for engagement scoring                         │
 │  + Historical patterns for risk prediction                      │
 │  + Calendar: See upcoming meetings per deal                     │
@@ -217,10 +217,11 @@ You can tell me to weight differently: "Focus on big deals over soon deals" or "
 
 ## If CRM Connected
 
-- I'll pull your pipeline automatically
-- Update records with new close dates, stages, next steps
-- Create follow-up tasks
-- Track hygiene improvements over time
+- Read the pipeline and report hygiene findings.
+- Draft proposed close-date, stage, and next-step changes, plus follow-up tasks.
+- A review request alone does not authorize CRM writes. Apply changes only within the scope the user has authorized, including authorization already given in this session; do not ask again for the same action.
+- After an authorized write, read back the affected records or tasks and report confirmed changes separately from drafts and failed updates.
+- Track hygiene improvements over time using the available evidence.
 
 ---
 

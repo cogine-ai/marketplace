@@ -33,7 +33,7 @@ in `LICENSES/MIT-Interface-Design.txt`.
 
 ## UI UX Pro Max
 
-`ui-ux-pro-max` is copied from
+`ui-ux-pro-max` is copied and portably adapted from
 [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill),
 copyright (c) 2024 Next Level Builder, under the MIT License. The license text
 is in `LICENSES/MIT-UI-UX-Pro-Max.txt`.

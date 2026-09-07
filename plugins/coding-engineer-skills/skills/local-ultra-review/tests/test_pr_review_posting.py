@@ -55,14 +55,14 @@ class DetectTargetTests(unittest.TestCase):
         )
         return json.loads(proc.stdout)
 
-    def test_current_repo_pr_url_defaults_to_review_post_mode(self):
+    def test_current_repo_pr_url_defaults_to_no_posting(self):
         result = self.run_detect_target(f"https://github.com/{self.current_repo}/pull/12")
 
         self.assertEqual(result["target_type"], "pr")
         self.assertEqual(result["target"], "12")
         self.assertEqual(result["repo"], self.current_repo)
-        self.assertEqual(result["post_mode"], "review")
-        self.assertTrue(result["auto_post"])
+        self.assertEqual(result["post_mode"], "none")
+        self.assertFalse(result["auto_post"])
 
     def test_non_current_repo_pr_url_does_not_auto_post(self):
         result = self.run_detect_target(f"https://github.com/{self.other_repo}/pull/12")
@@ -71,7 +71,7 @@ class DetectTargetTests(unittest.TestCase):
         self.assertEqual(result["post_mode"], "none")
         self.assertFalse(result["auto_post"])
 
-    def test_explicit_post_none_overrides_current_repo_url_auto_post(self):
+    def test_explicit_post_none_disables_posting(self):
         result = self.run_detect_target(
             f"https://github.com/{self.current_repo}/pull/12",
             "--post",
@@ -80,6 +80,25 @@ class DetectTargetTests(unittest.TestCase):
 
         self.assertEqual(result["post_mode"], "none")
         self.assertFalse(result["auto_post"])
+
+    def test_all_target_forms_default_to_no_posting(self):
+        for args in [(), ("origin/main",), ("HEAD~3..HEAD",), ("pr", "12"),
+                     ("12",), (f"https://github.com/{self.current_repo}/pull/12",),
+                     (f"https://github.com/{self.other_repo}/pull/12",)]:
+            with self.subTest(args=args):
+                result = self.run_detect_target(*args)
+                self.assertEqual(result["post_mode"], "none")
+                self.assertFalse(result["auto_post"])
+
+    def test_explicit_posting_modes_remain_available(self):
+        for target in [("pr", "12"), (f"https://github.com/{self.current_repo}/pull/12",),
+                       (f"https://github.com/{self.other_repo}/pull/12",)]:
+            for mode in ("summary", "review"):
+                for option in [("--post", mode), (f"--post={mode}",)]:
+                    with self.subTest(target=target, option=option):
+                        result = self.run_detect_target(*target, *option)
+                        self.assertEqual(result["post_mode"], mode)
+                        self.assertFalse(result["auto_post"])
 
     def test_keep_worktree_option_is_accepted(self):
         result = self.run_detect_target(f"https://github.com/{self.current_repo}/pull/12", "--keep-worktree")

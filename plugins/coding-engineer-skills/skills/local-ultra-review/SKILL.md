@@ -26,7 +26,7 @@ Invocation examples:
 
 If no target is provided, review the current branch against the default base branch and include staged and unstaged tracked changes.
 
-If the target is a GitHub PR, default to `deep` mode, collect PR metadata, review the PR head in an isolated worktree, and render a GitHub-ready summary comment. If the user provides a full GitHub PR URL for the current checkout's `origin` repository, post mode defaults to `review`; otherwise do not post unless the user passes `--post summary` or `--post review`. `--post none` always disables posting.
+If the target is a GitHub PR, default to `deep` mode, collect PR metadata, review the PR head in an isolated worktree, and render a GitHub-ready summary comment locally. Every target form, including a full URL for the current repository, defaults to `--post none`. Post only when the user explicitly selected `--post summary` / `--post review` or already authorized that posting action in this session; translate such authorization into the corresponding explicit argument without asking again. A PR URL alone does not authorize posting. `--post none` always disables posting.
 
 Modes:
 
@@ -36,7 +36,7 @@ Modes:
 
 GitHub output:
 
-- `--post none`: default for local branches, ranges, PR numbers, and non-current-repo PR URLs; write local artifacts only
+- `--post none`: default for all targets, including current-repository PR URLs; write local artifacts only
 - `--post summary`: post one top-level PR summary comment after verification and report rendering
 - `--post review`: create one GitHub PR review event with CodeRabbit-style inline comments for verified findings that map to diff-commentable right-side lines; list verified findings that cannot be placed inline in the review body
 
@@ -310,7 +310,7 @@ python3 "<skill-root>/scripts/render-github-summary.py" \
   --session-id "<session-id>"
 ```
 
-If and only if the user passed `--post summary`, post exactly one top-level PR comment:
+If the authorized `post_mode` is `summary`, post exactly one top-level PR comment:
 
 ```bash
 python3 "<skill-root>/scripts/post-github-summary.py" \
@@ -319,7 +319,7 @@ python3 "<skill-root>/scripts/post-github-summary.py" \
   --body-file "<session-dir>/github-pr-comment.md"
 ```
 
-If `post_mode` is `review`, or `detect-target.sh` set `post_mode` to `review` because the user provided a current-repo PR URL, create exactly one GitHub PR review event:
+If the authorized `post_mode` is `review`, create exactly one GitHub PR review event:
 
 ```bash
 python3 "<skill-root>/scripts/post-github-review.py" \

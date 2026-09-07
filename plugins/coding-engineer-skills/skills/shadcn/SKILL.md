@@ -11,11 +11,13 @@ A framework for building ui, components and design systems. Components are added
 
 ## Current Project Context
 
-```json
-!`npx shadcn@latest info --json 2>/dev/null || echo '{"error": "No shadcn project found. Run shadcn init first."}'`
+Run this command from the target project with its package runner and read the actual result:
+
+```bash
+npx shadcn@latest info --json
 ```
 
-The JSON above contains the project config and installed components. Use `npx shadcn@latest docs <component>` to get documentation and example URLs for any component.
+Successful JSON output contains the project config and installed components. If the command fails or returns invalid JSON, inspect the error and local `components.json` / `package.json`; a network or CLI failure does not prove that the project needs initialization. Do not invent project context or run `init` solely because this lookup failed. Use `npx shadcn@latest docs <component>` to get documentation and example URLs for any component.
 
 ## Principles
 
@@ -163,7 +165,7 @@ npx shadcn@latest docs button dialog select
 
 ## Workflow
 
-1. **Get project context** — already injected above. Run `npx shadcn@latest info` again if you need to refresh.
+1. **Get project context** — run `npx shadcn@latest info --json` with the project's package runner as described above; use verified output or inspected local configuration.
 2. **Check installed components first** — before running `add`, always check the `components` list from project context or list the `resolvedPaths.ui` directory. Don't import components that haven't been added, and don't re-add ones already installed.
 3. **Find components** — `npx shadcn@latest search`.
 4. **Get docs and examples** — run `npx shadcn@latest docs <component>` to get URLs, then fetch them. Use `npx shadcn@latest view` to browse registry items you haven't installed. To preview changes to installed components, use `npx shadcn@latest add --diff`.

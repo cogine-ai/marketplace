@@ -140,6 +140,11 @@ Account creation, saving results, advanced features, perfect design, every edge 
 
 ---
 
+## Common Pitfalls to Check
+
+- **Maintenance and security debt:** identify user-input handling, scraping dependencies, API changes/limits, and the owner and budget for upkeep before scoring maintenance burden below.
+- **No useful product continuation:** verify the path from a tool result to a relevant product workflow. Measure qualified leads and trial/signup conversion as well as usage; a high-traffic tool alone does not prove product demand.
+
 ## Evaluation Scorecard
 
 Rate each factor 1-5:
@@ -151,7 +156,7 @@ Rate each factor 1-5:
 | Uniqueness vs. existing | ___ |
 | Natural path to product | ___ |
 | Build feasibility | ___ |
-| Maintenance burden (inverse) | ___ |
+| Maintenance burden (inverse; input handling, scraping/API changes, security upkeep) | ___ |
 | Link-building potential | ___ |
 | Share-worthiness | ___ |
 

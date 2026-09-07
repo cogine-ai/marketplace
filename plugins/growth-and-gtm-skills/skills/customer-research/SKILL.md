@@ -14,7 +14,7 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 
 ---
 
-## Two Modes of Research
+## Three Modes of Research
 
 ### Mode 1: Analyze Existing Assets
 You have raw research material (transcripts, surveys, reviews, tickets). Your job is to extract signal.
@@ -22,7 +22,10 @@ You have raw research material (transcripts, surveys, reviews, tickets). Your jo
 ### Mode 2: Go Find Research
 You need to gather intel from online sources (Reddit, G2, forums, communities, review sites). Your job is to know where to look and what to extract.
 
-Most engagements combine both. Establish which mode applies before proceeding.
+### Mode 3: Go Ask (Primary Research)
+Use interviews or surveys when existing material cannot answer the research question. Read [interviews-and-surveys.md](references/interviews-and-surveys.md) for disconfirming questions, recruiting, follow-up prompts, and survey design.
+
+Establish which modes apply. Existing and public signals can inform the questions; they do not replace customer interviews. With no participants or responses yet, produce a research plan and draft materials, not findings. Contacting participants or sending surveys requires explicit authorization, including authorization already given in the session.
 
 ---
 
@@ -248,6 +251,7 @@ Depending on what the user needs, offer:
 4. **Jobs-to-be-done map** — functional, emotional, and social jobs by segment
 5. **Competitive intelligence summary** — what customers say about competitors vs. you
 6. **Research gap analysis** — what you still don't know and how to find it
+7. **Primary research plan** — decision to inform, assumptions to challenge, participant segments, interview/survey questions, recruiting drafts, and synthesis plan
 
 Ask the user which deliverable(s) they need before generating output.
 

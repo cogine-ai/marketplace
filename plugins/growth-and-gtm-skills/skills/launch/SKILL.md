@@ -100,6 +100,16 @@ Borrowed channels give instant credibility, but only work if you convert borrowe
 
 ---
 
+## Readiness Gate: Simple, Lovable, Complete
+
+Before the phased launch mechanics, check the accepted launch scope:
+
+- **Simple:** is the intended user job clear, with a path the target user can follow?
+- **Lovable:** is there evidence the intended audience finds the experience useful and wants to use it?
+- **Complete:** can the user finish that job within the promised scope, without blocking stubs or missing steps?
+
+Record the evidence and any gaps against the current plan. Distinguish unfinished work within the accepted scope from new feature requests. This check does not automatically reduce the agreed scope, change the launch plan, or authorize publication; passing it informs the planned release decision.
+
 ## Five-Phase Launch Approach
 
 Launching isn't a one-day event. It's a phased process that builds momentum.

@@ -1,6 +1,6 @@
 # Upstream sources
 
-Packaged on 2026-07-19 and updated on 2026-08-26. Skill directories are copied
+Packaged on 2026-07-19 and selectively updated on 2026-09-08. Skill directories are copied
 or adapted into this plugin so Codex and Claude Code can discover the same
 bundle.
 
@@ -53,8 +53,20 @@ absorbed current GStack checks without importing its runtime or preamble.
 
 - Repository: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 - Branch: `main`
-- Pinned commit: `f8ac5e1266dba8354ea96e19994d9f4345e7ec31`
+- Pinned commit: `4aad0584d92131626b16d4ff4d77f0455385013c`
+- Previous snapshot: `f8ac5e1266dba8354ea96e19994d9f4345e7ec31`
 - License: MIT
+
+The runtime, data, and two reference files match the pinned
+`.claude/skills/ui-ux-pro-max` snapshot, except 46 added blank-line trailing
+spaces removed from `design_system.py` for diff validation (no executable AST
+change; only docstring whitespace differs). The entry retains absolute skill-root
+resolution and an explicit project output directory, and is explicit-only in
+both hosts. Ten portable upstream test modules are included; the script-path
+test is adapted to this package's layout. Upstream repository-maintenance tests
+for catalog refresh, catalog generation line endings, and the relevance
+evaluator depend on unshipped root tools and are not included. No sibling
+design skills or CLI asset-mirroring machinery is imported.
 
 ## Lenny skills by Refound AI — 2 skills
 
@@ -73,7 +85,14 @@ Matt Pocock's tracker-aware skills reuse Cogine's portable adaptations;
 The four Anthropic workflows and GitHub PRD workflow were condensed and made
 connector-independent. `prototype` gained four concise design gates and a
 standalone HTML fallback. `ui-ux-pro-max` resolves its own skill directory
-instead of relying on `CLAUDE_PLUGIN_ROOT`, and Codex treats it as explicit-only.
+instead of relying on `CLAUDE_PLUGIN_ROOT`, and both hosts treat it as explicit-only.
 The two Lenny skills retain their full evidence references as on-demand
 material. The current `to-tickets` snapshot omits its former final `/implement`
 handoff sentence.
+
+On 2026-09-08, `backlog-ready-spec` selectively adopted issue-data trust and
+failed-query handling from
+[GStack spec](https://github.com/garrytan/gstack/blob/0530392821c277b95e5cd65aa9d9fda4248718b2/spec/SKILL.md.tmpl).
+It remains byte-identical to the Coding Engineer copy and retains Preserve,
+required sequencing, conditional rollback, and local-spec output. No GStack
+runtime or automatic issue creation is imported.
