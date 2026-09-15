@@ -37,6 +37,17 @@ and the handoff from product-qualified usage to sales assist.
 
 - plg-sales-integration
 
+## Optional marketing-page design
+
+For an additional visual candidate after the main page direction is established,
+pair the marketing brief, copy, and conversion goal with
+`marketing-page-design-candidate` (候选营销页面设计) from the separately installed
+[Design Engineer Skills](https://github.com/cogine-ai/marketplace/tree/main/plugins/design-engineer-skills)
+plugin. It is supplementary and is not used independently.
+
+Design owns the complete upstream implementation and its updates. This GTM
+bundle keeps one optional pairing note and does not ship a second skill copy.
+
 ## Design choices
 
 - The bundle keeps only broadly useful growth and GTM workflows from the larger

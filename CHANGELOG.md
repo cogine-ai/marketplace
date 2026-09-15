@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Prepare Design Engineer Skills 0.1.4 with `marketing-page-design-candidate`
+  (候选营销页面设计), for supplementary candidates after a main design exists.
+  Preserve the full pinned Taste Skill body, adapting only its name and
+  description and adding matching UI metadata and upstream license.
+- Prepare Growth & GTM Skills 0.1.5 with an optional Design pairing note.
+  Its 18 skill implementations are unchanged, and no duplicate design skill
+  is bundled.
+
 ## 0.7.1 - 2026-08-26
 
 - Prepare `product-manager-skills` version `0.2.0` with 15 focused skills.
