@@ -23,7 +23,6 @@ Seven existing entries receive the upstream Initial Response addition. All upstr
 
 See `UPSTREAM_SYNC_2026-09-15.json` for the per-entry overlay ledger. The refresh ships as version 0.1.3 in both Codex and Claude Code manifests and the Claude marketplace catalog.
 
-
 ## Candidate marketing-page design — 2026-09-16
 
 - Repository: https://github.com/Leonxlnx/taste-skill
@@ -44,4 +43,3 @@ The selected pin is the version used in the CogineWork comparison.
 
 See `UPSTREAM_TASTE.json` for the source and body hashes. Future refreshes
 preserve the complete upstream body and the same two discovery-field overrides.
-Growth & GTM documents optional use of this Design skill without bundling a copy.
