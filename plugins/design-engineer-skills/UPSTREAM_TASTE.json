@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/Leonxlnx/taste-skill",
+  "commit": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
+  "source_path": "skills/taste-skill/SKILL.md",
+  "source_name": "design-taste-frontend",
+  "local_path": "skills/marketing-page-design-candidate/SKILL.md",
+  "local_name": "marketing-page-design-candidate",
+  "source_file_sha256": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89",
+  "source_body_sha256": "824db600494faa1159dddaf13583202bcc48deca5c92cf7198224755564df697",
+  "local_file_sha256": "bda0e5eb872685be30e60d7db15b42acfac15ef7cb8d2cf72f40773a394e709b",
+  "body_byte_exact": true,
+  "frontmatter_overrides": [
+    "name",
+    "description"
+  ],
+  "additional_files": [
+    "skills/marketing-page-design-candidate/agents/openai.yaml",
+    "skills/marketing-page-design-candidate/LICENSE"
+  ],
+  "adaptation": "Candidate marketing-page role in discovery and UI metadata only. The complete upstream body is the directly loaded SKILL.md body, unchanged. No wrapper, summary, or reference indirection.",
+  "upstream_status": "v2 experimental, pinned to the version used in the comparison",
+  "refresh_rule": "Import the complete upstream body unchanged, retain only the approved name and description overrides plus UI metadata, and update this source record and license."
+}

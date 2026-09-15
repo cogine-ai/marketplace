@@ -9,8 +9,8 @@
     {
       "name": "design-engineer-skills",
       "source": "./plugins/design-engineer-skills",
-      "description": "Eight design-engineering skills for UI prototyping, library selection, polish, and motion.",
-      "version": "0.1.3",
+      "description": "Nine design-engineering skills for UI prototyping, candidate marketing pages, library selection, polish, and motion.",
+      "version": "0.1.4",
       "category": "development"
     },
     {

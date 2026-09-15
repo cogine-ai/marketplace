@@ -1,5 +1,12 @@
 # Changelog
 
+## Design Engineer Skills 0.1.4 - 2026-09-16
+
+- Release Design Engineer Skills 0.1.4 with `marketing-page-design-candidate`
+  (候选营销页面设计), for supplementary candidates after a main design exists.
+  Preserve the full pinned Taste Skill body, adapting only its name and
+  description and adding matching UI metadata and upstream license.
+
 ## 0.7.1 - 2026-08-26
 
 - Prepare `product-manager-skills` version `0.2.0` with 15 focused skills.

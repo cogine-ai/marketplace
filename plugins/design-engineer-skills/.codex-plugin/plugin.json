@@ -1,7 +1,7 @@
 {
   "name": "design-engineer-skills",
-  "version": "0.1.3",
-  "description": "Eight design-engineering, UI prototyping, library selection, and motion skills, packaged for Codex by Cogine AI.",
+  "version": "0.1.4",
+  "description": "Nine skills for design engineering, UI prototyping, candidate marketing pages, library selection, and motion, packaged for Codex by Cogine AI.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "Design Engineer Skills",
     "shortDescription": "Design-engineering taste and UI motion guidance.",
-    "longDescription": "Eight skills for UI polish, design divergence, frontend library selection, animation review, motion audits, animation opportunities, motion vocabulary, and Apple-inspired web interaction design. Original skill content by Emil Kowalski; packaged and maintained for Codex by Cogine AI.",
+    "longDescription": "Nine skills for UI polish, design divergence, supplementary marketing-page candidates, frontend library selection, animation review, motion audits, animation opportunities, motion vocabulary, and Apple-inspired web interaction design. Skill content by Emil Kowalski and Leonxlnx; packaged and maintained for Codex by Cogine AI.",
     "developerName": "Cogine AI",
     "category": "Productivity",
     "capabilities": [

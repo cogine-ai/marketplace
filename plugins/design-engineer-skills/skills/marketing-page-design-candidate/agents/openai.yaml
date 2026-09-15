@@ -1,0 +1,4 @@
+interface:
+  display_name: "候选营销页面设计"
+  short_description: "在已有主设计方案之外补充营销页面视觉候选，暂不独立使用"
+  default_prompt: "使用 $marketing-page-design-candidate，基于现有主方案制作一个额外的营销页面设计候选。"
