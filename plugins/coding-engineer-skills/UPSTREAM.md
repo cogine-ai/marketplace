@@ -165,3 +165,9 @@ cleanup for manually created worktrees.
 
 The Matt lock and the other skill entries are unchanged. See the marketplace
 [update record](../../docs/skill-updates-2026-09-08.md) for scope and validation.
+
+## Complete upstream refresh with retained local adaptations — 2026-09-15
+
+`to-spec` and `to-tickets` are refreshed from Matt `3cca18b368ae95cdbdebbff572ccafa662551015`. Preserve short explicit triggers, native host policies, repository tracker discovery, safe local fallback, and existing-label-only publication. The 33-file lock for the ten other Matt imports is unchanged. Worktree management was reviewed against Superpowers v6.3.0 (`b36e0829c6d0140e93cfef2ca599b1b07d4a7797`); the upstream rationalization-table rewrite does not add behavior missing from the deliberately shorter local flow. The five GStack-derived workflows were reviewed against `4a3c6a8a3cad82cfffdaa4d152e1c5ae5c4af659`: redaction, failed-evidence handling, live-vs-untested reporting and portable review already cover the applicable deltas. Provider-specific reviewer/Aside runtime changes remain outside these documented portable adaptations.
+
+See `UPSTREAM_SYNC_2026-09-15.json` for the per-entry overlay ledger. The refresh ships as version 0.2.2 in both Codex and Claude Code manifests and the Claude marketplace catalog.

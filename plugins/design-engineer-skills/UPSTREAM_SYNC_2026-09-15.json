@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-15",
+  "distribution": "Marketplace version 0.1.3; shared Codex and Claude skill implementation",
+  "entries": [
+    {
+      "skill": "design-engineer-skills/animation-vocabulary",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    },
+    {
+      "skill": "design-engineer-skills/apple-design",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    },
+    {
+      "skill": "design-engineer-skills/find-animation-opportunities",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    },
+    {
+      "skill": "design-engineer-skills/improve-animations",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    },
+    {
+      "skill": "design-engineer-skills/pick-ui-library",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    },
+    {
+      "skill": "design-engineer-skills/prototype",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    },
+    {
+      "skill": "design-engineer-skills/review-animations",
+      "preserved": [
+        "existing frontmatter invocation policy",
+        "agents/openai.yaml"
+      ],
+      "upstream": "emilkowalski/skills@0b85d4b36ad772ed2c46a66522ede1c8a26f9929"
+    }
+  ]
+}

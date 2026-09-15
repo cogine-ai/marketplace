@@ -207,16 +207,16 @@ def validate_metadata(errors):
         PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
     ):
         manifest = load_json(manifest_path)
-        if manifest.get("version") != "0.2.1":
-            errors.append(f"{manifest_path}: expected version 0.2.1")
+        if manifest.get("version") != "0.2.2":
+            errors.append(f"{manifest_path}: expected version 0.2.2")
         if "Thirty focused" not in manifest.get("description", ""):
             errors.append(f"{manifest_path}: description does not state Thirty focused skills")
 
     marketplace = load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
     coding = entries.get("coding-engineer-skills", {})
-    if coding.get("version") != "0.2.1":
-        errors.append("marketplace coding-engineer-skills version is not 0.2.1")
+    if coding.get("version") != "0.2.2":
+        errors.append("marketplace coding-engineer-skills version is not 0.2.2")
     if "Thirty focused" not in coding.get("description", ""):
         errors.append("marketplace description does not state Thirty focused skills")
 

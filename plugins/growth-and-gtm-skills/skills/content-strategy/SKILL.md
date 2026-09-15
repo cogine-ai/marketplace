@@ -37,6 +37,12 @@ Gather this context (ask if not provided):
 
 ---
 
+## Treat Content Like a Product
+
+Every piece is its own launch. Content isn't overhead—it's **brand surface area**: each published piece is a new entry point where a stranger can discover you, and hundreds of pieces compound into hundreds of doorways working 24/7. Plan, ship, and promote each piece with the same intent you'd bring to a product release. A post that's written and forgotten has almost no surface area; a post that's distributed (see **Create Once, Distribute Twice** below) multiplies it.
+
+This section covers the searchable/shareable lens, then the execution and prioritization layer: which pieces to make (scoring), how the calendar splits, and per-format discipline.
+
 ## Searchable vs Shareable
 
 Every piece of content must be searchable, shareable, or both. Prioritize in that order—search traffic is the foundation.
@@ -115,6 +121,10 @@ Structure: Challenge → Solution → Results → Key learnings
 
 **Meta Content**
 Behind-the-scenes transparency. "How We Got Our First $5k MRR," "Why We Chose Debt Over VC."
+
+### Link-Earning Formats
+
+Choose formats for the job: maintained statistics pages can make evidence easier to cite; original research can publish its findings in accessible summaries. Judge links, qualified demand, conversion, and brand outcomes separately rather than applying a fixed platform or format ranking.
 
 For programmatic content at scale, see **search-visibility**.
 
@@ -309,8 +319,10 @@ Score each idea on four factors:
 
 | Idea | Customer Impact (40%) | Content-Market Fit (30%) | Search Potential (20%) | Resources (10%) | Total |
 |------|----------------------|-------------------------|----------------------|-----------------|-------|
-| Topic A | 8 | 9 | 7 | 6 | 8.0 |
+| Topic A | 8 | 9 | 7 | 6 | 7.9 |
 | Topic B | 6 | 7 | 9 | 8 | 7.1 |
+
+Score 1-10 per factor, multiply by the weight, sum for the total. Rank the list; make the top-scoring pieces first.
 
 ---
 
@@ -357,6 +369,7 @@ Visual or structured representation of how content interconnects.
 
 ## References
 
+- **[Content Distribution Spine](references/content-distribution.md)**: Production, distribution, ORB, reusable cuts, and maintenance planning
 - **[Headless CMS Guide](references/headless-cms.md)**: CMS selection, content modeling for marketing, editorial workflows, platform comparison (Sanity, Contentful, Strapi)
 
 ---

@@ -63,6 +63,10 @@ Price should be based on value delivered, not cost to serve:
 
 **Key insight:** Price between the next best alternative and perceived value.
 
+**Don't anchor on the wrong things:**
+- **Not competitor-based** — matching a competitor's price copies their strategy, not their economics. It's a data point, not a target.
+- **Not cost-based** — cost is a floor, never the basis. Value + differentiation set the price.
+
 ---
 
 ## Initial Pricing as a Learning Hypothesis
@@ -97,6 +101,8 @@ The value metric is what you charge for—it should scale with the value custome
 Ask: "As a customer uses more of [metric], do they get more value?"
 - If yes → good value metric
 - If no → price doesn't align with value
+
+**The value metric picks the pricing model.** Once you know what scales with value, choose how to charge on it — flat, usage, tier, user, feature, credit, outcome, or a hybrid. See [references/pricing-models.md](references/pricing-models.md).
 
 ---
 
@@ -166,8 +172,6 @@ Identifies which features customers value most:
 2. **Delayed increase** — Announce 3-6 months out
 3. **Tied to value** — Raise price but add features
 4. **Plan restructure** — Change plans entirely
-
----
 
 ## Roll Out Price Changes in Stages
 

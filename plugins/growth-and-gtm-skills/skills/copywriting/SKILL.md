@@ -41,6 +41,8 @@ Gather this context (ask if not provided):
 ### Clarity Over Cleverness
 If you have to choose between clear and creative, choose clear.
 
+**For message-market fit tools** — the "Now you can" test, the Human Action Model (discomfort → vision → path), the Perception Gap: See [references/copy-frameworks.md](references/copy-frameworks.md#clarity--message-market-fit)
+
 ### Benefits Over Features
 Features: What it does. Benefits: What that means for the customer.
 
@@ -75,8 +77,7 @@ Each section should advance one argument. Build a logical flow down the page.
 - Exclamation points? (remove them)
 - Marketing buzzwords without substance?
 
-After drafting, perform a focused line-by-line edit for clarity, specificity,
-voice, evidence, and unnecessary claims.
+After drafting, perform a focused line-by-line edit for clarity, specificity, voice, evidence, and unnecessary claims.
 
 ---
 
@@ -117,7 +118,9 @@ Puns and wit make copy memorable—but only if it fits the brand and doesn't und
 - "Never {unpleasant event} again"
 - "{Question highlighting main pain point}"
 
-**For comprehensive headline formulas**: See [references/copy-frameworks.md](references/copy-frameworks.md). When reviewing a hero, use its [clarity and message-market-fit checks](references/copy-frameworks.md#clarity--message-market-fit): a true new ability, a recognizable problem-to-action path, and framing appropriate to the audience.
+**For comprehensive headline formulas**: See [references/copy-frameworks.md](references/copy-frameworks.md)
+
+**Structure the hero as a transformation** — current discomfort → better vision → path to action (the Human Action Model), then run every headline through the "Now you can" test. See [references/copy-frameworks.md](references/copy-frameworks.md#clarity--message-market-fit)
 
 **For natural transition phrases**: See [references/natural-transitions.md](references/natural-transitions.md)
 

@@ -68,3 +68,9 @@ plg-sales-integration is deliberately shared with Sales Skills at the
 cross-functional PQL and sales-assist boundary. `pricing` 2.1.0 is adapted to
 route AI-readability checks through the bundled `search-visibility` skill and
 direct `Product`/`Offer` JSON-LD guidance instead of unbundled skills.
+
+## Complete upstream refresh with retained local adaptations — 2026-09-15
+
+Eight entries now include the applicable complete upstream support files and evaluation cases from `5b2c0007766c6a1cf1d53fd8fc73e979e0821022`: search-visibility, customer-research, content-strategy, onboarding, pricing, copywriting, free-tools, and launch. The merged search router, concise method references documented on September 8, bundled skill/tool alternatives, contextual research samples/incentives, truthful progress, product-specific observation windows, and customer commitments are preserved. Fixed vendor uplift/format rankings and generic price bands remain excluded. Source-specific search evals use separate directories. Existing customer-research cases 12/13 remain; new cases conflicting with these established constraints are adapted. The other entries retain their earlier source snapshot.
+
+See `UPSTREAM_SYNC_2026-09-15.json` for the per-entry overlay ledger. The refresh ships as version 0.1.4 in both Codex and Claude Code manifests and the Claude marketplace catalog.

@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-15",
+  "distribution": "Marketplace version 0.2.2; shared Codex and Claude skill implementation",
+  "entries": [
+    {
+      "skill": "coding-engineer-skills/to-spec",
+      "preserved": [
+        "short description",
+        "explicit invocation policy and agents/openai.yaml",
+        "repository tracker discovery and safe local fallback",
+        "existing labels only"
+      ],
+      "upstream": "mattpocock/skills@3cca18b368ae95cdbdebbff572ccafa662551015"
+    },
+    {
+      "skill": "coding-engineer-skills/to-tickets",
+      "preserved": [
+        "short description",
+        "explicit invocation policy and agents/openai.yaml",
+        "repository tracker discovery and safe local fallback",
+        "existing labels only"
+      ],
+      "upstream": "mattpocock/skills@3cca18b368ae95cdbdebbff572ccafa662551015"
+    }
+  ]
+}

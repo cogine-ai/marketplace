@@ -43,9 +43,9 @@ the recommendation.
   only when churn is stable enough for that approximation; state the caveat.
 
 If net burn is zero or negative, report that the company is cash-generating and
-do not calculate runway by division. Still model downside scenarios.
+do not calculate runway by division. Model downside scenarios when the decision requires them.
 
-## Workflow
+## Workflow (Cash Plans and Scenario Decisions)
 
 1. Normalize actuals, one-time items, commitments, and assumptions.
 2. Build a monthly cash bridge from opening to ending cash.
@@ -59,7 +59,7 @@ do not calculate runway by division. Still model downside scenarios.
 
 ## Output
 
-Keep the answer compact:
+Use the sections relevant to the question; single-metric requests can be answered directly:
 
 1. **Current state** — cash, gross burn, net burn, runway, and data date.
 2. **Scenario table** — key assumptions, cash-out date, and minimum cash.
