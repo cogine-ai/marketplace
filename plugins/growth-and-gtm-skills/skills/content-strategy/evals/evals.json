@@ -89,12 +89,12 @@
     {
       "id": 7,
       "prompt": "Our #1 content goal this quarter is earning backlinks for domain authority. I'm deciding between commissioning an original research report, writing another ultimate guide, or building out a statistics roundup page for our category. Which should we prioritize and why?",
-      "expected_output": "Should apply the Link-Earning Formats data: statistics/data roundups earn ~4.25x their page share of backlinks while original research earns ~0.80x and ultimate guides ~0.77x, so for a backlinks-specific goal the stats roundup wins. Should label the data as a single vendor study (Foundation Inc., 2026, B2B SaaS) and treat it as directional. Should explain the mechanism — writers cite whatever makes citation easiest, and original research is often cited via roundups that aggregate it — and recommend that if they do run original research later, they pair it with their own stat-roundup page of citable one-liners. Should note stat pages are also an AI-citation play (ai-seo) and that guides/research still earn their keep on other jobs (rankings, conversions, brand).",
+      "expected_output": "Make a context-dependent recommendation for the backlink goal by comparing statistics roundups, original research, and ultimate guides using current audience and evidence. Explain that easy-to-cite findings can help writers cite a source and that original research can be paired with an accessible summary of its findings. Treat any cited single-vendor study as directional and verify its scope rather than requiring fixed multipliers or a universal format winner. Distinguish links, qualified demand, conversion, and brand outcomes; use the bundled search-visibility route for AI-citation considerations.",
       "assertions": [
-        "Recommends the statistics roundup page for the backlink-specific goal, citing the format multipliers",
-        "Labels the Foundation data as a single vendor study and directional, not a law",
-        "Explains the citation-ease mechanism and the pairing move (research + own stat-roundup of its findings)",
-        "Notes the other formats are judged by different jobs rather than calling them worthless"
+        "Compares the three formats for the backlink goal and gives a context-dependent recommendation",
+        "Does not prescribe fixed multipliers or a universal format ranking; any single-study evidence is scoped and directional",
+        "Explains citation ease and the option to pair original research with an accessible summary of its findings",
+        "Distinguishes links, qualified demand, conversion, and brand outcomes rather than treating other formats as worthless"
       ],
       "files": []
     },

@@ -26,7 +26,10 @@
         "content-distribution.md": "documented concise distribution playbook without platform benchmarks",
         "headless-cms.md": "bundled cross-skill routes and available tool alternatives"
       },
-      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "factual_corrections": [
+        "Weighted scoring example: Topic A totals 7.9 from its displayed inputs and weights, not upstream 8.0."
+      ]
     },
     {
       "skill": "growth-and-gtm-skills/onboarding",
@@ -103,6 +106,7 @@
           13
         ],
         "content-strategy": [
+          7,
           8
         ],
         "free-tools": [
