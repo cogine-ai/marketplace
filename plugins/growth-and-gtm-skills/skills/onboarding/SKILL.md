@@ -17,14 +17,13 @@ Before providing recommendations, understand:
 1. **Product Context** - What type of product? B2B or B2C? Core value proposition?
 2. **Activation Definition** - What's the "aha moment"? What action indicates a user "gets it"?
 3. **Current State** - What happens after signup? Where do users drop off?
-4. **Activation Model** - Freemium, free trial, paid trial, refund-backed purchase, or consultation? Read [activation-models.md](references/activation-models.md) when selecting or reassessing the model.
 
 ---
 
 ## Core Principles
 
 ### 1. Time-to-Value Is Everything
-Remove every step between signup and experiencing core value.
+Remove every step between signup and experiencing core value. Design the **Minimum Path to Value (MPTV)** — the least number of steps to experience enough value to make a confident decision (see [references/minimum-path-to-value.md](references/minimum-path-to-value.md)).
 
 ### 2. One Goal Per Session
 Focus first session on one successful outcome. Save advanced features for later.
@@ -33,11 +32,44 @@ Focus first session on one successful outcome. Save advanced features for later.
 Interactive > Tutorial. Doing the thing > Learning about the thing.
 
 ### 4. Progress Creates Motivation
-Show advancement. Celebrate completions. Make the path visible.
+Show advancement. Celebrate completions. Make the path visible. (See onboarding psychology below for the mechanisms.)
+
+---
+
+## Onboarding Psychology
+
+The principles that make progress mechanics, checklists, and prompts actually work:
+
+- **Endowed Progress Effect** — show useful work already completed and the remaining path. Do not mark unfinished work complete or promise a fixed completion uplift.
+- **Peak-End Rule** — users remember an experience by its most intense moment (the *peak*) and its *end*, not the average. Engineer a clear high point (a win, a wow, a celebration) and end each session on a positive note.
+- **Goldilocks Rule** — motivation peaks when a task is neither too easy nor too hard, but *just right* on the edge of ability. Tune early steps so they're achievable but not trivial.
+- **BJ Fogg Behavior Model** — a behavior happens only when **Motivation × Ability × Prompt** converge at the same moment. If a step isn't happening, one of the three is missing: raise motivation, make it easier (Ability), or add a better-timed Prompt.
+- **Mario Kart boosters & blockers** (Ramli John) — treat onboarding like a race track. Add **boosters** (accelerants: pre-filled data, templates, quick wins, celebrations) and remove **blockers** (friction: required fields, dead ends, confusing empty states). Speed users toward value and clear obstacles from the lane.
+
+## Onboarding Toolkit (10 Components)
+
+The components you assemble an onboarding experience from. Use the fewest that reach value:
+
+| Component | Purpose |
+|-----------|---------|
+| Welcome forms | Capture role/goal to personalize the path (keep short — Hick's Law) |
+| Initial screens | First-run screens that orient and point to one clear action |
+| Drip emails | Multi-touch nurture — **one concept per email**, don't overload |
+| Skippable tutorials | Optional guidance users can bypass — never trap them |
+| Videos | Show complex workflows visually |
+| Docs / help center | Self-serve reference for when users get stuck |
+| Onboarding calls | Human touch for complex or high-value accounts |
+| Data inputs | Getting the user's real data in so value feels "real" |
+| Checklists | Ordered, value-first steps with visible progress (see below) |
+| Empty states | Guided first-action opportunities, not dead ends (see below) |
 
 ---
 
 ## Defining Activation
+
+**Judge activation by conversion and retention over an observation window appropriate to the product, not lead volume.** More signups mean nothing if they don't convert and stick.
+
+Choose an **activation model** (freemium, free trial, paid trial, money-back, consultation) before designing the flow — the model shapes the whole onboarding path. See [references/activation-models.md](references/activation-models.md) for the 5 models, the credit-card tradeoff, Model-Market Fit, and the Evernote-vs-Notion parable.
 
 ### Find Your Aha Moment
 
@@ -202,6 +234,14 @@ When recommending experiments, consider tests for:
 - Support and help availability
 
 **For comprehensive experiment ideas**: See [references/experiments.md](references/experiments.md)
+
+---
+
+## References
+
+- **[references/minimum-path-to-value.md](references/minimum-path-to-value.md)** — MPTV, Hick's Law, the inventory→remove→reconstruct process, and patterns (Stripe, Calendly, Notion).
+- **[references/activation-models.md](references/activation-models.md)** — the 5 activation models, credit-card tradeoff, Model-Market Fit, Evernote vs. Notion.
+- **[references/experiments.md](references/experiments.md)** — comprehensive A/B test and experiment ideas.
 
 ---
 

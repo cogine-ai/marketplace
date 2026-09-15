@@ -19,8 +19,8 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 ### Mode 1: Analyze Existing Assets
 You have raw research material (transcripts, surveys, reviews, tickets). Your job is to extract signal.
 
-### Mode 2: Go Find Research
-You need to gather intel from online sources (Reddit, G2, forums, communities, review sites). Your job is to know where to look and what to extract.
+### Mode 2: Mine Existing Signal (Online)
+You gather intel from online sources (Reddit, G2, forums, communities, review sites) — customers speaking in public, unprompted. Your job is to know where to look and what to extract.
 
 ### Mode 3: Go Ask (Primary Research)
 Use interviews or surveys when existing material cannot answer the research question. Read [interviews-and-surveys.md](references/interviews-and-surveys.md) for disconfirming questions, recruiting, follow-up prompts, and survey design.
@@ -169,6 +169,24 @@ After gathering from multiple sources, synthesize into:
 
 ---
 
+## Mode 3: Interviews & Surveys (Primary Research)
+
+When there's no signal yet — or you need answers only the customer can give — go ask. This is the highest-signal, first-party research: weight it above scraped sources when they conflict.
+
+**Load `references/interviews-and-surveys.md` before running any interview or survey.** It covers:
+
+- **Keep conversations natural** — explain the research purpose honestly and use non-leading questions.
+- **Prove yourself wrong, not right** — research is disconfirmation, not validation (the Dropbox sync-speed example)
+- **Amy Hoy's Sales Safari** — passively mine pains, jargon, recommendations, and worldview from where the audience already gathers
+- **Recruiting your best customers** — segment the CRM by deal size / short sales cycle / low churn; ask sales & CS for referrals; always close with *"who else should we talk to?"*
+- **Outreach drafts and incentives** — choose recruitment, sample size, and any incentive for the research question; send only when already authorized.
+- **Keep Asking Why** — probe a churn answer to its underlying cause; distinguish pain points from passion points without a mandatory question count.
+- **The PMF survey (Sean Ellis / Superhuman)** — *"How would you feel if you could no longer use [product]?"*; interpret responses by segment, sample size, and context
+
+Analyze whatever you gather back through the Mode 1 extraction framework and confidence guardrails above.
+
+---
+
 ## Persona Generation
 
 ### When there are no reviews yet
@@ -251,6 +269,7 @@ Depending on what the user needs, offer:
 4. **Jobs-to-be-done map** — functional, emotional, and social jobs by segment
 5. **Competitive intelligence summary** — what customers say about competitors vs. you
 6. **Research gap analysis** — what you still don't know and how to find it
+
 7. **Primary research plan** — decision to inform, assumptions to challenge, participant segments, interview/survey questions, recruiting drafts, and synthesis plan
 
 Ask the user which deliverable(s) they need before generating output.

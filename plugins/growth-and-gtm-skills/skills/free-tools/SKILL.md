@@ -24,6 +24,8 @@ Before designing a tool strategy, understand:
 
 ## Core Principles
 
+**"Your product is my marketing opportunity."** Bezos said "your margin is my opportunity." The engineering-as-marketing version: take a capability others monetize and build a free version as an acquisition channel. Unsplash gave away the stock photos Getty sold — and Getty acquired it. See [references/tool-benchmarks.md](references/tool-benchmarks.md) for named case patterns.
+
 ### 1. Solve a Real Problem
 - Tool must provide genuine value
 - Solves a problem your audience actually has
@@ -56,6 +58,8 @@ Before designing a tool strategy, understand:
 | Interactive | Tutorials, playgrounds, quizzes | Learning/understanding |
 
 **For detailed tool types and examples**: See [references/tool-types.md](references/tool-types.md)
+
+**For named case benchmarks (Unsplash, HubSpot Website Grader, Moz, Buffer, Shopify) with product and distribution patterns**: See [references/tool-benchmarks.md](references/tool-benchmarks.md)
 
 ---
 
@@ -172,6 +176,13 @@ Rate each factor 1-5:
 4. What's the timeline and budget?
 
 ---
+
+## Common Pitfalls
+
+- **Over-engineering** — Shipping a bloated tool when the winning cases were tiny. Scope to the one job.
+- **Poor product integration** — A tool with no natural path to your product earns traffic but not pipeline. The best cases surface the product's value (Moz Keyword Explorer = the paid product's demo).
+- **Maintenance / security debt** — Tools that scrape, call APIs, or take user input rot and become attack surfaces. Budget for upkeep before you build.
+- **Vanity metrics** — Visitors and usage feel good but don't pay. Track leads, qualification rate, and trial/signup conversion.
 
 ## Related Skills
 

@@ -50,7 +50,7 @@ Resolve, accept, or escalate only material unknowns.
 |---|---|
 | Frame | Objective, limits, and inspectable success make the next action clear. Ask only when missing input could materially alter it; otherwise state the assumption and continue. |
 | Discovery | The relevant method was used; no unresolved unknown can materially change the path unless accepted or escalated. |
-| Commit | Path, scope, verification, and stop triggers are bounded. Get a human decision for material changes to meaning, scope, architecture/contracts, data, permissions, security, cost, release/public state, or remote/live state. |
+| Commit | Path, scope, verification, and stop triggers are bounded. Get a human decision for material changes to meaning, scope, architecture/contracts, data, permissions, security, cost, release/public state, or remote/live state unless already authorized in this session. |
 | Deviation | Continue and log local, reversible, in-scope variation. Pause when new facts change the accepted path, material semantics/risk, remote/live state, or validation. |
 | Evidence | Map every material completion claim to direct evidence. If proof is missing, use `implemented but not fully verified`, `blocked on validation`, or `not complete`. |
 

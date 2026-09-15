@@ -96,3 +96,9 @@ failed-query handling from
 It remains byte-identical to the Coding Engineer copy and retains Preserve,
 required sequencing, conditional rollback, and local-spec output. No GStack
 runtime or automatic issue creation is imported.
+
+## Complete upstream refresh with retained local adaptations — 2026-09-15
+
+`to-spec` and `to-tickets` are refreshed from Matt `3cca18b368ae95cdbdebbff572ccafa662551015`. Preserve short explicit triggers, native host policies, repository tracker discovery, safe local fallback, and existing-label-only publication. The 33-file lock for the ten other Matt imports is unchanged.
+
+See `UPSTREAM_SYNC_2026-09-15.json` for the per-entry overlay ledger. The refresh ships as version 0.2.2 in both Codex and Claude Code manifests and the Claude marketplace catalog.

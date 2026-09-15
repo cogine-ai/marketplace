@@ -1,0 +1,125 @@
+{
+  "date": "2026-09-15",
+  "distribution": "Marketplace version 0.1.4; shared Codex and Claude skill implementation",
+  "entries": [
+    {
+      "skill": "growth-and-gtm-skills/customer-research",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {
+        "interviews-and-surveys.md": "documented concise research playbook, contextual sampling/incentives and authorized outreach",
+        "source-guides.md": "unbundled tool-registry fallback"
+      },
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/content-strategy",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {
+        "content-distribution.md": "documented concise distribution playbook without platform benchmarks",
+        "headless-cms.md": "bundled cross-skill routes and available tool alternatives"
+      },
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/onboarding",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {
+        "activation-models.md": "documented concise activation models without universal windows",
+        "minimum-path-to-value.md": "documented concise MPTV without fixed abandonment numbers or false progress"
+      },
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/pricing",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {
+        "pricing-models.md": "documented concise models without default dollar bands and uplift ratios",
+        "pricing-page-teardown.md": "documented portable concise rubric and bundled routes"
+      },
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/copywriting",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {
+        "copy-frameworks.md": "documented concise message-market-fit checks without fixed uplift claims",
+        "natural-transitions.md": "bundled search-visibility route"
+      },
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/free-tools",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {},
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/launch",
+      "preserved": [
+        "short trigger and host metadata",
+        "bundled Related Skills routes",
+        "recorded 2026-09-08 method/commitment simplifications"
+      ],
+      "retained_references": {},
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "skill": "growth-and-gtm-skills/search-visibility",
+      "preserved": [
+        "merged on-demand SEO/AI SEO/programmatic router",
+        "documented Sep 8 compact methods without fixed format rankings",
+        "separate upstream eval namespaces to avoid filename collisions"
+      ],
+      "upstream": "coreyhaines31/marketingskills@5b2c0007766c6a1cf1d53fd8fc73e979e0821022"
+    },
+    {
+      "eval_overrides": {
+        "customer-research": [
+          12,
+          13
+        ],
+        "content-strategy": [
+          8
+        ],
+        "free-tools": [
+          7
+        ],
+        "launch": [
+          7
+        ],
+        "pricing": [
+          8
+        ],
+        "search-visibility/ai-seo": [
+          1,
+          8
+        ]
+      },
+      "reason": "Keep newly imported evaluations consistent with existing documented local constraints; other cases retain upstream implementation."
+    }
+  ]
+}
