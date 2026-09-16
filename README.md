@@ -34,7 +34,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
-| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Codex plans, hands suitable subtasks to Cursor, and reviews results. Codex only. |
+| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Tokenmaxxing across Codex and Cursor: put spare Grok capacity to work while Codex plans and reviews. Codex only. |
 
 The Codex catalog contains seven plugins. The six role-based skill plugins are
 also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
@@ -59,7 +59,8 @@ codex plugin add cursourcing@cogine-ai
 ```
 
 Start a new task and invoke `$cursourcing:cursourcing`. Codex plans normally and
-uses Cursor when a well-defined subtask would benefit from delegation.
+actively looks for useful work to delegate to Cursor, including investigations,
+implementation, debugging, and validation.
 
 ## Compatibility
 

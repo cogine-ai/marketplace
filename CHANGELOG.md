@@ -1,5 +1,14 @@
 # Changelog
 
+## Cursourcing 0.1.1 - 2026-09-16
+
+- Introduce the Cursourcing icon and share card, English and Chinese READMEs,
+  prominent marketplace installation steps, and focused runtime documentation.
+- Explain tokenmaxxing across Codex and Cursor: put available Cursor capacity to
+  work while the selected Codex model plans, coordinates, and reviews.
+- Encourage useful delegation throughout a task, including investigation and
+  design exploration before an implementation approach is settled.
+
 ## Cursourcing 0.1.0 - 2026-09-16
 
 - Add Cursourcing as the seventh Codex plugin: **Your Codex just hired Cursor.**
