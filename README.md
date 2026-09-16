@@ -1,6 +1,6 @@
 # Cogine AI Marketplace
 
-A curated internal marketplace of role-based skills for Codex and Claude Code.
+A curated marketplace of role-based skills and agent tools, maintained by Cogine AI.
 
 ## Install the Marketplace
 
@@ -11,7 +11,7 @@ codex plugin marketplace add cogine-ai/marketplace
 ```
 
 Then open the Codex App's **Plugins** page, choose **Cogine AI**, and install
-only the role plugins you want. If the Marketplace does not appear immediately,
+only the plugins you want. If the Marketplace does not appear immediately,
 restart Codex once.
 
 ![Cogine AI Marketplace in Codex](docs/images/cogine-ai-marketplace.png)
@@ -23,8 +23,6 @@ claude plugin marketplace add cogine-ai/marketplace
 ```
 
 Adding the Marketplace registers its catalog; it does not install every plugin.
-This is a private repository, so Git must already have access to
-`cogine-ai/marketplace`.
 
 ## Available plugins
 
@@ -36,6 +34,11 @@ This is a private repository, so Git must already have access to
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
+| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Codex plans, hands suitable subtasks to Cursor, and reviews results. Codex only. |
+
+The Codex catalog contains seven plugins. The six role-based skill plugins are
+also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
+and an authenticated Cursor CLI.
 
 Install any plugin from the table with its ID:
 
@@ -49,10 +52,19 @@ claude plugin install coding-engineer-skills@cogine-ai
 
 In an existing Claude Code session, run `/reload-plugins` after installation.
 
+To use Cursourcing in Codex:
+
+```bash
+codex plugin add cursourcing@cogine-ai
+```
+
+Start a new task and invoke `$cursourcing:cursourcing`. Codex plans normally and
+uses Cursor when a well-defined subtask would benefit from delegation.
+
 ## Compatibility
 
-Codex is the primary target. The repository also ships native Claude Code
-manifests while sharing the same skill folders:
+Codex is the primary target. The six role-based plugins also ship native Claude
+Code manifests while sharing the same skill folders:
 
 - Codex catalog: `.agents/plugins/marketplace.json`
 - Codex manifests: `plugins/*/.codex-plugin/plugin.json`
@@ -111,4 +123,13 @@ plugins/founder-ceo-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
   skills/                              # 16 shared skills
+plugins/cursourcing/
+  .codex-plugin/plugin.json            # Codex manifest
+  .mcp.json                           # Cursor execution bridge
+  dist/                                # Bundled runtime and dependency notices
+  skills/                              # 1 Codex collaboration skill
 ```
+
+Cursourcing is maintained in [cogine-ai/cursourcing](https://github.com/cogine-ai/cursourcing).
+This repository carries its installable release snapshot; see the plugin's
+`UPSTREAM.md` for the pinned source commit.

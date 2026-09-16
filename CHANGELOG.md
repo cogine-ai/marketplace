@@ -1,5 +1,13 @@
 # Changelog
 
+## Cursourcing 0.1.0 - 2026-09-16
+
+- Add Cursourcing as the seventh Codex plugin: **Your Codex just hired Cursor.**
+- Keep planning and review with the selected Codex model, with Cursor available
+  for well-defined subtasks, asynchronous execution, and session recovery.
+- Ship the bundled MCP runtime and one `cursourcing` skill from
+  `cogine-ai/cursourcing`. The six Claude Code role plugins remain available.
+
 ## Design Engineer Skills 0.1.4 - 2026-09-16
 
 - Release Design Engineer Skills 0.1.4 with `marketing-page-design-candidate`
