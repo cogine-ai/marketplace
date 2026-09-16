@@ -1,5 +1,18 @@
 # Changelog
 
+## Cursourcing 0.1.3 - 2026-09-16
+
+- Keep ordinary Cursor progress local during `wait`; return ended turns and
+  requests that need attention, with completed reports included directly.
+- Acknowledge completed results through cursors so they do not repeatedly wake
+  later waits. Use `read_task` for progress and event pages.
+- Add explicit per-task `permissions: "full-access"`, using Cursor's `--force
+  --sandbox disabled` for already-authorized work and preserving the choice on
+  resume. Keep the original sandboxed default.
+- Clarify the skill's waiting and permission choices. Plugin/skill validation and
+  all 24 automated tests passed; real ACP coordination observations are recorded
+  with their limits in the release notes.
+
 ## Cursourcing 0.1.2 - 2026-09-16
 
 - License Cursourcing's original material under Apache-2.0 and include `LICENSE`
