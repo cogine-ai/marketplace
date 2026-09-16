@@ -1,21 +1,21 @@
 # Cursourcing release source
 
 - Repository: https://github.com/cogine-ai/cursourcing
-- Source commit: [bda12e68d3eb9176bcf0b9fd66b289081c9e5fad](https://github.com/cogine-ai/cursourcing/commit/bda12e68d3eb9176bcf0b9fd66b289081c9e5fad)
-- Plugin version: `0.1.3`
+- Source commit: [6849794a333aedff008dfa23b4b5b1460e125484](https://github.com/cogine-ai/cursourcing/commit/6849794a333aedff008dfa23b4b5b1460e125484)
+- Plugin version: `0.2.0`
+- Bundled runtime SHA-256: `b0dd85751bcfbc806f0d66d94bb6a8aa58633d99e4e626f6dc3bb47da0b0b2dd`.
 - License: Apache-2.0 for Cursourcing's original material; bundled dependencies
   retain their respective licenses in `dist/THIRD_PARTY_NOTICES.md`.
 - Export: `node scripts/export-plugin.mjs <marketplace>/plugins/cursourcing`
 
-The manifest, MCP configuration, bundled runtime, dependency notices, visual
-assets, English and Chinese READMEs, documentation, skill files, LICENSE, and
-NOTICE match this commit byte for byte. This file records marketplace provenance
-and is maintained here.
+The 17 exported files (manifest, MCP configuration, bundled runtime, dependency
+notices, assets, READMEs, documentation, skills, LICENSE, and NOTICE) match the
+source commit byte for byte. This file records marketplace provenance and is
+maintained here.
 
-Validation: plugin and skill validation and all 24 automated tests passed,
-including bundled MCP discovery, concurrent execution, input handling, quiet
-waits, and permission persistence across recovery. Exported files were compared
-byte for byte with the source commit. A real ACP review performed 23 tool calls
-with zero permission requests; its five-minute run did not complete the review,
-so it is evidence of coordination behavior only, not an independent approval or
-a measurement of total token savings. Cursourcing remains the seventh Codex plugin.
+Validation: all 27 offline tests passed, including bundled MCP compact/full
+results, permissions, recovery, local notifications without filesystem events,
+transport diagnostics, and retained output. Skill format, JSON/version
+consistency, and export parity checks passed. The protocol tests use simulated
+ACP peers; they do not establish live service behavior or model token savings.
+Cursourcing remains the seventh Codex plugin.

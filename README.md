@@ -34,7 +34,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
-| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Tokenmaxxing across Codex and Cursor: put spare Grok capacity to work while Codex plans and reviews. Codex only. |
+| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Delegate complete work to Cursor; Codex supplies constraints, handles decisions, and verifies delivery. Codex only. |
 
 The Codex catalog contains seven plugins. The six role-based skill plugins are
 also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
@@ -58,9 +58,13 @@ To use Cursourcing in Codex:
 codex plugin add cursourcing@cogine-ai
 ```
 
-Start a new task and invoke `$cursourcing:cursourcing`. Codex plans normally and
-actively looks for useful work to delegate to Cursor, including investigations,
-implementation, debugging, and validation.
+Start a new task and invoke `$cursourcing:cursourcing`. Cursor handles a complete
+work unit, including investigation and self-checks. Codex supplies constraints,
+handles blocking decisions, and verifies the result.
+
+Cursourcing **0.2.0** includes compact task results and direct local completion
+notifications. Integrations can request `detail: "full"` for the previous result
+fields; see the [migration notes](plugins/cursourcing/docs/runtime.md#compact-results-and-02-migration).
 
 ## Compatibility
 
@@ -81,7 +85,9 @@ codex plugin marketplace upgrade cogine-ai
 codex plugin list --json
 ```
 
-Confirm that `coding-engineer-skills@cogine-ai` reports the expected version.
+Confirm that the plugins you updated report the expected versions. For
+Cursourcing, run `codex plugin add cursourcing@cogine-ai` after refreshing the
+marketplace, then check for version `0.2.0` in `codex plugin list --json`.
 Start a new task after upgrading so its skill index is rebuilt.
 
 ### Claude Code

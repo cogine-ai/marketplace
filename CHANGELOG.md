@@ -1,5 +1,19 @@
 # Changelog
 
+## Cursourcing 0.2.0 - 2026-09-17
+
+- Delegate complete work units with explicit acceptance evidence; concentrate
+  Codex review after delivery and avoid repeating the worker's investigation.
+- Default start/wait to compact results; preserve complete pending requests,
+  unread reports, configuration evidence, and an opt-in full compatibility view.
+- Notify local waits directly on state changes, retaining filesystem watching
+  for other runtimes. Document outer/inner wait budgets and single-view output.
+- Detect known standalone transport diagnostics returned through a successful
+  ACP response, preserving the session without automatic replay.
+- Preserve old snapshot fields with `detail: "full"` or `read_task`; existing
+  saved sessions remain recoverable. All 27 offline tests pass.
+- Keep local `eval/` records outside Git until selected material is ready for publication.
+
 ## Cursourcing 0.1.3 - 2026-09-16
 
 - Keep ordinary Cursor progress local during `wait`; return ended turns and
