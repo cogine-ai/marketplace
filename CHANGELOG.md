@@ -1,5 +1,12 @@
 # Changelog
 
+## Cursourcing 0.1.2 - 2026-09-16
+
+- License Cursourcing's original material under Apache-2.0 and include `LICENSE`
+  and `NOTICE` in the distributed plugin.
+- Declare the license in plugin/package metadata and both READMEs, retaining the
+  bundled dependencies' existing license notices.
+
 ## Cursourcing 0.1.1 - 2026-09-16
 
 - Introduce the Cursourcing icon and share card, English and Chinese READMEs,
