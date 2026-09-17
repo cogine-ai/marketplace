@@ -34,7 +34,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
-| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Delegate complete work to Cursor; Codex supplies constraints, handles decisions, and verifies delivery. Codex only. |
+| [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Cursor delivers the first complete result; Codex takes over acceptance and local corrections. Codex only. |
 
 The Codex catalog contains seven plugins. The six role-based skill plugins are
 also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
@@ -58,13 +58,14 @@ To use Cursourcing in Codex:
 codex plugin add cursourcing@cogine-ai
 ```
 
-Start a new task and invoke `$cursourcing:cursourcing`. Cursor handles a complete
-work unit, including investigation and self-checks. Codex supplies constraints,
-handles blocking decisions, and verifies the result.
+Start a new task and invoke `$cursourcing:cursourcing`. Cursor handles the first
+complete result, including investigation and self-checks. Codex supplies constraints
+and handles blockers, then takes over acceptance, local corrections and delivery.
 
-Cursourcing **0.2.1** adds bounded history replay with cleanup before follow-ups,
-and refines waiting, delivery review and optional delegation choices. Compact
-results and direct local completion notifications remain available; see the
+Cursourcing **0.2.2** aligns the skill, tool guidance and invocation prompts around
+that ownership transfer. Routine acceptance corrections stay with Codex; new
+investigation, substantial rework or explicit user direction can justify further
+delegation. Bounded history replay, compact results and quiet waits remain; see the
 [runtime and migration notes](plugins/cursourcing/docs/runtime.md).
 
 ## Compatibility
@@ -88,7 +89,7 @@ codex plugin list --json
 
 Confirm that the plugins you updated report the expected versions. For
 Cursourcing, run `codex plugin add cursourcing@cogine-ai` after refreshing the
-marketplace, then check for version `0.2.1` in `codex plugin list --json`.
+marketplace, then check for version `0.2.2` in `codex plugin list --json`.
 Start a new task after upgrading so its skill index is rebuilt.
 
 ### Claude Code

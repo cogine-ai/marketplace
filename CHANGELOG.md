@@ -1,5 +1,21 @@
 # Changelog
 
+## Cursourcing 0.2.2 - 2026-09-17
+
+- Default to two ownership phases: Cursor completes implementation, self-checks
+  and evidence; Codex takes over acceptance and bounded corrections.
+- Keep routine review fixes in Codex; retain further delegation for worthwhile
+  new investigation, substantial rework or explicit user direction.
+- Defer review of changing artifacts until handoff, sequence writes/builds before
+  dependent checks, and reuse valid evidence for unchanged parts.
+- Let Cursor draft delivery documents when required, with exact check evidence;
+  Codex adds its acceptance findings instead of reconstructing the whole history.
+- Align MCP tool guidance, skill invocation prompts and both READMEs. Preserve
+  permissions, tool schemas, result shapes, quiet waits, bounded history replay
+  and session recovery. All 35 offline regressions pass; token savings are unmeasured.
+- Refresh the distribution's source commit and bundle provenance. Local eval
+  records remain ignored and are not part of the release snapshot.
+
 ## Cursourcing 0.2.0 - 2026-09-17
 
 - Delegate complete work units with explicit acceptance evidence; concentrate
