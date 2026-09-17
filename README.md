@@ -62,10 +62,11 @@ Start a new task and invoke `$cursourcing:cursourcing`. Cursor handles the first
 complete result, including investigation and self-checks. Codex supplies constraints
 and handles blockers, then takes over acceptance, local corrections and delivery.
 
-Cursourcing **0.2.2** aligns the skill, tool guidance and invocation prompts around
-that ownership transfer. Routine acceptance corrections stay with Codex; new
-investigation, substantial rework or explicit user direction can justify further
-delegation. Bounded history replay, compact results and quiet waits remain; see the
+Cursourcing **0.2.3** adds 120-second waits with a 150-second MCP deadline,
+process cleanup and recovery guards, and actionable failure summaries. The
+two-phase workflow remains: routine acceptance corrections stay with Codex;
+new investigation, substantial rework or explicit user direction can justify
+further delegation. Grok 4.6 xhigh fast remains the execution model. See the
 [runtime and migration notes](plugins/cursourcing/docs/runtime.md).
 
 ## Compatibility
@@ -89,7 +90,7 @@ codex plugin list --json
 
 Confirm that the plugins you updated report the expected versions. For
 Cursourcing, run `codex plugin add cursourcing@cogine-ai` after refreshing the
-marketplace, then check for version `0.2.2` in `codex plugin list --json`.
+marketplace, then check for version `0.2.3` in `codex plugin list --json`.
 Start a new task after upgrading so its skill index is rebuilt.
 
 ### Claude Code
