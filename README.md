@@ -62,9 +62,10 @@ Start a new task and invoke `$cursourcing:cursourcing`. Cursor handles a complet
 work unit, including investigation and self-checks. Codex supplies constraints,
 handles blocking decisions, and verifies the result.
 
-Cursourcing **0.2.0** includes compact task results and direct local completion
-notifications. Integrations can request `detail: "full"` for the previous result
-fields; see the [migration notes](plugins/cursourcing/docs/runtime.md#compact-results-and-02-migration).
+Cursourcing **0.2.1** adds bounded history replay with cleanup before follow-ups,
+and refines waiting, delivery review and optional delegation choices. Compact
+results and direct local completion notifications remain available; see the
+[runtime and migration notes](plugins/cursourcing/docs/runtime.md).
 
 ## Compatibility
 
@@ -87,7 +88,7 @@ codex plugin list --json
 
 Confirm that the plugins you updated report the expected versions. For
 Cursourcing, run `codex plugin add cursourcing@cogine-ai` after refreshing the
-marketplace, then check for version `0.2.0` in `codex plugin list --json`.
+marketplace, then check for version `0.2.1` in `codex plugin list --json`.
 Start a new task after upgrading so its skill index is rebuilt.
 
 ### Claude Code
