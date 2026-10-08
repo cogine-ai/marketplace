@@ -121,6 +121,19 @@
         "Provides 2-3 headline alternatives with rationale"
       ],
       "files": []
+    },
+    {
+      "prompt": "Write a homepage hero (headline, subhead, CTA) and a short launch post for X for our Shopify inventory app. It installs from the Shopify App Store in one click, needs no signup form or credit card, and runs low-stock alerts, reorder emails, and supplier purchase orders off the product and sales data the store already has, so there's nothing to import.",
+      "expected_output": "Write a specific hero and launch post from the supplied mechanism: one-click install and inventory actions based on existing Shopify data. Review repeated contrast reveals, negation lists, self-answered questions, trailing clauses, and generic stock phrasing. Preserve the requested voice and brand style rather than enforcing universal punctuation bans. State only supported product facts and use a clear CTA.",
+      "assertions": [
+        "Describes the concrete mechanism and supported product facts",
+        "Uses one clear CTA",
+        "Reviews repetitive structure and generic phrasing",
+        "Does not invent statistics or unsupported results",
+        "Preserves language and brand style rather than banning punctuation universally"
+      ],
+      "files": [],
+      "id": 9
     }
   ]
 }

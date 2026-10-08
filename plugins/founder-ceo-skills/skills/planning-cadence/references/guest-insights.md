@@ -6,7 +6,7 @@
 
 ## Brandon Chu
 
-**Insight:**
+**Insight:** 
 
 *Source: Brandon Chu on building product at Shopify, how writing changed the trajectory of his career, the habits that make you a great PM, pros and cons of being a platform PM, how Shopify got through Covid @ 13:15*
 
@@ -29,7 +29,7 @@
 
 ## Claire Hughes Johnson
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from scaling Stripe | Claire Hughes Johnson (former COO of Stripe)](https://www.youtube.com/watch?v=Mv0o9o4MRh0) @ 00:47:33*
 
@@ -65,7 +65,7 @@
 
 ## Gokul Rajaram
 
-**Insight:**
+**Insight:** 
 
 *Source: [Gokul Rajaram on designing your product development process, when and how to hire your first PM, a playbook for hiring leaders, getting ahead in you career, how to get started angel investing, more](https://www.youtube.com/watch?v=5p0VK_-BoJI) @ 00:18:30*
 
@@ -273,7 +273,7 @@
 
 ## Rachel Lockett
 
-**Insight:**
+**Insight:** 
 
 *Source: [A guide to difficult conversations, building high-trust teams, and designing a life you love | Rachel Lockett](https://www.youtube.com/watch?v=1GDVum5IarI) @ 01:31:48*
 
@@ -319,3 +319,4 @@
 *Source: [An inside look at Mixpanel’s product journey | Vijay Iyengar (Head of Product)](https://www.youtube.com/watch?v=t-2oXtZrlEc) @ 00:19:50*
 
 ---
+

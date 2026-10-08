@@ -47,6 +47,17 @@ For the cross-cutting strategy, see [SKILL.md](../SKILL.md).
 
 ---
 
+## Industry / Segment Pages
+
+Serve core industries and buyer segments with specific workflows, integrations,
+requirements, and supported customer proof. Do not multiply pages by replacing
+the industry name in generic copy. Match truthful segment language across the
+site and third-party profiles; see [positioning-and-consensus.md](positioning-and-consensus.md)
+and [programmatic-seo.md](programmatic-seo.md). Whether these pages are cited or
+recommended needs observation on the intended queries.
+
+---
+
 ## Documentation / Help Content
 
 **Goal:** Get cited in "How to [X] with [your product]" queries.

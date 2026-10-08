@@ -64,7 +64,7 @@
 
 ## Crystal W
 
-**Insight:**
+**Insight:** 
 
 *Source: How to scrappily hire for, measure, and unlock growth | Crystal Widjaja, Gojek and Kumu @ 00:28:20*
 
@@ -113,7 +113,7 @@
 
 ## EOY Review
 
-**Insight:**
+**Insight:** 
 
 *Source: EOY Review @ 00:32:12*
 
@@ -175,7 +175,7 @@
 
 ## Gina Gotthilf
 
-**Insight:**
+**Insight:** 
 
 *Source: [Scaling Duolingo, embracing failure, and insight into Latin America’s tech scene | Gina Gotthilf (Latitud, Duolingo)](https://www.youtube.com/watch?v=sWClFYdbkRA) @ 00:25:56*
 
@@ -224,7 +224,7 @@
 
 ## Julian Shapiro
 
-**Insight:**
+**Insight:** 
 
 *Source: [Growth tactics, retention strategies, and becoming a better writer | Julian Shapiro (Demand Curve, Hyper, Webflow, TechCrunch)](https://www.youtube.com/watch?v=9cNRDWEXnrQ) @ 13:51*
 
@@ -1249,7 +1249,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The unconventional Palantir principles that catalyzed a generation of startups](https://www.lennysnewsletter.com/p/the-unconventional-palantir-principles-that-catalyzed-a-generation-of-startups)*
 
@@ -1320,7 +1320,7 @@
 
 ## Naomi Gleit
 
-**Insight:**
+**Insight:** 
 
 *Source: [Meta’s Head of Product (and 29th employee) on working with Mark Zuckerberg, early growth tactics, why PMs are like conductors, and more | Naomi Gleit](https://www.youtube.com/watch?v=sTYuKgzZoL8) @ 00:26:30*
 
@@ -1371,7 +1371,7 @@
 
 ## Scott Belsky
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons on building product sense, navigating AI, optimizing the first mile, and making it through the messy middle | Scott Belsky (Adobe, Behance)](https://www.youtube.com/watch?v=HCKosdV1J-8) @ 00:16:34*
 
@@ -1394,7 +1394,7 @@
 
 ## Sri Batchu
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from scaling Ramp | Sri Batchu (Ramp, Instacart, Opendoor)](https://www.youtube.com/watch?v=RcYCU5UAZOk) @ 00:46:49*
 
@@ -1503,3 +1503,4 @@
 *Source: [Lessons from Airtable’s unconventional growth strategy | Zoelle Egner](https://www.youtube.com/watch?v=0P8LMyeYl1U) @ 00:58:38*
 
 ---
+

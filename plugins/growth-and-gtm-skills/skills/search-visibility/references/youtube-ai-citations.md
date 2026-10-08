@@ -12,3 +12,16 @@ For queries where video is relevant, inspect the text a search system or agent c
 Verify the text layers on the published page when available, or mark them as planned if the video is still a draft. Compare observed retrieval/citations and qualified engagement with [the sampling method](format-volatility.md), not a promised platform-wide citation uplift.
 
 Method adapted from [Corey Haines AI SEO](https://github.com/coreyhaines31/marketingskills/blob/5b2c0007766c6a1cf1d53fd8fc73e979e0821022/skills/ai-seo/references/youtube-ai-citations.md) at `5b2c000`. Platform-specific market shares, vendor scores, and uplift claims are not adopted as universal benchmarks.
+
+## Test public demos and creator coverage
+
+A public demo with an accurate category-and-product title and useful text layers
+can be tested for qualified discovery when the content is authorized for public
+release. A single recent low-view citation is an anecdote, not a view threshold
+or repeatable lift. For sponsored creator coverage, request current quotes and
+define an attribution and acceptance plan before committing budget; do not use
+an upstream practitioner's price range as a market benchmark.
+
+## Related
+
+Use bundled `content-strategy` for the content plan.

@@ -69,6 +69,14 @@ new investigation, substantial rework or explicit user direction can justify
 further delegation. Grok 4.6 xhigh fast remains the execution model. See the
 [runtime and migration notes](plugins/cursourcing/docs/runtime.md).
 
+## Source maintenance — 2026-10-08
+
+The current source prepares Coding and Product 0.2.3, Design and Growth 0.1.5,
+Sales 0.1.2, and Founder/CEO 0.1.3. Each bundle records frozen upstream sources,
+raw file hashes and retained adaptations in `UPSTREAM_SYNC_2026-10-08.json`.
+Cursourcing remains 0.2.3. See [CHANGELOG.md](CHANGELOG.md) for the changes;
+prepared source versions do not imply a published or installed update.
+
 ## Compatibility
 
 Codex is the primary target. The six role-based plugins also ship native Claude

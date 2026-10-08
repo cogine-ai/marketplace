@@ -1,6 +1,6 @@
 ---
 name: sales-enablement
-description: Create practical sales collateral such as pitch decks, one-pagers, objection guides, ROI analyses, demo scripts, talk tracks, playbooks, proposals, and persona cards. Use when a seller or champion needs an asset to advance a deal. Use cold-email for outbound messages and account-research for account evidence.
+description: Create practical sales collateral such as pitch decks, battlecards, win-loss analyses, live objection responses, one-pagers, ROI analyses, demo scripts, talk tracks, playbooks, proposals, and persona cards. Use when a seller or champion needs an asset to advance a deal. Use cold-email for outbound messages and account-research for account evidence.
 ---
 
 # Sales Enablement
@@ -51,6 +51,15 @@ Reps need information in 3 seconds, not 30. Use bold headers, short bullets, and
 Every claim connects to revenue, efficiency, or risk reduction. Features mean nothing without the "so what." Replace "AI-powered analytics" with "cut reporting time by 80%."
 
 ---
+
+### Claims reps can defend
+
+"Why we win" needs buyer quotes, call evidence, or confirmed win/loss findings.
+With no evidence, label advantages as hypotheses and state what would confirm
+them. Date and source competitor facts; "not listed on their pricing page" is
+different from "not available." Do not state motives as facts. Include cases
+where the competitor is the better fit. The bundled reference examples and
+sample figures are source material, not proof about the user's current deals.
 
 ## Sales Deck / Pitch Deck
 
@@ -144,6 +153,39 @@ For each objection, document:
 **For the full objection library**: See [references/objection-library.md](references/objection-library.md)
 
 ---
+
+### Live Deal Objection
+
+When a rep brings one objection from a live deal ("the CFO just said Acme is half the price, I have a call in an hour"), answer that deal. Don't hand back a generic doc.
+
+1. **Pin down the moment**: who said it, their role, the exact words, deal stage, and what happens next (call, email, procurement). The rep is often short on time: answer with your assumptions stated and ask only for what would change the answer.
+2. **Name the likely concern behind it** and say what in the deal points to it. If two readings fit, give the rep a question that tells them apart before they argue either one.
+3. **Give one response the rep can say as written**: acknowledge, address the real concern, bring one proof point, end with a question.
+4. **Use only proof the rep can stand behind.** Pull from the objection library, case studies, and battle cards. If nothing fits, say so and suggest the claim to verify. Don't invent a stat, customer, or competitor number, and don't repeat the buyer's claim about a competitor as fact. "Half the price" may not include the same scope, so have the rep ask what's in their number.
+5. **Say when not to fight.** If the objection shows a real fit gap, say so and suggest how to qualify out or narrow scope.
+
+Afterward, suggest the rep log the objection and how it went. Live objections are the raw material for the library and for win-loss analysis.
+
+
+## Battle Cards
+
+Ask which competitor when neither the request nor context identifies one; do
+not draft a polished guessed card. Keep a card scannable: where the competitor
+appears, why buyers consider it, strengths, evidenced advantages, discovery
+questions, objections and proof, when to qualify out, sources, and last-verified
+date. Use `account-research` for source gathering and `call-review` for call
+evidence. Audit repeated claims against their current sources before reuse.
+
+## Win-Loss Analysis
+
+Read [win-loss-analysis.md](references/win-loss-analysis.md) for the coding
+scheme and interview questions. Inventory wins and losses and source bias;
+segment by competitor, buyer profile, deal size, and stage. Code one primary
+reason per deal, with source and supporting quote. Separate competitive losses
+from no-decision/timing and post-sale churn. Report counts with sample sizes.
+A one-word rep-entered CRM reason is low-confidence; seek transcripts or buyer
+interviews before changing battle-card claims. Draft asset updates first and
+apply or send them only within user authorization.
 
 ## ROI Calculators & Value Props
 

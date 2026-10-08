@@ -10,7 +10,7 @@ Scaffold the per-repo configuration that the engineering skills assume:
 
 - **Issue tracker**: where issues live (GitHub by default; local markdown is also supported out of the box)
 - **Triage labels**: the strings used for the five canonical triage roles
-- **Domain docs**: where `CONTEXT.md` and ADRs live, and the consumer rules for reading them
+- **Domain docs**: where `GLOSSARY.md` and ADRs live, and the consumer rules for reading them
 
 This is a prompt-driven skill, not a deterministic script. Explore, present what you found, confirm with the user, then write.
 
@@ -22,12 +22,12 @@ Look at the current repo to understand its starting state. Read whatever exists;
 
 - `git remote -v` and `.git/config`: is this a GitHub repo? Which one?
 - `AGENTS.md` and `CLAUDE.md` at the repo root: does either exist? Is there already an `## Agent skills` section in either?
-- `CONTEXT.md` and `CONTEXT-MAP.md` at the repo root
+- `GLOSSARY.md` and `GLOSSARY-MAP.md` at the repo root; also inspect any existing legacy `CONTEXT.md` / `CONTEXT-MAP.md` and configured domain locations
 - `docs/adr/` and any `src/*/docs/adr/` directories
 - `docs/agents/`: does this skill's prior output already exist?
 - `.scratch/`: a sign that a local-markdown issue tracker convention is already in use
 - Is the `triage` skill installed? (a `triage` skill folder alongside this one, or `triage` in your available skills.) This decides whether Section B runs at all.
-- Domain-layout signals: if `CONTEXT-MAP.md` already exists, preserve its multi-context layout. Otherwise look for multiple business contexts during exploration; workspace files and populated package directories are supporting signals, not proof by themselves. When multiple contexts are plausible, ask instead of writing a root `CONTEXT.md` automatically.
+- Domain-layout signals: if `GLOSSARY-MAP.md` already exists, preserve its multi-context layout; an existing legacy `CONTEXT-MAP.md` also establishes that layout until migration. Otherwise look for multiple business contexts during exploration; workspace files and populated package directories are supporting signals, not proof by themselves. When multiple contexts are plausible, ask instead of writing a root `GLOSSARY.md` automatically.
 
 ### 2. Present findings and ask
 
@@ -56,11 +56,12 @@ If it is installed, ask exactly one question:
 
 The defaults are the five canonical roles, each label string equal to its name: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. On **yes**, write them as-is. Only if the user says no, usually because their tracker already uses other names (e.g. `bug:triage` for `needs-triage`), collect the overrides so `triage` applies existing labels instead of creating duplicates.
 
-**Section C: Domain docs.** If a root `CONTEXT-MAP.md` already exists, its
-multi-context layout is settled: preserve it. If exploration found multiple
-business contexts but no map, recommend a root `CONTEXT-MAP.md` pointing to
-per-context `CONTEXT.md` files and confirm the choice. Otherwise default to
-**single-context** (one root `CONTEXT.md` + `docs/adr/`) and write it without
+**Section C: Domain docs.** If a root `GLOSSARY-MAP.md` already exists, its
+multi-context layout is settled: preserve it. Apply the same rule to an existing
+legacy `CONTEXT-MAP.md`; preserve its paths until an authorized migration. If exploration found multiple
+business contexts but no map, recommend a root `GLOSSARY-MAP.md` pointing to
+per-context `GLOSSARY.md` files and confirm the choice. Otherwise default to
+**single-context** (one root `GLOSSARY.md` + `docs/adr/`) and write it without
 asking; this fits almost every repo.
 
 ### 3. Confirm and edit
@@ -103,6 +104,10 @@ The block:
 ```
 
 Include the `### Triage labels` sub-block, and write `docs/agents/triage-labels.md`, only when `triage` is installed and Section B ran. When it isn't, both are omitted.
+
+Preserve a manually maintained tracker workflow when it already fits the chosen tracker. Update only the agreed gaps instead of overwriting it with a seed. Migrate legacy domain filenames only when authorized, retaining contents and the existing context map.
+
+If Section B ran and creating missing labels is included in the approved setup scope, create only those missing mapped labels. Ticket publication itself must not create labels, and an absent `triage` skill still skips Section B.
 
 Then write the docs files using the seed templates in this skill folder as a starting point:
 

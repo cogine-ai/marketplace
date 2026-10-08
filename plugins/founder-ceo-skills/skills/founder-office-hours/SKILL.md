@@ -13,13 +13,15 @@ Do not start implementation. Do not write architecture first. Convert a vague or
 
 ## When To Stop And Ask
 
-Ask the user before writing the final handoff when any of these are unresolved:
+Reuse the facts and decisions already supplied. Ask only about a missing fact or choice that would change the recommendation or readiness verdict; do not repeat settled questions. Before a READY handoff, resolve consequential gaps such as:
 
 - The target user is unclear.
 - The user and buyer are different and the buyer is not named.
 - The product form is still a guess: SaaS, agent, API, plugin, browser extension, mobile app, CLI, workflow, or service.
 - The value depends on model capability, platform policy, distribution, or pricing that has not been verified.
 - There are two or more plausible directions with materially different users or execution surfaces.
+
+Evidence questions are open-ended: ask what actually happened, without a fixed menu of aspirational answers. Use options for a real product choice with meaningful tradeoffs. If the user reports no users or no observed use, carry that absence into the verdict; a recommendation cannot manufacture demand evidence. State what new evidence would change the judgment. If a consequential gap cannot be resolved, produce a NOT READY handoff with the gap explicit.
 
 ## Workflow
 
@@ -52,7 +54,7 @@ Ask the user before writing the final handoff when any of these are unresolved:
 
 5. Challenge the premise.
    - Identify the 2-3 riskiest assumptions.
-   - Explain how each assumption can be falsified.
+   - Explain how each assumption can be falsified and what observed evidence would change the recommendation.
    - Call out what is likely overestimated and underestimated.
 
 6. Produce a founder handoff.
@@ -107,6 +109,7 @@ Smallest useful product:
 Behavior to observe:
 Success signal:
 Failure signal:
+Evidence that would change the recommendation:
 Next decision unlocked:
 
 ### Handoff To Planning

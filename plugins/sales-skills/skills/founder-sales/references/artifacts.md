@@ -135,3 +135,4 @@ How it works: First deal: Stanford Continuing Studies Group, closed before the s
 Pete Kazanjy's recommended books and communities for learning sales as a founder or non-sales professional.
 
 How it works: Books: 1) Founding Sales by Pete Kazanjy (foundingsales.com) — specifically for founders learning to sell. 2) Cracking the Sales Management Code — sales management systems. 3) The Transparency Sale — modern honest selling. 4) The Challenger Sale — consultative/insight-selling methodology. 5) To Sell Is Human by Daniel Pink — reframing sales for everyone. 6) Persuasion (Influence) by Robert Cialdini — psychology of persuasion. Communities: Modern Sales (modernsaleshq.com) — 20k member sales operations and leadership community run by Atrium. Peer education is key since there's no formal 'sales degree.'
+

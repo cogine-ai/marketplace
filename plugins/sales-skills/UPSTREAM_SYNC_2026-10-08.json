@@ -1,0 +1,849 @@
+{
+  "date": "2026-10-08",
+  "package_version": "0.1.2",
+  "marketplace_base": "3e10d463069a5972f75b53aa699f5d03ca7d5fdc",
+  "approved_decision_ledger_sha256": "6f94c6c46afbb996a6155b8df0134612c28ea6cc6acb2f6838d9d4e20d9e198a",
+  "verification_boundary": "Raw bytes, local file hashes and source mappings. Adapted files are not whole-file sync claims; method references are not a vendored runtime. Tests or documentation do not prove publication, installation or a live external write.",
+  "entries": [
+    {
+      "id": "sales-skills/account-research",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "2df3d7377a7f246abf1636cf526eb770c56728f796b977c8826efe391a5ab5e4",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "sales/skills/account-research/SKILL.md",
+              "source_sha256": "97e1e9884149f7801cfc60c3e9119f37a66c53b30f730ab7b4a2862eedabdb05",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/sales/skills/account-research/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "1ae4063a2b8472f119a538a2a84446d9aba7d2ee57f6cd8d52c37c3b39349588",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地保留旧独立research模板和可选CRM/background；没有新schema/scope/trust discipline。",
+      "preserve": [
+        "可选CRM/enrichment、原公开研究能力、host policy、授权与证据分界"
+      ]
+    },
+    {
+      "id": "sales-skills/call-prep",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "0419c2290807592c7f3203a813b3bfb85f55671d8edef156904396a7467fd56a",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "sales/skills/call-prep/SKILL.md",
+              "source_sha256": "19524edf5572b5062b3bfd6ba5b30fee6da90f504e4b2ef9d574d46ced3b5972",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/sales/skills/call-prep/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "51d7fb2b2e131c1a0fe29cfca0a3ce9ec0a46e7fb38f9fb183e754efe6ae972e",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地旧模板已有attendee/history/objective与discovery，缺以上缺口/来源语义。",
+      "preserve": [
+        "one-page prep、read-only、optional connectors、host-native展示与日期语义"
+      ]
+    },
+    {
+      "id": "sales-skills/call-review",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "612839cefcfc30122a8c1e39cf306689ff20ccdef1c15d3cc7efe2a45dccd8a3",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "sales/skills/call-summary/SKILL.md",
+              "source_sha256": "23d174b441604a2f333aa671ec1b6130018c56018c6375620c8a41ed13e92819",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/sales/skills/call-summary/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "656bcb4602e5570b850d1e470665d4075a214b8d1c465c3c7a5675d1c935aaa0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地call-review已有direct statement vs inference、证据不足不评分、stage-aware SPIN/MEDDPICC/Challenger coaching、approval send/write；缺recipient来源与scheduled/transcript指令分界。",
+      "preserve": [
+        "stage-aware coaching、薄notes不数值score、attributable talk ratio、session授权、200word plain-text followup"
+      ]
+    },
+    {
+      "id": "sales-skills/cold-email",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "d7554feb283ec3f8a840ef2a3a3376bdacdc43f3c029a2df74392d3eeaa7a84b",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/SKILL.md",
+              "source_sha256": "f66b0e66c059e9aa8480d82a09c9bb479d9a4838264a54babbc83622e43f290d",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "d0516ecc44e70696b6156fa4f8d33943963d8b3b684f4fd964166d0691226ced",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "evals/evals.json",
+          "local_sha256": "d96614ee3cc581251e0b91a01e136e9322423926dc1a2ed963eb632382f33ea9",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/evals/evals.json",
+              "source_sha256": "48e3050ae462aae92e602de0f73226b5a3f1a8023953b97a2af0d16aeef51583",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/evals/evals.json",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "references/benchmarks.md",
+          "local_sha256": "3dc1d38a2d1f4fbb2706be7ca3d40156b66a3d7078c183a930ff373c3bb04c09",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/references/benchmarks.md",
+              "source_sha256": "3dc1d38a2d1f4fbb2706be7ca3d40156b66a3d7078c183a930ff373c3bb04c09",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/references/benchmarks.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/follow-up-sequences.md",
+          "local_sha256": "5be46bdff5abb83005bbd2a3f7789e545b64fb318d61af4fa5d654ba63b17b4e",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/references/follow-up-sequences.md",
+              "source_sha256": "5be46bdff5abb83005bbd2a3f7789e545b64fb318d61af4fa5d654ba63b17b4e",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/references/follow-up-sequences.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/frameworks.md",
+          "local_sha256": "067c1f5ef701932193f1421b903c5d285ffe9845d2488f9cb4691ca36e513d3b",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/references/frameworks.md",
+              "source_sha256": "067c1f5ef701932193f1421b903c5d285ffe9845d2488f9cb4691ca36e513d3b",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/references/frameworks.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/personalization.md",
+          "local_sha256": "8abf3cf6fb70dbaebc7b69f1d60a76a79cc7d3b2406ede27edf807c710ffa892",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/references/personalization.md",
+              "source_sha256": "8abf3cf6fb70dbaebc7b69f1d60a76a79cc7d3b2406ede27edf807c710ffa892",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/references/personalization.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/subject-lines.md",
+          "local_sha256": "f71f31b1151d972bb19ff03791ffb9d24941a8ccea8b913e5a5c7aca439b45ce",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/cold-email/references/subject-lines.md",
+              "source_sha256": "f71f31b1151d972bb19ff03791ffb9d24941a8ccea8b913e5a5c7aca439b45ce",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/cold-email/references/subject-lines.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "本地已有真实prospect evidence与related routes；没有新增structure checks。新AI-tells reference位于Growth/copywriting，Sales单装时不能假设它存在。",
+      "preserve": [
+        "真实prospect evidence、短trigger、Sales内路由、外联授权、真实身份与opt-out"
+      ]
+    },
+    {
+      "id": "sales-skills/enterprise-account-planning",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地已压缩长narrative，同时保留stakeholders、MEDDPICC、mutual action plan、stage gates与可选工具。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "e9aade54db743bd35d5c430a017f14ca51aad4e35711b6985ae3940ff1222236",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "3a685010a7afdc0dbd4c83b7fbda6c316aa516e5",
+              "source_path": "skills/gtm-enterprise-account-planning/SKILL.md",
+              "source_sha256": "92441114f77b1dd72d2edf1d55e369a00e0dce0bf8b4a749fbbc5198de4ddf78",
+              "source_url": "https://github.com/github/awesome-copilot/blob/3a685010a7afdc0dbd4c83b7fbda6c316aa516e5/skills/gtm-enterprise-account-planning/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "b34f7ae346436be91b6878ad7fc0e0659418dcb4b2a9cf21b4a0bd8ce2a43950",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地已压缩长narrative，同时保留stakeholders、MEDDPICC、mutual action plan、stage gates与可选工具。",
+      "preserve": [
+        "focused depth、MEDDPICC/stakeholders/MAP、阶段相关性、证据/授权"
+      ]
+    },
+    {
+      "id": "sales-skills/enterprise-sales-motion",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文及fullrefs保留；原20名unaffiliated客户原则是源方法，未因本轮repo状态改变。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "476f5174f22e71a6e51d08bc59195ec8b42759cfd06d0a6f78acfe564dae5bb3",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/enterprise-sales-motion/SKILL.md",
+              "source_sha256": "476f5174f22e71a6e51d08bc59195ec8b42759cfd06d0a6f78acfe564dae5bb3",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/enterprise-sales-motion/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "5de33dbcdd8ee2be5ce82d38829312c9eedf4c5b48e311d21a340e15f565ab0c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "32e57b6bfb9d3d78f22e9b466ab5e3fd1cdaa8edb6f16c201df806c48f0eb66e",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/enterprise-sales-motion/references/artifacts.md",
+              "source_sha256": "32e57b6bfb9d3d78f22e9b466ab5e3fd1cdaa8edb6f16c201df806c48f0eb66e",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/enterprise-sales-motion/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "8236f5e8c1d943a7cfc109f8d1d247599f8c017b1622f589a6b465d23e3e8c71",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/enterprise-sales-motion/references/guest-insights.md",
+              "source_sha256": "8236f5e8c1d943a7cfc109f8d1d247599f8c017b1622f589a6b465d23e3e8c71",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/enterprise-sales-motion/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文及fullrefs保留；原20名unaffiliated客户原则是源方法，未因本轮repo状态改变。",
+      "preserve": [
+        "fullrefs、双track产品与销售反馈闭环"
+      ]
+    },
+    {
+      "id": "sales-skills/first-b2b-customers",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样，references只归一化whitespace。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "c99b5c08c13f73ac5d02b354544222f0f9f6f1e5458e6b8becc47ec249cf098c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/first-b2b-customers/SKILL.md",
+              "source_sha256": "c99b5c08c13f73ac5d02b354544222f0f9f6f1e5458e6b8becc47ec249cf098c",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/first-b2b-customers/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "3e36bca266ec9da140d66b0643a314be47a574074b9abe9047e38d6f44741cd5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "fabe6284b1846d426dee3ac8e36e8e1f0a4314712fc519612678dfe700edb6e5",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/first-b2b-customers/references/artifacts.md",
+              "source_sha256": "fabe6284b1846d426dee3ac8e36e8e1f0a4314712fc519612678dfe700edb6e5",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/first-b2b-customers/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "6f84f7e9b4f640a2527ad43f0a0873842762137abe715762efc7f44962acdb53",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/first-b2b-customers/references/guest-insights.md",
+              "source_sha256": "6f84f7e9b4f640a2527ad43f0a0873842762137abe715762efc7f44962acdb53",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/first-b2b-customers/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样，references只归一化whitespace。",
+      "preserve": [
+        "evidence refs、focus niche、用户授权外联边界"
+      ]
+    },
+    {
+      "id": "sales-skills/founder-sales",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文除尾空格无行为差；full evidence refs已打包。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "4fc187502a3bce1f039ce6e8991c957378acbdf09d6e7bdb4940c4b6c977b64f",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/founder-sales/SKILL.md",
+              "source_sha256": "4fc187502a3bce1f039ce6e8991c957378acbdf09d6e7bdb4940c4b6c977b64f",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/founder-sales/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "2964b083950dbce73650f705328fd9efafef8847c713f6c1bd95689c5c62eb1a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "76114e32293ccc179d23bb1a32f54eb69876ecf4e02edad444b7c8edbd4f4a32",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/founder-sales/references/artifacts.md",
+              "source_sha256": "76114e32293ccc179d23bb1a32f54eb69876ecf4e02edad444b7c8edbd4f4a32",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/founder-sales/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "7b8bf54e7d1e1aab44f49a24efdc81d7f32101dedc6ba5ed09b4f3761bc2fd9e",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/founder-sales/references/guest-insights.md",
+              "source_sha256": "7b8bf54e7d1e1aab44f49a24efdc81d7f32101dedc6ba5ed09b4f3761bc2fd9e",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/founder-sales/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文除尾空格无行为差；full evidence refs已打包。",
+      "preserve": [
+        "完整refs、原founder-led销售方法"
+      ]
+    },
+    {
+      "id": "sales-skills/pipeline-review",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "8896090e3775108841aabd31542f36c2fc8288a9eaa637a4ce813a41a7af1e9b",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "sales/skills/pipeline-review/SKILL.md",
+              "source_sha256": "8172970f71ca4d508e359404e8ba7de1d24ccbdd7533e23bc87c645801985ad7",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/sales/skills/pipeline-review/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "d6a73d62794cbbbffbc2929cca703a339e312b868b94ec304ffd3030c44166bd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地Sep8已实现默认read/draft、已有授权才write、write后readback，因此新版read-only安全方向已部分覆盖；现有X/100、固定30天/14天与优先级weights更弱。",
+      "preserve": [
+        "Sep8授权语义、read/draft默认、write/readback、文件fallback、用户scope"
+      ]
+    },
+    {
+      "id": "sales-skills/plg-sales-integration",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "Growth与Sales本地目录逐文件SHA256完全一致，均保留完整PQL与sales-assist引用；当前共享边界一致。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "c8e9a70309d38b0a7d9080deb803e49f8aefca1a2601c907c71dd0f380e3d141",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/plg-sales-integration/SKILL.md",
+              "source_sha256": "c8e9a70309d38b0a7d9080deb803e49f8aefca1a2601c907c71dd0f380e3d141",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/plg-sales-integration/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "b976bbb7de1551aa62416ebd500e1cff379231e6a7ba5b063bb1d7d19dce7c41",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "feee4081bb72c9ffa3e5c114a9d8f66cddc81ed2ce8e44f94b08210fd049e5c9",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/plg-sales-integration/references/artifacts.md",
+              "source_sha256": "feee4081bb72c9ffa3e5c114a9d8f66cddc81ed2ce8e44f94b08210fd049e5c9",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/plg-sales-integration/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "b6e21893ff63e00e7e0cce446c83d27423111261944271a76ba04e2bd2be6ddf",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/plg-sales-integration/references/guest-insights.md",
+              "source_sha256": "b6e21893ff63e00e7e0cce446c83d27423111261944271a76ba04e2bd2be6ddf",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/plg-sales-integration/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "Growth与Sales本地目录逐文件SHA256完全一致，均保留完整PQL与sales-assist引用；当前共享边界一致。",
+      "preserve": [
+        "跨Growth/Sales一致、完整refs、PQL与sales-assist分工"
+      ]
+    },
+    {
+      "id": "sales-skills/prospecting",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "3e00fad75ce206947dc5fd9413f8b30912d5afd3725aa7596ef11ea78004894f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/SKILL.md",
+              "source_sha256": "416f74a1292c728d01ce14c4679518b85d1c407d18704b8ad5ace9ec02582d4a",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "e1add1135e348a2231ef98eaca924d0d16d03d4aaef3829824ffa2ef9ec6f78b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/b2b-prospecting.md",
+          "local_sha256": "abb7e697bc357856a585bcb7896b75895be06c4629b33558f67e418f6abc45ca",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/b2b-prospecting.md",
+              "source_sha256": "abb7e697bc357856a585bcb7896b75895be06c4629b33558f67e418f6abc45ca",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/references/b2b-prospecting.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/compliance.md",
+          "local_sha256": "e39f980e026f28767d66addd9c28014b3968667e11d776d0480df4d569c6e4b3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/compliance.md",
+              "source_sha256": "e39f980e026f28767d66addd9c28014b3968667e11d776d0480df4d569c6e4b3",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/references/compliance.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/data-sources.md",
+          "local_sha256": "7641f6f4470faf2ca71f9313fbce3e03f41b5e311b812702231a084ac722dc90",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/data-sources.md",
+              "source_sha256": "ab9623a098e03c4c0d9f27ad206d55fd706fb60d3871ffa3abebbc4ff64cd4cf",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/references/data-sources.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "references/demand-signals.md",
+          "local_sha256": "c8e3db2827cdee140f6959742dc00c6a48ed31bf0ca2e63d3a2a798ba7c7cc17",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/demand-signals.md",
+              "source_sha256": "489b8fb96a828578b6812bfabfbba8ce86d07545b21716a873501ba4d464f4ee",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/references/demand-signals.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/demand-signals.md",
+              "source_byte_range_half_open": [
+                855,
+                1053
+              ],
+              "local_byte_range_half_open": [
+                1022,
+                1220
+              ],
+              "sha256": "73c49c43a1ad94c5ac3cab9729c9962f0da2579b01b5e3e24c8bce47f8ff48ac"
+            }
+          ]
+        },
+        {
+          "path": "references/local-prospecting.md",
+          "local_sha256": "1dd71471a3413d5b0a9d230b1e42ca95469c617285bf7e2abdfa463428367fc3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/local-prospecting.md",
+              "source_sha256": "1dd71471a3413d5b0a9d230b1e42ca95469c617285bf7e2abdfa463428367fc3",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/references/local-prospecting.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/saas-prospecting.md",
+          "local_sha256": "e5044509400f1a92cb875b726b298ce16b67fe386ababe96a29d16e18d136feb",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/prospecting/references/saas-prospecting.md",
+              "source_sha256": "c1fc64af979cce3c5168eb004f5b85b8353fadcc89538bc5a8b07de79a4b9863",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/prospecting/references/saas-prospecting.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "local_overlay": "本地已工具中立、区分fit与demand、禁止未经授权外联/CRM mutation，但demand-signal ref缺不可信页面规则；source链接被fallback覆盖。",
+      "preserve": [
+        "可选工具、来源数据≠instructions、外联/CRM授权、三branch+demand branch、第一客户边界"
+      ]
+    },
+    {
+      "id": "sales-skills/sales-enablement",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "冻结HEAD有未覆盖的method/reference/guardrail变更；按A/B/C文件边界跟进，不含安装状态过滤。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "645275fae99bec7281f8016b7dfa8c42ff735b12889a88166d131d66ba8dcac2",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/SKILL.md",
+              "source_sha256": "811a8bb462be4e04344a0ed43d485cf124f2a339e3a53f3e6749bc185081a274",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/SKILL.md",
+              "source_byte_range_half_open": [
+                7838,
+                9240
+              ],
+              "local_byte_range_half_open": [
+                6881,
+                8283
+              ],
+              "sha256": "776afd9a893816ba7d92c9c1d3e554b61f8e7ad70eca69d7d4e04ffd4b1426d7"
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "f1ac77fed140ab150b40903e911b56afc70e4a160ff7256c83e59bf9e8193465",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "evals/evals.json",
+          "local_sha256": "bd50ea5dbd4e3e3e3527541328aac3a772615cb8cbe8523b864691c52490b6ad",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/evals/evals.json",
+              "source_sha256": "d5b28715744cac1c8ef2dde563dcf769c4c94cab91ee2bc52b9acd12b278ff10",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/evals/evals.json",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "references/deck-frameworks.md",
+          "local_sha256": "265eea6c1b358d10f2dd22fd987789a9d115c14d30bf77a9086734ac60659336",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/references/deck-frameworks.md",
+              "source_sha256": "265eea6c1b358d10f2dd22fd987789a9d115c14d30bf77a9086734ac60659336",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/references/deck-frameworks.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/demo-scripts.md",
+          "local_sha256": "505616ebf73d30fe84a844540727ab8f3aeae29ebcda8c8ace28a18ada003da3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/references/demo-scripts.md",
+              "source_sha256": "505616ebf73d30fe84a844540727ab8f3aeae29ebcda8c8ace28a18ada003da3",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/references/demo-scripts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/objection-library.md",
+          "local_sha256": "e0cdfeffc41afbdbe2c014bcd9b3c024318eac9bd23159e871ec796aba29e0b2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/references/objection-library.md",
+              "source_sha256": "e0cdfeffc41afbdbe2c014bcd9b3c024318eac9bd23159e871ec796aba29e0b2",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/references/objection-library.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/one-pager-templates.md",
+          "local_sha256": "2197326faff4ede03fb40e332e9c80a4e084d8efd48c74df8720d70817ac5ded",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/references/one-pager-templates.md",
+              "source_sha256": "2197326faff4ede03fb40e332e9c80a4e084d8efd48c74df8720d70817ac5ded",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/references/one-pager-templates.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/win-loss-analysis.md",
+          "local_sha256": "f6f34c503f4cc506a8f24bfea6e75b260e3eff661da206399e162960141f090a",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80",
+              "source_path": "skills/sales-enablement/references/win-loss-analysis.md",
+              "source_sha256": "f6f34c503f4cc506a8f24bfea6e75b260e3eff661da206399e162960141f090a",
+              "source_url": "https://github.com/coreyhaines31/marketingskills/blob/5e721d73ac85be8ba917d6a9ca9cb5bc98f02b80/skills/sales-enablement/references/win-loss-analysis.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "本地现有decks/onepagers/objection library/ROI，但没有新battlecard与win-loss回路；工具中立与未授权不send/write已覆盖。",
+      "preserve": [
+        "可选connectors、真实proof、既有授权、Sales assets/public comparison分工"
+      ]
+    }
+  ]
+}

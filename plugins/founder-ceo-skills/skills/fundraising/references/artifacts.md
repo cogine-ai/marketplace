@@ -714,3 +714,4 @@ How it works: Three recommended resources for building pitches: 1. Sequoia's gui
 A TextExpander snippet containing a running list of current asks that can be quickly pasted when someone offers to help
 
 How it works: Tool: TextExpander (textexpander.com). Setup: Create a snippet called 'asks' containing your current list of things you and your team need help with. Usage: Anytime someone says 'How can I be helpful?' in an email, paste the full list, then pare it down to just the requests relevant to that specific person. Sam reports being shocked at how many times this simple action led to significant value creation.
+

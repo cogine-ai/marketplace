@@ -1,5 +1,18 @@
 # Upstream sources
 
+## Current maintenance — 2026-10-08 (package 0.1.5)
+
+Restore exact vendor support bytes where approved, and adapt changed methods to bundled skill routes. Search bot purposes, pricing readability checks and launch QA retain factual evidence boundaries. English style guides remain contextual advice.
+
+`UPSTREAM_SYNC_2026-10-08.json` records the reviewed frozen sources, actual
+file hashes and the distinction between raw copies and local adaptations.
+Earlier pins and notes below describe historical imports; they are not a
+claim that every current file equals a single repository HEAD. Versions are
+prepared in source; this maintenance entry does not establish publication or
+installation.
+
+## Historical import records
+
 Packaged on 2026-07-19. Skill directories are copied or adapted into this
 plugin so Codex and Claude Code can discover the same bundle.
 

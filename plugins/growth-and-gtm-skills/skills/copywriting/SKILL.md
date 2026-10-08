@@ -74,10 +74,10 @@ Each section should advance one argument. Build a logical flow down the page.
 - Jargon that could confuse outsiders?
 - Sentences trying to do too much?
 - Passive voice constructions?
-- Exclamation points? (remove them)
+- Punctuation and emphasis that distract from the claim or conflict with the brand?
 - Marketing buzzwords without substance?
 
-After drafting, perform a focused line-by-line edit for clarity, specificity, voice, evidence, and unnecessary claims.
+After drafting, perform a focused line-by-line edit for clarity, specificity, voice, evidence, and unnecessary claims. Then run the structural self-check in [ai-tells.md](references/ai-tells.md): repeated contrast reveals, negation lists, self-answered questions, trailing clause stacks, and generic headlines. Preserve language and brand choices; do not treat punctuation or English vocabulary as universal bans.
 
 ---
 
@@ -91,7 +91,7 @@ Get to the point. Don't bury the value in qualifications.
 ✅ Need to share a screenshot? Send as many documents, images, and audio files as your heart desires.
 
 ### Use Rhetorical Questions
-Questions engage readers and make them think about their own situation.
+Use a question when it names a real buyer concern. Avoid repeating self-answered questions as a setup for a punchline.
 - "Hate returning stuff to Amazon?"
 - "Tired of chasing approvals?"
 

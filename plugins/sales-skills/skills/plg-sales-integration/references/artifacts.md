@@ -459,3 +459,4 @@ A Google Sheets model for playing with sales economics scenarios
 How it works: Google Sheets link: https://docs.google.com/spreadsheets/d/16NBOjE9Hpm4uexjslpYVDmidp3fIpDwmR3zRKieFgKM/edit#gid=0
 
 Allows you to model: number of opportunities per rep, cost per rep, win rates, deal values, and resulting revenue/cost ratios to determine if adding sales is economically viable.
+

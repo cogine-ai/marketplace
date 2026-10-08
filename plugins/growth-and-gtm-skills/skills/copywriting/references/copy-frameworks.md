@@ -10,6 +10,8 @@ Headline formulas, page section types, and structural templates.
 
 ## Headline Formulas
 
+Treat formulas as starting points. Fill their slots with supported specifics, then review the result with [ai-tells.md](ai-tells.md). A purposeful absence claim can be useful; repeating a negation list does not explain the mechanism.
+
 ### Outcome-Focused
 
 **{Achieve desirable outcome} without {pain point}**
@@ -91,9 +93,6 @@ Headline formulas, page section types, and structural templates.
 
 **What if you could {desirable outcome}?**
 > What if you could close deals 30% faster?
-
-**Everything you need to {outcome}**
-> Everything you need to launch your course
 
 **The {adjective} {category} built for {audience}**
 > The lightweight CRM built for startups

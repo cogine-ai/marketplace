@@ -1,5 +1,18 @@
 # Upstream sources
 
+## Current maintenance — 2026-10-08 (package 0.1.3)
+
+Restore approved vendor support bytes. Founder questions distinguish observed evidence from choices, and CEO review separates depth from scope mode, reuses settled decisions and preserves accepted constraints. Startup finance is unchanged; GStack remains a method reference rather than a runtime dependency.
+
+`UPSTREAM_SYNC_2026-10-08.json` records the reviewed frozen sources, actual
+file hashes and the distinction between raw copies and local adaptations.
+Earlier pins and notes below describe historical imports; they are not a
+claim that every current file equals a single repository HEAD. Versions are
+prepared in source; this maintenance entry does not establish publication or
+installation.
+
+## Historical import records
+
 Packaged on 2026-07-19. Skill directories are copied or adapted into this
 plugin so Codex and Claude Code can discover the same bundle.
 
@@ -84,7 +97,8 @@ scenarios, unit economics, hiring, and fundraising tradeoffs.
 
 ## Cross-platform compatibility adjustments
 
-`planmode-ceo` remains byte-for-byte identical to its source.
+`planmode-ceo` initially matched the primary source; the 2026-10-08 maintenance
+adds selected portable review methods, so its current body is locally adapted.
 `investor-materials` only moves its origin marker into supported metadata.
 `ceo-advisor` narrows its activation description and routes analysis to
 `competitive-strategy`, `seven-powers`, `planning-cadence`, and

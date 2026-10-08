@@ -3,6 +3,9 @@ import importlib.util
 import json
 import re
 import unittest
+import subprocess
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 
 import yaml
@@ -62,6 +65,8 @@ CURRENT_MATT_IMPORTS = {
     "improve-codebase-architecture",
     "setup-matt-pocock-skills",
     "tdd",
+    "to-spec",
+    "to-tickets",
 }
 
 REQUIRED_SKILL_REFERENCES = {
@@ -163,7 +168,11 @@ class BundleContractTests(unittest.TestCase):
             PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
         ]:
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            self.assertEqual("0.2.2", manifest["version"])
+            self.assertRegex(manifest["version"], r"^[0-9]+\.[0-9]+\.[0-9]+$")
+            self.assertEqual(
+                json.loads((PLUGIN_ROOT / ".codex-plugin" / "plugin.json").read_text())["version"],
+                manifest["version"],
+            )
             self.assertIn("Thirty focused", manifest["description"])
 
     def test_host_specific_update_instructions_verify_the_installed_version(self):
@@ -176,23 +185,28 @@ class BundleContractTests(unittest.TestCase):
 
     def test_upstream_lock_covers_current_matt_imports_and_local_hashes(self):
         lock = json.loads((PLUGIN_ROOT / "UPSTREAM_LOCK.json").read_text(encoding="utf-8"))
-        self.assertEqual("6654f6b60cd9d5be8b54c6fafe44346dabeb3b76", lock["source"]["commit"])
+        self.assertEqual(2, lock["format_version"])
+        self.assertRegex(lock["source"]["commit"], r"^[0-9a-f]{40}$")
         self.assertEqual(CURRENT_MATT_IMPORTS, set(lock["skills"]))
         for skill_name, entry in lock["skills"].items():
             self.assertTrue(entry["upstream_path"].startswith("skills/"), skill_name)
             self.assertIsInstance(entry["adaptations"], list, skill_name)
+            self.assertRegex(entry["source_commit"], r"^[0-9a-f]{40}$")
             for relative_path, expected in entry["files"].items():
                 local_path = PLUGIN_ROOT / "skills" / skill_name / relative_path
                 actual = hashlib.sha256(local_path.read_bytes()).hexdigest()
                 self.assertEqual(expected["local_sha256"], actual, str(local_path))
                 self.assertRegex(expected["upstream_sha256"], r"^[0-9a-f]{64}$")
+                self.assertRegex(expected["source_commit"], r"^[0-9a-f]{40}$")
+                self.assertTrue(expected["source_path"].startswith("skills/"))
+                self.assertIn(expected["mapping"], {"byte-identical", "adapted"})
 
     def test_reviewed_upstream_adaptations_preserve_local_safety_contracts(self):
         lock = json.loads((PLUGIN_ROOT / "UPSTREAM_LOCK.json").read_text(encoding="utf-8"))
         self.assertEqual([], lock["skills"]["codebase-design"]["adaptations"])
         self.assertTrue(
             any(
-                "CONTEXT-MAP.md" in adaptation
+                "GLOSSARY-MAP.md" in adaptation
                 for adaptation in lock["skills"]["domain-modeling"]["adaptations"]
             )
         )
@@ -236,11 +250,77 @@ class BundleContractTests(unittest.TestCase):
         ).read_text(encoding="utf-8")
         self.assertIn("author_association", github_tracker)
         self.assertNotIn("authorAssociation", github_tracker)
-        self.assertIn("--json blockedBy", github_tracker)
+        self.assertIn(".issue_dependencies_summary.blocked_by", github_tracker)
+        self.assertNotIn("blockedBy.totalCount", github_tracker)
         self.assertIn(
             ".scratch/<feature-slug>/issues/<NN>-<slug>.md", local_tracker
         )
-        self.assertIn("CONTEXT-MAP.md` already exists", setup_skill)
+        self.assertIn("GLOSSARY-MAP.md` already exists", setup_skill)
+
+
+    def test_lock_verifies_renamed_and_retired_sources_at_their_own_commits(self):
+        # Current HEAD lacks the retired path; the renamed source has a different
+        # relative filename. Validation must read the declared Git blobs.
+        with tempfile.TemporaryDirectory() as tmp:
+            temp = Path(tmp)
+            upstream = temp / "upstream"
+            upstream.mkdir()
+            def git(*args):
+                return subprocess.run(
+                    ["git", "-C", str(upstream), *args], check=True,
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                ).stdout.decode().strip()
+            git("init", "-q")
+            git("config", "user.email", "fixture@example.test")
+            git("config", "user.name", "Fixture")
+            (upstream / "skills/live").mkdir(parents=True)
+            (upstream / "skills/retired").mkdir(parents=True)
+            (upstream / "skills/live/OLD.md").write_bytes(b"old live\n")
+            (upstream / "skills/retired/SKILL.md").write_bytes(b"retained snapshot\n")
+            git("add", "skills")
+            git("commit", "-qm", "original")
+            original = git("rev-parse", "HEAD")
+            (upstream / "skills/live/OLD.md").unlink()
+            (upstream / "skills/live/RENAMED.md").write_bytes(b"latest source\n")
+            (upstream / "skills/retired/SKILL.md").unlink()
+            git("add", "-A")
+            git("commit", "-qm", "rename and retire")
+            current = git("rev-parse", "HEAD")
+            plugin = temp / "plugin"
+            skills = plugin / "skills"
+            lock = {"format_version": 2, "source": {"commit": current}, "skills": {}}
+            for name, commit, source_path, body in (
+                ("live", current, "skills/live/RENAMED.md", b"latest source\n"),
+                ("retired", original, "skills/retired/SKILL.md", b"retained snapshot\n"),
+            ):
+                (skills / name).mkdir(parents=True)
+                (skills / name / "SKILL.md").write_bytes(body)
+                sha = hashlib.sha256(body).hexdigest()
+                entry = {"source_commit": commit, "adaptations": [], "files": {
+                    "SKILL.md": {"source_commit": commit, "source_path": source_path,
+                                 "mapping": "byte-identical", "local_sha256": sha,
+                                 "upstream_sha256": sha}}}
+                if name == "retired":
+                    entry.update(status="retired-upstream-retained-local",
+                                 latest_source_path_exists=False, retired_at_commit=current)
+                lock["skills"][name] = entry
+            (plugin / "UPSTREAM_LOCK.json").write_text(json.dumps(lock))
+            with patch.object(VALIDATOR, "PLUGIN_ROOT", plugin), \
+                    patch.object(VALIDATOR, "SKILLS_ROOT", skills), \
+                    patch.object(VALIDATOR, "CURRENT_MATT_IMPORTS", {"live", "retired"}):
+                errors = []
+                VALIDATOR.validate_lock(errors, upstream)
+                self.assertEqual([], errors)
+                (skills / "live/SKILL.md").write_bytes(b"unexpected local drift\n")
+                errors = []
+                VALIDATOR.validate_lock(errors, upstream)
+                self.assertTrue(any("local hash drift" in error for error in errors), errors)
+                (skills / "live/SKILL.md").write_bytes(b"latest source\n")
+                lock["skills"]["retired"]["files"]["SKILL.md"]["source_commit"] = current
+                (plugin / "UPSTREAM_LOCK.json").write_text(json.dumps(lock))
+                errors = []
+                VALIDATOR.validate_lock(errors, upstream)
+                self.assertTrue(any("cannot read pinned source" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

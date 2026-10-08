@@ -1,5 +1,18 @@
 # Upstream source
 
+## Current maintenance — 2026-10-08 (package 0.1.5)
+
+Seven Emil SKILL files match the frozen source exactly; review-animations copies the complete raw body while keeping its existing frontmatter. Prototype and library selection keep both hosts' explicit-invocation policies. The candidate marketing-page body remains at its prior reviewed pin.
+
+`UPSTREAM_SYNC_2026-10-08.json` records the reviewed frozen sources, actual
+file hashes and the distinction between raw copies and local adaptations.
+Earlier pins and notes below describe historical imports; they are not a
+claim that every current file equals a single repository HEAD. Versions are
+prepared in source; this maintenance entry does not establish publication or
+installation.
+
+## Historical import records
+
 - Repository: https://github.com/emilkowalski/skills
 - Branch: `main`
 - Pinned commit: `0b85d4b36ad772ed2c46a66522ede1c8a26f9929`

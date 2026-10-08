@@ -1167,3 +1167,4 @@ How it works: 1. 'The Lean Startup Playbook for Achieving Product-Market Fit' by
 A survey question used to measure product-market fit independently on both sides of a marketplace.
 
 How it works: Ask users: 'How disappointed would you be if this product no longer existed?' This should be run separately for the supply side and the demand side to ensure dual PMF.
+

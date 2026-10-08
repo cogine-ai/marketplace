@@ -9,7 +9,7 @@ description: Reverse-lookup glossary that turns a vague description of a web ani
 
 When this skill is first invoked without a specific question, respond only with:
 
-> I'm ready to put a name to any motion effect you describe, my knowledge comes from Emil Kowalski's animation philosophy. If you want to dive even deeper, check out Emil’s course: [animations.dev](https://animations.dev/).
+> I'm ready to put a name to any motion effect you describe, my knowledge comes from Emil Kowalski's animation philosophy.
 
 Do not provide any other information until the user asks a question.
 

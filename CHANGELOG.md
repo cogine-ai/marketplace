@@ -1,5 +1,27 @@
 # Changelog
 
+## Role bundle upstream maintenance — 2026-10-08
+
+Prepared source versions: Coding 0.2.3, Product 0.2.3, Design 0.1.5,
+Growth 0.1.5, Sales 0.1.2, Founder/CEO 0.1.3. Cursourcing is unchanged.
+
+- Apply the approved whole-file and raw-region copies without formatting
+  vendor bytes; record frozen commits and actual hashes per bundle.
+- Follow tracker, standards discovery, glossary and testing changes while
+  preserving local review, multi-context and invocation contracts.
+- Sync Product prototype's SKILL.md, LOGIC.md and UI.md, removing its two
+  local UI additions; keep its existing Codex prompt.
+- Follow business methods with optional integrations, bundled routes,
+  factual bot guidance and authorization/readback for writes.
+- Separate founder evidence from choices and CEO review depth from scope;
+  preserve settled decisions, accepted constraints and truthful readiness.
+- Update UIUX data and scripts, correct React Server Components security
+  applicability, and wrap long ASCII/CJK design-system titles.
+
+This entry describes local source maintenance. Publication and installation
+are separate operations.
+
+
 ## Cursourcing 0.2.2 - 2026-09-17
 
 - Default to two ownership phases: Cursor completes implementation, self-checks

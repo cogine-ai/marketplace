@@ -49,19 +49,19 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hiring your early team](https://www.lennysnewsletter.com/p/hiring-your-early-team)*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hiring your early team](https://www.lennysnewsletter.com/p/hiring-your-early-team)*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hiring your early team](https://www.lennysnewsletter.com/p/hiring-your-early-team)*
 
@@ -78,7 +78,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hiring your early team](https://www.lennysnewsletter.com/p/hiring-your-early-team)*
 
@@ -149,8 +149,9 @@
 
 ## Sahil Mansuri
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to hit revenue targets in a recession | Sahil Mansuri (Bravado)](https://www.youtube.com/watch?v=pYZ0S7a72po) @ 01:08:09*
 
 ---
+

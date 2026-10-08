@@ -6,7 +6,7 @@
 
 ## Ada Chen Rekhi
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to make better decisions and build a joyful career | Ada Chen Rekhi (Notejoy, LinkedIn, SurveyMonkey)](https://www.youtube.com/watch?v=N64vIY2nJQo) @ 01:07:10*
 
@@ -66,7 +66,7 @@
 
 ## Claire Hughes Johnson
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from scaling Stripe | Claire Hughes Johnson (former COO of Stripe)](https://www.youtube.com/watch?v=Mv0o9o4MRh0) @ 01:04:47*
 
@@ -74,7 +74,7 @@
 
 ## Dalton Caldwell
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from 1,000+ YC startups: Resilience, tar pit ideas, pivoting, more | Dalton Caldwell (Y Combinator, Managing Director)](https://www.youtube.com/watch?v=m7LvNTbaqSI) @ 00:32:35*
 
@@ -82,7 +82,7 @@
 
 ## Gokul Rajaram
 
-**Insight:**
+**Insight:** 
 
 *Source: [Gokul Rajaram on designing your product development process, when and how to hire your first PM, a playbook for hiring leaders, getting ahead in you career, how to get started angel investing, more](https://www.youtube.com/watch?v=5p0VK_-BoJI) @ 00:35:49*
 
@@ -103,7 +103,7 @@
 
 ## Jason M Lemkin
 
-**Insight:**
+**Insight:** 
 
 *Source: [We replaced our sales team with 20 AI agents—here’s what happened | Jason Lemkin (SaaStr)](https://www.youtube.com/watch?v=I-R1bc1rlFs) @ 00:19:14*
 
@@ -111,7 +111,7 @@
 
 ## Lauren Ipsen
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from one of the world’s top executive recruiters | Lauren Ipsen (Daversa Partners, General Catalyst)](https://www.youtube.com/watch?v=v3pofqabzhs) @ 00:57:38*
 
@@ -185,7 +185,7 @@
 
 ## Naomi Gleit
 
-**Insight:**
+**Insight:** 
 
 *Source: [Meta’s Head of Product (and 29th employee) on working with Mark Zuckerberg, early growth tactics, why PMs are like conductors, and more | Naomi Gleit](https://www.youtube.com/watch?v=sTYuKgzZoL8) @ 00:20:24*
 
@@ -206,7 +206,7 @@
 
 ## Rachel Lockett
 
-**Insight:**
+**Insight:** 
 
 *Source: [A guide to difficult conversations, building high-trust teams, and designing a life you love | Rachel Lockett](https://www.youtube.com/watch?v=1GDVum5IarI) @ 00:59:55*
 
@@ -224,3 +224,4 @@
 *Source: [Superhuman's secret to success: Ignoring most customer feedback, manually onboarding every new user, obsessing over every detail, and positioning around a single attribute: speed | Rahul Vohra (CEO)](https://www.youtube.com/watch?v=0igjSRZyX-w) @ 00:27:35*
 
 ---
+

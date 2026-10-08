@@ -65,15 +65,15 @@ Use paid acquisition primarily for learning until your product-market fit is pro
 
 ## Templates & Frameworks
 
-- **Seven Distribution Advantages for Startups** (Finding your distribution advantage) - A framework of seven distinct distribution advantages that early-stage startups can leverage to get their product in front of the right people more cheaply and
+- **Seven Distribution Advantages for Startups** (Finding your distribution advantage) - A framework of seven distinct distribution advantages that early-stage startups can leverage to get their product in front of the right people more cheaply and 
 - **Seven Strategies for Acquiring Your First 1,000 Users** (How the biggest consumer apps got their first 1,000 users) - A comprehensive framework of the only seven strategies that account for how every major consumer app acquired their earliest users. Each strategy addresses a di
-- **Content-Driven Growth 2x2 Framework** (Content-driven growth) - A 2x2 matrix for mapping all content-driven growth strategies based on two axes: what you're optimizing for (SEO vs. virality) and who's generating the content
+- **Content-Driven Growth 2x2 Framework** (Content-driven growth) - A 2x2 matrix for mapping all content-driven growth strategies based on two axes: what you're optimizing for (SEO vs. virality) and who's generating the content 
 - **Six B2B Growth Channels Framework** (Scaling your B2B growth engine) - A taxonomy of six distinct growth channels for B2B startups, organized from most common to supplementary, used to evaluate and prioritize growth investments
 - **Marketing Measurement Triangulation Framework** (How today’s top consumer brands measure marketing’s impact) - A three-method framework for triangulating true marketing performance by combining MTA, MMM, and CLS, with specific roles and cadences for each method
 - **Nine Kickstart Tactics for First 1,000 Users** (The Racecar Growth Framework—expanded and illustrated) - A comprehensive checklist of the nine most common and effective unscalable tactics for acquiring your first 1,000 users, with sub-tactics and real company examp
 - **Tinder Campus Launch Playbook** (How to kickstart and scale a consumer business—Step 4: Find your early adopters by doing things that don’t scale) - Alexa Mateen Abdi's detailed account of how Tinder went campus by campus to acquire early users, including exact pitches, tactics, and the Tinder University Pro
 - **Slidebean's YouTube Strategy Evolution Playbook** (Content-driven growth) - The progression Slidebean followed from SEM to SEO to YouTube, useful as a channel expansion playbook
-- **60 Turbo Boost Examples Database** (60 ideas to boost your growth) - A comprehensive database of 60 real-world turbo boost examples organized by strategy type, with company name, tactic description, distribution channel, and why
+- **60 Turbo Boost Examples Database** (60 ideas to boost your growth) - A comprehensive database of 60 real-world turbo boost examples organized by strategy type, with company name, tactic description, distribution channel, and why 
 
 See `references/artifacts.md` for the full list with details.
 

@@ -1,0 +1,345 @@
+{
+  "date": "2026-10-08",
+  "package_version": "0.1.5",
+  "marketplace_base": "3e10d463069a5972f75b53aa699f5d03ca7d5fdc",
+  "approved_decision_ledger_sha256": "6f94c6c46afbb996a6155b8df0134612c28ea6cc6acb2f6838d9d4e20d9e198a",
+  "verification_boundary": "Raw bytes, local file hashes and source mappings. Adapted files are not whole-file sync claims; method references are not a vendored runtime. Tests or documentation do not prove publication, installation or a live external write.",
+  "entries": [
+    {
+      "id": "design-engineer-skills/animation-vocabulary",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "40d2b27adfdfeb0570a9f20e7d0255109d9233c50603878bcd0dcd04c923fd94",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/animation-vocabulary/SKILL.md",
+              "source_sha256": "40d2b27adfdfeb0570a9f20e7d0255109d9233c50603878bcd0dcd04c923fd94",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/animation-vocabulary/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/apple-design",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/apple-design/SKILL.md",
+              "source_sha256": "77bb63b7043bb93aca2ff4ab040c249484eef35682bb6ff7163433c31d30adc7",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/apple-design/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/emil-design-eng",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "ffbe68e6007fb42cb8149f089b400a1ca007d59ba23e8948e2be4476f3175939",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/emil-design-eng/SKILL.md",
+              "source_sha256": "ffbe68e6007fb42cb8149f089b400a1ca007d59ba23e8948e2be4476f3175939",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/emil-design-eng/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/find-animation-opportunities",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/find-animation-opportunities/SKILL.md",
+              "source_sha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/find-animation-opportunities/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/improve-animations",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。",
+      "files": [
+        {
+          "path": "AUDIT.md",
+          "local_sha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/improve-animations/AUDIT.md",
+              "source_sha256": "551c8473e20e5f4774680bc24d45e1c68e50992582720905c6b077756b7b5a55",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/improve-animations/AUDIT.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "PLAN-TEMPLATE.md",
+          "local_sha256": "0a08ac8e23fd2082d7ffb86aeed7b789de77328c3cf874b16f1a755f2ef0a6ad",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/improve-animations/PLAN-TEMPLATE.md",
+              "source_sha256": "0a08ac8e23fd2082d7ffb86aeed7b789de77328c3cf874b16f1a755f2ef0a6ad",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/improve-animations/PLAN-TEMPLATE.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "73962447464433476343e2c12cd08ab39cc99a9e5f3c118c5fb54ed897574ef6",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/improve-animations/SKILL.md",
+              "source_sha256": "73962447464433476343e2c12cd08ab39cc99a9e5f3c118c5fb54ed897574ef6",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/improve-animations/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/marketing-page-design-candidate",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "raw body 与固定 HEAD 字节一致；name/description 是本地营销补充候选定位。主文件整体并非字节一致，不能用上游默认 taste 定位覆盖。",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "b482f7a970abb98c4108d4a9f761e458c64cefc8",
+              "source_path": "LICENSE",
+              "source_sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+              "source_url": "https://github.com/Leonxlnx/taste-skill/blob/b482f7a970abb98c4108d4a9f761e458c64cefc8/LICENSE",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "bda0e5eb872685be30e60d7db15b42acfac15ef7cb8d2cf72f40773a394e709b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "b482f7a970abb98c4108d4a9f761e458c64cefc8",
+              "source_path": "skills/taste-skill/SKILL.md",
+              "source_sha256": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89",
+              "source_url": "https://github.com/Leonxlnx/taste-skill/blob/b482f7a970abb98c4108d4a9f761e458c64cefc8/skills/taste-skill/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "d099b6d28e9676ed4ec7a21f6e63fdd319fc55a5442fb4043b72412c6f158fbf",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/pick-ui-library",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。 当前 frontmatter 仅 disable 字段行序不同；上游仍是相同 description 与 disable-model-invocation:true。可整文件逐字节复制，不影响本地显式调用定位。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "675fdce308683256ed617351a9b74d23457a5fbd0a562d9831b9c764b8c5e682",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/pick-ui-library/SKILL.md",
+              "source_sha256": "675fdce308683256ed617351a9b74d23457a5fbd0a562d9831b9c764b8c5e682",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/pick-ui-library/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "96e74b53b234d6ed22de58d4a7b09586646bb5dd54d9fb83b33768ac96d9a675",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/prototype",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游 Initial Response 删除课程推广句；当前 raw body 仍是旧 baseline，需跟到固定 HEAD。 当前 frontmatter 仅 disable 字段行序不同；上游仍是相同 description 与 disable-model-invocation:true。可整文件逐字节复制，不影响本地显式调用定位。",
+      "files": [
+        {
+          "path": "PICKER.md",
+          "local_sha256": "31a55eec94715cc79942e91e172e539e3031dcd5e2e5ee7c1446cf2caee960a6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/prototype/PICKER.md",
+              "source_sha256": "31a55eec94715cc79942e91e172e539e3031dcd5e2e5ee7c1446cf2caee960a6",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/prototype/PICKER.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "bba39c955eb1871c5a02733976ceec5d0324198e0812e667604756489c89f7b9",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/prototype/SKILL.md",
+              "source_sha256": "bba39c955eb1871c5a02733976ceec5d0324198e0812e667604756489c89f7b9",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/prototype/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "e038cae7d7a21bd6bde1de4b2c26034c2ecaeb3daa5ab5e689288712ccd90ff7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "design-engineer-skills/review-animations",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "上游Initial Response删除课程推广句，正文应跟进。源额外含Claude Code的disable-model-invocation:true，本地省略；整文件复制会把Claude显式调用限制带回。本地没有agents/openai.yaml，不能据此推断Codex调用策略会改变。只复制raw body，保留本地frontmatter。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "e86984eb410e74f0c9adfa1a75c226d036dc297b8ddaeb32d4ed02564afc9e64",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/review-animations/SKILL.md",
+              "source_sha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/review-animations/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/review-animations/SKILL.md",
+              "source_byte_range_half_open": [
+                236,
+                8407
+              ],
+              "local_byte_range_half_open": [
+                205,
+                8376
+              ],
+              "sha256": "26656f0b3ba472b3a97f42332d82c19e84e474cf51260e60b71eb58fde2e89de"
+            }
+          ]
+        },
+        {
+          "path": "STANDARDS.md",
+          "local_sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+              "source_path": "skills/review-animations/STANDARDS.md",
+              "source_sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+              "source_url": "https://github.com/emilkowalski/skills/blob/e8a175de22ae1e49370fc144c1f3bb9aeedf988d/skills/review-animations/STANDARDS.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    }
+  ]
+}

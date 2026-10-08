@@ -19,13 +19,13 @@
 
 ## Ami Vora
 
-**Insight:**
+**Insight:** 
 
 *Source: [Making an impact through authenticity and curiosity | Ami Vora (CPO at Faire, ex-WhatsApp, FB, IG)](https://www.youtube.com/watch?v=6UHAop9fhNU) @ 00:37:58*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Making an impact through authenticity and curiosity | Ami Vora (CPO at Faire, ex-WhatsApp, FB, IG)](https://www.youtube.com/watch?v=6UHAop9fhNU) @ 00:44:08*
 
@@ -78,7 +78,7 @@
 
 ## Brandon Chu
 
-**Insight:**
+**Insight:** 
 
 *Source: Brandon Chu on building product at Shopify, how writing changed the trajectory of his career, the habits that make you a great PM, pros and cons of being a platform PM, how Shopify got through Covid @ 38:39*
 
@@ -127,7 +127,7 @@
 
 ## Ebi Atawodi
 
-**Insight:**
+**Insight:** 
 
 *Source: [Crafting a compelling product vision | Ebi Atawodi (YouTube, Netflix, Uber)](https://www.youtube.com/watch?v=tBPTwUmaxDs) @ 00:56:39*
 
@@ -135,7 +135,7 @@
 
 ## Failure
 
-**Insight:**
+**Insight:** 
 
 *Source: [Failure](https://www.youtube.com/watch?v=9euy9gC48lc) @ 00:28:36*
 
@@ -318,7 +318,7 @@
 
 ## Lane Shackleton
 
-**Insight:**
+**Insight:** 
 
 *Source: [What sets great teams apart | Lane Shackleton (CPO of Coda)](https://www.youtube.com/watch?v=XmgetFMgQZ0) @ 01:19:37*
 
@@ -834,13 +834,13 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The unconventional Palantir principles that catalyzed a generation of startups](https://www.lennysnewsletter.com/p/the-unconventional-palantir-principles-that-catalyzed-a-generation-of-startups)*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How Notion builds product](https://www.lennysnewsletter.com/p/how-notion-builds-product)*
 
@@ -881,7 +881,7 @@
 
 ## Maggie Crowley
 
-**Insight:**
+**Insight:** 
 
 *Source: [Mastering product strategy and growing as a PM | Maggie Crowley (Toast, Drift, Tripadvisor)](https://www.youtube.com/watch?v=4LjddcccYIo) @ 00:34:36*
 
@@ -889,7 +889,7 @@
 
 ## Manik Gupta
 
-**Insight:**
+**Insight:** 
 
 *Source: Manik Gupta (ex-CPO Uber, Google Maps) on how to build consumer apps, why it’s useful to be optimistic about technology, creating inflections in your PM career, the changing CPO role, and more @ 00:26:17*
 
@@ -937,7 +937,7 @@
 
 ## Naomi Gleit
 
-**Insight:**
+**Insight:** 
 
 *Source: [Meta’s Head of Product (and 29th employee) on working with Mark Zuckerberg, early growth tactics, why PMs are like conductors, and more | Naomi Gleit](https://www.youtube.com/watch?v=sTYuKgzZoL8) @ 01:20:43*
 
@@ -957,7 +957,7 @@
 
 ## Oji Udezue
 
-**Insight:**
+**Insight:** 
 
 *Source: [Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform, Twitter, Calendly, Atlassian)](https://www.youtube.com/watch?v=T8TQGbJhv6Q) @ 00:56:49*
 
@@ -965,13 +965,13 @@
 
 ## Ravi Mehta
 
-**Insight:**
+**Insight:** 
 
 *Source: [The secret to better AI prototypes: Why Tinder’s CPO starts with JSON, not design | Ravi Mehta (product advisor, previously EIR at Reforge)](https://www.youtube.com/watch?v=_yQMGHHl49g) @ 00:18:05*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The secret to better AI prototypes: Why Tinder’s CPO starts with JSON, not design | Ravi Mehta (product advisor, previously EIR at Reforge)](https://www.youtube.com/watch?v=_yQMGHHl49g) @ 00:23:47*
 
@@ -1194,7 +1194,7 @@
 
 ## Ryan Hoover
 
-**Insight:**
+**Insight:** 
 
 *Source: How to launch and grow your product | Ryan Hoover of Product Hunt and Weekend Fund @ 00:31:50*
 
@@ -1215,7 +1215,7 @@
 
 ## Sahil Mansuri
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to hit revenue targets in a recession | Sahil Mansuri (Bravado)](https://www.youtube.com/watch?v=pYZ0S7a72po) @ 01:13:13*
 
@@ -1336,14 +1336,15 @@
 
 ## Will Larson
 
-**Insight:**
+**Insight:** 
 
 *Source: [The engineering mindset | Will Larson (Carta, Stripe, Uber, Calm, Digg)](https://www.youtube.com/watch?v=Z9ftpRhRiJE) @ 00:16:17*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The engineering mindset | Will Larson (Carta, Stripe, Uber, Calm, Digg)](https://www.youtube.com/watch?v=Z9ftpRhRiJE) @ 00:25:08*
 
 ---
+

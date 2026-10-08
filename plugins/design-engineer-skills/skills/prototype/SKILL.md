@@ -1,7 +1,7 @@
 ---
 name: prototype
-disable-model-invocation: true
 description: Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip through them live and promote the one that feels right. Only runs when explicitly invoked; it does not trigger on its own.
+disable-model-invocation: true
 ---
 
 # Prototyping Variants
@@ -10,7 +10,7 @@ description: Build multiple genuinely different versions of a UI piece you descr
 
 When this skill is first invoked without a specific question, respond only with:
 
-> I'm ready to build several genuinely different versions of a UI piece for you to flip through, my craft bar comes from Emil Kowalski's design engineering philosophy. If you want to dive even deeper, check out Emil’s course: [animations.dev](https://animations.dev/).
+> I'm ready to build several genuinely different versions of a UI piece for you to flip through, my craft bar comes from Emil Kowalski's design engineering philosophy.
 
 Do not provide any other information until the user asks a question.
 

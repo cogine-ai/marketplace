@@ -23,6 +23,9 @@ There is also a shadow rung: **recommended against**. On detailed, requirements-
 
 ---
 
+### Repairing repeated weaknesses
+Trace the sources of negative framing, address real weaknesses with current public evidence, and measure comparable prompts through a staged repositioning. Practitioner anecdotes are not timelines or causal proof; see [positioning-and-consensus.md](positioning-and-consensus.md).
+
 ## The Self-Promotional Listicle Risk
 
 The common tactic — publish a "best [category] software" guide, rank yourself #1, and let it shape both organic search and AI answers — now has a stage-dependent payoff.
@@ -47,10 +50,10 @@ Recommendation is a consensus signal. The inputs the models weigh live mostly of
 | Channel | Why it moves recommendations | Related skill |
 |---|---|---|
 | **Review platforms** (G2, Capterra, TrustRadius, app stores) | Third-party validation models treat as evidence of legitimacy | customer-research (review generation loops) |
-| **Analyst coverage** (Gartner, Forrester, industry reports) | High-authority category framing; models echo analyst shortlists | public-relations |
-| **Communities and forums** (Reddit, HN, Slack/Discord, niche forums) | Unprompted practitioner discussion is heavily retrieved and hard to fake | community-marketing |
-| **Earned media and PR** | Independent sources repeating your positioning beyond your own site | public-relations |
-| **Video and podcasts** | Increasingly retrieved; transcripts carry brand + category associations | video, social |
+| **Analyst coverage** (Gartner, Forrester, industry reports) | High-authority category framing; models echo analyst shortlists | content-strategy |
+| **Communities and forums** (Reddit, HN, Slack/Discord, niche forums) | Unprompted practitioner discussion is heavily retrieved and hard to fake | customer-research |
+| **Earned media and PR** | Independent sources repeating your positioning beyond your own site | content-strategy |
+| **Video and podcasts** | Increasingly retrieved; transcripts carry brand + category associations | content-strategy |
 
 The test to apply before investing in another self-ranked guide: *if a model ignored everything on our domain, would the rest of the web still put us on the shortlist?* If not, that gap is the priority. AEO discourse often stops at "are we in the answer?" — the better question is "are we credible enough to be recommended?"
 
@@ -69,8 +72,8 @@ Two behavioral studies quantified the gap between rungs:
 
 **Measurement triad** (no single signal is complete; together they give a reliable read):
 
-1. **AI prompt tracking** — whether and how you're mentioned/recommended in LLM answers, even when no click ever lands (tools in SKILL.md's Monitoring section). Track the framing around mentions — recommended, neutral, hedged, or recommended-against — not just the count.
-2. **Self-reported attribution** — a "how did you hear about us?" field catches buyers whose journey started in an AI chat but arrived via branded search or direct.
+1. **AI prompt tracking** — whether and how you're mentioned/recommended in LLM answers, even when no click ever lands (the measurement workflow in the bundled SKILL.md). Track the framing around mentions — recommended, neutral, hedged, or recommended-against — not just the count.
+2. **Self-reported attribution** — a "how did you hear about us?" field can reveal AI-influenced journeys that arrived via search or direct. Propose an AI option and optional "What did you type?" follow-up to collect real prompts with an appropriate privacy context. Deploying or changing a live form requires authorization; the response is self-reported evidence, not complete attribution.
 3. **Sales call recordings** — buyers' own language often reveals an AI conversation shaped the shortlist long before any form fill.
 
 Also watch **branded search volume** as a proxy: sustained lifts without a matching campaign are increasingly AI-influence showing up under another name.

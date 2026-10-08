@@ -19,7 +19,7 @@
 
 ## Camille Hearst
 
-**Insight:**
+**Insight:** 
 
 *Source: Monetizing passions, scaling marketplaces, and stories from a creator economy vet | Camille Hearst (Spotify, Patreon, Apple, YouTube) @ 00:24:49*
 
@@ -27,7 +27,7 @@
 
 ## Dalton Caldwell
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from 1,000+ YC startups: Resilience, tar pit ideas, pivoting, more | Dalton Caldwell (Y Combinator, Managing Director)](https://www.youtube.com/watch?v=m7LvNTbaqSI) @ 00:27:09*
 
@@ -35,7 +35,7 @@
 
 ## Dan Shipper
 
-**Insight:**
+**Insight:** 
 
 *Source: [The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every)](https://www.youtube.com/watch?v=crMrVozp_h8) @ 01:02:25*
 
@@ -523,7 +523,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Startup to exit: Lessons from a first-time founder](https://www.lennysnewsletter.com/p/startup-to-exit-lessons-from-a-first-time-founder)*
 
@@ -622,7 +622,7 @@
 
 ## Ryan Hoover
 
-**Insight:**
+**Insight:** 
 
 *Source: How to launch and grow your product | Ryan Hoover of Product Hunt and Weekend Fund @ 00:14:48*
 
@@ -670,3 +670,4 @@
 *Source: [Lessons from a two-time unicorn builder, 50-time startup advisor, and 20-time company board member | Uri Levine (co-founder of Waze)](https://www.youtube.com/watch?v=Cj4ORGGEJcA) @ 00:04:06*
 
 ---
+

@@ -388,3 +388,4 @@ How it works: 1. 'Transitions: Making Sense of Life's Changes' by William Bridge
 3. 'The Slight Edge' by Jeff Olson — on how small daily disciplines compound into life-changing results
 4. 'The Compound Effect' by Darren Hardy — on how small, consistent actions create radical results over time
 5. 'Four-Factor Model' paper by Dr. Michael Cavanagh (University of Sydney) — academic paper on leading through complexity
+

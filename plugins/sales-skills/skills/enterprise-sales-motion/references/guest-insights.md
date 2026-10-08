@@ -90,13 +90,13 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [We replaced our sales team with 20 AI agents—here’s what happened | Jason Lemkin (SaaStr)](https://www.youtube.com/watch?v=I-R1bc1rlFs) @ 00:45:16*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [We replaced our sales team with 20 AI agents—here’s what happened | Jason Lemkin (SaaStr)](https://www.youtube.com/watch?v=I-R1bc1rlFs) @ 01:00:03*
 
@@ -130,19 +130,19 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)](https://www.youtube.com/watch?v=RmnWHz8HD74) @ 00:26:25*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)](https://www.youtube.com/watch?v=RmnWHz8HD74) @ 00:34:33*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)](https://www.youtube.com/watch?v=RmnWHz8HD74) @ 01:19:41*
 
@@ -438,7 +438,7 @@
 
 ## Merci Grace
 
-**Insight:**
+**Insight:** 
 
 *Source: Merci Grace (ex-Head of Growth at Slack) on PLG, interviewing, storytelling, building a diverse team, hiring salespeople, building a growth team, and much more @ 42:13*
 
@@ -542,19 +542,19 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to hit revenue targets in a recession | Sahil Mansuri (Bravado)](https://www.youtube.com/watch?v=pYZ0S7a72po) @ 00:23:00*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to hit revenue targets in a recession | Sahil Mansuri (Bravado)](https://www.youtube.com/watch?v=pYZ0S7a72po) @ 00:51:07*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to hit revenue targets in a recession | Sahil Mansuri (Bravado)](https://www.youtube.com/watch?v=pYZ0S7a72po) @ 00:58:45*
 
@@ -571,3 +571,4 @@
 *Source: [Building a magical AI code editor used by over 1 million developers in four months: The untold story of Windsurf | Varun Mohan (co-founder and CEO)](https://www.youtube.com/watch?v=5Z0RCxDZdrE) @ 00:35:40*
 
 ---
+

@@ -89,6 +89,20 @@
         "Does not attempt full technical SEO audit"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "We want to launch 5,000 'integration + use case' pages. We're on Framer now. Where should we build them?",
+      "expected_output": "Load implementation-platforms.md. Check the actual existing CMS plan against 5,000 pages, refresh, useful HTML, conditional sections, index control, internal links, and build/rollback ownership. Consider the current platform first and verify current vendor limits. Compare alternatives and subpath/subdomain on architecture and operations without universal ranking claims. Prove a representative batch before authorized publication and scaling; do not assume a partner tool or CLI.",
+      "assertions": [
+        "Checks actual current plan capacity and operational requirements",
+        "Considers the existing platform first",
+        "Verifies current vendor limits rather than hardcoding them",
+        "Compares architecture and ownership tradeoffs without ranking guarantees",
+        "Proves a representative batch before scaling",
+        "Does not assume a vendor integration or publication authorization"
+      ],
+      "files": []
     }
   ]
 }

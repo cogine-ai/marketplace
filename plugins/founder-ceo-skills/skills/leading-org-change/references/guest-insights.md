@@ -6,7 +6,7 @@
 
 ## Adriel Frederick
 
-**Insight:**
+**Insight:** 
 
 *Source: [Humanizing product development | Adriel Frederick (Reddit, Lyft, Facebook)](https://www.youtube.com/watch?v=4avaVEAa64Y) @ 00:18:00*
 
@@ -81,7 +81,7 @@
 
 ## Brian Balfour
 
-**Insight:**
+**Insight:** 
 
 *Source: [Brian Balfour: 10 lessons on career, growth, and life](https://www.youtube.com/watch?v=ZG3iNH4vvMA) @ 01:05:09*
 
@@ -178,7 +178,7 @@
 
 ## Claire Butler
 
-**Insight:**
+**Insight:** 
 
 *Source: [An inside look at Figma’s unique GTM motion | Claire Butler (first GTM hire)](https://www.youtube.com/watch?v=UmirRfy-gzA) @ 00:54:08*
 
@@ -186,7 +186,7 @@
 
 ## Claire Hughes Johnson
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from scaling Stripe | Claire Hughes Johnson (former COO of Stripe)](https://www.youtube.com/watch?v=Mv0o9o4MRh0) @ 01:11:52*
 
@@ -222,7 +222,7 @@
 
 ## Dharmesh Shah
 
-**Insight:**
+**Insight:** 
 
 *Source: [Zigging vs. zagging: How HubSpot built a $30B company | Dharmesh Shah (co-founder/CTO)](https://www.youtube.com/watch?v=dpw9Ue1HU48) @ 00:33:00*
 
@@ -245,7 +245,7 @@
 
 ## Eeke de Milliano
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to foster innovation and big thinking | Eeke de Milliano (Retool, Stripe)](https://www.youtube.com/watch?v=2ezz4KJe7kA) @ 00:21:23*
 
@@ -294,7 +294,7 @@
 
 ## Heidi Helfand
 
-**Insight:**
+**Insight:** 
 
 *Source: [The art and wisdom of changing teams | Heidi Helfand (author of Dynamic Reteaming)](https://www.youtube.com/watch?v=0wN5wSImUdY) @ 00:20:14*
 
@@ -302,7 +302,7 @@
 
 ## Hilary Gridley
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to build a team that can “take a punch”: A playbook for building resilient, high-performing teams | Hilary Gridley (Head of Core Product, Whoop)](https://www.youtube.com/watch?v=xm5QAzAlqEY) @ 01:01:49*
 
@@ -426,7 +426,7 @@
 
 ## Ken Norton
 
-**Insight:**
+**Insight:** 
 
 *Source: How to unlock your product leadership skills | Ken Norton, Ex-Google @ 01:00:26*
 
@@ -658,7 +658,7 @@
 
 ## Manik Gupta
 
-**Insight:**
+**Insight:** 
 
 *Source: Manik Gupta (ex-CPO Uber, Google Maps) on how to build consumer apps, why it’s useful to be optimistic about technology, creating inflections in your PM career, the changing CPO role, and more @ 00:13:59*
 
@@ -727,7 +727,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to fire people with grace, work through fear, and nurture innovation | Matt Mochary (CEO coach)](https://www.youtube.com/watch?v=bCel0X2Ta7U) @ 00:54:30*
 
@@ -735,7 +735,7 @@
 
 ## Maya Prohovnik
 
-**Insight:**
+**Insight:** 
 
 *Source: [Building Anchor, selling to Spotify, and lessons learned | Maya Prohovnik (Spotify’s Head of Podcast Product)](https://www.youtube.com/watch?v=1gXNOJEWajU) @ 00:36:03*
 
@@ -777,7 +777,7 @@
 
 ## Mike Maples Jr
 
-**Insight:**
+**Insight:** 
 
 *Source: [Pattern Breakers: How to find a breakthrough startup idea | Mike Maples, Jr. (Founding Partner at Floodgate, ex-Product at Silicon Graphics)](https://www.youtube.com/watch?v=h9o6gPQA6LA) @ 01:34:58*
 
@@ -785,7 +785,7 @@
 
 ## Nancy Duarte
 
-**Insight:**
+**Insight:** 
 
 *Source: [Storytelling with Nancy Duarte: How to craft compelling presentations and tell a story that sticks](https://www.youtube.com/watch?v=-kHkWgjGD7U) @ 01:01:12*
 
@@ -888,7 +888,7 @@
 
 ## Sam Schillace
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to be more innovative | Sam Schillace (Microsoft deputy CTO, creator of Google Docs)](https://www.youtube.com/watch?v=IOWDoDpQ7Xg) @ 01:13:09*
 
@@ -920,7 +920,7 @@
 
 ## Scott Belsky
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons on building product sense, navigating AI, optimizing the first mile, and making it through the messy middle | Scott Belsky (Adobe, Behance)](https://www.youtube.com/watch?v=HCKosdV1J-8) @ 00:50:20*
 
@@ -928,7 +928,7 @@
 
 ## Shishir Mehrotra
 
-**Insight:**
+**Insight:** 
 
 *Source: [The rituals of great teams | Shishir Mehrotra of Coda, YouTube, Microsoft](https://www.youtube.com/watch?v=7uSuMIJhONA) @ 00:43:00*
 
@@ -1039,3 +1039,4 @@
 *Source: [The engineering mindset | Will Larson (Carta, Stripe, Uber, Calm, Digg)](https://www.youtube.com/watch?v=Z9ftpRhRiJE) @ 00:08:33*
 
 ---
+

@@ -18,7 +18,7 @@ would materially change the result.
 
 ### 1. Gather context
 
-Work from whatever is already in the conversation context. If the user passes a reference (a spec path, an issue number or URL) as an argument, fetch it and read its full body and comments.
+Work from whatever is already in the conversation context. If the user passes a reference (a spec path, an issue number or URL) as an argument, fetch it and read its full body and comments. If the source is an existing issue, record it as the parent of the new tickets. Parent-child hierarchy does not make that issue a blocker: add a blocking edge only when its unfinished work genuinely gates a child.
 
 ### 2. Explore the codebase (optional)
 
@@ -57,24 +57,26 @@ Ask the user:
 - Are the blocking edges correct: does each ticket only depend on tickets that genuinely gate it?
 - Should any tickets be merged or split further?
 
-Iterate until the user approves the breakdown.
+Iterate until the user approves the breakdown. Reuse an existing approval of the same breakdown and publication scope; ask again only when a material change needs a new decision.
 
 ### 5. Publish the tickets to the configured tracker
 
 Publish the approved tickets. **How** depends on the tracker discovered from repository evidence; the tickets are the same either way, only the shape of the blocking edges changes:
 
 - **Local files** → write one file per ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01` in dependency order (blockers first). Each file's "Blocked by" lists the numbers/titles it depends on. Use the per-ticket file template below: one ticket per file, never a single combined file.
-- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking / sub-issue relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues. Apply an existing `ready-for-agent` label when the repository already defines it; do not create new labels as part of this skill.
+- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use native blocking relationships for actual dependencies. When the source is an existing issue and the approved publication scope includes the parent-child relationship, also make each ticket its sub-issue using the configured tracker operation. Verify each native relationship by reading it back; a creation URL alone does not establish the edge. Omit the body's "Blocked by" section only after the matching native blocking edges are confirmed. Where the tracker lacks native hierarchy, put `Part of #<parent>` in each child body; where it lacks blocking relationships, retain the text blockers. Diagnose failed operations rather than treating permission, authentication, or network failures as proof that a feature is unsupported. Do not create duplicate tickets on a failed relationship write. Apply an existing `ready-for-agent` label when the repository already defines it; do not create new labels as part of this skill.
 
 Work the **frontier**: any ticket whose blockers are all done. For a purely linear chain that means top to bottom.
 
-Do NOT close or modify any parent issue.
+Reading the parent and attaching approved sub-issues are allowed within the authorized scope. Do not close the parent or rewrite its body, labels, or status unless separately authorized.
 
 <local-ticket-template>
 
 # <NN>: <Ticket title>
 
 **What to build:** the end-to-end behaviour this ticket makes work, from the user's perspective, not a layer-by-layer implementation list.
+
+**Part of:** the source parent issue reference, if there is one; otherwise omit this line.
 
 **Blocked by:** the numbers/titles of the tickets that gate this one, or "None (can start immediately)".
 
@@ -102,7 +104,7 @@ The end-to-end behaviour this ticket makes work, from the user's perspective, no
 
 ## Blocked by
 
-- A reference to each blocking ticket, or "None (can start immediately)".
+- A reference to each blocking ticket, or "None (can start immediately)". Omit this section only when the native blocking edges have been confirmed.
 
 </issue-template>
 

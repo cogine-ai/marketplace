@@ -1,0 +1,3720 @@
+{
+  "date": "2026-10-08",
+  "package_version": "0.2.3",
+  "marketplace_base": "3e10d463069a5972f75b53aa699f5d03ca7d5fdc",
+  "approved_decision_ledger_sha256": "6f94c6c46afbb996a6155b8df0134612c28ea6cc6acb2f6838d9d4e20d9e198a",
+  "verification_boundary": "Raw bytes, local file hashes and source mappings. Adapted files are not whole-file sync claims; method references are not a vendored runtime. Tests or documentation do not prove publication, installation or a live external write.",
+  "entries": [
+    {
+      "id": "coding-engineer-skills/ai-app-security-audit",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine primary a823→f5f45fa整目录0delta。; GStack secondary4a3→db745：CSO报告显式区分complete/partial/not assessed，空结果只在实际评估scope成立；latest变化主要是launcher模板/文案收敛。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "ed34077447373cafa75753436c7224b9ac863d2af6f90fd594ef9480bb867d9a",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/ai-app-security-audit/SKILL.md",
+              "source_sha256": "bea58972cbbe4eb2b382c19d4dbd41d8bb8255093a6b7213a801b38802752eed",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/ai-app-security-audit/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "b99d8e9b4f937004df59d2a2e20f2902e82cf7b45d2a4a9a55fabeb7d7dadfaf",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/ai-app-security-audit/agents/openai.yaml",
+              "source_sha256": "b99d8e9b4f937004df59d2a2e20f2902e82cf7b45d2a4a9a55fabeb7d7dadfaf",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/ai-app-security-audit/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "主源正文已一致；保留本地短 trigger/metadata",
+        "GStack 是方法参考，完整模板带平台 runtime，不能作为 fork 更新覆盖"
+      ],
+      "method_reference": {
+        "relationship": "secondary method reference, not an upstream fork/snapshot",
+        "repository": "garrytan/gstack",
+        "baseline": "4a3c6a8a3cad82cfffdaa4d152e1c5ae5c4af659",
+        "HEAD": "db745675bdf9f575276db2dcd132d3c047218a12",
+        "portable_scope_to_adapt": "完整/部分/未评估和审计范围缺口；不搬 CSO runner、扫描器、helper 或 profile"
+      },
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/backlog-ready-spec",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine primary a823→f5f45fa整目录0delta；本地仍有更强issue-data trust/failed lookup/readiness overlay。; GStack secondary4a3→db745的gate-and-file support新改动把自由文本一次写入private file，同一sanitized body用于review、授权issue传输和archive，避免shell自由文本展开。; 传输成功不能代替spec质量验收属于上游既有quality gate思路的本地缺口，不能声称是此次新commit功能。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "3825e832c6af5fd32b6355e8d670b7d8e4a26267a3f0e0c981d8df828ecb22d2",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/backlog-ready-spec/SKILL.md",
+              "source_sha256": "f1eb5f45e7b2123b49e636a3d827d6bd79dded617c086abbc9876307d64c32cb",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/backlog-ready-spec/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "bf97bab34294967b9cb9f2140711f62fce63f461869b657642fb45d23e4c8429",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/backlog-ready-spec/agents/openai.yaml",
+              "source_sha256": "bf97bab34294967b9cb9f2140711f62fce63f461869b657642fb45d23e4c8429",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/backlog-ready-spec/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "默认草稿、dedupe/readiness、来源/状态边界和外发授权 overlay",
+        "GStack 是方法参考；不搬 gate helper/regex/multi-archive/自动发布"
+      ],
+      "method_reference": {
+        "relationship": "secondary method reference, not an upstream fork/snapshot",
+        "repository": "garrytan/gstack",
+        "baseline": "4a3c6a8a3cad82cfffdaa4d152e1c5ae5c4af659",
+        "HEAD": "db745675bdf9f575276db2dcd132d3c047218a12",
+        "portable_scope_to_adapt": "同一最终脱敏工件用于审查和已授权传输；自由文本用结构化参数/正文文件；质量、传输、远程读回分开"
+      },
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/code-review",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "3da8c01 要求实际搜集所有规范文件；CODING_STANDARDS/CONTRIBUTING存在时必须进入Standards材料。; 两个reviewer同时发起且在前台等待收集；tracker文档由实际配置提供，不再单凭固定路径缺失判定未setup。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "77f4c8936e9de797a21200658086f0c868f4ec7a5bb6fa0dd3910429a9c7ae98",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/code-review/SKILL.md",
+              "source_sha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/code-review/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/code-review/SKILL.md",
+              "source_byte_range_half_open": [
+                2012,
+                4563
+              ],
+              "local_byte_range_half_open": [
+                2226,
+                4777
+              ],
+              "sha256": "98dd6d184b0357b2b3c87fb160834cd5af0597111fcf7ef53c83c8d374a06ef8"
+            },
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/code-review/SKILL.md",
+              "source_byte_range_half_open": [
+                4605,
+                4700
+              ],
+              "local_byte_range_half_open": [
+                4819,
+                4914
+              ],
+              "sha256": "fde3ea9c8ee5234562b680b6bcf582cdac63fb4bdac6e3ad715a75a505bfadba"
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/code-review/agents/openai.yaml",
+              "source_sha256": "8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/code-review/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "frontmatter 的 committed-only 触发边界，源描述包括 work-in-progress",
+        "Coding namespace 的 setup 调用",
+        "tracker 的本地默认位置与可发现位置不能因同步被改成重复 setup"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/codebase-design",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "d80fa0f只把DESIGN-IT-TWICE.md中的领域术语文件从CONTEXT改为GLOSSARY；SKILL正文未变。",
+      "files": [
+        {
+          "path": "DEEPENING.md",
+          "local_sha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/codebase-design/DEEPENING.md",
+              "source_sha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/codebase-design/DEEPENING.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "DESIGN-IT-TWICE.md",
+          "local_sha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
+              "source_sha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/codebase-design/SKILL.md",
+              "source_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/codebase-design/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/codebase-design/agents/openai.yaml",
+              "source_sha256": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/codebase-design/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/cogine-multirepo-worker",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Auto Agents同baseline→HEAD目录0delta。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "937f688fdea32c004da6c196a85030f18b9dee26466dddbbdc64960d3403c6b6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "7d7f0dada00d163efc557aca141345c3e942ec9f",
+              "source_path": "skills/cogine-multirepo-worker/SKILL.md",
+              "source_sha256": "777e0bedc8bf7e24d4ae857fa4cbd3d1027a2202f5463801f582f360bdc4b28b",
+              "source_url": "https://github.com/cogine-ai/auto-agents/blob/7d7f0dada00d163efc557aca141345c3e942ec9f/skills/cogine-multirepo-worker/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "0dfeeb107545f005aa5504421ac7c6824927fc0cee4439ed4864fef803111345",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "7d7f0dada00d163efc557aca141345c3e942ec9f",
+              "source_path": "skills/cogine-multirepo-worker/agents/openai.yaml",
+              "source_sha256": "4be494ccc517760c1464eff86612f6e7324a236c308f282f207cbe7e228618d8",
+              "source_url": "https://github.com/cogine-ai/auto-agents/blob/7d7f0dada00d163efc557aca141345c3e942ec9f/skills/cogine-multirepo-worker/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/cogine-orchestrator",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Auto Agents有效f3c21→latest7d7f0目录0file delta/0path commit。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "cc388cd76b8f8fc83c133b745811a5905f1afc29d659ffdfc3717ff86d8f3772",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "7d7f0dada00d163efc557aca141345c3e942ec9f",
+              "source_path": "skills/cogine-orchestrator/SKILL.md",
+              "source_sha256": "77459d3f5ed6082956a5ecb62972b8b5710e33adc7c7fcc34cea5e9ec9f15a80",
+              "source_url": "https://github.com/cogine-ai/auto-agents/blob/7d7f0dada00d163efc557aca141345c3e942ec9f/skills/cogine-orchestrator/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "7955d88f95abb641f0637cb149d211261111d52430969db0e43f2ea67b6d7ca8",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "7d7f0dada00d163efc557aca141345c3e942ec9f",
+              "source_path": "skills/cogine-orchestrator/agents/openai.yaml",
+              "source_sha256": "8e1bb726d35103f2e968f35548d459478c28c10d95add9f9dc0cc1bb4d5c696e",
+              "source_url": "https://github.com/cogine-ai/auto-agents/blob/7d7f0dada00d163efc557aca141345c3e942ec9f/skills/cogine-orchestrator/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/cogine-power-gates",
+      "maintenance_decision": "unverified-upstream",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "没有远端source_repo/path/commit：只记录Cogine global snapshot；不能得出远端无变化。; 当前~/.codex/skills/cogine-power-gates正文与包相同，仅description不同；本机mtime不作版本证据。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "25552aef797946c79e507ece159e4f3a532550e10d2bdde6790b90f96a0554d0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "3833d1240068c73f0db74a143c4a930a02662c1cf73c97a68823e04381db861b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/examples.md",
+          "local_sha256": "401f2243596020ac62c82930c9f50b325916543aaf962decdfdd9bc65ee9cb48",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/gate-reports.md",
+          "local_sha256": "1289511b8cce6b729884feaca76635be622412ab22c56be203bde0cc507f810f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "references/task-modes.md",
+          "local_sha256": "2979b1f6a79b6f292da0382fbb780b662be860b7b8b478075da08cc2008fedcf",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/devex-review",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine primary0delta；GStack secondary仅把eval slug helper换--get SLUG，没有新的DX行为。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "88a496a4ae45b8d9d53c87710fc2dc60910bcb8e2ca6228ce71f2dc45163c312",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/devex-review/SKILL.md",
+              "source_sha256": "5a0d10a3706882d2063065de49acd1cb7cb51efa36be1928e404f75056546bcc",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/devex-review/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "b88e6968cc5f3ac01b0771ae047fabb483fb83f05ab7d86a0a378e923cb59e75",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/devex-review/agents/openai.yaml",
+              "source_sha256": "b88e6968cc5f3ac01b0771ae047fabb483fb83f05ab7d86a0a378e923cb59e75",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/devex-review/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/diagnosing-bugs",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "f3fc563 在强制mutation制造red时，必须和pristine copy做diff证明mutation真正落地，才信任失败。; d80fa0f把code exploration领域文件名称改为GLOSSARY。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/diagnosing-bugs/SKILL.md",
+              "source_sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/diagnosing-bugs/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
+              "source_sha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/diagnosing-bugs/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/hitl-loop.template.sh",
+          "local_sha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+              "source_sha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/domain-modeling",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "d80fa0f全面改CONTEXT/GLOSSARY、CONTEXT-MAP/GLOSSARY-MAP；CONTEXT-FORMAT.md重命名为GLOSSARY-FORMAT.md。",
+      "files": [
+        {
+          "path": "ADR-FORMAT.md",
+          "local_sha256": "62cad402bec5e6bf10b6eca047e6ca9dc7e18efb1ba898e0ac666784c781a06b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+              "source_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/domain-modeling/ADR-FORMAT.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "GLOSSARY-FORMAT.md",
+          "local_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+              "source_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "b722aa8de206dc2d5835340f5d0e26a591baf980738603595af74a54257ca269",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/domain-modeling/SKILL.md",
+              "source_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/domain-modeling/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/domain-modeling/agents/openai.yaml",
+              "source_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/domain-modeling/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "写前解析 active context、只写所选上下文的领域文档与 context ADR、根 ADR 限 system-wide",
+        "ADR-FORMAT 四位补零；源仍未补零",
+        "GLOSSARY 名称跟进须保留多上下文选择约束，不能把源单根文档写入规则覆盖本地修复"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/fix-ci",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine a823→HEAD改PR checks/external link来源，但本地SKILL与最新Cogine字节完全一致。; Cursor team-kit c1c0a3→d0ef80该路径0delta。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "925f8c3e11de8bcc0cd015ec907f4d00b12cde6714246554ed3a52e096536522",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/fix-ci/SKILL.md",
+              "source_sha256": "925f8c3e11de8bcc0cd015ec907f4d00b12cde6714246554ed3a52e096536522",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/fix-ci/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "22087f847f1203187d08008df041431ac2758c65850d099e8968ee4032db76fe",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/fix-merge-conflicts",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "daa01d8于9月24日删除resolving-merge-conflicts的SKILL和openai.yaml；没有该路径的新算法。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "c8908f1ba68732fce0abaa0cd48e25a5dcb98d082b98403f7a30487199998199",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "cc8600b385e015c8513faa3a80abcb9e1e04a80441d143b76f5767703e586b33",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": true
+    },
+    {
+      "id": "coding-engineer-skills/frontend-design",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "有效selective85cce03→最新6eb6a30完整frontend目录0delta；无support新增。",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "local_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "6eb6a30bf024b182d418d3bbd11f156e360365af",
+              "source_path": "plugins/frontend-design/skills/frontend-design/LICENSE.txt",
+              "source_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+              "source_url": "https://github.com/anthropics/claude-plugins-official/blob/6eb6a30bf024b182d418d3bbd11f156e360365af/plugins/frontend-design/skills/frontend-design/LICENSE.txt",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "0495c2d0a26a9b2cbc10c4dd52f264a4cf53b0ebf45f66d012db9b337d84c290",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "6eb6a30bf024b182d418d3bbd11f156e360365af",
+              "source_path": "plugins/frontend-design/skills/frontend-design/SKILL.md",
+              "source_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+              "source_url": "https://github.com/anthropics/claude-plugins-official/blob/6eb6a30bf024b182d418d3bbd11f156e360365af/plugins/frontend-design/skills/frontend-design/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "160dbe1b40f2102fbe1be5077af7038412a81418dd16a7edfb4a4613578c6690",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/grilling",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "95249b0增加每个问题写法使yes表示接受推荐方案；其余图式question frontier/subagent fact discovery未变。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/productivity/grilling/SKILL.md",
+              "source_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/productivity/grilling/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/productivity/grilling/agents/openai.yaml",
+              "source_sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/productivity/grilling/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/implement",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "6d6a5b9 用户传ticket引用时先读取tracker内容并报title；含糊引用需澄清。; e483/04320 明确用Skill tool调用tdd和code-review。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "a37ed85b336d6835a394c7997d3a0fd9017bc40f438d2df2359216b971a44605",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/implement/SKILL.md",
+              "source_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/implement/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/implement/SKILL.md",
+              "source_byte_range_half_open": [
+                198,
+                342
+              ],
+              "local_byte_range_half_open": [
+                198,
+                342
+              ],
+              "sha256": "ab56d9b86b53beb44d0f3297399680de867b1db3cad21ffe67e7d44c9057fdb6"
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/implement/agents/openai.yaml",
+              "source_sha256": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/implement/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "namespaced tdd 调用",
+        "提交前 against originating spec/standards 的本地自审；源改为直接调用固定提交 code-review，两者执行边界不同"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/improve-codebase-architecture",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "d80fa0f只把术语消费/新增术语落盘目标从CONTEXT改成GLOSSARY；HTML-REPORT和agent元数据无上游delta。",
+      "files": [
+        {
+          "path": "HTML-REPORT.md",
+          "local_sha256": "c1f0343bfdaee8711be2357dbcb528438dd309407b413edbb517206dc5e6d5c3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/improve-codebase-architecture/HTML-REPORT.md",
+              "source_sha256": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/improve-codebase-architecture/HTML-REPORT.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "ddf0705b2e78fd7abd2c8dca12dfb7a1cb6c64c81d3aa8cfd64846c3ff7850ab",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/improve-codebase-architecture/SKILL.md",
+              "source_sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/improve-codebase-architecture/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/improve-codebase-architecture/agents/openai.yaml",
+              "source_sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/improve-codebase-architecture/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "namespaced codebase-design/grilling/domain-modeling 调用",
+        "active context 和 context/root ADR 选择",
+        "独占安全临时文件、绝对路径引用、CDN 网络说明",
+        "HTML-REPORT.md 的仓库内容 HTML escaping 与 Mermaid strict security mode"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/local-ultra-review",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine primary4文件改posting默认none+授权复用；本地已覆盖。",
+      "files": [
+        {
+          "path": "README.md",
+          "local_sha256": "b714d18e1e1c5f75f300098100f1428da6c305bc54f8f15e6437c49b2c143deb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/README.md",
+              "source_sha256": "f732c4ae2fba14f97436027236be2e4a981bd85ca22c035b04d07508288ab7f5",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/README.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "5e7f61754bfbe5d2f299825de2a65a969a87054d9bf732914f2b937b2e8b9285",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/SKILL.md",
+              "source_sha256": "7db389d2d917cb598ceeb05611f9c4619a6f3a1129b226cd8cd67d022f6a79d9",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "27bc519ba8d44f4cc41583506c330ca0806ba9fd1c0e3d3ea685c7d7cea4a523",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/agents/openai.yaml",
+              "source_sha256": "27bc519ba8d44f4cc41583506c330ca0806ba9fd1c0e3d3ea685c7d7cea4a523",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "config/default.yaml",
+          "local_sha256": "fea5e1f7679a058e8ddc9359c32eed1934e9ec1068fbd3bf01cbb2014e0738a0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/config/default.yaml",
+              "source_sha256": "fea5e1f7679a058e8ddc9359c32eed1934e9ec1068fbd3bf01cbb2014e0738a0",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/config/default.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "config/ignore.yaml",
+          "local_sha256": "cd9e4a095383ecb5c47e195f55b11eb1021ce2a1fc936dd771e2fd3db552d4a9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/config/ignore.yaml",
+              "source_sha256": "cd9e4a095383ecb5c47e195f55b11eb1021ce2a1fc936dd771e2fd3db552d4a9",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/config/ignore.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "config/severity.yaml",
+          "local_sha256": "db65ad73515e6334a5c63a5eee60fbe9badf9d00729794314ba70d4bc83b41d4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/config/severity.yaml",
+              "source_sha256": "db65ad73515e6334a5c63a5eee60fbe9badf9d00729794314ba70d4bc83b41d4",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/config/severity.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "examples/sample-candidate-findings.jsonl",
+          "local_sha256": "2f5b375b25c5031867ba434580be366b38bbfaac1bf3044fbc6acc10a0a78904",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/examples/sample-candidate-findings.jsonl",
+              "source_sha256": "2f5b375b25c5031867ba434580be366b38bbfaac1bf3044fbc6acc10a0a78904",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/examples/sample-candidate-findings.jsonl",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "examples/sample-github-pr-comment.md",
+          "local_sha256": "6373e6156b48c05b8d7b4ee74137a04f16e451fd53635d3eef1db51e5ac8fda6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/examples/sample-github-pr-comment.md",
+              "source_sha256": "6373e6156b48c05b8d7b4ee74137a04f16e451fd53635d3eef1db51e5ac8fda6",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/examples/sample-github-pr-comment.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "examples/sample-report.md",
+          "local_sha256": "9a63405070dbed486f6022ec7824f8bf6b3a257bb46c856125f190e166c62b8d",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/examples/sample-report.md",
+              "source_sha256": "9a63405070dbed486f6022ec7824f8bf6b3a257bb46c856125f190e166c62b8d",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/examples/sample-report.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "examples/sample-verified-findings.json",
+          "local_sha256": "9d098abc4d09e369378f135cba25071ef9784c2a35d5ef421dae8cee3389cad6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/examples/sample-verified-findings.json",
+              "source_sha256": "56d79c821c8fdea49ef0daf57ee9521201908344b01ada40b28f880f6c9063a1",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/examples/sample-verified-findings.json",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "examples/sample-verifier-verdicts.jsonl",
+          "local_sha256": "65575e8f53c46bdefb209b8b8d443a1c767ca15821402762154f1c0221e40c7e",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "prompts/00-review-contract.md",
+          "local_sha256": "ddf0fb1410148dee0a83a5dd804ffc6318bad1b0b41ed16af6889b0a7ad7ef13",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/00-review-contract.md",
+              "source_sha256": "6cc75858ea6643fbd464edf6511cef83bea17b9b8342e593211ca6a8b5d97abe",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/00-review-contract.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "prompts/01-impact-mapper.md",
+          "local_sha256": "95c071f9612ddabf5daf7bf7e00b35e884e0a53ce85bd2325730385006685b61",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/01-impact-mapper.md",
+              "source_sha256": "95c071f9612ddabf5daf7bf7e00b35e884e0a53ce85bd2325730385006685b61",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/01-impact-mapper.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/02-reviewer-correctness.md",
+          "local_sha256": "1ccb7088a04434346d6f3e9cc2f4d14e53eb0de9a3c0f52f8c7216696ac84f3a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/02-reviewer-correctness.md",
+              "source_sha256": "1ccb7088a04434346d6f3e9cc2f4d14e53eb0de9a3c0f52f8c7216696ac84f3a",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/02-reviewer-correctness.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/03-reviewer-security.md",
+          "local_sha256": "881a2aa088f1e935cbb34923d3e9390ce7866b463bb731764460d59a41f81fd4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/03-reviewer-security.md",
+              "source_sha256": "881a2aa088f1e935cbb34923d3e9390ce7866b463bb731764460d59a41f81fd4",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/03-reviewer-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/04-reviewer-integration.md",
+          "local_sha256": "d2a3a851b115e6d891dc3ab0950efda5785f19de536a01b7c871e036ced9beb5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/04-reviewer-integration.md",
+              "source_sha256": "d2a3a851b115e6d891dc3ab0950efda5785f19de536a01b7c871e036ced9beb5",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/04-reviewer-integration.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/05-reviewer-state-concurrency.md",
+          "local_sha256": "6a6675c09afea5b1efe8d280082556c6060f2310c1cd23d2af0e7b5e313ae3ce",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/05-reviewer-state-concurrency.md",
+              "source_sha256": "6a6675c09afea5b1efe8d280082556c6060f2310c1cd23d2af0e7b5e313ae3ce",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/05-reviewer-state-concurrency.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/06-reviewer-tests.md",
+          "local_sha256": "ca887472fec4939663b4d636e664d919924bfd15ce25abdcdd3b8152e5aa4b17",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/06-reviewer-tests.md",
+              "source_sha256": "ca887472fec4939663b4d636e664d919924bfd15ce25abdcdd3b8152e5aa4b17",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/06-reviewer-tests.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/07-verifier.md",
+          "local_sha256": "b55d5b84d92161007aad6a923d464527c5ccc5173c23ac39f87aab352d6b8832",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/07-verifier.md",
+              "source_sha256": "efd434a4e31c9ece97f10fbbe8a9ea2095d8fb5f58a0d0d5a9bd0c23d23af3fd",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/07-verifier.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "prompts/08-dedupe-ranker.md",
+          "local_sha256": "4697b8a02dcac818d9330e1f9e18027b3ffe015cde23ab4dc8feed901dd52bb3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/08-dedupe-ranker.md",
+              "source_sha256": "4697b8a02dcac818d9330e1f9e18027b3ffe015cde23ab4dc8feed901dd52bb3",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/08-dedupe-ranker.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "prompts/09-final-report.md",
+          "local_sha256": "4bc06d2cfe8ef9b2c0a3b8ec84728484a2c0fc0ff3216e317615e5bc8725f25f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/prompts/09-final-report.md",
+              "source_sha256": "4bc06d2cfe8ef9b2c0a3b8ec84728484a2c0fc0ff3216e317615e5bc8725f25f",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/prompts/09-final-report.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "schemas/candidate-finding.schema.json",
+          "local_sha256": "388d7e72a7da127838368e7e51b65a07a69e4d6d92ed0404d15ddd23469eedef",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/schemas/candidate-finding.schema.json",
+              "source_sha256": "b959bbc399d59e4aca8e228e001d6185e46d6612e3747139cfc19aaf46ccb815",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/schemas/candidate-finding.schema.json",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "schemas/pr-context.schema.json",
+          "local_sha256": "304010fb44427249ea1ff37c3c3d153404da5bb8d0f526d4fd5faadc2f77bef2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/schemas/pr-context.schema.json",
+              "source_sha256": "304010fb44427249ea1ff37c3c3d153404da5bb8d0f526d4fd5faadc2f77bef2",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/schemas/pr-context.schema.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "schemas/review-bundle.schema.json",
+          "local_sha256": "72fc2c5027163056c84bf4385aa7a83e49191459a639cd15341601c6a6e4c908",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/schemas/review-bundle.schema.json",
+              "source_sha256": "72fc2c5027163056c84bf4385aa7a83e49191459a639cd15341601c6a6e4c908",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/schemas/review-bundle.schema.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "schemas/reviewer-completion.schema.json",
+          "local_sha256": "48474f87b45cd93bc5096fe9b90f831521cb97d2e666c07ca7271a13041e0c52",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "schemas/verified-finding.schema.json",
+          "local_sha256": "fcb92556c33756bcb39fb875ee24b5a0510e10d43de77e9256a5d872abf8136d",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/schemas/verified-finding.schema.json",
+              "source_sha256": "8ed46a30fac53d1488bfc0b5b3864dc8b6ff73906626afaf111deacce13efb6b",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/schemas/verified-finding.schema.json",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "schemas/verifier-completion.schema.json",
+          "local_sha256": "59ad715aa0e4a5d94d0b4685f891c6e29ee44b03c2c8d12d2d52631f5b88beb7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "schemas/verifier-verdict.schema.json",
+          "local_sha256": "fa36fea7b880bf37c255fba95b5e539de5ca2c2af0c7d08edfac8c3154ac04e3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "scripts/cleanup.sh",
+          "local_sha256": "003b5acb0673d617fc44357f761e2b1b79a41eff90022272c3fd3358a07378c2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/cleanup.sh",
+              "source_sha256": "003b5acb0673d617fc44357f761e2b1b79a41eff90022272c3fd3358a07378c2",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/cleanup.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/collect-context.py",
+          "local_sha256": "e2d8ec8e288003837bec4c87f2e631f69febbdfcfcdc0d6b250131107d1b32bd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/collect-context.py",
+              "source_sha256": "e2d8ec8e288003837bec4c87f2e631f69febbdfcfcdc0d6b250131107d1b32bd",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/collect-context.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/collect-diff.sh",
+          "local_sha256": "f00c8e2da10ca702bb124e781de63c7b70b26458b7627f13f1c97ed467439bc6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/collect-diff.sh",
+              "source_sha256": "f00c8e2da10ca702bb124e781de63c7b70b26458b7627f13f1c97ed467439bc6",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/collect-diff.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/collect-pr-context.py",
+          "local_sha256": "11e69b6e78dea7fbce4b8eb2f57761c3aabad44664d9c7270a16e54c88229e4c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/collect-pr-context.py",
+              "source_sha256": "11e69b6e78dea7fbce4b8eb2f57761c3aabad44664d9c7270a16e54c88229e4c",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/collect-pr-context.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/collect-tests.py",
+          "local_sha256": "fb483a30e94a24b60bcff30b6dc8b06441af2c43b5b26cad64a749dde2f92ffd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/collect-tests.py",
+              "source_sha256": "fb483a30e94a24b60bcff30b6dc8b06441af2c43b5b26cad64a749dde2f92ffd",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/collect-tests.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/dedupe-rank.py",
+          "local_sha256": "b484ca31252af5735b69e2ad2a891b56822432e205081ca529b12966ea076271",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/dedupe-rank.py",
+              "source_sha256": "b484ca31252af5735b69e2ad2a891b56822432e205081ca529b12966ea076271",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/dedupe-rank.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/detect-target.sh",
+          "local_sha256": "4dbe2bd1052824b2cb352111032b3e624710c932a32a36b8415d3fe3593bb657",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/detect-target.sh",
+              "source_sha256": "994f59f679b46f4ae8739ad04100864acd47688c9d7609a1f222966bfd89d73e",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/detect-target.sh",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/ensure-local-ignore.sh",
+          "local_sha256": "6135abaa38dd06b2194b712c9e1710332077cb4da8ab9a775bb02d9f9127c4c1",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/ensure-local-ignore.sh",
+              "source_sha256": "6135abaa38dd06b2194b712c9e1710332077cb4da8ab9a775bb02d9f9127c4c1",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/ensure-local-ignore.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/execution_state.py",
+          "local_sha256": "d63bab150164ac9a542b73de0bfc21d0129765a1059ba77f7d180315e98cc226",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "scripts/finalize-session.sh",
+          "local_sha256": "42bea91078a4cd6350e121497c9e40ca45bfad7b8c6bc2cdeef602dd48546d52",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/finalize-session.sh",
+              "source_sha256": "cdacd0e90ff18dcaf29043b0f03c690818b2c4497f5f9fe8668fbbdb24990cd6",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/finalize-session.sh",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/post-github-review.py",
+          "local_sha256": "7402be4a228cafe76bf125208a39f50723b96ee121d601423f09896080df5810",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/post-github-review.py",
+              "source_sha256": "c005da8b185bfd05c55ca7137c31f3d73a885eb0fbe69594ef0019201b703cfb",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/post-github-review.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/post-github-summary.py",
+          "local_sha256": "a1b375915463759942dac61b8cbd1dd556f4bf1287045b22211661654e9760ab",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/post-github-summary.py",
+              "source_sha256": "b9b9b7566f06f144dd73888036e96157b002cf4c891291a550c70a3b9f1521e6",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/post-github-summary.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/preflight.sh",
+          "local_sha256": "0df73462c12f2de0ba2662c5c8e28f3770998d5c7cd8cd8b1ff310e214a407db",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/preflight.sh",
+              "source_sha256": "0df73462c12f2de0ba2662c5c8e28f3770998d5c7cd8cd8b1ff310e214a407db",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/preflight.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/prepare-pr-worktree.sh",
+          "local_sha256": "6ce9f7edfc34c06b2e79eebd89c344323ec8b4db8760368fc4b3bcdc1d241a0b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/prepare-pr-worktree.sh",
+              "source_sha256": "6ce9f7edfc34c06b2e79eebd89c344323ec8b4db8760368fc4b3bcdc1d241a0b",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/prepare-pr-worktree.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/prepare-worktree.sh",
+          "local_sha256": "6de268f7caee0543aabcd8cdd0a085127313bf7745c224ea93779cf102b3d303",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/prepare-worktree.sh",
+              "source_sha256": "6de268f7caee0543aabcd8cdd0a085127313bf7745c224ea93779cf102b3d303",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/prepare-worktree.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/render-github-summary.py",
+          "local_sha256": "084065cc0e3bedade9c9e4802aa9d1680592b07f6136ab3136f4530b90843805",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/render-github-summary.py",
+              "source_sha256": "9151a3075ef9a1a94961954054df8ac5aad69d019bca9ebbc85e95a93eb005a1",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/render-github-summary.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/render-report.py",
+          "local_sha256": "4c0059d0d4895f31a0d94275c5959c312aeed00ba81948e821768e93449e5afc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/render-report.py",
+              "source_sha256": "a4ac0f4070ca7ac0926a22f8c77f02bb3520a8d750c36fb6ac67464977ccd338",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/render-report.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/run-checks.sh",
+          "local_sha256": "a4e62c35e687be89f1847183393f03e4f324b0b712ca643086467ab30f82f465",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/run-checks.sh",
+              "source_sha256": "a4e62c35e687be89f1847183393f03e4f324b0b712ca643086467ab30f82f465",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/run-checks.sh",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/run-reviewers.py",
+          "local_sha256": "cbf1dfc9ab3b3e48fd43e72a779b46ab06d157830eed98c75068e288addb4b29",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/run-reviewers.py",
+              "source_sha256": "f4d04a15710a7431a9e428184526d308aa7e7670efcadfd9e9cddedb8cac86ed",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/run-reviewers.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/verify-findings.py",
+          "local_sha256": "0b6581dfc54a38101189cbbab3f410f740233a4df097d49098cc5fc265691fea",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/scripts/verify-findings.py",
+              "source_sha256": "8b2a0ad195e2fbc8094e07d4b9e05691b7371af371b289c15c31eaf728e7626e",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/scripts/verify-findings.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "templates/finding.md.j2",
+          "local_sha256": "ee3d276dcff15fb84ab190810c3e90a2a154a89b63e7c9afa37e5a2b5df9daad",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/templates/finding.md.j2",
+              "source_sha256": "ee3d276dcff15fb84ab190810c3e90a2a154a89b63e7c9afa37e5a2b5df9daad",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/templates/finding.md.j2",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "templates/github-comment.md.j2",
+          "local_sha256": "9e9064436c49923ab68186952279fdda724568fee3c610f9bfd4aaca6b2ed467",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/templates/github-comment.md.j2",
+              "source_sha256": "9e9064436c49923ab68186952279fdda724568fee3c610f9bfd4aaca6b2ed467",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/templates/github-comment.md.j2",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "templates/github-pr-comment.md.j2",
+          "local_sha256": "5e2ad8404ed209e711c38997baa25114dba7583f47ed4077102228ffc15f49cb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/templates/github-pr-comment.md.j2",
+              "source_sha256": "5e2ad8404ed209e711c38997baa25114dba7583f47ed4077102228ffc15f49cb",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/templates/github-pr-comment.md.j2",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "templates/report.md.j2",
+          "local_sha256": "f7cfbd9963969b4da76ba0128a0d0a3cfb83542e08ff6bfeb8c9eddf08e1d856",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/templates/report.md.j2",
+              "source_sha256": "f7cfbd9963969b4da76ba0128a0d0a3cfb83542e08ff6bfeb8c9eddf08e1d856",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/templates/report.md.j2",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "tests/test_pr_review_posting.py",
+          "local_sha256": "3bf68c688eb1b9d38eab6e97cd503a6aa9fe8ab2fd2137f3d26194dcf1d96124",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/tests/test_pr_review_posting.py",
+              "source_sha256": "fdef6f293ad0558563369fe03ba71503978b43c2ec2dafbd512754a8630b8af4",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/tests/test_pr_review_posting.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "tests/test_review_execution_contract.py",
+          "local_sha256": "2822f9ff06ea676f19dfcbe08921d0f38cf5f430d21724dc06d7fca2b902baf5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "tests/test_session_lifecycle.py",
+          "local_sha256": "e77b4e630359fe62d1929e12a012b00e5d3b07a453046a20859eb0e543a2378d",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/local-ultra-review/tests/test_session_lifecycle.py",
+              "source_sha256": "e77b4e630359fe62d1929e12a012b00e5d3b07a453046a20859eb0e543a2378d",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/local-ultra-review/tests/test_session_lifecycle.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/loop-on-ci",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine PR-check变更本地正文已完整覆盖，只不同short trigger/explicit-only metadata。; Cursor相应路径0delta。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "742cdb746c80641324a59d889719caed67ef1587fadc7e779def0cbc342904ec",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/loop-on-ci/SKILL.md",
+              "source_sha256": "66b85dbd2bc3700386283539292a55438652bbe227271fd90b73b74525b9b9de",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/loop-on-ci/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "70640cdcd625bf4db227e4185f341aea5f258d65da6dd2848aa5435555574dbc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/plan-devex-review",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine primary0delta；GStacksecondary新增完整time-to-useful-result clock，区分人类onboarding、cold setup与warm执行时钟。; docs缺失/摘要沉默不能推断行为缺失；persona narrative确认不是runtime观察。; 复用已选mode/approved exceptions；后续pass或outside voice不能重置批准scope；未知proof是验证工作，不擅自加政策。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "4c218a19b67a5272bd6788070decfb961e90d866ff063865e057423bcc8dc628",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/plan-devex-review/SKILL.md",
+              "source_sha256": "e76880fb728f7109120a0cf1e7c9773a7fff8493d1f6e7f8cc022c37741228e6",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/plan-devex-review/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "2cec33196a2743fac1a02a2e52292e2674936255eb435e578135870ae1ba1397",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/plan-devex-review/agents/openai.yaml",
+              "source_sha256": "2cec33196a2743fac1a02a2e52292e2674936255eb435e578135870ae1ba1397",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/plan-devex-review/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "主源正文已一致；保留本地短 trigger/metadata",
+        "GStack 8-pass/强制问答/helper/telemetry 不属于本地短审查契约"
+      ],
+      "method_reference": {
+        "relationship": "secondary method reference, not an upstream fork/snapshot",
+        "repository": "garrytan/gstack",
+        "baseline": "4a3c6a8a3cad82cfffdaa4d152e1c5ae5c4af659",
+        "HEAD": "db745675bdf9f575276db2dcd132d3c047218a12",
+        "portable_scope_to_adapt": "定义 persona、起点前提、首次有用结果及 observed/reported/estimated；区分 human/cold 与 automated/warm；沿用已接受 scope"
+      },
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/planmode-engineer",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine primary0delta；GStacksecondary把target reuse/host-vs-document trust、plan baseline与runtime evidence、reuse exact approvals、no new feature/tests/benchmark during review写明确。; support review-sections新增decision continuity与保存readback、blocked/not-persisted区别，并把复杂度计数限制为拟改/选择scope，不是读过多少文件。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "6a4fa0077029e7eee2d19bef3b2cb82b106168e61546356a4eda4121fe826151",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/planmode-engineer/SKILL.md",
+              "source_sha256": "fee1ff063692452a6f86265fe8094e1859a0af21e491ed13475eb01a2e944bbe",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/planmode-engineer/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "cf389bcb0818253a7ca9b8f5a614e0189be097aa7f8decfde88efd1a33b0a6bb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "主源正文已一致；保留本地短 trigger/metadata",
+        "GStack 交互交易/Brain/helper/ExitPlanMode 不是本地运行时"
+      ],
+      "method_reference": {
+        "relationship": "secondary method reference, not an upstream fork/snapshot",
+        "repository": "garrytan/gstack",
+        "baseline": "4a3c6a8a3cad82cfffdaa4d152e1c5ae5c4af659",
+        "HEAD": "db745675bdf9f575276db2dcd132d3c047218a12",
+        "portable_scope_to_adapt": "复用真实目标与已接受约束；计划推断与运行事实分开；只审查不擅自构建未来实现/benchmark；保留真实输出状态"
+      },
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/review-and-ship",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogineprimary增加scope context/target tests/parallel review/PR checks，但本地比最新source更完整，已有以上核心内容。; Cursor c1c0a3→HEAD该目录0delta。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "3dbc34acb5f45f353e5c44dc67088cca912414edaa422f8d53c19276bf262d11",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/review-and-ship/SKILL.md",
+              "source_sha256": "5c8e88c91e726e024c824d2b02be6bfc7ad81ac5e67c104ef2b66840715373c1",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/review-and-ship/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "9de687c41e0506662e969205b48753d7a51ef49d6e0c7e559a979b54877518f1",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/run-smoke-tests",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogineprimary与Cursor secondary路径都0delta；本地SKILL与CogineHEAD字节完全相同。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "848c9f34af50f8a0edecbdc239707b694f5f9ac497c61b5907f2bf0caa1372fb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/run-smoke-tests/SKILL.md",
+              "source_sha256": "848c9f34af50f8a0edecbdc239707b694f5f9ac497c61b5907f2bf0caa1372fb",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/run-smoke-tests/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "c96a3b53a04017656a3d18fd65e11e45f4355eed113e0a7d34eb4cc7663b885f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/security-best-practices",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "Cogine a823→HEAD整个skill目录0delta，framework references没有新增source delta。",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "local_sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/LICENSE.txt",
+              "source_sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/LICENSE.txt",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "d318312d077e8334fc34b6bb37a175af322fea77c6f6abfcdf65b3033f29c377",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/SKILL.md",
+              "source_sha256": "f86c2125865ba228c0034318cea328221e993609496b2f3bd6ce7bbc88d3ba59",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "b9e959f82d1a4c738b539560594bbe40bcab748ccaa1d43f8d00fbebf63a2b09",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/agents/openai.yaml",
+              "source_sha256": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "references/golang-general-backend-security.md",
+          "local_sha256": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/golang-general-backend-security.md",
+              "source_sha256": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/golang-general-backend-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/javascript-express-web-server-security.md",
+          "local_sha256": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/javascript-express-web-server-security.md",
+              "source_sha256": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/javascript-express-web-server-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/javascript-general-web-frontend-security.md",
+          "local_sha256": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/javascript-general-web-frontend-security.md",
+              "source_sha256": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/javascript-general-web-frontend-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/javascript-jquery-web-frontend-security.md",
+          "local_sha256": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/javascript-jquery-web-frontend-security.md",
+              "source_sha256": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/javascript-jquery-web-frontend-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/javascript-typescript-nextjs-web-server-security.md",
+          "local_sha256": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md",
+              "source_sha256": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/javascript-typescript-react-web-frontend-security.md",
+          "local_sha256": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/javascript-typescript-react-web-frontend-security.md",
+              "source_sha256": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/javascript-typescript-react-web-frontend-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/javascript-typescript-vue-web-frontend-security.md",
+          "local_sha256": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md",
+              "source_sha256": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/python-django-web-server-security.md",
+          "local_sha256": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/python-django-web-server-security.md",
+              "source_sha256": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/python-django-web-server-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/python-fastapi-web-server-security.md",
+          "local_sha256": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/python-fastapi-web-server-security.md",
+              "source_sha256": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/python-fastapi-web-server-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/python-flask-web-server-security.md",
+          "local_sha256": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/security-best-practices/references/python-flask-web-server-security.md",
+              "source_sha256": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/security-best-practices/references/python-flask-web-server-security.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/setup-matt-pocock-skills",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "5b7cade：GitHub issue读取改为明确JSON字段；GitLab list -F json改-O json并修正links API child iid。; 新增GitHub sub-issue操作；source曾不支持authorAssociation的外部PR查询修复已于e0efb采用REST author_association。; 新setup可创建缺失triage labels；d80fa0f领域seed迁移GLOSSARY。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "378f93e645437c4b017eb4b7bd2df501207829bf3fa8c57e733d7f1e12075f88",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+              "source_sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/agents/openai.yaml",
+              "source_sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "domain.md",
+          "local_sha256": "689b0fc2233065a7dc5c55512de1764e961c0bb6ff400dfd504b80bf3517950e",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/domain.md",
+              "source_sha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/domain.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "issue-tracker-github.md",
+          "local_sha256": "5a8f70be85f30742f7ae8070f9d7eacfe7211f5fa185a0f3138e28f444d138bc",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+              "source_sha256": "f0653fe106dd8ee7b33be27bd7fe3104b40555896cb45f61997aed20467020c3",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+              "source_byte_range_half_open": [
+                239,
+                327
+              ],
+              "local_byte_range_half_open": [
+                239,
+                327
+              ],
+              "sha256": "5e7639b9b369799a24d56acd5d9147edb6e773a17ba936eae1e0fcbe7c49844b"
+            }
+          ]
+        },
+        {
+          "path": "issue-tracker-gitlab.md",
+          "local_sha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+              "source_sha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "issue-tracker-local.md",
+          "local_sha256": "aa9d5636aa2e17d7b070598a5f8833fe0f368038c76ef627ab3942d191880019",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+              "source_sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "triage-labels.md",
+          "local_sha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+              "source_sha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "preserve 既有 multi-context map；monorepo 信号不能替代业务上下文判断",
+        "namespaced to-spec/to-tickets/domain-modeling 调用，已排除 grill-with-docs/wayfinder/triage",
+        "issue-tracker-local.md 的 issues/<NN>-<slug>.md 路径",
+        "GitHub seed 已有 REST author_association/comments 和 dependency 查询修复，不应整文件回退",
+        "新增 label 创建必须与 setup/发布授权区分；不能让票据发布自动创建新 label"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/shadcn",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "没记录exact commit但OpenAI build-web-apps当前仍0.1.2；最新目录13文件直接比较：11字节相同，其余SKILL/openai.yaml都为已记录本地适配。; source路径只在4月21/3月24改变，最新repo9月GitHubOAuth变化不涉及此路径。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "82786c9a3d4f822fef62d1b3cae9030138e43b5ee9bed84913d34a4f074d88aa",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/SKILL.md",
+              "source_sha256": "7678f5168d4ee6f3ae3ce4d3d41c654f0aebc7b88cbc392a9504822dec0dff28",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "056b3f2d0ee468d089a8b3374b19aac4bb50b81be0260833610a81677dbedf4f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/agents/openai.yaml",
+              "source_sha256": "35db91b1eef58b2abe01da9b88577de5a44e233b740cd93d692ddeeadd2afe4d",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "assets/shadcn-small.png",
+          "local_sha256": "0ecc62d682727f68fc4937eed19960c706714fa084d44f63028d611ae02bf3d7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/assets/shadcn-small.png",
+              "source_sha256": "0ecc62d682727f68fc4937eed19960c706714fa084d44f63028d611ae02bf3d7",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/assets/shadcn-small.png",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "assets/shadcn.png",
+          "local_sha256": "7d60ad6fec4d89a0d44ba5a3c9283d2fea0047af5467f9227040e20d927d39b7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/assets/shadcn.png",
+              "source_sha256": "7d60ad6fec4d89a0d44ba5a3c9283d2fea0047af5467f9227040e20d927d39b7",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/assets/shadcn.png",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "cli.md",
+          "local_sha256": "ba3bc1f4466daf1fafee42bc21b3a8b1d4fc76d4c109a7c936074d9cf8293c4b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/cli.md",
+              "source_sha256": "ba3bc1f4466daf1fafee42bc21b3a8b1d4fc76d4c109a7c936074d9cf8293c4b",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/cli.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "customization.md",
+          "local_sha256": "12e4d5fd4ae05ec4cef759035d3a70fec474d857298fe0a0effa8880112f8a54",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/customization.md",
+              "source_sha256": "12e4d5fd4ae05ec4cef759035d3a70fec474d857298fe0a0effa8880112f8a54",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/customization.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "evals/evals.json",
+          "local_sha256": "97ebb931d690578ee64e445d84f406be2a8799812d38d3cb1bb216e68291eb2b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/evals/evals.json",
+              "source_sha256": "97ebb931d690578ee64e445d84f406be2a8799812d38d3cb1bb216e68291eb2b",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/evals/evals.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "mcp.md",
+          "local_sha256": "03cf3e9ad820bb2922c19b50164070d5c4b324c12869275f79174ceec8b43b1c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/mcp.md",
+              "source_sha256": "03cf3e9ad820bb2922c19b50164070d5c4b324c12869275f79174ceec8b43b1c",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/mcp.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/base-vs-radix.md",
+          "local_sha256": "2b2deb47d004285220c1fc6b38bb2edc2d0ccbcdafd031b0b189d5d8ed0d1ba8",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/rules/base-vs-radix.md",
+              "source_sha256": "2b2deb47d004285220c1fc6b38bb2edc2d0ccbcdafd031b0b189d5d8ed0d1ba8",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/rules/base-vs-radix.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/composition.md",
+          "local_sha256": "de068e5aa5351dd8e4af7bfb7a6333302445c15527eaeee521d8591e95e7d709",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/rules/composition.md",
+              "source_sha256": "de068e5aa5351dd8e4af7bfb7a6333302445c15527eaeee521d8591e95e7d709",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/rules/composition.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/forms.md",
+          "local_sha256": "29593e14381e34626f8e0e9c15c59f3394b92a0623af6a6ec94585400123853c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/rules/forms.md",
+              "source_sha256": "29593e14381e34626f8e0e9c15c59f3394b92a0623af6a6ec94585400123853c",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/rules/forms.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/icons.md",
+          "local_sha256": "d4a58266648872d9ee07d0c2368843a1cb88b8253b7f528dd7bda9d68b6c2535",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/rules/icons.md",
+              "source_sha256": "d4a58266648872d9ee07d0c2368843a1cb88b8253b7f528dd7bda9d68b6c2535",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/rules/icons.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/styling.md",
+          "local_sha256": "4a71da3fc53d8efbedac26946e5b13b53d1edf71583d62088ccc2b8cc7b5fef7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+              "source_path": "plugins/build-web-apps/skills/shadcn-best-practices/rules/styling.md",
+              "source_sha256": "4a71da3fc53d8efbedac26946e5b13b53d1edf71583d62088ccc2b8cc7b5fef7",
+              "source_url": "https://github.com/openai/plugins/blob/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/build-web-apps/skills/shadcn-best-practices/rules/styling.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/tdd",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "3f5991要求每个proposed seam解释一行“捕获什么/漏掉什么”；d80fa0f领域术语文件更名。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "d62fb317b45ca78844cf4774dcbf3aa42bca26f53b1dbdb62afb68d3c316b133",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/tdd/SKILL.md",
+              "source_sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/tdd/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ],
+          "verified_raw_source_regions": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/tdd/SKILL.md",
+              "source_byte_range_half_open": [
+                1617,
+                1764
+              ],
+              "local_byte_range_half_open": [
+                1858,
+                2005
+              ],
+              "sha256": "68a0a52f8060daf535a8b4456773e76a8843d47de1ffa9c5f4eb86b70b53403a"
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/tdd/agents/openai.yaml",
+              "source_sha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/tdd/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "mocking.md",
+          "local_sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/tdd/mocking.md",
+              "source_sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/tdd/mocking.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "tests.md",
+          "local_sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/tdd/tests.md",
+              "source_sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/tdd/tests.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "namespaced codebase-design/code-review 调用",
+        "包装更新不应把已经约定的 seam 变成再次审批；原文 catches/misses 可保留"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/to-spec",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "有效3cca18b到最新HEAD，整条skill路径0file delta/0path commit。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "0549be8ad5c90c25ad6882e92e939dbc5ad091c24bb27e35ef53b06d1168c739",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-spec/SKILL.md",
+              "source_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-spec/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-spec/agents/openai.yaml",
+              "source_sha256": "1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-spec/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/to-tickets",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "cffab/9e2ab：若spec来源是现有issue，把child tickets设为parent的sub-issues；blocking edge与parent hierarchy分开。; 若native dependency已设，不再在body重复Blocked by。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "551553058f81c93b856525441a228ba67c8a84ba0fe7a1c9a1460a25c289ec9f",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-tickets/SKILL.md",
+              "source_sha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-tickets/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-tickets/agents/openai.yaml",
+              "source_sha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-tickets/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "explicit-only 与短触发，Coding/Product 自有 namespace 包装",
+        "repo tracker 发现、GitHub 默认、安全 local-files fallback",
+        "existing-label-only 发布",
+        "禁止 close/modify parent；源要求 native parent 关联，不能整正文覆盖",
+        "parent hierarchy 与 blocking 不同；仅关系操作已授权时才 native、并读回；已有授权直接复用"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/vercel-react-best-practices",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "没有已记录commit，历史精确delta不能断言；最新source vercel-labs/agent-skills HEAD063bee9已直接比完76文件。; 74文件字节相同；SKILL仅本地metadata/short-description变化，rules/_sections.md只尾随空格；70rules和AGENTS一致。; 该source目录最后commit dc8367e(4月14日)，7月22日以后路径无commit。",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "local_sha256": "fc93e7421177bbf869cce892bc60a6c83a4517d974bc3bf65c4e2c1e58a6ccf6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/AGENTS.md",
+              "source_sha256": "fc93e7421177bbf869cce892bc60a6c83a4517d974bc3bf65c4e2c1e58a6ccf6",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/AGENTS.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "README.md",
+          "local_sha256": "9eafb2123d3b8b2aef41fba0db2648a3f4f49996f8c7c8bb2c86263befd8b48a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/README.md",
+              "source_sha256": "9eafb2123d3b8b2aef41fba0db2648a3f4f49996f8c7c8bb2c86263befd8b48a",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/README.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "1cd730e571fac15b0a4a8ea00aeed3c6463810aa275ececf2c6facfaba17d482",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/SKILL.md",
+              "source_sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "3ea2b348274e067a45617f7c3514d3d61431680069b19588362f8524c4eef281",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "metadata.json",
+          "local_sha256": "c4e18bac3290fbe1b471a605867d4df68b03144ea26b8befdbe8f9d8fd124354",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/metadata.json",
+              "source_sha256": "c4e18bac3290fbe1b471a605867d4df68b03144ea26b8befdbe8f9d8fd124354",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/metadata.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/_sections.md",
+          "local_sha256": "01c59969e4e867f0708c8f8ef9c6d87fab9a07d0586244f429ff84013db8a115",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/_sections.md",
+              "source_sha256": "01c59969e4e867f0708c8f8ef9c6d87fab9a07d0586244f429ff84013db8a115",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/_sections.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/_template.md",
+          "local_sha256": "99df2a3ea088c6c22de2484ddc7e964d0e9923846f44c63380343ecc64455442",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/_template.md",
+              "source_sha256": "99df2a3ea088c6c22de2484ddc7e964d0e9923846f44c63380343ecc64455442",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/_template.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/advanced-effect-event-deps.md",
+          "local_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/advanced-effect-event-deps.md",
+              "source_sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/advanced-effect-event-deps.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/advanced-event-handler-refs.md",
+          "local_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/advanced-event-handler-refs.md",
+              "source_sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/advanced-event-handler-refs.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/advanced-init-once.md",
+          "local_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/advanced-init-once.md",
+              "source_sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/advanced-init-once.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/advanced-use-latest.md",
+          "local_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/advanced-use-latest.md",
+              "source_sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/advanced-use-latest.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/async-api-routes.md",
+          "local_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/async-api-routes.md",
+              "source_sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-api-routes.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/async-cheap-condition-before-await.md",
+          "local_sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/async-cheap-condition-before-await.md",
+              "source_sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-cheap-condition-before-await.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/async-defer-await.md",
+          "local_sha256": "f3c142d090615abdcc99d31c123be37b31f0f1ed8d9ec9f7789a3bc6883ae0fb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/async-defer-await.md",
+              "source_sha256": "f3c142d090615abdcc99d31c123be37b31f0f1ed8d9ec9f7789a3bc6883ae0fb",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-defer-await.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/async-dependencies.md",
+          "local_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/async-dependencies.md",
+              "source_sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-dependencies.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/async-parallel.md",
+          "local_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/async-parallel.md",
+              "source_sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-parallel.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/async-suspense-boundaries.md",
+          "local_sha256": "de05fedac2eb7ae563b887b5a424464ec3dfaf84e5b7797467ebe2a796ac8afc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/async-suspense-boundaries.md",
+              "source_sha256": "de05fedac2eb7ae563b887b5a424464ec3dfaf84e5b7797467ebe2a796ac8afc",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-suspense-boundaries.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/bundle-analyzable-paths.md",
+          "local_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/bundle-analyzable-paths.md",
+              "source_sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/bundle-analyzable-paths.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/bundle-barrel-imports.md",
+          "local_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/bundle-barrel-imports.md",
+              "source_sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/bundle-barrel-imports.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/bundle-conditional.md",
+          "local_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/bundle-conditional.md",
+              "source_sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/bundle-conditional.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/bundle-defer-third-party.md",
+          "local_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/bundle-defer-third-party.md",
+              "source_sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/bundle-defer-third-party.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/bundle-dynamic-imports.md",
+          "local_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/bundle-dynamic-imports.md",
+              "source_sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/bundle-dynamic-imports.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/bundle-preload.md",
+          "local_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/bundle-preload.md",
+              "source_sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/bundle-preload.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/client-event-listeners.md",
+          "local_sha256": "242a873349febc1ce685e85617994784dbab92c2eaa68aed7fed5a83e7680e93",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/client-event-listeners.md",
+              "source_sha256": "242a873349febc1ce685e85617994784dbab92c2eaa68aed7fed5a83e7680e93",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/client-event-listeners.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/client-localstorage-schema.md",
+          "local_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/client-localstorage-schema.md",
+              "source_sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/client-localstorage-schema.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/client-passive-event-listeners.md",
+          "local_sha256": "1f35016f9053de69e884ee9be00654e37979c2ca85f5e57764dc2626ff7acb4b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/client-passive-event-listeners.md",
+              "source_sha256": "1f35016f9053de69e884ee9be00654e37979c2ca85f5e57764dc2626ff7acb4b",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/client-passive-event-listeners.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/client-swr-dedup.md",
+          "local_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/client-swr-dedup.md",
+              "source_sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/client-swr-dedup.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-batch-dom-css.md",
+          "local_sha256": "480b891b9eaf96e929dc1e964274a4828e3a78009b7d00ccd965a0d425215959",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-batch-dom-css.md",
+              "source_sha256": "480b891b9eaf96e929dc1e964274a4828e3a78009b7d00ccd965a0d425215959",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-batch-dom-css.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-cache-function-results.md",
+          "local_sha256": "3daaa11d24f4295cb6be8bc6f407f2ce83cc7b5bd1f0e68891ea8ab835721dc7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-cache-function-results.md",
+              "source_sha256": "3daaa11d24f4295cb6be8bc6f407f2ce83cc7b5bd1f0e68891ea8ab835721dc7",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-cache-function-results.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-cache-property-access.md",
+          "local_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-cache-property-access.md",
+              "source_sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-cache-property-access.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-cache-storage.md",
+          "local_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-cache-storage.md",
+              "source_sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-cache-storage.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-combine-iterations.md",
+          "local_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-combine-iterations.md",
+              "source_sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-combine-iterations.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-early-exit.md",
+          "local_sha256": "925ce5ce87f3347186ca62212f29cc6baa2b8c85a96d2720ad07c3d0abf781c0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-early-exit.md",
+              "source_sha256": "925ce5ce87f3347186ca62212f29cc6baa2b8c85a96d2720ad07c3d0abf781c0",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-early-exit.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-flatmap-filter.md",
+          "local_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-flatmap-filter.md",
+              "source_sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-flatmap-filter.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-hoist-regexp.md",
+          "local_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-hoist-regexp.md",
+              "source_sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-hoist-regexp.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-index-maps.md",
+          "local_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-index-maps.md",
+              "source_sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-index-maps.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-length-check-first.md",
+          "local_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-length-check-first.md",
+              "source_sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-length-check-first.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-min-max-loop.md",
+          "local_sha256": "87dfb67e2f39df6ad8bcfb5b78c5fb364d3c07554ad188a202408d99f3763421",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-min-max-loop.md",
+              "source_sha256": "87dfb67e2f39df6ad8bcfb5b78c5fb364d3c07554ad188a202408d99f3763421",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-min-max-loop.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-request-idle-callback.md",
+          "local_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-request-idle-callback.md",
+              "source_sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-request-idle-callback.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-set-map-lookups.md",
+          "local_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-set-map-lookups.md",
+              "source_sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-set-map-lookups.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/js-tosorted-immutable.md",
+          "local_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/js-tosorted-immutable.md",
+              "source_sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/js-tosorted-immutable.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-activity.md",
+          "local_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-activity.md",
+              "source_sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-activity.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-animate-svg-wrapper.md",
+          "local_sha256": "9c6ae0ca7a51434e803887c64cded760956579a1452ccb80a461a03f9c937c77",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-animate-svg-wrapper.md",
+              "source_sha256": "9c6ae0ca7a51434e803887c64cded760956579a1452ccb80a461a03f9c937c77",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-animate-svg-wrapper.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-conditional-render.md",
+          "local_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-conditional-render.md",
+              "source_sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-conditional-render.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-content-visibility.md",
+          "local_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-content-visibility.md",
+              "source_sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-content-visibility.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-hoist-jsx.md",
+          "local_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-hoist-jsx.md",
+              "source_sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-hoist-jsx.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-hydration-no-flicker.md",
+          "local_sha256": "dc7ab358c67c177bca6e6f360fbc935ebe4efa928c0ba3ebd3f9f3d9e2000ca3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-hydration-no-flicker.md",
+              "source_sha256": "dc7ab358c67c177bca6e6f360fbc935ebe4efa928c0ba3ebd3f9f3d9e2000ca3",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-hydration-no-flicker.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-hydration-suppress-warning.md",
+          "local_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-hydration-suppress-warning.md",
+              "source_sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-hydration-suppress-warning.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-resource-hints.md",
+          "local_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-resource-hints.md",
+              "source_sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-resource-hints.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-script-defer-async.md",
+          "local_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-script-defer-async.md",
+              "source_sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-script-defer-async.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-svg-precision.md",
+          "local_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-svg-precision.md",
+              "source_sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-svg-precision.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rendering-usetransition-loading.md",
+          "local_sha256": "3a1249c3f13026b6f54ab5712c388df219d6af01b12aa542749acd99a46f4bc1",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rendering-usetransition-loading.md",
+              "source_sha256": "3a1249c3f13026b6f54ab5712c388df219d6af01b12aa542749acd99a46f4bc1",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rendering-usetransition-loading.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-defer-reads.md",
+          "local_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-defer-reads.md",
+              "source_sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-defer-reads.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-dependencies.md",
+          "local_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-dependencies.md",
+              "source_sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-dependencies.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-derived-state-no-effect.md",
+          "local_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-derived-state-no-effect.md",
+              "source_sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-derived-state-no-effect.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-derived-state.md",
+          "local_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-derived-state.md",
+              "source_sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-derived-state.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-functional-setstate.md",
+          "local_sha256": "5e68df6b2ae8058e67f476ff1ac67bde159f5a9d18df439e46eabcdeb7b52e58",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-functional-setstate.md",
+              "source_sha256": "5e68df6b2ae8058e67f476ff1ac67bde159f5a9d18df439e46eabcdeb7b52e58",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-functional-setstate.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-lazy-state-init.md",
+          "local_sha256": "4ae844740f266fc8cbf050701230286624a2440ec5be67b9a63d9edc3c580573",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-lazy-state-init.md",
+              "source_sha256": "4ae844740f266fc8cbf050701230286624a2440ec5be67b9a63d9edc3c580573",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-lazy-state-init.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-memo-with-default-value.md",
+          "local_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-memo-with-default-value.md",
+              "source_sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-memo-with-default-value.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-memo.md",
+          "local_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-memo.md",
+              "source_sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-memo.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-move-effect-to-event.md",
+          "local_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-move-effect-to-event.md",
+              "source_sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-move-effect-to-event.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-no-inline-components.md",
+          "local_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-no-inline-components.md",
+              "source_sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-no-inline-components.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-simple-expression-in-memo.md",
+          "local_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-simple-expression-in-memo.md",
+              "source_sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-simple-expression-in-memo.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-split-combined-hooks.md",
+          "local_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-split-combined-hooks.md",
+              "source_sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-split-combined-hooks.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-transitions.md",
+          "local_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-transitions.md",
+              "source_sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-transitions.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-use-deferred-value.md",
+          "local_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-use-deferred-value.md",
+              "source_sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-use-deferred-value.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/rerender-use-ref-transient-values.md",
+          "local_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/rerender-use-ref-transient-values.md",
+              "source_sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/rerender-use-ref-transient-values.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-after-nonblocking.md",
+          "local_sha256": "d0b8d24a3db9f0f65f9e2bddbf230b0e03a5f60e1229d93a4a18f5e7a991c7c2",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-after-nonblocking.md",
+              "source_sha256": "d0b8d24a3db9f0f65f9e2bddbf230b0e03a5f60e1229d93a4a18f5e7a991c7c2",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-after-nonblocking.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-auth-actions.md",
+          "local_sha256": "a2ca8aa102839251c7971ec784560fab943c20b36fe6f80365d4110c13260c23",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-auth-actions.md",
+              "source_sha256": "a2ca8aa102839251c7971ec784560fab943c20b36fe6f80365d4110c13260c23",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-auth-actions.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-cache-lru.md",
+          "local_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-cache-lru.md",
+              "source_sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-cache-lru.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-cache-react.md",
+          "local_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-cache-react.md",
+              "source_sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-cache-react.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-dedup-props.md",
+          "local_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-dedup-props.md",
+              "source_sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-dedup-props.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-hoist-static-io.md",
+          "local_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-hoist-static-io.md",
+              "source_sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-hoist-static-io.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-no-shared-module-state.md",
+          "local_sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-no-shared-module-state.md",
+              "source_sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-no-shared-module-state.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-parallel-fetching.md",
+          "local_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-parallel-fetching.md",
+              "source_sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-parallel-fetching.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-parallel-nested-fetching.md",
+          "local_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-parallel-nested-fetching.md",
+              "source_sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-parallel-nested-fetching.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "rules/server-serialization.md",
+          "local_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+              "source_path": "skills/react-best-practices/rules/server-serialization.md",
+              "source_sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
+              "source_url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-serialization.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "coding-engineer-skills/worktree-management",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "有效reviewed Superpowers b36e082→8ca22d(6.4.2)完整using-git-worktrees路径0delta。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "48073a7d9448e8d240db64153650bdd90c30e4a9b6897b3ee2c806b506cee3e6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+              "source_path": "skills/using-git-worktrees/SKILL.md",
+              "source_sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+              "source_url": "https://github.com/obra/superpowers/blob/8ca22dba9a94f28898bbce59f2537ff4d87c747d/skills/using-git-worktrees/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "9d579a9af13eee52c28c7ea3fef4ddeba2ffec5ddcd5960511b418d8f742a554",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    }
+  ]
+}

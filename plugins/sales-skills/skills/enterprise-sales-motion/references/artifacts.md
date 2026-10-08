@@ -401,3 +401,4 @@ How it works: Feeds insights directly into customer-specific Slack channels. Fla
 A recorded walkthrough of a PM's personal calendar and workflow using the product, distributed to the sales team.
 
 How it works: Record a screen-share showing exactly how you use the product for various meetings (kickoffs, retros, planning) to inspire customers with new use cases.
+

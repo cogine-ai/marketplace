@@ -56,7 +56,7 @@ When a competitor's innovation becomes a fundamental format that users expect, m
 - **Can't vs Won't Analysis for Competitive Moats** (Roger Martin) - When assessing whether capabilities create durable advantage, ask both whether competitors CAN'T replicate them AND whether they WON'T replicate them
 - **Porter's Two Paths to Winning a Market** (Differentiating your product) - Michael Porter's foundational framework that there are only two ways to win a market: operational effectiveness (doing the same things better) or differentiatio
 - **Differentiation Classics** (Introducing the Foundation Sprint: From the creators of the Design Sprint) - A list of classic differentiator dimensions to score your product against the competition
-- **Business Rules as B2B SaaS Moat** (Shaun Clowes) - The insight that the real lock-in for B2B SaaS is not the UI or data model but the accumulated business rules and configuration that make the software specific
+- **Business Rules as B2B SaaS Moat** (Shaun Clowes) - The insight that the real lock-in for B2B SaaS is not the UI or data model but the accumulated business rules and configuration that make the software specific 
 - **Competitor iceberg metaphor** (Tanguy Crusson) - Mental model for why copying competitor features is a losing strategy
 
 See `references/artifacts.md` for the full list with details.
