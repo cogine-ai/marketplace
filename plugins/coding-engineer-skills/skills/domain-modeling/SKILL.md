@@ -21,7 +21,7 @@ Most repos have a single context:
 └── src/
 ```
 
-If a `GLOSSARY-MAP.md` exists at the root, the repo has multiple contexts. The map points to where each one lives:
+When no explicit policy selects a different layout, an active root `GLOSSARY-MAP.md` points to the project's contexts:
 
 ```
 /
@@ -37,13 +37,9 @@ If a `GLOSSARY-MAP.md` exists at the root, the repo has multiple contexts. The m
 │       └── docs/adr/
 ```
 
-Resolve the active context before writing. If `GLOSSARY-MAP.md` exists, read it,
-infer which listed context the topic belongs to, and use that context's
-`GLOSSARY.md` and context-specific `docs/adr/`; ask when the context is unclear.
-Use the root `docs/adr/` only for system-wide decisions. Without a context map,
-use the root `GLOSSARY.md` and `docs/adr/`.
+Resolve the active context before writing, using the policy and path rules below. Read the active map, when present, and use the selected context's glossary and ADR locations. Use system-wide ADRs only for decisions spanning contexts. If the context is unclear during exploration, read the relevant available contexts and continue; ask only before a next write whose target remains ambiguous. Without a configured or active map, use the selected single-context glossary and ADR locations.
 
-Honor the repository's configured domain locations before applying these default paths. An existing legacy `CONTEXT-MAP.md` still establishes the multi-context layout until an authorized migration; use its selected context's glossary and ADRs. An existing `CONTEXT.md` remains the active glossary when no replacement is configured. If two maps conflict, resolve the active layout before writing. Migrate names only within the authorized task, preserving contents and mappings; do not create a competing root glossary.
+Read the repository's explicit domain policy in `AGENTS.md`, `CLAUDE.md`, or `docs/agents/domain.md` before applying filename defaults. Its configured glossary, map and ADR locations take precedence. An existing legacy `CONTEXT-MAP.md` / `CONTEXT.md` remains active when no replacement is configured; use the selected context's paths. A project explicitly using `GLOSSARY.md` must not gain a competing `CONTEXT.md`, and a legacy project must not gain a competing glossary merely because the default name changed. If available maps or glossaries disagree, reuse a policy or decision that already selects the active layout. Ask only if the remaining ambiguity would change the next term or ADR write; continue independent reading meanwhile. Migrate names only within the authorized task, preserving all terms, definitions and mappings.
 
 Create files lazily: only when you have something to write. If the selected
 context has no domain glossary at its resolved location, create it when the first term is resolved. If its
@@ -54,7 +50,7 @@ ADR directory does not exist, create it when the first ADR is needed.
 ### Challenge against the glossary
 
 When the user uses a term that conflicts with the existing language in the
-selected context's `GLOSSARY.md`, call it out immediately. "Your glossary
+selected context's resolved active glossary, call it out immediately. "Your glossary
 defines 'cancellation' as X, but you seem to mean Y. Which is it?"
 
 ### Sharpen fuzzy language
@@ -72,10 +68,10 @@ When the user states how something works, check whether the code agrees. If you 
 ### Update GLOSSARY.md inline
 
 When a term is resolved, update the selected context's resolved glossary file (`GLOSSARY.md` by default, or its active legacy path) right
-there. Don't batch these up: capture them as they happen. Use the format in
+there. Preserve unrelated terms and the existing format; do not replace the whole glossary to adopt a template. Don't batch these up: capture them as they happen. Use the format in
 [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
 
-`GLOSSARY.md` should be totally devoid of implementation details. Do not treat `GLOSSARY.md` as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
+The resolved active glossary should be totally devoid of implementation details. Do not treat it as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
 
 ### Offer ADRs sparingly
 

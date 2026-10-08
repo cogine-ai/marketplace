@@ -17,7 +17,7 @@
       "name": "coding-engineer-skills",
       "source": "./plugins/coding-engineer-skills",
       "description": "Thirty focused engineering skills for specs, coding, architecture, isolated worktrees, review, security, CI, and orchestration.",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "category": "development"
     },
     {
@@ -31,7 +31,7 @@
       "name": "growth-and-gtm-skills",
       "source": "./plugins/growth-and-gtm-skills",
       "description": "Eighteen focused growth and GTM skills for strategy, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution.",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "category": "productivity"
     },
     {

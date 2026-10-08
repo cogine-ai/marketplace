@@ -11,7 +11,7 @@ Surface architectural friction and propose **deepening opportunities**: refactor
 This command is _informed_ by the project's domain model and built on a shared design vocabulary:
 
 - Use the `coding-engineer-skills:codebase-design` skill for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, "the interface is the test surface", "one adapter = hypothetical seam, two = real"). Use these terms exactly in every suggestion, and don't drift into "component," "service," "API," or "boundary."
-- The domain language in the active context's `GLOSSARY.md`, when present, gives names to good seams; that context's ADRs and root system-wide ADRs record decisions this command should not re-litigate. Resolve the active context from a root `GLOSSARY-MAP.md`, or an existing legacy `CONTEXT-MAP.md` when no replacement is configured, and ask when the scope is ambiguous. Use the selected glossary path; do not create a competing root glossary.
+- Resolve the domain locations from explicit repository policy (`AGENTS.md`, `CLAUDE.md`, or `docs/agents/domain.md`) before filename defaults. Read the selected context from the configured map, otherwise `GLOSSARY-MAP.md` or an active legacy `CONTEXT-MAP.md`; use its glossary and context ADRs plus system-wide ADRs. The glossary gives names to good seams; the ADRs record decisions this command should not re-litigate. `GLOSSARY.md` is the new default; an existing `CONTEXT.md` remains active when no replacement is configured. Preserve the configured layout and all terms. If a conflict remains, ask only when it would affect the next term or ADR write, while continuing independent exploration.
 
 ## Process
 
@@ -22,8 +22,7 @@ This command is _informed_ by the project's domain model and built on a shared d
 - If the user named a direction (a module, a subsystem, a pain point), take it, and skip the inference below.
 - Otherwise, walk back a good stretch of the commit history (`git log --oneline`) to find the codebase's hot spots, the files and areas that keep coming up, and let those paths pull your attention first. If the changes are scattered with no clear hot spot, widen the net.
 
-Read the active context's domain glossary when present, its relevant ADRs, and
-any root system-wide ADRs in the area you're touching first.
+Read the resolved active domain glossary and relevant ADRs first; explicit domain policy takes precedence over which default-named file happens to exist.
 
 Then spawn a sub-agent to walk the codebase. Don't follow rigid heuristics; explore organically and note where you experience friction:
 
@@ -58,7 +57,7 @@ For each candidate, render a card with:
 
 End the report with a **Top recommendation** section: which candidate you'd tackle first and why.
 
-**Use the active context's `GLOSSARY.md` vocabulary for the domain, and the `coding-engineer-skills:codebase-design` vocabulary for the architecture.** If that glossary defines "Order," talk about "the Order intake module," not "the FooBarHandler," and not "the Order service."
+**Use the resolved active glossary's vocabulary for the domain, and the `coding-engineer-skills:codebase-design` vocabulary for the architecture.** If that glossary defines "Order," talk about "the Order intake module," not "the FooBarHandler," and not "the Order service."
 
 **ADR conflicts**: if a candidate contradicts an existing ADR, only surface it when the friction is real enough to warrant revisiting the ADR. Mark it clearly in the card (e.g. a warning callout: _"contradicts ADR-0007, but worth reopening because…"_). Don't list every theoretical refactor an ADR forbids.
 
@@ -72,7 +71,7 @@ Once the user picks a candidate, use the `coding-engineer-skills:grilling` skill
 
 Side effects happen inline as decisions crystallize; use the `coding-engineer-skills:domain-modeling` skill to keep the domain model current as you go:
 
-- **Naming a deepened module after a concept not in the resolved active glossary?** Add the term at that context's resolved glossary path (`GLOSSARY.md` by default, or its active legacy `CONTEXT.md`). Create a glossary lazily only when none exists at the resolved location.
+- **Naming a deepened module after a concept not in the resolved active glossary?** Add the term at that context's selected glossary path (`GLOSSARY.md` by default, or its active legacy path). Create a file lazily only when none exists at the resolved location; preserve unrelated terms and definitions.
 - **Sharpening a fuzzy term during the conversation?** Update the same resolved active glossary path right there, including an active legacy `CONTEXT.md`; do not create a competing glossary.
 - **User rejects the candidate with a load-bearing reason?** Offer an ADR, framed as: _"Want me to record this as an ADR so future architecture reviews don't re-suggest it?"_ Only offer when the reason would actually be needed by a future explorer to avoid re-suggesting the same thing; skip ephemeral reasons ("not worth it right now") and self-evident ones.
 - **Want to explore alternative interfaces for the deepened module?** Use the `coding-engineer-skills:codebase-design` skill and its design-it-twice parallel sub-agent pattern.

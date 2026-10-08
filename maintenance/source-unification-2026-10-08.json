@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-08",
+  "kind": "local source unification, not a new upstream update",
+  "marketplace_base": "6747e09078a58c18249a0c7b2c80917bc2404533",
+  "prepared_versions": {
+    "coding-engineer-skills": "0.2.5",
+    "growth-and-gtm-skills": "0.1.6"
+  },
+  "transfers": [
+    {
+      "packaged_path": "plugins/coding-engineer-skills/skills/domain-modeling/SKILL.md",
+      "before_sha256": "b722aa8de206dc2d5835340f5d0e26a591baf980738603595af74a54257ca269",
+      "after_sha256": "b5d97083289b02c4cfbf57a911b876c6a0c4b5734912ba52ec2669594e69c8d7",
+      "donor_path_relative_to_home": ".agents/skills/domain-modeling/SKILL.md",
+      "donor_sha256": "45703b24557a5a579d4b0fe770f91415ec7e662dd1eb2d524623996f520b4e04",
+      "method": "bounded semantic transfer; preserve package host adaptations and metadata"
+    },
+    {
+      "packaged_path": "plugins/coding-engineer-skills/skills/improve-codebase-architecture/SKILL.md",
+      "before_sha256": "ddf0705b2e78fd7abd2c8dca12dfb7a1cb6c64c81d3aa8cfd64846c3ff7850ab",
+      "after_sha256": "1f59f8a97e473160201d82018b809bf59700357407a6d0ba04b05770842832fc",
+      "donor_path_relative_to_home": ".agents/skills/improve-codebase-architecture/SKILL.md",
+      "donor_sha256": "2faf6f8aa770fdcc8d5a0a74395d92729aeb8bdf952051bb8c50e87516de65f4",
+      "method": "bounded semantic transfer; preserve package host adaptations and metadata"
+    },
+    {
+      "packaged_path": "plugins/coding-engineer-skills/skills/setup-matt-pocock-skills/SKILL.md",
+      "before_sha256": "378f93e645437c4b017eb4b7bd2df501207829bf3fa8c57e733d7f1e12075f88",
+      "after_sha256": "0b7e98c19ddc71a0fd1dddf2b94f9ab15033bbdbbad7fc0168967afe66a71e06",
+      "donor_path_relative_to_home": ".agents/skills/setup-matt-pocock-skills/SKILL.md",
+      "donor_sha256": "4af4669f01e45d753558a324cc8c69f7e6bcc25140a3e91ff406d7d9e30fa5d9",
+      "method": "bounded semantic transfer; preserve package host adaptations and metadata"
+    },
+    {
+      "packaged_path": "plugins/coding-engineer-skills/skills/setup-matt-pocock-skills/domain.md",
+      "before_sha256": "689b0fc2233065a7dc5c55512de1764e961c0bb6ff400dfd504b80bf3517950e",
+      "after_sha256": "52b1a6e71aa6989c2ff7e17e6f79c39c37f7c715f2a098995f4d86053f637c86",
+      "donor_path_relative_to_home": ".agents/skills/setup-matt-pocock-skills/SKILL.md",
+      "donor_sha256": "4af4669f01e45d753558a324cc8c69f7e6bcc25140a3e91ff406d7d9e30fa5d9",
+      "method": "bounded semantic transfer; preserve package host adaptations and metadata"
+    },
+    {
+      "packaged_path": "plugins/growth-and-gtm-skills/skills/analytics/SKILL.md",
+      "before_sha256": "37dcf6187cd5e071d306013d71ad6e2134cb0583df901798853c1186e8acd44c",
+      "after_sha256": "a841e50b63745d800a5cbeaef689e026ae7877c45a4d08eeb8bdb6d824832e41",
+      "donor_path_relative_to_home": ".agents/skills/analytics/SKILL.md",
+      "donor_sha256": "06cd2b9671935e488fb105a101e8d594b1dff87bfbdb6e1f4a2f7581c566218e",
+      "method": "bounded semantic transfer; preserve package host adaptations and metadata"
+    },
+    {
+      "packaged_path": "plugins/growth-and-gtm-skills/skills/launch/SKILL.md",
+      "before_sha256": "eee5e7231aec3339615cd7805a2e7f513c89de04f3a2b1647d36595f5e69eb22",
+      "after_sha256": "ca00054d0c1938b362e2267602efb56c8111dca5c342c184f7d040ecb91c6eec",
+      "donor_path_relative_to_home": ".agents/skills/launch/SKILL.md",
+      "donor_sha256": "38e6f9f0969272f46b2102e54c0439f3f660b06b02842d3bbe2099ca0b79487d",
+      "method": "bounded semantic transfer; preserve package host adaptations and metadata"
+    }
+  ],
+  "upstream_boundary": "Existing upstream commits, source paths, upstream hashes and raw regions remain unchanged. UPSTREAM_SYNC_2026-10-08.json files remain historical 0.2.3/0.1.5 records. Only current Coding UPSTREAM_LOCK local hashes and adaptation notes change. Power runtime remains at canonical d95315bb9a2357d0f6f7ff573ab5db73e102e234.",
+  "activation_boundary": "Five donor standalone entries remain enabled until these versions or descendants containing the transfers are published, installed and verified. This source preparation alone is not an installed update.",
+  "metadata_boundary": "All agents/openai.yaml and existing invocation policies are unchanged.",
+  "verification_boundary": "Static transfer/hash checks, existing Coding validator and 12 bundle tests passed. Three bounded local requests in two fresh agent contexts verified configured glossary writes, settled setup paths and export-only analytics evidence. No live account, production behavior or performance/cost comparison is established."
+}

@@ -1,5 +1,17 @@
 # Changelog
 
+## Source unification — 2026-10-08
+
+Prepared Coding 0.2.5 and Growth 0.1.6 candidates. Record one edit authority
+for shared runtime, preserve distribution metadata and meaningful variants,
+and migrate six bounded standalone domain/integration changes into package
+sources. Existing upstream pins and historical sync records remain intact.
+
+On the maintenance host, seventeen exact duplicate/legacy paths were disabled
+reversibly through native Codex configuration; files remain available to other
+hosts. Five donor entries remain active until the replacement packages are
+installed and verified. Publication is a separate operation.
+
 ## Coding 0.2.4 and standalone repairs — 2026-10-08
 
 Prepared source candidate; the preceding published upstream wave is unchanged.

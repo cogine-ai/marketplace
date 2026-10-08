@@ -1,6 +1,14 @@
 # Upstream sources
 
-## Current maintenance — 2026-10-08 (package 0.1.5)
+## Current source unification — 2026-10-08 (package 0.1.6)
+
+[The source registry](../../maintenance/skill-sources.md) selects the edit
+authority and retained consumer aliases. [The bounded transfer ledger](../../maintenance/source-unification-2026-10-08.json)
+records the local domain/integration changes. Upstream pins and historical
+sync records are unchanged; this is a prepared local candidate, not a new
+upstream snapshot or installed update.
+
+## Previous maintenance — 2026-10-08 (package 0.1.5)
 
 Restore exact vendor support bytes where approved, and adapt changed methods to bundled skill routes. Search bot purposes, pricing readability checks and launch QA retain factual evidence boundaries. English style guides remain contextual advice.
 
