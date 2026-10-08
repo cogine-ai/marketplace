@@ -46,3 +46,9 @@ The validated five-file runtime is synchronized to the existing global copy whil
 ## Packaged baseline clarification
 
 The published Coding 0.2.3 entrypoint had a different description from the canonical standalone copy. Against that packaged baseline, o200k_base entrypoint tokens are 906 → 937 (+31), and all runtime Markdown 2458 → 2642 (+184). These are text counts, not measured execution-cost changes.
+
+## PR #8 review follow-up — 2026-10-08
+
+The entrypoint high-risk row now explicitly includes coordinated cross-repo contract/state changes, matching the existing task-modes criteria. This is a one-row clarification; read-only routing, authorization, references and invocation metadata are unchanged. Canonical source: `d95315bb9a2357d0f6f7ff573ab5db73e102e234`; current entrypoint SHA256: `21d0579109cf15d502da83d7484c922de7ca34037e624429f137ab26fee16479`.
+
+The behavioral runs, frozen hashes and text counts above describe the earlier candidate at `cdbb909b8d6f24eece965072d5b4e5d90618dbb0`, before this clarification; they were not rerun. The current text measures 946 entrypoint tokens and 2651 total runtime Markdown tokens (o200k_base). This follow-up receives structural validation, reference-consistency review and the existing Coding bundle checks.

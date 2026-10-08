@@ -18,7 +18,7 @@ Choose scope, then its safety floor. Never invent modes.
 | `blind-spot-only` | Explicit unknown discovery, critique, prompt improvement, or a preimplementation-only pass | Frame, Discovery; stop |
 | `fast` | Local, reversible work with clear scope, success, and obvious validation | Frame, Evidence |
 | `standard` | Other material work | Frame, Discovery, Commit, Evidence; Deviation on trigger |
-| `high-risk` | Actions changing material architecture/contracts, production/customer state, security/permissions, money, or release/public/remote state, or that are destructive, irreversible, costly, or hard to verify | All; apply existing authorization and resolve new material human decisions |
+| `high-risk` | Coordinated cross-repo contract/state changes; actions changing material architecture/contracts, production/customer state, security/permissions, money, or release/public/remote state, or that are destructive, irreversible, costly, or hard to verify | All; apply existing authorization and resolve new material human decisions |
 
 Route in order:
 

@@ -3,7 +3,7 @@
 ## Current local maintenance — 2026-10-08 (package 0.2.4)
 
 CoginePowerGates now follows its canonical Cogine-authored local repository,
-commit `cdbb909b8d6f24eece965072d5b4e5d90618dbb0`, plan v0.6.0. Its four runtime Markdown files
+commit `d95315bb9a2357d0f6f7ff573ab5db73e102e234`, plan v0.6.0. Its four runtime Markdown files
 are byte-identical to that source; existing Marketplace invocation metadata
 is retained. No configured source remote exists, so this record does not invent
 an external upstream URL or HEAD.

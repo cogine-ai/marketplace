@@ -8,7 +8,7 @@
   "canonical_source": {
     "repository": "CoginePowerGates (local Cogine-authored repository)",
     "configured_remote": null,
-    "commit": "cdbb909b8d6f24eece965072d5b4e5d90618dbb0",
+    "commit": "d95315bb9a2357d0f6f7ff573ab5db73e102e234",
     "runtime_path": "cogine-power-gates/",
     "plan": "docs/versions/v0.6.0.md",
     "review": "docs/reviews/skill-behavior-eval-2026-10-08.md"
@@ -17,8 +17,8 @@
   "files": [
     {
       "path": "SKILL.md",
-      "packaged_sha256": "35d20588dba494b401a3100b9884c842f28ad929a06facf8833389ded57f807e",
-      "source_sha256": "35d20588dba494b401a3100b9884c842f28ad929a06facf8833389ded57f807e",
+      "packaged_sha256": "21d0579109cf15d502da83d7484c922de7ca34037e624429f137ab26fee16479",
+      "source_sha256": "21d0579109cf15d502da83d7484c922de7ca34037e624429f137ab26fee16479",
       "whole_file_byte_equal": true,
       "relationship": "canonical runtime copy"
     },
@@ -54,6 +54,6 @@
   "local_overlays_to_preserve": [
     "Marketplace agents/openai.yaml including its existing invocation policy/default prompt; do not overwrite from standalone metadata"
   ],
-  "verification_boundary": "Eight fresh local Power runs; three controls, one before and four current runs. No paired quality/cost gain established. No real deployment or automatic host-selection proof. Prepared 0.2.4 is not publication or installation.",
+  "verification_boundary": "Earlier eight fresh local Power runs: three controls, one before and four candidate runs; those four candidates cover source cdbb909b8d6f24eece965072d5b4e5d90618dbb0 (SKILL.md SHA256 35d20588dba494b401a3100b9884c842f28ad929a06facf8833389ded57f807e). The later cross-repo table clarification was checked against existing task-modes criteria and received structural and bundle validation; behavioral runs were not repeated. No paired quality/cost gain established. No real deployment or automatic host-selection proof. Prepared 0.2.4 is not publication or installation.",
   "standalone_repairs_record": "../../maintenance/standalone-skills/2026-10-08.json"
 }
