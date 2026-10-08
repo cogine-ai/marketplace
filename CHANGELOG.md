@@ -10,7 +10,8 @@ Prepared source candidate; the preceding published upstream wave is unchanged.
 - Preserve four modes, five gates, artifact contracts and invocation metadata.
   Record source commit, exact runtime hashes and bounded fresh-context checks.
 - Retain exact local standalone repair patches for AI SEO facts, missing
-  marketing tool guides, configured/legacy glossary paths and CEO entrypoints.
+  marketing tool guides, stale AI SEO grader expectations, configured/legacy
+  glossary paths and CEO entrypoints.
   Installer locks and host invocation settings remain unchanged.
 
 Eight local Power runs passed their observed task criteria; old/no-skill controls

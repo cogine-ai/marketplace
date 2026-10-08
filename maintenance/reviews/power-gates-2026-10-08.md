@@ -25,7 +25,7 @@ Each arm was run once. No statistical generalization, real deployment/rollback, 
 
 Source/distribution Markdown is byte-identical. Each host's agents/openai.yaml is unchanged from its own baseline; source/global and Marketplace retain their existing different metadata. Frontmatter/scaffold checks and diff whitespace checks passed. The immutable article and accepted previous version plans are unchanged.
 
-Using tiktoken o200k_base: entrypoint 911 → 937 tokens (+26); all runtime Markdown 2463 → 2642 (+179). Entry word count 624 → 660; the prior 650-word target is exceeded by ten words to remove conflicting instructions without a structural rewrite. This is a consistency repair, not a simplification or cost-reduction release.
+Against the canonical standalone baseline, using tiktoken o200k_base: entrypoint 911 → 937 tokens (+26); all runtime Markdown 2463 → 2642 (+179). Entry word count 624 → 660; the prior 650-word target is exceeded by ten words to remove conflicting instructions without a structural rewrite. This is a consistency repair, not a simplification or cost-reduction release.
 
 ## Provenance and local synchronization
 
@@ -42,3 +42,7 @@ Canonical runtime remains cogine-power-gates/ in this repository. Runtime hashes
 ```
 
 The validated five-file runtime is synchronized to the existing global copy while its disabled config remains unchanged. Marketplace is a Coding 0.2.4 source candidate; the installed Coding 0.2.3 plugin cache remains the released snapshot until a separately authorized publication/update. Source, global files, prepared package, publication, installation and host behavior are distinct states.
+
+## Packaged baseline clarification
+
+The published Coding 0.2.3 entrypoint had a different description from the canonical standalone copy. Against that packaged baseline, o200k_base entrypoint tokens are 906 → 937 (+31), and all runtime Markdown 2458 → 2642 (+184). These are text counts, not measured execution-cost changes.

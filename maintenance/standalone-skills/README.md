@@ -2,9 +2,9 @@
 
 This record preserves the bounded repairs applied to existing standalone installations. It does not install another bundle or change invocation defaults.
 
-`2026-10-08.patch` uses paths relative to the user home directory. Its companion JSON records the exact before/after SHA-256 of all 13 changed files. Check every target against its recorded before hash before applying the patch; if a target has changed, review the conflict rather than force the patch. Use `git apply --check` before application. Already-overlaid files must match the after hash and do not need another application.
+`2026-10-08.patch` uses paths relative to the user home directory. Its companion JSON records the exact before/after SHA-256 of all 14 changed files. Check every target against its recorded before hash before applying the patch; if a target has changed, review the conflict rather than force the patch. Use `git apply --check` before application. Already-overlaid files must match the after hash and do not need another application.
 
-- AI SEO: separate search, training and user-fetch controls; bound experimental claims; make machine-readable files conditional; preserve existing crawler path exclusions.
+- AI SEO: separate search, training and user-fetch controls; bound experimental claims; make machine-readable files conditional; preserve existing crawler path exclusions. Align four stale grader expectations without changing the original ten prompts or case IDs.
 - Analytics and launch: remove references to eight absent tool/integration guides across the three marketing skills and use actual environment capabilities or existing bundled guides.
 - Domain/setup/architecture: honor explicit glossary/context policy, preserve legacy layouts and terms, resolve the installed architecture dependency.
 - CEO: align the two standalone entrypoints with the approved Founder/CEO adaptation. `ceo-source-2026-10-08.patch` applies the same scoped change inside the existing Cogine Dev source repository; other dirty work there is outside this record.

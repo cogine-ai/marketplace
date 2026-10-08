@@ -3,7 +3,7 @@
   "kind": "bounded local overlays, not an upstream installer lock",
   "application_root": "user home directory",
   "patch": "2026-10-08.patch",
-  "patch_sha256": "c63c9196c0abfb6f1d12a5fba06e500ce0086832eb199b69eac1823e0b0af101",
+  "patch_sha256": "e8cbba4c2a75c32c2addfae8e96d6b94fb160478092ff0c4687321105fce2172",
   "files": [
     {
       "path_from_user_home": ".agents/skills/ai-seo/SKILL.md",
@@ -82,6 +82,12 @@
       "before_sha256": "919db7d9e8e95961cad0f753108969172fadc054983d7594d70dee6d3b5e985f",
       "after_sha256": "c81ebf1e9985f8a9185b8baeffff0be477b61b65463c6767ddcffe3fa584b58e",
       "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/ai-seo/evals/evals.json",
+      "before_sha256": "010677ebde7b375f5569d5ef654c15edfc50f44efc55f9ca2f70a02a1ff1ab17",
+      "after_sha256": "e6866b0110ca88305171b4c8365716d66fccb0500d2dc125e313ef7c6373434a",
+      "operation": "update"
     }
   ],
   "marketing_installer_origins_before_overlay": {
@@ -117,5 +123,6 @@
   "ceo_body_source": "Approved marketplace Founder/CEO 0.1.3 adaptation, already released 2026-10-08",
   "frontmatter_policy": "All existing standalone frontmatter and agents invocation metadata retained byte-for-byte; new format reference has no invocation policy.",
   "installer_lock_policy": ".skill-lock.json unchanged; its folder hashes describe installer provenance, not these overlaid runtime bytes.",
-  "verification_boundary": "Local readback and controlled behavior checks. No upstream byte-sync claim, real-site configuration, indexing uplift, deployment, host-selection proof, or new Marketplace publication."
+  "verification_boundary": "Local readback and controlled behavior checks. No upstream byte-sync claim, real-site configuration, indexing uplift, deployment, host-selection proof, or new Marketplace publication.",
+  "evaluation_repairs": "Only AI SEO cases 1,2,3,9 expected_output/assertions aligned to the corrected evidence/access rules; 10 prompts, IDs and files retained. Grader assets excluded from clean forward executors."
 }
