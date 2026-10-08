@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-08",
+  "package_version": "0.2.4",
+  "marketplace_base": "2efe4d478406b783bb60071ee94eb7807e9806ce",
+  "kind": "bounded local maintenance after published upstream wave",
+  "previous_snapshot": "UPSTREAM_SYNC_2026-10-08.json records package 0.2.3 and remains unchanged historical evidence; this ledger supersedes only cogine-power-gates runtime hashes for 0.2.4. Other skill bytes/pins stay unchanged.",
+  "skill": "cogine-power-gates",
+  "canonical_source": {
+    "repository": "CoginePowerGates (local Cogine-authored repository)",
+    "configured_remote": null,
+    "commit": "cdbb909b8d6f24eece965072d5b4e5d90618dbb0",
+    "runtime_path": "cogine-power-gates/",
+    "plan": "docs/versions/v0.6.0.md",
+    "review": "docs/reviews/skill-behavior-eval-2026-10-08.md"
+  },
+  "maintenance_decision": "follow canonical Cogine source; copy four runtime Markdown files byte-for-byte; preserve existing Marketplace agents metadata",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "packaged_sha256": "35d20588dba494b401a3100b9884c842f28ad929a06facf8833389ded57f807e",
+      "source_sha256": "35d20588dba494b401a3100b9884c842f28ad929a06facf8833389ded57f807e",
+      "whole_file_byte_equal": true,
+      "relationship": "canonical runtime copy"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "packaged_sha256": "3833d1240068c73f0db74a143c4a930a02662c1cf73c97a68823e04381db861b",
+      "source_sha256": "093c63d340d53f97ea277bfa5863692a8db4e2363fa5dd646b652c87411ab418",
+      "whole_file_byte_equal": false,
+      "relationship": "existing Marketplace invocation metadata retained"
+    },
+    {
+      "path": "references/examples.md",
+      "packaged_sha256": "ebbc0c1f5f62a84417aff9557abb518e93555ab476bd03f6fc3fc23c17d56fc6",
+      "source_sha256": "ebbc0c1f5f62a84417aff9557abb518e93555ab476bd03f6fc3fc23c17d56fc6",
+      "whole_file_byte_equal": true,
+      "relationship": "canonical runtime copy"
+    },
+    {
+      "path": "references/gate-reports.md",
+      "packaged_sha256": "8ed2cfb7c95cfbaf96cf761087232c601ac0f81af8ce0650f0d087f33e30de84",
+      "source_sha256": "8ed2cfb7c95cfbaf96cf761087232c601ac0f81af8ce0650f0d087f33e30de84",
+      "whole_file_byte_equal": true,
+      "relationship": "canonical runtime copy"
+    },
+    {
+      "path": "references/task-modes.md",
+      "packaged_sha256": "bce697c9fb6d74d59bb5f813661860ea378504e8dd59aca39a98d51e60a4fb04",
+      "source_sha256": "bce697c9fb6d74d59bb5f813661860ea378504e8dd59aca39a98d51e60a4fb04",
+      "whole_file_byte_equal": true,
+      "relationship": "canonical runtime copy"
+    }
+  ],
+  "local_overlays_to_preserve": [
+    "Marketplace agents/openai.yaml including its existing invocation policy/default prompt; do not overwrite from standalone metadata"
+  ],
+  "verification_boundary": "Eight fresh local Power runs; three controls, one before and four current runs. No paired quality/cost gain established. No real deployment or automatic host-selection proof. Prepared 0.2.4 is not publication or installation.",
+  "standalone_repairs_record": "../../maintenance/standalone-skills/2026-10-08.json"
+}

@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-08",
+  "kind": "bounded local overlays, not an upstream installer lock",
+  "application_root": "user home directory",
+  "patch": "2026-10-08.patch",
+  "patch_sha256": "c63c9196c0abfb6f1d12a5fba06e500ce0086832eb199b69eac1823e0b0af101",
+  "files": [
+    {
+      "path_from_user_home": ".agents/skills/ai-seo/SKILL.md",
+      "before_sha256": "b1ecd93ebc65af886f81bc0a90645c8fd4ffdf68c5b3d4495a9e61481d954d00",
+      "after_sha256": "50e18cbd354d83351f1148843fbce07975a4e968a2557b50194678a973c98c98",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/ai-seo/references/platform-ranking-factors.md",
+      "before_sha256": "ca3fb8c09fec3445abe611bab2cd1b5f20751c5d51a3a5c63ecd2b85cd458ee8",
+      "after_sha256": "5e5edde18ba6139cbd68d8b0d549066b8e8b265acb92b8bbc5ef68e2fcbbbeeb",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/ai-seo/references/agent-readiness.md",
+      "before_sha256": "4753dc17755cacba2bf783373399baaf98c82a5d45c645848465ab6a11331cd9",
+      "after_sha256": "8b2a72d7c1783b019992928e401187a4d1c0fc1000ca5b94f04cd6d4ec0be5e9",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/ai-seo/references/content-patterns.md",
+      "before_sha256": "8adcfcc020a3529eda71f783e4893d3e39e8b0f503fd2fa126e8b75a80963824",
+      "after_sha256": "7d74c2fd36a8caa9678d32d4ec4a89763008bc14817f6421560d945b9a3a30f2",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/analytics/SKILL.md",
+      "before_sha256": "3eda97d96b2329daa933b6fdb94bf81aaa1196e3e344e56a8805f972a7438404",
+      "after_sha256": "06cd2b9671935e488fb105a101e8d594b1dff87bfbdb6e1f4a2f7581c566218e",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/launch/SKILL.md",
+      "before_sha256": "1d5f5e6a4caaa5b62604a8df324b060eb99da567e65e9fc5a69b9999c61325b2",
+      "after_sha256": "38e6f9f0969272f46b2102e54c0439f3f660b06b02842d3bbe2099ca0b79487d",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/domain-modeling/SKILL.md",
+      "before_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "after_sha256": "45703b24557a5a579d4b0fe770f91415ec7e662dd1eb2d524623996f520b4e04",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
+      "before_sha256": null,
+      "after_sha256": "ffe04e50ddc44dd5655ca8aad5e835570caf84e32b4fb62b37cff691ef6d9be3",
+      "operation": "create"
+    },
+    {
+      "path_from_user_home": ".agents/skills/improve-codebase-architecture/SKILL.md",
+      "before_sha256": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
+      "after_sha256": "2faf6f8aa770fdcc8d5a0a74395d92729aeb8bdf952051bb8c50e87516de65f4",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/setup-matt-pocock-skills/SKILL.md",
+      "before_sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
+      "after_sha256": "4af4669f01e45d753558a324cc8c69f7e6bcc25140a3e91ff406d7d9e30fa5d9",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/setup-matt-pocock-skills/domain.md",
+      "before_sha256": "edc6d6131fdffc4b7135704f5262124fc43355c95f61b7399dc5a4db643e28ca",
+      "after_sha256": "df80d3f57b1a4c80ae2618f18255ae14ffc65d185621c39756ffc381c962636a",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".agents/skills/planmode_ceo/SKILL.md",
+      "before_sha256": "919db7d9e8e95961cad0f753108969172fadc054983d7594d70dee6d3b5e985f",
+      "after_sha256": "c81ebf1e9985f8a9185b8baeffff0be477b61b65463c6767ddcffe3fa584b58e",
+      "operation": "update"
+    },
+    {
+      "path_from_user_home": ".codex/skills/planmode_ceo/SKILL.md",
+      "before_sha256": "919db7d9e8e95961cad0f753108969172fadc054983d7594d70dee6d3b5e985f",
+      "after_sha256": "c81ebf1e9985f8a9185b8baeffff0be477b61b65463c6767ddcffe3fa584b58e",
+      "operation": "update"
+    }
+  ],
+  "marketing_installer_origins_before_overlay": {
+    "ai-seo": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/ai-seo/SKILL.md",
+      "skillFolderHash": "a9dd55de5fac849e776b97e8d66c2f04f41ae158",
+      "installedAt": "2026-07-11T20:42:47.667Z",
+      "updatedAt": "2026-09-15T14:15:53.785616Z"
+    },
+    "analytics": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/analytics/SKILL.md",
+      "skillFolderHash": "cbb8b810847072efe55e8de9c0dd42ddbcc5f91e",
+      "installedAt": "2026-07-11T20:42:47.670Z",
+      "updatedAt": "2026-09-15T14:15:53.785616Z"
+    },
+    "launch": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/launch/SKILL.md",
+      "skillFolderHash": "2c974c62be1d04e7c8658e50629c2385e5fc44d0",
+      "installedAt": "2026-07-11T20:42:47.673Z",
+      "updatedAt": "2026-09-15T14:15:53.785616Z"
+    }
+  },
+  "matt_source": "https://github.com/mattpocock/skills",
+  "ceo_body_source": "Approved marketplace Founder/CEO 0.1.3 adaptation, already released 2026-10-08",
+  "frontmatter_policy": "All existing standalone frontmatter and agents invocation metadata retained byte-for-byte; new format reference has no invocation policy.",
+  "installer_lock_policy": ".skill-lock.json unchanged; its folder hashes describe installer provenance, not these overlaid runtime bytes.",
+  "verification_boundary": "Local readback and controlled behavior checks. No upstream byte-sync claim, real-site configuration, indexing uplift, deployment, host-selection proof, or new Marketplace publication."
+}

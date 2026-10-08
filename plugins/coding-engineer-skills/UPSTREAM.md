@@ -1,6 +1,22 @@
 # Upstream sources
 
-## Current maintenance — 2026-10-08 (package 0.2.3)
+## Current local maintenance — 2026-10-08 (package 0.2.4)
+
+CoginePowerGates now follows its canonical Cogine-authored local repository,
+commit `cdbb909b8d6f24eece965072d5b4e5d90618dbb0`, plan v0.6.0. Its four runtime Markdown files
+are byte-identical to that source; existing Marketplace invocation metadata
+is retained. No configured source remote exists, so this record does not invent
+an external upstream URL or HEAD.
+
+[LOCAL_MAINTENANCE_2026-10-08.json](LOCAL_MAINTENANCE_2026-10-08.json) records
+these current hashes. The earlier `UPSTREAM_SYNC_2026-10-08.json` describes
+0.2.3 and remains historical evidence; only the Power runtime hashes are
+superseded. Other bundled skill bytes and upstream pins are unchanged.
+See the [bounded behavior review](../../maintenance/reviews/power-gates-2026-10-08.md)
+and [standalone repair record](../../maintenance/standalone-skills/README.md).
+This is a prepared source candidate, not publication or installation.
+
+## Previous upstream snapshot — 2026-10-08 (package 0.2.3)
 
 Follow Matt source changes with per-file pins, exact vendor files and raw spans; retain tracker discovery, committed review scope, pre-commit review, multi-context setup and native invocation policies. GStack contributes selected portable methods only. The retired merge-conflict source remains at its historical pin.
 
