@@ -1,0 +1,516 @@
+{
+  "format_version": 1,
+  "date": "2026-10-08",
+  "scope": "Cogine sources, standalone mirrors and reviewed local overlays; official bundled and system plugins remain vendor-managed.",
+  "role_bundle_default_authority": "plugins/<role-plugin>/skills; upstream pins and adaptations remain in each UPSTREAM.md and current lock.",
+  "power_authority": {
+    "repository_path_relative_to_our_skills": "CoginePowerGates/cogine-power-gates",
+    "commit": "d95315bb9a2357d0f6f7ff573ab5db73e102e234",
+    "branch": "main",
+    "configured_remote": null,
+    "marketplace_consumer": "plugins/coding-engineer-skills/skills/cogine-power-gates",
+    "preserve_distribution_metadata": [
+      "agents/openai.yaml"
+    ]
+  },
+  "paired_standalone_sources": [
+    {
+      "name": "ai-app-security-audit",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coding-engineer-skills/skills/ai-app-security-audit"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/ai-app-security-audit",
+        ".agents/skills/ai-app-security-audit"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 2,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "backlog-ready-spec",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coding-engineer-skills/skills/backlog-ready-spec"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/backlog-ready-spec",
+        ".agents/skills/backlog-ready-spec"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 2,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "founder-office-hours",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/product-manager-skills/skills/founder-office-hours"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/founder-office-hours",
+        ".agents/skills/founder-office-hours"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 2,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "get-cookies",
+      "authority": {
+        "kind": "repository canonical runtime",
+        "path_relative_to_our_skills": "cogine-dev-skillset/skills/get-cookies",
+        "commit": "5c82799b9a2832fd9f2f7a9217b0d2dc0378cab4",
+        "tree_sha256": "ff40de8115329551adb69a8e48eca8de8f9f055866270217889f4e8f4a9a2b1e",
+        "runtime_matches_commit": true
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/get_cookies",
+        ".agents/skills/get_cookies"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 1,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "gh-issue-priority-handoff",
+      "authority": {
+        "kind": "repository canonical runtime",
+        "path_relative_to_our_skills": "cogine-dev-skillset/skills/gh-issue-priority-handoff",
+        "commit": "5c82799b9a2832fd9f2f7a9217b0d2dc0378cab4",
+        "tree_sha256": "d7d4192c3908c2ef73250cee3c9c289d9296044e969bda6381ad313cefa96203",
+        "runtime_matches_commit": true
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/gh-issue-priority-handoff",
+        ".agents/skills/gh-issue-priority-handoff"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 3,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "local-ultra-review",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coding-engineer-skills/skills/local-ultra-review"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/local-ultra-review",
+        ".agents/skills/local-ultra-review"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 75,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "loop-on-pr-review-and-fix",
+      "authority": {
+        "kind": "local override authority; do not overwrite from differing repository",
+        "path_relative_to_home": ".codex/skills/loop-on-pr-review-and-fix",
+        "tree_sha256": "44d868f4431a7aa33282bbc94f3866f0e23ccd5c2905d1c7cfdfa2a8c3c2e333",
+        "historical_repository_path": "cogine-dev-skillset/skills/loop-on-pr-review-and-fix"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/loop-on-pr-review-and-fix",
+        ".agents/skills/loop-on-pr-review-and-fix"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 5,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "plan-devex-review",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coding-engineer-skills/skills/plan-devex-review"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/plan-devex-review",
+        ".agents/skills/plan-devex-review"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 2,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "planmode-ceo",
+      "authority": {
+        "kind": "repository canonical runtime",
+        "path_relative_to_our_skills": "cogine-dev-skillset/skills/planmode-ceo",
+        "commit": "5c82799b9a2832fd9f2f7a9217b0d2dc0378cab4",
+        "tree_sha256": "526fd02af728a46f4c40308fa04675066a306a0ce94adb3e40c2f15e064e462d",
+        "runtime_matches_commit": true
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/planmode_ceo",
+        ".agents/skills/planmode_ceo"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 1,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "planmode-engineer",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coding-engineer-skills/skills/planmode-engineer"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/planmode_engineer",
+        ".agents/skills/planmode_engineer"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 1,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "setting-goals",
+      "authority": {
+        "kind": "local runtime authority",
+        "path_relative_to_home": ".codex/skills/setting-goals",
+        "tree_sha256": "cc8511c31219a9ff0d8bf730a71f51c222049c06dbda813cb38fe777b2722135"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/setting-goals",
+        ".agents/skills/setting-goals"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 3,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "site-design-audit",
+      "authority": {
+        "kind": "local override authority; do not overwrite from differing repository",
+        "path_relative_to_home": ".codex/skills/site_design_audit",
+        "tree_sha256": "ef7f2778f2017e5c556701976199f6aaee9a73d7fc18aff9f56155fffc91b841",
+        "historical_repository_path": "cogine-dev-skillset/skills/site-design-audit"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/site_design_audit",
+        ".agents/skills/site_design_audit"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 1,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "site-design-fix",
+      "authority": {
+        "kind": "local override authority; do not overwrite from differing repository",
+        "path_relative_to_home": ".codex/skills/site_design_fix",
+        "tree_sha256": "f500df20f1511684ba550dd1e3186719cf38a49a06409abc732b41549518f7fd",
+        "historical_repository_path": "cogine-dev-skillset/skills/site-design-fix"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/site_design_fix",
+        ".agents/skills/site_design_fix"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 1,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "workctl",
+      "authority": {
+        "kind": "local runtime authority",
+        "path_relative_to_home": ".codex/skills/workctl",
+        "tree_sha256": "c34e7e37e03263c88873a7a0259b65f89882ed754cee37e6e7749aa0eccf2a4c"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/workctl",
+        ".agents/skills/workctl"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 16,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "workctl-operator",
+      "authority": {
+        "kind": "local runtime authority",
+        "path_relative_to_home": ".codex/skills/workctl/workctl-operator",
+        "tree_sha256": "62edb914260355f61f3ab2ed56c229266334725d2d6854cb842089ad4298d7bc"
+      },
+      "mirrors_relative_to_home": [
+        ".codex/skills/workctl/workctl-operator",
+        ".agents/skills/workctl/workctl-operator"
+      ],
+      "runtime_files_byte_equal": true,
+      "runtime_files": 15,
+      "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    }
+  ],
+  "installer_managed_overlays": [
+    {
+      "name": "ai-seo",
+      "installed_runtime_relative_to_home": ".agents/skills/ai-seo",
+      "installer_origin": {
+        "source": "coreyhaines31/marketingskills",
+        "sourceType": "github",
+        "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+        "skillPath": "skills/ai-seo/SKILL.md",
+        "skillFolderHash": "a9dd55de5fac849e776b97e8d66c2f04f41ae158"
+      },
+      "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
+      "authority_after_verified_transition": null,
+      "activation_state": "keep standalone; not equivalent to search-visibility"
+    },
+    {
+      "name": "analytics",
+      "installed_runtime_relative_to_home": ".agents/skills/analytics",
+      "installer_origin": {
+        "source": "coreyhaines31/marketingskills",
+        "sourceType": "github",
+        "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+        "skillPath": "skills/analytics/SKILL.md",
+        "skillFolderHash": "cbb8b810847072efe55e8de9c0dd42ddbcc5f91e"
+      },
+      "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
+      "authority_after_verified_transition": "plugins/growth-and-gtm-skills/skills/analytics",
+      "activation_state": "keep standalone until candidate installation is verified"
+    },
+    {
+      "name": "launch",
+      "installed_runtime_relative_to_home": ".agents/skills/launch",
+      "installer_origin": {
+        "source": "coreyhaines31/marketingskills",
+        "sourceType": "github",
+        "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+        "skillPath": "skills/launch/SKILL.md",
+        "skillFolderHash": "2c974c62be1d04e7c8658e50629c2385e5fc44d0"
+      },
+      "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
+      "authority_after_verified_transition": "plugins/growth-and-gtm-skills/skills/launch",
+      "activation_state": "keep standalone until candidate installation is verified"
+    },
+    {
+      "name": "domain-modeling",
+      "installed_runtime_relative_to_home": ".agents/skills/domain-modeling",
+      "installer_origin": {
+        "source": "mattpocock/skills",
+        "sourceType": "github",
+        "sourceUrl": "https://github.com/mattpocock/skills.git",
+        "skillPath": "skills/engineering/domain-modeling/SKILL.md",
+        "skillFolderHash": "388c9822641805ca2dcd5038e68a1d5282437ee5"
+      },
+      "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
+      "authority_after_verified_transition": "plugins/coding-engineer-skills/skills/domain-modeling",
+      "activation_state": "keep standalone until candidate installation is verified"
+    },
+    {
+      "name": "setup-matt-pocock-skills",
+      "installed_runtime_relative_to_home": ".agents/skills/setup-matt-pocock-skills",
+      "installer_origin": {
+        "source": "mattpocock/skills",
+        "sourceType": "github",
+        "sourceUrl": "https://github.com/mattpocock/skills.git",
+        "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+        "skillFolderHash": "ec07f82df54064d01aa1648670e81da41e2cbdc2"
+      },
+      "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
+      "authority_after_verified_transition": "plugins/coding-engineer-skills/skills/setup-matt-pocock-skills",
+      "activation_state": "keep standalone until candidate installation is verified"
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "installed_runtime_relative_to_home": ".agents/skills/improve-codebase-architecture",
+      "installer_origin": {
+        "source": "mattpocock/skills",
+        "sourceType": "github",
+        "sourceUrl": "https://github.com/mattpocock/skills.git",
+        "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+        "skillFolderHash": "3d35cd438f4067b03c8b3792e038960e4ac11526"
+      },
+      "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
+      "authority_after_verified_transition": "plugins/coding-engineer-skills/skills/improve-codebase-architecture",
+      "activation_state": "keep standalone until candidate installation is verified"
+    }
+  ],
+  "shared_role_aliases": [
+    {
+      "name": "grilling",
+      "authority": "plugins/coding-engineer-skills/skills/grilling",
+      "consumer_alias": "plugins/product-manager-skills/skills/grilling",
+      "shared_files": {
+        "SKILL.md": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15"
+      },
+      "whole_tree_equal": true,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
+    },
+    {
+      "name": "backlog-ready-spec",
+      "authority": "plugins/coding-engineer-skills/skills/backlog-ready-spec",
+      "consumer_alias": "plugins/product-manager-skills/skills/backlog-ready-spec",
+      "shared_files": {
+        "SKILL.md": "3825e832c6af5fd32b6355e8d670b7d8e4a26267a3f0e0c981d8df828ecb22d2"
+      },
+      "whole_tree_equal": true,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
+    },
+    {
+      "name": "to-spec",
+      "authority": "plugins/coding-engineer-skills/skills/to-spec",
+      "consumer_alias": "plugins/product-manager-skills/skills/to-spec",
+      "shared_files": {
+        "SKILL.md": "0549be8ad5c90c25ad6882e92e939dbc5ad091c24bb27e35ef53b06d1168c739"
+      },
+      "whole_tree_equal": false,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
+    },
+    {
+      "name": "to-tickets",
+      "authority": "plugins/coding-engineer-skills/skills/to-tickets",
+      "consumer_alias": "plugins/product-manager-skills/skills/to-tickets",
+      "shared_files": {
+        "SKILL.md": "551553058f81c93b856525441a228ba67c8a84ba0fe7a1c9a1460a25c289ec9f"
+      },
+      "whole_tree_equal": false,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
+    },
+    {
+      "name": "founder-office-hours",
+      "authority": "plugins/product-manager-skills/skills/founder-office-hours",
+      "consumer_alias": "plugins/founder-ceo-skills/skills/founder-office-hours",
+      "shared_files": {
+        "SKILL.md": "919379ccf2411f4ac9d053ae2b7ddf846fc99a85f4a59cae41b84d76b84afee8"
+      },
+      "whole_tree_equal": true,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
+    },
+    {
+      "name": "plg-sales-integration",
+      "authority": "plugins/growth-and-gtm-skills/skills/plg-sales-integration",
+      "consumer_alias": "plugins/sales-skills/skills/plg-sales-integration",
+      "shared_files": {
+        "SKILL.md": "c8e9a70309d38b0a7d9080deb803e49f8aefca1a2601c907c71dd0f380e3d141",
+        "references/artifacts.md": "feee4081bb72c9ffa3e5c114a9d8f66cddc81ed2ce8e44f94b08210fd049e5c9",
+        "references/guest-insights.md": "b6e21893ff63e00e7e0cce446c83d27423111261944271a76ba04e2bd2be6ddf"
+      },
+      "whole_tree_equal": true,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
+    }
+  ],
+  "codex_local_disabled_entries": [
+    {
+      "path_relative_to_home": ".agents/skills/site_design_audit/SKILL.md",
+      "name": "site-design-audit",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/gh-issue-priority-handoff/SKILL.md",
+      "name": "gh-issue-priority-handoff",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/setting-goals/SKILL.md",
+      "name": "setting-goals",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/loop-on-pr-review-and-fix/SKILL.md",
+      "name": "loop-on-pr-review-and-fix",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/get_cookies/SKILL.md",
+      "name": "get-cookies",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/site_design_fix/SKILL.md",
+      "name": "site-design-fix",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/planmode_ceo/SKILL.md",
+      "name": "planmode-ceo",
+      "reason": "byte-equal Codex mirror; keep .codex entry"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/competitors/SKILL.md",
+      "name": "competitors",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/cro/SKILL.md",
+      "name": "cro",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/free-tools/SKILL.md",
+      "name": "free-tools",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/onboarding/SKILL.md",
+      "name": "onboarding",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/pricing/SKILL.md",
+      "name": "pricing",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/product-marketing/SKILL.md",
+      "name": "product-marketing",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/grilling/SKILL.md",
+      "name": "grilling",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/grill-me/SKILL.md",
+      "name": "grill-me",
+      "reason": "prefer installed Cogine plugin; preserve standalone files"
+    },
+    {
+      "path_relative_to_home": ".codex/skills/founder-office-hours/SKILL.md",
+      "name": "founder-office-hours",
+      "reason": "prefer product-manager-skills founder-office-hours"
+    },
+    {
+      "path_relative_to_home": ".agents/skills/founder-office-hours/SKILL.md",
+      "name": "founder-office-hours",
+      "reason": "prefer product-manager-skills founder-office-hours"
+    }
+  ],
+  "intentional_distinct_variants": [
+    {
+      "name": "prototype",
+      "paths": [
+        "plugins/design-engineer-skills/skills/prototype",
+        "plugins/product-manager-skills/skills/prototype"
+      ],
+      "reason": "Different runtime Markdown and support assets; preserve both."
+    },
+    {
+      "name": "ai-seo / search-visibility",
+      "reason": "Different scope and support assets; no proven replacement equivalence."
+    }
+  ],
+  "cross_host_boundary": "Codex enabled flags do not change Claude or other consumers. No standalone directory is removed or redirected. Installer locks retain original provenance; local overlays are not raw upstream snapshots."
+}

@@ -91,7 +91,7 @@ Tap into someone else's audience to shortcut the hardest part—getting noticed.
 1. List industry leaders your audience follows
 2. Pitch win-win collaborations
 3. Use tools like SparkToro or Listen Notes to find audience overlap
-4. Set up affiliate or referral incentives and track deal registration and commissions in the available partner system
+4. Plan affiliate or referral incentives and track deal registration and commissions in the available partner system. Verify available integrations and the intended account before use. If access is unavailable, draft the workflow in a spreadsheet and distinguish it from a configured or launched program.
 
 **Example - TRMNL:**
 Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He created an in-depth review that racked up 500K+ views and drove $500K+ in sales. They also set up an affiliate program for ongoing promotion.

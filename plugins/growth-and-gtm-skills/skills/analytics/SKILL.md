@@ -292,6 +292,11 @@ Mixpanel or Amplitude for product behavior, PostHog for an integrated
 open-source stack, and Segment for event routing. Do not assume a connector or
 credential is installed.
 
+Inspect available connectors, CLIs, project SDKs, or authenticated browser
+workflows and verify the intended account/property before use. If access is
+unavailable, work from user-provided exports, inspect the project's tracking
+code, or give a manual validation plan; state what remains unverified.
+
 ---
 
 ## Related Skills

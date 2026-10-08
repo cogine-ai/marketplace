@@ -130,7 +130,8 @@
       "adaptations": [
         "ADR-FORMAT.md: require four-digit zero-padded sequential numbers",
         "SKILL.md: resolve the selected context from GLOSSARY-MAP.md before reads and writes",
-        "SKILL.md: preserve configured legacy paths until an authorized content-preserving migration"
+        "SKILL.md: preserve configured legacy paths until an authorized content-preserving migration",
+        "2026-10-08 source unification: migrate validated standalone domain-policy priority, legacy paths and write-only ambiguity handling into the packaged maintenance source; preserve host and tracker adaptations"
       ],
       "files": {
         "ADR-FORMAT.md": {
@@ -151,7 +152,7 @@
           "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
           "source_path": "skills/engineering/domain-modeling/SKILL.md",
           "upstream_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
-          "local_sha256": "b722aa8de206dc2d5835340f5d0e26a591baf980738603595af74a54257ca269",
+          "local_sha256": "b5d97083289b02c4cfbf57a911b876c6a0c4b5734912ba52ec2669594e69c8d7",
           "mapping": "adapted"
         },
         "agents/openai.yaml": {
@@ -261,7 +262,8 @@
         "SKILL.md: resolve multi-context domain paths and use secure unique temporary report files",
         "HTML-REPORT.md: qualify codebase-design glossary references with the local plugin namespace",
         "HTML-REPORT.md: state CDN requirements, HTML-escape repository data, and use Mermaid strict mode",
-        "SKILL.md: all glossary writes use the resolved active path, including legacy CONTEXT.md"
+        "SKILL.md: all glossary writes use the resolved active path, including legacy CONTEXT.md",
+        "2026-10-08 source unification: migrate validated standalone domain-policy priority, legacy paths and write-only ambiguity handling into the packaged maintenance source; preserve host and tracker adaptations"
       ],
       "files": {
         "HTML-REPORT.md": {
@@ -275,7 +277,7 @@
           "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
           "source_path": "skills/engineering/improve-codebase-architecture/SKILL.md",
           "upstream_sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
-          "local_sha256": "ddf0705b2e78fd7abd2c8dca12dfb7a1cb6c64c81d3aa8cfd64846c3ff7850ab",
+          "local_sha256": "1f59f8a97e473160201d82018b809bf59700357407a6d0ba04b05770842832fc",
           "mapping": "adapted"
         },
         "agents/openai.yaml": {
@@ -299,14 +301,15 @@
         "domain.md: qualify bundled domain-modeling and improve-codebase-architecture references and remove the excluded grill-with-docs alias",
         "SKILL.md: preserve manually maintained tracker and legacy domain layout; create missing labels only in authorized setup scope",
         "issue-tracker-github.md: sub-issue API with authorization and relationship readback; retain supported dependency and external-PR queries",
-        "issue-tracker-github.md: gate frontier on verified open dependency count; failed/missing/invalid query results remain unknown"
+        "issue-tracker-github.md: gate frontier on verified open dependency count; failed/missing/invalid query results remain unknown",
+        "2026-10-08 source unification: migrate validated standalone domain-policy priority, legacy paths and write-only ambiguity handling into the packaged maintenance source; preserve host and tracker adaptations"
       ],
       "files": {
         "SKILL.md": {
           "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
           "source_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
           "upstream_sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
-          "local_sha256": "378f93e645437c4b017eb4b7bd2df501207829bf3fa8c57e733d7f1e12075f88",
+          "local_sha256": "0b7e98c19ddc71a0fd1dddf2b94f9ab15033bbdbbad7fc0168967afe66a71e06",
           "mapping": "adapted"
         },
         "agents/openai.yaml": {
@@ -320,7 +323,7 @@
           "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
           "source_path": "skills/engineering/setup-matt-pocock-skills/domain.md",
           "upstream_sha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9",
-          "local_sha256": "689b0fc2233065a7dc5c55512de1764e961c0bb6ff400dfd504b80bf3517950e",
+          "local_sha256": "52b1a6e71aa6989c2ff7e17e6f79c39c37f7c715f2a098995f4d86053f637c86",
           "mapping": "adapted"
         },
         "issue-tracker-github.md": {
