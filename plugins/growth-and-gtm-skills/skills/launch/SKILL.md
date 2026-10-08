@@ -318,6 +318,7 @@ Even small changelog updates remind customers your product is evolving. This bui
 - [ ] Launch assets created (screenshots, demo video, GIFs)
 - [ ] Onboarding flow ready
 - [ ] Analytics/tracking in place
+- [ ] Site QA done for a new site, redesign, or migration (see [site-launch-qa.md](references/site-launch-qa.md))
 
 ### Launch Day
 - [ ] Announcement email to list

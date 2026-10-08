@@ -24,8 +24,9 @@ for source pins and local metadata adjustments.
 
 ## Cross-platform compatibility
 
-The skills are shared by Codex and Claude Code. The upstream
-`review-animations`, `prototype`, and `pick-ui-library` use explicit-invocation
-metadata upstream that is not accepted by the shared Codex skill schema. This
-package removes those frontmatter fields and preserves explicit invocation for
-the two new skills through Codex `agents/openai.yaml` policy files.
+The skills are shared by Codex and Claude Code. `prototype` and
+`pick-ui-library` retain Claude Code's `disable-model-invocation: true` and
+Codex `agents/openai.yaml` policy `allow_implicit_invocation: false`.
+`review-animations` retains its existing name/description frontmatter and
+has no Codex implicit-invocation override. Its complete upstream body is
+preserved; Claude frontmatter and Codex agent policy are separate host controls.

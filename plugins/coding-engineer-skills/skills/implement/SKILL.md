@@ -6,7 +6,9 @@ disable-model-invocation: true
 
 Implement the work described by the user in the spec or tickets.
 
-Use the `coding-engineer-skills:tdd` skill where possible, at pre-agreed seams.
+If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.
+
+Invoke `coding-engineer-skills:tdd` through the available skill invocation mechanism where possible, at pre-agreed seams. Do not reopen seam choices already approved for this work.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 

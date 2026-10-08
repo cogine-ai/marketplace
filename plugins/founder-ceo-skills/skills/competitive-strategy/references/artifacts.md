@@ -308,3 +308,4 @@ How it works: Sriram worked on Visual Studio for Devices (2005-2006), building d
 A tool used for competitive research to see how a competitor's product or marketing has evolved over time.
 
 How it works: Used to look at locked-out pages, pricing pages, and homepages from the past year to extrapolate what changes competitors kept, indicating winning elements.
+

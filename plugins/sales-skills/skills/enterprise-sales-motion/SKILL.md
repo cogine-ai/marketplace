@@ -62,7 +62,7 @@ Lead the sales process personally for the first few dozen customers to ensure th
 - **Go-To-Market Motion Matrix** (Bret Taylor) - A framework for selecting the right sales motion based on the product and buyer.
 - **Modern Salesperson as Consultant Reframe** (SEO keywords, career ladders, backlog tools, copywriting, OnlyFans, AMA with Pete Kazanjy and much more) - A mental model for introverts approaching sales — reframing sales as consultative work rather than extroverted persuasion.
 - **Sales Comp Plan Aligned to Retention** (Sahil Mansuri) - A modern sales compensation structure that rewards customer quality and retention rather than just new business closed, including kickers for renewals, tracking
-- **Sales Motion as Source Code** (Pete Kazanjy) - A mental model for treating your sales process like software — run small cohorts, observe what breaks, update the 'code' (slides, scripts, objection handling),
+- **Sales Motion as Source Code** (Pete Kazanjy) - A mental model for treating your sales process like software — run small cohorts, observe what breaks, update the 'code' (slides, scripts, objection handling), 
 
 See `references/artifacts.md` for the full list with details.
 

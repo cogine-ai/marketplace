@@ -929,7 +929,7 @@ How it works: Step 1: [Company] recruits [user type A]
 Step 2: [User type A] does [action] that exposes [user type B] to the product
 Step 3: [User type B] signs up for [Company] and [additional benefit/discovery]
 
-Example (Cameo):
+Example (Cameo): 
 1. Cameo recruits celebrity
 2. Celebrity shares their Cameo profile with their fans
 3. Fans sign up for Cameo and discover other celebrities
@@ -1767,3 +1767,4 @@ How it works: 1. 'A Customer Acquisition Playbook for Consumer Startups' (First 
 3. 'Getting your first 1,000 users in B2C' (Lenny's Newsletter)
 4. 'Getting your first 10 customers in B2B' (Lenny's Newsletter)
 5. 'How to increase virality' (Lenny's Newsletter)
+

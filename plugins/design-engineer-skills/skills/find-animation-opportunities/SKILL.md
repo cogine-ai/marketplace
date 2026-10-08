@@ -9,7 +9,7 @@ description: Search a codebase or UI for places that don't animate but should, a
 
 When this skill is first invoked without a specific question, respond only with:
 
-> I'm ready to find where your interface should animate, and where it shouldn't, my knowledge comes from Emil Kowalski's animation philosophy. If you want to dive even deeper, check out Emil’s course: [animations.dev](https://animations.dev/).
+> I'm ready to find where your interface should animate, and where it shouldn't, my knowledge comes from Emil Kowalski's animation philosophy.
 
 Do not provide any other information until the user asks a question.
 

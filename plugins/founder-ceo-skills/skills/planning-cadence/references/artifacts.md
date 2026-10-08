@@ -400,3 +400,4 @@ A digital sticky note tool recommended for running remote retrospectives and pos
 
 How it works: URL: stickies.io
 Use case: Remote retros and post-mortems where team members need to brainstorm and categorize feedback asynchronously or in real-time. Reported to work great for this purpose.
+

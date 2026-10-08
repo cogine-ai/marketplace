@@ -1,11 +1,11 @@
 ---
 name: domain-modeling
-description: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.
+description: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.
 ---
 
 # Domain Modeling
 
-Actively build and sharpen the project's domain model as you design. This is the *active* discipline: challenging terms, inventing edge-case scenarios, and writing the glossary and decisions down the moment they crystallise. (Merely *reading* `CONTEXT.md` for vocabulary is not this skill: that's a one-line habit any skill can do. This skill is for when you're changing the model, not just consuming it.)
+Actively build and sharpen the project's domain model as you design. This is the *active* discipline: challenging terms, inventing edge-case scenarios, and writing the glossary and decisions down the moment they crystallise. (Merely *reading* `GLOSSARY.md` for vocabulary is not this skill: that's a one-line habit any skill can do. This skill is for when you're changing the model, not just consuming it.)
 
 ## File structure
 
@@ -13,7 +13,7 @@ Most repos have a single context:
 
 ```
 /
-├── CONTEXT.md
+├── GLOSSARY.md
 ├── docs/
 │   └── adr/
 │       ├── 0001-event-sourced-orders.md
@@ -21,30 +21,32 @@ Most repos have a single context:
 └── src/
 ```
 
-If a `CONTEXT-MAP.md` exists at the root, the repo has multiple contexts. The map points to where each one lives:
+If a `GLOSSARY-MAP.md` exists at the root, the repo has multiple contexts. The map points to where each one lives:
 
 ```
 /
-├── CONTEXT-MAP.md
+├── GLOSSARY-MAP.md
 ├── docs/
 │   └── adr/                          ← system-wide decisions
 ├── src/
 │   ├── ordering/
-│   │   ├── CONTEXT.md
+│   │   ├── GLOSSARY.md
 │   │   └── docs/adr/                 ← context-specific decisions
 │   └── billing/
-│       ├── CONTEXT.md
+│       ├── GLOSSARY.md
 │       └── docs/adr/
 ```
 
-Resolve the active context before writing. If `CONTEXT-MAP.md` exists, read it,
+Resolve the active context before writing. If `GLOSSARY-MAP.md` exists, read it,
 infer which listed context the topic belongs to, and use that context's
-`CONTEXT.md` and context-specific `docs/adr/`; ask when the context is unclear.
+`GLOSSARY.md` and context-specific `docs/adr/`; ask when the context is unclear.
 Use the root `docs/adr/` only for system-wide decisions. Without a context map,
-use the root `CONTEXT.md` and `docs/adr/`.
+use the root `GLOSSARY.md` and `docs/adr/`.
+
+Honor the repository's configured domain locations before applying these default paths. An existing legacy `CONTEXT-MAP.md` still establishes the multi-context layout until an authorized migration; use its selected context's glossary and ADRs. An existing `CONTEXT.md` remains the active glossary when no replacement is configured. If two maps conflict, resolve the active layout before writing. Migrate names only within the authorized task, preserving contents and mappings; do not create a competing root glossary.
 
 Create files lazily: only when you have something to write. If the selected
-context has no `CONTEXT.md`, create it when the first term is resolved. If its
+context has no domain glossary at its resolved location, create it when the first term is resolved. If its
 ADR directory does not exist, create it when the first ADR is needed.
 
 ## During the session
@@ -52,7 +54,7 @@ ADR directory does not exist, create it when the first ADR is needed.
 ### Challenge against the glossary
 
 When the user uses a term that conflicts with the existing language in the
-selected context's `CONTEXT.md`, call it out immediately. "Your glossary
+selected context's `GLOSSARY.md`, call it out immediately. "Your glossary
 defines 'cancellation' as X, but you seem to mean Y. Which is it?"
 
 ### Sharpen fuzzy language
@@ -67,13 +69,13 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible. Which is right?"
 
-### Update CONTEXT.md inline
+### Update GLOSSARY.md inline
 
-When a term is resolved, update the selected context's `CONTEXT.md` right
+When a term is resolved, update the selected context's resolved glossary file (`GLOSSARY.md` by default, or its active legacy path) right
 there. Don't batch these up: capture them as they happen. Use the format in
-[CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md).
+[GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
 
-`CONTEXT.md` should be totally devoid of implementation details. Do not treat `CONTEXT.md` as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
+`GLOSSARY.md` should be totally devoid of implementation details. Do not treat `GLOSSARY.md` as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
 
 ### Offer ADRs sparingly
 

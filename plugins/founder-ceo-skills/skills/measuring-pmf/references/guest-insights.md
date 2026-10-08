@@ -642,7 +642,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Startup to exit: Lessons from a first-time founder](https://www.lennysnewsletter.com/p/startup-to-exit-lessons-from-a-first-time-founder)*
 
@@ -727,7 +727,7 @@
 
 ## Matt MacInnis
 
-**Insight:**
+**Insight:** 
 
 *Source: [10 contrarian leadership truths every leader needs to hear | Matt MacInnis (Rippling)](https://www.youtube.com/watch?v=O_W76LR77Vw) @ 00:42:47*
 
@@ -805,7 +805,7 @@
 
 ## Sarah Tavel
 
-**Insight:**
+**Insight:** 
 
 *Source: [The hierarchy of engagement | Sarah Tavel (Benchmark, Greylock, Pinterest)](https://www.youtube.com/watch?v=H9g4pzcz6Tk) @ 00:56:57*
 
@@ -912,3 +912,4 @@
 *Source: How to grow a subscription business | Yuriy Timen (Grammarly, Canva, Airtable) @ 00:49:03*
 
 ---
+

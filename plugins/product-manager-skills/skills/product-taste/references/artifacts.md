@@ -580,3 +580,4 @@ How it works: 1. 'The First Secret of Great Design' — 16-minute TED talk by To
 A custom GPT that generates scenario-based discussion questions to help PMs practice logical reasoning, feature prioritization, and balancing competing metrics. Used as a team warm-up exercise in meetings.
 
 How it works: The GPT generates scenario-based questions mirroring real-world PM situations. After the team decides on an answer, they enter it and the GPT provides a breakdown of reasoning behind why each option is correct or incorrect. Available at: https://chatgpt.com/g/g-673290301700819084afa36bdbcdfa3b-product-management-logic-coach. Prompt available at: https://docs.google.com/document/d/1PyfwLZcSxENRc3CGptPKRWS7k33vf2h_ELG4lA2AZD4/edit?tab=t.0#heading=h.g0bsru2fvrfw
+

@@ -1,5 +1,18 @@
 # Upstream sources
 
+## Current maintenance — 2026-10-08 (package 0.1.2)
+
+Follow the changed source methods while retaining optional connectors, manual fallback, draft-first operation and authorization/readback for remote writes. Pipeline coverage and conversion calculations require the appropriate underlying data; no platform mode switch or unbundled CRM tool is required.
+
+`UPSTREAM_SYNC_2026-10-08.json` records the reviewed frozen sources, actual
+file hashes and the distinction between raw copies and local adaptations.
+Earlier pins and notes below describe historical imports; they are not a
+claim that every current file equals a single repository HEAD. Versions are
+prepared in source; this maintenance entry does not establish publication or
+installation.
+
+## Historical import records
+
 Packaged on 2026-07-19. Skill directories are copied or adapted into this
 plugin so Codex and Claude Code can discover the same bundle.
 

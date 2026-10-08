@@ -284,7 +284,7 @@
 
 ## Mike Maples Jr
 
-**Insight:**
+**Insight:** 
 
 *Source: [Pattern Breakers: How to find a breakthrough startup idea | Mike Maples, Jr. (Founding Partner at Floodgate, ex-Product at Silicon Graphics)](https://www.youtube.com/watch?v=h9o6gPQA6LA) @ 00:58:35*
 
@@ -317,3 +317,4 @@
 *Source: [A framework for finding product-market fit | Todd Jackson (First Round Capital)](https://www.youtube.com/watch?v=yc1Uwhfxacs) @ 00:21:25*
 
 ---
+

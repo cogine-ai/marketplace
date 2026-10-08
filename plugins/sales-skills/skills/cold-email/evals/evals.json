@@ -1,0 +1,19 @@
+{
+  "skill_name": "cold-email",
+  "evals": [
+    {
+      "prompt": "Write a cold email to a VP of Finance at a 200-person company pitching our expense-report tool.",
+      "expected_output": "Draft a concise cold email with one low-friction ask. Use the provided product facts and actual prospect evidence, or label a missing-context assumption. Check generic and repetitive rhetorical patterns without treating punctuation as a universal ban. Do not invent prospect pain, product performance, or personalization; do not send or create an external draft without user authorization.",
+      "assertions": [
+        "One low-friction ask",
+        "No invented prospect evidence or product performance",
+        "Concrete mechanism rather than generic stock phrases",
+        "No repetitive contrast/negation/question punchline patterns",
+        "Keeps voice and language choices contextual",
+        "Produces a draft without unauthorized external action"
+      ],
+      "files": [],
+      "id": 7
+    }
+  ]
+}

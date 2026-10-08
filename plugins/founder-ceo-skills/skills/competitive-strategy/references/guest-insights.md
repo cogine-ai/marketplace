@@ -118,7 +118,7 @@
 
 ## Kayvon Beykpour
 
-**Insight:**
+**Insight:** 
 
 *Source: [Twitter’s former Head of Product opens up: being fired, meeting Elon, changing stagnant culture, building consumer product, more | Kayvon Beykpour](https://www.youtube.com/watch?v=MKDnDueTvKk) @ 01:01:14*
 
@@ -341,7 +341,7 @@
 
 ## Peter Deng
 
-**Insight:**
+**Insight:** 
 
 *Source: [From ChatGPT to Instagram to Uber: The quiet architect behind the world’s most popular products | Peter Deng](https://www.youtube.com/watch?v=8TpakBfsmcQ) @ 00:27:37*
 
@@ -431,7 +431,7 @@
 
 ## Sam Schillace
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to be more innovative | Sam Schillace (Microsoft deputy CTO, creator of Google Docs)](https://www.youtube.com/watch?v=IOWDoDpQ7Xg) @ 00:28:10*
 
@@ -439,7 +439,7 @@
 
 ## Sarah Tavel
 
-**Insight:**
+**Insight:** 
 
 *Source: [The hierarchy of engagement | Sarah Tavel (Benchmark, Greylock, Pinterest)](https://www.youtube.com/watch?v=H9g4pzcz6Tk) @ 01:39:27*
 
@@ -504,7 +504,7 @@
 
 ## Timothy Davis
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 00:53:40*
 
@@ -538,3 +538,4 @@
 *Source: [An inside look at how Miro builds product: Lessons on outmaneuvering competitors, team structure, product quality, and moving fast | Varun Parmar (CPO of Miro)](https://www.youtube.com/watch?v=furNg4njlsg) @ 00:11:45*
 
 ---
+

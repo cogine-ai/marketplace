@@ -56,7 +56,13 @@ If the source is ambiguous, ask only for the missing decision that changes the s
    - Remove secrets, customer data, internal-only links, and unrelated conversation context.
    - Replace vague words like "better", "fast", "smart", or "support" with observable behavior.
 
-6. Emit the readiness verdict.
+6. Keep one sanitized spec body for review and any authorized publication.
+   - Write the final redacted body once to a private temporary file or the approved local spec path. Review that exact body and pass it through a structured tool argument or a file-based CLI option such as `--body-file`; never interpolate free-form spec text into a shell command.
+   - Reuse the same body for publication and the local handoff. Read back the saved or published body and identify differences or failed persistence.
+   - Publishing or obtaining an issue URL proves transport, not spec readiness; retain the quality verdict and unresolved evidence separately.
+   - If the body changes materially after review, rerun the affected de-duplication, redaction, acceptance, and readiness checks against the revised artifact. A failed review call, refusal, empty or invalid response, or incomplete evidence never counts as `PASS`.
+
+7. Emit the readiness verdict.
    - `READY`: implementable now, with required de-duplication checks completed.
    - If a required issue lookup failed, report the missing evidence. Use `NOT READY` when it could materially change scope or duplicate existing work; `READY WITH RISKS` is appropriate only when other verified evidence establishes implementability and the incomplete lookup is explicitly accepted. Never use an unqualified `READY` or `NOT NEEDED` based on a failed query.
    - `READY WITH RISKS`: implementable, but risks or assumptions must be visible.

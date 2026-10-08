@@ -52,7 +52,7 @@ In the early days, you are selling yourself and your reliability because custome
 - **The Collison Install** (Dalton Caldwell) - A tactic for closing early enterprise sales and ensuring product implementation, pioneered by the founders of Stripe.
 - **The $1 Invoice Test** (Jeff Weinstein) - A tactic to help founders cross the psychological barrier of charging customers.
 - **B2B Startup Maturity Stages / Founder-led Selling Stages** (Pete Kazanjy) - A sequential progression model for B2B startups: (1) Validate the problem, (2) Build MVP, (3) Founder sells to 20-30 customers, (4) Hire 2 pioneer sellers and g
-- **Internal Pessimism / External Optimism** (Sahil Mansuri) - Great salespeople (and CEOs) balance internal pessimism—constantly looking for disqualifying signals—with external optimism to avoid wasting time on deals that
+- **Internal Pessimism / External Optimism** (Sahil Mansuri) - Great salespeople (and CEOs) balance internal pessimism—constantly looking for disqualifying signals—with external optimism to avoid wasting time on deals that 
 
 See `references/artifacts.md` for the full list with details.
 

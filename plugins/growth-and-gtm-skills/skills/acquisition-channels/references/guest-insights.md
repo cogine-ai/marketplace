@@ -81,7 +81,7 @@
 
 ## Dalton Caldwell
 
-**Insight:**
+**Insight:** 
 
 *Source: [Lessons from 1,000+ YC startups: Resilience, tar pit ideas, pivoting, more | Dalton Caldwell (Y Combinator, Managing Director)](https://www.youtube.com/watch?v=m7LvNTbaqSI) @ 01:05:45*
 
@@ -159,7 +159,7 @@
 
 ## Gina Gotthilf
 
-**Insight:**
+**Insight:** 
 
 *Source: [Scaling Duolingo, embracing failure, and insight into Latin America’s tech scene | Gina Gotthilf (Latitud, Duolingo)](https://www.youtube.com/watch?v=sWClFYdbkRA) @ 00:18:45*
 
@@ -1171,7 +1171,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [A founder’s guide to community](https://www.lennysnewsletter.com/p/a-founders-guide-to-community)*
 
@@ -1317,7 +1317,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [An inside look at Deel’s unprecedented growth | Meltem Kuran Berkowitz (Head of Growth)](https://www.youtube.com/watch?v=C1_sM0_ds2c) @ 00:40:15*
 
@@ -1427,43 +1427,43 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 00:48:01*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 01:27:07*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 01:18:59*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 01:02:12*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 00:20:30*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 00:25:25*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 01:35:05*
 
@@ -1516,3 +1516,4 @@
 *Source: How to grow a subscription business | Yuriy Timen (Grammarly, Canva, Airtable) @ 00:55:19*
 
 ---
+

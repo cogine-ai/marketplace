@@ -120,6 +120,16 @@ Before presenting, gut-check:
 
 ---
 
+### Structure check
+
+Describe the prospect's actual situation and your supported mechanism directly.
+Check for repeated contrast reveals, negation lists, question-and-punchline
+openers, trailing clause stacks, and generic template language. Choose the
+user's voice and language deliberately; punctuation is not an authorship test.
+No evidence about the prospect means a labeled assumption or a research request,
+not invented personalization. Keep one low-friction ask. The reference examples
+are models of structure, not claims about the current prospect or expected lift.
+
 ## What to Avoid
 
 - Opening with "I hope this email finds you well" or "My name is X and I work at Y"

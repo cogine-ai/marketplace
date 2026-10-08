@@ -61,6 +61,8 @@ CURRENT_MATT_IMPORTS = {
     "improve-codebase-architecture",
     "setup-matt-pocock-skills",
     "tdd",
+    "to-spec",
+    "to-tickets",
 }
 
 OPERATIONAL_MODEL_CALLS = {
@@ -202,68 +204,102 @@ def validate_metadata(errors):
     if "30 skill" not in readme:
         errors.append("plugin README does not state the 30-skill inventory")
 
+    versions = []
     for manifest_path in (
         PLUGIN_ROOT / ".claude-plugin" / "plugin.json",
         PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
     ):
         manifest = load_json(manifest_path)
-        if manifest.get("version") != "0.2.2":
-            errors.append(f"{manifest_path}: expected version 0.2.2")
+        versions.append(manifest.get("version"))
+        if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", manifest.get("version", "")):
+            errors.append(f"{manifest_path}: invalid semantic version")
         if "Thirty focused" not in manifest.get("description", ""):
             errors.append(f"{manifest_path}: description does not state Thirty focused skills")
 
     marketplace = load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
     coding = entries.get("coding-engineer-skills", {})
-    if coding.get("version") != "0.2.2":
-        errors.append("marketplace coding-engineer-skills version is not 0.2.2")
+    versions.append(coding.get("version"))
+    if len(set(versions)) != 1:
+        errors.append("coding versions differ between manifests and marketplace")
     if "Thirty focused" not in coding.get("description", ""):
         errors.append("marketplace description does not state Thirty focused skills")
 
 
 def validate_lock(errors, matt_root=None):
     lock = load_json(PLUGIN_ROOT / "UPSTREAM_LOCK.json")
-    if lock.get("source", {}).get("commit") != "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76":
-        errors.append("UPSTREAM_LOCK.json has the wrong Matt commit")
+    if lock.get("format_version") != 2:
+        errors.append("UPSTREAM_LOCK.json must use per-file source mapping format 2")
+    default_commit = lock.get("source", {}).get("commit", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", default_commit):
+        errors.append("UPSTREAM_LOCK.json has an invalid default source commit")
     if set(lock.get("skills", {})) != CURRENT_MATT_IMPORTS:
-        errors.append("UPSTREAM_LOCK.json does not cover the 10 current Matt imports")
+        errors.append("UPSTREAM_LOCK.json does not cover the 12 retained Matt imports")
 
     for skill_name, entry in lock.get("skills", {}).items():
         if not isinstance(entry.get("adaptations"), list):
             errors.append(f"{skill_name}: adaptations must be a list")
+        if entry.get("status") == "retired-upstream-retained-local":
+            if entry.get("latest_source_path_exists") is not False:
+                errors.append(f"{skill_name}: retired source must not claim a current path")
+            if not re.fullmatch(r"[0-9a-f]{40}", entry.get("retired_at_commit", "")):
+                errors.append(f"{skill_name}: retirement commit is missing")
         for relative_path, hashes in entry.get("files", {}).items():
-            local_path = SKILLS_ROOT / skill_name / relative_path
+            local_relative = Path(relative_path)
+            if local_relative.is_absolute() or ".." in local_relative.parts:
+                errors.append(f"{skill_name}: invalid local file mapping: {relative_path}")
+                continue
+            local_path = SKILLS_ROOT / skill_name / local_relative
             if not local_path.is_file():
                 errors.append(f"{skill_name}: locked file is missing: {relative_path}")
                 continue
-            if digest(local_path) != hashes.get("local_sha256"):
+            local_bytes = local_path.read_bytes()
+            if hashlib.sha256(local_bytes).hexdigest() != hashes.get("local_sha256"):
                 errors.append(f"{skill_name}: local hash drift: {relative_path}")
             if not re.fullmatch(r"[0-9a-f]{64}", hashes.get("upstream_sha256", "")):
                 errors.append(f"{skill_name}: invalid upstream hash: {relative_path}")
+            source_commit = hashes.get("source_commit", entry.get("source_commit", default_commit))
+            source_path = hashes.get("source_path", "")
+            source_relative = Path(source_path)
+            if not re.fullmatch(r"[0-9a-f]{40}", source_commit):
+                errors.append(f"{skill_name}: invalid source commit: {relative_path}")
+                continue
+            if (not source_path or source_relative.is_absolute()
+                    or ".." in source_relative.parts):
+                errors.append(f"{skill_name}: invalid source path: {relative_path}")
+                continue
+            if hashes.get("mapping") not in {"byte-identical", "adapted"}:
+                errors.append(f"{skill_name}: invalid mapping mode: {relative_path}")
+            if hashes.get("mapping") == "byte-identical" and hashes.get("local_sha256") != hashes.get("upstream_sha256"):
+                errors.append(f"{skill_name}: byte-identical mapping has unequal hashes: {relative_path}")
 
-    if matt_root is None:
-        return
-    proc = subprocess.run(
-        ["git", "-C", str(matt_root), "rev-parse", "HEAD"],
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
-    if proc.returncode != 0:
-        errors.append(f"cannot read Matt checkout: {proc.stderr.strip()}")
-        return
-    if proc.stdout.strip() != lock["source"]["commit"]:
-        errors.append(
-            f"Matt checkout is {proc.stdout.strip()}, expected {lock['source']['commit']}"
-        )
-        return
-    for skill_name, entry in lock["skills"].items():
-        for relative_path, hashes in entry["files"].items():
-            upstream_path = matt_root / entry["upstream_path"] / relative_path
-            if not upstream_path.is_file():
-                errors.append(f"{skill_name}: upstream file is missing: {relative_path}")
-            elif digest(upstream_path) != hashes["upstream_sha256"]:
-                errors.append(f"{skill_name}: upstream hash drift: {relative_path}")
+            source_bytes = None
+            if matt_root is not None:
+                proc = subprocess.run(
+                    ["git", "-C", str(matt_root), "show", f"{source_commit}:{source_path}"],
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                )
+                if proc.returncode != 0:
+                    errors.append(f"{skill_name}: cannot read pinned source {source_commit}:{source_path}")
+                else:
+                    source_bytes = proc.stdout
+                    if hashlib.sha256(source_bytes).hexdigest() != hashes.get("upstream_sha256"):
+                        errors.append(f"{skill_name}: upstream hash drift: {relative_path}")
+            for region in hashes.get("raw_source_regions", []):
+                try:
+                    start, end = region["landing_byte_range_half_open"]
+                    if not (0 <= start <= end <= len(local_bytes)):
+                        raise ValueError("invalid landing range")
+                    if hashlib.sha256(local_bytes[start:end]).hexdigest() != region["sha256"]:
+                        raise ValueError("landing bytes differ")
+                    if source_bytes is not None:
+                        start, end = region["byte_range_half_open"]
+                        if not (0 <= start <= end <= len(source_bytes)):
+                            raise ValueError("invalid source range")
+                        if hashlib.sha256(source_bytes[start:end]).hexdigest() != region["sha256"]:
+                            raise ValueError("source bytes differ")
+                except (KeyError, TypeError, ValueError) as exc:
+                    errors.append(f"{skill_name}: raw source region drift: {relative_path}: {exc}")
 
 
 def main():
@@ -271,7 +307,7 @@ def main():
     parser.add_argument(
         "--matt-root",
         type=Path,
-        help="Optional checkout of mattpocock/skills at the locked commit.",
+        help="Optional mattpocock/skills Git checkout containing all per-file pinned commits.",
     )
     args = parser.parse_args()
 

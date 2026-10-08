@@ -1,5 +1,18 @@
 # Upstream sources
 
+## Current maintenance — 2026-10-08 (package 0.2.3)
+
+Grilling and prototype SKILL.md/LOGIC.md/UI.md follow the frozen source exactly, including removal of the two prototype UI.md local additions. The shared founder, spec and tracker workflows retain portable policies; UIUX follows source data/scripts with the documented title-width and React-security corrections.
+
+`UPSTREAM_SYNC_2026-10-08.json` records the reviewed frozen sources, actual
+file hashes and the distinction between raw copies and local adaptations.
+Earlier pins and notes below describe historical imports; they are not a
+claim that every current file equals a single repository HEAD. Versions are
+prepared in source; this maintenance entry does not establish publication or
+installation.
+
+## Historical import records
+
 Packaged on 2026-07-19 and selectively updated on 2026-09-08. Skill directories are copied
 or adapted into this plugin so Codex and Claude Code can discover the same
 bundle.
@@ -83,8 +96,8 @@ snapshot exactly. The redundant `grill-me` alias is intentionally omitted.
 Matt Pocock's tracker-aware skills reuse Cogine's portable adaptations;
 `to-spec` and `to-tickets` are explicit-only in both Claude Code and Codex.
 The four Anthropic workflows and GitHub PRD workflow were condensed and made
-connector-independent. `prototype` gained four concise design gates and a
-standalone HTML fallback. `ui-ux-pro-max` resolves its own skill directory
+connector-independent. `prototype` previously had local design gates and a standalone HTML
+fallback; these additions were removed in the approved 2026-10-08 raw sync. `ui-ux-pro-max` resolves its own skill directory
 instead of relying on `CLAUDE_PLUGIN_ROOT`, and both hosts treat it as explicit-only.
 The two Lenny skills retain their full evidence references as on-demand
 material. The current `to-tickets` snapshot omits its former final `/implement`

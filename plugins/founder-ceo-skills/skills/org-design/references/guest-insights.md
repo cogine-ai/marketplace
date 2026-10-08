@@ -122,7 +122,7 @@
 
 ## Camille Fournier
 
-**Insight:**
+**Insight:** 
 
 *Source: [The things engineers are desperate for PMs to understand | Camille Fournier (author of “The Manager’s Path,” ex-CTO at Rent the Runway)](https://www.youtube.com/watch?v=hZSh0rs20uI) @ 00:54:48*
 
@@ -253,7 +253,7 @@
 
 ## EOY Review
 
-**Insight:**
+**Insight:** 
 
 *Source: EOY Review @ 00:53:49*
 
@@ -261,7 +261,7 @@
 
 ## Eeke de Milliano
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to foster innovation and big thinking | Eeke de Milliano (Retool, Stripe)](https://www.youtube.com/watch?v=2ezz4KJe7kA) @ 00:32:28*
 
@@ -281,7 +281,7 @@
 
 ## Eric Simons
 
-**Insight:**
+**Insight:** 
 
 *Source: [Inside Bolt: From near-death to ~$40m ARR in 5 months—one of the fastest-growing products in history | Eric Simons (founder and CEO of StackBlitz)](https://www.youtube.com/watch?v=L22DtAHLmzs) @ 00:54:54*
 
@@ -330,13 +330,13 @@
 
 ## Gokul Rajaram
 
-**Insight:**
+**Insight:** 
 
 *Source: [Gokul Rajaram on designing your product development process, when and how to hire your first PM, a playbook for hiring leaders, getting ahead in you career, how to get started angel investing, more](https://www.youtube.com/watch?v=5p0VK_-BoJI) @ 00:33:03*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Gokul Rajaram on designing your product development process, when and how to hire your first PM, a playbook for hiring leaders, getting ahead in you career, how to get started angel investing, more](https://www.youtube.com/watch?v=5p0VK_-BoJI) @ 00:41:48*
 
@@ -488,7 +488,7 @@
 
 ## Judd Antin
 
-**Insight:**
+**Insight:** 
 
 *Source: [The UX research reckoning is here | Judd Antin (Airbnb, Meta)](https://www.youtube.com/watch?v=L6RKi9ZvkT4) @ 00:57:15*
 
@@ -1066,7 +1066,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [The unconventional Palantir principles that catalyzed a generation of startups](https://www.lennysnewsletter.com/p/the-unconventional-palantir-principles-that-catalyzed-a-generation-of-startups)*
 
@@ -1074,13 +1074,13 @@
 
 ## Manik Gupta
 
-**Insight:**
+**Insight:** 
 
 *Source: Manik Gupta (ex-CPO Uber, Google Maps) on how to build consumer apps, why it’s useful to be optimistic about technology, creating inflections in your PM career, the changing CPO role, and more @ 00:30:11*
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: Manik Gupta (ex-CPO Uber, Google Maps) on how to build consumer apps, why it’s useful to be optimistic about technology, creating inflections in your PM career, the changing CPO role, and more @ 00:36:23*
 
@@ -1114,7 +1114,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [10 contrarian leadership truths every leader needs to hear | Matt MacInnis (Rippling)](https://www.youtube.com/watch?v=O_W76LR77Vw) @ 00:25:44*
 
@@ -1177,7 +1177,7 @@
 
 ## Paul Adams
 
-**Insight:**
+**Insight:** 
 
 *Source: [What AI means for your product strategy | Paul Adams (CPO of Intercom)](https://www.youtube.com/watch?v=R-Geamq9xc0) @ 00:34:52*
 
@@ -1185,7 +1185,7 @@
 
 ## Peter Deng
 
-**Insight:**
+**Insight:** 
 
 *Source: [From ChatGPT to Instagram to Uber: The quiet architect behind the world’s most popular products | Peter Deng](https://www.youtube.com/watch?v=8TpakBfsmcQ) @ 00:47:12*
 
@@ -1275,7 +1275,7 @@
 
 ## Shishir Mehrotra
 
-**Insight:**
+**Insight:** 
 
 *Source: [The rituals of great teams | Shishir Mehrotra of Coda, YouTube, Microsoft](https://www.youtube.com/watch?v=7uSuMIJhONA) @ 00:20:14*
 
@@ -1296,7 +1296,7 @@
 
 ## Timothy Davis
 
-**Insight:**
+**Insight:** 
 
 *Source: [The ultimate guide to performance marketing | Timothy Davis (Shopify)](https://www.youtube.com/watch?v=zNJyb3R_Pnc) @ 01:16:02*
 
@@ -1351,3 +1351,4 @@
 *Source: [An inside look at Mixpanel’s product journey | Vijay Iyengar (Head of Product)](https://www.youtube.com/watch?v=t-2oXtZrlEc) @ 00:19:50*
 
 ---
+

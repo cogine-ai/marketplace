@@ -1974,3 +1974,4 @@ How it works: Examples of template-driven PLG marketing:
 - Miro: Miroverse community-sourced templates (miro.com/miroverse/) and Templates Library (miro.com/templates/)
 - SafetyCulture: Safety Checklist Templates (safetyculture.com/checklists/)
 - SurveyMonkey: Survey Templates (surveymonkey.com/mp/survey-templates/)
+

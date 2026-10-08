@@ -28,6 +28,12 @@ Ask only for task-specific information that is still missing.
   template-and-data opportunities, read
   [programmatic-seo.md](references/programmatic-seo.md).
 
+- For positioning changes, offsite consensus, or LinkedIn surfaces, read
+  [positioning-and-consensus.md](references/positioning-and-consensus.md) and
+  [linkedin-ai-citations.md](references/linkedin-ai-citations.md) as relevant.
+- For selecting a platform for pages at scale, read
+  [implementation-platforms.md](references/implementation-platforms.md).
+
 Use more than one route when the problem crosses surfaces, but do not load all
 references by default.
 
@@ -58,8 +64,7 @@ references by default.
 - Do not create thin pages at scale; require unique data, utility, or insight.
 - Verify current platform behavior with primary sources when it may have
   changed. Label benchmarks and causal explanations as estimates.
-- Explain the training-versus-discovery tradeoff before changing crawler
-  access.
+- Audit crawler controls by purpose before changing access. Training, search discovery, and user-triggered retrieval are separate decisions.
 - Prefer a prioritized diagnosis and test plan over an undifferentiated SEO
   checklist.
 

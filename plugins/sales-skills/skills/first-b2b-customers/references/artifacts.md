@@ -492,3 +492,4 @@ How it works: Strategy:
 5. All first 10 customers were cold — 'They shouldn't owe us anything. They should buy it because they see value in it, and that's how we'll know it's a good idea.'
 
 First customer story: Deserve (80-person company). Did multiple calls with the CFO. Approaching YC demo day, said 'Dude, we really need the revenue.' Asked for $10K, settled on $7K.
+

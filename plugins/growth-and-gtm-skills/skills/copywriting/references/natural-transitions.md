@@ -28,7 +28,7 @@ Adapted from: University of Manchester Academic Phrasebank (2023), Plain English
 
 ## Previewing Content Structure
 
-Use to orient readers and set expectations:
+Use in long guides to orient readers when it helps. On short marketing pages, lead with the useful content.
 
 - Here's what we'll cover...
 - This guide walks you through...
@@ -206,7 +206,7 @@ Use when citing sources, data, or expert opinions:
 
 ## Question-Based Transitions
 
-Useful for conversational tone and featured snippet optimization:
+Use questions that the reader would actually ask, then answer with substance. Avoid repeating question-and-punchline transitions in short copy.
 
 - So what does this mean for you?
 - But why does this matter?
@@ -242,7 +242,7 @@ For claims that need qualification or aren't absolute:
 - it appears that
 - evidence suggests
 - this can help
-- many experts believe
+- [named source] reports
 
 ---
 
@@ -269,4 +269,4 @@ These phrases are overused in AI-generated content:
 - "This begs the question..."
 - "Let's delve into..."
 
-See the search-visibility skill's `references/ai-writing-detection.md` for a complete list of AI writing tells.
+See [ai-tells.md](ai-tells.md) for structural review; choose transitions for the actual reader, language, and brand voice.

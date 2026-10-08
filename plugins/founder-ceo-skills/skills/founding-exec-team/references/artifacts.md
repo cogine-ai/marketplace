@@ -187,3 +187,4 @@ How it works: David Hsu kept Retool's team to only the co-founders for a full ye
 How Segment hired a unicorn customer success person as one of their earliest employees to handle technical support and free up co-founder bandwidth
 
 How it works: Context: Four co-founders were round-robining support via Help Scout and Olark live chat. CEO Peter Reinhardt spent 8 weeks handling all support volume alone, which meant he couldn't do anything else. Hire profile: Jake Peterson had run his own analytics consultancy, had some technical ability to read code, wrote good docs, authored early blog content. He could handle most technical requests independently and synthesize new requests. Key insight: 'There's something really magical when you write in to a startup and they fix your issue within a few hours. It's something you'd never expect from a big company, and it was one way for us to differentiate.'
+

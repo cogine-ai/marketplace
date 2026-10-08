@@ -32,7 +32,7 @@
 
 ## Ami Vora
 
-**Insight:**
+**Insight:** 
 
 *Source: [Making an impact through authenticity and curiosity | Ami Vora (CPO at Faire, ex-WhatsApp, FB, IG)](https://www.youtube.com/watch?v=6UHAop9fhNU) @ 01:01:41*
 
@@ -133,7 +133,7 @@
 
 ## Brandon Chu
 
-**Insight:**
+**Insight:** 
 
 *Source: Brandon Chu on building product at Shopify, how writing changed the trajectory of his career, the habits that make you a great PM, pros and cons of being a platform PM, how Shopify got through Covid @ 36:36*
 
@@ -171,7 +171,7 @@
 
 ## Dharmesh Shah
 
-**Insight:**
+**Insight:** 
 
 *Source: [Zigging vs. zagging: How HubSpot built a $30B company | Dharmesh Shah (co-founder/CTO)](https://www.youtube.com/watch?v=dpw9Ue1HU48) @ 01:02:49*
 
@@ -179,7 +179,7 @@
 
 ## Hari Srinivasan
 
-**Insight:**
+**Insight:** 
 
 *Source: [LinkedIn’s product evolution and the art of building complex systems | Hari Srinivasan (LinkedIn)](https://www.youtube.com/watch?v=ZUwkTs_QWqg) @ 00:37:35*
 
@@ -453,7 +453,7 @@
 
 ## Shishir Mehrotra
 
-**Insight:**
+**Insight:** 
 
 *Source: [The rituals of great teams | Shishir Mehrotra of Coda, YouTube, Microsoft](https://www.youtube.com/watch?v=7uSuMIJhONA) @ 00:46:08*
 
@@ -487,7 +487,7 @@
 
 ## Sriram and Aarthi
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hot takes and techno-optimism from tech’s top power couple | Sriram and Aarthi](https://www.youtube.com/watch?v=HsD5ycT_umw) @ 01:01:21*
 
@@ -520,3 +520,4 @@
 *Source: [Billion dollar failures, and billion dollar success | Tom Conrad (Quibi, Pandora, Pets.com, Snap, Zero)](https://www.youtube.com/watch?v=maK0XD9ARoI) @ 01:00:14*
 
 ---
+

@@ -60,7 +60,7 @@ Aim for approximately 70 percent of the information needed before making a call 
 - **RAPID Decision-Making Framework** (Hari Srinivasan) - A model to clarify roles in complex decisions to ensure speed and accountability.
 - **Kombucha Scale** (My favorite decision-making frameworks) - A quick mental model from Square for determining whether a decision warrants a formal framework, based on two variables: importance and urgency.
 - **Type-1 and Type-2 Decisions** (How to get into product management) - Jeff Bezos's framework for categorizing decisions as irreversible (Type-1) or reversible (Type-2) to determine how much deliberation is warranted
-- **Pre-mortem with Tigers, Paper Tigers, and Elephants** (Shreyas Doshi) - A structured pre-mortem meeting framework where you imagine the project has failed, then categorize risks into three types: Tigers (real threats that will kill
+- **Pre-mortem with Tigers, Paper Tigers, and Elephants** (Shreyas Doshi) - A structured pre-mortem meeting framework where you imagine the project has failed, then categorize risks into three types: Tigers (real threats that will kill 
 - **Single Decisive Reason (SDR)** (Rahul Vohra) - A decision-making tool learned from Reid Hoffman where you must identify one reason that alone justifies a decision, preventing collections of weak reasons from
 - **Scenario Planning for Crisis (Three Scenarios)** (Leading your company through a pandemic - Issue 20) - Framework for modeling business outcomes under three severity levels during an economic crisis
 - **Framework Selection Guide (Structured to Least Structured)** (My favorite decision-making frameworks) - Lenny's ranking of decision-making frameworks from most structured to least structured, with guidance on when to use each.

@@ -32,6 +32,10 @@ Before reviewing, identify the target:
 
 If the target is not developer-facing, say this skill does not apply and recommend the appropriate review skill.
 
+## Evidence And Decision Continuity
+
+Reuse the current review target, chosen mode, approved exceptions, and decisions. A later pass or another reviewer does not reset the approved scope. Treat persona stories and timing estimates as hypotheses; documentation silence alone does not establish missing runtime behavior. Record unknown proof as validation work rather than inventing a new policy.
+
 ## Workflow
 
 1. Define the developer persona.
@@ -49,7 +53,8 @@ If the target is not developer-facing, say this skill does not apply and recomme
 3. Estimate TTHW.
    - Count commands, files, accounts, tokens, approvals, docs pages, and decisions.
    - Identify the first magical moment.
-   - State the target TTHW and why it is realistic.
+   - Measure or estimate time to the first useful result across the whole human journey: onboarding/authentication, cold install and setup, and warm repeat execution. Show these clocks separately and state what starts and ends each one; a fast command after setup is not the total onboarding time.
+   - State the target TTHW and why it is realistic; label estimates and unrun paths explicitly.
 
 4. Review the interface contract.
    - Naming, command shape, endpoint shape, arguments, defaults, examples, errors, versioning, compatibility, and migration path.
@@ -98,7 +103,10 @@ READY / READY WITH RISKS / NOT READY
 Discover -> Setup -> First Example -> First Useful Result -> First Failure -> Second Task
 
 ### TTHW Assessment
-Current estimate:
+Current estimate or observed time:
+Human onboarding / cold setup / warm execution:
+Clock start and first useful result:
+Evidence and unrun paths:
 Target:
 Step count:
 Main friction:

@@ -1,0 +1,990 @@
+{
+  "date": "2026-10-08",
+  "package_version": "0.1.3",
+  "marketplace_base": "3e10d463069a5972f75b53aa699f5d03ca7d5fdc",
+  "approved_decision_ledger_sha256": "6f94c6c46afbb996a6155b8df0134612c28ea6cc6acb2f6838d9d4e20d9e198a",
+  "verification_boundary": "Raw bytes, local file hashes and source mappings. Adapted files are not whole-file sync claims; method references are not a vendored runtime. Tests or documentation do not prove publication, installation or a live external write.",
+  "entries": [
+    {
+      "id": "founder-ceo-skills/ceo-advisor",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "本地explicit-only综合CEO触发、没有两个重复Python analyzer；策略/财务转focused skills；decision reference用runway/commitment取代固定capital allocation比例。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "47d1e52b0d79709dc2dfef53c6dc4649e9c82992dcb3dedfd313ee98b5e3764c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8293bc3e6130e49391c1a3530cd73212f01aec83",
+              "source_path": "cli-tool/components/skills/business-marketing/ceo-advisor/SKILL.md",
+              "source_sha256": "9d3f78c6a91752bd2ebd434699b442a9c595e06ba42f117dbb8d8ac1b6e19cbc",
+              "source_url": "https://github.com/davila7/claude-code-templates/blob/8293bc3e6130e49391c1a3530cd73212f01aec83/cli-tool/components/skills/business-marketing/ceo-advisor/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "references/board_governance_investor_relations.md",
+          "local_sha256": "fe407f1f248734e2da1258d0caba735e5be6c9482c944aa1de1d64eadf2ed6f5",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8293bc3e6130e49391c1a3530cd73212f01aec83",
+              "source_path": "cli-tool/components/skills/business-marketing/ceo-advisor/references/board_governance_investor_relations.md",
+              "source_sha256": "fe407f1f248734e2da1258d0caba735e5be6c9482c944aa1de1d64eadf2ed6f5",
+              "source_url": "https://github.com/davila7/claude-code-templates/blob/8293bc3e6130e49391c1a3530cd73212f01aec83/cli-tool/components/skills/business-marketing/ceo-advisor/references/board_governance_investor_relations.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/executive_decision_framework.md",
+          "local_sha256": "67042f6617f929a4da671971967bd29cf63934e113c146ea9d6a5e7d5817d9bd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8293bc3e6130e49391c1a3530cd73212f01aec83",
+              "source_path": "cli-tool/components/skills/business-marketing/ceo-advisor/references/executive_decision_framework.md",
+              "source_sha256": "54ff472908e42ea812d38b6d8ca97265cfd486fde50749ac39eb13c0c732e269",
+              "source_url": "https://github.com/davila7/claude-code-templates/blob/8293bc3e6130e49391c1a3530cd73212f01aec83/cli-tool/components/skills/business-marketing/ceo-advisor/references/executive_decision_framework.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "references/leadership_organizational_culture.md",
+          "local_sha256": "7b2340d3cbf3e2e3112dd65537db7d4cc6b70dc3856e1ab884b6559eea1bdb63",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8293bc3e6130e49391c1a3530cd73212f01aec83",
+              "source_path": "cli-tool/components/skills/business-marketing/ceo-advisor/references/leadership_organizational_culture.md",
+              "source_sha256": "7b2340d3cbf3e2e3112dd65537db7d4cc6b70dc3856e1ab884b6559eea1bdb63",
+              "source_url": "https://github.com/davila7/claude-code-templates/blob/8293bc3e6130e49391c1a3530cd73212f01aec83/cli-tool/components/skills/business-marketing/ceo-advisor/references/leadership_organizational_culture.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "本地explicit-only综合CEO触发、没有两个重复Python analyzer；策略/财务转focused skills；decision reference用runway/commitment取代固定capital allocation比例。",
+      "preserve": [
+        "explicit-only、无重复analyzers、focused routes、runway-aware allocation"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/competitive-strategy",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为竞争范围、counter-positioning和客户context。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "5b04047f72664f941b38c21be7c53f70e8aebd29473d44397e6839c303dc67f7",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/competitive-strategy/SKILL.md",
+              "source_sha256": "5b04047f72664f941b38c21be7c53f70e8aebd29473d44397e6839c303dc67f7",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/competitive-strategy/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "83e26de4092fdacba168bbdb64df580862598f474d5bc9851cd03154073d4c87",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/competitive-strategy/references/artifacts.md",
+              "source_sha256": "83e26de4092fdacba168bbdb64df580862598f474d5bc9851cd03154073d4c87",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/competitive-strategy/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "0aa19703dc2f4c30ca1ae67cee7e7f905d730cfc522993608c74199f09487877",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/competitive-strategy/references/guest-insights.md",
+              "source_sha256": "0aa19703dc2f4c30ca1ae67cee7e7f905d730cfc522993608c74199f09487877",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/competitive-strategy/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为竞争范围、counter-positioning和客户context。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/founder-office-hours",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "保留本地正文，参考 GStack 方法跟进；主源无新 delta，不允许整文件逐字节覆盖。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "919379ccf2411f4ac9d053ae2b7ddf846fc99a85f4a59cae41b84d76b84afee8",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/founder-office-hours/SKILL.md",
+              "source_sha256": "826b286dc9e32a7e7c2d60ac17873793f44b9a5029b0c40a3b1d2a2379e49c1e",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/founder-office-hours/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "be5ed6cdd01d8f120cb1abf690f74551d897220acc3859e8afd46750b73a16a3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "sources": [
+        "https://github.com/cogine-ai/cogine-dev-skillset/compare/a823bcaef7e932a06ecd86e57d0354c4814539b2...f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/office-hours/sections/phase-2a-startup-diagnostic.md.tmpl#L71",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/office-hours/sections/phase-2a-startup-diagnostic.md.tmpl#L73"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/founding-exec-team",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为创始team职责、股权/影响与招聘sequencing。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "a4edb5233d9906c1f06572153f0b341894ac83f233c25fcdc98dceb777e19620",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/founding-exec-team/SKILL.md",
+              "source_sha256": "a4edb5233d9906c1f06572153f0b341894ac83f233c25fcdc98dceb777e19620",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/founding-exec-team/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "0542bb925cd73065d716a1a51fab2585ba975659e10d08781332cdc5299f025f",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/founding-exec-team/references/artifacts.md",
+              "source_sha256": "0542bb925cd73065d716a1a51fab2585ba975659e10d08781332cdc5299f025f",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/founding-exec-team/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "b3dac6a1114603accf1dfc9812d965247306c5ef646e6fe85262e4af94a6b392",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/founding-exec-team/references/guest-insights.md",
+              "source_sha256": "b3dac6a1114603accf1dfc9812d965247306c5ef646e6fe85262e4af94a6b392",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/founding-exec-team/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为创始team职责、股权/影响与招聘sequencing。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/fundraising",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为bootstrap/financing路线、即时impact与有证据叙事。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "299e34c0c13b729a2be9fee881ccf2a889dc01e36139fdcada907f6d95d2007d",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/fundraising/SKILL.md",
+              "source_sha256": "299e34c0c13b729a2be9fee881ccf2a889dc01e36139fdcada907f6d95d2007d",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/fundraising/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "ed54d57b96de88012f297bfe5c92e2fed5294e9400b1dcb5439a1da2595cf35e",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/fundraising/references/artifacts.md",
+              "source_sha256": "ed54d57b96de88012f297bfe5c92e2fed5294e9400b1dcb5439a1da2595cf35e",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/fundraising/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "bad346f5c879a1458d43d5b1de8c6d84a109bb7c0d57587bb657ed48745138db",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/fundraising/references/guest-insights.md",
+              "source_sha256": "bad346f5c879a1458d43d5b1de8c6d84a109bb7c0d57587bb657ed48745138db",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/fundraising/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为bootstrap/financing路线、即时impact与有证据叙事。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/gtm-board-and-investor-communication",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "正文与7月source相同，董事会story、metric hierarchy、坏消息及时沟通等保留。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "6db3e16149c2c08fc30e452309714e693d0a6210d1183952a6a9b7c8deb27c71",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "3a685010a7afdc0dbd4c83b7fbda6c316aa516e5",
+              "source_path": "skills/gtm-board-and-investor-communication/SKILL.md",
+              "source_sha256": "6db3e16149c2c08fc30e452309714e693d0a6210d1183952a6a9b7c8deb27c71",
+              "source_url": "https://github.com/github/awesome-copilot/blob/3a685010a7afdc0dbd4c83b7fbda6c316aa516e5/skills/gtm-board-and-investor-communication/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文与7月source相同，董事会story、metric hierarchy、坏消息及时沟通等保留。",
+      "preserve": [
+        "真实数字/出处、board/investor沟通workflow"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/high-stakes-decisions",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为pre-mortem、leading indicators与高stakes决策方法。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "4201e9dbea2d08ce7496dfea0c7f8cd380e0e421fd5a71c7e3ac8bc3856d89c0",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/high-stakes-decisions/SKILL.md",
+              "source_sha256": "4201e9dbea2d08ce7496dfea0c7f8cd380e0e421fd5a71c7e3ac8bc3856d89c0",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/high-stakes-decisions/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "c154fb26c8b7cd8a578f62fa27c00b847325d63ffcac2ad0f342d3b708f86e91",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/high-stakes-decisions/references/artifacts.md",
+              "source_sha256": "c154fb26c8b7cd8a578f62fa27c00b847325d63ffcac2ad0f342d3b708f86e91",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/high-stakes-decisions/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "e40dcaf8f3d4ea71749594e084e3bfa06f5715f85ac977b317572a52e6bbe42a",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/high-stakes-decisions/references/guest-insights.md",
+              "source_sha256": "e40dcaf8f3d4ea71749594e084e3bfa06f5715f85ac977b317572a52e6bbe42a",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/high-stakes-decisions/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为pre-mortem、leading indicators与高stakes决策方法。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/investor-materials",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地正文与有效reference commit逐字相同，origin metadata已使用支持位置；没有source支持文件。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "e2c8d64412e2af9a2def3144b3d1e32f0fd69c724f2d17615fcf5a9bfa5f01cc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "ef648e01899ba3e8dc6371642deaaf64b4477775",
+              "source_path": "skills/investor-materials/SKILL.md",
+              "source_sha256": "e2c8d64412e2af9a2def3144b3d1e32f0fd69c724f2d17615fcf5a9bfa5f01cc",
+              "source_url": "https://github.com/affaan-m/ECC/blob/ef648e01899ba3e8dc6371642deaaf64b4477775/skills/investor-materials/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "本地正文与有效reference commit逐字相同，origin metadata已使用支持位置；没有source支持文件。",
+      "preserve": [
+        "兼容origin placement、cross-asset数字一致、tool-neutral正文"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/leading-org-change",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为alignment、change过程、人性化过渡与实际value。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "a0ffa30f22e4e553c958edf11a7c645cd21b5d9b55186bde55684df1b41ebff9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/leading-org-change/SKILL.md",
+              "source_sha256": "a0ffa30f22e4e553c958edf11a7c645cd21b5d9b55186bde55684df1b41ebff9",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/leading-org-change/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "46632d42e5d33682eed043f654337483eb82681d45490e8e9b2c49f58238a0e6",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/leading-org-change/references/artifacts.md",
+              "source_sha256": "46632d42e5d33682eed043f654337483eb82681d45490e8e9b2c49f58238a0e6",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/leading-org-change/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "2f9f99e93a3eb8a78e1f449f488f8750b96a5ec473c9372425e89cc47706026a",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/leading-org-change/references/guest-insights.md",
+              "source_sha256": "2f9f99e93a3eb8a78e1f449f488f8750b96a5ec473c9372425e89cc47706026a",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/leading-org-change/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为alignment、change过程、人性化过渡与实际value。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/measuring-pmf",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为retention、urgent反馈、organic pull与quantitative PMF。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "8b472c31c107c831ce91fec5e3ef9f3b057094b2c22265d68567b4433a59c982",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/measuring-pmf/SKILL.md",
+              "source_sha256": "8b472c31c107c831ce91fec5e3ef9f3b057094b2c22265d68567b4433a59c982",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/measuring-pmf/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "a4b0b4ee2b837ae2262a3259ac0362f4e373f5b574718f5bad3351de1e5af148",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/measuring-pmf/references/artifacts.md",
+              "source_sha256": "a4b0b4ee2b837ae2262a3259ac0362f4e373f5b574718f5bad3351de1e5af148",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/measuring-pmf/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "cc3f0ce5757f56fe211a1793ac2c235678f843dec4ad21e8d9b189354ee176b4",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/measuring-pmf/references/guest-insights.md",
+              "source_sha256": "cc3f0ce5757f56fe211a1793ac2c235678f843dec4ad21e8d9b189354ee176b4",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/measuring-pmf/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为retention、urgent反馈、organic pull与quantitative PMF。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/org-design",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为以客户segment和实际职责设计产品/工程组织。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "86a8697623ee20712ef768052f573d9032c880d7494357cc5da4ffd3f8c888cb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/org-design/SKILL.md",
+              "source_sha256": "86a8697623ee20712ef768052f573d9032c880d7494357cc5da4ffd3f8c888cb",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/org-design/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "ceb681423058b738886dbdbcd265d910dc7f9fec45170df96588301c158a1169",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/org-design/references/artifacts.md",
+              "source_sha256": "ceb681423058b738886dbdbcd265d910dc7f9fec45170df96588301c158a1169",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/org-design/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "dc9976cf99fc47f8107f9542c92447213852826bb94e1281f0e44909d7dce817",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/org-design/references/guest-insights.md",
+              "source_sha256": "dc9976cf99fc47f8107f9542c92447213852826bb94e1281f0e44909d7dce817",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/org-design/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为以客户segment和实际职责设计产品/工程组织。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/planmode-ceo",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "主源当前已逐字节一致；应跟进 GStack 的深度控制、复用已决事项与保留已接受约束，不能整文件覆盖。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "c81ebf1e9985f8a9185b8baeffff0be477b61b65463c6767ddcffe3fa584b58e",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/planmode-ceo/SKILL.md",
+              "source_sha256": "919db7d9e8e95961cad0f753108969172fadc054983d7594d70dee6d3b5e985f",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/planmode-ceo/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/planmode-ceo/SKILL.md",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/plan-ceo-review/SKILL.md.tmpl#L190",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/plan-ceo-review/SKILL.md.tmpl#L283",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/plan-ceo-review/sections/review-sections.md.tmpl#L22"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/planning-cadence",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为策略先于仪式、rolling cadence与实际计划resolution。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "1fd6f0567ee7584522bce112252a3cc66dda1c92ef1e3a54474e40d0ad3eaf1b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/planning-cadence/SKILL.md",
+              "source_sha256": "1fd6f0567ee7584522bce112252a3cc66dda1c92ef1e3a54474e40d0ad3eaf1b",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/planning-cadence/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "1baca1a3114aa1352aa30285d7fc62d6596f76e8c9e56fa3a3d355dcef9a3b9f",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/planning-cadence/references/artifacts.md",
+              "source_sha256": "1baca1a3114aa1352aa30285d7fc62d6596f76e8c9e56fa3a3d355dcef9a3b9f",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/planning-cadence/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "1ad62ebb51f73c9688b41839af23dd6f3cf20323ecad83685bad84d20d490f3e",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/planning-cadence/references/guest-insights.md",
+              "source_sha256": "1ad62ebb51f73c9688b41839af23dd6f3cf20323ecad83685bad84d20d490f3e",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/planning-cadence/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样或仅尾空格归一，两个full evidence references保留；本地能力为策略先于仪式、rolling cadence与实际计划resolution。",
+      "preserve": [
+        "full evidence refs、原本方法、上下文适用性"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/risk-assessment",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "正文原样保留matrix、risk categories、owner/status/mitigation register；没有source支持文件遗漏。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "82e29810a762c396a56f92bbd5c5afd252f7a07c6be69a246c28f7b82c4086d9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "operations/skills/risk-assessment/SKILL.md",
+              "source_sha256": "82e29810a762c396a56f92bbd5c5afd252f7a07c6be69a246c28f7b82c4086d9",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/operations/skills/risk-assessment/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样保留matrix、risk categories、owner/status/mitigation register；没有source支持文件遗漏。",
+      "preserve": [
+        "正确operations来源、材料风险/可行动mitigation"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/seven-powers",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "正文原样，全部patterns/playbook打包；支持文件归一化核验用于区别格式整理与丢失方法。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "1f20b9f33adda048eabb108b06312459f52df18f4363d1566573de3bd9653b56",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/SKILL.md",
+              "source_sha256": "1f20b9f33adda048eabb108b06312459f52df18f4363d1566573de3bd9653b56",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/_template.md",
+          "local_sha256": "c8f4a710039dd93b1b536beee89a5307feb893a5a1cb50e0221196f00d7076e4",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/_template.md",
+              "source_sha256": "c8f4a710039dd93b1b536beee89a5307feb893a5a1cb50e0221196f00d7076e4",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/_template.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/benefit-without-barrier.md",
+          "local_sha256": "aa66c62ab783ce16ce28a5d122ef0c7a10404f4213e7ce07661dd198aefcfae1",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/benefit-without-barrier.md",
+              "source_sha256": "aa66c62ab783ce16ce28a5d122ef0c7a10404f4213e7ce07661dd198aefcfae1",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/benefit-without-barrier.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/branding-vs-brand-recognition.md",
+          "local_sha256": "4bd014aac9d60c92cfa8886f29c370b5c2e97b85723bfaca1434f299e1adbbd4",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/branding-vs-brand-recognition.md",
+              "source_sha256": "4bd014aac9d60c92cfa8886f29c370b5c2e97b85723bfaca1434f299e1adbbd4",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/branding-vs-brand-recognition.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/cornered-resource-scope.md",
+          "local_sha256": "114c9e57399c9c608045c8c63709e2130102a1b69ebfbca6cadce8f0af594aa6",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/cornered-resource-scope.md",
+              "source_sha256": "114c9e57399c9c608045c8c63709e2130102a1b69ebfbca6cadce8f0af594aa6",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/cornered-resource-scope.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/counter-positioning-window.md",
+          "local_sha256": "086b68777394257c7413640cb98c68e386f5dd2f49a4d07312df5a35a5ed28f9",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/counter-positioning-window.md",
+              "source_sha256": "086b68777394257c7413640cb98c68e386f5dd2f49a4d07312df5a35a5ed28f9",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/counter-positioning-window.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/flywheel-materiality.md",
+          "local_sha256": "70a4c747ce21a89100374081cb0bc91e5beba0dda4f7221ea162a50e04ab3526",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/flywheel-materiality.md",
+              "source_sha256": "70a4c747ce21a89100374081cb0bc91e5beba0dda4f7221ea162a50e04ab3526",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/flywheel-materiality.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/geographic-specificity.md",
+          "local_sha256": "cf9a188e5741220b354a063bdbed62f55b0fafc2d2413d995d018cfebf592a1c",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/geographic-specificity.md",
+              "source_sha256": "cf9a188e5741220b354a063bdbed62f55b0fafc2d2413d995d018cfebf592a1c",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/geographic-specificity.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/network-effects-vs-network-economies.md",
+          "local_sha256": "74e9d1987227e89e2a0ffdda24aa6f707060db08463af412132e6f5b8ba1059e",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/network-effects-vs-network-economies.md",
+              "source_sha256": "74e9d1987227e89e2a0ffdda24aa6f707060db08463af412132e6f5b8ba1059e",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/network-effects-vs-network-economies.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/operational-excellence-not-power.md",
+          "local_sha256": "75ff3cab4660f617e70db090fe6c2c0ba1404e7c82264fd68da075f1c470f157",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/operational-excellence-not-power.md",
+              "source_sha256": "75ff3cab4660f617e70db090fe6c2c0ba1404e7c82264fd68da075f1c470f157",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/operational-excellence-not-power.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/power-timing.md",
+          "local_sha256": "bd41d7644dedb4cd0ec93108d82c244850999ae319025e002518e556a09d3093",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/power-timing.md",
+              "source_sha256": "bd41d7644dedb4cd0ec93108d82c244850999ae319025e002518e556a09d3093",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/power-timing.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/process-power-opacity.md",
+          "local_sha256": "a1a6399ca479b80a38ac9ea270c8fcf597bb15e6e526287ec1758c06a4a7a4ca",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/process-power-opacity.md",
+              "source_sha256": "a1a6399ca479b80a38ac9ea270c8fcf597bb15e6e526287ec1758c06a4a7a4ca",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/process-power-opacity.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/scale-economies-data.md",
+          "local_sha256": "689596522f55a62af4bbeb819e54917ee9a34b2ae6734946724eee3e7b388714",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/scale-economies-data.md",
+              "source_sha256": "689596522f55a62af4bbeb819e54917ee9a34b2ae6734946724eee3e7b388714",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/scale-economies-data.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/second-acts.md",
+          "local_sha256": "8506797c39e97ecd1c3f046867287b14282e7a16d667f9857e70df43348bdad8",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/second-acts.md",
+              "source_sha256": "8506797c39e97ecd1c3f046867287b14282e7a16d667f9857e70df43348bdad8",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/second-acts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/switching-costs-that-stick.md",
+          "local_sha256": "d62ac6f001ac89a17d7c83cae5a9e0f60cb0b2af00f23f0c370d260412c28264",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/switching-costs-that-stick.md",
+              "source_sha256": "d62ac6f001ac89a17d7c83cae5a9e0f60cb0b2af00f23f0c370d260412c28264",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/switching-costs-that-stick.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "patterns/war-of-attrition.md",
+          "local_sha256": "6063a69ca32b93fcd0aa3b9b47ba93df1b1188a2858818378591ef95c124e80f",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/patterns/war-of-attrition.md",
+              "source_sha256": "6063a69ca32b93fcd0aa3b9b47ba93df1b1188a2858818378591ef95c124e80f",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/patterns/war-of-attrition.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/seven-powers-playbook.md",
+          "local_sha256": "9845f3ba3194ce84b32528aa5b00496bb751b330cc8187a701f1e809636e81de",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "103d6540d3c71610a3132917897746070a03bb0c",
+              "source_path": "skills/seven-powers/references/seven-powers-playbook.md",
+              "source_sha256": "9845f3ba3194ce84b32528aa5b00496bb751b330cc8187a701f1e809636e81de",
+              "source_url": "https://github.com/wdavidturner/product-skills/blob/103d6540d3c71610a3132917897746070a03bb0c/skills/seven-powers/references/seven-powers-playbook.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "正文原样，全部patterns/playbook打包；支持文件归一化核验用于区别格式整理与丢失方法。",
+      "preserve": [
+        "full patterns/playbook、benefit+barrier与反证"
+      ]
+    },
+    {
+      "id": "founder-ceo-skills/startup-finance",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "自研技能；没有独立外部上游，不存在外部逐字节同步义务。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "af1dbfcd13e4637bbc3dc77d60673a0d501fa6a0f09edeefb822db06e16b9240",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "da21669b661f9f9e27dda46fadabb7eb1b96630066b52b17e729baa2bbf16a75",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "sources": [
+        "https://github.com/cogine-ai/marketplace/blob/3e10d463069a5972f75b53aa699f5d03ca7d5fdc/plugins/founder-ceo-skills/UPSTREAM.md"
+      ]
+    }
+  ]
+}

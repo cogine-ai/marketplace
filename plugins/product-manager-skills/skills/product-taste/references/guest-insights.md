@@ -6,7 +6,7 @@
 
 ## Ayo Omojola
 
-**Insight:**
+**Insight:** 
 
 *Source: [Frameworks for product differentiation, team building, and thinking from first principles | Ayo Omojola (Carbon Health, Cash App)](https://www.youtube.com/watch?v=EW6K8ZOWoIs) @ 00:32:27*
 
@@ -14,7 +14,7 @@
 
 ## Barbra Gago
 
-**Insight:**
+**Insight:** 
 
 *Source: [Category creation and brand building | Barbra Gago (Pando, Miro, Greenhouse, Culture Amp)](https://www.youtube.com/watch?v=gCEaUfZUuI0) @ 00:46:54*
 
@@ -225,7 +225,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Julie Zhuo on accelerating your career, impostor syndrome, writing, building product sense, using intuition vs. data, hiring designers, and moving into management](https://www.youtube.com/watch?v=YLsxHa1dhSw) @ 00:38:20*
 
@@ -296,7 +296,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Twitter’s former Head of Product opens up: being fired, meeting Elon, changing stagnant culture, building consumer product, more | Kayvon Beykpour](https://www.youtube.com/watch?v=MKDnDueTvKk) @ 01:18:19*
 
@@ -447,7 +447,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to develop product sense](https://www.lennysnewsletter.com/p/how-to-develop-product-sense)*
 
@@ -464,7 +464,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [How to develop product sense](https://www.lennysnewsletter.com/p/how-to-develop-product-sense)*
 
@@ -679,7 +679,7 @@
 
 ## Sriram and Aarthi
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hot takes and techno-optimism from tech’s top power couple | Sriram and Aarthi](https://www.youtube.com/watch?v=HsD5ycT_umw) @ 01:05:37*
 
@@ -712,3 +712,4 @@
 *Source: [An inside look at how Miro builds product: Lessons on outmaneuvering competitors, team structure, product quality, and moving fast | Varun Parmar (CPO of Miro)](https://www.youtube.com/watch?v=furNg4njlsg) @ 00:39:31*
 
 ---
+

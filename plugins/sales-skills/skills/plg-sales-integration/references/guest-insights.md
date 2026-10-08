@@ -14,7 +14,7 @@
 
 ## Archie Abrams
 
-**Insight:**
+**Insight:** 
 
 *Source: [Breaking the rules of growth: Why Shopify bans KPIs, optimizes for churn, prioritizes intuition, and builds toward a 100-year vision | Archie Abrams (VP Product, Head of Growth at Shopify)](https://www.youtube.com/watch?v=Vlph3dn4jnU) @ 01:01:36*
 
@@ -235,7 +235,7 @@
 
 ---
 
-**Insight:**
+**Insight:** 
 
 *Source: [Hiring your early team](https://www.lennysnewsletter.com/p/hiring-your-early-team)*
 
@@ -377,3 +377,4 @@
 *Source: Yuhki Yamashata @ 00:52:24*
 
 ---
+

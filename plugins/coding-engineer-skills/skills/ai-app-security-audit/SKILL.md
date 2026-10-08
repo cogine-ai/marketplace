@@ -53,7 +53,11 @@ Audit these surfaces when present:
    - Explain attacker control, trust boundary, exploit path, impact, and why existing controls do not block it.
    - If confidence is below 8/10 for a normal audit, mark it as `Needs verification` instead of a finding.
 
-5. Produce fixes or a report depending on the user's request.
+5. State assessment coverage before drawing conclusions.
+   - Mark each relevant surface `complete`, `partial`, or `not assessed`, with what was examined and what evidence is missing.
+   - "No findings" applies only to the assessed scope. Inaccessible code, failed checks, or unexamined surfaces remain unknown; they are not a clean bill of health.
+
+6. Produce fixes or a report depending on the user's request.
    - For a report-only audit, do not edit files.
    - For fix work, address one finding at a time and run the relevant tests.
 
@@ -74,6 +78,8 @@ Use this structure:
 ### Executive Summary
 Overall risk:
 Audit scope:
+Coverage: complete / partial / not assessed per relevant surface
+Unassessed or blocked surfaces:
 Confidence:
 
 ### AI Data Flow

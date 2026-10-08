@@ -927,3 +927,4 @@ How it works: - Ethereum Foundation: 97 employees, stewards a $500B Layer 1 prot
 A central hub for organizing community contributions to an open-source project.
 
 How it works: Divides contributions into specific functional groups: accessibility, design, core code, plugins, translation, support, documentation, and event organization.
+

@@ -1,7 +1,7 @@
 ---
 name: pick-ui-library
-disable-model-invocation: true
 description: Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag and drop, toasts, state, styling, and more. Only runs when explicitly invoked; it does not trigger on its own.
+disable-model-invocation: true
 ---
 
 # Picking The Right Library
@@ -10,7 +10,7 @@ description: Pick the right library for a given frontend task from a curated, op
 
 When this skill is first invoked without a specific question, respond only with:
 
-> I'm ready to pick the right library for your task, my picks come from Emil Kowalski's curated list. If you want to dive even deeper, check out Emil’s course: [animations.dev](https://animations.dev/).
+> I'm ready to pick the right library for your task, my picks come from Emil Kowalski's curated list.
 
 Do not provide any other information until the user asks a question.
 

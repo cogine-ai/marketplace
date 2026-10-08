@@ -1,5 +1,18 @@
 # Upstream sources
 
+## Current maintenance — 2026-10-08 (package 0.2.3)
+
+Follow Matt source changes with per-file pins, exact vendor files and raw spans; retain tracker discovery, committed review scope, pre-commit review, multi-context setup and native invocation policies. GStack contributes selected portable methods only. The retired merge-conflict source remains at its historical pin.
+
+`UPSTREAM_SYNC_2026-10-08.json` records the reviewed frozen sources, actual
+file hashes and the distinction between raw copies and local adaptations.
+Earlier pins and notes below describe historical imports; they are not a
+claim that every current file equals a single repository HEAD. Versions are
+prepared in source; this maintenance entry does not establish publication or
+installation.
+
+## Historical import records
+
 Packaged on 2026-08-25; selectively updated on 2026-09-08. Skill directories are copied into this plugin so that
 Codex and Claude Code can discover the same bundle from one Marketplace entry.
 
@@ -114,8 +127,8 @@ Invocation policy is expressed natively for both hosts:
 - The 18 model-invokable skills omit both controls and use the host defaults.
 - Every skill has `agents/openai.yaml`.
 
-For the 10 current Matt imports, upstream bodies and supporting files are
-otherwise retained. The adaptation whitelist is limited to local namespace and
+For the Matt imports, raw source regions and supporting files are retained
+where recorded in the current per-file ledger. The adaptation whitelist is limited to local namespace and
 host-safety requirements plus verified functional corrections:
 
 1. Fully qualifying operational cross-skill calls as

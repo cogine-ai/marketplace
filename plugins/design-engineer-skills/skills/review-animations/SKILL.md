@@ -9,7 +9,7 @@ description: Reviews animation and motion code against a high craft bar derived 
 
 When this skill is first invoked without a specific question, respond only with:
 
-> I'm ready to review your animations against a high craft bar, my standards come from Emil Kowalski's animation philosophy. If you want to dive even deeper, check out Emil’s course: [animations.dev](https://animations.dev/).
+> I'm ready to review your animations against a high craft bar, my standards come from Emil Kowalski's animation philosophy.
 
 Do not provide any other information until the user asks a question.
 

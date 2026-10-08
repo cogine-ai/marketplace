@@ -1,0 +1,1501 @@
+{
+  "date": "2026-10-08",
+  "package_version": "0.2.3",
+  "marketplace_base": "3e10d463069a5972f75b53aa699f5d03ca7d5fdc",
+  "approved_decision_ledger_sha256": "6f94c6c46afbb996a6155b8df0134612c28ea6cc6acb2f6838d9d4e20d9e198a",
+  "verification_boundary": "Raw bytes, local file hashes and source mappings. Adapted files are not whole-file sync claims; method references are not a vendored runtime. Tests or documentation do not prove publication, installation or a live external write.",
+  "entries": [
+    {
+      "id": "product-manager-skills/backlog-ready-spec",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "保留本地正文，参考 GStack 方法跟进；主源无新 delta，不允许整文件逐字节覆盖。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "3825e832c6af5fd32b6355e8d670b7d8e4a26267a3f0e0c981d8df828ecb22d2",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/backlog-ready-spec/SKILL.md",
+              "source_sha256": "f1eb5f45e7b2123b49e636a3d827d6bd79dded617c086abbc9876307d64c32cb",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/backlog-ready-spec/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "bf97bab34294967b9cb9f2140711f62fce63f461869b657642fb45d23e4c8429",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "sources": [
+        "https://github.com/cogine-ai/cogine-dev-skillset/compare/a823bcaef7e932a06ecd86e57d0354c4814539b2...f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/spec/sections/gate-and-file.md.tmpl#L28",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/spec/sections/gate-and-file.md.tmpl#L74",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/spec/sections/gate-and-file.md.tmpl#L165"
+      ]
+    },
+    {
+      "id": "product-manager-skills/competitive-brief",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地有意condense并去connector dependence，保留decision/scope、landscape、dated comparison与战略implication的compact brief。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "5394058346582023c5975f1d1598f8946465504f93f5c7e2356c347cb133ffba",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "product-management/skills/competitive-brief/SKILL.md",
+              "source_sha256": "720916695f99a70e723be02d0123908c9c968ce56e1ffdeeb423014587017cd2",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/product-management/skills/competitive-brief/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "96ca572251549be96469f91868a7967af8eefb983f35dddb3a6716e0d008cb76",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地有意condense并去connector dependence，保留decision/scope、landscape、dated comparison与战略implication的compact brief。",
+      "preserve": [
+        "condensed workflow、可选工具、source/assumption/authorization边界"
+      ]
+    },
+    {
+      "id": "product-manager-skills/defining-product-strategy",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "本地全方法与on-demand evidence refs保留；差异是格式归一。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "4ed52cdbd7cacf48bdf51f4544d8d75aff79610c9713e77c1caaeef51a57fb6f",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/defining-product-strategy/SKILL.md",
+              "source_sha256": "4ed52cdbd7cacf48bdf51f4544d8d75aff79610c9713e77c1caaeef51a57fb6f",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/defining-product-strategy/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "603676890ea83b55f37041f6e7c8894c50892ba7374465e31ae114e04ecca463",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/defining-product-strategy/references/artifacts.md",
+              "source_sha256": "603676890ea83b55f37041f6e7c8894c50892ba7374465e31ae114e04ecca463",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/defining-product-strategy/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "4017d7b4655ae3d8c6c851f41ebe64eb6cd85a3ae6e854dafb49e12037928295",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/defining-product-strategy/references/guest-insights.md",
+              "source_sha256": "4017d7b4655ae3d8c6c851f41ebe64eb6cd85a3ae6e854dafb49e12037928295",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/defining-product-strategy/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "本地全方法与on-demand evidence refs保留；差异是格式归一。",
+      "preserve": [
+        "full refs、choice-based strategy、evidence calibration"
+      ]
+    },
+    {
+      "id": "product-manager-skills/founder-office-hours",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "保留本地正文，参考 GStack 方法跟进；主源无新 delta，不允许整文件逐字节覆盖。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "919379ccf2411f4ac9d053ae2b7ddf846fc99a85f4a59cae41b84d76b84afee8",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+              "source_path": "skills/founder-office-hours/SKILL.md",
+              "source_sha256": "826b286dc9e32a7e7c2d60ac17873793f44b9a5029b0c40a3b1d2a2379e49c1e",
+              "source_url": "https://github.com/cogine-ai/cogine-dev-skillset/blob/f5f45fa814924d5225d2c0aee4ba407b4bad1ba0/skills/founder-office-hours/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "be5ed6cdd01d8f120cb1abf690f74551d897220acc3859e8afd46750b73a16a3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "sources": [
+        "https://github.com/cogine-ai/cogine-dev-skillset/compare/a823bcaef7e932a06ecd86e57d0354c4814539b2...f5f45fa814924d5225d2c0aee4ba407b4bad1ba0",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/office-hours/sections/phase-2a-startup-diagnostic.md.tmpl#L71",
+        "https://github.com/garrytan/gstack/blob/db745675bdf9f575276db2dcd132d3c047218a12/office-hours/sections/phase-2a-startup-diagnostic.md.tmpl#L73"
+      ]
+    },
+    {
+      "id": "product-manager-skills/grilling",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "95249b0增加每个问题写法使yes表示接受推荐方案；其余图式question frontier/subagent fact discovery未变。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/productivity/grilling/SKILL.md",
+              "source_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/productivity/grilling/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/productivity/grilling/agents/openai.yaml",
+              "source_sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/productivity/grilling/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "product-manager-skills/interface-design",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "HEAD=baseline，无新 delta；本地把未打包 /interface-design:design-review、design-deslop 命令改成 inline Review modes。主文件非字节一致，属于明确本地适配。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "b7563dc066831ee8cd64138d5493e8bd54956a8327e62f9797aad567978d4bbd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "2f9be3206855bcb2d1d0af262c8bae25cba6658d",
+              "source_path": ".claude/skills/interface-design/SKILL.md",
+              "source_sha256": "720b31a31276e899fbe3006a33cbfeaceb77a73ba4c27b80d29afd38c8b7b208",
+              "source_url": "https://github.com/Dammyjay93/interface-design/blob/2f9be3206855bcb2d1d0af262c8bae25cba6658d/.claude/skills/interface-design/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "752d0810d593b5cc88b34ea8e0c101b50d0ec1c4c8091be369544f73f3a2ea2e",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "2f9be3206855bcb2d1d0af262c8bae25cba6658d",
+              "source_path": ".claude/skills/interface-design/agents/openai.yaml",
+              "source_sha256": "752d0810d593b5cc88b34ea8e0c101b50d0ec1c4c8091be369544f73f3a2ea2e",
+              "source_url": "https://github.com/Dammyjay93/interface-design/blob/2f9be3206855bcb2d1d0af262c8bae25cba6658d/.claude/skills/interface-design/agents/openai.yaml",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "product-manager-skills/metrics-review",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地有意condense并去connector dependence，保留scorecard、measurement质量、finding与hypothesis分开、action的compact review。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "2257c13f3433b3cef80108ade6dd5bf9cccca49bdb4fe0e71404b068de4a97cd",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "product-management/skills/metrics-review/SKILL.md",
+              "source_sha256": "e92f364b668074c72b36fd0f69a6adef2ead66640b2c17dc824c043fb613d278",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/product-management/skills/metrics-review/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "3b5956541aae0f2d9d0125432c776d6e3357c0a2c74601d81980b4eec6ce8a2b",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地有意condense并去connector dependence，保留scorecard、measurement质量、finding与hypothesis分开、action的compact review。",
+      "preserve": [
+        "condensed workflow、可选工具、source/assumption/authorization边界"
+      ]
+    },
+    {
+      "id": "product-manager-skills/product-taste",
+      "maintenance_decision": "byte-format-restore-only",
+      "substantive_followup": false,
+      "format_identity_restore_only": true,
+      "audit_reason": "全方法与on-demand refs保留，包括articulated response/主动证伪/内部usage。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "e351cc12894ee96432ad55a8cb0af0ecfafb1689685f99107881fec2c1b57f52",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/product-taste/SKILL.md",
+              "source_sha256": "e351cc12894ee96432ad55a8cb0af0ecfafb1689685f99107881fec2c1b57f52",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/product-taste/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/artifacts.md",
+          "local_sha256": "419730f606ef457d090e3b94feb40ad8ac60f063408c8d4d16203914e5b8a7a2",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/product-taste/references/artifacts.md",
+              "source_sha256": "419730f606ef457d090e3b94feb40ad8ac60f063408c8d4d16203914e5b8a7a2",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/product-taste/references/artifacts.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/guest-insights.md",
+          "local_sha256": "1710a92d8bc3a6e9409a68ced028e4f9d8ca39b0b32e14b15aa5a89fb5a04920",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "13598cc54e09399bc1bc1398b0fca284110efb2f",
+              "source_path": "skills/product-taste/references/guest-insights.md",
+              "source_sha256": "1710a92d8bc3a6e9409a68ced028e4f9d8ca39b0b32e14b15aa5a89fb5a04920",
+              "source_url": "https://github.com/RefoundAI/lenny-skills/blob/13598cc54e09399bc1bc1398b0fca284110efb2f/skills/product-taste/references/guest-insights.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "local_overlay": "全方法与on-demand refs保留，包括articulated response/主动证伪/内部usage。",
+      "preserve": [
+        "full refs、证伪、内部usage证据边界"
+      ]
+    },
+    {
+      "id": "product-manager-skills/prototype",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地实际baseline为a4b2009：SKILL.md/LOGIC.md与该commit字节一致；UPSTREAM.md声明6654不覆盖真实本地支持文件。; 6bcbcb09于7月31日把logic branch从TUI改成shareable single HTML、free-play按钮+tabbed guided scenarios、每scenario reset；此改动早于6654，仍未吸收。",
+      "files": [
+        {
+          "path": "LOGIC.md",
+          "local_sha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/prototype/LOGIC.md",
+              "source_sha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/prototype/LOGIC.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "SKILL.md",
+          "local_sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/prototype/SKILL.md",
+              "source_sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/prototype/SKILL.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "UI.md",
+          "local_sha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/prototype/UI.md",
+              "source_sha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/prototype/UI.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "4ebe04c84e1f11104459d90ff5e92085897ec05ae1940fe0a364ef777c1622a3",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/prototype/agents/openai.yaml",
+              "source_sha256": "5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/prototype/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "agents/openai.yaml第4行新增default_prompt：Use $prototype to build a throwaway prototype that answers this product design question."
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "product-manager-skills/roadmap-update",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地有意condense并去connector dependence，保留decision、优先级tradeoff、dependency/risks/变化记录的compact roadmap。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "53acc68e2372e24ba7cb702e60f7e4275682707b30b524ecd93815febf555cd7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "product-management/skills/roadmap-update/SKILL.md",
+              "source_sha256": "bdb121e290b590d60b94bca84d1700a8803c78db9f68f2a28fd04ccfe8aceb9e",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/product-management/skills/roadmap-update/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "9d97005745f5a34527eb6df919f880191710b4fe82c92eaca0a8fff30195f306",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地有意condense并去connector dependence，保留decision、优先级tradeoff、dependency/risks/变化记录的compact roadmap。",
+      "preserve": [
+        "condensed workflow、可选工具、source/assumption/authorization边界"
+      ]
+    },
+    {
+      "id": "product-manager-skills/synthesize-research",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地有意condense并去connector dependence，保留来源/样本/偏差、证据到finding/机会的compact synthesis。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "d82f4b53e95f319d8d43cbedd7195c9372b9a1c24c43ac764cd0db5a9afab914",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "8444efcd48f7012f09797778a36a33e73d0861f4",
+              "source_path": "product-management/skills/synthesize-research/SKILL.md",
+              "source_sha256": "ae98c11102545c911a1ea5d8527be0e08a3db8e53327f2865f0db19bbb2d7e9c",
+              "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/8444efcd48f7012f09797778a36a33e73d0861f4/product-management/skills/synthesize-research/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "8fa5702b4bf3760449663e9d531b5690b36e54caa397feb5d02763bb5a21c887",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地有意condense并去connector dependence，保留来源/样本/偏差、证据到finding/机会的compact synthesis。",
+      "preserve": [
+        "condensed workflow、可选工具、source/assumption/authorization边界"
+      ]
+    },
+    {
+      "id": "product-manager-skills/to-spec",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "有效3cca18b到最新HEAD，整条skill路径0file delta/0path commit。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "0549be8ad5c90c25ad6882e92e939dbc5ad091c24bb27e35ef53b06d1168c739",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-spec/SKILL.md",
+              "source_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-spec/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "cf9dd97b466c3bc03e0855ef770d82533a873b029054458c8a3961643c10e951",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-spec/agents/openai.yaml",
+              "source_sha256": "1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-spec/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "product-manager-skills/to-tickets",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "cffab/9e2ab：若spec来源是现有issue，把child tickets设为parent的sub-issues；blocking edge与parent hierarchy分开。; 若native dependency已设，不再在body重复Blocked by。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "551553058f81c93b856525441a228ba67c8a84ba0fe7a1c9a1460a25c289ec9f",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-tickets/SKILL.md",
+              "source_sha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-tickets/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "f52a062dcac5f25c17bc79527839c13d1d33ef72ac33f01d0b23bba2f1d99588",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+              "source_path": "skills/engineering/to-tickets/agents/openai.yaml",
+              "source_sha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090",
+              "source_url": "https://github.com/mattpocock/skills/blob/f3fc5632f401156837ee3872f14fe33ccf1024ea/skills/engineering/to-tickets/agents/openai.yaml",
+              "whole_file_byte_equal": false
+            }
+          ]
+        }
+      ],
+      "local_overlays_to_preserve": [
+        "explicit-only 与短触发，Coding/Product 自有 namespace 包装",
+        "repo tracker 发现、GitHub 默认、安全 local-files fallback",
+        "existing-label-only 发布",
+        "禁止 close/modify parent；源要求 native parent 关联，不能整正文覆盖",
+        "parent hierarchy 与 blocking 不同；仅关系操作已授权时才 native、并读回；已有授权直接复用"
+      ],
+      "provenance_followup_only": false
+    },
+    {
+      "id": "product-manager-skills/ui-ux-pro-max",
+      "maintenance_decision": "content-or-method-followup",
+      "substantive_followup": true,
+      "format_identity_restore_only": false,
+      "audit_reason": "固定 HEAD 的唯一 catalog delta 为 stackGuidelines 1260→1271（React +5、Nuxt UI +6）。没有 React CSV checksum 或单 stack 行统计；在既有 No60 行内修正安全文案不需重生成。跟齐本次全部 CSV 增量且不改行数/四份 catalog snapshot 时，可整份逐字节复制；分批只更新部分 CSV 时必须按实际总数保持 catalog 一致。; 已打包源文件存在 baseline→HEAD delta，未发现本地语义 overlay，可直接按固定 HEAD 整文件逐字节复制。; 5 条新 Actions guidance 需跟进，但 No60 泛化 19.2.1+ 安全下限已知错误；需按 react-server-dom advisories/分支/框架纠正。不可原样整文件作为最终版本。; 已打包源文件存在 baseline→HEAD delta，未发现本地语义 overlay，可直接按固定 HEAD 整文件逐字节复制。; 已打包源文件存在 baseline→HEAD delta，未发现本地语义 overlay，可直接按固定 HEAD 整文件逐字节复制。; 有真实上游 runtime delta；当前与 baseline raw bytes 也不相同（尾空白差异不能称字节同步）。吸收固定 HEAD 后还须补长 project_name/CJK 标题边界；最新源本身仍未解决，最终本地文件不能宣称逐字节一致。; 已打包源文件存在 baseline→HEAD delta，未发现本地语义 overlay，可直接按固定 HEAD 整文件逐字节复制。 整份复制应与上述 runtime/data 更新配套；不是把新 test 单独放入未更新依赖即可通过。已知本地修正不要求改此文件的现存断言，但最终适配仍须运行。; 已打包源文件存在 baseline→HEAD delta，未发现本地语义 overlay，可直接按固定 HEAD 整文件逐字节复制。 整份复制应与上述 runtime/data 更新配套；不是把新 test 单独放入未更新依赖即可通过。已知本地修正不要求改此文件的现存断言，但最终适配仍须运行。; 已打包源文件存在 baseline→HEAD delta，未发现本地语义 overlay，可直接按固定 HEAD 整文件逐字节复制。 整份复制应与上述 runtime/data 更新配套；不是把新 test 单独放入未更新依赖即可通过。已知本地修正不要求改此文件的现存断言，但最终适配仍须运行。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "a93253b418ba6e9a9988cd4ed1656d360f571f0b7c6c23865d14063636d0ed13",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+              "source_sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "2f2b1e04809bc1a9fcabf7d5b1fa81b51d52b131e1213f4716b3edd956c6c027",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "data/app-interface.csv",
+          "local_sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/app-interface.csv",
+              "source_sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/app-interface.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/catalog-summary.json",
+          "local_sha256": "6638da97231c07fb5cef3cd9d3ce483ca7b2f9748980f8c27490eb03968d8894",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/catalog-summary.json",
+              "source_sha256": "6638da97231c07fb5cef3cd9d3ce483ca7b2f9748980f8c27490eb03968d8894",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/catalog-summary.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/charts.csv",
+          "local_sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/charts.csv",
+              "source_sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/charts.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/colors.csv",
+          "local_sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/colors.csv",
+              "source_sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/colors.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/data-provenance.json",
+          "local_sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/data-provenance.json",
+              "source_sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/data-provenance.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/google-font-licenses.json",
+          "local_sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/google-font-licenses.json",
+              "source_sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/google-font-licenses.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/google-fonts.csv",
+          "local_sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/google-fonts.csv",
+              "source_sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/google-fonts.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/icons.csv",
+          "local_sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/icons.csv",
+              "source_sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/icons.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/landing.csv",
+          "local_sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/landing.csv",
+              "source_sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/landing.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/motion.csv",
+          "local_sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/motion.csv",
+              "source_sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/motion.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/phosphor-icons-upstream.json",
+          "local_sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+              "source_sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/products.csv",
+          "local_sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/products.csv",
+              "source_sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/products.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/react-performance.csv",
+          "local_sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/react-performance.csv",
+              "source_sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/react-performance.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/angular.csv",
+          "local_sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/angular.csv",
+              "source_sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/angular.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/astro.csv",
+          "local_sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/astro.csv",
+              "source_sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/astro.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/avalonia.csv",
+          "local_sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+              "source_sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/flutter.csv",
+          "local_sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+              "source_sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/html-tailwind.csv",
+          "local_sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+              "source_sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/javafx.csv",
+          "local_sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+              "source_sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/jetpack-compose.csv",
+          "local_sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+              "source_sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/laravel.csv",
+          "local_sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+              "source_sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/nextjs.csv",
+          "local_sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+              "source_sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/nuxt-ui.csv",
+          "local_sha256": "fce682a338cfcdbf35d318d20e5befbe7b5d81b05abc37f87677a6d9cde84dc6",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+              "source_sha256": "fce682a338cfcdbf35d318d20e5befbe7b5d81b05abc37f87677a6d9cde84dc6",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/nuxtjs.csv",
+          "local_sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+              "source_sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/react-native.csv",
+          "local_sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+              "source_sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/react.csv",
+          "local_sha256": "f126f2d4845a714d5b1791340f58dccc558b8ae8cf74ba0d0d09a183d287f8eb",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/react.csv",
+              "source_sha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/react.csv",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/shadcn.csv",
+          "local_sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+              "source_sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/svelte.csv",
+          "local_sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+              "source_sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/swiftui.csv",
+          "local_sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+              "source_sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/threejs.csv",
+          "local_sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+              "source_sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/uno.csv",
+          "local_sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/uno.csv",
+              "source_sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/uno.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/uwp.csv",
+          "local_sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+              "source_sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/vue.csv",
+          "local_sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/vue.csv",
+              "source_sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/vue.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/winui.csv",
+          "local_sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/winui.csv",
+              "source_sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/winui.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/stacks/wpf.csv",
+          "local_sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+              "source_sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/styles.csv",
+          "local_sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/styles.csv",
+              "source_sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/styles.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/typography.csv",
+          "local_sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/typography.csv",
+              "source_sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/typography.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/ui-reasoning.csv",
+          "local_sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+              "source_sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "data/ux-guidelines.csv",
+          "local_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+              "source_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/pro-rules.md",
+          "local_sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/references/pro-rules.md",
+              "source_sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/references/pro-rules.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "references/quick-reference.md",
+          "local_sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/references/quick-reference.md",
+              "source_sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/references/quick-reference.md",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/core.py",
+          "local_sha256": "c3be4b23e7150e6b45095213158cfa3c8ad96502f01dde3f6ffff9de64a4f481",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/core.py",
+              "source_sha256": "c3be4b23e7150e6b45095213158cfa3c8ad96502f01dde3f6ffff9de64a4f481",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/core.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/design_system.py",
+          "local_sha256": "435bde771bdf6a614f78f8ba74d16fe4e41a59e2a34dafb0486d43667632ac07",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/design_system.py",
+              "source_sha256": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/design_system.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/reasoning_contract.py",
+          "local_sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+              "source_sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/search.py",
+          "local_sha256": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/search.py",
+              "source_sha256": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/search.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_ascii_box_width.py",
+          "local_sha256": "7ca00fd3bc4ed372a005c64fc28934f3f1bec67c2a88c35d1b7bbe8e1c251fbe",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "scripts/tests/test_core.py",
+          "local_sha256": "3527fe2f4b852f69f07c17ddc0d615d9a6e025c924e45a33985579a94a8d2118",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_core.py",
+              "source_sha256": "3527fe2f4b852f69f07c17ddc0d615d9a6e025c924e45a33985579a94a8d2118",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_core.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_core_data_quality.py",
+          "local_sha256": "3ffc6b4905c9ea26d7ac4527ab154d153584231aee71b2ae4bd017977fa09cc5",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+              "source_sha256": "3ffc6b4905c9ea26d7ac4527ab154d153584231aee71b2ae4bd017977fa09cc5",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_data_contracts.py",
+          "local_sha256": "0360d6e10080c0bca214f2b0bbad582ba50702a542ce21013351aca54938df3a",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+              "source_sha256": "0360d6e10080c0bca214f2b0bbad582ba50702a542ce21013351aca54938df3a",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_design_system_mode.py",
+          "local_sha256": "95ad2c154349f7021f55a558f8dcdd71df1a24fcf531a4364a8e49526a0865ef",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+              "source_sha256": "95ad2c154349f7021f55a558f8dcdd71df1a24fcf531a4364a8e49526a0865ef",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_design_system_stack.py",
+          "local_sha256": "83d09ffe8cfbf7b265f362129f061dfe8e5e167ce5db43adaead197cabc9ca38",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_stack.py",
+              "source_sha256": "83d09ffe8cfbf7b265f362129f061dfe8e5e167ce5db43adaead197cabc9ca38",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_stack.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_native_desktop_stack_freshness.py",
+          "local_sha256": "3942845712b9a829323cd3568511483135f2a8c7cd79ccf61679da4b0f624dbb",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+              "source_sha256": "3942845712b9a829323cd3568511483135f2a8c7cd79ccf61679da4b0f624dbb",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_react_security_guidance.py",
+          "local_sha256": "df64ff0991f1175403a9ddf3813b0c80f9aac54d0b69d841143d69c74025814b",
+          "changed_from_marketplace_base": true,
+          "decision": "local-adaptation-or-new-regression",
+          "reviewed_source_mappings": []
+        },
+        {
+          "path": "scripts/tests/test_skill_script_paths.py",
+          "local_sha256": "15be334e5bf94e61aa5b40ed9b1fa5adac9aef6f49b9d921f52f5fa60a1b7f39",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py",
+              "source_sha256": "7cec24b94be771bc60bc84f8993e614bb16d4047930e1dd3d3bed91628311d44",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_style_taxonomy.py",
+          "local_sha256": "cd14d0092e8a454d213aa104b53e4e70ba698491fa00fde9fdec5ca8a3d70011",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+              "source_sha256": "cd14d0092e8a454d213aa104b53e4e70ba698491fa00fde9fdec5ca8a3d70011",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_text_layout_resilience.py",
+          "local_sha256": "b51d32ee8a15505b87cb81957fb2d1b385e041e8beb4463c311d236bfd29ebd4",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+              "source_sha256": "b51d32ee8a15505b87cb81957fb2d1b385e041e8beb4463c311d236bfd29ebd4",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/tests/test_web_stack_freshness.py",
+          "local_sha256": "74897571398585f27e2c35d09d81b0a531c8c774f4a2967e5e1b1d1b05a483d9",
+          "changed_from_marketplace_base": true,
+          "decision": "approved-whole-file-copy",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+              "source_sha256": "74897571398585f27e2c35d09d81b0a531c8c774f4a2967e5e1b1d1b05a483d9",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        },
+        {
+          "path": "scripts/validate_data.py",
+          "local_sha256": "a599aa256049cf30954d1f164721b99e453eb7e4cb8241bcab2d5573e6cf58b8",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "477bcb28c9812b385cb51a4605ddf30d7b2266e2",
+              "source_path": ".claude/skills/ui-ux-pro-max/scripts/validate_data.py",
+              "source_sha256": "a599aa256049cf30954d1f164721b99e453eb7e4cb8241bcab2d5573e6cf58b8",
+              "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/477bcb28c9812b385cb51a4605ddf30d7b2266e2/.claude/skills/ui-ux-pro-max/scripts/validate_data.py",
+              "whole_file_byte_equal": true
+            }
+          ]
+        }
+      ],
+      "out_of_scope": "仓库 README/website/CLI/sibling skills/commands/hooks/new skills 不属于该条目既有包内容，不由整仓有更新推定必须加入。"
+    },
+    {
+      "id": "product-manager-skills/write-prd",
+      "maintenance_decision": "keep-current",
+      "substantive_followup": false,
+      "format_identity_restore_only": false,
+      "audit_reason": "本地write-prd把原prd condensed成evidence/current workflow、goals、user flow、scope、acceptance criteria，并去host/connector假设。",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "local_sha256": "620e8b8cf3aa6e3d197a0d8297128441b7a731ff819031772eb910c6afd38291",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": [
+            {
+              "source_commit": "3a685010a7afdc0dbd4c83b7fbda6c316aa516e5",
+              "source_path": "skills/prd/SKILL.md",
+              "source_sha256": "6772e6f0fcc7110d625c7f4595e4990e1910007676c36d217eda4e779041d5e5",
+              "source_url": "https://github.com/github/awesome-copilot/blob/3a685010a7afdc0dbd4c83b7fbda6c316aa516e5/skills/prd/SKILL.md",
+              "whole_file_byte_equal": false
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "local_sha256": "fc69f20b0b79791910d8decd835e37f5a8e64919656123432836615c00dccae9",
+          "changed_from_marketplace_base": false,
+          "decision": "unchanged",
+          "reviewed_source_mappings": []
+        }
+      ],
+      "local_overlay": "本地write-prd把原prd condensed成evidence/current workflow、goals、user flow、scope、acceptance criteria，并去host/connector假设。",
+      "preserve": [
+        "compact PRD、证据与scope、connector-neutral"
+      ]
+    }
+  ]
+}

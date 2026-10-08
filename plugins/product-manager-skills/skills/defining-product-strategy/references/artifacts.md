@@ -1193,3 +1193,4 @@ How it works: 1. 'The sharp startup: When PayPal found product-market fit' by Da
 3. 'The market wedge: How to pick your initial market' by Nathan Baschez and Eric Thompson — https://every.to/divinations/the-market-wedge-how-to-pick-your-initial-market
 4. 'The thin edge of the wedge strategy' by Chris Dixon — https://cdixon.org/2010/12/26/the-thin-edge-of-the-wedge-strategy
 5. 'All wedges are not created equal' by Nikhil Basu Trivedi — https://nbt.substack.com/p/all-wedges-are-not-created-equal
+
