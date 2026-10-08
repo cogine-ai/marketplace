@@ -71,9 +71,12 @@ further delegation. Grok 4.6 xhigh fast remains the execution model. See the
 
 ## Source maintenance — 2026-10-08
 
-The current source prepares Coding and Product 0.2.3, Design and Growth 0.1.5,
-Sales 0.1.2, and Founder/CEO 0.1.3. Each bundle records frozen upstream sources,
-raw file hashes and retained adaptations in `UPSTREAM_SYNC_2026-10-08.json`.
+The current source prepares Coding 0.2.4, Product 0.2.3, Design and Growth 0.1.5,
+Sales 0.1.2, and Founder/CEO 0.1.3. The upstream wave is recorded in each
+bundle's `UPSTREAM_SYNC_2026-10-08.json`; Coding's bounded Power Gates repair
+is recorded separately in `LOCAL_MAINTENANCE_2026-10-08.json`.
+[Standalone repairs](maintenance/standalone-skills/README.md) retain exact
+patches and hashes for existing local entries without changing installer locks.
 Cursourcing remains 0.2.3. See [CHANGELOG.md](CHANGELOG.md) for the changes;
 prepared source versions do not imply a published or installed update.
 

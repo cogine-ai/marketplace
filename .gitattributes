@@ -1,0 +1,2 @@
+# Unified patches use a space marker for unchanged blank context lines.
+maintenance/standalone-skills/*.patch whitespace=-blank-at-eol

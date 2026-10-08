@@ -14,7 +14,7 @@ Use for a material Frame, Discovery, Commit, or Deviation decision:
 **Need:** The exact decision, authorization, or input required.
 ```
 
-Do not ask for confirmation when the choice is local, reversible, in scope, and cannot change material semantics, risk, remote/live state, or validation.
+Reuse entrypoint authorization, including covered remote/live actions. In-scope adaptation or equally credible validation alone does not require confirmation. Pause only affected actions needing a new material human decision; continue independent work.
 
 ## Evidence Status
 
@@ -24,14 +24,14 @@ Map claims to evidence rather than listing unrelated commands:
 **Evidence Gate**
 | Material claim | Direct evidence | Status |
 |---|---|---|
-| ... | test, diff, screenshot, live read-back, CI, log, or artifact | proven / missing |
+| ... | test, diff, screenshot, live read-back, CI, log, or artifact | supported / partial / not assessed / failed |
 
 **Missing validation:**
 **Residual risk:**
 **Completion:** complete | implemented but not fully verified | blocked on validation | not complete
 ```
 
-One passing check does not prove an unrelated claim. UI rendering needs visual/browser evidence; remote-state changes need live read-back or equivalent provider evidence.
+Calibrate evidence at Frame/Commit to the requested deliverable. Optional checks are not new acceptance requirements. Qualify partial evidence; accepted risk never proves a claim. One check cannot establish unrelated claims. UI-rendering claims need visual/browser evidence; remote-state claims need live read-back or equivalent provider evidence.
 
 ## Blind-Spot Artifact
 

@@ -1,5 +1,24 @@
 # Changelog
 
+## Coding 0.2.4 and standalone repairs — 2026-10-08
+
+Prepared source candidate; the preceding published upstream wave is unchanged.
+
+- Follow canonical CoginePowerGates v0.6: reuse bounded authorization, make
+  Discovery decision-oriented, distinguish authorized adaptation from new
+  consequential deviation, and calibrate completion to the requested evidence.
+- Preserve four modes, five gates, artifact contracts and invocation metadata.
+  Record source commit, exact runtime hashes and bounded fresh-context checks.
+- Retain exact local standalone repair patches for AI SEO facts, missing
+  marketing tool guides, stale AI SEO grader expectations, configured/legacy
+  glossary paths and CEO entrypoints.
+  Installer locks and host invocation settings remain unchanged.
+
+Eight local Power runs passed their observed task criteria; old/no-skill controls
+also succeeded. These checks do not establish quality gains, token savings,
+real deployment or automatic skill selection. Publication and installation are
+separate operations.
+
 ## Role bundle upstream maintenance — 2026-10-08
 
 Prepared source versions: Coding 0.2.3, Product 0.2.3, Design 0.1.5,

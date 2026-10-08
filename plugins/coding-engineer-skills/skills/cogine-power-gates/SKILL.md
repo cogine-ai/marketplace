@@ -1,6 +1,6 @@
 ---
 name: cogine-power-gates
-description: "Use for Cogine gated execution when material risk, unknowns, deviation, or unverified completion requires a pause."
+description: "Use for gate or blind-spot reviews, consequential actions, or material uncertainty, deviation, or missing proof that changes whether work can proceed."
 ---
 
 # CoginePowerGates
@@ -18,7 +18,7 @@ Choose scope, then its safety floor. Never invent modes.
 | `blind-spot-only` | Explicit unknown discovery, critique, prompt improvement, or a preimplementation-only pass | Frame, Discovery; stop |
 | `fast` | Local, reversible work with clear scope, success, and obvious validation | Frame, Evidence |
 | `standard` | Other material work | Frame, Discovery, Commit, Evidence; Deviation on trigger |
-| `high-risk` | Actions changing architecture/contracts, production/customer state, security/permissions, billing/cost, release/public or consequential remote/live state, or that are destructive, irreversible, cross-repo contract/state changes, or hard to verify | All; confirm material decisions and remote/live actions unless explicitly authorized |
+| `high-risk` | Coordinated cross-repo contract/state changes; actions changing material architecture/contracts, production/customer state, security/permissions, money, or release/public/remote state, or that are destructive, irreversible, costly, or hard to verify | All; apply existing authorization and resolve new material human decisions |
 
 Route in order:
 
@@ -31,39 +31,39 @@ Read `references/task-modes.md` for boundaries.
 
 ## Gate Rule
 
-Interrupt only if unresolved issues could materially change the next action; otherwise pass silently. Announce mode only when behavior changes.
+Reuse decisions and authorization within their objective, scope, consequences, and material assumptions. Interrupt only for new material human decisions or unavailable input/proof blocking the next action; continue independent work. Passed gates stay silent. Announce mode only when behavior changes.
 
 ## Discovery
 
 | Unknown | Response |
 |---|---|
 | Known known | Verify the prompt's map against code, evidence, or live state when relevant. |
-| Known unknown | Ask, research, or interview when the answer could change the path. |
-| Unknown known | Expose tacit preference with options, brainstorms, references, or prototypes. |
+| Known unknown | Ask, research, or interview if the answer changes the path. |
+| Unknown known | Expose tacit preferences with options, brainstorms, references, or prototypes. |
 | Unknown unknown | Blind-spot pass, reference scan, or plan review before expensive work. |
 
-Resolve, accept, or escalate only material unknowns.
+For a material unknown, identify the decision it could change, existing evidence, cheapest useful method, and sufficient evidence to proceed. Inspect/research facts autonomously; ask for material preferences or unavailable input. Resolve, accept within authorized bounds, or escalate; do not exhaust every category.
 
 ## Gates
 
 | Gate | Pass or interrupt condition |
 |---|---|
-| Frame | Objective, limits, and inspectable success make the next action clear. Ask only when missing input could materially alter it; otherwise state the assumption and continue. |
-| Discovery | The relevant method was used; no unresolved unknown can materially change the path unless accepted or escalated. |
-| Commit | Path, scope, verification, and stop triggers are bounded. Get a human decision for material changes to meaning, scope, architecture/contracts, data, permissions, security, cost, release/public state, or remote/live state unless already authorized in this session. |
-| Deviation | Continue and log local, reversible, in-scope variation. Pause when new facts change the accepted path, material semantics/risk, remote/live state, or validation. |
-| Evidence | Map every material completion claim to direct evidence. If proof is missing, use `implemented but not fully verified`, `blocked on validation`, or `not complete`. |
+| Frame | Objective, limits, and evidence for the requested deliverable make the next action clear. Ask only when missing input materially alters it; otherwise state material assumptions and continue. |
+| Discovery | Evidence is sufficient for the next action; remaining material unknowns are resolved, accepted within authorized bounds, or escalated. |
+| Commit | Bound path, scope, required evidence, and stop triggers. Get human decisions for changes beyond authorized bounds; otherwise reuse decisions and authorization. |
+| Deviation | Continue and log authorized adaptation, including equally or more credible validation. New facts crossing authorized bounds require a decision only for affected actions. |
+| Evidence | Match requested outcomes and material claims to evidence. Optional checks are not acceptance requirements. Missing required proof means `implemented but not fully verified`, `blocked on validation`, or `not complete`. |
 
 During Execute, maintain any requested implementation-notes artifact and record material assumptions, decisions, and deviations.
 
 ## Artifacts And Transfer
 
-Use Markdown for operational/copyable artifacts and HTML for UI, visual, or interaction prototypes; consider HTML for rich explainers, pitches, quizzes, walkthroughs, and comparisons. Preserve a named format. Ask once only when Markdown versus HTML materially affects usefulness. Never replace the requested artifact with a gate report.
+Preserve the requested format. Use Markdown for operational/copyable artifacts and HTML for visual/interactive prototypes; consider HTML for rich explainers, pitches, quizzes, walkthroughs, and comparisons. Ask once only if format materially affects usefulness. Never replace the artifact with a gate report.
 
-Transfer ordinary work with outcome, evidence, material decisions/deviations, residual risk, and owner actions. When understanding or buy-in is a goal, produce the requested explainer, pitch, or quiz.
+Transfer outcome, evidence, material decisions/deviations, residual risk, and owner actions. For understanding or buy-in, produce the requested explainer, pitch, or quiz.
 
 ## Output And Completion
 
 Do not report passed gates. On interruption, report `Gate`, `Reason`, `Options`, `Recommendation`, and `Need`. Read `references/gate-reports.md` for contracts and `references/examples.md` for routes and state traces.
 
-Claim complete only when the objective is met, non-goals are respected, material unknowns/deviations are resolved, accepted, or escalated, each material claim has direct evidence, residual risk is explicit, and the human can understand what changed and remains.
+Claim complete only when the requested objective is met, non-goals are respected, no required decision or validation remains, material claims have direct evidence, uncertainty and residual risk are explicit, and the human can understand what changed and remains.

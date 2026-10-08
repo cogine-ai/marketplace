@@ -1,0 +1,1516 @@
+--- a/.agents/skills/ai-seo/SKILL.md
++++ b/.agents/skills/ai-seo/SKILL.md
+@@ -49,7 +49,7 @@
+ | **Perplexity** | Always cites sources with links | Favors authoritative, recent, well-structured content |
+ | **Gemini** | Google's AI assistant | Pulls from Google index + Knowledge Graph |
+ | **Copilot** | Bing-powered AI search | Bing index + authoritative sources |
+-| **Claude** | Brave Search (when enabled) | Training data + Brave search results |
++| **Claude** | Web search when enabled | Retrieved web sources; verify the current search path |
+ 
+ For a deep dive on how each platform selects sources and what to optimize per platform, see [references/platform-ranking-factors.md](references/platform-ranking-factors.md).
+ 
+@@ -59,12 +59,10 @@
+ 
+ In traditional search, you need to rank on page 1. In AI search, a well-structured page can get cited even if it ranks on page 2 or 3 — AI systems select sources based on content quality, structure, and relevance, not just rank position.
+ 
+-**Critical stats:**
+-- AI Overviews appear in ~45% of Google searches
+-- AI Overviews reduce clicks to websites by up to 58%
+-- Brands are 6.5x more likely to be cited via third-party sources than their own domains
+-- Optimized content gets cited 3x more often than non-optimized
+-- Statistics and citations boost visibility by 40%+ across queries
++**Evidence boundaries:**
++- Citation rates, source shares, and traffic effects depend on the query set, platform, language, location, and observation date. Verify a study's sample and method before using its numbers to allocate effort.
++- The 2024 GEO paper measures experimental source visibility; its percentage gains are not current organic citation-rate, traffic, or revenue gains. See the research section below.
++- Measure your own retrieved → cited → mentioned → recommended progression, plus referral traffic and conversions; these are different outcomes.
+ 
+ ### Google's Official Stance vs. Multi-Platform Reality
+ 
+@@ -80,15 +78,15 @@
+ - **Helpful, reliable, people-first content** wins — same E-E-A-T standards as regular Search
+ - **No AI-specific Search Console reporting** — use standard SEO metrics
+ 
+-**Other AI engines (ChatGPT, Claude, Perplexity, Copilot) behave differently:**
+-- They actively reward extractable structure — passages, FAQs, comparison tables, definition blocks
+-- They parse `llms.txt`, structured pricing pages, and machine-readable files when present
+-- They cite third-party sources (Reddit, Wikipedia, review sites) more heavily than top-ranked pages
++**Other AI engines and agents have different retrieval paths:**
++- Clear passages, FAQs, comparison tables, and definition blocks make content easier to read and test for extractability.
++- Machine-readable pricing and optional `llms.txt` files can help clients that use them; publishing a file does not establish that a platform discovers or consumes it.
++- Source mixes vary by platform and query. Test owned and third-party surfaces rather than assuming one source class always dominates.
+ 
+ **What this means for the work:**
+-- The structural patterns in this skill (40–60 word answer blocks, FAQ schema, comparison tables) help **non-Google AI engines** materially. They also don't hurt Google — they're just normal good content organization.
++- Use concise answer blocks, relevant structured data, and comparison tables when they improve the reader's task. A 40–60 word answer is a drafting heuristic, not a platform requirement or guaranteed citation boost.
+ - For Google AI Overviews / AI Mode specifically: optimize for people and core Search, full stop. Strong E-E-A-T, original information, semantic HTML, clean indexability.
+-- For ChatGPT/Claude/Perplexity: layer on the extractable structure + llms.txt + machine-readable files.
++- For ChatGPT/Claude/Perplexity: verify search access, test extractability, and add optional machine-readable files only where a real client or workflow can use them.
+ 
+ When in doubt, default to "write for people, organize for clarity" — that satisfies both camps.
+ 
+@@ -157,17 +155,17 @@
+ 
+ ### Step 4: AI Bot Access Check
+ 
+-Verify your robots.txt allows AI crawlers. Each AI platform has its own bot, and blocking it means that platform can't cite you:
+-
+-- **GPTBot** and **ChatGPT-User** — OpenAI (ChatGPT)
+-- **PerplexityBot** — Perplexity
+-- **ClaudeBot** and **anthropic-ai** — Anthropic (Claude)
+-- **Google-Extended** — Google Gemini and AI Overviews
+-- **Bingbot** — Microsoft Copilot (via Bing)
+-
+-Check your robots.txt for `Disallow` rules targeting any of these. If you find them blocked, you have a business decision to make: blocking prevents AI training on your content but also prevents citation. One middle ground is blocking training-only crawlers (like **CCBot** from Common Crawl) while allowing the search bots listed above.
+-
+-See [references/platform-ranking-factors.md](references/platform-ranking-factors.md) for the full robots.txt configuration.
++Audit the access path for the desired outcome. Search, model training, and user-requested fetching have different controls:
++
++- **OpenAI:** `OAI-SearchBot` supports ChatGPT search; `GPTBot` collects potential training content. Their robots.txt settings are independent. `ChatGPT-User` handles some user-requested visits, does not control search inclusion, and robots.txt may not apply to those requests.
++- **Google:** Googlebot and Search preview controls govern AI Overviews / AI Mode. `Google-Extended` controls Gemini training and specified Gemini grounding uses; it does not control Google Search inclusion or ranking.
++- **Anthropic:** `Claude-SearchBot` supports search, `Claude-User` supports user-requested retrieval, and `ClaudeBot` collects potential training content.
++- **Perplexity:** `PerplexityBot` supports search and is not a foundation-model training crawler. `Perplexity-User` handles user-requested fetching.
++- **Bing:** audit Bingbot access for Bing Search retrieval.
++
++Check robots.txt, CDN/WAF behavior, real HTTP responses, and provider verification guidance. Preserve the owner's training policy; search visibility does not require allowing every training crawler. Search access enables eligibility, not guaranteed citation.
++
++See [references/platform-ranking-factors.md](references/platform-ranking-factors.md) for official sources and an example that allows search while blocking training.
+ 
+ ---
+ 
+@@ -197,7 +195,7 @@
+ 
+ **Structural rules:**
+ - Lead every section with a direct answer (don't bury it)
+-- Keep key answer passages to 40-60 words (optimal for snippet extraction)
++- Keep key answers concise and self-contained; 40–60 words is a starting heuristic, adjusted for the question, language, and necessary context
+ - Use H2/H3 headings that match how people phrase queries
+ - Tables beat prose for comparison content
+ - Numbered lists beat paragraphs for process content
+@@ -207,29 +205,25 @@
+ 
+ AI systems prefer sources they can trust. Build citation-worthiness.
+ 
+-**The Princeton GEO research** (KDD 2024, studied across Perplexity.ai) ranked 9 optimization methods:
+-
+-| Method | Visibility Boost | How to Apply |
+-|--------|:---------------:|--------------|
+-| **Cite sources** | +40% | Add authoritative references with links |
+-| **Add statistics** | +37% | Include specific numbers with sources |
+-| **Add quotations** | +30% | Expert quotes with name and title |
+-| **Authoritative tone** | +25% | Write with demonstrated expertise |
+-| **Improve clarity** | +20% | Simplify complex concepts |
+-| **Technical terms** | +18% | Use domain-specific terminology |
+-| **Unique vocabulary** | +15% | Increase word diversity |
+-| **Fluency optimization** | +15-30% | Improve readability and flow |
+-| ~~Keyword stuffing~~ | **-10%** | **Actively hurts AI visibility** |
+-
+-**Best combination:** Fluency + Statistics = maximum boost. Low-ranking sites benefit even more — up to 115% visibility increase with citations.
+-
+-**Statistics and data** (+37-40% citation boost)
++**Research context:** [GEO: Generative Engine Optimization](https://arxiv.org/html/2311.09735v3) (KDD 2024) evaluates edited source text using a controlled generative engine and a separate Perplexity experiment. Its visibility metrics include position-adjusted attributed word count and subjective impression. The reported gains, including “up to 40%,” are relative changes in those experimental metrics, not organic citation-rate improvements on today's platforms. Effects differ by method, metric, and domain; persuasive tone and unique vocabulary are not universally effective.
++
++Use this research to choose hypotheses, then test them against the user's target queries. Add genuine supporting evidence, preserve the claim's meaning, and record current citation and conversion outcomes separately.
++
++| Method to consider | How to apply |
++|--------------------|--------------|
++| **Cite sources** | Link authoritative references that support the claim |
++| **Add statistics** | Include relevant, verified numbers with dates and sources |
++| **Add quotations** | Use genuine, relevant expert quotations with attribution |
++| **Improve clarity and fluency** | Make the answer easier to understand without losing qualifications |
++| **Technical terms** | Use precise terminology when the audience and subject need it |
++
++**Statistics and data**
+ - Include specific numbers with sources
+ - Cite original research, not summaries of research
+ - Add dates to all statistics
+ - Original data beats aggregated data
+ 
+-**Expert attribution** (+25-30% citation boost)
++**Expert attribution**
+ - Named authors with credentials
+ - Expert quotes with titles and organizations
+ - "According to [Source]" framing for claims
+@@ -274,13 +268,13 @@
+ 
+ > **Google's stance**: not required for AI Overviews or AI Mode. Their guide explicitly says you don't need new markup, AI files, or markdown to appear in generative AI search.
+ >
+-> **Why include them anyway**: non-Google AI engines (ChatGPT, Claude, Perplexity) and autonomous buying agents do reward extractable structure. The files below help with those engines without harming Google.
++> **When to include them**: an agent or client may benefit from a simple, maintained representation of public content. Validate that use case; these optional files do not guarantee indexing, citation, or recommendation.
+ 
+ AI agents aren't just answering questions — they're becoming buyers. When an AI agent evaluates tools on behalf of a user, it needs structured, parseable information. If your pricing is locked in a JavaScript-rendered page or a "contact sales" wall, agents will skip you and recommend competitors whose information they can actually read.
+ 
+ **Audit this layer first**: [references/agent-readiness.md](references/agent-readiness.md) — the access/discovery/parseability checklist, free scoring tools (`npx is-agentic`, Frase's checker), Markdown content negotiation + `Link` headers, `llms-full.txt`, and the emerging agent-*actionable* layer (WebMCP).
+ 
+-Add these machine-readable files to your site root:
++Consider these optional machine-readable files when they serve a real client or audit need. Keep the public HTML useful and authoritative:
+ 
+ **`/pricing.md` or `/pricing.txt`** — Structured pricing data for AI agents
+ 
+@@ -318,7 +312,7 @@
+ 
+ **`/llms.txt`** — Context file for AI systems (see [llmstxt.org](https://llmstxt.org))
+ 
+-If you don't have one yet, add an `llms.txt` that gives AI systems a quick overview of what your product does, who it's for, and links to key pages (including your pricing).
++`llms.txt` is an optional proposal for helping clients discover context and key pages, including pricing. Add it when a target client or workflow can use it; keep its links and facts current. Its presence is not evidence of platform adoption, crawl access, indexing, or citation gain.
+ 
+ **`/okf/` — Open Knowledge Format bundle (Google-backed, v0.1)**
+ 
+@@ -338,7 +332,7 @@
+ | Reviews | `Review`, `AggregateRating` | Trust signals |
+ | Organization | `Organization` | Entity recognition |
+ 
+-Content with proper schema shows 30-40% higher AI visibility on non-Google AI engines. **Google's note**: structured data is "not required for generative AI search" but is recommended for overall SEO strategy. For implementation, use the **schema** skill.
++Use supported schema that accurately describes the visible content. Google requires no special schema for AI Overviews / AI Mode; there is no general 30–40% citation gain established by adding markup. For implementation, use the **schema** skill when available and relevant.
+ 
+ ---
+ 
+@@ -425,7 +419,7 @@
+ 2. **Chunk pages into AI-bait fragments**. Google's guide is direct: *"Don't break your content into tiny pieces for AI to better understand it."* Use normal paragraph + heading structure.
+ 3. **Generate at scale for ranking manipulation**. AI-generated content is fine *if* it meets Search Essentials and spam policies. Mass-producing thin variations does not.
+ 4. **Pursue inauthentic mentions**. Don't fabricate citations or bulk-spam Reddit/Wikipedia for AI visibility. Real participation only.
+-5. **Block AI crawlers if you want citation**. Blocking GPTBot, PerplexityBot, ClaudeBot, Google-Extended means those engines literally cannot cite you. Block training-only crawlers (CCBot) if you must, not the search-and-cite ones.
++5. **Confuse training and search controls**. Audit the relevant search crawler and fetch path before diagnosing lost visibility. Blocking GPTBot or ClaudeBot does not itself disable the separate search bots; Google-Extended does not control AI Overviews.
+ 6. **Hide your main content behind JS that doesn't render**. Both core Search and AI agents need to see your content; JS-only rendering loses both audiences.
+ 7. **Skip E-E-A-T fundamentals**. Author identity, first-hand experience, expertise signals, transparent sourcing — Google's guide leans heavily on these for AI features.
+ 
+@@ -439,16 +433,16 @@
+ 
+ ## Common Mistakes
+ 
+-- **Ignoring AI search entirely** — ~45% of Google searches now show AI Overviews, and ChatGPT/Perplexity are growing fast
++- **Ignoring the audience's actual search paths** — Measure AI answer coverage and referrals for the relevant query set; prevalence varies by query, region, and date
+ - **Treating AI SEO as separate from SEO** — Good traditional SEO is the foundation; AI SEO adds structure and authority on top
+ - **Writing for AI, not humans** — If content reads like it was written to game an algorithm, it won't get cited or convert
+ - **No freshness signals** — Undated content loses to dated content because AI systems weight recency heavily. Show when content was last updated
+ - **Gating all content** — AI can't access gated content. Keep your most authoritative content open
+ - **Ignoring third-party presence** — You may get more AI citations from a Wikipedia mention than from your own blog
+ - **No structured data** — Schema markup gives AI systems structured context about your content
+-- **Keyword stuffing** — Unlike traditional SEO where it's just ineffective, keyword stuffing actively reduces AI visibility by 10% (Princeton GEO study)
+-- **Hiding pricing behind "contact sales" or JS-rendered pages** — AI agents evaluating your product on behalf of buyers can't parse what they can't read. Add a `/pricing.md` file
+-- **Blocking AI bots** — If GPTBot, PerplexityBot, or ClaudeBot are blocked in robots.txt, those platforms can't cite you
++- **Keyword stuffing** — It does not improve the reader's answer; experimental GEO results are not a universal percentage penalty
++- **Making intended public pricing unreadable** — Keep the owner's chosen public pricing and terms accessible. Consider a `/pricing.md` file only when an actual client or workflow can use it; do not invent prices or override a sales-led pricing policy
++- **Blocking the intended search path unintentionally** — Inspect search-crawler rules and CDN/WAF behavior separately from the owner's training preferences
+ - **Generic content without data** — "We're the best" won't get cited. "Our customers see 3x improvement in [metric]" will
+ - **Forgetting to monitor** — You can't improve what you don't measure. Check AI visibility monthly at minimum
+ 
+@@ -456,7 +450,7 @@
+ 
+ ## Tool Integrations
+ 
+-For implementation, see the [tools registry](../../tools/REGISTRY.md).
++These are optional products, not tools guaranteed to be installed or connected. Inspect the current environment for an available connector, CLI, or authenticated browser workflow before calling one. When none is available, use manual answer checks, permitted browser inspection, or user-provided exports; do not invent tool calls or access.
+ 
+ | Tool | Use For |
+ |------|---------|
+--- a/.agents/skills/ai-seo/references/platform-ranking-factors.md
++++ b/.agents/skills/ai-seo/references/platform-ranking-factors.md
+@@ -2,17 +2,17 @@
+ 
+ Each AI search platform has its own search index, ranking logic, and content preferences. This guide covers what matters for getting cited on each one.
+ 
+-Sources cited throughout: Princeton GEO study (KDD 2024), SE Ranking domain authority study, ZipTie content-answer fit analysis.
++Separate official access controls from research and practitioner observations. Vendor statistics and source preferences below are hypotheses tied to their original sample and date; verify the original study and the user's current queries before relying on them. They are not disclosed ranking weights or guaranteed citation gains.
+ 
+ ---
+ 
+ ## The Fundamentals
+ 
+-Every AI platform shares three baseline requirements:
++Audit three separate conditions:
+ 
+-1. **Your content must be in their index** — Each platform uses a different search backend (Google, Bing, Brave, or their own). If you're not indexed, you can't be cited.
+-2. **Your content must be crawlable** — AI bots need access via robots.txt. Block the bot, lose the citation.
+-3. **Your content must be extractable** — AI systems pull passages, not pages. Clear structure and self-contained paragraphs win.
++1. **Discovery** — Check the relevant index or retrieval path. Google Search AI links require Search indexing and snippet eligibility; some user-requested fetches can access a URL directly.
++2. **Access** — Inspect the relevant search or user-fetch crawler, robots.txt, and CDN/WAF behavior. Training opt-outs are a separate decision.
++3. **Extractability** — Clear structure and self-contained answers help a reader or agent understand the content. Validate actual retrieval and citation separately; eligibility does not guarantee selection.
+ 
+ Beyond these basics, each platform weights different signals. Here's what matters and where.
+ 
+@@ -20,14 +20,12 @@
+ 
+ ## Google AI Overviews
+ 
+-Google AI Overviews pull from Google's own index and lean heavily on E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness). They appear in roughly 45% of Google searches.
++Google AI Overviews and AI Mode use Google's Search systems and may search related subtopics through query fan-out. A supporting page must be indexed and eligible for a Search snippet. [Google's official guide](https://developers.google.com/search/docs/appearance/ai-features) requires no additional AI-specific files, markup, or optimizations.
+ 
+-**What makes Google AI Overviews different:** They already have your traditional SEO signals — backlinks, page authority, topical relevance. The additional AI layer adds a preference for content with cited sources and structured data. Research shows that including authoritative citations in your content correlates with a 132% visibility boost, and writing with an authoritative (not salesy) tone adds another 89%.
+-
+-**Importantly, AI Overviews don't just recycle the traditional Top 10.** Only about 15% of AI Overview sources overlap with conventional organic results. Pages that wouldn't crack page 1 in traditional search can still get cited if they have strong structured data and clear, extractable answers.
++The “132% citations” and “89% authoritative tone” examples in the [2024 GEO paper](https://arxiv.org/html/2311.09735v3) are selected experimental examples, not measured AI Overview ranking effects. Do not apply them as Google visibility promises.
+ 
+ **What to focus on:**
+-- Schema markup is the single biggest lever — Article, FAQPage, HowTo, and Product schemas give AI Overviews structured context to work with (30-40% visibility boost)
++- Use appropriate supported structured data that matches visible content; no special AI schema is required and no general percentage lift is established
+ - Build topical authority through content clusters with strong internal linking
+ - Include named, sourced citations in your content (not just claims)
+ - Author bios with real credentials matter — E-E-A-T is weighted heavily
+@@ -40,7 +38,7 @@
+ 
+ ## ChatGPT
+ 
+-ChatGPT's web search draws from a Bing-based index. It combines this with its training knowledge to generate answers, then cites the web sources it relied on.
++ChatGPT search retrieves web sources and can cite them. Audit `OAI-SearchBot` access and actual target-query results rather than assuming a single search backend or that training access controls search inclusion.
+ 
+ **What makes ChatGPT different:** Domain authority matters more here than on other AI platforms. An SE Ranking analysis of 129,000 domains found that authority and credibility signals account for roughly 40% of what determines citation, with content quality at about 35% and platform trust at 25%. Sites with very high referring domain counts (350K+) average 8.4 citations per response, while sites with slightly lower trust scores (91-96 vs 97-100) drop from 8.4 to 6 citations.
+ 
+@@ -99,13 +97,13 @@
+ 
+ ## Claude
+ 
+-Claude uses Brave Search as its search backend when web search is enabled — not Google, not Bing. This is a completely different index, which means your Brave Search visibility directly determines whether Claude can find and cite you.
++Claude can retrieve web sources when web search is enabled. Verify the current search path and actual query results; visibility in one external index alone does not prove that Claude will retrieve or cite a page.
+ 
+ **What makes Claude different:** Claude is extremely selective about what it cites. While it processes enormous amounts of content, its citation rate is very low — it's looking for the most factually accurate, well-sourced content on a given topic. Data-rich content with specific numbers and clear attribution performs significantly better than general-purpose content.
+ 
+ **What to focus on:**
+-- Verify your content appears in Brave Search results (search for your brand and key terms at search.brave.com)
+-- Allow ClaudeBot and anthropic-ai user agents in robots.txt
++- Test whether Claude retrieves and cites the intended pages for the user's queries
++- Audit `Claude-SearchBot` and `Claude-User` access separately from the owner's `ClaudeBot` training policy
+ - Maximize factual density — specific numbers, named sources, dated statistics
+ - Use clear, extractable structure with descriptive headings
+ - Cite authoritative sources within your content
+@@ -113,22 +111,42 @@
+ 
+ ---
+ 
+-## Allowing AI Bots in robots.txt
++## Search, Training, and User-Requested Access
+ 
+-If your robots.txt blocks an AI bot, that platform can't cite your content. Here are the user agents to allow:
++Choose controls for the owner's desired use. Official provider documentation distinguishes these paths:
+ 
+-```
+-User-agent: GPTBot           # OpenAI — powers ChatGPT search
+-User-agent: ChatGPT-User     # ChatGPT browsing mode
+-User-agent: PerplexityBot    # Perplexity AI search
+-User-agent: ClaudeBot        # Anthropic Claude
+-User-agent: anthropic-ai     # Anthropic Claude (alternate)
+-User-agent: Google-Extended   # Google Gemini and AI Overviews
+-User-agent: Bingbot          # Microsoft Copilot (via Bing)
++| Provider | Search / retrieval | Training / other use | Official source |
++|----------|--------------------|----------------------|-----------------|
++| OpenAI | `OAI-SearchBot`: search; `ChatGPT-User`: some user-requested visits | `GPTBot`: potential model-training content; its setting is independent of search | [OpenAI crawlers](https://developers.openai.com/api/docs/bots) |
++| Anthropic | `Claude-SearchBot`: search; `Claude-User`: user-requested retrieval | `ClaudeBot`: potential model-training content | [Anthropic crawlers](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
++| Perplexity | `PerplexityBot`: search; `Perplexity-User`: user-requested fetches | These are not foundation-model training crawlers | [Perplexity crawlers](https://docs.perplexity.ai/docs/resources/perplexity-crawlers) |
++| Google | Googlebot and Search preview controls: Google Search, including AI Overviews / AI Mode | `Google-Extended`: Gemini training and specified Gemini grounding uses; no effect on Search inclusion or ranking | [Google-Extended](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers#google-extended) |
++
++Example for a site that permits these search crawlers while opting out of OpenAI and Anthropic training. Preserve existing path restrictions in every matching crawler group: a specific user-agent group does not inherit the `User-agent: *` group's rules ([RFC 9309, section 2.2.1](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.2.1)). The `/private/` exclusion below illustrates that merge; replace it with the site's actual exclusions. This is not a whole-site configuration to overwrite blindly:
++
++```text
++User-agent: OAI-SearchBot
+ Allow: /
++Disallow: /private/
++
++User-agent: PerplexityBot
++Allow: /
++Disallow: /private/
++
++User-agent: Claude-SearchBot
++Allow: /
++Disallow: /private/
++
++User-agent: GPTBot
++Disallow: /
++
++User-agent: ClaudeBot
++Disallow: /
+ ```
+ 
+-**Training vs. search:** Some AI bots are used for both model training and search citation. If you want to be cited but don't want your content used for training, your options are limited — GPTBot handles both for OpenAI. However, you can safely block **CCBot** (Common Crawl) without affecting any AI search citations, since it's only used for training dataset collection.
++Decide the `Google-Extended` policy separately: blocking it can affect the listed Gemini grounding uses, but does not opt the site out of Google Search AI. For Search, review Googlebot access and `nosnippet`, `data-nosnippet`, `max-snippet`, or `noindex` according to the desired scope; restricting these can affect ordinary Search too.
++
++User-requested fetchers differ: OpenAI says robots.txt may not apply to `ChatGPT-User`; Perplexity says its user fetcher generally ignores it; Anthropic documents robots.txt controls for `Claude-User`. Check real HTTP responses, CDN/WAF rules, and each provider's identity-verification guidance. A permitted fetch proves access, not indexing or citation, and robots.txt is not a privacy boundary for nonpublic content.
+ 
+ ---
+ 
+@@ -136,7 +154,7 @@
+ 
+ If you're optimizing for AI search for the first time, focus your effort where your audience actually is:
+ 
+-**Start with Google AI Overviews** — They reach the most users (45%+ of Google searches) and you likely already have Google SEO foundations in place. Add schema markup, include cited sources in your content, and strengthen E-E-A-T signals.
++**Start with the platform your audience uses** — If Google AI Overviews are a priority, verify Search eligibility, maintain helpful original content, and use appropriate structured data. Measure the actual query set instead of assuming a universal AI Overview prevalence.
+ 
+ **Then address ChatGPT** — It's the most-used standalone AI search tool for tech and business audiences. Focus on freshness (update content monthly), domain authority, and matching your content structure to how ChatGPT formats its responses.
+ 
+@@ -145,7 +163,7 @@
+ **Copilot and Claude are lower priority** unless your audience skews enterprise/Microsoft (Copilot) or developer/analyst (Claude). But the fundamentals — structured content, cited sources, schema markup — help across all platforms.
+ 
+ **Actions that help everywhere:**
+-1. Allow all AI bots in robots.txt
++1. Verify access for the intended search and user-fetch paths while preserving the owner's training policy
+ 2. Implement schema markup (FAQPage, Article, Organization at minimum)
+ 3. Include statistics with named sources in your content
+ 4. Update content regularly — monthly for competitive topics
+--- a/.agents/skills/ai-seo/references/agent-readiness.md
++++ b/.agents/skills/ai-seo/references/agent-readiness.md
+@@ -16,15 +16,15 @@
+ ### 1. Access — can an agent get to the page and see real content?
+ 
+ - **Core content in the initial HTML response.** Most agents never execute JavaScript. If the content only exists after client-side rendering, it doesn't exist. This is the #1 essential check in both tools.
+-- **No bot challenge or firewall block** on the request path. Aggressive bot protection (Cloudflare challenges, WAF rules) that blocks `GPTBot`, `PerplexityBot`, `ClaudeBot`, etc. is self-inflicted invisibility. Audit what your CDN/WAF actually does to those user agents — many sites block them by default without anyone deciding to.
++- **No unintended bot challenge or firewall block** on the intended retrieval path. Test search crawlers such as `OAI-SearchBot`, `PerplexityBot`, and `Claude-SearchBot`, plus relevant user-requested fetches. Audit real CDN/WAF responses and verify crawler identity. Keep `GPTBot` / `ClaudeBot` training choices separate; see [platform access controls](platform-ranking-factors.md#search-training-and-user-requested-access).
+ - **Correct HTTP behavior**: real status codes (no soft-404s), stable canonical URLs, recoverable errors.
+ 
+ ### 2. Discovery — do your files tell agents what's here?
+ 
+ - **robots.txt with an explicit AI-crawler stance** — name the major AI crawlers and state your policy, rather than leaving it to be assumed (see the bot-access table in SKILL.md for the allow/block list).
+ - **A sitemap that loads and parses cleanly.**
+-- **llms.txt at the domain root** (see Machine-Readable Files in SKILL.md).
+-- **`llms-full.txt`** — the newer companion: your entire site content in one file, so an agent gets everything in a single request instead of crawling. Emerging, cheap to generate alongside llms.txt, and scored as bonus signal by both tools.
++- **Optional llms.txt at the domain root** when a target client uses it (see Machine-Readable Files in SKILL.md). A checker score is not proof of platform adoption or citation gain.
++- **Optional `llms-full.txt`** — a companion representation for clients that can consume it. Keep public facts consistent with the site; publishing or scoring the file does not prove retrieval or recommendation.
+ - **robots.txt content-usage statements** — an emerging convention for declaring what AI may do with your content (train / cite / summarize), so the answer comes from you instead of being assumed.
+ 
+ ### 3. Parseability — once there, can the agent tell what the page is?
+--- a/.agents/skills/ai-seo/references/content-patterns.md
++++ b/.agents/skills/ai-seo/references/content-patterns.md
+@@ -57,7 +57,7 @@
+ 
+ 1. **Identify snippet opportunities**: Use tools like Semrush or Ahrefs to find keywords where competitors have snippets you could capture.
+ 2. **Match the snippet format**: Analyze whether the current snippet is a paragraph, list, or table, and format your content accordingly.
+-3. **Answer the question directly**: Provide a clear, concise answer (40-60 words for paragraph snippets) immediately after the question heading.
++3. **Answer the question directly**: Provide a clear, self-contained answer immediately after the question heading. Around 40–60 words can be a drafting starting point; preserve necessary context and adjust for the language and query. This is not a platform requirement or citation guarantee.
+ 4. **Add supporting context**: Expand on your answer with examples, data, and expert insights in the following paragraphs.
+ 5. **Use proper heading structure**: Place your target question as an H2 or H3, with the answer immediately following.
+ 
+--- a/.agents/skills/analytics/SKILL.md
++++ b/.agents/skills/analytics/SKILL.md
+@@ -289,15 +289,15 @@
+ 
+ ## Tool Integrations
+ 
+-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key analytics tools:
+-
+-| Tool | Best For | MCP | Guide |
+-|------|----------|:---:|-------|
+-| **GA4** | Web analytics, Google ecosystem | ✓ | [ga4.md](../../tools/integrations/ga4.md) |
+-| **Mixpanel** | Product analytics, event tracking | - | [mixpanel.md](../../tools/integrations/mixpanel.md) |
+-| **Amplitude** | Product analytics, cohort analysis | - | [amplitude.md](../../tools/integrations/amplitude.md) |
+-| **PostHog** | Open-source analytics, session replay | - | [posthog.md](../../tools/integrations/posthog.md) |
+-| **Segment** | Customer data platform, routing | - | [segment.md](../../tools/integrations/segment.md) |
++These are optional products, not guaranteed installed integrations. Inspect the current environment for a connector, CLI, project SDK, or authenticated browser workflow and verify the intended account/property before using it. If access is unavailable, work from user-provided exports, inspect the project's tracking code, or provide a manual validation plan; identify what remains unverified.
++
++| Tool | Best For | Implementation path |
++|------|----------|---------------------|
++| **GA4** | Web analytics, Google ecosystem | [Local GA4 guide](references/ga4-implementation.md); [GTM guide](references/gtm-implementation.md) when relevant |
++| **Mixpanel** | Product analytics, event tracking | Existing SDK/configuration and current official documentation |
++| **Amplitude** | Product analytics, cohort analysis | Existing SDK/configuration and current official documentation |
++| **PostHog** | Open-source analytics, session replay | Existing SDK/configuration and current official documentation |
++| **Segment** | Customer data platform, routing | Existing SDK/configuration and current official documentation |
+ 
+ ---
+ 
+--- a/.agents/skills/launch/SKILL.md
++++ b/.agents/skills/launch/SKILL.md
+@@ -93,7 +93,7 @@
+ 1. List industry leaders your audience follows
+ 2. Pitch win-win collaborations
+ 3. Use tools like SparkToro or Listen Notes to find audience overlap
+-4. Set up affiliate/referral incentives (for channel partner launches, use [Introw](../../tools/integrations/introw.md) to manage deal registration and commissions)
++4. Plan affiliate/referral incentives. For channel partner launches, track deal registration, attribution, commission terms, and an owner in the existing CRM or a spreadsheet. Introw is an optional product; inspect available integrations and account access before proposing its use. Draft the workflow when access is unavailable, and distinguish it from a configured or launched program.
+ 
+ **Example - TRMNL:**
+ Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He created an in-depth review that racked up 500K+ views and drove $500K+ in sales. They also set up an affiliate program for ongoing promotion.
+--- a/.agents/skills/domain-modeling/SKILL.md
++++ b/.agents/skills/domain-modeling/SKILL.md
+@@ -5,7 +5,7 @@
+ 
+ # Domain Modeling
+ 
+-Actively build and sharpen the project's domain model as you design. This is the *active* discipline: challenging terms, inventing edge-case scenarios, and writing the glossary and decisions down the moment they crystallise. (Merely *reading* `CONTEXT.md` for vocabulary is not this skill: that's a one-line habit any skill can do. This skill is for when you're changing the model, not just consuming it.)
++Actively build and sharpen the project's domain model as you design. This is the *active* discipline: challenging terms, inventing edge-case scenarios, and writing the glossary and decisions down the moment they crystallise. (Merely *reading* `GLOSSARY.md` for vocabulary is not this skill: that's a one-line habit any skill can do. This skill is for when you're changing the model, not just consuming it.)
+ 
+ ## File structure
+ 
+@@ -13,7 +13,7 @@
+ 
+ ```
+ /
+-├── CONTEXT.md
++├── GLOSSARY.md
+ ├── docs/
+ │   └── adr/
+ │       ├── 0001-event-sourced-orders.md
+@@ -21,29 +21,37 @@
+ └── src/
+ ```
+ 
+-If a `CONTEXT-MAP.md` exists at the root, the repo has multiple contexts. The map points to where each one lives:
++When no explicit policy selects a different layout, an active root `GLOSSARY-MAP.md` points to the project's contexts:
+ 
+ ```
+ /
+-├── CONTEXT-MAP.md
++├── GLOSSARY-MAP.md
+ ├── docs/
+ │   └── adr/                          ← system-wide decisions
+ ├── src/
+ │   ├── ordering/
+-│   │   ├── CONTEXT.md
++│   │   ├── GLOSSARY.md
+ │   │   └── docs/adr/                 ← context-specific decisions
+ │   └── billing/
+-│       ├── CONTEXT.md
++│       ├── GLOSSARY.md
+ │       └── docs/adr/
+ ```
+ 
+-Create files lazily: only when you have something to write. If no `CONTEXT.md` exists, create one when the first term is resolved. If no `docs/adr/` exists, create it when the first ADR is needed.
++Resolve the active context before writing, using the policy and path rules below. Read the active map, when present, and use the selected context's glossary and ADR locations. Use system-wide ADRs only for decisions spanning contexts. If the context is unclear during exploration, read the relevant available contexts and continue; ask only before a next write whose target remains ambiguous. Without a configured or active map, use the selected single-context glossary and ADR locations.
++
++Read the repository's explicit domain policy in `AGENTS.md`, `CLAUDE.md`, or `docs/agents/domain.md` before applying filename defaults. Its configured glossary, map and ADR locations take precedence. An existing legacy `CONTEXT-MAP.md` / `CONTEXT.md` remains active when no replacement is configured; use the selected context's paths. A project explicitly using `GLOSSARY.md` must not gain a competing `CONTEXT.md`, and a legacy project must not gain a competing glossary merely because the default name changed. If available maps or glossaries disagree, reuse a policy or decision that already selects the active layout. Ask only if the remaining ambiguity would change the next term or ADR write; continue independent reading meanwhile. Migrate names only within the authorized task, preserving all terms, definitions and mappings.
++
++Create files lazily: only when you have something to write. If the selected
++context has no domain glossary at its resolved location, create it when the first term is resolved. If its
++ADR directory does not exist, create it when the first ADR is needed.
+ 
+ ## During the session
+ 
+ ### Challenge against the glossary
+ 
+-When the user uses a term that conflicts with the existing language in `CONTEXT.md`, call it out immediately. "Your glossary defines 'cancellation' as X, but you seem to mean Y. Which is it?"
++When the user uses a term that conflicts with the existing language in the
++selected context's resolved active glossary, call it out immediately. "Your glossary
++defines 'cancellation' as X, but you seem to mean Y. Which is it?"
+ 
+ ### Sharpen fuzzy language
+ 
+@@ -57,11 +65,13 @@
+ 
+ When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible. Which is right?"
+ 
+-### Update CONTEXT.md inline
++### Update GLOSSARY.md inline
+ 
+-When a term is resolved, update `CONTEXT.md` right there. Don't batch these up: capture them as they happen. Use the format in [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md).
++When a term is resolved, update the selected context's resolved glossary file (`GLOSSARY.md` by default, or its active legacy path) right
++there. Preserve unrelated terms and the existing format; do not replace the whole glossary to adopt a template. Don't batch these up: capture them as they happen. Use the format in
++[GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
+ 
+-`CONTEXT.md` should be totally devoid of implementation details. Do not treat `CONTEXT.md` as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
++The resolved active glossary should be totally devoid of implementation details. Do not treat it as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
+ 
+ ### Offer ADRs sparingly
+ 
+--- /dev/null
++++ b/.agents/skills/domain-modeling/GLOSSARY-FORMAT.md
+@@ -0,0 +1,54 @@
++# GLOSSARY.md Format
++
++## Structure
++
++```md
++# {Context Name}
++
++{One or two sentence description of what this context is and why it exists.}
++
++## Language
++
++**Order**:
++{A one or two sentence description of the term}
++_Avoid_: Purchase, transaction
++
++**Invoice**:
++A request for payment sent to a customer after delivery.
++_Avoid_: Bill, payment request
++
++**Customer**:
++A person or organization that places orders.
++_Avoid_: Client, buyer, account
++```
++
++## Rules
++
++- **Be opinionated.** When multiple words exist for the same concept, pick the best one and list the others under `_Avoid_`.
++- **Keep definitions tight.** One or two sentences max. Define what it IS, not what it does.
++- **Only include terms specific to this project's context.** General programming concepts (timeouts, error types, utility patterns) don't belong even if the project uses them extensively. Before adding a term, ask: is this a concept unique to this context, or a general programming concept? Only the former belongs.
++- **Group terms under subheadings** when natural clusters emerge. If all terms belong to a single cohesive area, a flat list is fine.
++
++## Single vs multi-context repos
++
++**Single context (most repos):** One `GLOSSARY.md` at the repo root.
++
++**Multiple contexts:** A `GLOSSARY-MAP.md` at the repo root lists the contexts, where they live, and how they relate to each other:
++
++```md
++# Glossary Map
++
++## Contexts
++
++- [Ordering](./src/ordering/GLOSSARY.md): receives and tracks customer orders
++- [Billing](./src/billing/GLOSSARY.md): generates invoices and processes payments
++- [Fulfillment](./src/fulfillment/GLOSSARY.md): manages warehouse picking and shipping
++
++## Relationships
++
++- **Ordering → Fulfillment**: Ordering emits `OrderPlaced` events; Fulfillment consumes them to start picking
++- **Fulfillment → Billing**: Fulfillment emits `ShipmentDispatched` events; Billing consumes them to generate invoices
++- **Ordering ↔ Billing**: Shared types for `CustomerId` and `Money`
++```
++
++These layouts are defaults, not a migration instruction. Follow the active domain policy and resolved paths in `SKILL.md`, including a configured custom glossary or legacy `CONTEXT.md` / `CONTEXT-MAP.md`. Read the selected map and update only the relevant context. Create a root `GLOSSARY.md` lazily only when no active glossary or mapped location is configured or already in use. If an unresolved layout conflict would change the next write, ask about that conflict; unrelated reading can continue. Preserve existing terms and definitions when using this format.
+--- a/.agents/skills/improve-codebase-architecture/SKILL.md
++++ b/.agents/skills/improve-codebase-architecture/SKILL.md
+@@ -10,8 +10,8 @@
+ 
+ This command is _informed_ by the project's domain model and built on a shared design vocabulary:
+ 
+-- Call the Skill tool with "codebase-design" for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, "the interface is the test surface", "one adapter = hypothetical seam, two = real"). Use these terms exactly in every suggestion, and don't drift into "component," "service," "API," or "boundary."
+-- The domain language in `CONTEXT.md` gives names to good seams; ADRs in `docs/adr/` record decisions this command should not re-litigate.
++- Use the available `coding-engineer-skills:codebase-design` skill for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, "the interface is the test surface", "one adapter = hypothetical seam, two = real"). Use these terms exactly in every suggestion, and don't drift into "component," "service," "API," or "boundary."
++- Resolve the domain locations from explicit repository policy (`AGENTS.md`, `CLAUDE.md`, or `docs/agents/domain.md`) before filename defaults. Read the selected context from the configured map, otherwise `GLOSSARY-MAP.md` or an active legacy `CONTEXT-MAP.md`; use its glossary and context ADRs plus system-wide ADRs. `GLOSSARY.md` is the new default; an existing `CONTEXT.md` remains active when no replacement is configured. Preserve the configured layout and all terms. If a conflict remains, ask only when it would affect the next term or ADR write, while continuing independent exploration.
+ 
+ ## Process
+ 
+@@ -22,7 +22,7 @@
+ - If the user named a direction (a module, a subsystem, a pain point), take it, and skip the inference below.
+ - Otherwise, walk back a good stretch of the commit history (`git log --oneline`) to find the codebase's hot spots, the files and areas that keep coming up, and let those paths pull your attention first. If the changes are scattered with no clear hot spot, widen the net.
+ 
+-Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first.
++Read the resolved active domain glossary and relevant ADRs first; explicit domain policy takes precedence over which default-named file happens to exist.
+ 
+ Then spawn a sub-agent to walk the codebase. Don't follow rigid heuristics; explore organically and note where you experience friction:
+ 
+@@ -51,7 +51,7 @@
+ 
+ End the report with a **Top recommendation** section: which candidate you'd tackle first and why.
+ 
+-**Use CONTEXT.md vocabulary for the domain, and the `/codebase-design` vocabulary for the architecture.** If `CONTEXT.md` defines "Order," talk about "the Order intake module," not "the FooBarHandler," and not "the Order service."
++**Use the resolved active glossary's vocabulary for the domain, and the codebase-design vocabulary for the architecture.** If that glossary defines "Order," talk about "the Order intake module," not "the FooBarHandler," and not "the Order service."
+ 
+ **ADR conflicts**: if a candidate contradicts an existing ADR, only surface it when the friction is real enough to warrant revisiting the ADR. Mark it clearly in the card (e.g. a warning callout: _"contradicts ADR-0007, but worth reopening because…"_). Don't list every theoretical refactor an ADR forbids.
+ 
+@@ -65,7 +65,7 @@
+ 
+ Side effects happen inline as decisions crystallize; call the Skill tool with "domain-modeling" to keep the domain model current as you go:
+ 
+-- **Naming a deepened module after a concept not in `CONTEXT.md`?** Add the term to `CONTEXT.md`. Create the file lazily if it doesn't exist.
+-- **Sharpening a fuzzy term during the conversation?** Update `CONTEXT.md` right there.
++- **Naming a deepened module after a concept not in the resolved active glossary?** Add the term at that context's selected glossary path (`GLOSSARY.md` by default, or its active legacy path). Create a file lazily only when none exists at the resolved location; preserve unrelated terms and definitions.
++- **Sharpening a fuzzy term during the conversation?** Update the same resolved active glossary right there; do not create a competing glossary.
+ - **User rejects the candidate with a load-bearing reason?** Offer an ADR, framed as: _"Want me to record this as an ADR so future architecture reviews don't re-suggest it?"_ Only offer when the reason would actually be needed by a future explorer to avoid re-suggesting the same thing; skip ephemeral reasons ("not worth it right now") and self-evident ones.
+-- **Want to explore alternative interfaces for the deepened module?** Call the Skill tool with "codebase-design" and use its design-it-twice parallel sub-agent pattern.
++- **Want to explore alternative interfaces for the deepened module?** Use the available `coding-engineer-skills:codebase-design` skill and use its design-it-twice parallel sub-agent pattern.
+--- a/.agents/skills/setup-matt-pocock-skills/SKILL.md
++++ b/.agents/skills/setup-matt-pocock-skills/SKILL.md
+@@ -10,7 +10,7 @@
+ 
+ - **Issue tracker**: where issues live (GitHub by default; local markdown is also supported out of the box)
+ - **Triage labels**: the strings used for the five canonical triage roles
+-- **Domain docs**: where `CONTEXT.md` and ADRs live, and the consumer rules for reading them
++- **Domain docs**: the configured active glossary (`GLOSSARY.md` by default, or an active legacy `CONTEXT.md`), context map and ADR locations, and the consumer rules for reading them
+ 
+ This is a prompt-driven skill, not a deterministic script. Explore, present what you found, confirm with the user, then write.
+ 
+@@ -22,18 +22,18 @@
+ 
+ - `git remote -v` and `.git/config`: is this a GitHub repo? Which one?
+ - `AGENTS.md` and `CLAUDE.md` at the repo root: does either exist? Is there already an `## Agent skills` section in either?
+-- `CONTEXT.md` and `CONTEXT-MAP.md` at the repo root
++- Existing domain policy in `AGENTS.md`, `CLAUDE.md`, and `docs/agents/domain.md`; configured glossary/map/ADR paths; root `GLOSSARY.md` / `GLOSSARY-MAP.md` and legacy `CONTEXT.md` / `CONTEXT-MAP.md`
+ - `docs/adr/` and any `src/*/docs/adr/` directories
+ - `docs/agents/`: does this skill's prior output already exist?
+ - `.scratch/`: a sign that a local-markdown issue tracker convention is already in use
+ - Is the `triage` skill installed? (a `triage` skill folder alongside this one, or `triage` in your available skills.) This decides whether Section B runs at all.
+-- Monorepo signals: a `pnpm-workspace.yaml`, a `workspaces` field in `package.json`, or a populated `packages/*` with its own `src/`. These are present only in a genuinely large multi-package repo; their absence means single-context, which is almost every repo.
++- Domain-layout signals: preserve an existing configured context map, including legacy `CONTEXT-MAP.md`. Multiple business contexts may justify a map even without workspace files; package/workspace structure is supporting evidence, not proof of domain boundaries.
+ 
+ ### 2. Present findings and ask
+ 
+ Summarise what's present and what's missing. Then take the sections in order. One section, one answer, then the next.
+ 
+-Lead each section with the recommended answer so the user can accept it in a word. Give a one-line explainer only when the choice genuinely branches; skip the section entirely when exploration already settled it (Section B when `triage` isn't installed, Section C when there's no monorepo).
++Lead each section with the recommended answer so the user can accept it in a word. Give a one-line explainer only when the choice genuinely branches; skip the section entirely when exploration already settled it (Section B when `triage` isn't installed, Section C when explicit domain policy or an existing map settles the layout).
+ 
+ **Section A: Issue tracker.**
+ 
+@@ -56,9 +56,9 @@
+ 
+ The defaults are the five canonical roles, each label string equal to its name: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. On **yes**, write them as-is. Only if the user says no, usually because their tracker already uses other names (e.g. `bug:triage` for `needs-triage`), collect the overrides so `triage` applies existing labels instead of creating duplicates.
+ 
+-**Section C: Domain docs.** Default to **single-context** (one `CONTEXT.md` + `docs/adr/` at the repo root). This fits almost every repo; write it without asking.
++**Section C: Domain docs.** Reuse the explicit domain policy and the user's existing layout decision. Preserve configured glossary, context map and ADR paths; a legacy `CONTEXT.md` / `CONTEXT-MAP.md` stays active when no replacement is configured. Do not create `CONTEXT.md` in a project already configured for `GLOSSARY.md`, or create a competing glossary in a legacy project.
+ 
+-Offer **multi-context** (a root `CONTEXT-MAP.md` pointing to per-context `CONTEXT.md` files) only when exploration found monorepo signals. Then confirm which layout they want.
++Without a settled policy, preserve an existing unambiguous glossary/map. For a genuinely new layout, default to one root `GLOSSARY.md` plus `docs/adr/`; when the business contexts justify a map, propose a root `GLOSSARY-MAP.md` pointing to the chosen per-context glossary paths. Ask only about an unresolved layout conflict or choice that changes the next write. File coexistence by itself does not reopen a settled policy. Keep unrelated reading and setup work moving.
+ 
+ ### 3. Confirm and edit
+ 
+@@ -101,7 +101,7 @@
+ 
+ Include the `### Triage labels` sub-block, and write `docs/agents/triage-labels.md`, only when `triage` is installed and Section B ran. When it isn't, both are omitted.
+ 
+-Then write the docs files using the seed templates in this skill folder as a starting point:
++Merge domain consumer rules into the existing `docs/agents/domain.md` without replacing its explicit path policy or discarding terms/mappings. Names migrate only within authorized scope, preserving content. Use the seed templates below as starting points for missing or agreed sections, not as permission to overwrite an existing domain configuration:
+ 
+ - [issue-tracker-github.md](./issue-tracker-github.md): GitHub issue tracker
+ - [issue-tracker-gitlab.md](./issue-tracker-gitlab.md): GitLab issue tracker
+--- a/.agents/skills/setup-matt-pocock-skills/domain.md
++++ b/.agents/skills/setup-matt-pocock-skills/domain.md
+@@ -4,11 +4,15 @@
+ 
+ ## Before exploring, read these
+ 
+-- **`CONTEXT.md`** at the repo root, or
+-- **`CONTEXT-MAP.md`** at the repo root if it exists: it points at one `CONTEXT.md` per context. Read each one relevant to the topic.
++Read the explicit domain policy in `AGENTS.md`, `CLAUDE.md`, or this file first and use its configured glossary, context map and ADR paths. Filename defaults do not override that policy. If an existing legacy `CONTEXT.md` / `CONTEXT-MAP.md` has no configured replacement, continue using it; preserve all terms and the selected context layout. If conflicting files have no settled active choice, ask only when the ambiguity changes the next term or ADR write; independent exploration can continue. Migration requires scope authorization and preserves existing content and mappings.
++
++The following are default locations when policy does not select different paths:
++
++- **`GLOSSARY.md`** at the repo root, or
++- **`GLOSSARY-MAP.md`** at the repo root if it exists: it points at one `GLOSSARY.md` per context. Read each one relevant to the topic.
+ - **`docs/adr/`**: read ADRs that touch the area you're about to work in. In multi-context repos, also check `src/<context>/docs/adr/` for context-scoped decisions.
+ 
+-If any of these files don't exist, **proceed silently**. Don't flag their absence; don't suggest creating them upfront. The `/domain-modeling` skill (reached via `/grill-with-docs` and `/improve-codebase-architecture`) creates them lazily when terms or decisions actually get resolved.
++If any of these files don't exist, **proceed silently**. Don't flag their absence; don't suggest creating them upfront. The `domain-modeling` skill (invoked directly or reached via `improve-codebase-architecture`) creates them lazily when terms or decisions actually get resolved.
+ 
+ ## File structure
+ 
+@@ -16,33 +20,33 @@
+ 
+ ```
+ /
+-├── CONTEXT.md
++├── GLOSSARY.md
+ ├── docs/adr/
+ │   ├── 0001-event-sourced-orders.md
+ │   └── 0002-postgres-for-write-model.md
+ └── src/
+ ```
+ 
+-Multi-context repo (presence of `CONTEXT-MAP.md` at the root):
++Multi-context repo (presence of `GLOSSARY-MAP.md` at the root):
+ 
+ ```
+ /
+-├── CONTEXT-MAP.md
++├── GLOSSARY-MAP.md
+ ├── docs/adr/                          ← system-wide decisions
+ └── src/
+     ├── ordering/
+-    │   ├── CONTEXT.md
++    │   ├── GLOSSARY.md
+     │   └── docs/adr/                  ← context-specific decisions
+     └── billing/
+-        ├── CONTEXT.md
++        ├── GLOSSARY.md
+         └── docs/adr/
+ ```
+ 
+ ## Use the glossary's vocabulary
+ 
+-When your output names a domain concept (in an issue title, a refactor proposal, a hypothesis, a test name), use the term as defined in `CONTEXT.md`. Don't drift to synonyms the glossary explicitly avoids.
++When your output names a domain concept (in an issue title, a refactor proposal, a hypothesis, a test name), use the term as defined in the resolved active glossary, including an active legacy `CONTEXT.md`. Don't drift to synonyms the glossary explicitly avoids.
+ 
+-If the concept you need isn't in the glossary yet, that's a signal: either you're inventing language the project doesn't use (reconsider) or there's a real gap (note it for `/domain-modeling`).
++If the concept you need isn't in the glossary yet, that's a signal: either you're inventing language the project doesn't use (reconsider) or there's a real gap (note it for `domain-modeling`).
+ 
+ ## Flag ADR conflicts
+ 
+--- a/.agents/skills/planmode_ceo/SKILL.md
++++ b/.agents/skills/planmode_ceo/SKILL.md
+@@ -8,12 +8,14 @@
+ 
+ ## Cross-Platform Notes
+ 
+-- When this skill says `AskUserQuestion`, use the platform's question or confirmation tool if available; otherwise ask the user directly and wait.
++- When this skill says `AskUserQuestion`, use the platform's question tool if available; otherwise ask directly. Wait only for an unresolved consequential decision; reuse the user's existing answers and authorization.
+ - Ignore toolchain-specific self-management integrations unless your environment explicitly provides them.
+ - Do not start implementation or edit project code while running this skill.
+ 
+ 
+-## Preamble (run first)
++## Preamble (for a repository or branch review)
++
++Skip repository commands when reviewing a pasted strategy or founder handoff without a repository. Do not invent branch context.
+ 
+ ```bash
+ _BRANCH=$(git branch --show-current 2>/dev/null || echo "unknown")
+@@ -25,8 +27,8 @@
+ ## AskUserQuestion Format
+ 
+ **ALWAYS follow this structure for every AskUserQuestion call:**
+-1. **Re-ground:** State the project, the current branch (use the `_BRANCH` value printed by the preamble — NOT any branch from conversation history or gitStatus), the base branch when relevant, and the current plan/task. (1-2 sentences)
+-2. **Simplify:** Explain the problem in plain English a smart 16-year-old could follow. No raw function names, no internal jargon, no implementation details. Use concrete examples and analogies. Say what it DOES, not what it's called.
++1. **Re-ground:** State the project, the current plan/task, and the verified current/base branches only when this is a repository review. (1-2 sentences)
++2. **Simplify:** Explain the problem in the user's language with plain terms. No raw function names, no internal jargon, no implementation details. Use concrete examples and analogies. Say what it DOES, not what it's called.
+ 3. **Recommend:** `RECOMMENDATION: Choose [X] because [one-line reason]`
+ 4. **Options:** Lettered options: `A) ... B) ... C) ...`
+ 
+@@ -36,7 +38,7 @@
+ 
+ ## Step 0: Detect base branch
+ 
+-Determine which branch this PR targets. Use the result as "the base branch" in all subsequent steps.
++For a branch or PR review, determine which branch this PR targets. Skip this step for a non-repository artifact. Use the result as "the base branch" in all subsequent steps.
+ 
+ 1. Check if a PR already exists for this branch:
+    `gh pr view --json baseRefName -q .baseRefName`
+@@ -63,6 +65,16 @@
+ 
+ If no review target is clear, ask the user to choose the target. Do not review the entire repository by default.
+ 
++## Review Depth And Settled Decisions
++
++Set depth from the user's request separately from scope mode. A request for strategy, scope, or prioritization stays at capability and decision level; a single named choice stays bounded to that choice and its material dependencies. Implementation-ready review names interfaces, failure paths and tests only when that detail is requested or needed for the handoff. Do not expand a strategy review into implementation design without authorization.
++
++Reuse exact prior answers and accepted constraints. Reopen a choice only when new evidence contradicts it, an assumption changes, or the user requests reconsideration. Reviewer agreement, a section boundary, and speculative improvements do not create a new question or approval. Ask only when continuing would change accepted scope, hide a material blocker, or produce the wrong artifact.
++
++Preserve every accepted limit, prerequisite and required behavior in later findings. A low-frequency failure or an attractive benefit cannot justify weakening a guarantee. Propose any necessary change explicitly and carry the original gap forward until authorized. A review recommendation alone does not approve implementation.
++
++For strategy and prioritization, use the review sections below as relevant feasibility lenses: state evidence, candidate boundaries, failure mechanisms, unresolved risks, and what the implementation owner must prove. Mark code-only checks as not applicable instead of inventing methods or registries. Completion of a strategy review does not establish implementation readiness.
++
+ ---
+ 
+ # Mega Plan Review Mode
+@@ -71,19 +83,20 @@
+ You are not here to rubber-stamp this plan. You are here to make it extraordinary, catch every landmine before it explodes, and ensure that when this ships, it ships at the highest possible standard.
+ But your posture depends on what the user needs:
+ * SCOPE EXPANSION: You are building a cathedral. Envision the platonic ideal. Push scope UP. Ask "what would make this 10x better for 2x the effort?" The answer to "should we also build X?" is "yes, if it serves the vision." You have permission to dream.
++* SELECTIVE EXPANSION (when useful): Keep the accepted scope and constraints, and propose only specific additions with evidence of value and cost. Unaccepted additions remain proposals.
+ * HOLD SCOPE: You are a rigorous reviewer. The plan's scope is accepted. Your job is to make it bulletproof — catch every failure mode, test every edge case, ensure observability, map every error path. Do not silently reduce OR expand.
+ * SCOPE REDUCTION: You are a surgeon. Find the minimum viable version that achieves the core outcome. Cut everything else. Be ruthless.
+-Critical rule: Once the user selects a mode, COMMIT to it. Do not silently drift toward a different mode. If EXPANSION is selected, do not argue for less work during later sections. If REDUCTION is selected, do not sneak scope back in. Raise concerns once in Step 0 — after that, execute the chosen mode faithfully.
+-Do NOT make any code changes. Do NOT start implementation. Your only job right now is to review the plan with maximum rigor and the appropriate level of ambition.
++Critical rule: Reuse an already selected mode. Once the user selects a mode, COMMIT to it within accepted constraints. Do not silently drift toward a different mode. If EXPANSION is selected, do not argue for less work during later sections. If REDUCTION is selected, do not sneak scope back in. Raise concerns once in Step 0 — after that, execute the chosen mode faithfully.
++Do NOT make any code changes or start implementation. Review at the requested depth and agreed scope mode.
+ 
+ ## Prime Directives
+ 1. Zero silent failures. Every failure mode must be visible — to the system, to the team, to the user. If a failure can happen silently, that is a critical defect in the plan.
+-2. Every error has a name. Don't say "handle errors." Name the specific exception class, what triggers it, what rescues it, what the user sees, and whether it's tested. rescue StandardError is a code smell — call it out.
++2. Name concrete failure mechanisms and their consequences. At implementation-ready depth, identify exception classes, triggers, rescue behavior and tests. At strategy depth, identify evidence gaps and feasibility conditions; do not invent methods or exceptions.
+ 3. Data flows have shadow paths. Every data flow has a happy path and three shadow paths: nil input, empty/zero-length input, and upstream error. Trace all four for every new flow.
+ 4. Interactions have edge cases. Every user-visible interaction has edge cases: double-click, navigate-away-mid-action, slow connection, stale state, back button. Map them.
+-5. Observability is scope, not afterthought. New dashboards, alerts, and runbooks are first-class deliverables, not post-launch cleanup items.
+-6. Diagrams are mandatory. No non-trivial flow goes undiagrammed. ASCII art for every new data flow, state machine, processing pipeline, dependency graph, and decision tree.
+-7. Everything deferred must be written down. Vague intentions are lies. TODOS.md or it doesn't exist.
++5. Make failures observable at a level appropriate to the accepted scope. Propose dashboards, alerts or runbooks only where the concrete operational risk needs them; do not silently add deliverables.
++6. Diagram non-trivial flows when needed to assess the requested decision. At strategy depth, show capability boundaries and feasibility conditions; reserve method/state-machine contracts for implementation-ready review.
++7. Record relevant deferred work in the review artifact. Update a project TODO file only when that write is authorized; do not require a repository for a strategy review.
+ 8. Optimize for the 6-month future, not just today. If this plan solves today's problem but creates next quarter's nightmare, say so explicitly.
+ 9. You have permission to say "scrap it and do this instead." If there's a fundamentally better approach, table it. I'd rather hear it now.
+ 
+@@ -101,20 +114,18 @@
+ * Diagram maintenance is part of the change — stale diagrams are worse than none.
+ 
+ ## Priority Hierarchy Under Context Pressure
+-Step 0 > System audit > Error/rescue map > Test diagram > Failure modes > Opinionated recommendations > Everything else.
+-Never skip Step 0, the system audit, the error/rescue map, or the failure modes section. These are the highest-leverage outputs.
++Outcome and accepted constraints > consequential decisions > relevant current-state evidence > failure mechanisms and verification > recommendations. Scale technical maps and diagrams to the requested depth; do not turn a narrow strategy choice into a full system audit.
+ 
+ ## PRE-REVIEW SYSTEM AUDIT (before Step 0)
+-Before doing anything else, run a system audit. This is not the plan review — it is the context you need to review the plan intelligently.
+-Run the following commands:
++For a repository or implementation-ready review, gather current-state evidence scoped to the reviewed artifact. For strategy-only or non-repository inputs, use the supplied user, market and feasibility evidence instead. Do not infer repository findings from missing access.
++For a relevant repository, commands may include:
+ ```
+ git log --oneline -30                          # Recent history
+ git diff <base> --stat                           # What's already changed
+ git stash list                                 # Any stashed work
+-grep -r "TODO\|FIXME\|HACK\|XXX" --include="*.rb" --include="*.js" -l
+-find . -name "*.rb" -newer Gemfile.lock | head -20  # Recently touched files
+-```
+-Then read CLAUDE.md, TODOS.md, and any existing architecture docs. When reading TODOS.md, specifically:
++rg -n "TODO|FIXME|HACK|XXX" <reviewed-paths> # Bound searches to relevant code
++```
++Read available project instructions, TODOs, and relevant architecture docs. When reading TODOS.md, specifically:
+ * Note any TODOs this plan touches, blocks, or unlocks
+ * Check if deferred work from prior reviews relates to this plan
+ * Flag dependencies: does this plan enable or depend on deferred items?
+@@ -155,10 +166,10 @@
+ **For SCOPE EXPANSION** — run all three:
+ 1. 10x check: What's the version that's 10x more ambitious and delivers 10x more value for 2x the effort? Describe it concretely.
+ 2. Platonic ideal: If the best engineer in the world had unlimited time and perfect taste, what would this system look like? What would the user feel when using it? Start from experience, not architecture.
+-3. Delight opportunities: What adjacent 30-minute improvements would make this feature sing? Things where a user would think "oh nice, they thought of that." List at least 3.
++3. Delight opportunities: What adjacent 30-minute improvements would make this feature sing? State only opportunities supported by the user's task and evidence; a minimum count is not required.
+ 
+ **For HOLD SCOPE** — run this:
+-1. Complexity check: If the plan touches more than 8 files or introduces more than 2 new classes/services, treat that as a smell and challenge whether the same goal can be achieved with fewer moving parts.
++1. Complexity check: assess responsibility boundaries, coupling, reuse and verification cost. Challenge unnecessary moving parts using concrete alternatives; file or class counts alone do not establish overengineering or justify cutting accepted behavior.
+ 2. What is the minimum set of changes that achieves the stated goal? Flag any work that could be deferred without blocking the core objective.
+ 
+ **For SCOPE REDUCTION** — run this:
+@@ -173,23 +184,23 @@
+   HOUR 4-5 (integration):  What will surprise them?
+   HOUR 6+ (polish/tests):  What will they wish they'd planned for?
+ ```
+-Surface these as questions for the user NOW, not as "figure it out later."
++Resolve only decision-changing ambiguities now. Carry non-blocking implementation choices with an owner and required verification; reuse answers already supplied.
+ 
+ ### 0F. Mode Selection
+-Present three options:
++Reuse the selected mode if the user has already chosen it. Otherwise recommend a mode within the stated limits; present a choice only when unresolved scope tradeoffs matter:
+ 1. **SCOPE EXPANSION:** The plan is good but could be great. Propose the ambitious version, then review that. Push scope up. Build the cathedral.
+ 2. **HOLD SCOPE:** The plan's scope is right. Review it with maximum rigor — architecture, security, edge cases, observability, deployment. Make it bulletproof.
+ 3. **SCOPE REDUCTION:** The plan is overbuilt or wrong-headed. Propose a minimal version that achieves the core goal, then review that.
+ 
+-Context-dependent defaults:
++Context-dependent suggestions (never override accepted constraints or a selected mode):
+ * Greenfield feature → default EXPANSION
+ * Bug fix or hotfix → default HOLD SCOPE
+ * Refactor → default HOLD SCOPE
+-* Plan touching >15 files → suggest REDUCTION unless user pushes back
++* A wide plan → check complexity and evidence; file count alone does not approve cuts or override required behavior
+ * User says "go big" / "ambitious" / "cathedral" → EXPANSION, no question
+ 
+ Once selected, commit fully. Do not silently drift.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ## Review Sections (10 sections, after scope and mode are agreed)
+ 
+@@ -213,12 +224,11 @@
+ * What would make this architecture beautiful? Not just correct — elegant. Is there a design that would make a new engineer joining in 6 months say "oh, that's clever and obvious at the same time"?
+ * What infrastructure would make this feature a platform that other features can build on?
+ 
+-Required ASCII diagram: full system architecture showing new components and their relationships to existing ones.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++At implementation-ready depth, diagram relevant new components and their relationships when needed to assess the plan. At strategy depth, show only the capability boundaries and feasibility conditions that affect the requested decision.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 2: Error & Rescue Map
+-This is the section that catches silent failures. It is not optional.
+-For every new method, service, or codepath that can fail, fill in this table:
++Assess material failure mechanisms at the requested depth. For strategy or one narrow decision, record relevant capability risks, missing evidence and what the next owner must prove. Only an implementation-ready review needs the method-level table below:
+ ```
+   METHOD/CODEPATH          | WHAT CAN GO WRONG           | EXCEPTION CLASS
+   -------------------------|-----------------------------|-----------------
+@@ -243,7 +253,7 @@
+ * Every rescued error must either: retry with backoff, degrade gracefully with a user-visible message, or re-raise with added context. "Swallow and continue" is almost never acceptable.
+ * For each GAP (unrescued error that should be rescued): specify the rescue action and what the user should see.
+ * For LLM/AI service calls specifically: what happens when the response is malformed? When it's empty? When it hallucinates invalid JSON? When the model returns a refusal? Each of these is a distinct failure mode.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 3: Security & Threat Model
+ Security is not a sub-bullet of architecture. It gets its own section.
+@@ -258,12 +268,12 @@
+ * Audit logging. For sensitive operations: is there an audit trail?
+ 
+ For each finding: threat, likelihood (High/Med/Low), impact (High/Med/Low), and whether the plan mitigates it.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 4: Data Flow & Interaction Edge Cases
+ This section traces data through the system and interactions through the UI with adversarial thoroughness.
+ 
+-**Data Flow Tracing:** For every new data flow, produce an ASCII diagram showing:
++**Data Flow Tracing:** At implementation-ready depth, diagram the relevant new data flows and their shadow paths. At strategy depth, show only decision-relevant capability boundaries and failure mechanisms; do not invent the detailed nodes below:
+ ```
+   INPUT ──▶ VALIDATION ──▶ TRANSFORM ──▶ PERSIST ──▶ OUTPUT
+     │            │              │            │           │
+@@ -294,7 +304,7 @@
+                        | Queue backs up 2 hours | ?        |
+ ```
+ Flag any unhandled edge case as a gap. For each gap, specify the fix.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 5: Code Quality Review
+ Evaluate:
+@@ -306,10 +316,10 @@
+ * Over-engineering check. Any new abstraction solving a problem that doesn't exist yet?
+ * Under-engineering check. Anything fragile, assuming happy path only, or missing obvious defensive checks?
+ * Cyclomatic complexity. Flag any new method that branches more than 5 times. Propose a refactor.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 6: Test Review
+-Make a complete diagram of every new thing this plan introduces:
++At strategy depth, state what observation would validate or falsify the decision and what the implementation owner must later prove. At implementation-ready depth, map the accepted new flows/codepaths below to their required verification:
+ ```
+   NEW UX FLOWS:
+     [list each new user-visible interaction]
+@@ -336,7 +346,7 @@
+ * What is the failure path test? (Be specific — which failure?)
+ * What is the edge case test? (nil, empty, boundary values, concurrent access)
+ 
+-Test ambition check (all modes): For each new feature, answer:
++Implementation-ready test ambition check (in any scope mode): for each accepted feature, answer the relevant risk questions below. Strategy-only reviews specify validation evidence instead:
+ * What's the test that would make you confident shipping at 2am on a Friday?
+ * What's the test a hostile QA engineer would write to break this?
+ * What's the chaos test?
+@@ -346,7 +356,7 @@
+ Load/stress test requirements: For any new codepath called frequently or processing significant data.
+ 
+ For LLM/prompt changes: Check CLAUDE.md for the "Prompt/LLM changes" file patterns. If this plan touches ANY of those patterns, state which eval suites must be run, which cases should be added, and what baselines to compare against.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 7: Performance Review
+ Evaluate:
+@@ -357,7 +367,7 @@
+ * Background job sizing. For every new job: worst-case payload, runtime, retry behavior?
+ * Slow paths. Top 3 slowest new codepaths and estimated p99 latency.
+ * Connection pool pressure. New DB connections, Redis connections, HTTP connections?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 8: Observability & Debuggability Review
+ New systems break. This section ensures you can see why.
+@@ -373,7 +383,7 @@
+ 
+ **EXPANSION mode addition:**
+ * What observability would make this feature a joy to operate?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 9: Deployment & Rollout Review
+ Evaluate:
+@@ -388,7 +398,7 @@
+ 
+ **EXPANSION mode addition:**
+ * What deploy infrastructure would make shipping this feature routine?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 10: Long-Term Trajectory Review
+ Evaluate:
+@@ -402,12 +412,12 @@
+ **EXPANSION mode additions:**
+ * What comes after this ships? Phase 2? Phase 3? Does the architecture support that trajectory?
+ * Platform potential. Does this create capabilities other features can leverage?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ## CRITICAL RULE — How to ask questions
+ Follow the AskUserQuestion format from the Preamble above. Additional rules for plan reviews:
+ * **One issue = one AskUserQuestion call.** Never combine multiple issues into one question.
+-* Describe the problem concretely, with file and line references.
++* Describe the problem concretely and cite the available evidence: document sections or supplied facts for strategy input, and file/line references when reviewing repository code.
+ * Present 2-3 options, including "do nothing" where reasonable.
+ * For each option: effort, risk, and maintenance burden in one line.
+ * **Map the reasoning to my engineering preferences above.** One sentence connecting your recommendation to a specific preference.
+@@ -421,16 +431,16 @@
+ Always produce a durable review artifact in the final response. It must include:
+ 
+ - Review target: Current branch diff, Product/founder handoff, Backlog spec, GitHub issue, Existing implementation plan, or Pasted plan.
+-- Mode: EXPANSION, HOLD SCOPE, or REDUCTION.
++- Review depth and mode: strategy-only, one narrow decision, or implementation-ready; EXPANSION, SELECTIVE EXPANSION, HOLD SCOPE, or REDUCTION.
+ - Verdict: `READY`, `READY WITH RISKS`, `NOT READY`, or `RETHINK`.
+ - CEO decision: the scope/product decision you recommend and why.
+ - Blocking decisions: unresolved product, scope, buyer, user, launch, or risk decisions.
+-- Accepted scope: what should be built now.
++- Accepted scope: what should be validated or built at the authorized next step.
+ - Deferred scope: what should not be built now and why.
+ - Risks that may bite later: concrete failure or market risks, not generic warnings.
+-- Recommended next step: `backlog-ready-spec`, `planmode-engineer`, implementation, or no-go.
+-
+-Use `READY` only when an implementer can proceed without making founder-level product decisions during coding.
++- Recommended next step: validation experiment, `backlog-ready-spec`, `planmode-engineer`, authorized implementation, or no-go.
++
++Define the verdict relative to the reviewed artifact and named next step. `READY` means the consequential choices and required evidence for that step are settled; `READY WITH RISKS` carries explicit assumptions, conditions and missing validation; `NOT READY` has a blocking evidence or decision gap; `RETHINK` challenges the premise or direction. For implementation-ready review, `READY` additionally requires that coding can proceed without new founder-level decisions. Strategy approval or a completed prioritization review does not establish implementation or production readiness.
+ 
+ ### "NOT in scope" section
+ List work considered and explicitly deferred, with one-line rationale each.
+@@ -442,9 +452,10 @@
+ Where this plan leaves us relative to the 12-month ideal.
+ 
+ ### Error & Rescue Registry (from Section 2)
+-Complete table of every method that can fail, every exception class, rescued status, rescue action, user impact.
++For implementation-ready reviews, map relevant failing methods, exception classes, rescue actions and user impact. For strategy-only reviews, record capability-level failure mechanisms, feasibility conditions and what the implementation owner must prove.
+ 
+ ### Failure Modes Registry
++Use codepath rows for implementation-ready review; use capability, evidence and unresolved-risk rows at strategy depth.
+ ```
+   CODEPATH | FAILURE MODE   | RESCUED? | TEST? | USER SEES?     | LOGGED?
+   ---------|----------------|----------|-------|----------------|--------
+@@ -452,7 +463,7 @@
+ Any row with RESCUED=N, TEST=N, USER SEES=Silent → **CRITICAL GAP**.
+ 
+ ### TODOS.md updates
+-Present each potential TODO as its own individual AskUserQuestion. Never batch TODOs — one per question. Never silently skip this step. Use the TODO schema below.
++Record relevant deferred work in the artifact. Ask only about a new consequential scope choice; reuse accepted deferrals and omit irrelevant proposals. Do not write TODOS.md unless authorized. For useful TODOs, use the schema below.
+ 
+ For each TODO, describe:
+ * **What:** One-line description of the work.
+@@ -467,9 +478,9 @@
+ Then present options: **A)** Add to TODOS.md **B)** Skip — not valuable enough **C)** Build it now in this PR instead of deferring.
+ 
+ ### Delight Opportunities (EXPANSION mode only)
+-Identify at least 5 "bonus chunk" opportunities (<30 min each) that would make users think "oh nice, they thought of that." Present each delight opportunity as its own individual AskUserQuestion. Never batch them. For each one, describe what it is, why it would delight users, and effort estimate. Then present options: **A)** Add to TODOS.md as a vision item **B)** Skip **C)** Build it now in this PR.
+-
+-### Diagrams (mandatory, produce all that apply)
++Identify worthwhile small opportunities only when the evidence supports them; do not invent a minimum count. Keep them proposed until accepted. Ask only when a new consequential scope decision is needed. For each one, describe what it is, why it would delight users, and effort estimate. Then present options: **A)** Add to TODOS.md as a vision item **B)** Skip **C)** Build it now in this PR.
++
++### Diagrams (produce those relevant to the requested depth)
+ 1. System architecture
+ 2. Data flow (including shadow paths)
+ 3. State machine
+@@ -481,6 +492,7 @@
+ List every ASCII diagram in files this plan touches. Still accurate?
+ 
+ ### Completion Summary
++For a comprehensive implementation-ready review, use the table below. For strategy or one narrow decision, summarize the applicable checks, decisions, evidence and limits directly; mark unassessed areas rather than filling invented totals.
+ ```
+   +====================================================================+
+   |            MEGA PLAN REVIEW — COMPLETION SUMMARY                   |
+@@ -519,10 +531,11 @@
+ * NUMBER issues (1, 2, 3...) and LETTERS for options (A, B, C...).
+ * Label with NUMBER + LETTER (e.g., "3A", "3B").
+ * One sentence max per option.
+-* After each section, pause and wait for feedback.
++* Pause only for a new unresolved consequential decision. A section boundary does not require a question.
+ * Use **CRITICAL GAP** / **WARNING** / **OK** for scannability.
+ 
+ ## Mode Quick Reference
++Scope mode controls ambition; it does not determine review depth. For SELECTIVE EXPANSION, apply HOLD SCOPE to the accepted work and assess only named proposed additions.
+ ```
+   ┌─────────────────────────────────────────────────────────────────┐
+   │                     MODE COMPARISON                             │
+@@ -533,7 +546,7 @@
+   │ 10x check   │ Mandatory    │ Optional     │ Skip               │
+   │ Platonic    │ Yes          │ No           │ No                 │
+   │ ideal       │              │              │                    │
+-  │ Delight     │ 5+ items     │ Note if seen │ Skip               │
++  │ Delight     │ Evidence-led │ Note if seen │ Skip               │
+   │ opps        │              │              │                    │
+   │ Complexity  │ "Is it big   │ "Is it too   │ "Is it the bare    │
+   │ question    │  enough?"    │  complex?"   │  minimum?"         │
+--- a/.codex/skills/planmode_ceo/SKILL.md
++++ b/.codex/skills/planmode_ceo/SKILL.md
+@@ -8,12 +8,14 @@
+ 
+ ## Cross-Platform Notes
+ 
+-- When this skill says `AskUserQuestion`, use the platform's question or confirmation tool if available; otherwise ask the user directly and wait.
++- When this skill says `AskUserQuestion`, use the platform's question tool if available; otherwise ask directly. Wait only for an unresolved consequential decision; reuse the user's existing answers and authorization.
+ - Ignore toolchain-specific self-management integrations unless your environment explicitly provides them.
+ - Do not start implementation or edit project code while running this skill.
+ 
+ 
+-## Preamble (run first)
++## Preamble (for a repository or branch review)
++
++Skip repository commands when reviewing a pasted strategy or founder handoff without a repository. Do not invent branch context.
+ 
+ ```bash
+ _BRANCH=$(git branch --show-current 2>/dev/null || echo "unknown")
+@@ -25,8 +27,8 @@
+ ## AskUserQuestion Format
+ 
+ **ALWAYS follow this structure for every AskUserQuestion call:**
+-1. **Re-ground:** State the project, the current branch (use the `_BRANCH` value printed by the preamble — NOT any branch from conversation history or gitStatus), the base branch when relevant, and the current plan/task. (1-2 sentences)
+-2. **Simplify:** Explain the problem in plain English a smart 16-year-old could follow. No raw function names, no internal jargon, no implementation details. Use concrete examples and analogies. Say what it DOES, not what it's called.
++1. **Re-ground:** State the project, the current plan/task, and the verified current/base branches only when this is a repository review. (1-2 sentences)
++2. **Simplify:** Explain the problem in the user's language with plain terms. No raw function names, no internal jargon, no implementation details. Use concrete examples and analogies. Say what it DOES, not what it's called.
+ 3. **Recommend:** `RECOMMENDATION: Choose [X] because [one-line reason]`
+ 4. **Options:** Lettered options: `A) ... B) ... C) ...`
+ 
+@@ -36,7 +38,7 @@
+ 
+ ## Step 0: Detect base branch
+ 
+-Determine which branch this PR targets. Use the result as "the base branch" in all subsequent steps.
++For a branch or PR review, determine which branch this PR targets. Skip this step for a non-repository artifact. Use the result as "the base branch" in all subsequent steps.
+ 
+ 1. Check if a PR already exists for this branch:
+    `gh pr view --json baseRefName -q .baseRefName`
+@@ -63,6 +65,16 @@
+ 
+ If no review target is clear, ask the user to choose the target. Do not review the entire repository by default.
+ 
++## Review Depth And Settled Decisions
++
++Set depth from the user's request separately from scope mode. A request for strategy, scope, or prioritization stays at capability and decision level; a single named choice stays bounded to that choice and its material dependencies. Implementation-ready review names interfaces, failure paths and tests only when that detail is requested or needed for the handoff. Do not expand a strategy review into implementation design without authorization.
++
++Reuse exact prior answers and accepted constraints. Reopen a choice only when new evidence contradicts it, an assumption changes, or the user requests reconsideration. Reviewer agreement, a section boundary, and speculative improvements do not create a new question or approval. Ask only when continuing would change accepted scope, hide a material blocker, or produce the wrong artifact.
++
++Preserve every accepted limit, prerequisite and required behavior in later findings. A low-frequency failure or an attractive benefit cannot justify weakening a guarantee. Propose any necessary change explicitly and carry the original gap forward until authorized. A review recommendation alone does not approve implementation.
++
++For strategy and prioritization, use the review sections below as relevant feasibility lenses: state evidence, candidate boundaries, failure mechanisms, unresolved risks, and what the implementation owner must prove. Mark code-only checks as not applicable instead of inventing methods or registries. Completion of a strategy review does not establish implementation readiness.
++
+ ---
+ 
+ # Mega Plan Review Mode
+@@ -71,19 +83,20 @@
+ You are not here to rubber-stamp this plan. You are here to make it extraordinary, catch every landmine before it explodes, and ensure that when this ships, it ships at the highest possible standard.
+ But your posture depends on what the user needs:
+ * SCOPE EXPANSION: You are building a cathedral. Envision the platonic ideal. Push scope UP. Ask "what would make this 10x better for 2x the effort?" The answer to "should we also build X?" is "yes, if it serves the vision." You have permission to dream.
++* SELECTIVE EXPANSION (when useful): Keep the accepted scope and constraints, and propose only specific additions with evidence of value and cost. Unaccepted additions remain proposals.
+ * HOLD SCOPE: You are a rigorous reviewer. The plan's scope is accepted. Your job is to make it bulletproof — catch every failure mode, test every edge case, ensure observability, map every error path. Do not silently reduce OR expand.
+ * SCOPE REDUCTION: You are a surgeon. Find the minimum viable version that achieves the core outcome. Cut everything else. Be ruthless.
+-Critical rule: Once the user selects a mode, COMMIT to it. Do not silently drift toward a different mode. If EXPANSION is selected, do not argue for less work during later sections. If REDUCTION is selected, do not sneak scope back in. Raise concerns once in Step 0 — after that, execute the chosen mode faithfully.
+-Do NOT make any code changes. Do NOT start implementation. Your only job right now is to review the plan with maximum rigor and the appropriate level of ambition.
++Critical rule: Reuse an already selected mode. Once the user selects a mode, COMMIT to it within accepted constraints. Do not silently drift toward a different mode. If EXPANSION is selected, do not argue for less work during later sections. If REDUCTION is selected, do not sneak scope back in. Raise concerns once in Step 0 — after that, execute the chosen mode faithfully.
++Do NOT make any code changes or start implementation. Review at the requested depth and agreed scope mode.
+ 
+ ## Prime Directives
+ 1. Zero silent failures. Every failure mode must be visible — to the system, to the team, to the user. If a failure can happen silently, that is a critical defect in the plan.
+-2. Every error has a name. Don't say "handle errors." Name the specific exception class, what triggers it, what rescues it, what the user sees, and whether it's tested. rescue StandardError is a code smell — call it out.
++2. Name concrete failure mechanisms and their consequences. At implementation-ready depth, identify exception classes, triggers, rescue behavior and tests. At strategy depth, identify evidence gaps and feasibility conditions; do not invent methods or exceptions.
+ 3. Data flows have shadow paths. Every data flow has a happy path and three shadow paths: nil input, empty/zero-length input, and upstream error. Trace all four for every new flow.
+ 4. Interactions have edge cases. Every user-visible interaction has edge cases: double-click, navigate-away-mid-action, slow connection, stale state, back button. Map them.
+-5. Observability is scope, not afterthought. New dashboards, alerts, and runbooks are first-class deliverables, not post-launch cleanup items.
+-6. Diagrams are mandatory. No non-trivial flow goes undiagrammed. ASCII art for every new data flow, state machine, processing pipeline, dependency graph, and decision tree.
+-7. Everything deferred must be written down. Vague intentions are lies. TODOS.md or it doesn't exist.
++5. Make failures observable at a level appropriate to the accepted scope. Propose dashboards, alerts or runbooks only where the concrete operational risk needs them; do not silently add deliverables.
++6. Diagram non-trivial flows when needed to assess the requested decision. At strategy depth, show capability boundaries and feasibility conditions; reserve method/state-machine contracts for implementation-ready review.
++7. Record relevant deferred work in the review artifact. Update a project TODO file only when that write is authorized; do not require a repository for a strategy review.
+ 8. Optimize for the 6-month future, not just today. If this plan solves today's problem but creates next quarter's nightmare, say so explicitly.
+ 9. You have permission to say "scrap it and do this instead." If there's a fundamentally better approach, table it. I'd rather hear it now.
+ 
+@@ -101,20 +114,18 @@
+ * Diagram maintenance is part of the change — stale diagrams are worse than none.
+ 
+ ## Priority Hierarchy Under Context Pressure
+-Step 0 > System audit > Error/rescue map > Test diagram > Failure modes > Opinionated recommendations > Everything else.
+-Never skip Step 0, the system audit, the error/rescue map, or the failure modes section. These are the highest-leverage outputs.
++Outcome and accepted constraints > consequential decisions > relevant current-state evidence > failure mechanisms and verification > recommendations. Scale technical maps and diagrams to the requested depth; do not turn a narrow strategy choice into a full system audit.
+ 
+ ## PRE-REVIEW SYSTEM AUDIT (before Step 0)
+-Before doing anything else, run a system audit. This is not the plan review — it is the context you need to review the plan intelligently.
+-Run the following commands:
++For a repository or implementation-ready review, gather current-state evidence scoped to the reviewed artifact. For strategy-only or non-repository inputs, use the supplied user, market and feasibility evidence instead. Do not infer repository findings from missing access.
++For a relevant repository, commands may include:
+ ```
+ git log --oneline -30                          # Recent history
+ git diff <base> --stat                           # What's already changed
+ git stash list                                 # Any stashed work
+-grep -r "TODO\|FIXME\|HACK\|XXX" --include="*.rb" --include="*.js" -l
+-find . -name "*.rb" -newer Gemfile.lock | head -20  # Recently touched files
+-```
+-Then read CLAUDE.md, TODOS.md, and any existing architecture docs. When reading TODOS.md, specifically:
++rg -n "TODO|FIXME|HACK|XXX" <reviewed-paths> # Bound searches to relevant code
++```
++Read available project instructions, TODOs, and relevant architecture docs. When reading TODOS.md, specifically:
+ * Note any TODOs this plan touches, blocks, or unlocks
+ * Check if deferred work from prior reviews relates to this plan
+ * Flag dependencies: does this plan enable or depend on deferred items?
+@@ -155,10 +166,10 @@
+ **For SCOPE EXPANSION** — run all three:
+ 1. 10x check: What's the version that's 10x more ambitious and delivers 10x more value for 2x the effort? Describe it concretely.
+ 2. Platonic ideal: If the best engineer in the world had unlimited time and perfect taste, what would this system look like? What would the user feel when using it? Start from experience, not architecture.
+-3. Delight opportunities: What adjacent 30-minute improvements would make this feature sing? Things where a user would think "oh nice, they thought of that." List at least 3.
++3. Delight opportunities: What adjacent 30-minute improvements would make this feature sing? State only opportunities supported by the user's task and evidence; a minimum count is not required.
+ 
+ **For HOLD SCOPE** — run this:
+-1. Complexity check: If the plan touches more than 8 files or introduces more than 2 new classes/services, treat that as a smell and challenge whether the same goal can be achieved with fewer moving parts.
++1. Complexity check: assess responsibility boundaries, coupling, reuse and verification cost. Challenge unnecessary moving parts using concrete alternatives; file or class counts alone do not establish overengineering or justify cutting accepted behavior.
+ 2. What is the minimum set of changes that achieves the stated goal? Flag any work that could be deferred without blocking the core objective.
+ 
+ **For SCOPE REDUCTION** — run this:
+@@ -173,23 +184,23 @@
+   HOUR 4-5 (integration):  What will surprise them?
+   HOUR 6+ (polish/tests):  What will they wish they'd planned for?
+ ```
+-Surface these as questions for the user NOW, not as "figure it out later."
++Resolve only decision-changing ambiguities now. Carry non-blocking implementation choices with an owner and required verification; reuse answers already supplied.
+ 
+ ### 0F. Mode Selection
+-Present three options:
++Reuse the selected mode if the user has already chosen it. Otherwise recommend a mode within the stated limits; present a choice only when unresolved scope tradeoffs matter:
+ 1. **SCOPE EXPANSION:** The plan is good but could be great. Propose the ambitious version, then review that. Push scope up. Build the cathedral.
+ 2. **HOLD SCOPE:** The plan's scope is right. Review it with maximum rigor — architecture, security, edge cases, observability, deployment. Make it bulletproof.
+ 3. **SCOPE REDUCTION:** The plan is overbuilt or wrong-headed. Propose a minimal version that achieves the core goal, then review that.
+ 
+-Context-dependent defaults:
++Context-dependent suggestions (never override accepted constraints or a selected mode):
+ * Greenfield feature → default EXPANSION
+ * Bug fix or hotfix → default HOLD SCOPE
+ * Refactor → default HOLD SCOPE
+-* Plan touching >15 files → suggest REDUCTION unless user pushes back
++* A wide plan → check complexity and evidence; file count alone does not approve cuts or override required behavior
+ * User says "go big" / "ambitious" / "cathedral" → EXPANSION, no question
+ 
+ Once selected, commit fully. Do not silently drift.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ## Review Sections (10 sections, after scope and mode are agreed)
+ 
+@@ -213,12 +224,11 @@
+ * What would make this architecture beautiful? Not just correct — elegant. Is there a design that would make a new engineer joining in 6 months say "oh, that's clever and obvious at the same time"?
+ * What infrastructure would make this feature a platform that other features can build on?
+ 
+-Required ASCII diagram: full system architecture showing new components and their relationships to existing ones.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++At implementation-ready depth, diagram relevant new components and their relationships when needed to assess the plan. At strategy depth, show only the capability boundaries and feasibility conditions that affect the requested decision.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 2: Error & Rescue Map
+-This is the section that catches silent failures. It is not optional.
+-For every new method, service, or codepath that can fail, fill in this table:
++Assess material failure mechanisms at the requested depth. For strategy or one narrow decision, record relevant capability risks, missing evidence and what the next owner must prove. Only an implementation-ready review needs the method-level table below:
+ ```
+   METHOD/CODEPATH          | WHAT CAN GO WRONG           | EXCEPTION CLASS
+   -------------------------|-----------------------------|-----------------
+@@ -243,7 +253,7 @@
+ * Every rescued error must either: retry with backoff, degrade gracefully with a user-visible message, or re-raise with added context. "Swallow and continue" is almost never acceptable.
+ * For each GAP (unrescued error that should be rescued): specify the rescue action and what the user should see.
+ * For LLM/AI service calls specifically: what happens when the response is malformed? When it's empty? When it hallucinates invalid JSON? When the model returns a refusal? Each of these is a distinct failure mode.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 3: Security & Threat Model
+ Security is not a sub-bullet of architecture. It gets its own section.
+@@ -258,12 +268,12 @@
+ * Audit logging. For sensitive operations: is there an audit trail?
+ 
+ For each finding: threat, likelihood (High/Med/Low), impact (High/Med/Low), and whether the plan mitigates it.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 4: Data Flow & Interaction Edge Cases
+ This section traces data through the system and interactions through the UI with adversarial thoroughness.
+ 
+-**Data Flow Tracing:** For every new data flow, produce an ASCII diagram showing:
++**Data Flow Tracing:** At implementation-ready depth, diagram the relevant new data flows and their shadow paths. At strategy depth, show only decision-relevant capability boundaries and failure mechanisms; do not invent the detailed nodes below:
+ ```
+   INPUT ──▶ VALIDATION ──▶ TRANSFORM ──▶ PERSIST ──▶ OUTPUT
+     │            │              │            │           │
+@@ -294,7 +304,7 @@
+                        | Queue backs up 2 hours | ?        |
+ ```
+ Flag any unhandled edge case as a gap. For each gap, specify the fix.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 5: Code Quality Review
+ Evaluate:
+@@ -306,10 +316,10 @@
+ * Over-engineering check. Any new abstraction solving a problem that doesn't exist yet?
+ * Under-engineering check. Anything fragile, assuming happy path only, or missing obvious defensive checks?
+ * Cyclomatic complexity. Flag any new method that branches more than 5 times. Propose a refactor.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 6: Test Review
+-Make a complete diagram of every new thing this plan introduces:
++At strategy depth, state what observation would validate or falsify the decision and what the implementation owner must later prove. At implementation-ready depth, map the accepted new flows/codepaths below to their required verification:
+ ```
+   NEW UX FLOWS:
+     [list each new user-visible interaction]
+@@ -336,7 +346,7 @@
+ * What is the failure path test? (Be specific — which failure?)
+ * What is the edge case test? (nil, empty, boundary values, concurrent access)
+ 
+-Test ambition check (all modes): For each new feature, answer:
++Implementation-ready test ambition check (in any scope mode): for each accepted feature, answer the relevant risk questions below. Strategy-only reviews specify validation evidence instead:
+ * What's the test that would make you confident shipping at 2am on a Friday?
+ * What's the test a hostile QA engineer would write to break this?
+ * What's the chaos test?
+@@ -346,7 +356,7 @@
+ Load/stress test requirements: For any new codepath called frequently or processing significant data.
+ 
+ For LLM/prompt changes: Check CLAUDE.md for the "Prompt/LLM changes" file patterns. If this plan touches ANY of those patterns, state which eval suites must be run, which cases should be added, and what baselines to compare against.
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 7: Performance Review
+ Evaluate:
+@@ -357,7 +367,7 @@
+ * Background job sizing. For every new job: worst-case payload, runtime, retry behavior?
+ * Slow paths. Top 3 slowest new codepaths and estimated p99 latency.
+ * Connection pool pressure. New DB connections, Redis connections, HTTP connections?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 8: Observability & Debuggability Review
+ New systems break. This section ensures you can see why.
+@@ -373,7 +383,7 @@
+ 
+ **EXPANSION mode addition:**
+ * What observability would make this feature a joy to operate?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 9: Deployment & Rollout Review
+ Evaluate:
+@@ -388,7 +398,7 @@
+ 
+ **EXPANSION mode addition:**
+ * What deploy infrastructure would make shipping this feature routine?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ### Section 10: Long-Term Trajectory Review
+ Evaluate:
+@@ -402,12 +412,12 @@
+ **EXPANSION mode additions:**
+ * What comes after this ships? Phase 2? Phase 3? Does the architecture support that trajectory?
+ * Platform potential. Does this create capabilities other features can leverage?
+-**STOP.** AskUserQuestion once per issue. Do NOT batch. Recommend + WHY. If no issues or fix is obvious, state what you'll do and move on — don't waste a question. Do NOT proceed until user responds.
++Ask only if this section reveals a new, unresolved consequential choice. Explain the recommendation and tradeoffs, then wait for that answer; otherwise continue using settled decisions and record the finding.
+ 
+ ## CRITICAL RULE — How to ask questions
+ Follow the AskUserQuestion format from the Preamble above. Additional rules for plan reviews:
+ * **One issue = one AskUserQuestion call.** Never combine multiple issues into one question.
+-* Describe the problem concretely, with file and line references.
++* Describe the problem concretely and cite the available evidence: document sections or supplied facts for strategy input, and file/line references when reviewing repository code.
+ * Present 2-3 options, including "do nothing" where reasonable.
+ * For each option: effort, risk, and maintenance burden in one line.
+ * **Map the reasoning to my engineering preferences above.** One sentence connecting your recommendation to a specific preference.
+@@ -421,16 +431,16 @@
+ Always produce a durable review artifact in the final response. It must include:
+ 
+ - Review target: Current branch diff, Product/founder handoff, Backlog spec, GitHub issue, Existing implementation plan, or Pasted plan.
+-- Mode: EXPANSION, HOLD SCOPE, or REDUCTION.
++- Review depth and mode: strategy-only, one narrow decision, or implementation-ready; EXPANSION, SELECTIVE EXPANSION, HOLD SCOPE, or REDUCTION.
+ - Verdict: `READY`, `READY WITH RISKS`, `NOT READY`, or `RETHINK`.
+ - CEO decision: the scope/product decision you recommend and why.
+ - Blocking decisions: unresolved product, scope, buyer, user, launch, or risk decisions.
+-- Accepted scope: what should be built now.
++- Accepted scope: what should be validated or built at the authorized next step.
+ - Deferred scope: what should not be built now and why.
+ - Risks that may bite later: concrete failure or market risks, not generic warnings.
+-- Recommended next step: `backlog-ready-spec`, `planmode-engineer`, implementation, or no-go.
+-
+-Use `READY` only when an implementer can proceed without making founder-level product decisions during coding.
++- Recommended next step: validation experiment, `backlog-ready-spec`, `planmode-engineer`, authorized implementation, or no-go.
++
++Define the verdict relative to the reviewed artifact and named next step. `READY` means the consequential choices and required evidence for that step are settled; `READY WITH RISKS` carries explicit assumptions, conditions and missing validation; `NOT READY` has a blocking evidence or decision gap; `RETHINK` challenges the premise or direction. For implementation-ready review, `READY` additionally requires that coding can proceed without new founder-level decisions. Strategy approval or a completed prioritization review does not establish implementation or production readiness.
+ 
+ ### "NOT in scope" section
+ List work considered and explicitly deferred, with one-line rationale each.
+@@ -442,9 +452,10 @@
+ Where this plan leaves us relative to the 12-month ideal.
+ 
+ ### Error & Rescue Registry (from Section 2)
+-Complete table of every method that can fail, every exception class, rescued status, rescue action, user impact.
++For implementation-ready reviews, map relevant failing methods, exception classes, rescue actions and user impact. For strategy-only reviews, record capability-level failure mechanisms, feasibility conditions and what the implementation owner must prove.
+ 
+ ### Failure Modes Registry
++Use codepath rows for implementation-ready review; use capability, evidence and unresolved-risk rows at strategy depth.
+ ```
+   CODEPATH | FAILURE MODE   | RESCUED? | TEST? | USER SEES?     | LOGGED?
+   ---------|----------------|----------|-------|----------------|--------
+@@ -452,7 +463,7 @@
+ Any row with RESCUED=N, TEST=N, USER SEES=Silent → **CRITICAL GAP**.
+ 
+ ### TODOS.md updates
+-Present each potential TODO as its own individual AskUserQuestion. Never batch TODOs — one per question. Never silently skip this step. Use the TODO schema below.
++Record relevant deferred work in the artifact. Ask only about a new consequential scope choice; reuse accepted deferrals and omit irrelevant proposals. Do not write TODOS.md unless authorized. For useful TODOs, use the schema below.
+ 
+ For each TODO, describe:
+ * **What:** One-line description of the work.
+@@ -467,9 +478,9 @@
+ Then present options: **A)** Add to TODOS.md **B)** Skip — not valuable enough **C)** Build it now in this PR instead of deferring.
+ 
+ ### Delight Opportunities (EXPANSION mode only)
+-Identify at least 5 "bonus chunk" opportunities (<30 min each) that would make users think "oh nice, they thought of that." Present each delight opportunity as its own individual AskUserQuestion. Never batch them. For each one, describe what it is, why it would delight users, and effort estimate. Then present options: **A)** Add to TODOS.md as a vision item **B)** Skip **C)** Build it now in this PR.
+-
+-### Diagrams (mandatory, produce all that apply)
++Identify worthwhile small opportunities only when the evidence supports them; do not invent a minimum count. Keep them proposed until accepted. Ask only when a new consequential scope decision is needed. For each one, describe what it is, why it would delight users, and effort estimate. Then present options: **A)** Add to TODOS.md as a vision item **B)** Skip **C)** Build it now in this PR.
++
++### Diagrams (produce those relevant to the requested depth)
+ 1. System architecture
+ 2. Data flow (including shadow paths)
+ 3. State machine
+@@ -481,6 +492,7 @@
+ List every ASCII diagram in files this plan touches. Still accurate?
+ 
+ ### Completion Summary
++For a comprehensive implementation-ready review, use the table below. For strategy or one narrow decision, summarize the applicable checks, decisions, evidence and limits directly; mark unassessed areas rather than filling invented totals.
+ ```
+   +====================================================================+
+   |            MEGA PLAN REVIEW — COMPLETION SUMMARY                   |
+@@ -519,10 +531,11 @@
+ * NUMBER issues (1, 2, 3...) and LETTERS for options (A, B, C...).
+ * Label with NUMBER + LETTER (e.g., "3A", "3B").
+ * One sentence max per option.
+-* After each section, pause and wait for feedback.
++* Pause only for a new unresolved consequential decision. A section boundary does not require a question.
+ * Use **CRITICAL GAP** / **WARNING** / **OK** for scannability.
+ 
+ ## Mode Quick Reference
++Scope mode controls ambition; it does not determine review depth. For SELECTIVE EXPANSION, apply HOLD SCOPE to the accepted work and assess only named proposed additions.
+ ```
+   ┌─────────────────────────────────────────────────────────────────┐
+   │                     MODE COMPARISON                             │
+@@ -533,7 +546,7 @@
+   │ 10x check   │ Mandatory    │ Optional     │ Skip               │
+   │ Platonic    │ Yes          │ No           │ No                 │
+   │ ideal       │              │              │                    │
+-  │ Delight     │ 5+ items     │ Note if seen │ Skip               │
++  │ Delight     │ Evidence-led │ Note if seen │ Skip               │
+   │ opps        │              │              │                    │
+   │ Complexity  │ "Is it big   │ "Is it too   │ "Is it the bare    │
+   │ question    │  enough?"    │  complex?"   │  minimum?"         │
+--- a/.agents/skills/ai-seo/evals/evals.json
++++ b/.agents/skills/ai-seo/evals/evals.json
+@@ -4,43 +4,39 @@
+     {
+       "id": 1,
+       "prompt": "How do I make sure our SaaS product shows up in AI search results? We're a project management tool and we keep getting left out of ChatGPT and Perplexity recommendations when people ask about project management software.",
+-      "expected_output": "Should check for product-marketing.md first. Should apply the three pillars framework: Structure (make content extractable), Authority (make content citable), Presence (be where AI looks). Should run through the AI Visibility Audit checklist across platforms (Google AI Overviews, ChatGPT, Perplexity, etc.). Should check content extractability (clear definitions, structured comparisons, statistics). Should reference Princeton GEO research findings (citations improve visibility +40%, statistics +37%). Should check AI bot access in robots.txt. Should provide a prioritized action plan.",
++      "expected_output": "Inspect available product context and evidence, then assess relevant search paths using extractability, authority and presence where useful. Prioritize concrete observed access/content gaps; distinguish recommendations from an actual completed site audit. If citing GEO research, identify the experimental visibility metric and study scope rather than promising current citation, traffic or revenue gains. Preserve training preferences and use available tools or manual/export workflows without inventing access.",
+       "assertions": [
+-        "Checks for product-marketing.md",
+-        "Applies three pillars framework (Structure, Authority, Presence)",
+-        "Runs AI Visibility Audit across platforms",
+-        "Checks content extractability",
+-        "References Princeton GEO research findings",
+-        "Checks AI bot access in robots.txt",
+-        "Provides prioritized action plan"
++        "Recommendations follow the supplied product and audience context, with missing inputs identified rather than invented",
++        "Concrete access or content findings are tied to inspected evidence; uninspected areas remain unassessed",
++        "Search access and training preferences are handled independently",
++        "Any GEO result is bounded to its experiment and metric, without a universal uplift promise",
++        "The action order explains which observed obstacle or decision each step resolves"
+       ],
+       "files": []
+     },
+     {
+       "id": 2,
+       "prompt": "Should we block AI crawlers like GPTBot and PerplexityBot in our robots.txt? We're worried about content theft.",
+-      "expected_output": "Should address the AI bot access question directly. Should explain the tradeoff: blocking AI bots prevents training on your content but also prevents AI platforms from citing and recommending you. Should reference the specific bots and their purposes (GPTBot, Google-Extended, PerplexityBot, ClaudeBot, etc.). Should provide the recommended robots.txt configuration. Should explain that blocking may hurt AI visibility more than it protects content. Should provide a nuanced recommendation based on business goals.",
++      "expected_output": "Determine the owner's intended search, training and user-fetch policies, then distinguish provider controls using current official documentation. GPTBot and ClaudeBot training preferences are independent of the separate search bots. Google-Extended does not control Google Search inclusion or AI Overviews. Explain actual tradeoffs for the selected use, preserve existing training opt-outs and crawler path exclusions, and identify CDN/WAF or response checks needed. Robots rules and fetch success do not prove indexing, citation, historical data deletion or universal protection.",
+       "assertions": [
+-        "Addresses the blocking tradeoff directly",
+-        "Explains impact on AI visibility vs content protection",
+-        "Lists specific AI bot user agents",
+-        "Provides recommended robots.txt configuration",
+-        "Gives nuanced recommendation based on business goals",
+-        "Explains what each bot does"
++        "Provider bot roles match the official documentation for search, training and user-requested access",
++        "A request for search visibility does not silently authorize training access",
++        "The proposed configuration preserves the owner's chosen training policy and existing path exclusions",
++        "Robots policy, actual HTTP access and observed search inclusion are treated as separate evidence",
++        "Tradeoffs are specific to the controlled product use, without claiming that blocking a training bot alone prevents search citations"
+       ],
+       "files": []
+     },
+     {
+       "id": 3,
+       "prompt": "What kind of content gets cited most by AI systems? We want to create content specifically optimized for AI search.",
+-      "expected_output": "Should reference the content types that get cited most, including comparisons (~33% of AI citations), definitive guides (~15%), and other high-citation content types. Should explain why these formats work (they provide the structured, extractable, authoritative information AI systems need). Should provide specific recommendations for creating AI-optimized content: clear definitions, structured data, original statistics, comparison tables, expert quotes. Should reference the Princeton GEO research on what increases citation probability.",
++      "expected_output": "Recommend useful content formats for the actual questions and audience, supported by readable original evidence. Treat external citation-share statistics as dated observations with a sample/method boundary, not a universal ranking or mandatory format quota. Explain extractability and credibility without promising that a word count, schema, quote, statistic or special AI file guarantees citation. If GEO research is used, distinguish experimental visibility from citation probability, traffic and business outcomes.",
+       "assertions": [
+-        "References specific content types with citation rates",
+-        "Mentions comparisons as highest-cited format",
+-        "Explains why these formats work for AI",
+-        "Provides specific content creation recommendations",
+-        "References Princeton GEO research",
+-        "Mentions structured data, statistics, and clear definitions"
++        "Format recommendations serve the audience's actual question rather than a fixed citation-share quota",
++        "Any citation-rate statistic identifies its source, sample and date, or is omitted when unsupported",
++        "Proposed claims and examples require genuine evidence rather than fabricated customer results",
++        "Any GEO result is described with its experimental scope and metric",
++        "Content structure or optional machine-readable representations are not presented as a guarantee of citation or conversion"
+       ],
+       "files": []
+     },
+@@ -116,13 +112,13 @@
+     {
+       "id": 9,
+       "prompt": "Our content is well-written and we have schema markup, but AI assistants never seem to use our site. Someone said our site might not be 'agent-ready.' We also put most of our AI-visibility effort into Reddit this year since that's where ChatGPT cites from. What should we do?",
+-      "expected_output": "Should load references/agent-readiness.md and address both halves. (1) Agent readiness: recommend running a free scoring tool (npx is-agentic and/or Frase's Agent Readiness Checker) and walk the access/discovery/parseability triad — core content must be in the initial HTML without JavaScript execution, no bot challenge/firewall blocking AI crawlers, robots.txt with an explicit AI-crawler stance, clean sitemap, llms.txt (+llms-full.txt as bonus), structured data, and a Markdown representation via content negotiation (Accept: text/markdown at the same canonical URL) or a Link header. May mention WebMCP as the emerging agent-actionable layer, labeled emerging. (2) Reddit concentration: flag citation-source volatility — ChatGPT's Aug 2026 retrieval changes nearly wiped Reddit as a source (practitioner-reported), so single-surface concentration is fragile; recommend the portfolio approach across third-party surfaces plus owned-site fundamentals (which dominate Gemini citations), and verifying any citation-share stat against their own monitoring before betting budget.",
++      "expected_output": "Inspect available evidence for access, discovery and parseability. Audit the desired search crawlers separately from training preferences; preserve path exclusions and inspect actual HTTP/CDN/WAF behavior. Check the relevant delivery path and index eligibility without claiming that all systems require the same rendering behavior. Treat scoring tools and llms.txt, llms-full.txt or Markdown representations as optional aids only when a real client or audit need supports them; do not infer indexing or citation from a score/file. Assess citation-source concentration using dated source observations and the owner's own monitoring rather than declaring one channel universally necessary or ineffective.",
+       "assertions": [
+-        "Recommends running an agent-readiness scoring tool (is-agentic or Frase checker) and structures the audit as access / discovery / parseability",
+-        "Identifies JavaScript-only content rendering and bot/firewall blocking as first-order access failures",
+-        "Covers the discovery/parseability file stack: robots.txt AI stance, sitemap, llms.txt or llms-full.txt, structured data, and a Markdown representation (content negotiation or Link header)",
+-        "Flags the Reddit-only strategy as fragile, citing citation-source volatility (Aug 2026 ChatGPT retrieval change, labeled practitioner-reported) and recommends a portfolio plus owned-site fundamentals",
+-        "Does not present citation-share statistics as stable facts; recommends verifying against the user's own citation monitoring"
++        "Access findings distinguish search policy, training policy and observed HTTP responses",
++        "Optional scoring tools and machine-readable files are tied to a real use rather than required as citation prerequisites",
++        "Uninspected delivery, indexing and citation behavior remain explicit evidence gaps",
++        "Channel concentration advice follows relevant dated observations and the owner's monitoring, without promising a stable citation share",
++        "Prioritized recommendations address observed obstacles while preserving chosen training restrictions"
+       ],
+       "files": []
+     },

@@ -32,13 +32,13 @@ Use `high-risk` when the action can:
 - Affect billing, payments, quotas, vendors, or material cost.
 - Be destructive, irreversible, expensive, or hard to verify.
 
-Classify the intended action, not incidental vocabulary. Reading architecture is not changing it; drafting is not publishing; inspecting production state is not mutating it.
+Classify the intended next action, not incidental vocabulary. Reading architecture is not changing it; drafting is not publishing; inspecting production state is not mutating it. Apply existing authorization even in `high-risk`.
 
 ## Calibrated Routes
 
 - **Reference-rich implementation:** Treat a precise source reference as Discovery evidence. Proceed when semantics, scope, and verification are clear.
 - **Design/prototype:** Use `standard` and expose unknown knowns with options or prototypes. Default visual/interaction prototypes to HTML when no format is named.
-- **Release/deploy:** Use `high-risk`. Confirm target, revision, preflight, rollback, authorization boundary, and live read-back.
+- **Release/deploy:** Use `high-risk`. Check target, revision, preflight, rollback, authorization, and read-back from available evidence. Ask only for uncovered material decisions or unavailable input.
 - **Review follow-up:** Verify findings against current evidence before changing anything. Escalate only when the validated fix crosses a material boundary.
 - **Research/docs:** Use `standard` unless the output changes policy, public state, legal/security/financial decisions, or another high-risk boundary.
 - **Cross-repo:** Reading multiple repos is not automatically high-risk; coordinated contract or state changes are.
@@ -51,5 +51,5 @@ Otherwise:
 
 - Do not announce the mode unless it changes behavior.
 - Keep `fast` gates inline.
-- Surface a full report only for a human decision, material deviation, blocked validation, or high-risk action.
+- Use `gate-reports.md` only for interruption, incomplete required validation, or a requested blind-spot artifact. High-risk mode and authorized adaptation alone do not require reports.
 - Ask an artifact-format question only when the answer materially changes usefulness.
