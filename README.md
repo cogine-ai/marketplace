@@ -105,6 +105,7 @@ Code manifests while sharing the same skill folders:
 
 ```bash
 codex plugin marketplace upgrade cogine-ai
+codex plugin add product-manager-skills@cogine-ai
 codex plugin list --json
 ```
 
@@ -118,6 +119,7 @@ Start a new task after upgrading so its skill index is rebuilt.
 ```bash
 claude plugin marketplace update cogine-ai
 claude plugin update coding-engineer-skills@cogine-ai
+claude plugin update product-manager-skills@cogine-ai
 claude plugin list --json
 ```
 
