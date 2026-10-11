@@ -30,7 +30,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | --- | ---: | --- |
 | `design-engineer-skills` | 9 | UI prototyping, supplementary marketing-page candidates, frontend library selection, polish, animation review, and motion design. |
 | `coding-engineer-skills` | 30 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
-| `product-manager-skills` | 15 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, specs, and tickets. |
+| `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, UX audits with visual evidence, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
@@ -69,9 +69,16 @@ new investigation, substantial rework or explicit user direction can justify
 further delegation. Grok 4.6 xhigh fast remains the execution model. See the
 [runtime and migration notes](plugins/cursourcing/docs/runtime.md).
 
-## Source maintenance — 2026-10-08
+## Source maintenance
 
-The current source prepares Coding 0.2.5, Growth 0.1.6, Product 0.2.3,
+Product 0.2.4 adds `ux-audit` (产品 UX 巡检) on 2026-10-11. It walks an existing
+product against a design principle and reports its 3–5 strongest violations
+with screenshots or labeled schematics. Refresh the Marketplace and update
+the Product Manager plugin to use the new skill.
+
+### 2026-10-08
+
+The 2026-10-08 source prepared Coding 0.2.5, Growth 0.1.6, Product 0.2.3,
 Design 0.1.5, Sales 0.1.2, and Founder/CEO 0.1.3. The upstream wave is recorded in each
 bundle's `UPSTREAM_SYNC_2026-10-08.json`; Coding's bounded Power Gates repair
 is recorded separately in `LOCAL_MAINTENANCE_2026-10-08.json`.
@@ -98,6 +105,7 @@ Code manifests while sharing the same skill folders:
 
 ```bash
 codex plugin marketplace upgrade cogine-ai
+codex plugin add product-manager-skills@cogine-ai
 codex plugin list --json
 ```
 
@@ -111,6 +119,7 @@ Start a new task after upgrading so its skill index is rebuilt.
 ```bash
 claude plugin marketplace update cogine-ai
 claude plugin update coding-engineer-skills@cogine-ai
+claude plugin update product-manager-skills@cogine-ai
 claude plugin list --json
 ```
 
@@ -133,7 +142,7 @@ plugins/coding-engineer-skills/
 plugins/product-manager-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 15 shared skills
+  skills/                              # 16 shared skills
 plugins/growth-and-gtm-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest

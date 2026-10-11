@@ -1,5 +1,18 @@
 # Changelog
 
+## Product 0.2.4 — 2026-10-11
+
+- Add Cogine-authored `ux-audit` (产品 UX 巡检) for principle-driven product
+  walkthroughs with 3–5 prioritized, deduplicated findings and visual evidence.
+- Default to intuitive UI structure with minimal explanatory prose; preserve
+  necessary labels and operation consequences, and accept another user principle.
+- Distinguish live observations, supplied screenshots, source-grounded
+  schematics and uncovered areas; provide concrete redesigns and verification.
+- Keep the workflow concise; preserve the product's UI language and known
+  design system in schematics, and check rendered text before delivery.
+- Align Product's two host manifests, Claude catalog and bundle documentation
+  for sixteen skills. Existing audit entries and installed consumers are retained.
+
 ## Source unification — 2026-10-08
 
 Prepared Coding 0.2.5 and Growth 0.1.6 candidates. Record one edit authority

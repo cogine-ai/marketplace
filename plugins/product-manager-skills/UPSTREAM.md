@@ -1,5 +1,18 @@
 # Upstream sources
 
+## Cogine-authored addition — 2026-10-11 (package 0.2.4)
+
+`ux-audit` is maintained in this Marketplace. It turns the owner's recurring
+principle-driven product UX walkthrough into a portable workflow with 3–5
+prioritized findings, screenshot or schematic evidence, concrete redesigns,
+and explicit coverage limits. It accepts a user-supplied principle; its default
+favors intuitive UI structure with minimal explanatory prose.
+
+This is a new Cogine-authored skill, not a raw upstream import or a replacement
+for an existing local/vendor audit skill. Existing upstream snapshots and
+consumer invocation metadata remain as recorded below. This entry records
+source provenance; release and installation state are verified separately.
+
 ## Current maintenance — 2026-10-08 (package 0.2.3)
 
 Grilling and prototype SKILL.md/LOGIC.md/UI.md follow the frozen source exactly, including removal of the two prototype UI.md local additions. The shared founder, spec and tracker workflows retain portable policies; UIUX follows source data/scripts with the documented title-width and React-security corrections.
