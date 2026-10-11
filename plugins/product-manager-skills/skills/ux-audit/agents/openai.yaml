@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品 UX 巡检"
+  short_description: "按设计原则走查产品，呈现最严重的三到五处问题及截图或示意图"
+  default_prompt: "使用 $ux-audit 按直觉可理解的原则全面走查本项目，给出最严重的 3–5 处问题、图证和具体改法。"
