@@ -1,0 +1,36 @@
+{
+  "entrypoints": [
+    "SKILL.md"
+  ],
+  "public_name": "good-offence",
+  "implicit_invocation_preserved": true,
+  "pinned_vendor_files_verified": [
+    {
+      "path": "references/upstream/ponytail/ponytail-review-v4.13.0.md",
+      "git_blob_sha": "b92e98304c1d0c101fc5e02aa33c4252f9a8db85"
+    },
+    {
+      "path": "references/upstream/ponytail/LICENSE",
+      "git_blob_sha": "715d483338cea4365f0d91a27799cf61226d6bcf"
+    },
+    {
+      "path": "references/upstream/rob-morris/software-design-review/reviewers/premise.md",
+      "git_blob_sha": "d42aedd321aa914ba34ae8bf2966695b52efb488"
+    },
+    {
+      "path": "references/upstream/rob-morris/software-design-review/reviewers/defensive.md",
+      "git_blob_sha": "cb3fd35b899786092a8260fc06af41f1f73caad2"
+    },
+    {
+      "path": "references/upstream/rob-morris/software-design-review/reference/principles.md",
+      "git_blob_sha": "1e15425ad24728fbf7c1ab6f1cb979a18b6186f5"
+    },
+    {
+      "path": "references/upstream/rob-morris/LICENSE",
+      "git_blob_sha": "cc8d6fb1e3bb22577d82b89affd4fe9baeb3429c"
+    }
+  ],
+  "relative_context_links_valid": true,
+  "synthetic_cases": 5,
+  "runtime_and_machine_artifacts_absent": true
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "case_id": "case-01",
+    "report": true,
+    "scope": "The newly added name.strip() guard rejects a blank name before record construction. It is input validation protecting build_record, so it is a defensive mechanism rather than business-state or presentation logic.",
+    "findings": [
+      {
+        "number": 1,
+        "concern": "validation",
+        "location": "catalog.py:7-8 (build_record)",
+        "evidence": "create is the sole entrypoint. Its guard at catalog.py:3-4 rejects both non-exact-str values and strings whose strip() is empty before build_record can run. The nested function captures the same immutable string; no intervening async work, mutation, callback, hook, or other caller exists. Its repeated blank-name predicate therefore cannot reject any reachable invocation.",
+        "simplification": "Delete the if not name.strip() branch and its ValueError inside build_record; retain create's boundary validation.",
+        "preserved_behavior": "Missing names still fail at payload extraction; non-string and blank names still raise ValueError('name is required') at the entrypoint; valid names produce the same record. The exact-str check also excludes custom string subclasses with different strip behavior.",
+        "benefit": "Removes a second copy of the blank-name rule and an unreachable failure branch."
+      }
+    ]
+  },
+  {
+    "case_id": "case-02",
+    "report": false,
+    "scope": "The unused live/progress/failed-write state, callbacks, and status selection form ordinary functional UI behavior. Their branches becoming unreachable after removal of RunButton makes them a general dead-code candidate, which this skill excludes. The failed-state label does not make status mapping a recovery mechanism.",
+    "findings": [],
+    "retained_or_excluded": [
+      {
+        "location": "useRows.tsx:6-30 (state, progress handlers, and status mapping)",
+        "evidence": "View is the only useRows caller and consumes only rows. No application path invokes progressHandlers, so deleting the surrounding progress feature could leave current output unchanged, but safe deletion alone does not satisfy defensive scope.",
+        "reason": "Do not report removal of the progress feature as Good Offence."
+      },
+      {
+        "location": "useRows.tsx:16 (onComplete Array.isArray fallback)",
+        "evidence": "This local array check is a defensive normalization mechanism, but it is inside an uncalled feature and is not introduced by the shown change. Zero current callers does not establish an upstream validation guarantee for a live operation or independently justify removal of this guard.",
+        "reason": "The incidental guard cannot bring the surrounding feature into scope, and no standalone redundant-guard finding is established."
+      }
+    ],
+    "conclusion": "No proven simplification findings."
+  },
+  {
+    "case_id": "case-03",
+    "report": false,
+    "scope": "Both db.allowed checks are executable authorization defenses protecting request processing or insertion. They pass the defensive-scope decision, but neither is proven unnecessary.",
+    "findings": [],
+    "retained_or_excluded": [
+      {
+        "location": "api.py:4-5 (dispatch authorization guard)",
+        "evidence": "Deleting this guard allows JSON parsing to run for a denied user. Malformed JSON would then return (400, {'error': 'invalid JSON'}, 'application/json') instead of (403, 'denied', 'text/plain'). With valid JSON and continued denial, create would return a different 403 body and Content-Type. All three tuple fields are observable contracts. Independent database reads can also change the authorization result.",
+        "reason": "The remaining domain guard does not preserve the early guard's failure ordering or response contract."
+      },
+      {
+        "location": "api.py:13-14 (create authorization guard)",
+        "evidence": "Each await db.allowed performs an independent database read without a transaction or shared snapshot. An initial true result does not guarantee permission remains true at create's later check; removing the latter could allow db.insert after authorization has been revoked.",
+        "reason": "Identical predicates do not establish equivalent authorization state across the two reads."
+      }
+    ],
+    "conclusion": "No proven simplification findings."
+  },
+  {
+    "case_id": "case-04",
+    "report": false,
+    "scope": "The loop catches a named remote-service failure and retries the protected read. It is a recovery mechanism within scope, but the recovery is supported by the supplied transient failure and caller contracts.",
+    "findings": [],
+    "retained_or_excluded": [
+      {
+        "location": "client.py:7-13 (read_document retry loop)",
+        "evidence": "client.fetch is a remote read that can raise TemporaryUnavailable during startup or failover. The loop bounds attempts to three, catches only that failure, delays between attempts, returns a recovered result, and re-raises the final exception. There is no duplicate retry layer. The supplied recovery example fails twice and succeeds on the third attempt.",
+        "reason": "Removing retries changes successful recovery into an immediate failure, violating the caller's recovered-result contract. The recovery test exercises that behavior and is not a simplification target."
+      }
+    ],
+    "conclusion": "No proven simplification findings."
+  },
+  {
+    "case_id": "case-05",
+    "report": true,
+    "scope": "The new load_items catch converts LookupUnavailable into an empty tuple, and the new render_items guard converts that sentinel back into LookupUnavailable. Together they handle a remote or empty-result failure on behalf of render_items and handle; this is a defensive catch/sentinel cascade.",
+    "findings": [
+      {
+        "number": 1,
+        "concern": "defensive",
+        "location": "items.py:11-14 (load_items) and items.py:18-19 (render_items)",
+        "evidence": "handle is the sole entrypoint and all callers are shown. read_items returns a nonempty tuple or raises LookupUnavailable, including for an empty remote iterable. load_items has no recovery and returns () only after catching that exception. render_items immediately raises the same exception type for that sentinel, and handle maps either exception message to the same fixed public 503 response. There is no logging, alternate source, retry, or diagnostic-message response contract to preserve.",
+        "simplification": "Restore load_items to return read_items(store) directly and delete render_items's if not values branch. Keep read_items's empty-result guard and handle's public error mapping.",
+        "preserved_behavior": "Successful nonempty iterables still become the same comma-joined 200 body. An empty iterable or remote LookupUnavailable still reaches handle and returns (503, 'Items unavailable'). Other exceptions still propagate. Direct propagation retains the original diagnostic exception message instead of replacing it with a generic one.",
+        "benefit": "Removes an intermediate failure sentinel and the downstream rule needed to decode it, leaving one exception path to the existing public boundary."
+      }
+    ]
+  }
+]

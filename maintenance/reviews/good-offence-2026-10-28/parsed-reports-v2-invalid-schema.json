@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "id": "case-01",
+      "status": "complete",
+      "scope_reason": "Complete single-file fixture supplied. create is the sole entrypoint; the added guard sits inside the local closure build_record, which is invoked exactly once, synchronously, after create's boundary check `type(name) is not str or not name.strip()`; the fixture states no async calls, callbacks, hooks, or outside code execute between validation and build_record. Scope passes (the guard rejects blank input to protect record construction), and the call-path and equivalence evidence is fully available, so the case is reviewable to a complete conclusion.",
+      "findings": [
+        {
+          "location": "catalog.py, build_record — the added `if not name.strip(): raise ValueError(\"name is required\")` lines",
+          "defensive_mechanism": "validation — duplicate blank-name guard re-checking input already validated by the enclosing entrypoint",
+          "protected_condition": "build_record constructing {\"name\": name} when name is empty or whitespace-only",
+          "evidence": "Sole entrypoint create already enforces `type(name) is not str or not name.strip()` and raises ValueError(\"name is required\") before build_record is defined, so at closure creation name is a str with non-blank content. name is a closure over an immutable str, build_record never escapes create, and the fixture guarantees no code executes between validation and the build_record() call — the inner predicate `not name.strip()` is unreachable on every input.",
+          "simplification": "Delete the two added lines inside build_record, restoring `return {\"name\": name}` as the closure body. No replacement is needed.",
+          "preserved_behavior": "create still raises ValueError(\"name is required\") for missing/non-str/blank names at the same call, before any record is built; valid names still return {\"name\": name}. Identical outputs for every input to the sole entrypoint; removes a duplicate copy of the blank-name rule and a dead failure path.",
+          "preserved_behavior_note": null
+        }
+      ],
+      "retained_safeguards": [
+        "create's entrypoint validation `type(name) is not str or not name.strip()` — the single correctly placed boundary check for the sole entrypoint; retained"
+      ]
+    },
+    {
+      "id": "case-02",
+      "status": "complete",
+      "scope_reason": "Complete three-file fixture supplied (useRows, View, RunButton) with caller facts: View is the sole caller of useRows and the change removes its RunButton usage. The result is orphaned progress machinery — onStart/onProgress/onComplete and the live/processing/failedWrites state machine — which the policy classifies as functional UI progress/status state and general dead-code cleanup, not a defensive mechanism, even though all its dynamic branches are now unreachable. The only defensive-looking candidate, onComplete's `Array.isArray(results) ? results : []` normalization, sits inside this caller-less feature; the policy explicitly bars using such an incidental guard to delete the surrounding feature, and zero callers of a functional feature is not an upstream guarantee about invalid inputs, so redundancy of the guard on a live path cannot be proven. The reviewed diff itself (removing a button) is functional, not defensive. Evidence is sufficient for the conclusion: no in-scope finding.",
+      "findings": [],
+      "retained_safeguards": []
+    },
+    {
+      "id": "case-03",
+      "status": "complete",
+      "scope_reason": "Complete api.py fixture supplied with the full call chain (dispatch is the sole entrypoint and sole caller of create), the contract that clients observe all three tuple fields (status, body, Content-Type), and the fact that db.allowed is an independent query on each await with no shared snapshot. The added dispatch pre-check is a duplicate authorization layer relative to create's existing `db.allowed` check, so scope passes; however, every deletion variant fails equivalence. Removing the new guard changes observable behavior of the reviewed head: a denied user with invalid JSON gets 403 text/plain today but 400 application/json after deletion (parser failure happens first), and a denied user with valid JSON gets (403, \"denied\", \"text/plain\") today but (403, {\"error\": \"denied\"}, \"application/json\") after deletion. Removing create's check instead would move the only authorization read before JSON parsing at an earlier, independent DB query (no shared snapshot, so the check at the write boundary covers a different moment) and change the denial response shape. Per the counterexample rule — deletion changes which failure happens first and its status/body/content type — the finding is withheld.",
+      "findings": [],
+      "retained_safeguards": [
+        "create's `db.allowed` check — the final authorization read before db.insert; with independent per-await DB queries it is not covered by dispatch's earlier check and is retained",
+        "dispatch's json.JSONDecodeError handling returning (400, {\"error\": \"invalid JSON\"}, \"application/json\") — correct request-parsing boundary behavior; retained"
+      ]
+    },
+    {
+      "id": "case-04",
+      "status": "complete",
+      "scope_reason": "Complete fixture supplied (client.py plus its test). client.fetch is a remote read documented to raise TemporaryUnavailable transiently during service startup or connection failover; the application contract expects read_document to return the recovered result or propagate the final exception, and no other retry layer exists. The change is therefore a necessary, correctly placed I/O recovery: bounded at 3 attempts, scoped to the specific transient exception type, exponential backoff (0.1s * 2**attempt), and re-raising on the final attempt so the caller's propagate-on-exhaustion contract holds. The test encodes exactly this recover-after-transient-failures contract. None of the removal criteria for retry layers applies (the failure is transient, not deterministic; no deterministic premise is being masked), so there is no proven simplification.",
+      "findings": [],
+      "retained_safeguards": [
+        "read_document's bounded 3-attempt retry with exponential backoff, scoped to TemporaryUnavailable and re-raising on the final attempt — matches the documented transient failure modes and the recover-or-propagate caller contract"
+      ]
+    },
+    {
+      "id": "case-05",
+      "status": "complete",
+      "scope_reason": "Complete items.py fixture supplied with the entire call chain handle→render_items→load_items→read_items, the public failure contract (status 503 with the fixed body Items unavailable; internal exception messages explicitly diagnostic-only), and the statement that no retry, alternate source, logging, or other recovery exists. The added catch-and-sentinel in load_items plus the compensating empty-check re-raise in render_items form a single catch/sentinel cascade, so scope passes, and the caller chain plus contract make the equivalence fully provable — the case is complete with one finding.",
+      "findings": [
+        {
+          "location": "items.py, load_items (added try/except returning ()) and render_items (added `if not values: raise LookupUnavailable(\"items were unavailable\")` guard)",
+          "defensive_mechanism": "fallback — catch LookupUnavailable and return the empty-tuple sentinel, with a downstream guard whose sole purpose is to convert that sentinel back into a failure",
+          "protected_condition": "store.fetch() raising LookupUnavailable or supplying no items, which must reach clients as 503 with the fixed body Items unavailable",
+          "evidence": "The only caller chain is handle→render_items→load_items→read_items. handle already catches LookupUnavailable and returns (503, \"Items unavailable\"). read_items raises LookupUnavailable for both failure modes (fetch raising; empty result), so the pre-change single-line `return read_items(store)` already delivered that exact tuple to handle via direct propagation. The fixture states no recovery, retry, logging, or alternate source exists, so the catch adds no recovery — it only swallows the failure and forces the new guard in render_items to reconstruct it, adding a second failure path and a second internal message.",
+          "simplification": "Restore load_items to `return read_items(store)` (delete the try/except) and delete the added `if not values: raise LookupUnavailable(...)` guard in render_items.",
+          "preserved_behavior": "Success: (200, \",\".join(values)) unchanged. Both failure modes — store.fetch raising and an empty result — propagate LookupUnavailable to handle's existing catch, producing the identical (503, \"Items unavailable\") tuple. Only internal exception messages differ, which the stated contract explicitly excludes from the client-visible behavior; read_items still guarantees a non-empty tuple on success, so render_items' deleted guard is unreachable after simplification."
+        }
+      ],
+      "retained_safeguards": [
+        "read_items' raise on an empty fetch result — keeps an empty store a real failure at the source; retained",
+        "handle's LookupUnavailable → (503, \"Items unavailable\") mapping — the public failure contract; retained"
+      ]
+    }
+  ]
+}

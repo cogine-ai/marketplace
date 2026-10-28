@@ -1,0 +1,75 @@
+[
+  {
+    "id": "case-01",
+    "status": "complete",
+    "scope_reason": "Full supplied snapshot reviewed: create is the sole entrypoint, and build_record is a local closure invoked exactly once via `return build_record()` and never escaping; the fixture states no async calls, callbacks, hooks, or outside code execute between validation and build_record. The candidate is the newly added `if not name.strip()` guard inside build_record: it rejects a whitespace-only name before constructing the record, which is input validation (protection), not business state or presentation. The outer guard `type(name) is not str or not name.strip()` in create runs on the same path before the closure is invoked, giving the upstream check needed for the necessity analysis; `name` is never reassigned and `.strip()` is pure on the captured string, so equivalence is decidable from the supplied code. All evidence for both scope and necessity is present; review is complete.",
+    "findings": [
+      {
+        "location": "catalog.py, build_record (added `if not name.strip(): raise ValueError(\"name is required\")`)",
+        "defensive_mechanism": "Input validation guard (validation) rejecting a whitespace-only `name` before the record is constructed.",
+        "protected_condition": "A whitespace-only name reaching `return {\"name\": name}` inside build_record, which would produce a record with a blank name.",
+        "evidence": "build_record is a closure invoked once, immediately, by create (`return build_record()`); it captures the same `name` binding that create already validated with `type(name) is not str or not name.strip()` immediately before defining it. `type(name) is not str` guarantees `name` is exactly a str, `.strip()` is a pure function of that immutable value, `name` is never reassigned, and the fixture confirms nothing executes between the outer validation and the build_record call. Therefore `not name.strip()` is False whenever build_record runs: the added raise is unreachable for every reachable input, and the guard duplicates the outer check's exact predicate on the identical value at the same boundary.",
+        "simplification": "Delete the two added lines inside build_record so it is again just `return {\"name\": name}`. No replacement is needed; create's outer guard remains the single validation.",
+        "preserved_behavior": "Any payload whose `name` is missing (KeyError unchanged), not a str, or whitespace-only still raises ValueError(\"name is required\") from create's outer guard before build_record runs; valid names still return {\"name\": name}. Callers of create see the identical error message and failure point."
+      }
+    ],
+    "retained_safeguards": [
+      "create's outer guard `type(name) is not str or not name.strip()` is the correctly placed validation at the sole entrypoint and is retained as the single enforcement point."
+    ]
+  },
+  {
+    "id": "case-02",
+    "status": "complete",
+    "scope_reason": "The reviewed change only removes the RunButton render and the `progressHandlers` destructure from View, the sole caller of useRows. Two candidates were considered and rejected at the scope decision. (1) The remaining live/processing/failedWrites state, the onStart/onProgress/onComplete handlers, and the status() branch chain in useRows are an orphaned UI progress/status mapping and its state storage that lost their only consumer; per policy, UI progress/status mapping that has lost its callers is functional behavior and general dead-code cleanup, not a defensive mechanism, so it is out of scope even though every branch is now unreachable. (2) The `Array.isArray(results) ? results : []` fallback in onComplete is an incidental guard inside that now-unused feature; with zero live callers there is no live operation and no upstream input guarantee to verify, so that guard cannot be proven redundant on its own against a real call path, and deleting it would be dead-code cleanup rather than removal of a proven unnecessary defense. The changed lines themselves contain no defensive mechanism. The snapshot is complete; no finding meets the evidence bar.",
+    "findings": [],
+    "retained_safeguards": []
+  },
+  {
+    "id": "case-03",
+    "status": "complete",
+    "scope_reason": "Full chain reviewed: dispatch is the sole request entrypoint and the sole caller of create, and both function bodies are supplied. The candidate is the newly added authorization pre-check `if not await db.allowed(user_id): return (403, \"denied\", \"text/plain\")` in dispatch — an authorization guard protecting request handling (JSON parsing and create) from users the database does not allow. Scope holds: it rejects disallowed callers before the protected operation. Necessity was then analyzed against create's existing identical-predicate check immediately before db.insert, the only write. The fixture supplies the decisive facts: db.allowed is an independent query on each await with no transaction or shared snapshot, and clients observe all three tuple fields (status, body, Content-Type). No requirement, comment, or test in the supplied evidence demands authorization before JSON parsing or a text/plain denial shape, so the added layer's contracts can be compared against the established base behavior. Review is complete.",
+    "findings": [
+      {
+        "location": "api.py, dispatch (added lines `if not await db.allowed(user_id): return (403, \"denied\", \"text/plain\")`)",
+        "defensive_mechanism": "Authorization pre-check (validation) that re-queries db.allowed at the entrypoint before JSON parsing.",
+        "protected_condition": "A request from a user_id the database does not allow reaching JSON parsing and create; the check short-circuits handling with 403 before json.loads runs.",
+        "evidence": "dispatch is the sole caller of create (fixture), and create already runs the identical predicate `if not await db.allowed(user_id)` immediately before `db.insert`, the only write. The only code between the two checks is `json.loads(raw_body)`, which cannot change user_id or db, so the inner check covers the same request at the same trust level — this is not rechecking at a different boundary. Because db.allowed is an independent query per await with no shared snapshot (fixture), the extra check does not create a consistent validated snapshot; it only adds a second DB round-trip and a divergence window (a request can pass dispatch's check and still be denied by create's). The layer is also not behavior-preserving: since clients observe all three fields (fixture), it changes denied+invalid-JSON from the established (400, {\"error\": \"invalid JSON\"}, application/json) to (403, \"denied\", \"text/plain\"), and denied+valid-JSON from (403, {\"error\": \"denied\"}, application/json) to (403, \"denied\", \"text/plain\"). Nothing supplied requires auth-before-parse or the text/plain denial shape, so the layer adds a divergent second denial contract without adding protection.",
+        "simplification": "Delete the two added lines in dispatch, restoring it to parse-then-delegate (`json.loads` → 400 on JSONDecodeError → `return await create(body, user_id, db)`). Keep create's existing check as the single authorization enforcement point. Benefit: one authorization rule and one denial response shape instead of two, and one fewer db.allowed query per request.",
+        "preserved_behavior": "Invalid JSON still returns (400, {\"error\": \"invalid JSON\"}, application/json); a denied user with valid JSON still gets (403, {\"error\": \"denied\"}, application/json) from create before db.insert, so no unauthorized write occurs; allowed requests still return (201, {\"created\": True}, application/json). Authorization is still enforced on every request because dispatch is create's only caller."
+      }
+    ],
+    "retained_safeguards": [
+      "create's `if not await db.allowed(user_id)` immediately before db.insert — the authorization check adjacent to the only write — is retained as the single enforcement point.",
+      "The json.JSONDecodeError → (400, {'error': 'invalid JSON'}, application/json) parse-failure contract is retained."
+    ]
+  },
+  {
+    "id": "case-04",
+    "status": "complete",
+    "scope_reason": "The reviewed change adds a bounded retry around client.fetch in read_document plus a scripted test. The retry was evaluated as a candidate defensive layer and retained: the fixture names a real transient failure mode (TemporaryUnavailable during service startup or connection failover on a remote read), states the application contract is to return the recovered result or propagate the final exception, and states no other retry layer exists. The implementation is bounded (3 attempts), catches only the specific transient exception so deterministic errors propagate immediately, uses exponential backoff (0.1s, 0.2s), and re-raises on the final attempt, matching the stated contract; the supplied test pins both the recovery outcome and the exact call count (3). All evidence needed to judge the retry is supplied; it is a correctly placed safeguard, so no finding meets the bar.",
+    "findings": [],
+    "retained_safeguards": [
+      "Bounded 3-attempt retry with exponential backoff around the remote client.fetch for the transient TemporaryUnavailable, re-raising on the final attempt — preserves the 'recovered result or final exception' contract.",
+      "Narrow `except TemporaryUnavailable` (not a broad catch) lets deterministic failures propagate on the first attempt instead of being retried."
+    ]
+  },
+  {
+    "id": "case-05",
+    "status": "complete",
+    "scope_reason": "The full call chain is supplied: handle (sole entrypoint) → render_items → load_items → read_items → store.fetch, with the stated public contract (status 503 with the fixed body 'Items unavailable'; internal exception messages are diagnostic details, not a client contract) and no other retry, alternate source, logging, or recovery. The candidate is the added catch/sentinel pair in the change: load_items swallowing LookupUnavailable into an empty-tuple sentinel, and the compensating `if not values: raise LookupUnavailable(...)` that render_items must add. Scope holds for both: the try/except is failure handling and the emptiness check is defensive re-validation of that sentinel. The fixture supplies every caller and read_items' complete body, so the sentinel's reachability and the end-to-end equivalence of removal are fully decidable; review is complete.",
+    "findings": [
+      {
+        "location": "items.py, load_items (added try/except returning ()) and render_items (added `if not values: raise LookupUnavailable(\"items were unavailable\")`)",
+        "defensive_mechanism": "Catch/sentinel cascade (defensive/fallback): load_items catches LookupUnavailable and returns the empty-tuple sentinel, and render_items is then forced to defensively re-check emptiness and re-raise a replacement LookupUnavailable.",
+        "protected_condition": "store.fetch raising LookupUnavailable, or supplying no items (read_items raises on empty), reaching render_items' `\",\".join(values)`.",
+        "evidence": "read_items either returns a non-empty tuple or raises LookupUnavailable (both branches shown), so load_items can return () only in exactly the failure case it just swallowed — the sentinel carries no information the exception did not. render_items is called only by handle (fixture: handle is the only entrypoint, all callers shown), and the only consumer of the sentinel is the added emptiness guard, which converts () back into LookupUnavailable for handle's existing catch. End-to-end the pair produces the same (503, \"Items unavailable\") that direct propagation already produced, and for non-empty results both versions return the same joined string. The fixture states internal exception messages are diagnostic, so the message swap ('upstream supplied no items' → 'items were unavailable') has no client-visible effect; the indirection only obscures the original failure at the swallow point.",
+        "simplification": "Revert load_items to `return read_items(store)` and delete the `if not values: raise LookupUnavailable(...)` guard from render_items, letting LookupUnavailable propagate directly to handle's existing except. No replacement code is needed. Benefit: one failure path instead of exception → sentinel → exception, and the empty/failure condition is encoded once (in read_items) instead of twice.",
+        "preserved_behavior": "A failing or empty store.fetch still results in (503, \"Items unavailable\") from handle via its existing catch; a non-empty fetch still yields (200, \",\".join(values)). No retry, alternate source, logging, or partial-result recovery existed to lose (fixture), and clients observe the identical public contract."
+      }
+    ],
+    "retained_safeguards": [
+      "handle's `except LookupUnavailable: return (503, \"Items unavailable\")` is the real graceful client-facing failure contract and is retained.",
+      "read_items' `if not values: raise LookupUnavailable(\"upstream supplied no items\")` enforces the empty-upstream failure and is retained; it is also what guarantees a successful read is non-empty."
+    ]
+  }
+]
