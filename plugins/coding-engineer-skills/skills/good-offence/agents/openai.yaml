@@ -1,0 +1,4 @@
+interface:
+  display_name: "Good Offence"
+  short_description: "Evidence-backed defensive complexity review"
+  default_prompt: "Use $good-offence to review this change for unnecessary defensive implementations; report proven simplifications without editing code."

@@ -53,3 +53,15 @@ retained in the copied directories. See the source repository's
 [GStack spec](https://github.com/garrytan/gstack), copyright (c) 2026 Garry Tan,
 under the MIT License. It remains a Cogine-authored adaptation, without the
 GStack runtime.
+
+## Good Offence references
+
+`good-offence` includes unmodified reference text from Dietrich Gebert's
+[Ponytail v4.13.0](https://github.com/DietrichGebert/ponytail/tree/08e952d7a8057a57ce561ff1330d093fd92eec67)
+and Rob Morris's [agent-skills](https://github.com/Rob-Morris/agent-skills/tree/022f6dcd3c412a49163682218f3346a5f0299201),
+each under the MIT License. Full copyright/license notices remain at
+`skills/good-offence/references/upstream/ponytail/LICENSE` and
+`skills/good-offence/references/upstream/rob-morris/LICENSE`.
+The Cogine-authored policy, metadata and synthetic evaluation materials use
+Apache-2.0; raw reference files keep their original licenses. Exact upstream
+revisions and blob hashes are in the skill's `references/sources.md`.

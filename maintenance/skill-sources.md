@@ -61,3 +61,15 @@ published/available, installed and read back. Then verify the transferred
 rules and disable only their exact `.agents/skills/<name>/SKILL.md` paths.
 Prepared package versions do not establish installed state. Existing
 agents metadata and all historical upstream sync ledgers remain unchanged.
+
+## Good Offence — 2026-10-28
+
+The single edit authority is
+`plugins/coding-engineer-skills/skills/good-offence` in this repository.
+Auto-agents' `skills/goodoffencse` and the standalone local entry remain
+compatibility consumers. Its source lock pins an immutable Marketplace commit,
+not a moving branch; the sync helper projects only the legacy frontmatter name
+and `$goodoffencse` default prompt. All other file bytes follow the authority.
+Update the authority, validate scope/contract behavior, then regenerate the
+consumer; do not repair its skill text independently. A prepared package version
+is distinct from publication, installation, or activation of a plugin cache.
