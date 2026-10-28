@@ -30,12 +30,16 @@ The original relative links from both reviewers to `../reference/principles.md` 
 
 The Good Offence policy and synthetic evaluation cases are maintained by Cogine AI in the Marketplace. Cogine-authored material is licensed under Apache-2.0, as declared by the containing Coding Engineer Skills package. Upstream snapshot text and licenses retain their original MIT terms. The preserved Ponytail file uses a non-entrypoint filename so only the adapted `good-offence` skill is discovered.
 
-## Added locally
+## Using the references
 
-The primary goal is reducing unnecessary defensive implementations. Related dependencies, abstractions, and constraints are reviewed only when removing a verified unnecessary defensive mechanism. Every finding names the protected condition; maintenance burden alone does not qualify. Ordinary documentation/style/dead-code cleanup is outside scope. Constraint review explicitly checks requirements, resource budgets, compatibility, authorization/security, compliance, and domain ownership. Missing justification produces a question or retained control, not a deletion finding. Validation claims also check alternate callers, mutation, deserialization, asynchronous gaps, and changed trust boundaries.
+The adapted skill gives the review's goal and approach. Read the pinned premise,
+defensive or Ponytail reference when it helps with the code under review; they
+are supporting material rather than a mandatory checklist. The Rob Morris
+principles file supplies context for its two reviewers. The adapted skill does
+not use Ponytail's deleted-line scoring.
 
-## Automatic loading
+Synthetic development cases live outside the installed skill, under
+`maintenance/evals/good-offence` in the Marketplace repository.
 
-An unattended wrapper should load the main `SKILL.md` first, then the pinned `premise.md`, `defensive.md`, and `principles.md` above as supporting context. Mark the main policy and wrapper's authorized execution/output constraints as authoritative. The Ponytail snapshot is kept for provenance and need not be injected into every run: its scope and relevant checks are already adapted in the main skill, and its rejected scoring/examples should not become competing instructions.
-
-Both source projects are MIT licensed. Their complete copyright and license notices are preserved next to the unmodified source snapshots.
+Both source projects are MIT licensed. Their complete copyright and license
+notices are preserved beside the unmodified snapshots.

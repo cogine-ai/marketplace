@@ -7,6 +7,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 ROLE = ROOT / 'plugins/coding-engineer-skills'
 SKILL = ROLE / 'skills/good-offence'
+EVALS = ROOT / 'maintenance/evals/good-offence'
 
 
 def blob_sha(path):
@@ -46,13 +47,13 @@ class DistributionTests(unittest.TestCase):
             self.assertTrue((path.parent/'../reference/principles.md').resolve().is_file())
 
     def test_public_inputs_do_not_embed_grading_answers_or_machine_state(self):
-        suite = json.loads((SKILL/'evals/suite.json').read_text())
+        suite = json.loads((EVALS/'suite.json').read_text())
         self.assertEqual(len(suite['cases']), 5)
         for index, case in enumerate(suite['cases'], 1):
             self.assertEqual(set(case), {'id','input'})
             self.assertEqual(case['id'], f'case-{index:02d}')
-            self.assertTrue((SKILL/'evals'/case['input']).is_file())
-        self.assertTrue((SKILL/'evals/expected.json').is_file())
+            self.assertTrue((EVALS/case['input']).is_file())
+        self.assertTrue((EVALS/'expected.json').is_file())
         forbidden = {'run.sh','state.sqlite3','opencode_runner.py','target-repos.md','launchd.plist'}
         for path in SKILL.rglob('*'):
             if path.is_file():

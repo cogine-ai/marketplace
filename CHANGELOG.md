@@ -3,7 +3,8 @@
 ## 2026-10-28 — Coding Engineer Skills 0.2.6 candidate
 
 - Add one portable `good-offence` skill for unnecessary defensive mechanisms,
-  with scope and behavior-preservation checks and synthetic behavioral cases.
+  with practical review guidance, examples and references available as needed.
+  Development cases stay outside the installed skill.
 - Preserve pinned upstream text and MIT notices without exposing the Ponytail
   archive as a second skill. Existing runtime consumers keep documented aliases.
 - Raise the Coding inventory to 31 skills, including 19 model-invokable entries.

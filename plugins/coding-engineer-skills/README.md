@@ -71,10 +71,9 @@ The plugin contains 31 skills.
   standards before committing. `code-review` remains a separate fixed-point
   branch review, `local-ultra-review` remains the deeper read-only defect
   review, and `review-and-ship` remains the explicit push and pull-request gate.
-- `good-offence` reviews unnecessary defensive mechanisms using verified callers,
-  boundaries, and recovery contracts. It offers suggestions only. Business/UI
-  state mapping and generic dead-code cleanup remain outside this specialist
-  lane, even when deletion is behavior-preserving.
+- `good-offence` guides agents reviewing unnecessary defensive implementations:
+  duplicate checks, guards, catches and recovery layers. It offers suggestions,
+  with practical examples and deeper references available as needed.
 - `improve-codebase-architecture` coordinates `grilling`, `domain-modeling`,
   and `codebase-design`. The pure `grill-with-docs` composition alias is not
   bundled because both underlying skills remain independently available.

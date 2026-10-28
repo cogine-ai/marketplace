@@ -253,8 +253,8 @@
         ".codex/skills/goodoffencse"
       ],
       "runtime_files_byte_equal": false,
-      "runtime_files": 19,
-      "distribution_rule": "Auto-agents consumes an immutable Marketplace commit through scripts/sync_good_offence_skill.py and maintenance/good-offence-source.json. Only the legacy SKILL name and default-prompt invocation are projected; preserve all other bytes. Do not edit consumer policy independently or treat a prepared package as installed."
+      "runtime_files": 11,
+      "distribution_rule": "Edit the Marketplace skill, then copy the reviewed directory to auto-agents and the local consumer. Preserve the legacy entry name/default prompt and record the source commit. No custom sync program or per-file lock is required."
     }
   ],
   "installer_managed_overlays": [

@@ -2,20 +2,18 @@
 
 ## Good Offence — 2026-10-28 (package 0.2.6 candidate)
 
-`good-offence` is maintained here. It is adapted from Cogine's
-[auto-agents skill at e779a80](https://github.com/cogine-ai/auto-agents/tree/e779a8098a2744e1e2e8627b198c993e511ed744/skills/goodoffencse),
-with a separate scope test before behavior-preservation review. Its pinned
-Ponytail **v4.13.0** and Rob Morris reference snapshots, source hashes and MIT
-notices are recorded in `skills/good-offence/references/sources.md`.
-The Ponytail archive has an ordinary Markdown filename so it does not create
-another discoverable skill. The Cogine-authored adaptation is Apache-2.0;
-third-party reference files retain their MIT notices.
+`good-offence` is maintained here, adapted from Cogine's
+[auto-agents skill at e779a80](https://github.com/cogine-ai/auto-agents/tree/e779a8098a2744e1e2e8627b198c993e511ed744/skills/goodoffencse).
+It gives agents a focused review goal, useful questions and examples, leaving
+investigation and judgment to the agent. Supporting references are read as needed.
+Ponytail **v4.13.0**, the Rob Morris reviewers and their MIT notices retain the
+pins in `skills/good-offence/references/sources.md`. The Ponytail archive uses
+an ordinary Markdown filename. The Cogine adaptation is Apache-2.0.
 
-Auto-agents retains a generated `goodoffencse` compatibility snapshot and its
-existing review markers, not a second editable authority. Only the declared
-entry name/default-prompt projection differs; its source lock records the
-immutable Marketplace commit and file hashes. Local cron state, repository
-lists, model runners, and GitHub publication are not bundled here.
+Auto-agents keeps a reviewed copy with its legacy invocation metadata and a
+simple source record. Scheduling, publication, and local state belong to that
+automation. Development cases live under `maintenance/evals/good-offence`,
+outside the installed skill.
 
 ## Current source unification — 2026-10-08 (package 0.2.5)
 

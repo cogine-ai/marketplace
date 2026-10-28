@@ -168,9 +168,8 @@ This repository carries its installable release snapshot; see the plugin's
 
 ## Good Offence candidate — 2026-10-28
 
-Coding 0.2.6 adds `coding-engineer-skills:good-offence`, a suggestions-only
-review of unnecessary defensive mechanisms. It checks scope separately from
-behavior preservation and includes synthetic behavioral evaluation cases.
-This repository owns the skill; auto-agents consumes an immutable version with
-its documented legacy invocation metadata. A source version does not establish
-that a plugin has been merged, published, or installed.
+Coding 0.2.6 adds `coding-engineer-skills:good-offence`, focused guidance for
+reviewing unnecessary defensive implementations. Agents choose how to investigate
+and judge the target code; examples and optional references support that work.
+The Marketplace maintains the skill, and auto-agents carries a reviewed copy
+with legacy invocation metadata. Development cases remain outside the package.
