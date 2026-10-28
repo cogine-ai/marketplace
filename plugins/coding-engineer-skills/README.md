@@ -3,7 +3,7 @@
 Coding Engineer Skills is a deliberately curated engineering toolkit for
 Codex and Claude Code. It favors Cogine's own workflows and lightweight
 engineering skills. It does not bundle the full `superpowers` workflow pack.
-The plugin contains 30 skills.
+The plugin contains 31 skills.
 
 ## Included skills
 
@@ -36,10 +36,11 @@ The plugin contains 30 skills.
 - `vercel-react-best-practices`
 - `shadcn`
 
-### Review, security, and developer experience — 7
+### Review, security, and developer experience — 8
 
 - `code-review`
 - `local-ultra-review`
+- `good-offence`
 - `ai-app-security-audit`
 - `security-best-practices`
 - `devex-review`
@@ -70,6 +71,9 @@ The plugin contains 30 skills.
   standards before committing. `code-review` remains a separate fixed-point
   branch review, `local-ultra-review` remains the deeper read-only defect
   review, and `review-and-ship` remains the explicit push and pull-request gate.
+- `good-offence` guides agents reviewing unnecessary defensive implementations:
+  duplicate checks, guards, catches and recovery layers. It offers suggestions,
+  with practical examples and deeper references available as needed.
 - `improve-codebase-architecture` coordinates `grilling`, `domain-modeling`,
   and `codebase-design`. The pure `grill-with-docs` composition alias is not
   bundled because both underlying skills remain independently available.
@@ -79,7 +83,7 @@ The plugin contains 30 skills.
   GitHub CLI, Playwright, or a browser-capable host. Their instructions retain
   their own capability checks and fallbacks.
 - Twelve workflow commands are explicit-only in both hosts. The remaining
-  eighteen skills are model-invokable and carry concise what-and-when trigger
+  nineteen skills are model-invokable and carry concise what-and-when trigger
   descriptions. Full skill bodies are loaded only when invoked.
 - Operational cross-skill calls use the full
   `coding-engineer-skills:<skill>` identity so another globally installed

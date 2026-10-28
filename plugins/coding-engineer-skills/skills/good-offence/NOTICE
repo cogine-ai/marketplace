@@ -1,0 +1,12 @@
+Good Offence
+Copyright 2026 Cogine AI
+
+Cogine-authored policy and invocation metadata
+are licensed under Apache License 2.0 (see LICENSE).
+
+This skill also redistributes unmodified reference snapshots from:
+- DietrichGebert/ponytail, v4.13.0, under the MIT License.
+- Rob-Morris/agent-skills, commit 022f6dcd3c412a49163682218f3346a5f0299201,
+  under the MIT License.
+Their original copyright and license notices are retained beside each snapshot.
+See references/sources.md for pinned commits, original paths and blob identities.

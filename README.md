@@ -29,7 +29,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | Plugin | Skills | Focus |
 | --- | ---: | --- |
 | `design-engineer-skills` | 9 | UI prototyping, supplementary marketing-page candidates, frontend library selection, polish, animation review, and motion design. |
-| `coding-engineer-skills` | 30 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
+| `coding-engineer-skills` | 31 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, UX audits with visual evidence, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
@@ -165,3 +165,11 @@ plugins/cursourcing/
 Cursourcing is maintained in [cogine-ai/cursourcing](https://github.com/cogine-ai/cursourcing).
 This repository carries its installable release snapshot; see the plugin's
 `UPSTREAM.md` for the pinned source commit.
+
+## Good Offence candidate — 2026-10-28
+
+Coding 0.2.6 adds `coding-engineer-skills:good-offence`, focused guidance for
+reviewing unnecessary defensive implementations. Agents choose how to investigate
+and judge the target code; examples and optional references support that work.
+The Marketplace maintains the skill, and auto-agents carries a reviewed copy
+with legacy invocation metadata. Development cases remain outside the package.

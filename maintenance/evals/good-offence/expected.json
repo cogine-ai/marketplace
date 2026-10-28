@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "cases": [
+    {
+      "id": "case-01",
+      "should_report": true,
+      "expected_scope": "in_scope",
+      "required_locations": [
+        "catalog.py:build_record"
+      ],
+      "rationale": "The live nested helper repeats the upstream predicate over the same immutable string without any intervening mutation or await. Only that repeated guard is in scope."
+    },
+    {
+      "id": "case-02",
+      "should_report": false,
+      "expected_scope": "out_of_scope",
+      "required_locations": [],
+      "rationale": "The state, handlers and label mapping are a dead functional feature, not a defensive layer. Incidental array handling does not authorize deleting the feature; no live-call upstream guarantee independently proves that local check redundant."
+    },
+    {
+      "id": "case-03",
+      "should_report": false,
+      "expected_scope": "in_scope",
+      "required_locations": [],
+      "rationale": "The guard protects a distinct pre-parse boundary. Removing either copy is not proved equivalent: malformed JSON ordering, response shape, and independent async query state matter."
+    },
+    {
+      "id": "case-04",
+      "should_report": false,
+      "expected_scope": "in_scope",
+      "required_locations": [],
+      "rationale": "Bounded I/O retry changes the outcome for a demonstrated transient failure and keeps final exception propagation. It has actual recovery value."
+    },
+    {
+      "id": "case-05",
+      "should_report": true,
+      "expected_scope": "in_scope",
+      "required_locations": [
+        "items.py:load_items",
+        "items.py:render_items"
+      ],
+      "rationale": "The added catch synthesizes an impossible empty success state solely to be guarded and rethrown by the only caller. Direct propagation preserves the fixed public 503 contract and keeps the original diagnostic context; keep the boundary check inside read_items."
+    }
+  ]
+}

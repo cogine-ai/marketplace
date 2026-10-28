@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-28 — Coding Engineer Skills 0.2.6 candidate
+
+- Add one portable `good-offence` skill for unnecessary defensive mechanisms,
+  with practical review guidance, examples and references available as needed.
+  Development cases stay outside the installed skill.
+- Preserve pinned upstream text and MIT notices without exposing the Ponytail
+  archive as a second skill. Existing runtime consumers keep documented aliases.
+- Raise the Coding inventory to 31 skills, including 19 model-invokable entries.
+
+
 ## Product 0.2.4 — 2026-10-11
 
 - Add Cogine-authored `ux-audit` (产品 UX 巡检) for principle-driven product

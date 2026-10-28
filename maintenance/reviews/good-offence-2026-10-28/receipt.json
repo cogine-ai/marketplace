@@ -1,0 +1,187 @@
+{
+  "overall_assessment": "No unqualified end-to-end pass: v1 behavioral failure; v2 intended decision/mechanism success with a narrative error and strict schema rejection.",
+  "inputs": [
+    {
+      "id": "case-01",
+      "path": "evals/cases/case-01/input.md",
+      "sha256": "3293165dd308b8e6d8c49a2bdfe940d05c17ac5e451aba0cce95a606f0363283"
+    },
+    {
+      "id": "case-02",
+      "path": "evals/cases/case-02/input.md",
+      "sha256": "68a31d00a15b7086fffec1a692a963b2af374519b6083d63091a7c9d25f56e78"
+    },
+    {
+      "id": "case-03",
+      "path": "evals/cases/case-03/input.md",
+      "sha256": "17f9125007a1aa1e0a1a1d53dc43153d3850e7a0e0e1042efff67e325a9f13c7"
+    },
+    {
+      "id": "case-04",
+      "path": "evals/cases/case-04/input.md",
+      "sha256": "49e985785488e0dd1508cc7703d543b399b5994c6c0fa78c10f96646250b9498"
+    },
+    {
+      "id": "case-05",
+      "path": "evals/cases/case-05/input.md",
+      "sha256": "8239e4c6dda4b69ac2c9ba81e0404cf7d091233a00677a724cb62b5c3cc3e042"
+    }
+  ],
+  "same_raw_inputs_both_rounds": true,
+  "scoring_expected_sha256": "9d93800e281a5dd0fe2d2fb77f215a6e3fabd763d67d7a64ed7d951847a5fd95",
+  "suite_manifest_sha256": "85f7767c26abf9e6353843e833932aca6b37b1af34b7109c7a36fd2b69610749",
+  "rounds": [
+    {
+      "round": 1,
+      "purpose": "first frozen-policy forward evaluation",
+      "policy_hashes": {
+        "SKILL.md": "c41abe8bbc8e32f89c056244b4c05cb01ce2473431c74ef2fbe543e4c67a3a66",
+        "references/upstream/rob-morris/software-design-review/reviewers/premise.md": "602338d40888d4c47c9982e305b213b723da493d000bd66f9866c9243f965782",
+        "references/upstream/rob-morris/software-design-review/reviewers/defensive.md": "f6fbeb7816995d75e2905ad7e486ef63a3f135642e5e7dcf2d9d5e23e50f6f85",
+        "references/upstream/rob-morris/software-design-review/reference/principles.md": "39eda0e92e9efaf53e70a2525a790573f1ced28560540c871a56a10ac5b997ce"
+      },
+      "requested_model": "zhipuai-coding-plan/glm-5.3-flash",
+      "provider_side_identity_independently_verified": false,
+      "runner": "OpenCode CLI",
+      "access": "classifier",
+      "timeout_seconds": 600,
+      "model_invocations": 1,
+      "session_ids": [
+        "ses_e7e4ab216ffeFMYdfhE8pLu2l9"
+      ],
+      "duration_seconds": 403.155,
+      "adapter_returncode": 0,
+      "source_prompt_sha256": "6999533f5691081062c2950578a0db36b7778a154972cb4b8c64ee099abf4ce3",
+      "adapter_prompt_sha256": "f01541e1434665a7334d8de68cb611bdb44b8f4cf3d665d194a447c54ddc8eb5",
+      "model_input_expected_answers_loaded": false,
+      "strict_schema": {
+        "status": "pass"
+      },
+      "semantic_assessment": {
+        "decision_and_location_passes": 4,
+        "total": 5,
+        "manual_mechanism_and_equivalence_inspection": true,
+        "failed_cases": [
+          "case-03"
+        ],
+        "narrative_errors": []
+      },
+      "tool_activity": [],
+      "report_artifact": "reports-v1.json"
+    },
+    {
+      "round": 2,
+      "purpose": "focused revised-policy regression on unchanged fixtures",
+      "policy_hashes": {
+        "SKILL.md": "d6970d4db1159429d728233813b0c039a19dc6f9ef97c759169147cedfeaae78",
+        "references/upstream/rob-morris/software-design-review/reviewers/premise.md": "602338d40888d4c47c9982e305b213b723da493d000bd66f9866c9243f965782",
+        "references/upstream/rob-morris/software-design-review/reviewers/defensive.md": "f6fbeb7816995d75e2905ad7e486ef63a3f135642e5e7dcf2d9d5e23e50f6f85",
+        "references/upstream/rob-morris/software-design-review/reference/principles.md": "39eda0e92e9efaf53e70a2525a790573f1ced28560540c871a56a10ac5b997ce"
+      },
+      "requested_model": "zhipuai-coding-plan/glm-5.3-flash",
+      "provider_side_identity_independently_verified": false,
+      "runner": "OpenCode CLI",
+      "access": "classifier",
+      "timeout_seconds": 600,
+      "model_invocations": 1,
+      "session_ids": [
+        "ses_e7e41eff3ffePZSvNEtD3Q168S"
+      ],
+      "duration_seconds": 240.316,
+      "adapter_returncode": 1,
+      "source_prompt_sha256": "dc485f8496f3b138cbd0a0e3d046a3f92c3bffad25285e95cd1944ae73a8ec3d",
+      "adapter_prompt_sha256": null,
+      "model_input_expected_answers_loaded": false,
+      "strict_schema": {
+        "status": "fail",
+        "reason": "additional property preserved_behavior_note:null in case-01 finding",
+        "accepted_adapter_result_returned": false,
+        "offline_extraction_repairs_made": false
+      },
+      "semantic_assessment": {
+        "decision_and_location_passes": 5,
+        "total": 5,
+        "manual_mechanism_and_equivalence_inspection": true,
+        "failed_cases": [],
+        "narrative_errors": [
+          {
+            "id": "case-01",
+            "description": "Missing payload name raises KeyError before both guards; model incorrectly calls it ValueError. The proposed guard deletion remains equivalent."
+          }
+        ]
+      },
+      "tool_activity": [
+        {
+          "tool": "builtin skill",
+          "id": "good-offence",
+          "status": "error",
+          "error": "Unable to load skill good-offence",
+          "provider_executed": false,
+          "effect": "No external skill loaded; inline complete policy used."
+        }
+      ],
+      "report_artifact": "parsed-reports-v2-invalid-schema.json"
+    }
+  ],
+  "independent_agent": {
+    "fresh_context": true,
+    "parent_history_inherited": false,
+    "expected_answers_supplied": false,
+    "passed": 5,
+    "total": 5,
+    "policy_version": "v1",
+    "report_artifact": "independent-blind-report.json",
+    "actual_claude_host_test": false
+  },
+  "preflight": {
+    "model_call_made": false,
+    "reason": "Relative output path made schema unavailable before generation; corrected invocation without changing prompt.",
+    "raw_artifacts_retained_by_maintainer": true
+  },
+  "revision": {
+    "scope": "Two generic paragraphs clarify reviewed-head equivalence baseline and request-wide observable authorization behavior; fixtures and expected answers unchanged.",
+    "answer_fed_model_retry": false,
+    "third_model_call": false
+  },
+  "packaging": {
+    "passed": true,
+    "report_artifact": "packaging-report.json",
+    "vendor_files_verified": 6,
+    "entrypoints": [
+      "SKILL.md"
+    ]
+  },
+  "limits": [
+    "Provider-side model identity not independently verified",
+    "Two different frozen policies; second round reuses known fixtures and is not an independent holdout",
+    "No actual Claude-host execution",
+    "No production false-positive-rate measurement",
+    "No marketplace installation test",
+    "No live-repository or GitHub publication test",
+    "No runtime verifier end-to-end rejection/publication test by this evaluator"
+  ],
+  "artifacts": [
+    {
+      "path": "independent-blind-report.json",
+      "sha256": "0acfd9bed29da6dc6908d45985b603326f000d3301de4aeb7e612c89cd7c25fc"
+    },
+    {
+      "path": "packaging-report.json",
+      "sha256": "d93adc33d2f28fee73357328508a2be601ef596069bb9aa17653514f6ba20320"
+    },
+    {
+      "path": "parsed-reports-v2-invalid-schema.json",
+      "sha256": "5e7047d7de90a6b62425e245f48be2ff3c14c2d0940e5ae932970fecb86888d0"
+    },
+    {
+      "path": "reports-v1.json",
+      "sha256": "8cf9c6f1dcdb47236a3254f988bd5104eb3a15cbc4d9addceb681244315a6055"
+    },
+    {
+      "path": "review.md",
+      "sha256": "959fa83a4b5f021f4bd1e3938747e7b3638981f06624ba5b69dafc16d76a4736"
+    }
+  ],
+  "date": "2026-10-28",
+  "canonical_commit": "07c2aaa5052167187f51b823dbf301391e50d1b3"
+}

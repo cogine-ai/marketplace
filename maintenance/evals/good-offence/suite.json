@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "cases": [
+    {
+      "id": "case-01",
+      "input": "cases/case-01/input.md"
+    },
+    {
+      "id": "case-02",
+      "input": "cases/case-02/input.md"
+    },
+    {
+      "id": "case-03",
+      "input": "cases/case-03/input.md"
+    },
+    {
+      "id": "case-04",
+      "input": "cases/case-04/input.md"
+    },
+    {
+      "id": "case-05",
+      "input": "cases/case-05/input.md"
+    }
+  ]
+}

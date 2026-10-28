@@ -1,5 +1,20 @@
 # Upstream sources
 
+## Good Offence — 2026-10-28 (package 0.2.6 candidate)
+
+`good-offence` is maintained here, adapted from Cogine's
+[auto-agents skill at e779a80](https://github.com/cogine-ai/auto-agents/tree/e779a8098a2744e1e2e8627b198c993e511ed744/skills/goodoffencse).
+It gives agents a focused review goal, useful questions and examples, leaving
+investigation and judgment to the agent. Supporting references are read as needed.
+Ponytail **v4.13.0**, the Rob Morris reviewers and their MIT notices retain the
+pins in `skills/good-offence/references/sources.md`. The Ponytail archive uses
+an ordinary Markdown filename. The Cogine adaptation is Apache-2.0.
+
+Auto-agents keeps a reviewed copy with its legacy invocation metadata and a
+simple source record. Scheduling, publication, and local state belong to that
+automation. Development cases live under `maintenance/evals/good-offence`,
+outside the installed skill.
+
 ## Current source unification — 2026-10-08 (package 0.2.5)
 
 [The source registry](../../maintenance/skill-sources.md) selects the edit
@@ -148,7 +163,7 @@ Invocation policy is expressed natively for both hosts:
   `disable-model-invocation: true` for Claude Code and set
   `policy.allow_implicit_invocation: false` in `agents/openai.yaml` for
   Codex.
-- The 18 model-invokable skills omit both controls and use the host defaults.
+- The 19 model-invokable skills omit both controls and use the host defaults.
 - Every skill has `agents/openai.yaml`.
 
 For the Matt imports, raw source regions and supporting files are retained

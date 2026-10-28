@@ -61,3 +61,11 @@ published/available, installed and read back. Then verify the transferred
 rules and disable only their exact `.agents/skills/<name>/SKILL.md` paths.
 Prepared package versions do not establish installed state. Existing
 agents metadata and all historical upstream sync ledgers remain unchanged.
+
+## Good Offence — 2026-10-28
+
+Edit `plugins/coding-engineer-skills/skills/good-offence` here. Auto-agents and
+its local standalone entry carry a reviewed copy, retaining the legacy
+`goodoffencse` entry name and default-prompt invocation. Record the source commit
+when copying the directory. A maintenance agent can compare and copy ordinary
+files; a custom sync tool and per-file lock are unnecessary.

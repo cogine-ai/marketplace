@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "date": "2026-10-08",
+  "date": "2026-10-28",
   "scope": "Cogine sources, standalone mirrors and reviewed local overlays; official bundled and system plugins remain vendor-managed.",
   "role_bundle_default_authority": "plugins/<role-plugin>/skills; upstream pins and adaptations remain in each UPSTREAM.md and current lock.",
   "power_authority": {
@@ -241,6 +241,20 @@
       "runtime_files_byte_equal": true,
       "runtime_files": 15,
       "distribution_rule": "Edit the authority only; update retained consumer snapshots deliberately. Exact Codex path settings control duplicate discovery; shared host directories remain available."
+    },
+    {
+      "name": "good-offence",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coding-engineer-skills/skills/good-offence"
+      },
+      "mirrors_relative_to_home": [
+        ".local/share/good-offence/skills/goodoffencse",
+        ".codex/skills/goodoffencse"
+      ],
+      "runtime_files_byte_equal": false,
+      "runtime_files": 11,
+      "distribution_rule": "Edit the Marketplace skill, then copy the reviewed directory to auto-agents and the local consumer. Preserve the legacy entry name/default prompt and record the source commit. No custom sync program or per-file lock is required."
     }
   ],
   "installer_managed_overlays": [
