@@ -1,6 +1,6 @@
 ---
 name: collaboration
-description: 使用 CogineX 处理频道沟通、日历、提醒、通知、邮件、通话记录、Bot 和 CRM 工作。
+description: 使用 CogineX 处理 Task 查询、创建、更新与讨论，以及频道沟通、日历、提醒、通知、邮件、通话记录、Bot 和 CRM 工作。
 ---
 
 # CogineX 协作
