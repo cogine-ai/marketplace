@@ -1,6 +1,7 @@
 {
   "name": "coginex",
-  "version": "0.2.0",
+  "version": "0.2.1",
+  "icon": "./assets/icon.png",
   "description": "Use CogineX tasks, documents, search, communication, calendar, bots, and CRM from your local agent through the full remote MCP toolset.",
   "author": {
     "name": "Cogine AI",

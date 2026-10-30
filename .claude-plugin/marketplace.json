@@ -10,7 +10,7 @@
       "name": "coginex",
       "source": "./plugins/coginex",
       "description": "Use the full CogineX MCP toolset for tasks, documents, search, communication, calendar, bots, and CRM from a local agent.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "productivity"
     },
     {
