@@ -21,7 +21,7 @@
 
 本次原生调用已验证 `GetXConnectionContext` 的 schemaVersion 2、当前账户和 Team，以及一个 `selfOnly` 临时任务的 `CreateXTask → ReadMetadata → RenameDocument → ReadMetadata → DeleteXTask` 流程；清理确认返回 `deleted`，未发送消息或修改其他业务对象。其余发现到的工具不因此自动计为调用通过，正文读取和历史上传等也未在该流程验收。
 
-Claude 的 CogineX MCP OAuth 已通过本地回调认证；`claude -p` 在任何 MCP 调用前因 Claude Code 自身 Anthropic OAuth 登录失效停止。Claude 业务工具调用仍为 `NOT_RUN`，不能与 MCP 连接认证混为一项。完整证据和后续项见 [验收记录](validation.md)。
+Claude 的 CogineX MCP OAuth 已通过本地回调认证；`claude -p` 在任何 MCP 调用前遇到宿主认证错误。用户已确认没有 Claude Code 账号，业务调用为 `NOT_RUN`，留待具备可用模型账户的测试者补验，不要求当前用户注册。业务调用与 MCP 连接认证应分别记录。完整证据和后续项见 [验收记录](validation.md)。
 
 ### Profile 候选与上线边界
 

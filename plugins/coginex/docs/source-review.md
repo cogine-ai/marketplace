@@ -70,7 +70,7 @@ CogineX 执行，宿主沿用自身的工具授权方式；插件不额外增加
 | 项目 | 当前边界与后续工作 |
 | --- | --- |
 | 线上工具覆盖 | Codex 原生已发现 60 个工具；四个可选 Anthropic 工具和三个非可选设计读取工具未出现，后三项原因仍需核实。未逐项调用的工具不计为业务验收通过。 |
-| 宿主登录和安装 | 两端安装与 CogineX MCP OAuth、Codex 账户查询及私有临时任务闭环已通过。仍需 Claude 自身登录恢复后的业务调用、刷新 / 重登、撤销和真实多账户切换，见 [验收记录](validation.md)。 |
+| 宿主登录和安装 | 两端安装与 CogineX MCP OAuth、Codex 账户查询及私有临时任务闭环已通过。Claude 业务调用因当前用户没有 Claude Code 账号而未验收，需其他具备可用模型账户的测试者补验；另需刷新 / 重登、撤销和真实多账户切换，见 [验收记录](validation.md)。 |
 | 上游尚未开放的操作 | 项目创建 / 移动 / 删除、通用文档删除 / 上传未作为入站 MCP 工具提供。`SendEmail` 被上游 [显式排除](https://github.com/cogine-ai/CogineX-mono/blob/cf473c41cf6b432c3d7a0c50790a3322c0564906/crates/email/src/inbound/toolset/mod.rs#L162)，Feishu `FindDocuments` / `ReadDocument` 属于 DCS 内部工具。这些需要 CogineX 服务实现或开放，插件配置不能补出不存在的接口。 |
 | 本地聊天历史 | 暴露 `UploadXTaskHistorySelection` 仅提供上传接口，不等于自动取得 Codex / Claude Code 聊天记录。宿主记录定位、选择、格式转换和导出需要单独实现。 |
 | 历史上传可靠性 | Work 的 [历史客户端](https://github.com/cogine-ai/CogineWork/blob/f06181cbc864bdc3938d45920a86a5724fdd1c48/src/coginework/app/x_tasks/history_client.py) 和 [上传流程](https://github.com/cogine-ai/CogineWork/blob/f06181cbc864bdc3938d45920a86a5724fdd1c48/src/coginework/task_history/mcp.py) 提供身份绑定、已选内容与持久 outbox 的参考。若后续做宿主历史导出，应保留凭据过滤及幂等 revision 恢复；首版不宣称已具备该采集流程。 |

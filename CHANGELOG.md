@@ -11,7 +11,7 @@
   through a separate development marketplace, preserving existing sources.
 - Pass native Codex OAuth, live tool discovery and private task create/read/rename/
   delete acceptance. Pass Claude MCP OAuth and connection health; its model-driven
-  tool call remains blocked by Claude Code own account login.
+  tool call remains untested because this user has no Claude Code model account.
 - Prepare the read-only Profile adapter in CogineX PR #879 with final-base tests;
   retain deployment, refresh/revoke and multiple-account acceptance limits.
 - Document Claude's plugin-level toggle boundary, account ownership and sharing,
