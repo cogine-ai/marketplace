@@ -1,0 +1,4 @@
+interface:
+  display_name: "CogineX 知识"
+  short_description: "搜索和整理 CogineX 文档、讨论与任务历史，并保留可核对来源。"
+  default_prompt: "搜索相关 CogineX 文档和历史并附来源。"

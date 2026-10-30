@@ -7,6 +7,13 @@
   },
   "plugins": [
     {
+      "name": "coginex",
+      "source": "./plugins/coginex",
+      "description": "Use the full CogineX MCP toolset for tasks, documents, search, communication, calendar, bots, and CRM from a local agent.",
+      "version": "0.2.0",
+      "category": "productivity"
+    },
+    {
       "name": "design-engineer-skills",
       "source": "./plugins/design-engineer-skills",
       "description": "Nine design-engineering skills for UI prototyping, candidate marketing pages, library selection, polish, and motion.",

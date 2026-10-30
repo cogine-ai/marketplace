@@ -1,0 +1,4 @@
+interface:
+  display_name: "CogineX 任务"
+  short_description: "查找和推进 CogineX 任务，编辑内容与属性并回写处理结果。"
+  default_prompt: "查找我的 CogineX 任务并继续处理。"

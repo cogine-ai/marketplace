@@ -1,5 +1,33 @@
 # Changelog
 
+## CogineX 0.2.0 candidate — 2026-10-30
+
+- Add explicit personal/workspace App binding for native Codex account management,
+  retaining default direct MCP and Claude Code OAuth. Keep private App IDs out
+  of the canonical package; a tested helper creates separate bound packages.
+- Add five shared skills and interface metadata for account setup, tasks,
+  knowledge, collaboration and general routing. Respect disabled skill state.
+- Verify native Codex skill toggles independently and install both native hosts
+  through a separate development marketplace, preserving existing sources.
+- Pass native Codex OAuth, live tool discovery and private task create/read/rename/
+  delete acceptance. Pass Claude MCP OAuth and connection health; its model-driven
+  tool call remains untested because this user has no Claude Code model account.
+- Prepare the read-only Profile adapter in CogineX PR #879 with final-base tests;
+  retain deployment, refresh/revoke and multiple-account acceptance limits.
+- Document Claude's plugin-level toggle boundary, account ownership and sharing,
+  plus the GitHub CLI upstream default that must use an explicit CogineX repo.
+
+## CogineX 0.1.0 — 2026-10-29
+
+- Add an internal Codex / Claude Code plugin connecting to the existing CogineX
+  Streamable HTTP MCP endpoint through native OAuth, with no local proxy.
+- Expose the server's complete discovered toolset and add a shared skill for
+  tasks, documents, search, communication, calendar, bots, and CRM.
+- Register both host catalogs and preserve the Marketplace as edit authority.
+- Record source capability coverage, server gaps, host acceptance limits, and
+  Macro naming references that need adjustment. Existing caches and MCP entries
+  remain untouched; source preparation does not imply remote publication.
+
 ## 2026-10-28 — Coding Engineer Skills 0.2.6 candidate
 
 - Add one portable `good-offence` skill for unnecessary defensive mechanisms,

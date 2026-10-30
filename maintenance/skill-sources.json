@@ -3,6 +3,28 @@
   "date": "2026-10-28",
   "scope": "Cogine sources, standalone mirrors and reviewed local overlays; official bundled and system plugins remain vendor-managed.",
   "role_bundle_default_authority": "plugins/<role-plugin>/skills; upstream pins and adaptations remain in each UPSTREAM.md and current lock.",
+  "marketplace_plugin_sources": [
+    {
+      "name": "coginex",
+      "reviewed_on": "2026-10-30",
+      "authority": {
+        "kind": "marketplace maintained source",
+        "path": "plugins/coginex"
+      },
+      "host_manifests": [
+        "plugins/coginex/.codex-plugin/plugin.json",
+        "plugins/coginex/.claude-plugin/plugin.json"
+      ],
+      "distribution_rule": "Edit this Marketplace source. The canonical package has no personal App ID; use prepare_package.py for deliberate App binding in a new consumer package with an origin receipt. Both native hosts share five skills and direct MCP; preserve host manifests, existing Marketplace origins and credentials. Verify replacement before disabling old entries.",
+      "shared_host_entries": [
+        "plugins/coginex/skills/coginex/SKILL.md",
+        "plugins/coginex/skills/setup/SKILL.md",
+        "plugins/coginex/skills/tasks/SKILL.md",
+        "plugins/coginex/skills/knowledge/SKILL.md",
+        "plugins/coginex/skills/collaboration/SKILL.md"
+      ]
+    }
+  ],
   "power_authority": {
     "repository_path_relative_to_our_skills": "CoginePowerGates/cogine-power-gates",
     "commit": "d95315bb9a2357d0f6f7ff573ab5db73e102e234",
