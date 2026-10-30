@@ -1,5 +1,11 @@
 # Changelog
 
+## CogineX 0.2.1 candidate — 2026-10-30
+
+- Use CogineX's existing green X-knot icon for the Codex listing and composer,
+  with the same PNG declared for the Claude plugin directory listing.
+- Preserve the original 512px transparent brand asset and record its source.
+
 ## CogineX 0.2.0 candidate — 2026-10-30
 
 - Add explicit personal/workspace App binding for native Codex account management,
