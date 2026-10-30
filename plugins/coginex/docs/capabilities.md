@@ -23,6 +23,12 @@
 
 Claude 的 CogineX MCP OAuth 已通过本地回调认证；`claude -p` 在任何 MCP 调用前因 Claude Code 自身 Anthropic OAuth 登录失效停止。Claude 业务工具调用仍为 `NOT_RUN`，不能与 MCP 连接认证混为一项。完整证据和后续项见 [验收记录](validation.md)。
 
+### Profile 候选与上线边界
+
+[`GetProfile` 服务 PR #879](https://github.com/cogine-ai/CogineX-mono/pull/879) 当前 head 为 `a647d5250761831f13454aa5375af9ae150fb8d4`，基于 `8d993421f48ec80b373c7af7b7749fa7176dd569`。该提交的 6 个专项测试、完整 MCP 服务 125 个测试（含 9 个隔离本地 PostgreSQL 夹具）及 `just check` 通过；[必要 CI](https://github.com/cogine-ai/CogineX-mono/actions/runs/40986239785) 和 CodeRabbit 检查均成功，PR 已可评审，尚未合并或部署。
+
+这项候选改动使最大源码集合增加为 68；下方仍保留原固定版本的 67 项清单。当前原生发现的 60 项不包含 `GetProfile`，邮箱标签、重连后的稳定 ID 和真实多账户 Profile 识别均尚未在线验收，不能从本地测试或 CI 成功推断为已上线。
+
 ## 完整源码清单
 
 | 类别 | 数量 | 工具名称 |

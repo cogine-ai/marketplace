@@ -19,7 +19,7 @@ Codex 原生连接与该任务流程通过；Claude 的 CogineX MCP OAuth 已通
 | Claude MCP 连接健康 | OAuth 后 `claude mcp get plugin:coginex:coginex` 返回 `Connected`。该健康检查不依赖 Claude 模型账户，也不等同于业务工具调用。 |
 | Claude MCP OAuth | `claude mcp login plugin:coginex:coginex --no-browser` 经本地回调显示认证成功。第一次尝试因浏览器控制延迟超时，清理后第二次完整尝试成功；第一次超时不计为通过。 |
 | Claude 模型与工具调用边界 | `claude -p` 在调用任何 MCP 工具前因 Claude Code 自身 Anthropic OAuth 登录过期停止；`claude auth status` 返回 `loggedIn: false`、first-party 路线且没有 API key。这与已成功的 CogineX MCP OAuth 是两套认证。用户已被提示完成 Claude 官方登录，业务工具调用仍为 `NOT_RUN`。 |
-| Profile 源码 | [CogineX PR #879](https://github.com/cogine-ai/CogineX-mono/pull/879) 最终提交 `a647d5250761831f13454aa5375af9ae150fb8d4` 基于 `8d993421f48ec80b373c7af7b7749fa7176dd569`；6 个专项与完整 MCP 服务 125 个测试（含 9 个本地 PostgreSQL 夹具）及 `just check` 通过。PR 已可评审，CI 的 Rust / CodeRabbit 尚未完成，未合并或部署。补丁不改 SQL，但目标基线含 15 个新增迁移，不能视为已发布或已应用。 |
+| Profile 源码 | [CogineX PR #879](https://github.com/cogine-ai/CogineX-mono/pull/879) 最终提交 `a647d5250761831f13454aa5375af9ae150fb8d4` 基于 `8d993421f48ec80b373c7af7b7749fa7176dd569`；6 个专项与完整 MCP 服务 125 个测试（含 9 个本地 PostgreSQL 夹具）及 `just check` 通过。PR 已可评审，当前必要 CI（含 Affected Rust、Repository result、Changed-code gate）及 CodeRabbit 已全部通过，未合并或部署。补丁不改 SQL，但目标基线含 15 个新增迁移，不能视为已发布或已应用。 |
 | 可移植打包 | `prepare_package.py` 的 15 个标准库测试通过，验证 App / 直接模式、源码不变、来源回执、目录与覆盖行为。生成目录的双端原生隔离安装和严格校验通过，两个目录型 Marketplace 都使用相对 `./` 来源。 |
 | 严格包校验 | Claude 原生严格 manifest 校验通过。目录级图标 / 隐私 URL 建议仍为非阻断建议。 |
 | Claude Skill 开关边界 | 官方文档与本机实现确认 `skillOverrides` 不覆盖插件内 Skill；支持插件整体启停和技能独立调用，不宣称逐项开关与 Codex 等同。 |
@@ -31,7 +31,7 @@ Codex 原生连接与该任务流程通过；Claude 的 CogineX MCP OAuth 已通
 
 ## 待完成
 
-- 用户完成 Claude Code 自身官方登录后，继续 Claude 模型驱动的 CogineX 工具发现、账户查询及已授权的临时任务流程；当前没有把 Claude MCP OAuth 成功记成业务调用成功。
+- 用户完成 Claude Code 自身官方登录后，继续 Claude 模型驱动的 CogineX 工具发现及账户查询；一个私有临时任务的写入与清理已由 Codex 完成，无需重复创建。当前没有把 Claude MCP OAuth 成功记成业务调用成功。
 - 核实线上缺少三个非可选设计读取工具的原因，并确认需要发布的服务版本；当前不能归因为旧部署或缓存。
 - 合入并定向发布 Profile 服务变更，刷新连接器，再验证账户标签及重新连接的稳定 ID。
 - 刷新与断开 / revoke、多真实账户切换，以及同事所处工作区的连接器可见性。

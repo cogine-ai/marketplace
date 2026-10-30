@@ -1,20 +1,22 @@
 # CogineX 本地插件：来源与能力缺口
 
-调研日期：2026-10-29。首版面向内部使用，把 CogineX 已有 MCP 能力提供给
+源码调研日期：2026-10-29；验收与 Profile 状态更新：2026-10-30。首版面向内部使用，把 CogineX 已有 MCP 能力提供给
 Codex / Claude Code；采用宿主原生远程 MCP 连接和 OAuth。插件不另建任务服务，
 也不把 CogineWork 的产品界面范围当成 CogineX 的完整能力范围。
 
-这里记录的是源码证据。工具清单和部署状态可能变化，当前尚未完成带认证的线上
-`tools/list`、实际工具调用及两种宿主的登录验收。
+这里保留固定版本的源码证据。2026-10-30 已完成 Codex 原生 OAuth、60 个工具发现
+及私有临时任务闭环；Claude 的 CogineX MCP OAuth 已通过，模型驱动的业务调用仍为
+`NOT_RUN`。源码清单和线上验收分别记录，完整范围见 [验收记录](validation.md)。
 
-## CogineX 运行时清单
+## CogineX 固定版本源码清单
 
 CogineX 参考版本固定为
 [`cogine-ai/CogineX-mono@cf473c41cf6b432c3d7a0c50790a3322c0564906`](https://github.com/cogine-ai/CogineX-mono/tree/cf473c41cf6b432c3d7a0c50790a3322c0564906)。
 [共享注册表](https://github.com/cogine-ai/CogineX-mono/blob/cf473c41cf6b432c3d7a0c50790a3322c0564906/crates/ai_tools/src/lib.rs#L130)
 有 56 个工具，入站 MCP 的 [服务注册](https://github.com/cogine-ai/CogineX-mono/blob/cf473c41cf6b432c3d7a0c50790a3322c0564906/services/mcp_service/src/tool_service.rs#L130)
 再加入 11 个身份 / 任务适配器，源码最大注册量为 67；四个 Anthropic 工具和
-Subagent 由配置决定，未启用时为 62。线上数量仍需带认证发现确认。
+Subagent 由配置决定。该数量不代表线上部署；本次 Codex 原生实际发现 60 个工具，
+七项差异和未确定的原因见 [能力清单](capabilities.md)。
 
 只采用共享注册表生成的文档会漏掉这 11 个 MCP 专属工具，因此插件以运行时
 发现为准。任务负责人、截止时间、优先级、父任务、子任务及 story points 已可
@@ -67,8 +69,8 @@ CogineX 执行，宿主沿用自身的工具授权方式；插件不额外增加
 
 | 项目 | 当前边界与后续工作 |
 | --- | --- |
-| 线上工具覆盖 | 源码清单不能证明生产部署具备全部工具；登录后读取完整 `tools/list`，核对数量、名称和 schema。 |
-| 宿主登录和安装 | 两端隔离安装、技能与 MCP 配置加载已通过，见 [验收记录](validation.md)。仍需真实 OAuth、刷新或重登、登录后的工具发现，以及只读任务查询和实际工作中的写入验证。 |
+| 线上工具覆盖 | Codex 原生已发现 60 个工具；四个可选 Anthropic 工具和三个非可选设计读取工具未出现，后三项原因仍需核实。未逐项调用的工具不计为业务验收通过。 |
+| 宿主登录和安装 | 两端安装与 CogineX MCP OAuth、Codex 账户查询及私有临时任务闭环已通过。仍需 Claude 自身登录恢复后的业务调用、刷新 / 重登、撤销和真实多账户切换，见 [验收记录](validation.md)。 |
 | 上游尚未开放的操作 | 项目创建 / 移动 / 删除、通用文档删除 / 上传未作为入站 MCP 工具提供。`SendEmail` 被上游 [显式排除](https://github.com/cogine-ai/CogineX-mono/blob/cf473c41cf6b432c3d7a0c50790a3322c0564906/crates/email/src/inbound/toolset/mod.rs#L162)，Feishu `FindDocuments` / `ReadDocument` 属于 DCS 内部工具。这些需要 CogineX 服务实现或开放，插件配置不能补出不存在的接口。 |
 | 本地聊天历史 | 暴露 `UploadXTaskHistorySelection` 仅提供上传接口，不等于自动取得 Codex / Claude Code 聊天记录。宿主记录定位、选择、格式转换和导出需要单独实现。 |
 | 历史上传可靠性 | Work 的 [历史客户端](https://github.com/cogine-ai/CogineWork/blob/f06181cbc864bdc3938d45920a86a5724fdd1c48/src/coginework/app/x_tasks/history_client.py) 和 [上传流程](https://github.com/cogine-ai/CogineWork/blob/f06181cbc864bdc3938d45920a86a5724fdd1c48/src/coginework/task_history/mcp.py) 提供身份绑定、已选内容与持久 outbox 的参考。若后续做宿主历史导出，应保留凭据过滤及幂等 revision 恢复；首版不宣称已具备该采集流程。 |
@@ -97,7 +99,9 @@ CogineX 执行，宿主沿用自身的工具授权方式；插件不额外增加
 
 - Marketplace 候选版升级为 0.2.0，增加 5 个独立技能和原生 Codex App 映射。
 - 对应 [Profile 服务 PR #879](https://github.com/cogine-ai/CogineX-mono/pull/879) 最终提交 `a647d5250761831f13454aa5375af9ae150fb8d4` 已基于 `8d993421f48ec80b373c7af7b7749fa7176dd569` 更新；复用既有 active-account 查询，不增加 SQL 或依赖。
-- Profile 部署后的最大源码注册集合增加为 68；不能把未部署改动当作当前线上工具。
+- 该提交的 6 个专项测试、完整 MCP 服务 125 个测试（含 9 个隔离本地 PostgreSQL 夹具）及 `just check` 通过；[必要 CI](https://github.com/cogine-ai/CogineX-mono/actions/runs/40986239785) 和 CodeRabbit 检查均成功。PR 已可评审，尚未合并或部署。
+- 候选源码加入 `GetProfile` 后的最大注册集合为 68；当前原生发现仍为 60，未包含 `GetProfile`。邮箱标签、重连稳定 ID 与真实多账户 Profile 识别尚未在线验收。
+- 服务发布仍需核实当前运行组件的 SHA / digest 并审查到目标版本的完整差异；目标基线含 15 个新增数据库迁移，不能把本地测试通过当作生产已应用的证据。
 - 新发现的 Macro 工具配置耦合：该 fork 的 GitHub CLI 默认仓库解析为 `macro-inc/macro`。本次 PR 命令显式使用 `--repo cogine-ai/CogineX-mono`；没有向上游创建 PR。
 - 账户与 Skill 控制的宿主差异见 [账户说明](accounts.md)，实际验收状态见 [验收记录](validation.md)。
 
