@@ -1,0 +1,20 @@
+{
+  "name": "coginex",
+  "version": "0.2.0",
+  "description": "Use CogineX tasks, documents, search, communication, calendar, bots, and CRM from your local agent through the full remote MCP toolset.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/coginex",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0",
+  "keywords": [
+    "coginex",
+    "mcp",
+    "tasks",
+    "collaboration",
+    "internal"
+  ],
+  "mcpServers": "./.mcp.json"
+}

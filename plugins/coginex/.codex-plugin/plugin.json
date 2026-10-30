@@ -1,0 +1,46 @@
+{
+  "name": "coginex",
+  "version": "0.2.0",
+  "description": "Use CogineX tasks, documents, search, communication, calendar, bots, and CRM from your local agent through the full remote MCP toolset.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/coginex",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "Apache-2.0",
+  "keywords": [
+    "coginex",
+    "mcp",
+    "tasks",
+    "collaboration",
+    "internal"
+  ],
+  "skills": "./skills/",
+  "apps": "./.app.json",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "CogineX",
+    "shortDescription": "CogineX accounts, tasks, knowledge, and collaboration.",
+    "longDescription": "An internal plugin for CogineX tasks, documents, search, conversations, calendar, reminders, bots, and CRM. Connect with your CogineX account through native OAuth and use every tool published by the MCP server. Tool availability follows the server and your account permissions.",
+    "developerName": "Cogine AI",
+    "websiteURL": "https://x.cogine.ai",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Search",
+      "Orchestration"
+    ],
+    "defaultPrompt": [
+      "连接我的 CogineX 账户并确认当前 Team。",
+      "查找并处理我的 CogineX 任务，将结果写回任务。",
+      "搜索 CogineX 文档和历史，给出带来源的回答。"
+    ]
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CogineX"
+  short_description: "在任务、知识与协作场景之间选择当前启用的 CogineX 工作入口。"
+  default_prompt: "使用 CogineX 完成我的工作请求。"

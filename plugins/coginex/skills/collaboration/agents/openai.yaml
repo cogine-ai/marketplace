@@ -1,0 +1,4 @@
+interface:
+  display_name: "CogineX 协作"
+  short_description: "处理 CogineX 频道、日历、提醒、通知、Bot 与 CRM 工作。"
+  default_prompt: "使用 CogineX 完成这项协作工作。"

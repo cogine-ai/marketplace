@@ -28,6 +28,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 
 | Plugin | Skills | Focus |
 | --- | ---: | --- |
+| [`coginex`](plugins/coginex/README.md) | 5 | Internal CogineX tasks, documents, search, communication, calendar, bots, and CRM through the complete remote MCP toolset. Codex and Claude Code; native OAuth. |
 | `design-engineer-skills` | 9 | UI prototyping, supplementary marketing-page candidates, frontend library selection, polish, animation review, and motion design. |
 | `coding-engineer-skills` | 31 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, UX audits with visual evidence, specs, and tickets. |
@@ -36,8 +37,8 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
 | [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Cursor delivers the first complete result; Codex takes over acceptance and local corrections. Codex only. |
 
-The Codex catalog contains seven plugins. The six role-based skill plugins are
-also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
+The Codex catalog contains eight plugins. CogineX and the six role-based skill
+plugins are also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
 and an authenticated Cursor CLI.
 
 Install any plugin from the table with its ID:
@@ -71,6 +72,12 @@ further delegation. Grok 4.6 xhigh fast remains the execution model. See the
 
 ## Source maintenance
 
+CogineX 0.2.0 prepares native account integration and five shared skills on 2026-10-30. It
+connects directly to the existing CogineX MCP server, exposes its full toolset,
+and includes account setup, task, knowledge and collaboration guidance, plus a source capability review and known gaps. See its
+[installation and acceptance notes](plugins/coginex/README.md). This checkout
+prepares the plugin; remote catalog availability depends on publication.
+
 Product 0.2.4 adds `ux-audit` (产品 UX 巡检) on 2026-10-11. It walks an existing
 product against a design principle and reports its 3–5 strongest violations
 with screenshots or labeled schematics. Refresh the Marketplace and update
@@ -91,8 +98,8 @@ prepared source versions do not imply a published or installed update.
 
 ## Compatibility
 
-Codex is the primary target. The six role-based plugins also ship native Claude
-Code manifests while sharing the same skill folders:
+Codex is the primary target. CogineX and the six role-based plugins also ship
+native Claude Code manifests while sharing the same skill folders:
 
 - Codex catalog: `.agents/plugins/marketplace.json`
 - Codex manifests: `plugins/*/.codex-plugin/plugin.json`
@@ -155,6 +162,12 @@ plugins/founder-ceo-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
   skills/                              # 16 shared skills
+plugins/coginex/
+  .codex-plugin/plugin.json            # Codex manifest
+  .claude-plugin/plugin.json           # Claude Code manifest
+  .mcp.json                           # Full remote CogineX MCP via OAuth
+  skills/                              # 5 shared skills
+  docs/                                # Capabilities, source review, validation
 plugins/cursourcing/
   .codex-plugin/plugin.json            # Codex manifest
   .mcp.json                           # Cursor execution bridge

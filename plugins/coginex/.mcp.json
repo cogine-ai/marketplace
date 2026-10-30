@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "coginex": {
+      "type": "http",
+      "url": "https://mcp.x.cogine.ai/mcp"
+    }
+  }
+}
