@@ -97,6 +97,8 @@ gtag('config', 'GA_MEASUREMENT_ID', {
 
 ### Google Tag Manager (dataLayer)
 
+For the signup example, configure a Custom Event trigger named `signup_completed` and attach it to a GA4 Event tag whose Event Name is `sign_up`.
+
 ```javascript
 // Internal event name; a GTM GA4 Event tag sends it to GA4 as sign_up
 dataLayer.push({

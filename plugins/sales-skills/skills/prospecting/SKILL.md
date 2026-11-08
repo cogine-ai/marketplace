@@ -53,7 +53,7 @@ Output the ICP as a one-paragraph statement plus a checklist of pass/fail criter
 
 Source 2–3× more candidates than the user wants in the final list — qualification will cull aggressively.
 
-- **SaaS / B2B**: combine 2–3 sources for cross-verification. Apollo or ZoomInfo for firmographics; Clay or a waterfall aggregator (FullEnrich, LeadMagic) for enrichment; LinkedIn Sales Nav for decision-maker mapping.
+- **SaaS / B2B**: combine 2–3 sources for cross-verification. Apollo or ZoomInfo for firmographics; Clay or FullEnrich for waterfall enrichment, or LeadMagic for direct enrichment or a configured waterfall; LinkedIn Sales Nav for decision-maker mapping.
 - **Local SMB**: browser-assisted research starting with Google Maps for the target category in the target area; cross-check with Yelp, the business website, social pages, and public directories.
 
 If the user's list quality bar is high, smaller is better. 25 verified leads beats 250 mostly-junk ones.
@@ -134,7 +134,8 @@ Full breakdown in [references/data-sources.md](references/data-sources.md). Quic
 |------------------------------|------------|
 | **Apollo** | B2B / SaaS firmographic + contact discovery |
 | **Clay** | Multi-source enrichment, waterfall lookups, custom scoring |
-| **FullEnrich or LeadMagic** | Waterfall email and phone enrichment through one API |
+| **FullEnrich** | Waterfall email and phone enrichment through one API |
+| **LeadMagic** | Email and phone enrichment. Configure external providers for cross-provider fallback. |
 | **ZoomInfo** | Enterprise B2B contact + intent data |
 | **Hunter or Snov** | Email pattern guessing and verification |
 | **Truelist** | Email deliverability validation (before adding to outreach list) |

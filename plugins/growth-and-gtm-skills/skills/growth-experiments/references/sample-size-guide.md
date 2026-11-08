@@ -264,7 +264,8 @@ Allocation fraction for each arm: _____
 Baseline conversion rate: _____
 MDE I care about: _____
 
-Sample needed per variant: _____ (from tables above)
+Sample required per arm: _____
+Use the tables for a single comparison with equal allocation. For multiple planned comparisons, recalculate using the planned comparison count, correction method, and target power. For unequal allocation, calculate the required sample for each arm using the planned split and target power. Use those arm sizes in the duration formulas below.
 Balanced allocation: Days = Sample per arm × Number of arms / (Daily eligible traffic × Exposure fraction)
 Unequal allocation: Days = max across arms of [Sample required for arm / (Daily eligible traffic × Exposure fraction × Arm allocation)]
 Round collection time up, then apply the minimum-duration rules above.

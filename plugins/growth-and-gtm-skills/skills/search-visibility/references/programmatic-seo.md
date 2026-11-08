@@ -49,9 +49,9 @@ Hierarchy of data defensibility:
 5. Public (anyone can use—weakest)
 
 ### 3. Clean URL Structure
-**Prefer subfolders to subdomains.** Google doesn't rank one above the other, but a subfolder inherits the main site's internal links and structure, while a subdomain needs its own:
-- Good: `yoursite.com/templates/resume/`
-- Bad: `templates.yoursite.com/resume/`
+Choose the URL structure that fits your navigation and operations. A subfolder can reuse the main site's navigation, but both structures need actual, crawlable links to the new pages. Google does not prefer one structure for ranking.
+- Subfolder: `yoursite.com/templates/resume/`
+- Subdomain: `templates.yoursite.com/resume/`
 
 ### 4. Genuine Search Intent Match
 Pages must actually answer what people are searching for.

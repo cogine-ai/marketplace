@@ -35,8 +35,8 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/analytics/references/ga4-implementation.md",
           "upstream_sha256": "a5715de092984fc148b1825f1edc7730813452876f991819c219b477ef03ed6d",
-          "local_sha256": "a5715de092984fc148b1825f1edc7730813452876f991819c219b477ef03ed6d",
-          "mapping": "byte-identical"
+          "local_sha256": "216f1da0a2746fac156af735ff34f463165854799ae9ee0d53aa0d775f347bf0",
+          "mapping": "adapted"
         },
         {
           "path": "references/gtm-implementation.md",
@@ -80,7 +80,7 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/churn-prevention/references/dunning-playbook.md",
           "upstream_sha256": "24b96a01cfba174c9f3adde66d417e7282c0cf31789c2719e6bd37b8ad2ecf8c",
-          "local_sha256": "805e6a7bfe1167bd0d067a6d18ef1eab790875006e8637496eb494e5e252053a",
+          "local_sha256": "351cbe2944f47d530d11bef8098c475fc80965c1b3c3b4860844af10e47a6e7f",
           "mapping": "adapted"
         }
       ]
@@ -116,8 +116,8 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/ab-testing/references/sample-size-guide.md",
           "upstream_sha256": "53525ddf0e904477262dc3dbc89d4bd4205f2e07d655616de91e22a310f768c4",
-          "local_sha256": "53525ddf0e904477262dc3dbc89d4bd4205f2e07d655616de91e22a310f768c4",
-          "mapping": "byte-identical"
+          "local_sha256": "677a8570ea4f0c13d7fb54f493bfdd25779983f5a0daaed142f1de801fc2d769",
+          "mapping": "adapted"
         }
       ]
     },
@@ -188,7 +188,7 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/programmatic-seo/SKILL.md",
           "upstream_sha256": "5fbbf874bcc65cbc8b527bd6074a21168c73e191e1bc2c124438dfae710ccf04",
-          "local_sha256": "d5c70abd74618127f49842a2f2364d6eb2b1cb6645014a2dea54e11de944460f",
+          "local_sha256": "15b90e1e161fdb0ffe1a05a3248ae4bbc5ad1152e600a54ef0a24b29f463ff55",
           "mapping": "adapted"
         },
         {

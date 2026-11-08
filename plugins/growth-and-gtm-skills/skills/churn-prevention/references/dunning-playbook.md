@@ -319,6 +319,7 @@ Final:   Mark subscription as unpaid after last retry
 - **Paddle Billing webhooks** (dot-separated `event_type` names):
   - `transaction.payment_failed` reports a failed payment attempt. Use `subscription_id` to associate the failure with a subscription and check `origin: subscription_recurring` before treating it as a renewal failure. A failed payment attempt alone does not establish churn.
   - `subscription.past_due` reports that the subscription is past due.
+  - For custom dunning, handle `subscription.updated` as well. Stop dunning for that subscription when its status returns from `past_due` to `active` after payment recovery.
   - `subscription.canceled` reports an effective cancellation. A cancellation scheduled for the next billing period emits `subscription.updated` first; retain access according to the current subscription state until that change takes effect.
 - Configure notification subscriptions for these exact names. `subscription.payment_failed` and `subscription.cancelled` are not Paddle Billing event types; do not mix Billing webhooks with the separate Paddle Classic alert names.
 - Verify the [payment-failure](https://developer.paddle.com/webhooks/transactions/transaction-payment-failed/) and [cancellation](https://developer.paddle.com/webhooks/subscriptions/subscription-canceled/) contracts before wiring account state changes.

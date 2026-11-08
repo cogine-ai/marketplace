@@ -332,7 +332,7 @@
           "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
           "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
           "upstream_sha256": "6fdb3e9b00b7b0b115ecac3b1c00e3790f637f190abf598815368722c0a94692",
-          "local_sha256": "1275f8bf299880561f4d69256c1f4f5af3aa2d38d7bcfc330291a25869b6fd0c",
+          "local_sha256": "57c7bbeff9805aa43bba38e9394af9d2e5a25df5f193279ba27738f55e26af64",
           "mapping": "adapted",
           "raw_source_regions": [
             {
