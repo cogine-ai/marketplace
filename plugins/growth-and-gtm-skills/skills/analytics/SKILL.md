@@ -42,6 +42,16 @@ Before implementing tracking, understand:
 - Monitor for issues
 - Clean data > more data
 
+### 5. Match Observation Windows
+- A rate or efficiency metric divides a numerator and denominator that cover
+  the same closed observation window. Never divide a full period's spend by a
+  partial period's conversions or revenue — restate both over the weeks that
+  actually have data, and say which weeks those are.
+- Cohort rates use only cohorts whose observation window has ended. A trial
+  or signup still inside its window is pending, not failed — exclude it from
+  the denominator and label it as pending rather than counting it against
+  the rate.
+
 ---
 
 ## Tracking Plan Framework
@@ -127,6 +137,7 @@ checkout_payment_completed
 - Include relevant context
 - Don't duplicate automatic properties
 - Avoid PII in properties
+- Keep provider-defined names when using automatic or recommended events (e.g. GA4 `click`, `view_search_results`, `purchase`). Map internal business names explicitly; naming a custom event does not make the provider collect it automatically.
 
 ---
 
@@ -140,10 +151,12 @@ checkout_payment_completed
 4. Configure custom events
 5. Mark conversions in Admin
 
-### Custom Event Example
+### Event Example
 
 ```javascript
-gtag('event', 'signup_completed', {
+// GA4's recommended sign_up event, not a custom name, so it feeds built-in reports.
+// Your tracking plan can still call this signup_completed; map the name explicitly.
+gtag('event', 'sign_up', {
   'method': 'email',
   'plan': 'free'
 });

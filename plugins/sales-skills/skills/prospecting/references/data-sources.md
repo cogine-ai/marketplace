@@ -90,7 +90,7 @@ Tool selection guide for prospecting across all three branches.
 
 **Watch out for**:
 - HubSpot acquisition (2023) — bundled into HubSpot Breeze Intelligence now
-- Standalone API still available but pricing/access depends on tier
+- [Legacy free tools were retired on April 30, 2025](https://help.clearbit.com/hc/en-us/articles/31990018203031-Clearbit-Free-Tools-Sunset-April-30th-2025). Use Clearbit only when the customer already has access to the relevant paid feature. For new HubSpot setups, check the available enrichment features and account entitlements before choosing a source.
 
 **Access**: Use its UI, API, or an available connector.
 

@@ -171,30 +171,30 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 - Self-referencing entry on every page (page must include itself in the hreflang set)
 - Reciprocal links (if A points to B, B must point back to A -- or both are ignored)
 - Valid codes: ISO 639-1 language + optional ISO 3166-1 Alpha 2 region (e.g., `en`, `en-GB` -- never `en-UK`)
-- `x-default` present, pointing to fallback page (language selector or default locale)
-- All target URLs return 200, are indexable, and match their canonical URL
+- Consider `x-default` for unmatched language/region users, pointing to an appropriate fallback; it is recommended, not required for other valid annotations.
+- All target URLs return 200 and are crawlable. Check that distinct locale targets are indexable and that same-language duplicate targets follow the preferred-canonical strategy below.
 - No duplicate language-region codes pointing to different URLs
 
-**Common errors:** Missing self-referencing entry (all hreflang ignored). No return tag / one-directional (pair dropped). Invalid codes like `en-UK` (use `en-GB`). Hreflang target is non-canonical, 404, or blocked (cluster discarded). HTML and sitemap annotations disagree (conflicting pair dropped).
+**Common errors:** Missing self-referencing entries. No return tag / one-directional links. Invalid codes like `en-UK` (use `en-GB`). Unintentionally canonicalized targets, 404s, or blocked targets. Conflicting HTML and sitemap annotations. Report the affected URLs and relationships; do not infer that one broken annotation invalidates every other reciprocal pair. Google can still process valid bidirectional relationships. See [Google's localized-page guidance](https://developers.google.com/search/docs/specialty/international/localized-versions#guidelines-for-all-methods).
 
 **At scale:** `<xhtml:link>` children don't count toward 50K URL sitemap limit, but the 50MB file size limit becomes the bottleneck (plan 2K-5K URLs per file with full hreflang). Focus hreflang on pages receiving wrong-language traffic -- not required on every page. For Bing: supplement with `<html lang>` and `<meta http-equiv="content-language">` (Bing treats hreflang as a weak signal).
 
 ### Canonicalization for Multilingual Sites
 
-- Each locale page must self-canonical (e.g., `/ar/page` canonicals to `/ar/page`)
-- Never cross-locale canonical (French to English) -- suppresses the non-canonical locale entirely
-- Canonical URL must appear in the hreflang set -- if not, all hreflang is ignored
-- Canonical overrides hreflang when they conflict
-- Protocol/domain must be consistent across canonical, hreflang, and sitemap (`https` + same domain variant)
+- Use self-referencing canonicals for distinct locale pages, including genuinely translated content. Do not consolidate different-language translations merely because they describe the same product.
+- For similar or duplicate regional pages in the **same language**, choose a preferred canonical and use consistent `hreflang` annotations.
+- Check the selected canonical and regional URL serving separately. Google can consolidate duplicates even when regional alternates are annotated.
+- Canonicals are signals to Google's selection process, not an indexing guarantee.
+- Use the intended protocol and hostname for each URL consistently across canonicals, hreflang, and sitemaps. Regional URLs can be on different domains.
 - Paginated locale pages: self-referencing canonical per page (never canonical page 2+ to page 1)
 
-**Common mistakes:** all locales canonical to English (kills indexing), canonical URL not in hreflang set (silently ignored), protocol mismatch between canonical and hreflang, CMS setting deep page canonical to homepage.
+**Common mistakes:** canonicalizing distinct translations to another language, canonical pointing to an unintended URL, protocol mismatch between canonical and hreflang, CMS setting deep page canonical to homepage.
 
 ### International Sitemaps
 
 **Check for:**
 - `xmlns:xhtml` namespace on `<urlset>`, each `<url>` includes `<xhtml:link>` for all locales including itself
-- `x-default` alternate included; all URLs absolute (full protocol + domain)
+- If a fallback is needed, include an appropriate `x-default` alternate; all URLs absolute (full protocol + domain)
 - Sitemap index in Search Console and robots.txt; split by content type, not by locale
 
 **Next.js caveat:** `alternates.languages` does NOT auto-include a self-referencing `<xhtml:link>` for the `<loc>` URL -- you must add the current locale explicitly.
@@ -221,7 +221,7 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 
 **Thin locale pages:**
 - Helpful content system is site-wide -- many thin locale pages can suppress rankings for strong pages too
-- Don't noindex thin locales (wastes crawl budget) or cross-locale canonical (conflicts with hreflang)
+- Improve or remove thin locale pages as appropriate. Use canonicals for equivalent content, with distinct translations handled separately.
 - Best approach: don't create locale pages you cannot make genuinely helpful
 
 **Check for:**
@@ -405,10 +405,10 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 
 ### Multilingual / Multi-Regional Sites
 - Hreflang errors (missing return tags, invalid codes, no self-reference)
-- Canonical conflicting with hreflang (cross-locale canonical suppresses indexing)
+- Canonicals that contradict the locale strategy, such as a distinct translation canonicalized to another language
 - Thin locale pages dragging down site-wide quality signal
 - Only boilerplate translated, main content identical across locales
-- No x-default fallback declared
+- Unmatched locale users lack an intentional fallback (consider `x-default`; absence alone is not invalid hreflang)
 - Sitemap missing hreflang alternates or missing reciprocal entries
 - IP-based redirects hiding content from Googlebot
 - Framework locale mode hiding locale from URLs

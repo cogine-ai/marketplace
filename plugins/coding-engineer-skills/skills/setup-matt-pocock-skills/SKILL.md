@@ -48,6 +48,8 @@ Default posture: these skills were designed for GitHub. If a `git remote` points
 
 Record the choice in `docs/agents/issue-tracker.md`. The GitHub and GitLab templates carry a "PRs as a request surface" flag, defaulted **off**. Leave it off and don't raise it: a user who wants external PRs in the triage queue can flip the flag in the file later.
 
+For a GitHub or GitLab tracker, identify the intended host and project from the configured workflow and Git remotes. Ask for the exact project URL if the target is missing or ambiguous. Include the target and any required Git initialization or remote addition in the confirmation draft. Preserve existing remotes and use an unused remote name for any approved addition. Before editing the workflow or writing to the tracker, verify the CLI can reach the intended project. If the default project differs, record the approved target in the tracker workflow and select it explicitly with `--repo` (or an explicit project endpoint for API calls).
+
 **Section B: Triage label vocabulary.** Skip this section entirely if the `triage` skill isn't installed (exploration told you), since an uninstalled skill needs no labels.
 
 If it is installed, ask exactly one question:

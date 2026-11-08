@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-07",
+  "package_version": "0.1.3",
+  "scope": "Confirmed P1 corrections only; this partial ledger lists changed packaged files, not complete upstream adoption.",
+  "verification_boundary": "Fixed source commits, current local hashes and reviewed selective mappings. Adapted files retain local overlays. Publication and installation are separate states.",
+  "entries": [
+    {
+      "id": "sales-skills/prospecting",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "可选工具、来源数据≠instructions、外联/CRM授权、三branch+demand branch、第一客户边界"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/SKILL.md",
+          "upstream_sha256": "bb9ca9c00ab0dc87e1ed6bb40afd93e559eabb80139ad788d597ebfa7dd11ccf",
+          "local_sha256": "a7244f0d608d977d69d7fa8f2489f032a1caea30434807d464d6714a5a2a3b8b",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/compliance.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/references/compliance.md",
+          "upstream_sha256": "b7f03614af776e90259f28cc1f484ce22a86c71ef35a1e5a4b9e24b6d89aecd4",
+          "local_sha256": "b81bc05f5d7a54760bb7d2a4dc241e7c4bf0793339729284fb3fa07d527881be",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/data-sources.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/references/data-sources.md",
+          "upstream_sha256": "2262f2172c285b98b1df73974d4cb441c8f835645b4d7ee21a340ff5df2a1182",
+          "local_sha256": "2221e904c00ee69b4b763fc3639a6895081f030f5ea60b70447bc3f8f71d7292",
+          "mapping": "adapted"
+        }
+      ]
+    }
+  ]
+}

@@ -134,7 +134,7 @@ Full breakdown in [references/data-sources.md](references/data-sources.md). Quic
 |------------------------------|------------|
 | **Apollo** | B2B / SaaS firmographic + contact discovery |
 | **Clay** | Multi-source enrichment, waterfall lookups, custom scoring |
-| **Clearbit** | Email-to-company and company enrichment |
+| **Clearbit (existing entitled account)** | Email-to-company and company enrichment after verifying access to the feature |
 | **ZoomInfo** | Enterprise B2B contact + intent data |
 | **Hunter or Snov** | Email pattern guessing and verification |
 | **Truelist** | Email deliverability validation (before adding to outreach list) |

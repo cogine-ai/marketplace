@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-07",
+  "package_version": "0.1.6",
+  "scope": "Confirmed P1 corrections only; this partial ledger lists changed packaged files, not complete upstream adoption.",
+  "verification_boundary": "Fixed source commits, current local hashes and reviewed selective mappings. Adapted files retain local overlays. Publication and installation are separate states.",
+  "entries": [
+    {
+      "id": "design-engineer-skills/emil-design-eng",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/emilkowalski/skills",
+          "source_commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+          "source_path": "skills/emil-design-eng/SKILL.md",
+          "upstream_sha256": "965cc3108047a1f68e504977ae7816c66115b202a32e7509c0b8305314839c54",
+          "local_sha256": "965cc3108047a1f68e504977ae7816c66115b202a32e7509c0b8305314839c54",
+          "mapping": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "design-engineer-skills/improve-animations",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [],
+      "files": [
+        {
+          "path": "AUDIT.md",
+          "source_repository": "https://github.com/emilkowalski/skills",
+          "source_commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+          "source_path": "skills/improve-animations/AUDIT.md",
+          "upstream_sha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed",
+          "local_sha256": "63fa8fcf7e7b3a3e252938e55c60e1f399f607e73553163e8dacf9df40f3ebed",
+          "mapping": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "design-engineer-skills/review-animations",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/emilkowalski/skills",
+          "source_commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+          "source_path": "skills/review-animations/SKILL.md",
+          "upstream_sha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
+          "local_sha256": "669693c85829cb409125929d2814b4ab4ef9da760e216b170a55a75fd8ba3e53",
+          "mapping": "adapted"
+        },
+        {
+          "path": "STANDARDS.md",
+          "source_repository": "https://github.com/emilkowalski/skills",
+          "source_commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+          "source_path": "skills/review-animations/STANDARDS.md",
+          "upstream_sha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657",
+          "local_sha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657",
+          "mapping": "byte-identical"
+        }
+      ]
+    }
+  ]
+}

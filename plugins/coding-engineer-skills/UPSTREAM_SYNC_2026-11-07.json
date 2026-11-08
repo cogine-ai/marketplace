@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-07",
+  "package_version": "0.2.7",
+  "scope": "Confirmed P1 corrections only; this partial ledger lists changed packaged files, not complete upstream adoption.",
+  "verification_boundary": "Fixed source commits, current local hashes and reviewed selective mappings. Adapted files retain local overlays. Publication and installation are separate states.",
+  "entries": [
+    {
+      "id": "coding-engineer-skills/setup-matt-pocock-skills",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "GitHub seed 已有 REST author_association/comments 和 dependency 查询修复，不应整文件回退",
+        "issue-tracker-local.md 的 issues/<NN>-<slug>.md 路径",
+        "namespaced to-spec/to-tickets/domain-modeling 调用，已排除 grill-with-docs/wayfinder/triage",
+        "preserve 既有 multi-context map；monorepo 信号不能替代业务上下文判断",
+        "新增 label 创建必须与 setup/发布授权区分；不能让票据发布自动创建新 label"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/mattpocock/skills",
+          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+          "upstream_sha256": "b01e05bfe8c323171275c6ceec78b12f1bd4c62dfd26c2cfe8be806d3883f1ed",
+          "local_sha256": "7854f683ec27631a350eaac0751690b49d0c7198692b9dd5bfcd9a4f6371e3f0",
+          "mapping": "adapted"
+        },
+        {
+          "path": "issue-tracker-github.md",
+          "source_repository": "https://github.com/mattpocock/skills",
+          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+          "upstream_sha256": "6fdb3e9b00b7b0b115ecac3b1c00e3790f637f190abf598815368722c0a94692",
+          "local_sha256": "1275f8bf299880561f4d69256c1f4f5af3aa2d38d7bcfc330291a25869b6fd0c",
+          "mapping": "adapted"
+        },
+        {
+          "path": "issue-tracker-gitlab.md",
+          "source_repository": "https://github.com/mattpocock/skills",
+          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+          "upstream_sha256": "947602d33a80f98f939fb990995b8f95a3459b114b919c4221d08bd75d7cffe0",
+          "local_sha256": "22b294ca9c8bb3af640bedc93fe9429b41216d4156c36542d45e0c4b9345cba1",
+          "mapping": "adapted"
+        }
+      ]
+    }
+  ]
+}
