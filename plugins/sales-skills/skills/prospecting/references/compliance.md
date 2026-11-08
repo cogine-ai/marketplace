@@ -81,7 +81,7 @@ Stricter than CAN-SPAM. Cold B2B outreach requires:
 - Storing Place IDs or large structured Maps data in your CRM: explicit ToS prohibition
 - Use Maps to **find** local businesses, then cross-source from the business's own site for the data you retain
 
-### Apollo / ZoomInfo / Clearbit
+### Apollo / ZoomInfo / other licensed data providers
 
 - All have their own ToS limiting reselling, downstream sharing, and use cases
 - Read your contract — typically you can use the data for your own outreach but not productize it

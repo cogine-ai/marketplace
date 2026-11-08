@@ -14,7 +14,7 @@ Tool selection guide for prospecting across all three branches.
 | **Funding signals (SaaS)** | Crunchbase, Pitchbook | Crunchbase free tier sufficient for early signals; Pitchbook for deeper investor data |
 | **Email pattern discovery** | Hunter, Snov, Apollo | Pattern guessing — followed by verification |
 | **Email deliverability verification** | Truelist, Hunter, NeverBounce, ZeroBounce | Always verify before adding to outreach lists |
-| **Visitor identification (warm intent)** | RB2B, Clearbit Reveal | Anonymous traffic → company identification |
+| **Visitor identification (warm intent)** | RB2B, Warmly, Vector, Ploy ◆ (sites hosted on Ploy) | Anonymous traffic → company or person identification |
 | **Intent data** | ZoomInfo Intent, 6sense, Bombora | Pre-warmed signals; mid-market+ pricing |
 | **Trigger event monitoring** | Google Alerts, Feedly, LinkedIn Sales Nav alerts | Free options are sufficient for most |
 | **Local business discovery** | Google Maps (manual), Yelp, Facebook Pages | Browser-assisted, not bulk-extracted |
@@ -45,7 +45,7 @@ Tool selection guide for prospecting across all three branches.
 **Use for**: Multi-source enrichment, waterfall lookups, custom scoring logic. When list quality matters more than list size.
 
 **Strengths**:
-- Waterfall logic: try Apollo first → fallback to ZoomInfo → fallback to Clearbit
+- Waterfall logic: query available providers in order and stop at the first verified result.
 - 100+ data provider integrations
 - AI-powered enrichment (LLM-driven extraction from URLs)
 - Custom columns + scoring formulas
@@ -78,21 +78,11 @@ Tool selection guide for prospecting across all three branches.
 
 ---
 
-## Clearbit
+## Clearbit (legacy)
 
-**Use for**: Email → company enrichment, anonymous visitor identification (Clearbit Reveal).
+Clearbit was absorbed into HubSpot (Breeze Intelligence). Its free tools ended in 2025, and new standalone API access is no longer generally available. Use HubSpot's enrichment if you're on HubSpot; otherwise use the providers above.
 
-**Strengths**:
-- Strong company enrichment (industry, size, funding, tech stack)
-- Email lookup by domain
-- Reveal: identify anonymous site visitors at company level
-- API-first
-
-**Watch out for**:
-- HubSpot acquisition (2023) — bundled into HubSpot Breeze Intelligence now
-- [Legacy free tools were retired on April 30, 2025](https://help.clearbit.com/hc/en-us/articles/31990018203031-Clearbit-Free-Tools-Sunset-April-30th-2025). Use Clearbit only when the customer already has access to the relevant paid feature. For new HubSpot setups, check the available enrichment features and account entitlements before choosing a source.
-
-**Access**: Use its UI, API, or an available connector.
+**Integration**: see [clearbit.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/clearbit.md)
 
 ---
 
@@ -237,7 +227,7 @@ Discovery happens on platforms (manual browser-assisted research). Extraction ha
 
 ---
 
-## RB2B / Clearbit Reveal
+## Visitor identification (RB2B, Warmly, Vector)
 
 **Use for**: Identifying anonymous site visitors as warm intent signals.
 
