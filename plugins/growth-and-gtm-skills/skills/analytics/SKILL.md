@@ -280,9 +280,9 @@ dataLayer.push({
 
 ## Conversions
 
-| Conversion | Event | Counting |
-|------------|-------|----------|
-| Signup | signup_completed | Once per session |
+| Conversion | GA4 event | Counting |
+|------------|-----------|----------|
+| Signup | sign_up (mapped from internal signup_completed) | Once per session |
 ```
 
 ---

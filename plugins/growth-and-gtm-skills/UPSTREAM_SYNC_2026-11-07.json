@@ -17,7 +17,7 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/analytics/SKILL.md",
           "upstream_sha256": "c8cb2cbeb318393d3a014ebed366ae13e6cd84d205cb6a2ac03890698639a146",
-          "local_sha256": "6d19e463bcab31d8572b1d9b348babd61e0daac6834ea2fc747a2da9f8a1c129",
+          "local_sha256": "ca235e70763cbdefaf73d8eca87ce77eb9ff61105775ba0014834ed7a9e071f5",
           "mapping": "adapted"
         },
         {
@@ -80,7 +80,7 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/churn-prevention/references/dunning-playbook.md",
           "upstream_sha256": "24b96a01cfba174c9f3adde66d417e7282c0cf31789c2719e6bd37b8ad2ecf8c",
-          "local_sha256": "351cbe2944f47d530d11bef8098c475fc80965c1b3c3b4860844af10e47a6e7f",
+          "local_sha256": "9e09d666d8d319a15a4ac94ee84abbee7e74eb71481f41499b7dc335a91da637",
           "mapping": "adapted"
         }
       ]
@@ -116,7 +116,7 @@
           "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
           "source_path": "skills/ab-testing/references/sample-size-guide.md",
           "upstream_sha256": "53525ddf0e904477262dc3dbc89d4bd4205f2e07d655616de91e22a310f768c4",
-          "local_sha256": "677a8570ea4f0c13d7fb54f493bfdd25779983f5a0daaed142f1de801fc2d769",
+          "local_sha256": "611975b0084a7513bcc7d7941c19b0090ad6eef756a50b893b3e362f3a59f85b",
           "mapping": "adapted"
         }
       ]

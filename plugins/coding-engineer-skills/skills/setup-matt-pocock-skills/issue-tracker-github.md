@@ -14,7 +14,7 @@ Issues and specs for this repo live as GitHub issues. Use the `gh` CLI for all o
 
 Infer the repo from `git remote -v`; `gh` does this automatically when run inside a clone.
 
-Before the first tracker write of a session, compare the CLI's target (`gh repo view --json url,nameWithOwner`) with the intended tracker. In a fork, the default can be the upstream parent. If the target differs, verify the intended repository and use `--repo <host>/<owner>/<repo>` on each CLI write, including comments, edits, and closes. For API writes, use an endpoint that explicitly identifies the intended repository and host. Ask only if the intended tracker is unclear.
+Before the first tracker read or write, compare the CLI’s target (`gh repo view --json url,nameWithOwner`) with the intended tracker. In a fork, the default can be the upstream parent. If the target differs, verify the intended repository and use `--repo <host>/<owner>/<repo>` on every related CLI read and write. Use explicit repository endpoints and the intended host for API calls. If any information was fetched from a different repository, fetch it again from the intended tracker before acting. Ask only if the intended tracker is unclear.
 
 ## Pull requests as a triage surface
 

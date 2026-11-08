@@ -265,7 +265,7 @@ Baseline conversion rate: _____
 MDE I care about: _____
 
 Sample required per arm: _____
-Use the tables for a single comparison with equal allocation. For multiple planned comparisons, recalculate using the planned comparison count, correction method, and target power. For unequal allocation, calculate the required sample for each arm using the planned split and target power. Use those arm sizes in the duration formulas below.
+Use the tables only for a single comparison with equal allocation, two-sided α = 0.05, and 80% power. If α, sidedness, or target power differs, recalculate using the planned values. For multiple planned comparisons, recalculate using the planned comparison count, correction method, and target power. For unequal allocation, calculate the required sample for each arm using the planned split and target power. Use those arm sizes in the duration formulas below.
 Balanced allocation: Days = Sample per arm × Number of arms / (Daily eligible traffic × Exposure fraction)
 Unequal allocation: Days = max across arms of [Sample required for arm / (Daily eligible traffic × Exposure fraction × Arm allocation)]
 Round collection time up, then apply the minimum-duration rules above.

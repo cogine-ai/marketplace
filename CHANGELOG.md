@@ -1,5 +1,12 @@
 # Changelog
 
+## Coding Engineer Skills 0.3.0 candidate — 2026-11-08
+
+- Retire `coding-engineer-skills:implement` from the Codex and Claude Code
+  bundles. Ask the coding agent to implement a spec or ticket directly and
+  invoke `coding-engineer-skills:tdd` when test-first development is needed.
+  The bundle now has 30 skills, including 11 explicit-only commands.
+
 ## CogineX 0.2.1 candidate — 2026-10-30
 
 - Use CogineX's X-knot icon in the current orange theme for the Codex listing and composer,

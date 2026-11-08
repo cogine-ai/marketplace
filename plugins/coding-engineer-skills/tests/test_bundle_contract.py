@@ -21,7 +21,6 @@ VALIDATOR_SPEC.loader.exec_module(VALIDATOR)
 USER_ONLY = {
     "cogine-multirepo-worker",
     "cogine-orchestrator",
-    "implement",
     "improve-codebase-architecture",
     "local-ultra-review",
     "loop-on-ci",
@@ -45,6 +44,7 @@ MODEL_INVOKED = {
     "fix-ci",
     "fix-merge-conflicts",
     "frontend-design",
+    "good-offence",
     "grilling",
     "plan-devex-review",
     "run-smoke-tests",
@@ -61,7 +61,6 @@ CURRENT_MATT_IMPORTS = {
     "domain-modeling",
     "fix-merge-conflicts",
     "grilling",
-    "implement",
     "improve-codebase-architecture",
     "setup-matt-pocock-skills",
     "tdd",
@@ -70,7 +69,6 @@ CURRENT_MATT_IMPORTS = {
 }
 
 REQUIRED_SKILL_REFERENCES = {
-    "implement": {"tdd"},
     "tdd": {"codebase-design"},
     "code-review": {"setup-matt-pocock-skills"},
     "improve-codebase-architecture": {
@@ -136,15 +134,7 @@ class BundleContractTests(unittest.TestCase):
             VALIDATOR.contains_bare_skill_call("Open /tdd/SKILL.md", "tdd")
         )
 
-    def test_implement_uses_the_local_pre_commit_review_instead_of_code_review(self):
-        text = (SKILLS_ROOT / "implement" / "SKILL.md").read_text(encoding="utf-8")
-        review = "review the work against the originating spec or tickets"
-        commit = "Commit your work to the current branch."
-        self.assertIn(review, text)
-        self.assertIn(commit, text)
-        self.assertLess(text.index(review), text.index(commit))
-        self.assertNotIn("coding-engineer-skills:code-review", text)
-
+    def test_code_review_remains_scoped_to_committed_changes(self):
         code_review = (SKILLS_ROOT / "code-review" / "SKILL.md").read_text(
             encoding="utf-8"
         )

@@ -30,7 +30,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | --- | ---: | --- |
 | [`coginex`](plugins/coginex/README.md) | 5 | Internal CogineX tasks, documents, search, communication, calendar, bots, and CRM through the complete remote MCP toolset. Codex and Claude Code; native OAuth. |
 | `design-engineer-skills` | 9 | UI prototyping, supplementary marketing-page candidates, frontend library selection, polish, animation review, and motion design. |
-| `coding-engineer-skills` | 31 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
+| `coding-engineer-skills` | 30 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 16 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, UX audits with visual evidence, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
