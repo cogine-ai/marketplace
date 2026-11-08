@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-07",
+  "package_version": "0.2.5",
+  "scope": "Confirmed P1 corrections only; this partial ledger lists changed packaged files, not complete upstream adoption.",
+  "verification_boundary": "Fixed source commits, current local hashes and reviewed selective mappings. Adapted files retain local overlays. Publication and installation are separate states.",
+  "entries": [
+    {
+      "id": "product-manager-skills/ui-ux-pro-max",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+          "upstream_sha256": "9aa50bd44076db28624ea976056d915905ab9357748f90263a004fa0ef087147",
+          "local_sha256": "597b6acb0c8af07e3fa1965ec989e2f976db1f7223ab4e362f5aff679a9fc4f3",
+          "mapping": "adapted"
+        },
+        {
+          "path": "data/catalog-summary.json",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/data/catalog-summary.json",
+          "upstream_sha256": "9fa00e187772ce230c944c42618fcf1325feeb2af878e420eb2f78773d37ab4c",
+          "local_sha256": "9fa00e187772ce230c944c42618fcf1325feeb2af878e420eb2f78773d37ab4c",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "data/data-provenance.json",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/data/data-provenance.json",
+          "upstream_sha256": "91bc29a20cc74fa23e1bc71c10fdea62a6621843b120765f1c1396045a6751e4",
+          "local_sha256": "91bc29a20cc74fa23e1bc71c10fdea62a6621843b120765f1c1396045a6751e4",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "data/products.csv",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/data/products.csv",
+          "upstream_sha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361",
+          "local_sha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "data/stacks/nuxt-ui.csv",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+          "upstream_sha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328",
+          "local_sha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "data/styles.csv",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/data/styles.csv",
+          "upstream_sha256": "a9b6cadbd1cb9e7cb8398a3b445e0691d01e42ed5e5efa60a5d0c08c99c8100d",
+          "local_sha256": "a9b6cadbd1cb9e7cb8398a3b445e0691d01e42ed5e5efa60a5d0c08c99c8100d",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "scripts/core.py",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/scripts/core.py",
+          "upstream_sha256": "caf92bdcf2579c9a7d6af4f53c54ee9d3c8f05472cfab77aaec38bef120ec63e",
+          "local_sha256": "514dc1c76643f15ac3e1c5d6e1b6feea21445142a41de761ef6f365aaf114eb0",
+          "mapping": "adapted"
+        },
+        {
+          "path": "scripts/search.py",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/scripts/search.py",
+          "upstream_sha256": "9fd5acc991142fd43c3afe7be0f6720911b668f3988b34e74b5cbc41d58e7947",
+          "local_sha256": "9fd5acc991142fd43c3afe7be0f6720911b668f3988b34e74b5cbc41d58e7947",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "scripts/tests/test_rtl_support.py",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_rtl_support.py",
+          "upstream_sha256": "fb1c42f782d1929959c5adaefb8169b187b1446a17720ed4f0691b1cd3bb7898",
+          "local_sha256": "3df28b646a4e4647e13bee84e6950b722afb9306b813ea2e884c60d3c90d773b",
+          "mapping": "adapted"
+        },
+        {
+          "path": "scripts/tests/test_style_taxonomy.py",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+          "upstream_sha256": "58c14be6c741de5382e3aeca858480570ba96d374532c3b22f44851a02d3076b",
+          "local_sha256": "58c14be6c741de5382e3aeca858480570ba96d374532c3b22f44851a02d3076b",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "scripts/tests/test_web_stack_freshness.py",
+          "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "source_commit": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+          "source_path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+          "upstream_sha256": "83a6d597410f442441cdb17d0913be151404a608ada6a2487dd2bfe2fbf31e5d",
+          "local_sha256": "f7746f45540ea5294053d5f05720871d211b1cca8ad0aa4d0ee4e5254c432b20",
+          "mapping": "adapted"
+        }
+      ]
+    }
+  ]
+}

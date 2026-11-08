@@ -18,8 +18,8 @@ Prospecting motions differ enough that the workflow forks at intake. Pick **one*
 
 | Branch | Sell to | What "qualified" looks like | Primary sources |
 |--------|---------|----------------------------|----------------|
-| **SaaS** | Other SaaS companies / digital businesses | ICP fit + tech stack match + growth signals (funding, hiring, product velocity) | LinkedIn, BuiltWith, Crunchbase, Apollo, Clay, Clearbit, ProductHunt |
-| **B2B** | Non-SaaS B2B (services, manufacturers, enterprises, mid-market) | Industry + size + geographic fit + buying signals (trigger events, vendor changes) | Apollo, ZoomInfo, Clay, Clearbit, LinkedIn Sales Nav, industry directories |
+| **SaaS** | Other SaaS companies / digital businesses | ICP fit + tech stack match + growth signals (funding, hiring, product velocity) | LinkedIn, BuiltWith, Crunchbase, Apollo, Clay, ProductHunt |
+| **B2B** | Non-SaaS B2B (services, manufacturers, enterprises, mid-market) | Industry + size + geographic fit + buying signals (trigger events, vendor changes) | Apollo, ZoomInfo, Clay, LinkedIn Sales Nav, industry directories |
 | **Local SMB** | Local small businesses (shops, gyms, restaurants, clinics, salons, services) | Active business + website status + proximity + decision-maker access | Google Maps, Yelp, local directories, Facebook, business websites |
 | **Demand-signal** | Early-stage: your first customers, design partners, or beta users | Evidence of the exact pain/demand/timing signal — a cited public source, not just firmographic fit | Forums, communities, reviews, GitHub issues, job posts, launch announcements |
 
@@ -53,7 +53,7 @@ Output the ICP as a one-paragraph statement plus a checklist of pass/fail criter
 
 Source 2–3× more candidates than the user wants in the final list — qualification will cull aggressively.
 
-- **SaaS / B2B**: combine 2–3 sources for cross-verification. Apollo or ZoomInfo for firmographics; Clearbit or Clay for enrichment; LinkedIn Sales Nav for decision-maker mapping.
+- **SaaS / B2B**: combine 2–3 sources for cross-verification. Apollo or ZoomInfo for firmographics; Clay or FullEnrich for waterfall enrichment, or LeadMagic for direct enrichment or a configured waterfall; LinkedIn Sales Nav for decision-maker mapping.
 - **Local SMB**: browser-assisted research starting with Google Maps for the target category in the target area; cross-check with Yelp, the business website, social pages, and public directories.
 
 If the user's list quality bar is high, smaller is better. 25 verified leads beats 250 mostly-junk ones.
@@ -105,7 +105,7 @@ These apply to every branch. **Read first, every engagement.**
 4. **GDPR / CAN-SPAM / CASL aware.** Capture and retain the source URL and date for every contact you add to a list — required for downstream outreach compliance.
 5. **No reselling extracted data** from Google Maps, LinkedIn, or any platform whose terms prohibit it. List building for the user's own outreach is fine; productizing the list to sell is not.
 6. **Rate limit yourself.** Even on public sources, space requests. Don't fingerprint as a bot.
-7. **No breached, leaked, or unprovenanced data.** Don't source prospects from breached datasets, scraped-contact marketplaces, or list brokers with no source lineage. Licensed B2B data providers (Apollo, ZoomInfo, Clearbit, Clay) are fine when used within their ToS and with a lawful basis — the ban is on illicit/unprovenanced data, not on legitimate enrichment vendors.
+7. **No breached, leaked, or unprovenanced data.** Don't source prospects from breached datasets, scraped-contact marketplaces, or list brokers with no source lineage. Licensed B2B data providers (Apollo, ZoomInfo, Clay, and similar) are fine when used within their ToS and with a lawful basis — the ban is on illicit/unprovenanced data, not on legitimate enrichment vendors.
 8. **Never target or infer sensitive traits.** Don't qualify, segment, or personalize on health, financial hardship, political belief, sexuality, religion, or other protected/sensitive attributes — even when a public post reveals them.
 
 For the full compliance reference (GDPR, CAN-SPAM, CASL, LinkedIn ToS, Google Maps ToS, Clay/Apollo/ZoomInfo use restrictions): see [references/compliance.md](references/compliance.md).
@@ -134,7 +134,8 @@ Full breakdown in [references/data-sources.md](references/data-sources.md). Quic
 |------------------------------|------------|
 | **Apollo** | B2B / SaaS firmographic + contact discovery |
 | **Clay** | Multi-source enrichment, waterfall lookups, custom scoring |
-| **Clearbit** | Email-to-company and company enrichment |
+| **FullEnrich** | Waterfall email and phone enrichment through one API |
+| **LeadMagic** | Email and phone enrichment. Configure external providers for cross-provider fallback. |
 | **ZoomInfo** | Enterprise B2B contact + intent data |
 | **Hunter or Snov** | Email pattern guessing and verification |
 | **Truelist** | Email deliverability validation (before adding to outreach list) |

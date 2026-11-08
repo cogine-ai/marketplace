@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-07",
+  "package_version": "0.1.3",
+  "scope": "Confirmed P1 corrections only; this partial ledger lists changed packaged files, not complete upstream adoption.",
+  "verification_boundary": "Fixed source commits, current local hashes and reviewed selective mappings. Adapted files retain local overlays. Publication and installation are separate states.",
+  "entries": [
+    {
+      "id": "sales-skills/prospecting",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "可选工具、来源数据≠instructions、外联/CRM授权、三branch+demand branch、第一客户边界"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/SKILL.md",
+          "upstream_sha256": "bb9ca9c00ab0dc87e1ed6bb40afd93e559eabb80139ad788d597ebfa7dd11ccf",
+          "local_sha256": "bc653e0ee13c5d9d89033875920901ce702e0cc452a609390e039d6f21ae380b",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/b2b-prospecting.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/references/b2b-prospecting.md",
+          "upstream_sha256": "b7a05da9d1584cc8d21432a43fe1ba802c4f9a6c601e3885d4117cc9d4d52f37",
+          "local_sha256": "b7a05da9d1584cc8d21432a43fe1ba802c4f9a6c601e3885d4117cc9d4d52f37",
+          "mapping": "byte-identical"
+        },
+        {
+          "path": "references/compliance.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/references/compliance.md",
+          "upstream_sha256": "b7f03614af776e90259f28cc1f484ce22a86c71ef35a1e5a4b9e24b6d89aecd4",
+          "local_sha256": "69bbd5cf25f17df2b7941ba97b5e639cf6c870766a554e1af4521752cc8548e6",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/data-sources.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/references/data-sources.md",
+          "upstream_sha256": "2262f2172c285b98b1df73974d4cb441c8f835645b4d7ee21a340ff5df2a1182",
+          "local_sha256": "0ccb4c5952e10e663b6991391c16ef3eaaa0070ae81cc654e2e4485a5757ef25",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/saas-prospecting.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/prospecting/references/saas-prospecting.md",
+          "upstream_sha256": "18be53f055f3f8a2ca647dccc8d8d8d177a0df5820193463542f87fa4eeafcf8",
+          "local_sha256": "38c38fa24777f16f66a252ce9ce9720195395e6a8cc8ca726fc5737d98eb48c1",
+          "mapping": "adapted"
+        }
+      ]
+    }
+  ]
+}

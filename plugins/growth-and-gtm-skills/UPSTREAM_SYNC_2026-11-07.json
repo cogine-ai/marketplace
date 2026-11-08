@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-07",
+  "package_version": "0.1.7",
+  "scope": "Confirmed P1 corrections only; this partial ledger lists changed packaged files, not complete upstream adoption.",
+  "verification_boundary": "Fixed source commits, current local hashes and reviewed selective mappings. Adapted files retain local overlays. Publication and installation are separate states.",
+  "entries": [
+    {
+      "id": "growth-and-gtm-skills/analytics",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "工具可用性核验、短trigger、bundled routes"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/analytics/SKILL.md",
+          "upstream_sha256": "c8cb2cbeb318393d3a014ebed366ae13e6cd84d205cb6a2ac03890698639a146",
+          "local_sha256": "ca235e70763cbdefaf73d8eca87ce77eb9ff61105775ba0014834ed7a9e071f5",
+          "mapping": "adapted"
+        },
+        {
+          "path": "evals/evals.json",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/analytics/evals/evals.json",
+          "upstream_sha256": "526f4bf20cedca26906dd0c3dfb6ae67de3f5b17977eb426820ca406c5ce0e59",
+          "local_sha256": "1cd1aa6512bd41ac0c47343a4a248207b4f243cee51145b2f881f449f5ba3bd5",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/ga4-implementation.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/analytics/references/ga4-implementation.md",
+          "upstream_sha256": "a5715de092984fc148b1825f1edc7730813452876f991819c219b477ef03ed6d",
+          "local_sha256": "216f1da0a2746fac156af735ff34f463165854799ae9ee0d53aa0d775f347bf0",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/gtm-implementation.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/analytics/references/gtm-implementation.md",
+          "upstream_sha256": "0b161102de710c978cc2ac52c78c79f32e184bc028aa946eba18e777d7a60d64",
+          "local_sha256": "0b161102de710c978cc2ac52c78c79f32e184bc028aa946eba18e777d7a60d64",
+          "mapping": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "growth-and-gtm-skills/churn-prevention",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "可选工具、取消流与实验路由、无强连接器"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/churn-prevention/SKILL.md",
+          "upstream_sha256": "425497b9c3415fa91a5cc4a7140a1bee727d3b6398beed1bb4fa4880503c0355",
+          "local_sha256": "27da58a84072161c0955fd0a7a79156f2854654153419265d501caf075716001",
+          "mapping": "adapted"
+        },
+        {
+          "path": "evals/evals.json",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/churn-prevention/evals/evals.json",
+          "upstream_sha256": "ee85b927a1bea665b0c080034c76dcc1a81c57be1f4e974a664c7f62c4329dfd",
+          "local_sha256": "cc3408b68789c1ef58b00af3a8b58b8f50261b8e77cb0f7eed50a8b1680dd06f",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/dunning-playbook.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/churn-prevention/references/dunning-playbook.md",
+          "upstream_sha256": "24b96a01cfba174c9f3adde66d417e7282c0cf31789c2719e6bd37b8ad2ecf8c",
+          "local_sha256": "9e09d666d8d319a15a4ac94ee84abbee7e74eb71481f41499b7dc335a91da637",
+          "mapping": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "growth-and-gtm-skills/growth-experiments",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "validity gates、可复現scripts、预登记/assignment/SRM、无效实验不选winner"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/ab-testing/SKILL.md",
+          "upstream_sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+          "local_sha256": "cdb0362b13e0aa712617265f9991a69992736398587fb8d1d6a0022574d4c688",
+          "mapping": "adapted"
+        },
+        {
+          "path": "evals/evals.json",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/ab-testing/evals/evals.json",
+          "upstream_sha256": "fb32e1f75fc70e339e71f88b1cf10bd9f3d1835178a62d1156ed7dddc278f061",
+          "local_sha256": "e53e6a4502c25fb69908d72ef06b93592f7a123033ee308883bf5cb432c0cc01",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/sample-size-guide.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/ab-testing/references/sample-size-guide.md",
+          "upstream_sha256": "53525ddf0e904477262dc3dbc89d4bd4205f2e07d655616de91e22a310f768c4",
+          "local_sha256": "611975b0084a7513bcc7d7941c19b0090ad6eef756a50b893b3e362f3a59f85b",
+          "mapping": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "growth-and-gtm-skills/pricing",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "上下文定价假设、客户承诺、观察窗口、提出计划不授权billing/announcements、search-visibility与Product/Offer JSON-LD"
+      ],
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/pricing/SKILL.md",
+          "upstream_sha256": "b0318f64140e60a28d0cf71b1a6bf2aa214b96ef2bc3253c60d16ae480367d25",
+          "local_sha256": "ea56e9f38b3fc6b68f6a2fdad5a725199527e10826fa1464d5223055455c062f",
+          "mapping": "adapted"
+        },
+        {
+          "path": "evals/evals.json",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/pricing/evals/evals.json",
+          "upstream_sha256": "ea2ec5a51826311225c806c9ff3f7fc8c4716b154f7b91aba67ab8639bdb8984",
+          "local_sha256": "6349759b39ab73f2b96a55ace5f74dfca442cc65464c8ec3dcb6ad34a2c7a738",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/research-methods.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/pricing/references/research-methods.md",
+          "upstream_sha256": "90337058da40c2fcf858bfee9ee8905ad1dc3a5f90d1878f9a8e9ab79193631b",
+          "local_sha256": "90337058da40c2fcf858bfee9ee8905ad1dc3a5f90d1878f9a8e9ab79193631b",
+          "mapping": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "growth-and-gtm-skills/search-visibility",
+      "maintenance_decision": "selective-p1-correction",
+      "retained_overlays": [
+        "merged on-demand router、上下文采样、无固定格式ranking、失败run独立计数、source-specific eval directories、training/discovery选择"
+      ],
+      "files": [
+        {
+          "path": "evals/seo-audit/evals.json",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/seo-audit/evals/evals.json",
+          "upstream_sha256": "1524e98916ab53abb894fb80827a8d0e1815041adca2ee2023b89916d68f22b2",
+          "local_sha256": "f85c9452cc6d192f24daf68037127e93d7064b998bce1b4e4384de873f98e67a",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/international-seo.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/seo-audit/references/international-seo.md",
+          "upstream_sha256": "0603022cca968acf7889fc224221aa0e70955ba64355bc18b06f7e86b32f45e5",
+          "local_sha256": "629778284850fcb9ad1399694b86f84f13c520dae1aad7de3125ff2361241241",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/programmatic-seo.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/programmatic-seo/SKILL.md",
+          "upstream_sha256": "5fbbf874bcc65cbc8b527bd6074a21168c73e191e1bc2c124438dfae710ccf04",
+          "local_sha256": "15b90e1e161fdb0ffe1a05a3248ae4bbc5ad1152e600a54ef0a24b29f463ff55",
+          "mapping": "adapted"
+        },
+        {
+          "path": "references/seo-audit.md",
+          "source_repository": "https://github.com/coreyhaines31/marketingskills",
+          "source_commit": "96798cf38736ecdba015a1d2b0521b0c8f8f41dd",
+          "source_path": "skills/seo-audit/SKILL.md",
+          "upstream_sha256": "e0ebb5808787f2ff26b96d7b429423874d9785541cd4ab775629a5cf1137e7a9",
+          "local_sha256": "0db4c037ad339114bf461f5bae2bcfdc50cb119522776a3a2f819f18b1c71647",
+          "mapping": "adapted"
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,7 @@
     "branch": "main",
     "commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea"
   },
-  "packaged_on": "2026-10-08",
+  "packaged_on": "2026-11-07",
   "verification": "raw source bytes from per-file source_commit/source_path; retained snapshots do not require the path at current HEAD",
   "skills": {
     "code-review": {
@@ -252,7 +252,7 @@
     },
     "setup-matt-pocock-skills": {
       "upstream_path": "skills/engineering/setup-matt-pocock-skills",
-      "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+      "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
       "status": "reviewed-current-source",
       "adaptations": [
         "SKILL.md: qualify bundled to-spec and to-tickets references",
@@ -263,14 +263,16 @@
         "SKILL.md: preserve manually maintained tracker and legacy domain layout; create missing labels only in authorized setup scope",
         "issue-tracker-github.md: sub-issue API with authorization and relationship readback; retain supported dependency and external-PR queries",
         "issue-tracker-github.md: gate frontier on verified open dependency count; failed/missing/invalid query results remain unknown",
-        "2026-10-08 source unification: migrate validated standalone domain-policy priority, legacy paths and write-only ambiguity handling into the packaged maintenance source; preserve host and tracker adaptations"
+        "2026-10-08 source unification: migrate validated standalone domain-policy priority, legacy paths and write-only ambiguity handling into the packaged maintenance source; preserve host and tracker adaptations",
+        "2026-11-07 P1: require confirmation before repository initialization or remote wiring; preserve configured and legacy domain layouts",
+        "2026-11-07 P1: adopt current GitHub/GitLab command fixes while retaining authorized sub-issue writes, readback, and valid-response-only blocker counts"
       ],
       "files": {
         "SKILL.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
           "source_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
-          "upstream_sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
-          "local_sha256": "0b7e98c19ddc71a0fd1dddf2b94f9ab15033bbdbbad7fc0168967afe66a71e06",
+          "upstream_sha256": "b01e05bfe8c323171275c6ceec78b12f1bd4c62dfd26c2cfe8be806d3883f1ed",
+          "local_sha256": "7854f683ec27631a350eaac0751690b49d0c7198692b9dd5bfcd9a4f6371e3f0",
           "mapping": "adapted"
         },
         "agents/openai.yaml": {
@@ -288,10 +290,10 @@
           "mapping": "adapted"
         },
         "issue-tracker-github.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
           "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
-          "upstream_sha256": "f0653fe106dd8ee7b33be27bd7fe3104b40555896cb45f61997aed20467020c3",
-          "local_sha256": "5a8f70be85f30742f7ae8070f9d7eacfe7211f5fa185a0f3138e28f444d138bc",
+          "upstream_sha256": "6fdb3e9b00b7b0b115ecac3b1c00e3790f637f190abf598815368722c0a94692",
+          "local_sha256": "f2e85366033c127659dc6f5b874b34d70ce60c72061c4724e664af0c4da77d06",
           "mapping": "adapted",
           "raw_source_regions": [
             {
@@ -308,11 +310,11 @@
           ]
         },
         "issue-tracker-gitlab.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
           "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
-          "upstream_sha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24",
-          "local_sha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24",
-          "mapping": "byte-identical"
+          "upstream_sha256": "947602d33a80f98f939fb990995b8f95a3459b114b919c4221d08bd75d7cffe0",
+          "local_sha256": "22b294ca9c8bb3af640bedc93fe9429b41216d4156c36542d45e0c4b9345cba1",
+          "mapping": "adapted"
         },
         "issue-tracker-local.md": {
           "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",

@@ -135,7 +135,7 @@ Four questions that identify acceptable price range:
 3. Expensive but might consider
 4. A bargain
 
-Analyze intersections to find optimal pricing zone.
+Use intersections to identify perceived price acceptability and candidate prices to test. The named "Optimal Price Point" is a survey intersection, not proof of revenue or profit maximization. The four questions alone do not estimate conversion, churn or demand at a new price.
 
 ### MaxDiff Analysis
 

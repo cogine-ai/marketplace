@@ -72,7 +72,7 @@ Stricter than CAN-SPAM. Cold B2B outreach requires:
 - **Sales Navigator** as a research tool: fine
 - **Scraping LinkedIn at any scale**: explicit ToS violation. Banned accounts are permanent. Don't.
 - **Apollo, Clay, and ZoomInfo** claim LinkedIn-overlap data through various legitimate channels — verify their data sources before assuming compliance
-- **InMail and Connection Requests**: governed by LinkedIn's own messaging rules, not by CAN-SPAM/GDPR (because LinkedIn-internal)
+- **Messages, InMail, and connection requests**: LinkedIn's own rules apply, and privacy or electronic-marketing rules may also apply when an identifiable person is contacted. Do not assume that using LinkedIn exempts these messages. Assess the recipient, jurisdiction, lawful basis, privacy information and opt-out obligations; see the [ICO's B2B marketing guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/business-to-business-marketing/).
 
 ### Google Maps
 
@@ -81,7 +81,7 @@ Stricter than CAN-SPAM. Cold B2B outreach requires:
 - Storing Place IDs or large structured Maps data in your CRM: explicit ToS prohibition
 - Use Maps to **find** local businesses, then cross-source from the business's own site for the data you retain
 
-### Apollo / ZoomInfo / Clearbit
+### Apollo / ZoomInfo / other licensed data providers
 
 - All have their own ToS limiting reselling, downstream sharing, and use cases
 - Read your contract — typically you can use the data for your own outreach but not productize it

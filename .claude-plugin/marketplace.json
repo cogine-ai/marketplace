@@ -17,7 +17,7 @@
       "name": "design-engineer-skills",
       "source": "./plugins/design-engineer-skills",
       "description": "Nine design-engineering skills for UI prototyping, candidate marketing pages, library selection, polish, and motion.",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "category": "development"
     },
     {
@@ -31,21 +31,21 @@
       "name": "product-manager-skills",
       "source": "./plugins/product-manager-skills",
       "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, UX audits, planning, and delivery handoff.",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "category": "productivity"
     },
     {
       "name": "growth-and-gtm-skills",
       "source": "./plugins/growth-and-gtm-skills",
       "description": "Eighteen focused growth and GTM skills for strategy, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution.",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "category": "productivity"
     },
     {
       "name": "sales-skills",
       "source": "./plugins/sales-skills",
       "description": "Twelve focused sales skills for founder-led selling, prospecting, outreach, calls, enterprise accounts, pipeline management, and PLG sales assist.",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "category": "productivity"
     },
     {
