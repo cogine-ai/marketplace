@@ -102,7 +102,7 @@ This creates:
 - `design-system/<project-slug>/MASTER.md` — Global Source of Truth
 - `design-system/<project-slug>/pages/` — Folder for page-specific overrides
 
-With a page-specific override, add `--page "dashboard"` to also create `design-system/<project-slug>/pages/dashboard.md`. If Master already exists, a new page file is created without changing Master; an existing page file is skipped unless `--force` is explicitly authorized.
+With a page-specific override, add `--page "dashboard"` to also create `design-system/<project-slug>/pages/dashboard.md`. If Master already exists, a new page file is created without changing Master; an existing page file is skipped unless `--force` is explicitly authorized. For strict RTL, skip automatic `--page` persistence because it selects a separate style during the write. Select and verify the page style with a separate `--domain style --rtl=full` query before writing the override.
 
 If `design-system/<project-slug>/MASTER.md` already exists, `--persist` **skips writing and leaves it untouched** unless you also pass `--force` — check whether it exists first (and read it) before regenerating, so you don't silently discard prior decisions the user or a teammate made.
 
