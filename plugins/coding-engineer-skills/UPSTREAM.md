@@ -78,7 +78,7 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - Skills refreshed from newer global Codex installations on 2026-07-22:
   `fix-ci`, `loop-on-ci`, and `review-and-ship`
 
-## Matt Pocock skills — 12 skills
+## Matt Pocock skills — 11 skills
 
 - Repository: https://github.com/mattpocock/skills
 - Branch: `main`
@@ -86,7 +86,7 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - License: MIT
 
 `code-review`, `codebase-design`, `diagnosing-bugs`, `domain-modeling`,
-`grilling`, `implement`,
+`grilling`,
 `improve-codebase-architecture`, `setup-matt-pocock-skills`, and `tdd`
 are synchronized from the current pinned commit. `fix-merge-conflicts` is
 the same upstream workflow as `resolving-merge-conflicts`, under the plugin's
@@ -159,7 +159,7 @@ of a supplied subject. This is an adaptation, not a byte-identical snapshot.
 
 Invocation policy is expressed natively for both hosts:
 
-- The 12 explicit-only workflow commands retain
+- The 11 explicit-only workflow commands retain
   `disable-model-invocation: true` for Claude Code and set
   `policy.allow_implicit_invocation: false` in `agents/openai.yaml` for
   Codex.
@@ -172,24 +172,21 @@ host-safety requirements plus verified functional corrections:
 
 1. Fully qualifying operational cross-skill calls as
    `coding-engineer-skills:<skill>`.
-2. Retaining the local `implement` pre-commit review against the originating
-   spec and repository standards instead of chaining the fixed-point
-   `code-review` workflow.
-3. Scoping `code-review` discovery to committed changes since a fixed point,
+2. Scoping `code-review` discovery to committed changes since a fixed point,
    matching the diff it actually reviews.
-4. Removing setup-document references to the excluded `grill-with-docs`
+3. Removing setup-document references to the excluded `grill-with-docs`
    alias while keeping direct `domain-modeling` routing.
-5. Keeping the established `fix-merge-conflicts` folder/frontmatter name for
+4. Keeping the established `fix-merge-conflicts` folder/frontmatter name for
    upstream `resolving-merge-conflicts`.
-6. Adjusting the corresponding user-facing display name.
-7. Resolving `CONTEXT-MAP.md` before domain reads and writes, and preserving an
+5. Adjusting the corresponding user-facing display name.
+6. Resolving `CONTEXT-MAP.md` before domain reads and writes, and preserving an
    existing multi-context setup.
-8. Keeping conflict resolution recoverable, staging only verified conflict
+7. Keeping conflict resolution recoverable, staging only verified conflict
    files, and requiring confirmation before changing Git history.
-9. Correcting the GitHub triage command, dependency query, local issue path,
+8. Correcting the GitHub triage command, dependency query, local issue path,
    and ADR zero-padding instructions so their documented contracts execute as
    written.
-10. Creating architecture reports through a secure unique temporary file,
+9. Creating architecture reports through a secure unique temporary file,
     stating their CDN requirement, HTML-escaping repository-derived content,
     and using Mermaid's strict security mode.
 

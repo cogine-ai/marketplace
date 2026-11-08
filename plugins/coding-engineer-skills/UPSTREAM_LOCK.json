@@ -214,45 +214,6 @@
         }
       }
     },
-    "implement": {
-      "upstream_path": "skills/engineering/implement",
-      "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-      "status": "reviewed-current-source",
-      "adaptations": [
-        "SKILL.md: qualify tdd with the local plugin namespace",
-        "SKILL.md: retain the local pre-commit spec-and-standards review instead of chaining code-review",
-        "SKILL.md: reuse approved seams and portable explicit skill invocation; raw ticket-fetch paragraph from current source"
-      ],
-      "files": {
-        "SKILL.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-          "source_path": "skills/engineering/implement/SKILL.md",
-          "upstream_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
-          "local_sha256": "a37ed85b336d6835a394c7997d3a0fd9017bc40f438d2df2359216b971a44605",
-          "mapping": "adapted",
-          "raw_source_regions": [
-            {
-              "byte_range_half_open": [
-                198,
-                342
-              ],
-              "sha256": "ab56d9b86b53beb44d0f3297399680de867b1db3cad21ffe67e7d44c9057fdb6",
-              "landing_byte_range_half_open": [
-                198,
-                342
-              ]
-            }
-          ]
-        },
-        "agents/openai.yaml": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-          "source_path": "skills/engineering/implement/agents/openai.yaml",
-          "upstream_sha256": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc",
-          "local_sha256": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc",
-          "mapping": "byte-identical"
-        }
-      }
-    },
     "improve-codebase-architecture": {
       "upstream_path": "skills/engineering/improve-codebase-architecture",
       "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
