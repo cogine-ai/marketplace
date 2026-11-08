@@ -3,16 +3,15 @@
 Coding Engineer Skills is a deliberately curated engineering toolkit for
 Codex and Claude Code. It favors Cogine's own workflows and lightweight
 engineering skills. It does not bundle the full `superpowers` workflow pack.
-The plugin contains 31 skills.
+The plugin contains 30 skills.
 
 ## Included skills
 
-### Specs and delivery — 4
+### Specs and delivery — 3
 
 - `backlog-ready-spec`
 - `to-spec`
 - `to-tickets`
-- `implement`
 
 ### Orchestration — 3
 
@@ -66,11 +65,11 @@ The plugin contains 31 skills.
 - Matt Pocock's `to-spec` chain is included alongside `backlog-ready-spec` on
   purpose: one synthesizes an existing discussion, while the other checks
   readiness, duplication, boundaries, and validation.
-- `implement` uses the bundled `tdd` guidance where appropriate, runs checks,
-  and reviews the result directly against the originating spec and repository
-  standards before committing. `code-review` remains a separate fixed-point
-  branch review, `local-ultra-review` remains the deeper read-only defect
-  review, and `review-and-ship` remains the explicit push and pull-request gate.
+- To implement a spec or ticket, ask your coding agent directly. Use `tdd`
+  when the work calls for test-first development. Request a commit explicitly
+  if you want one. `code-review` reviews committed changes from a fixed point,
+  `local-ultra-review` provides deeper read-only review, and `review-and-ship`
+  handles an explicitly requested push and pull request.
 - `good-offence` guides agents reviewing unnecessary defensive implementations:
   duplicate checks, guards, catches and recovery layers. It offers suggestions,
   with practical examples and deeper references available as needed.
@@ -82,7 +81,7 @@ The plugin contains 31 skills.
 - Some skills need local tools or services for their full workflow, such as
   GitHub CLI, Playwright, or a browser-capable host. Their instructions retain
   their own capability checks and fallbacks.
-- Twelve workflow commands are explicit-only in both hosts. The remaining
+- Eleven workflow commands are explicit-only in both hosts. The remaining
   nineteen skills are model-invokable and carry concise what-and-when trigger
   descriptions. Full skill bodies are loaded only when invoked.
 - Operational cross-skill calls use the full

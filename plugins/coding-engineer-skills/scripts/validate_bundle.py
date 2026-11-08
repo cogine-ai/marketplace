@@ -17,7 +17,6 @@ SKILLS_ROOT = PLUGIN_ROOT / "skills"
 USER_ONLY = {
     "cogine-multirepo-worker",
     "cogine-orchestrator",
-    "implement",
     "improve-codebase-architecture",
     "local-ultra-review",
     "loop-on-ci",
@@ -41,6 +40,7 @@ MODEL_INVOKED = {
     "fix-ci",
     "fix-merge-conflicts",
     "frontend-design",
+    "good-offence",
     "grilling",
     "plan-devex-review",
     "run-smoke-tests",
@@ -57,7 +57,6 @@ CURRENT_MATT_IMPORTS = {
     "domain-modeling",
     "fix-merge-conflicts",
     "grilling",
-    "implement",
     "improve-codebase-architecture",
     "setup-matt-pocock-skills",
     "tdd",
@@ -66,7 +65,6 @@ CURRENT_MATT_IMPORTS = {
 }
 
 OPERATIONAL_MODEL_CALLS = {
-    "implement": {"tdd"},
     "tdd": {"codebase-design"},
     "improve-codebase-architecture": {
         "codebase-design",
@@ -326,8 +324,8 @@ def main():
     lock = load_json(PLUGIN_ROOT / "UPSTREAM_LOCK.json")
     file_count = sum(len(entry["files"]) for entry in lock["skills"].values())
     print(
-        "Validated 30 skills, 12 explicit-only policies, "
-        f"18 model-invokable policies, and {file_count} locked upstream files."
+        "Validated 30 skills, 11 explicit-only policies, "
+        f"19 model-invokable policies, and {file_count} locked upstream files."
     )
 
 
