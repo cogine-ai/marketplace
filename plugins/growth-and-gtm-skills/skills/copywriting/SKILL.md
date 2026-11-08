@@ -36,6 +36,28 @@ Gather this context (ask if not provided):
 
 ---
 
+## Diagnose the Situation First
+
+Before drafting, decide which of three situations you're in. Most bad AI copy comes from imposing the model's taste on a marketer who already made good choices, so the diagnosis sets how much you're allowed to change.
+
+| Situation | What you were given | Your job |
+|---|---|---|
+| **A. Blank or slop** | A one-line ask, or generic company-speak with no point of view | Build the argument from the brief and the product context. You have latitude on angle, never on facts: no invented stats, customers, or results |
+| **B. Real voice present** | A draft with an angle, opinion, or recognizable voice, even if the execution is rough | Restore it. Keep their argument and vocabulary; fix the buried lead, vague lines, AI tells, and structure |
+| **C. Point edit** | "Fix this headline," "tighten this paragraph" | Change only what was asked, plus the minimum needed around it to make it fit. Return the rest untouched |
+
+State the diagnosis in one line with the evidence ("B: the draft argues against agencies in the founder's voice, uses 'ship' and 'stuff'") before writing.
+
+**Read taste out of the input (B and C).** What they gave you is evidence of their judgment:
+- **Vocabulary is a voice choice.** If they write "stuff" and "ship," don't upgrade to "solutions" and "deploy."
+- **Where they spent words is a priority choice.** Keep the emphasis.
+- **What they left out is a scope choice.** Don't add sections they didn't ask for.
+- **Their angle is the positioning.** Deepen it; don't replace it with one you like better.
+
+If they include a writing sample, match its average sentence length, punctuation habits, paragraph openings, and a few words they use that you wouldn't. A sample beats the default voice when the two conflict.
+
+*Diagnosis adapted from Profound’s `improved-copywriting` skill ([skills-marketing-library](https://github.com/retieedra-profound/skills-marketing-library), MIT), via the upstream Copywriting skill.*
+
 ## Copywriting Principles
 
 ### Clarity Over Cleverness
@@ -52,6 +74,15 @@ Features: What it does. Benefits: What that means for the customer.
 
 ### Customer Language Over Company Language
 Use words your customers use. Mirror voice-of-customer from reviews, interviews, support tickets.
+
+### Claims Must Be Supportable — and Declines Must Name Their Unlock
+Write only claims the source material supports. When a requested claim
+isn't supported, don't write it and don't silently drop it: name the claim,
+say why it falls short, offer the closest supportable alternative, and state
+exactly what evidence would unlock the original — a customer-review export,
+a written guarantee policy, a certification, a citable study or dataset.
+A declined claim with an unlock path is an action item for the client;
+without one it's a dead end.
 
 ### One Idea Per Section
 Each section should advance one argument. Build a logical flow down the page.
@@ -220,6 +251,8 @@ Maintain consistency, but adjust intensity:
 ---
 
 ## Output Format
+
+For a point edit (Situation C), return only the changed lines with a one-line reason each. Skip the annotations and alternatives below unless asked.
 
 When writing copy, provide:
 

@@ -1,5 +1,16 @@
 # Upstream sources
 
+## Selective onboarding and copywriting sync
+
+Source: [Corey Haines marketing skills at 96798cf](https://github.com/coreyhaines31/marketingskills/tree/96798cf38736ecdba015a1d2b0521b0c8f8f41dd/skills).
+
+- `onboarding/SKILL.md` adopts the activation and retention windows, mature
+  cohort rules, and matching diagnostic question. The existing product-specific
+  observation window and minimum-path-to-value workflow are retained.
+- `copywriting/SKILL.md` adopts draft diagnosis, the point-edit output rule,
+  and the evidence requirement for claims. Existing routing and editing
+  guidance are retained.
+
 ## Current source unification — 2026-10-08 (package 0.1.6)
 
 [The source registry](../../maintenance/skill-sources.md) selects the edit
