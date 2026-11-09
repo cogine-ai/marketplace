@@ -11,6 +11,17 @@ Source: [Corey Haines marketing skills at 96798cf](https://github.com/coreyhaine
   and the evidence requirement for claims. Existing routing and editing
   guidance are retained.
 
+## Selective CRO, customer research, and content strategy sync
+
+From the same `96798cf` snapshot, copy the post-submit enrichment examples
+in `cro`, the independent persona evidence rule in `customer-research`, and
+the search information-gain rule in `content-strategy`. Retain existing
+routing, scope, and invocation metadata.
+
+The local `growth-experiments` sample-size CLI accepts an explicit 100%
+exposure fraction, matching the upstream duration guide. The CLI itself
+is maintained locally.
+
 ## Current source unification — 2026-10-08 (package 0.1.6)
 
 [The source registry](../../maintenance/skill-sources.md) selects the edit

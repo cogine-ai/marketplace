@@ -78,12 +78,14 @@ def main() -> int:
     )
     parser.add_argument(
         "--allocation",
-        type=_prob,
+        type=float,
         default=1.0,
         help="Optional: fraction of eligible users included in experiment (default: 1.0).",
     )
 
     args = parser.parse_args()
+    if not 0 < args.allocation <= 1:
+        parser.error("--allocation must be greater than 0 and at most 1")
 
     baseline_rate = args.baseline
     if args.mde_absolute is not None:

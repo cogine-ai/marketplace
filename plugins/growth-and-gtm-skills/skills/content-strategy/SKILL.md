@@ -53,6 +53,8 @@ Every piece of content must be searchable, shareable, or both. Prioritize in tha
 
 ### When Writing Searchable Content
 
+**The information-gain gate:** before committing to a searchable piece, read the current top results for its query and write one sentence on what yours will add that none of them have: original data, a real product example, a working tool or template, a clearer answer, a stronger opinion. If you can't write that sentence, don't write the piece. It will be the eleventh copy of the same article, and neither Google nor AI assistants have a reason to prefer it.
+
 - Target a specific keyword or question
 - Match search intent exactly—answer what the searcher wants
 - Use clear titles that match search queries
