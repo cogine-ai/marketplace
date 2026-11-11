@@ -2,7 +2,8 @@
 
 Founder/CEO is a focused, cross-platform toolkit for Codex and Claude Code. It
 covers founder judgment, product-market fit, strategic power, operating
-cadence, organization, capital, fundraising, and stakeholder communication.
+cadence, architecture diagrams, organization, capital, fundraising, and
+stakeholder communication.
 
 ## Included Skills
 
@@ -13,13 +14,15 @@ cadence, organization, capital, fundraising, and stakeholder communication.
 - `high-stakes-decisions`
 - `planmode-ceo`
 
-### Strategy and operating system — 5
+### Strategy and operating system — 6
 
 - `competitive-strategy`
 - `seven-powers`
 - `planning-cadence`
 - `risk-assessment`
 - `ceo-advisor`
+- `stack-diagram` — visualize product modules, counts, and relationships or
+  create a branded technical architecture diagram.
 
 ### Organization and leadership — 3
 

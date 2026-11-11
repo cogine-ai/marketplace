@@ -432,6 +432,41 @@
       "reason": "Existing namespaced calls rely on both aliases; shared Markdown has one edit authority."
     },
     {
+      "name": "stack-diagram",
+      "authority": "plugins/product-manager-skills/skills/stack-diagram",
+      "consumer_alias": "plugins/founder-ceo-skills/skills/stack-diagram",
+      "shared_files": {
+        "LICENSE": "be10012fc23bb7f2e332d62312b80cfca01c3eb7abd8970ebb1cdf8ff5b04faa",
+        "SKILL.md": "8b453952aa26a1a427fa0ce5c0e247aee62a513440c5a3871d34f99f11d21d5b",
+        "assets/fonts/Geist.woff2": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1",
+        "assets/fonts/JetBrainsMono.woff2": "2c32b9b3ee358c119e210f6f5195f9bd34894d78a785ff2e95d60e718e400af4",
+        "assets/fonts/OFL-Geist.txt": "e5e56b793839774266243b8dd89c618f2962f098a2076757a5f2839c27eaaabd",
+        "assets/fonts/OFL-JetBrainsMono.txt": "8790c0909f720c509810f95268779450cd6b0aa75b6d24e32f0878afe068427c",
+        "assets/fonts/README.md": "9b858f504cefd75b79970b724dc55c4b8e16ecb3dc59bba059bdea38c5dff551",
+        "assets/generic/browser.svg": "626b27b7681ff5ff0c25b1d235ca49883bdb59185fe2b4063b44ab9a147f88a8",
+        "assets/generic/device.svg": "abe1c203068bef6c10727e434614fefcb68d3b02139838fcfd3a9b9d2fac7f91",
+        "assets/generic/internet.svg": "f28c67cdda8b1b234f4993d1ac557b20fb8e5cb307e398c1cf720f54ef5dc3de",
+        "assets/generic/module.svg": "682f19011ffe7d6b04396e7da364bab0e87953bd30b2a0f1806b031e6a19cd58",
+        "assets/generic/server.svg": "81a828c927db27160a7af9d076e541686ae0b6ec96794638b7a265a4e3e26289",
+        "assets/generic/user.svg": "a383d2e82346d3c14958eab164946898a0cf07f0f33defce7f55532ec1c9f1e9",
+        "assets/template.html": "ea333400a25e58008e4ef98dd052a7a1de3271cea4f0a5ab2f2f3d3445fad02f",
+        "references/gallery.md": "93ebc7cc8fb8447725fdae892275259a7ad890e2c39acf1bfe164ecb780c4113",
+        "references/geometry.md": "0b823440933abb5c1c25dbd19f98e74bf3289e89b4adecb970c5e99c56e09f6e",
+        "references/product-architecture.md": "d3a79a1e2b9f6ecf3eb1c7f822faaf512c200d8303e7ad78ab48648c80dac1f5",
+        "references/technical-icons.md": "11edc29e9e09266308b227146ef134da4f0460abeccced99d47b9e5f3299dfba",
+        "references/tsx.md": "7f39b64a61c64c2860ca78868a99b63c6f1ee909f686efd625d3bfd6d8751053",
+        "scripts/build.py": "28049a14bbec3a1264a9b61a7d6abe435f1932393ba9b991068ea5690e83d3a7",
+        "scripts/fetch_icons.py": "d6abcda84a0ed16f8cc1ebd0075dcb06c502bec5c06e5748f2a4774d26c61370",
+        "scripts/render_png.py": "588873e0441cf4e796a1f916e00f90975c23c952def4a9477f01ef8ebb0f206b",
+        "scripts/share.py": "a363482a18f6c0b2aab0b690cdb5bc02d6213c54fca158e1814082c5ba0bf4cc"
+      },
+      "whole_tree_equal": true,
+      "preserve_distribution_metadata": [
+        "agents/openai.yaml"
+      ],
+      "reason": "Both role namespaces distribute the same diagram workflow, scripts, and assets from one edit authority."
+    },
+    {
       "name": "plg-sales-integration",
       "authority": "plugins/growth-and-gtm-skills/skills/plg-sales-integration",
       "consumer_alias": "plugins/sales-skills/skills/plg-sales-integration",

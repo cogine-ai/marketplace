@@ -60,3 +60,11 @@ is in `LICENSES/MIT-Davila-Claude-Code-Templates.txt`.
 [wdavidturner/product-skills](https://github.com/wdavidturner/product-skills),
 copyright (c) 2025 David Turner, under the MIT License. The license text is in
 `LICENSES/MIT-David-Turner.txt`.
+
+## Stack Diagram
+
+`stack-diagram` is adapted from [caru-ini/stack-diagram](https://github.com/caru-ini/stack-diagram)
+and shared with Product Manager Skills. Its MIT license is in
+`skills/stack-diagram/LICENSE`. The bundled Geist and JetBrains Mono fonts
+retain their SIL Open Font License 1.1 texts under
+`skills/stack-diagram/assets/fonts/`. Diagrams credit their icon sources.

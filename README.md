@@ -34,7 +34,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `product-manager-skills` | 17 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, architecture diagrams, UX audits, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
-| `founder-ceo-skills` | 16 | Founder judgment, product-market fit, strategy, decisions, planning, organization, finance, fundraising, and board communication. |
+| `founder-ceo-skills` | 17 | Founder judgment, product-market fit, strategy, decisions, planning, architecture diagrams, organization, finance, fundraising, and board communication. |
 | [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Cursor delivers the first complete result; Codex takes over acceptance and local corrections. Codex only. |
 
 The Codex catalog contains eight plugins. CogineX and the six role-based skill
@@ -161,7 +161,7 @@ plugins/sales-skills/
 plugins/founder-ceo-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 16 shared skills
+  skills/                              # 17 shared skills
 plugins/coginex/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
