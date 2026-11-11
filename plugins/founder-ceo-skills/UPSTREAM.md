@@ -1,5 +1,13 @@
 # Upstream sources
 
+## Stack Diagram — 2026-11-11 (package 0.1.4)
+
+The Founder/CEO bundle distributes `stack-diagram` from the
+[Product Manager skill directory](../product-manager-skills/skills/stack-diagram).
+Product Manager Skills is the edit authority. Both aliases ship the same
+workflow, scripts, assets, and licenses. See the [Product upstream notes](../product-manager-skills/UPSTREAM.md#stack-diagram--2026-11-11-package-026)
+for the original source and adaptations.
+
 ## Current maintenance — 2026-10-08 (package 0.1.3)
 
 Restore approved vendor support bytes. Founder questions distinguish observed evidence from choices, and CEO review separates depth from scope mode, reuses settled decisions and preserves accepted constraints. Startup finance is unchanged; GStack remains a method reference rather than a runtime dependency.

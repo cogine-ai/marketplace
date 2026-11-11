@@ -14,6 +14,7 @@ the user home or OurSkills root describe this machine, not an installer.
 | CogineX plugin | This repository's `plugins/coginex` | Codex and Claude Code share five skills and direct HTTP MCP config; preserve separate native manifests and Codex App mappings. Existing standalone MCP entries are not automatically replaced. |
 | Shared grilling, backlog, spec and ticket Markdown | Coding package | Product retains distribution aliases required by existing namespace calls; synchronize shared Markdown while preserving agents metadata. |
 | Shared Founder Office Hours | Product package | Founder/CEO retains its namespace alias and metadata. |
+| Shared Stack Diagram | Product package | Synchronize the workflow, references, scripts, assets and licenses to Founder/CEO. Preserve its namespace and host metadata. |
 | Shared PLG sales integration and references | Growth package | Sales retains its namespace alias; synchronize all shared Markdown, including references. |
 | Standalone repository matches | Registry's canonical source folder | Update consumer snapshots from that source; a dirty source folder is identified separately from its commit. |
 | Differing standalone local overrides | Registry's selected `.codex/skills` folder | Maintain this override deliberately; do not replace it with a differing historical repository. `.agents` mirrors remain consumers for other hosts. |

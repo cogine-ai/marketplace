@@ -1,5 +1,10 @@
 # Changelog
 
+## Founder/CEO Skills 0.1.4 candidate — 2026-11-11
+
+- Add `founder-ceo-skills:stack-diagram` for product module maps and technical
+  architecture diagrams. It shares its source with the Product Manager entry.
+
 ## Product Manager Skills 0.2.6 candidate — 2026-11-11
 
 - Add `stack-diagram` for branded technical diagrams and product architecture
