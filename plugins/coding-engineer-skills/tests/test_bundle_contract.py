@@ -42,7 +42,6 @@ MODEL_INVOKED = {
     "diagnosing-bugs",
     "domain-modeling",
     "fix-ci",
-    "fix-merge-conflicts",
     "frontend-design",
     "good-offence",
     "grilling",
@@ -59,7 +58,6 @@ CURRENT_MATT_IMPORTS = {
     "codebase-design",
     "diagnosing-bugs",
     "domain-modeling",
-    "fix-merge-conflicts",
     "grilling",
     "improve-codebase-architecture",
     "setup-matt-pocock-skills",
@@ -88,10 +86,10 @@ def load_frontmatter(path: Path):
 
 
 class BundleContractTests(unittest.TestCase):
-    def test_inventory_is_exactly_the_approved_30_skills(self):
+    def test_inventory_is_exactly_the_approved_29_skills(self):
         actual = {path.name for path in SKILLS_ROOT.iterdir() if path.is_dir()}
         self.assertEqual(USER_ONLY | MODEL_INVOKED, actual)
-        self.assertEqual(30, len(actual))
+        self.assertEqual(29, len(actual))
 
     def test_every_skill_has_matching_frontmatter_and_openai_metadata(self):
         for skill_dir in sorted(SKILLS_ROOT.iterdir()):
@@ -152,7 +150,7 @@ class BundleContractTests(unittest.TestCase):
         readme = (PLUGIN_ROOT / "README.md").read_text(encoding="utf-8")
         listed = set(re.findall(r"^- `([a-z0-9-]+)`$", readme, re.MULTILINE))
         self.assertEqual(USER_ONLY | MODEL_INVOKED, listed)
-        self.assertIn("30 skill", readme)
+        self.assertIn("29 skill", readme)
         for manifest_path in [
             PLUGIN_ROOT / ".claude-plugin" / "plugin.json",
             PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
@@ -163,7 +161,7 @@ class BundleContractTests(unittest.TestCase):
                 json.loads((PLUGIN_ROOT / ".codex-plugin" / "plugin.json").read_text())["version"],
                 manifest["version"],
             )
-            self.assertIn("Thirty focused", manifest["description"])
+            self.assertIn("Twenty-nine focused", manifest["description"])
 
     def test_host_specific_update_instructions_verify_the_installed_version(self):
         readme = (PLUGIN_ROOT.parents[1] / "README.md").read_text(encoding="utf-8")
@@ -200,14 +198,6 @@ class BundleContractTests(unittest.TestCase):
                 for adaptation in lock["skills"]["domain-modeling"]["adaptations"]
             )
         )
-
-        merge_skill = (SKILLS_ROOT / "fix-merge-conflicts" / "SKILL.md").read_text(
-            encoding="utf-8"
-        )
-        self.assertNotIn("Stage everything", merge_skill)
-        self.assertIn("Stage only", merge_skill)
-        self.assertIn("abort", merge_skill.lower())
-        self.assertIn("confirmation", merge_skill.lower())
 
         domain_skill = (SKILLS_ROOT / "domain-modeling" / "SKILL.md").read_text(
             encoding="utf-8"

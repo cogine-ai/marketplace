@@ -164,34 +164,6 @@
         }
       }
     },
-    "fix-merge-conflicts": {
-      "upstream_path": "skills/engineering/resolving-merge-conflicts",
-      "source_commit": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
-      "status": "retired-upstream-retained-local",
-      "adaptations": [
-        "SKILL.md: retain the public name fix-merge-conflicts",
-        "SKILL.md: preserve abort as a recoverable path, stage only verified conflict files, and require confirmation before changing history",
-        "agents/openai.yaml: adapt the display name to Fix Merge Conflicts"
-      ],
-      "files": {
-        "SKILL.md": {
-          "source_commit": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
-          "source_path": "skills/engineering/resolving-merge-conflicts/SKILL.md",
-          "upstream_sha256": "9d8114f8ef0b31f535a265fc05c364bd8cf2e2895a830040e06c22acb11f54b0",
-          "local_sha256": "c8908f1ba68732fce0abaa0cd48e25a5dcb98d082b98403f7a30487199998199",
-          "mapping": "adapted"
-        },
-        "agents/openai.yaml": {
-          "source_commit": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
-          "source_path": "skills/engineering/resolving-merge-conflicts/agents/openai.yaml",
-          "upstream_sha256": "a1f4f96838f2ed6282eb28abbbf99029cb8fadce552baf53da90a025b8bffddf",
-          "local_sha256": "cc8600b385e015c8513faa3a80abcb9e1e04a80441d143b76f5767703e586b33",
-          "mapping": "adapted"
-        }
-      },
-      "retired_at_commit": "daa01d8aa68ad5c61b68970ec2018d0ce9567be6",
-      "latest_source_path_exists": false
-    },
     "grilling": {
       "upstream_path": "skills/productivity/grilling",
       "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",

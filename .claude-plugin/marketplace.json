@@ -16,15 +16,15 @@
     {
       "name": "design-engineer-skills",
       "source": "./plugins/design-engineer-skills",
-      "description": "Nine design-engineering skills for UI prototyping, candidate marketing pages, library selection, polish, and motion.",
-      "version": "0.1.6",
+      "description": "Eight design-engineering skills for UI prototyping, candidate marketing pages, library selection, polish, and motion.",
+      "version": "0.2.0",
       "category": "development"
     },
     {
       "name": "coding-engineer-skills",
       "source": "./plugins/coding-engineer-skills",
-      "description": "Thirty focused engineering skills for specs, coding, architecture, isolated worktrees, review, security, CI, and orchestration.",
-      "version": "0.3.0",
+      "description": "Twenty-nine focused engineering skills for specs, coding, architecture, isolated worktrees, review, security, CI, and orchestration.",
+      "version": "0.4.0",
       "category": "development"
     },
     {

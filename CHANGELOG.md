@@ -1,5 +1,13 @@
 # Changelog
 
+## Coding Engineer Skills 0.4.0 and Design Engineer Skills 0.2.0 candidates — 2026-11-11
+
+- Retire `coding-engineer-skills:fix-merge-conflicts` from both bundles. Ask
+  your coding agent to resolve conflicts against the merge goal and specify
+  any confirmation you want before it completes the merge or rebase.
+- Retire `design-engineer-skills:animation-vocabulary` from both bundles.
+  Describe the motion directly to your agent to find its name.
+
 ## Coding Engineer Skills 0.3.0 candidate — 2026-11-08
 
 - Retire `coding-engineer-skills:implement` from the Codex and Claude Code

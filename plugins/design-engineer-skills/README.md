@@ -1,6 +1,6 @@
 # Design Engineer Skills
 
-Design Engineer Skills bundles nine reusable workflows for design engineers:
+Design Engineer Skills bundles eight reusable workflows for design engineers:
 
 - `marketing-page-design-candidate` — 候选营销页面设计: supplement an established main design with an extra marketing-page candidate; not a standalone design workflow.
 - `emil-design-eng` — UI polish, component design, and animation decisions.
@@ -9,12 +9,11 @@ Design Engineer Skills bundles nine reusable workflows for design engineers:
 - `review-animations` — strict review of animation and motion code.
 - `improve-animations` — codebase-wide motion audit and implementation plans.
 - `find-animation-opportunities` — find useful motion without over-animating.
-- `animation-vocabulary` — map vague motion descriptions to precise terms.
 - `apple-design` — apply Apple-style physical interaction principles to web UI.
 
 ## Credits
 
-The eight existing skills are from [emilkowalski/skills](https://github.com/emilkowalski/skills)
+Seven skills are from [emilkowalski/skills](https://github.com/emilkowalski/skills)
 by Emil Kowalski. The supplementary marketing-page skill is from
 [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill), with its complete
 body preserved and only the skill name and description adapted. Both sources
