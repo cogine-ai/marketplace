@@ -19,12 +19,14 @@ implementation handoff, with explicit support for product strategy and taste.
 - `synthesize-research`
 - `competitive-brief`
 
-### Requirements and product design — 5
+### Requirements and product design — 6
 
 - `write-prd`
 - `prototype`
 - `interface-design`
 - `ui-ux-pro-max`
+- `stack-diagram` — show product modules, counts, and relationships or render a
+  branded technical architecture diagram as self-contained HTML or PNG.
 - `ux-audit` — 产品 UX 巡检: walk an existing product against a design principle,
   then show its 3–5 strongest violations with screenshots or source-grounded
   schematics and concrete redesigns.

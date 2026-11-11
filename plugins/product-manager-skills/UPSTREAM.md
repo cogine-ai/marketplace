@@ -1,5 +1,16 @@
 # Upstream sources
 
+## Stack Diagram — 2026-11-11 (package 0.2.6)
+
+`stack-diagram` is adapted from [caru-ini/stack-diagram](https://github.com/caru-ini/stack-diagram/tree/5af3b095fff7109c905c5284dc510dc06588bade/skills/stack-diagram)
+at commit `5af3b095fff7109c905c5284dc510dc06588bade`. The scripts, template,
+fonts, original generic icons, geometry, and TSX reference are copied verbatim.
+The local entry adds product-module modeling and a generic module icon, narrows
+discovery, uses the available browser for HTML inspection, and moves technical
+icons and user-requested gallery publishing into separate references. The MIT
+and font licenses travel with the skill. One trailing space in the Geist
+license is stripped for the repository's whitespace check.
+
 ## Cogine-authored addition — 2026-10-11 (package 0.2.4)
 
 `ux-audit` is maintained in this Marketplace. It turns the owner's recurring

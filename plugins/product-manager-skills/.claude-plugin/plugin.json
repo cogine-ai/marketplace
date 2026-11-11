@@ -1,14 +1,14 @@
 {
   "name": "product-manager-skills",
-  "version": "0.2.5",
-  "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, UX audits, planning, and delivery handoff.",
+  "version": "0.2.6",
+  "description": "Seventeen focused product-management skills for strategy, product judgment, discovery, research, design, architecture diagrams, UX audits, planning, and delivery handoff.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
   },
   "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/product-manager-skills",
   "repository": "https://github.com/cogine-ai/marketplace",
-  "license": "Apache-2.0 AND MIT",
+  "license": "Apache-2.0 AND MIT AND OFL-1.1",
   "keywords": [
     "product-management",
     "product-strategy",
