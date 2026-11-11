@@ -1,5 +1,12 @@
 # Changelog
 
+## Product Manager Skills 0.2.6 candidate — 2026-11-11
+
+- Add `stack-diagram` for branded technical diagrams and product architecture
+  maps with module counts, domain groups, and directed relationships. Inspect
+  HTML in a browser and use Playwright for requested PNG exports. The upstream
+  public gallery is available on explicit request.
+
 ## Coding Engineer Skills 0.4.0 and Design Engineer Skills 0.2.0 candidates — 2026-11-11
 
 - Retire `coding-engineer-skills:fix-merge-conflicts` from both bundles. Ask

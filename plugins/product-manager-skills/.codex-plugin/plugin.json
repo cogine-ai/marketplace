@@ -1,14 +1,14 @@
 {
   "name": "product-manager-skills",
-  "version": "0.2.5",
-  "description": "Sixteen focused product-management skills for strategy, product judgment, discovery, research, design, UX audits, planning, and delivery handoff.",
+  "version": "0.2.6",
+  "description": "Seventeen focused product-management skills for strategy, product judgment, discovery, research, design, architecture diagrams, UX audits, planning, and delivery handoff.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
   },
   "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/product-manager-skills",
   "repository": "https://github.com/cogine-ai/marketplace",
-  "license": "Apache-2.0 AND MIT",
+  "license": "Apache-2.0 AND MIT AND OFL-1.1",
   "keywords": [
     "product-management",
     "product-strategy",
@@ -23,7 +23,7 @@
   "interface": {
     "displayName": "Product Manager Skills",
     "shortDescription": "A focused product-management toolkit for Cogine.",
-    "longDescription": "Sixteen curated skills for product strategy, product judgment, discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, principle-driven UX audits with visual evidence, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills, two high-quality design systems, and two focused Lenny product skills.",
+    "longDescription": "Seventeen curated skills for product strategy, product judgment, discovery, research synthesis, competitive analysis, PRDs, prototypes, roadmaps, metrics, product-interface design, architecture diagrams, principle-driven UX audits with visual evidence, implementation-ready specs, and tickets. It combines Cogine workflows with lightweight Matt Pocock skills, two high-quality design systems, and two focused Lenny product skills.",
     "developerName": "Cogine AI",
     "category": "Productivity",
     "capabilities": [

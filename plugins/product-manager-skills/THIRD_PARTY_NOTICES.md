@@ -45,6 +45,14 @@ is in `LICENSES/MIT-UI-UX-Pro-Max.txt`.
 (c) 2025 Refound AI, under the MIT License. The license text is in
 `LICENSES/MIT-Refound-AI.txt`.
 
+## Stack Diagram
+
+`stack-diagram` is adapted from [caru-ini/stack-diagram](https://github.com/caru-ini/stack-diagram).
+Its MIT license is in `skills/stack-diagram/LICENSE`. The bundled Geist and
+JetBrains Mono fonts retain their SIL Open Font License 1.1 texts under
+`skills/stack-diagram/assets/fonts/`. Third-party brand logos are retrieved when
+building a diagram and are credited in the output.
+
 ## Cogine adaptations
 
 `founder-office-hours` and `backlog-ready-spec` are Cogine-authored adaptations
