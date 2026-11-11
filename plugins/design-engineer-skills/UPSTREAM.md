@@ -1,6 +1,11 @@
 # Upstream source
 
-## Current maintenance — 2026-10-08 (package 0.1.5)
+## Marketplace retirement — 2026-11-11 (package 0.2.0)
+
+`animation-vocabulary` is retired from both Marketplace bundles. The dated
+sync records below preserve the provenance of the original import.
+
+## Reviewed snapshot — 2026-10-08 (package 0.1.5)
 
 Seven Emil SKILL files match the frozen source exactly; review-animations copies the complete raw body while keeping its existing frontmatter. Prototype and library selection keep both hosts' explicit-invocation policies. The candidate marketing-page body remains at its prior reviewed pin.
 

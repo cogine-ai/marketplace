@@ -38,7 +38,6 @@ MODEL_INVOKED = {
     "diagnosing-bugs",
     "domain-modeling",
     "fix-ci",
-    "fix-merge-conflicts",
     "frontend-design",
     "good-offence",
     "grilling",
@@ -55,7 +54,6 @@ CURRENT_MATT_IMPORTS = {
     "codebase-design",
     "diagnosing-bugs",
     "domain-modeling",
-    "fix-merge-conflicts",
     "grilling",
     "improve-codebase-architecture",
     "setup-matt-pocock-skills",
@@ -115,8 +113,8 @@ def validate_inventory(errors):
             f"skill inventory differs: missing={sorted(expected - actual)} "
             f"extra={sorted(actual - expected)}"
         )
-    if len(actual) != 30:
-        errors.append(f"expected 30 skills, found {len(actual)}")
+    if len(actual) != 29:
+        errors.append(f"expected 29 skills, found {len(actual)}")
 
     for name in sorted(actual):
         skill_dir = SKILLS_ROOT / name
@@ -199,8 +197,8 @@ def validate_metadata(errors):
     expected = USER_ONLY | MODEL_INVOKED
     if listed != expected:
         errors.append("plugin README skill list differs from the directory inventory")
-    if "30 skill" not in readme:
-        errors.append("plugin README does not state the 30-skill inventory")
+    if "29 skill" not in readme:
+        errors.append("plugin README does not state the 29-skill inventory")
 
     versions = []
     for manifest_path in (
@@ -211,8 +209,8 @@ def validate_metadata(errors):
         versions.append(manifest.get("version"))
         if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", manifest.get("version", "")):
             errors.append(f"{manifest_path}: invalid semantic version")
-        if "Thirty focused" not in manifest.get("description", ""):
-            errors.append(f"{manifest_path}: description does not state Thirty focused skills")
+        if "Twenty-nine focused" not in manifest.get("description", ""):
+            errors.append(f"{manifest_path}: description does not state Twenty-nine focused skills")
 
     marketplace = load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
@@ -220,8 +218,8 @@ def validate_metadata(errors):
     versions.append(coding.get("version"))
     if len(set(versions)) != 1:
         errors.append("coding versions differ between manifests and marketplace")
-    if "Thirty focused" not in coding.get("description", ""):
-        errors.append("marketplace description does not state Thirty focused skills")
+    if "Twenty-nine focused" not in coding.get("description", ""):
+        errors.append("marketplace description does not state Twenty-nine focused skills")
 
 
 def validate_lock(errors, matt_root=None):
@@ -324,8 +322,8 @@ def main():
     lock = load_json(PLUGIN_ROOT / "UPSTREAM_LOCK.json")
     file_count = sum(len(entry["files"]) for entry in lock["skills"].values())
     print(
-        "Validated 30 skills, 11 explicit-only policies, "
-        f"19 model-invokable policies, and {file_count} locked upstream files."
+        "Validated 29 skills, 11 explicit-only policies, "
+        f"18 model-invokable policies, and {file_count} locked upstream files."
     )
 
 
