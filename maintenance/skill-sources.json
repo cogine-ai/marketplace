@@ -384,7 +384,7 @@
       "authority": "plugins/coding-engineer-skills/skills/backlog-ready-spec",
       "consumer_alias": "plugins/product-manager-skills/skills/backlog-ready-spec",
       "shared_files": {
-        "SKILL.md": "3825e832c6af5fd32b6355e8d670b7d8e4a26267a3f0e0c981d8df828ecb22d2"
+        "SKILL.md": "9d691e938f5ab58d000fa2162086753999a75d0457fa9894d7abdf8e5672e399"
       },
       "whole_tree_equal": true,
       "preserve_distribution_metadata": [
