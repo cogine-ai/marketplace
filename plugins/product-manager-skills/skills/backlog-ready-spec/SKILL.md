@@ -47,8 +47,8 @@ If the source is ambiguous, ask only for the missing decision that changes the s
    - User outcome.
    - In-scope behavior.
    - Out-of-scope behavior.
-   - Acceptance criteria.
-   - Validation commands or manual checks.
+   - Acceptance criteria with observable pass and fail conditions. For each key check, state the behavior it protects and any material limits of a passing result.
+   - Validation commands or manual checks. Mark planned checks and report the observed result of each check run.
    - Risks, dependencies, and required sequencing.
    - Rollback for data, migration, compatibility, or other hard-to-reverse changes.
 
@@ -57,10 +57,11 @@ If the source is ambiguous, ask only for the missing decision that changes the s
    - Replace vague words like "better", "fast", "smart", or "support" with observable behavior.
 
 6. Keep one sanitized spec body for review and any authorized publication.
-   - Write the final redacted body once to a private temporary file or the approved local spec path. Review that exact body and pass it through a structured tool argument or a file-based CLI option such as `--body-file`; never interpolate free-form spec text into a shell command.
+   - Write the final redacted body once to a private temporary file or the approved local spec path. Review that exact body.
+   - Before any authorized issue creation or update, apply the redaction rules to the exact final title and body. If either changes, check both again before sending. Send the checked values through structured arguments or file-based CLI options such as `--body-file`. Never interpolate free-form spec text into a shell command.
    - Reuse the same body for publication and the local handoff. Read back the saved or published body and identify differences or failed persistence.
    - Publishing or obtaining an issue URL proves transport, not spec readiness; retain the quality verdict and unresolved evidence separately.
-   - If the body changes materially after review, rerun the affected de-duplication, redaction, acceptance, and readiness checks against the revised artifact. A failed review call, refusal, empty or invalid response, or incomplete evidence never counts as `PASS`.
+   - If the title or body changes materially after review, rerun the affected de-duplication, acceptance, and readiness checks against the revised artifact. A failed review call, refusal, empty or invalid response, or incomplete evidence never counts as `PASS`.
 
 7. Emit the readiness verdict.
    - `READY`: implementable now, with required de-duplication checks completed.
@@ -105,15 +106,13 @@ Reuse existing code:
 Preserve / do not touch:
 
 ### Acceptance Criteria
-- [ ] <criterion>
-- [ ] <criterion>
-- [ ] <criterion>
+- [ ] <observable behavior and its pass and fail conditions>
 
 ### Validation
 Automated:
-- <command or check>
+- <command, planned status or observed result, and material coverage limits>
 Manual:
-- <manual check>
+- <manual check, planned status or observed result, and material coverage limits>
 
 ### Risks And Dependencies
 - <risk or dependency>
