@@ -79,7 +79,7 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
   `fix-ci` and `review-and-ship`
 - `loop-on-ci` was also refreshed on 2026-07-22 and is retired from the bundle.
 
-## Matt Pocock skills — 10 skills
+## Matt Pocock skills — 9 skills
 
 - Repository: https://github.com/mattpocock/skills
 - Branch: `main`
@@ -88,9 +88,16 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 
 `code-review`, `codebase-design`, `diagnosing-bugs`, `domain-modeling`,
 `grilling`,
-`improve-codebase-architecture`, `setup-matt-pocock-skills`, and `tdd`
-are recorded in the current lock. The local `fix-merge-conflicts` entry was
-retired in Coding 0.4.0 after upstream retired `resolving-merge-conflicts`.
+`improve-codebase-architecture`, and `tdd` are recorded in the current
+lock. The local `fix-merge-conflicts` entry was retired in Coding 0.4.0
+after upstream retired `resolving-merge-conflicts`.
+`setup-matt-pocock-skills` was retired from the bundle in Coding 0.5.2.
+Its prior provenance is recorded in [the November 7 sync record](UPSTREAM_SYNC_2026-11-07.json).
+
+`code-review` was checked against Matt's upstream commit
+[`5863806`](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/code-review).
+Its committed-change scope and host metadata are retained. It can resolve
+specs from existing tracker workflows, PRs, commit references, or local files.
 
 `to-spec` and `to-tickets` remain the previously reviewed Matt-derived
 local adaptations based on commit

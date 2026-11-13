@@ -45,7 +45,7 @@ The registry's local settings are a receipt, not a rule to apply blindly to
 another machine. Restore a selected path with the same native API and
 `enabled: true` if its replacement is removed or a deliberate rollback is needed.
 
-## Remaining five-entry transition
+## Remaining four-entry transition
 
 [Six bounded file transfers](source-unification-2026-10-08.json) preserve the
 useful standalone changes in the packaged source:
@@ -55,14 +55,16 @@ useful standalone changes in the packaged source:
 | analytics | Growth 0.1.6 | Verify connector/account/property; exports, code or manual validation when access is unavailable. |
 | launch | Growth 0.1.6 | Verify partner integration/account; draft an unavailable workflow without claiming it was configured or launched. |
 | domain-modeling | Coding 0.2.5 | Explicit domain policy wins over defaults; active legacy paths and existing glossary content remain. |
-| setup-matt-pocock-skills | Coding 0.2.5 | Preserve settled tracker/domain policy; templates only fill agreed gaps. |
 | improve-codebase-architecture | Coding 0.2.5 | Use the selected glossary/ADRs; retain namespaced calls, secure report files and HTML protections. |
 
-These five standalone entries remain enabled until the candidate is merged,
+These four standalone entries remain enabled until the candidate is merged,
 published/available, installed and read back. Then verify the transferred
 rules and disable only their exact `.agents/skills/<name>/SKILL.md` paths.
 Prepared package versions do not establish installed state. Existing
-agents metadata and all historical upstream sync ledgers remain unchanged.
+agents metadata and historical upstream sync ledgers remain unchanged.
+
+`setup-matt-pocock-skills` was part of the original transition and is retired
+from the Marketplace bundle. Its standalone entry remains installer-managed.
 
 ## Good Offence — 2026-10-28
 
