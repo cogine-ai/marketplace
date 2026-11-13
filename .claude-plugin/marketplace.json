@@ -23,8 +23,8 @@
     {
       "name": "coding-engineer-skills",
       "source": "./plugins/coding-engineer-skills",
-      "description": "Thirty-eight focused engineering skills for specs, coding, architecture, isolated worktrees, review, security, CI, and orchestration.",
-      "version": "0.5.0",
+      "description": "Thirty-seven focused engineering skills for specs, coding, architecture, isolated worktrees, review, security, CI, and orchestration.",
+      "version": "0.5.1",
       "category": "development"
     },
     {

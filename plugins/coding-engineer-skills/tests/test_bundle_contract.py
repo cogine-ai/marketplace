@@ -24,7 +24,6 @@ USER_ONLY = {
     "full-stop",
     "improve-codebase-architecture",
     "local-ultra-review",
-    "loop-on-ci",
     "planmode-engineer",
     "review-and-ship",
     "security-best-practices",
@@ -96,10 +95,10 @@ def load_frontmatter(path: Path):
 
 
 class BundleContractTests(unittest.TestCase):
-    def test_inventory_is_exactly_the_approved_38_skills(self):
+    def test_inventory_is_exactly_the_approved_37_skills(self):
         actual = {path.name for path in SKILLS_ROOT.iterdir() if path.is_dir()}
         self.assertEqual(USER_ONLY | MODEL_INVOKED, actual)
-        self.assertEqual(38, len(actual))
+        self.assertEqual(37, len(actual))
 
     def test_every_skill_has_matching_frontmatter_and_openai_metadata(self):
         for skill_dir in sorted(SKILLS_ROOT.iterdir()):
@@ -160,7 +159,7 @@ class BundleContractTests(unittest.TestCase):
         readme = (PLUGIN_ROOT / "README.md").read_text(encoding="utf-8")
         listed = set(re.findall(r"^- `([a-z0-9-]+)`$", readme, re.MULTILINE))
         self.assertEqual(USER_ONLY | MODEL_INVOKED, listed)
-        self.assertIn("38 skill", readme)
+        self.assertIn("37 skill", readme)
         for manifest_path in [
             PLUGIN_ROOT / ".claude-plugin" / "plugin.json",
             PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
@@ -171,7 +170,7 @@ class BundleContractTests(unittest.TestCase):
                 json.loads((PLUGIN_ROOT / ".codex-plugin" / "plugin.json").read_text())["version"],
                 manifest["version"],
             )
-            self.assertIn("Thirty-eight focused", manifest["description"])
+            self.assertIn("Thirty-seven focused", manifest["description"])
 
     def test_host_specific_update_instructions_verify_the_installed_version(self):
         readme = (PLUGIN_ROOT.parents[1] / "README.md").read_text(encoding="utf-8")

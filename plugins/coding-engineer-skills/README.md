@@ -3,7 +3,7 @@
 Coding Engineer Skills is a deliberately curated engineering toolkit for
 Codex and Claude Code. It favors Cogine's own workflows and lightweight
 engineering skills. It does not bundle the full `superpowers` workflow pack.
-The plugin contains 38 skills.
+The plugin contains 37 skills.
 
 ## Included skills
 
@@ -48,11 +48,10 @@ The plugin contains 38 skills.
 - `plan-devex-review`
 - `planmode-engineer`
 
-### Git, CI, worktrees, and shipping — 11
+### Git, CI, worktrees, and shipping — 10
 
 - `worktree-management`
 - `fix-ci`
-- `loop-on-ci`
 - `review-and-ship`
 - `modernize`
 - `takeover`
@@ -89,7 +88,7 @@ The plugin contains 38 skills.
 - Some skills need local tools or services for their full workflow, such as
   GitHub CLI, Playwright, or a browser-capable host. Their instructions retain
   their own capability checks and fallbacks.
-- Twelve workflow commands are explicit-only in both hosts. The remaining
+- Eleven workflow commands are explicit-only in both hosts. The remaining
   twenty-six skills are model-invokable. Full skill bodies are loaded only
   when invoked.
 - Local cross-skill calls use the full `coding-engineer-skills:<skill>`

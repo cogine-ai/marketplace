@@ -20,7 +20,6 @@ USER_ONLY = {
     "full-stop",
     "improve-codebase-architecture",
     "local-ultra-review",
-    "loop-on-ci",
     "planmode-engineer",
     "review-and-ship",
     "security-best-practices",
@@ -130,8 +129,8 @@ def validate_inventory(errors):
             f"skill inventory differs: missing={sorted(expected - actual)} "
             f"extra={sorted(actual - expected)}"
         )
-    if len(actual) != 38:
-        errors.append(f"expected 38 skills, found {len(actual)}")
+    if len(actual) != 37:
+        errors.append(f"expected 37 skills, found {len(actual)}")
 
     for name in sorted(actual):
         skill_dir = SKILLS_ROOT / name
@@ -222,8 +221,8 @@ def validate_metadata(errors):
     expected = USER_ONLY | MODEL_INVOKED
     if listed != expected:
         errors.append("plugin README skill list differs from the directory inventory")
-    if "38 skill" not in readme:
-        errors.append("plugin README does not state the 38-skill inventory")
+    if "37 skill" not in readme:
+        errors.append("plugin README does not state the 37-skill inventory")
 
     versions = []
     for manifest_path in (
@@ -234,8 +233,8 @@ def validate_metadata(errors):
         versions.append(manifest.get("version"))
         if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", manifest.get("version", "")):
             errors.append(f"{manifest_path}: invalid semantic version")
-        if "Thirty-eight focused" not in manifest.get("description", ""):
-            errors.append(f"{manifest_path}: description does not state Thirty-eight focused skills")
+        if "Thirty-seven focused" not in manifest.get("description", ""):
+            errors.append(f"{manifest_path}: description does not state Thirty-seven focused skills")
 
     marketplace = load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
@@ -243,8 +242,8 @@ def validate_metadata(errors):
     versions.append(coding.get("version"))
     if len(set(versions)) != 1:
         errors.append("coding versions differ between manifests and marketplace")
-    if "Thirty-eight focused" not in coding.get("description", ""):
-        errors.append("marketplace description does not state Thirty-eight focused skills")
+    if "Thirty-seven focused" not in coding.get("description", ""):
+        errors.append("marketplace description does not state Thirty-seven focused skills")
 
 
 def validate_lock(errors, matt_root=None):

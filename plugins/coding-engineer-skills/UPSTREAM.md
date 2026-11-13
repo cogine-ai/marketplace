@@ -70,13 +70,14 @@ Codex and Claude Code can discover the same bundle from one Marketplace entry.
 - Skills: `cogine-orchestrator`, `cogine-multirepo-worker`
 - Maintainer: Cogine AI
 
-## Cogine local skills — 4 skills
+## Cogine local skills — 3 skills
 
 - Skill: `cogine-power-gates`
 - Source: Cogine-authored global Codex installation
 - Snapshot date: 2026-07-18
 - Skills refreshed from newer global Codex installations on 2026-07-22:
-  `fix-ci`, `loop-on-ci`, and `review-and-ship`
+  `fix-ci` and `review-and-ship`
+- `loop-on-ci` was also refreshed on 2026-07-22 and is retired from the bundle.
 
 ## Matt Pocock skills — 10 skills
 

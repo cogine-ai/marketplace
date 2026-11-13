@@ -1,5 +1,13 @@
 # Changelog
 
+## Coding Engineer Skills 0.5.1 candidate — 2026-11-13
+
+- Retire `loop-on-ci`. Use `fix-ci` to diagnose and repair failures or explicitly ask `babysit-pr` to follow a PR to a stated outcome.
+
+## Coding Engineer Skills 0.5.0 — 2026-11-13
+
+- Add nine tstack skills for PR delivery, review, and handoff.
+
 ## Founder/CEO Skills 0.1.4 candidate — 2026-11-11
 
 - Add `founder-ceo-skills:stack-diagram` for product module maps and technical
