@@ -21,6 +21,7 @@ VALIDATOR_SPEC.loader.exec_module(VALIDATOR)
 USER_ONLY = {
     "cogine-multirepo-worker",
     "cogine-orchestrator",
+    "full-stop",
     "improve-codebase-architecture",
     "local-ultra-review",
     "loop-on-ci",
@@ -34,20 +35,28 @@ USER_ONLY = {
 
 MODEL_INVOKED = {
     "ai-app-security-audit",
+    "babysit-pr",
     "backlog-ready-spec",
     "code-review",
     "codebase-design",
     "cogine-power-gates",
+    "council",
     "devex-review",
     "diagnosing-bugs",
     "domain-modeling",
+    "file-pr",
     "fix-ci",
     "frontend-design",
+    "full-send",
     "good-offence",
     "grilling",
+    "leaving-pr-comments",
+    "modernize",
     "plan-devex-review",
     "run-smoke-tests",
     "shadcn",
+    "sol-loop",
+    "takeover",
     "tdd",
     "vercel-react-best-practices",
     "worktree-management",
@@ -67,6 +76,7 @@ CURRENT_MATT_IMPORTS = {
 }
 
 REQUIRED_SKILL_REFERENCES = {
+    "babysit-pr": {"leaving-pr-comments"},
     "tdd": {"codebase-design"},
     "code-review": {"setup-matt-pocock-skills"},
     "improve-codebase-architecture": {
@@ -86,10 +96,10 @@ def load_frontmatter(path: Path):
 
 
 class BundleContractTests(unittest.TestCase):
-    def test_inventory_is_exactly_the_approved_29_skills(self):
+    def test_inventory_is_exactly_the_approved_38_skills(self):
         actual = {path.name for path in SKILLS_ROOT.iterdir() if path.is_dir()}
         self.assertEqual(USER_ONLY | MODEL_INVOKED, actual)
-        self.assertEqual(29, len(actual))
+        self.assertEqual(38, len(actual))
 
     def test_every_skill_has_matching_frontmatter_and_openai_metadata(self):
         for skill_dir in sorted(SKILLS_ROOT.iterdir()):
@@ -150,7 +160,7 @@ class BundleContractTests(unittest.TestCase):
         readme = (PLUGIN_ROOT / "README.md").read_text(encoding="utf-8")
         listed = set(re.findall(r"^- `([a-z0-9-]+)`$", readme, re.MULTILINE))
         self.assertEqual(USER_ONLY | MODEL_INVOKED, listed)
-        self.assertIn("29 skill", readme)
+        self.assertIn("38 skill", readme)
         for manifest_path in [
             PLUGIN_ROOT / ".claude-plugin" / "plugin.json",
             PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
@@ -161,7 +171,7 @@ class BundleContractTests(unittest.TestCase):
                 json.loads((PLUGIN_ROOT / ".codex-plugin" / "plugin.json").read_text())["version"],
                 manifest["version"],
             )
-            self.assertIn("Twenty-nine focused", manifest["description"])
+            self.assertIn("Thirty-eight focused", manifest["description"])
 
     def test_host_specific_update_instructions_verify_the_installed_version(self):
         readme = (PLUGIN_ROOT.parents[1] / "README.md").read_text(encoding="utf-8")

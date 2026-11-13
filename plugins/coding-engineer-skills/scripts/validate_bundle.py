@@ -17,6 +17,7 @@ SKILLS_ROOT = PLUGIN_ROOT / "skills"
 USER_ONLY = {
     "cogine-multirepo-worker",
     "cogine-orchestrator",
+    "full-stop",
     "improve-codebase-architecture",
     "local-ultra-review",
     "loop-on-ci",
@@ -30,20 +31,28 @@ USER_ONLY = {
 
 MODEL_INVOKED = {
     "ai-app-security-audit",
+    "babysit-pr",
     "backlog-ready-spec",
     "code-review",
     "codebase-design",
     "cogine-power-gates",
+    "council",
     "devex-review",
     "diagnosing-bugs",
     "domain-modeling",
+    "file-pr",
     "fix-ci",
     "frontend-design",
+    "full-send",
     "good-offence",
     "grilling",
+    "leaving-pr-comments",
+    "modernize",
     "plan-devex-review",
     "run-smoke-tests",
     "shadcn",
+    "sol-loop",
+    "takeover",
     "tdd",
     "vercel-react-best-practices",
     "worktree-management",
@@ -63,12 +72,20 @@ CURRENT_MATT_IMPORTS = {
 }
 
 OPERATIONAL_MODEL_CALLS = {
+    "babysit-pr": {"leaving-pr-comments"},
     "tdd": {"codebase-design"},
     "improve-codebase-architecture": {
         "codebase-design",
         "grilling",
         "domain-modeling",
     },
+}
+
+UPSTREAM_MODEL_CALLS = {
+    "full-send": {"sol-loop", "file-pr", "babysit-pr"},
+    "full-stop": {"full-send"},
+    "modernize": {"leaving-pr-comments"},
+    "takeover": {"modernize", "file-pr", "babysit-pr", "leaving-pr-comments"},
 }
 
 EXPLICIT_USER_HANDOFFS = {
@@ -113,8 +130,8 @@ def validate_inventory(errors):
             f"skill inventory differs: missing={sorted(expected - actual)} "
             f"extra={sorted(actual - expected)}"
         )
-    if len(actual) != 29:
-        errors.append(f"expected 29 skills, found {len(actual)}")
+    if len(actual) != 38:
+        errors.append(f"expected 38 skills, found {len(actual)}")
 
     for name in sorted(actual):
         skill_dir = SKILLS_ROOT / name
@@ -174,6 +191,14 @@ def validate_cross_skill_calls(errors):
             if f"coding-engineer-skills:{target}" not in text:
                 errors.append(f"{source}: missing namespaced call to {target}")
 
+    for source, targets in UPSTREAM_MODEL_CALLS.items():
+        text = (SKILLS_ROOT / source / "SKILL.md").read_text(encoding="utf-8")
+        for target in targets:
+            if target not in MODEL_INVOKED:
+                errors.append(f"{source}: upstream target {target} is not model-invokable")
+            if f"`{target}`" not in text and f"../{target}/SKILL.md" not in text:
+                errors.append(f"{source}: missing upstream call to {target}")
+
     for source, targets in EXPLICIT_USER_HANDOFFS.items():
         text = (SKILLS_ROOT / source / "SKILL.md").read_text(encoding="utf-8")
         for target in targets:
@@ -197,8 +222,8 @@ def validate_metadata(errors):
     expected = USER_ONLY | MODEL_INVOKED
     if listed != expected:
         errors.append("plugin README skill list differs from the directory inventory")
-    if "29 skill" not in readme:
-        errors.append("plugin README does not state the 29-skill inventory")
+    if "38 skill" not in readme:
+        errors.append("plugin README does not state the 38-skill inventory")
 
     versions = []
     for manifest_path in (
@@ -209,8 +234,8 @@ def validate_metadata(errors):
         versions.append(manifest.get("version"))
         if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", manifest.get("version", "")):
             errors.append(f"{manifest_path}: invalid semantic version")
-        if "Twenty-nine focused" not in manifest.get("description", ""):
-            errors.append(f"{manifest_path}: description does not state Twenty-nine focused skills")
+        if "Thirty-eight focused" not in manifest.get("description", ""):
+            errors.append(f"{manifest_path}: description does not state Thirty-eight focused skills")
 
     marketplace = load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
@@ -218,8 +243,8 @@ def validate_metadata(errors):
     versions.append(coding.get("version"))
     if len(set(versions)) != 1:
         errors.append("coding versions differ between manifests and marketplace")
-    if "Twenty-nine focused" not in coding.get("description", ""):
-        errors.append("marketplace description does not state Twenty-nine focused skills")
+    if "Thirty-eight focused" not in coding.get("description", ""):
+        errors.append("marketplace description does not state Thirty-eight focused skills")
 
 
 def validate_lock(errors, matt_root=None):
@@ -322,8 +347,8 @@ def main():
     lock = load_json(PLUGIN_ROOT / "UPSTREAM_LOCK.json")
     file_count = sum(len(entry["files"]) for entry in lock["skills"].values())
     print(
-        "Validated 29 skills, 11 explicit-only policies, "
-        f"18 model-invokable policies, and {file_count} locked upstream files."
+        f"Validated {len(USER_ONLY | MODEL_INVOKED)} skills, {len(USER_ONLY)} explicit-only policies, "
+        f"{len(MODEL_INVOKED)} model-invokable policies, and {file_count} locked upstream files."
     )
 
 
