@@ -30,7 +30,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | --- | ---: | --- |
 | [`coginex`](plugins/coginex/README.md) | 5 | Internal CogineX tasks, documents, search, communication, calendar, bots, and CRM through the complete remote MCP toolset. Codex and Claude Code; native OAuth. |
 | `design-engineer-skills` | 8 | UI prototyping, supplementary marketing-page candidates, frontend library selection, polish, animation review, and motion design. |
-| `coding-engineer-skills` | 29 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
+| `coding-engineer-skills` | 38 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 17 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, architecture diagrams, UX audits, specs, and tickets. |
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
@@ -145,7 +145,7 @@ plugins/design-engineer-skills/
 plugins/coding-engineer-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest
-  skills/                              # 30 shared skills
+  skills/                              # 38 shared skills
 plugins/product-manager-skills/
   .codex-plugin/plugin.json            # Codex manifest
   .claude-plugin/plugin.json           # Claude Code manifest

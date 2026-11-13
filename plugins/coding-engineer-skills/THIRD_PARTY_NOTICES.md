@@ -16,6 +16,18 @@ The skills are `code-review`, `codebase-design`, `diagnosing-bugs`,
 `improve-codebase-architecture`,
 `setup-matt-pocock-skills`, `tdd`, `to-spec`, and `to-tickets`.
 
+## Theo Browne
+
+`modernize`, `takeover`, `leaving-pr-comments`, `sol-loop`, and `full-send`
+are copied from
+[t3dotgg/tstack at 11e37a7](https://github.com/t3dotgg/tstack/tree/11e37a74d0a6868c121cd0910ab2b3bd9873b92a).
+Their `SKILL.md` files are unmodified. `council` comes from the same revision
+with one added sentence about invoking Claude Opus through Cursor.
+`full-stop` retains the upstream body and uses explicit invocation on both
+hosts. The `file-pr` and `babysit-pr` entry points are local adaptations of
+the same workflows.
+The MIT copyright and license text is retained in `LICENSES/MIT-Theo-Browne.txt`.
+
 ## Anthropic
 
 `frontend-design` is adapted from
