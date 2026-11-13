@@ -10,7 +10,11 @@ Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Start every sub-agent with a fresh context window.
 
-Use the issue tracker documentation already provided or the repository's configured tracker location; `docs/agents/issue-tracker.md` is the default. A missing default path does not invalidate an existing configuration. Only when no tracker workflow can be found, tell the user to invoke `coding-engineer-skills:setup-matt-pocock-skills`.
+Use the tracker workflow already provided or documented by the repository.
+Check its configured location and `docs/agents/issue-tracker.md`. Without a
+documented workflow, use issue references only when their tracker and project
+are clear from the reference, the PR, or the repository's remote. Continue
+looking for the spec if a reference is ambiguous or inaccessible.
 
 ## Process
 
@@ -26,10 +30,14 @@ Before going further, confirm the fixed point resolves (`git rev-parse <fixed-po
 
 Look for the originating spec, in this order:
 
-1. Issue references in the commit messages (`#123`, `Closes #45`, GitLab `!67`, etc.), fetched via the configured issue-tracker workflow.
-2. A path the user passed as an argument.
+1. A spec or issue reference supplied by the user.
+2. Requirements and linked issues in the PR under review, when available, and
+   issue references in the commits being reviewed. Fetch linked issues using
+   the tracker workflow above.
 3. A spec file under `docs/`, `specs/`, or `.scratch/` matching the branch name or feature.
-4. If nothing is found, ask the user where the spec is. If they say there isn't one, the **Spec** sub-agent will skip and report "no spec available".
+4. If no spec is available, ask the user where to find it. If they confirm
+   there is no spec, continue the Standards review and report that the Spec
+   review was skipped.
 
 ### 3. Identify the standards sources
 

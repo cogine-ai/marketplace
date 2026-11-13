@@ -18,13 +18,13 @@ def blob_sha(path):
 class DistributionTests(unittest.TestCase):
     def test_single_entry_and_matching_role_inventories(self):
         self.assertEqual([p.relative_to(SKILL).as_posix() for p in SKILL.rglob('SKILL.md')], ['SKILL.md'])
-        self.assertEqual(len(list((ROLE/'skills').glob('*/SKILL.md'))), 37)
+        self.assertEqual(len(list((ROLE/'skills').glob('*/SKILL.md'))), 36)
         for host in ['.codex-plugin', '.claude-plugin']:
             metadata = json.loads((ROLE/host/'plugin.json').read_text())
-            self.assertEqual(metadata['version'], '0.5.1')
-            self.assertIn('Thirty-seven', metadata['description'])
+            self.assertEqual(metadata['version'], '0.5.2')
+            self.assertIn('Thirty-six', metadata['description'])
         claude = json.loads((ROOT/'.claude-plugin/marketplace.json').read_text())
-        self.assertEqual(next(p for p in claude['plugins'] if p['name']=='coding-engineer-skills')['version'], '0.5.1')
+        self.assertEqual(next(p for p in claude['plugins'] if p['name']=='coding-engineer-skills')['version'], '0.5.2')
         native = json.loads((ROOT/'.agents/plugins/marketplace.json').read_text())
         entries = [p for p in native['plugins'] if p['name']=='coding-engineer-skills']
         self.assertEqual(len(entries), 1)

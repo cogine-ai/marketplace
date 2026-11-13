@@ -1,5 +1,11 @@
 # Changelog
 
+## Coding Engineer Skills 0.5.2 candidate — 2026-11-14
+
+- Retire `setup-matt-pocock-skills` from the Marketplace bundle.
+- Let `code-review` use existing tracker configuration, PR and commit
+  references, and local specs without a separate setup step.
+
 ## Coding Engineer Skills 0.5.1 candidate — 2026-11-13
 
 - Retire `loop-on-ci`. Use `fix-ci` to diagnose and repair failures or explicitly ask `babysit-pr` to follow a PR to a stated outcome.

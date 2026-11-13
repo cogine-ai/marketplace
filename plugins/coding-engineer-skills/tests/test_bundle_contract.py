@@ -27,7 +27,6 @@ USER_ONLY = {
     "planmode-engineer",
     "review-and-ship",
     "security-best-practices",
-    "setup-matt-pocock-skills",
     "to-spec",
     "to-tickets",
 }
@@ -68,7 +67,6 @@ CURRENT_MATT_IMPORTS = {
     "domain-modeling",
     "grilling",
     "improve-codebase-architecture",
-    "setup-matt-pocock-skills",
     "tdd",
     "to-spec",
     "to-tickets",
@@ -77,7 +75,6 @@ CURRENT_MATT_IMPORTS = {
 REQUIRED_SKILL_REFERENCES = {
     "babysit-pr": {"leaving-pr-comments"},
     "tdd": {"codebase-design"},
-    "code-review": {"setup-matt-pocock-skills"},
     "improve-codebase-architecture": {
         "codebase-design",
         "grilling",
@@ -95,10 +92,10 @@ def load_frontmatter(path: Path):
 
 
 class BundleContractTests(unittest.TestCase):
-    def test_inventory_is_exactly_the_approved_37_skills(self):
+    def test_inventory_is_exactly_the_approved_36_skills(self):
         actual = {path.name for path in SKILLS_ROOT.iterdir() if path.is_dir()}
         self.assertEqual(USER_ONLY | MODEL_INVOKED, actual)
-        self.assertEqual(37, len(actual))
+        self.assertEqual(36, len(actual))
 
     def test_every_skill_has_matching_frontmatter_and_openai_metadata(self):
         for skill_dir in sorted(SKILLS_ROOT.iterdir()):
@@ -147,6 +144,7 @@ class BundleContractTests(unittest.TestCase):
         )
         self.assertNotIn("work-in-progress changes", code_review)
         self.assertIn("fixed point", code_review)
+        self.assertNotIn("setup-matt-pocock-skills", code_review)
 
     def test_skill_bodies_do_not_depend_on_claude_only_runtime_placeholders(self):
         for skill_md in sorted(SKILLS_ROOT.glob("*/SKILL.md")):
@@ -159,7 +157,7 @@ class BundleContractTests(unittest.TestCase):
         readme = (PLUGIN_ROOT / "README.md").read_text(encoding="utf-8")
         listed = set(re.findall(r"^- `([a-z0-9-]+)`$", readme, re.MULTILINE))
         self.assertEqual(USER_ONLY | MODEL_INVOKED, listed)
-        self.assertIn("37 skill", readme)
+        self.assertIn("36 skill", readme)
         for manifest_path in [
             PLUGIN_ROOT / ".claude-plugin" / "plugin.json",
             PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
@@ -170,7 +168,7 @@ class BundleContractTests(unittest.TestCase):
                 json.loads((PLUGIN_ROOT / ".codex-plugin" / "plugin.json").read_text())["version"],
                 manifest["version"],
             )
-            self.assertIn("Thirty-seven focused", manifest["description"])
+            self.assertIn("Thirty-six focused", manifest["description"])
 
     def test_host_specific_update_instructions_verify_the_installed_version(self):
         readme = (PLUGIN_ROOT.parents[1] / "README.md").read_text(encoding="utf-8")
@@ -227,25 +225,6 @@ class BundleContractTests(unittest.TestCase):
         self.assertNotIn("self-contained HTML", architecture_skill)
         self.assertIn('securityLevel: "strict"', html_report)
         self.assertIn("HTML-escape", html_report)
-
-        setup_skill = (
-            SKILLS_ROOT / "setup-matt-pocock-skills" / "SKILL.md"
-        ).read_text(encoding="utf-8")
-        github_tracker = (
-            SKILLS_ROOT / "setup-matt-pocock-skills" / "issue-tracker-github.md"
-        ).read_text(encoding="utf-8")
-        local_tracker = (
-            SKILLS_ROOT / "setup-matt-pocock-skills" / "issue-tracker-local.md"
-        ).read_text(encoding="utf-8")
-        self.assertIn("author_association", github_tracker)
-        self.assertNotIn("authorAssociation", github_tracker)
-        self.assertIn(".issue_dependencies_summary.blocked_by", github_tracker)
-        self.assertNotIn("blockedBy.totalCount", github_tracker)
-        self.assertIn(
-            ".scratch/<feature-slug>/issues/<NN>-<slug>.md", local_tracker
-        )
-        self.assertIn("GLOSSARY-MAP.md` already exists", setup_skill)
-
 
     def test_lock_verifies_renamed_and_retired_sources_at_their_own_commits(self):
         # Current HEAD lacks the retired path; the renamed source has a different

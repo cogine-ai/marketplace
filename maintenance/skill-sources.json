@@ -347,8 +347,8 @@
         "skillFolderHash": "ec07f82df54064d01aa1648670e81da41e2cbdc2"
       },
       "reviewed_overlay": "maintenance/standalone-skills/2026-10-08.json",
-      "authority_after_verified_transition": "plugins/coding-engineer-skills/skills/setup-matt-pocock-skills",
-      "activation_state": "keep standalone until candidate installation is verified"
+      "authority_after_verified_transition": null,
+      "activation_state": "keep installer-managed standalone; Marketplace copy retired"
     },
     {
       "name": "improve-codebase-architecture",

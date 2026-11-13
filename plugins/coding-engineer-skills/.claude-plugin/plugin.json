@@ -1,7 +1,7 @@
 {
   "name": "coding-engineer-skills",
-  "version": "0.5.1",
-  "description": "Thirty-seven focused engineering skills for planning, implementation, architecture, review, CI, and orchestration.",
+  "version": "0.5.2",
+  "description": "Thirty-six focused engineering skills for planning, implementation, architecture, review, CI, and orchestration.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"

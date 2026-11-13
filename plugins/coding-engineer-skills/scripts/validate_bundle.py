@@ -23,7 +23,6 @@ USER_ONLY = {
     "planmode-engineer",
     "review-and-ship",
     "security-best-practices",
-    "setup-matt-pocock-skills",
     "to-spec",
     "to-tickets",
 }
@@ -64,7 +63,6 @@ CURRENT_MATT_IMPORTS = {
     "domain-modeling",
     "grilling",
     "improve-codebase-architecture",
-    "setup-matt-pocock-skills",
     "tdd",
     "to-spec",
     "to-tickets",
@@ -86,11 +84,6 @@ UPSTREAM_MODEL_CALLS = {
     "modernize": {"leaving-pr-comments"},
     "takeover": {"modernize", "file-pr", "babysit-pr", "leaving-pr-comments"},
 }
-
-EXPLICIT_USER_HANDOFFS = {
-    "code-review": {"setup-matt-pocock-skills"},
-}
-
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -129,8 +122,8 @@ def validate_inventory(errors):
             f"skill inventory differs: missing={sorted(expected - actual)} "
             f"extra={sorted(actual - expected)}"
         )
-    if len(actual) != 37:
-        errors.append(f"expected 37 skills, found {len(actual)}")
+    if len(actual) != 36:
+        errors.append(f"expected 36 skills, found {len(actual)}")
 
     for name in sorted(actual):
         skill_dir = SKILLS_ROOT / name
@@ -198,15 +191,7 @@ def validate_cross_skill_calls(errors):
             if f"`{target}`" not in text and f"../{target}/SKILL.md" not in text:
                 errors.append(f"{source}: missing upstream call to {target}")
 
-    for source, targets in EXPLICIT_USER_HANDOFFS.items():
-        text = (SKILLS_ROOT / source / "SKILL.md").read_text(encoding="utf-8")
-        for target in targets:
-            if target not in USER_ONLY:
-                errors.append(f"{source}: explicit handoff target {target} is not user-only")
-            if f"coding-engineer-skills:{target}" not in text:
-                errors.append(f"{source}: missing namespaced handoff to {target}")
-
-    for source, targets in {**OPERATIONAL_MODEL_CALLS, **EXPLICIT_USER_HANDOFFS}.items():
+    for source, targets in OPERATIONAL_MODEL_CALLS.items():
         text = (SKILLS_ROOT / source / "SKILL.md").read_text(encoding="utf-8")
         for target in targets:
             if target not in expected:
@@ -221,8 +206,8 @@ def validate_metadata(errors):
     expected = USER_ONLY | MODEL_INVOKED
     if listed != expected:
         errors.append("plugin README skill list differs from the directory inventory")
-    if "37 skill" not in readme:
-        errors.append("plugin README does not state the 37-skill inventory")
+    if "36 skill" not in readme:
+        errors.append("plugin README does not state the 36-skill inventory")
 
     versions = []
     for manifest_path in (
@@ -233,8 +218,8 @@ def validate_metadata(errors):
         versions.append(manifest.get("version"))
         if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", manifest.get("version", "")):
             errors.append(f"{manifest_path}: invalid semantic version")
-        if "Thirty-seven focused" not in manifest.get("description", ""):
-            errors.append(f"{manifest_path}: description does not state Thirty-seven focused skills")
+        if "Thirty-six focused" not in manifest.get("description", ""):
+            errors.append(f"{manifest_path}: description does not state Thirty-six focused skills")
 
     marketplace = load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
@@ -242,8 +227,8 @@ def validate_metadata(errors):
     versions.append(coding.get("version"))
     if len(set(versions)) != 1:
         errors.append("coding versions differ between manifests and marketplace")
-    if "Thirty-seven focused" not in coding.get("description", ""):
-        errors.append("marketplace description does not state Thirty-seven focused skills")
+    if "Thirty-six focused" not in coding.get("description", ""):
+        errors.append("marketplace description does not state Thirty-six focused skills")
 
 
 def validate_lock(errors, matt_root=None):
@@ -254,7 +239,7 @@ def validate_lock(errors, matt_root=None):
     if not re.fullmatch(r"[0-9a-f]{40}", default_commit):
         errors.append("UPSTREAM_LOCK.json has an invalid default source commit")
     if set(lock.get("skills", {})) != CURRENT_MATT_IMPORTS:
-        errors.append("UPSTREAM_LOCK.json does not cover the 12 retained Matt imports")
+        errors.append("UPSTREAM_LOCK.json does not match the retained Matt imports")
 
     for skill_name, entry in lock.get("skills", {}).items():
         if not isinstance(entry.get("adaptations"), list):

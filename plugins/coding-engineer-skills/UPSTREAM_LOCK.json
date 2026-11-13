@@ -10,19 +10,18 @@
   "skills": {
     "code-review": {
       "upstream_path": "skills/engineering/code-review",
-      "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "source_commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
       "status": "reviewed-current-source",
       "adaptations": [
-        "SKILL.md: qualify setup-matt-pocock-skills with the local plugin namespace",
         "SKILL.md: scope the trigger description to committed fixed-point changes",
-        "SKILL.md: discover configured tracker location before requesting setup; retain committed review boundary"
+        "SKILL.md: discover tracker workflows and specs without requiring a setup skill"
       ],
       "files": {
         "SKILL.md": {
-          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+          "source_commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
           "source_path": "skills/engineering/code-review/SKILL.md",
           "upstream_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
-          "local_sha256": "0e55d44811a049249f3a799e7a64555c3bbc7d2ad2ab4174c7ce540c7bef9bc7",
+          "local_sha256": "22d3f3286fcc46eef02c19e665244f3cbbec119d37565e126a03389e85e5cfa0",
           "mapping": "adapted",
           "raw_source_regions": [
             {
@@ -32,8 +31,8 @@
               ],
               "sha256": "98dd6d184b0357b2b3c87fb160834cd5af0597111fcf7ef53c83c8d374a06ef8",
               "landing_byte_range_half_open": [
-                2277,
-                4828
+                2390,
+                4941
               ]
             },
             {
@@ -43,8 +42,8 @@
               ],
               "sha256": "fde3ea9c8ee5234562b680b6bcf582cdac63fb4bdac6e3ad715a75a505bfadba",
               "landing_byte_range_half_open": [
-                4870,
-                4965
+                4983,
+                5078
               ]
             }
           ]
@@ -218,88 +217,6 @@
           "source_path": "skills/engineering/improve-codebase-architecture/agents/openai.yaml",
           "upstream_sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
           "local_sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
-          "mapping": "byte-identical"
-        }
-      }
-    },
-    "setup-matt-pocock-skills": {
-      "upstream_path": "skills/engineering/setup-matt-pocock-skills",
-      "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
-      "status": "reviewed-current-source",
-      "adaptations": [
-        "SKILL.md: qualify bundled to-spec and to-tickets references",
-        "SKILL.md: preserve existing GLOSSARY-MAP.md layouts and ask when multiple business contexts are plausible",
-        "issue-tracker-github.md: use supported GitHub CLI and API fields for external PR and dependency queries",
-        "issue-tracker-local.md: publish implementation issues to the standard numbered issues directory",
-        "domain.md: qualify bundled domain-modeling and improve-codebase-architecture references and remove the excluded grill-with-docs alias",
-        "SKILL.md: preserve manually maintained tracker and legacy domain layout; create missing labels only in authorized setup scope",
-        "issue-tracker-github.md: sub-issue API with authorization and relationship readback; retain supported dependency and external-PR queries",
-        "issue-tracker-github.md: gate frontier on verified open dependency count; failed/missing/invalid query results remain unknown",
-        "2026-10-08 source unification: migrate validated standalone domain-policy priority, legacy paths and write-only ambiguity handling into the packaged maintenance source; preserve host and tracker adaptations",
-        "2026-11-07 P1: require confirmation before repository initialization or remote wiring; preserve configured and legacy domain layouts",
-        "2026-11-07 P1: adopt current GitHub/GitLab command fixes while retaining authorized sub-issue writes, readback, and valid-response-only blocker counts"
-      ],
-      "files": {
-        "SKILL.md": {
-          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
-          "upstream_sha256": "b01e05bfe8c323171275c6ceec78b12f1bd4c62dfd26c2cfe8be806d3883f1ed",
-          "local_sha256": "7854f683ec27631a350eaac0751690b49d0c7198692b9dd5bfcd9a4f6371e3f0",
-          "mapping": "adapted"
-        },
-        "agents/openai.yaml": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/agents/openai.yaml",
-          "upstream_sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
-          "local_sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
-          "mapping": "byte-identical"
-        },
-        "domain.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/domain.md",
-          "upstream_sha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9",
-          "local_sha256": "52b1a6e71aa6989c2ff7e17e6f79c39c37f7c715f2a098995f4d86053f637c86",
-          "mapping": "adapted"
-        },
-        "issue-tracker-github.md": {
-          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
-          "upstream_sha256": "6fdb3e9b00b7b0b115ecac3b1c00e3790f637f190abf598815368722c0a94692",
-          "local_sha256": "f2e85366033c127659dc6f5b874b34d70ce60c72061c4724e664af0c4da77d06",
-          "mapping": "adapted",
-          "raw_source_regions": [
-            {
-              "byte_range_half_open": [
-                239,
-                327
-              ],
-              "sha256": "5e7639b9b369799a24d56acd5d9147edb6e773a17ba936eae1e0fcbe7c49844b",
-              "landing_byte_range_half_open": [
-                239,
-                327
-              ]
-            }
-          ]
-        },
-        "issue-tracker-gitlab.md": {
-          "source_commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
-          "upstream_sha256": "947602d33a80f98f939fb990995b8f95a3459b114b919c4221d08bd75d7cffe0",
-          "local_sha256": "22b294ca9c8bb3af640bedc93fe9429b41216d4156c36542d45e0c4b9345cba1",
-          "mapping": "adapted"
-        },
-        "issue-tracker-local.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
-          "upstream_sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
-          "local_sha256": "aa9d5636aa2e17d7b070598a5f8833fe0f368038c76ef627ab3942d191880019",
-          "mapping": "adapted"
-        },
-        "triage-labels.md": {
-          "source_commit": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
-          "source_path": "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
-          "upstream_sha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa",
-          "local_sha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa",
           "mapping": "byte-identical"
         }
       }
