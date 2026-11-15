@@ -35,9 +35,10 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 17 | Founder judgment, product-market fit, strategy, decisions, planning, architecture diagrams, organization, finance, fundraising, and board communication. |
+| [`ai-slide-templates`](plugins/ai-slide-templates/README.md) | 1 | Create HTML presentations from 81 templates, with outline preparation, visual previews and browser verification. Codex and Claude Code. |
 | [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Cursor delivers the first complete result; Codex takes over acceptance and local corrections. Codex only. |
 
-The Codex catalog contains eight plugins. CogineX and the six role-based skill
+The Codex catalog contains nine plugins. AI Slide Templates, CogineX and the six role-based skill
 plugins are also available in Claude Code; Cursourcing targets Codex and requires Node.js 22+
 and an authenticated Cursor CLI.
 
@@ -98,7 +99,7 @@ prepared source versions do not imply a published or installed update.
 
 ## Compatibility
 
-Codex is the primary target. CogineX and the six role-based plugins also ship
+Codex is the primary target. AI Slide Templates, CogineX and the six role-based plugins also ship
 native Claude Code manifests while sharing the same skill folders:
 
 - Codex catalog: `.agents/plugins/marketplace.json`
@@ -168,6 +169,12 @@ plugins/coginex/
   .mcp.json                           # Full remote CogineX MCP via OAuth
   skills/                              # 5 shared skills
   docs/                                # Capabilities, source review, validation
+plugins/ai-slide-templates/
+  .codex-plugin/plugin.json            # Codex manifest
+  .claude-plugin/plugin.json           # Claude Code manifest
+  library.json                        # Pinned template repository version
+  scripts/                            # First-use library preparation
+  skills/                             # 1 shared presentation skill
 plugins/cursourcing/
   .codex-plugin/plugin.json            # Codex manifest
   .mcp.json                           # Cursor execution bridge

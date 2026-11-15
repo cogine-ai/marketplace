@@ -1,5 +1,12 @@
 # Changelog
 
+## AI Slide Templates 0.1.0 candidate — 2026-11-16
+
+- Add an independent Codex and Claude Code plugin for HTML presentation creation.
+- Fetch and reuse a pinned 81-template library; keep the media library outside the plugin package.
+- Preserve template selection, visual previews, content adaptation and finished-deck verification.
+- Record canonical source ownership and retain legacy installed skill entries.
+
 ## Coding Engineer Skills 0.5.2 candidate — 2026-11-14
 
 - Retire `setup-matt-pocock-skills` from the Marketplace bundle.

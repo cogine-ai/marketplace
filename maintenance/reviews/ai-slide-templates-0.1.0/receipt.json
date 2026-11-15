@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-16",
+  "plugin_version": "0.1.0",
+  "library_commit": "32d18ffa7d5c2c8c04cb5d94e621e21dafdae772",
+  "environment": {
+    "os": "macOS",
+    "node": "24.22.1",
+    "browser": "Google Chrome",
+    "viewport": "1280x720"
+  },
+  "installation": {
+    "codex": "Native local marketplace add/install; version 0.1.0 read back; installed helper executed",
+    "claude_code": "Native local marketplace add/install; version 0.1.0 read back; installed helper executed",
+    "scope": "Separate temporary host configurations, not the user active installations"
+  },
+  "workflow_cases": {
+    "direct": {
+      "template": "airy-modern",
+      "slides": 8,
+      "method": "Manually authored simulated brief and content; deterministic text substitution preserving source CSS/JS"
+    },
+    "selection": {
+      "template": "circuit-tech-dark",
+      "slides": 8,
+      "alternatives": [
+        "circuit-tech-dark",
+        "midnight-executive"
+      ],
+      "rationale": "Dark engineering proposal requires service graph, ownership layers and rollout layouts; executive alternative emphasizes board-level decisions."
+    }
+  },
+  "verification": {
+    "setup_regressions": 7,
+    "upstream_tool_tests": 46,
+    "structural_templates": 81,
+    "asset_manifests_assessed": 6,
+    "templates_outside_asset_manifest_review": 75,
+    "output_visual_validation": "Both decks: all 16 slides passed the pinned browser validator",
+    "screenshots_reviewed": [
+      "direct cover",
+      "direct agenda",
+      "selection cover",
+      "selection agenda",
+      "both candidate previews"
+    ],
+    "navigation": "ArrowRight, End and Home passed on both final decks",
+    "page_errors": 0
+  },
+  "limitations": [
+    "Assisted workflow smoke checks, not an autonomous model evaluation",
+    "No fresh all-81 browser acceptance; no Windows/Linux/real touch acceptance",
+    "Native PPTX export is outside 0.1.0",
+    "Asset-register checks are not a claim of universal rights clearance"
+  ],
+  "artifacts": {
+    "outputs/direct/brief.json": "b1ca5fdc283cd92d179cf42517dba1f3983a25cd8b86ac79d886a71a702b633e",
+    "outputs/direct/templates/airy-modern/template.html": "3983d598579e4c2fb47a92b7081f0e109818b0958cf582b4500c236d6f53508d",
+    "outputs/direct/templates/airy-modern/template.json": "b1324a7aecddbe3739fde016c2e7bbd8981b3c8512d3b1c429f54338e4dcb8ea",
+    "outputs/selection/brief.json": "2f945fc542582f6ce2a1ce98ed94a601f164f602708b3709d3d3efc5d7c2de19",
+    "outputs/selection/previews/circuit-tech-dark-preview.html": "2fda130fde4ef56c8843a61c3adc4307a363dcc300d06552a82c77bf7dfb39b1",
+    "outputs/selection/previews/midnight-executive-preview.html": "63105feab1258718160a030e5aacbaddb8be9c0346a56c32a1343d03f4c00ec8",
+    "outputs/selection/templates/circuit-tech-dark/template.html": "82468dfc5cc8a8aea6b8e14aa3688d52f1cba370e7d0e287fab3232efad1c592",
+    "outputs/selection/templates/circuit-tech-dark/template.json": "7c1142a43075eb25d9014df92e5b34b9066cf33966fb594535dde592a4d285b7",
+    "evidence/direct-agenda.png": "3203c1b22594c979b509cb56fe0541f451a50355a646585d410f197ed506bd55",
+    "evidence/direct.png": "3d559e29f9fc45a9250a69463eed408f2a47c6d9c53c123a21edbf9c8d94f2be",
+    "evidence/preview-circuit.png": "5bf199161b5747f766aaf08ac1bbf6f79fb5a69939c1f8e7ef19c698f559d22b",
+    "evidence/preview-executive.png": "97ffe2a7bbf4a78c71e7c55b3d8dc853adbf5bd88d69142276ef84c7ea41302b",
+    "evidence/selection-agenda.png": "334962ac5f0864a1208b4e1f1445aec758b4216a3d8882b12882824f71ae6f7f",
+    "evidence/selection.png": "67b41a6d2e16a5911add7a4dd7460dd37823890342cfe4404e5bdb18dd6b6066"
+  },
+  "plugin_runtime_sha256": {
+    ".claude-plugin/plugin.json": "b3f558674f920cd9ff22f24808cf7a5900559099a514fe61d6dea24199e93159",
+    ".codex-plugin/plugin.json": "9a8a61699160cc26c0c6075311c813a6d42cf5f9ee65472b7303a2d20dfae1cf",
+    "LICENSE": "3b34e14d3294e03f17256390aa11b46f2519e94b341313ec845ac95f568b09eb",
+    "assets/icon.png": "ab7bfed4b9face6dd0dbb52e1dd77b159b958b857db27d2d67ad974cecde46dc",
+    "library.json": "f463983b4156b12b35731546967ae5264dc38b93cb5344a9693d57fd7923c0a0",
+    "scripts/prepare-library.mjs": "d52b3e4d731fcbeaf260c0acd50f3127fea931342a1ee3bf090dcbff6dcbbad5",
+    "skills/ai-slide-templates/agents/openai.yaml": "d79dc5477afa2e0fe4335faf0fff8a2ba5d62d24fa49105c7be30cc6a1d243be"
+  }
+}

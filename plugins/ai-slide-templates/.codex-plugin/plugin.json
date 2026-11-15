@@ -1,0 +1,41 @@
+{
+  "name": "ai-slide-templates",
+  "version": "0.1.0",
+  "description": "Turn real content into browser-openable HTML presentations with 81 Cogine AI slide templates.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/ai-slide-templates",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "MIT",
+  "keywords": [
+    "slides",
+    "presentation",
+    "html",
+    "templates"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Slide Templates",
+    "shortDescription": "Create HTML presentations from 81 distinct templates.",
+    "longDescription": "Shape notes into a slide outline, compare visual directions, and build a finished HTML presentation. Downloads a versioned template library on first use and checks the finished deck in a browser. Requires Node.js 22+, Git and browser access.",
+    "developerName": "Cogine AI",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/cogine-ai/ai-slide-templates",
+    "capabilities": [
+      "Presentation creation",
+      "Template selection",
+      "Visual previews"
+    ],
+    "defaultPrompt": [
+      "把这些材料整理成演示大纲，推荐合适的模板并生成 HTML 幻灯片。",
+      "Show me a few suitable visual directions for this presentation.",
+      "Use my chosen template to build and verify an HTML deck."
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "brandColor": "#536DFE"
+  }
+}

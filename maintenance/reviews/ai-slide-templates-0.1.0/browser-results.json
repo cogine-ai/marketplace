@@ -1,0 +1,26 @@
+[
+  {
+    "name": "direct",
+    "slideCount": 8,
+    "pageErrors": [],
+    "navigation": "ArrowRight, End, Home passed"
+  },
+  {
+    "name": "selection",
+    "slideCount": 8,
+    "pageErrors": [],
+    "navigation": "ArrowRight, End, Home passed"
+  },
+  {
+    "name": "preview-circuit",
+    "slideCount": 1,
+    "pageErrors": [],
+    "navigation": "single-slide preview"
+  },
+  {
+    "name": "preview-executive",
+    "slideCount": 1,
+    "pageErrors": [],
+    "navigation": "single-slide preview"
+  }
+]
