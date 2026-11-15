@@ -1,0 +1,18 @@
+{
+  "name": "ai-slide-templates",
+  "version": "0.1.0",
+  "description": "Turn real content into browser-openable HTML presentations with 81 Cogine AI slide templates.",
+  "author": {
+    "name": "Cogine AI",
+    "url": "https://github.com/cogine-ai"
+  },
+  "homepage": "https://github.com/cogine-ai/marketplace/tree/main/plugins/ai-slide-templates",
+  "repository": "https://github.com/cogine-ai/marketplace",
+  "license": "MIT",
+  "keywords": [
+    "slides",
+    "presentation",
+    "html",
+    "templates"
+  ]
+}
