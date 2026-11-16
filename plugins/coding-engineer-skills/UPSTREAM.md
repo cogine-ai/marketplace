@@ -98,6 +98,8 @@ Its prior provenance is recorded in [the November 7 sync record](UPSTREAM_SYNC_2
 [`5863806`](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/code-review).
 Its committed-change scope and host metadata are retained. It can resolve
 specs from existing tracker workflows, PRs, commit references, or local files.
+Each axis sub-agent returns its own report without reloading the skill or
+spawning further sub-agents.
 
 `to-spec` and `to-tickets` remain the previously reviewed Matt-derived
 local adaptations based on commit

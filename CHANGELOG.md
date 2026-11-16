@@ -1,5 +1,10 @@
 # Changelog
 
+## Coding Engineer Skills 0.5.3 candidate — 2026-11-17
+
+- Keep `code-review` axis sub-agents to their own report: they no longer reload
+  the skill or spawn further sub-agents.
+
 ## AI Slide Templates 0.1.0 candidate — 2026-11-16
 
 - Add an independent Codex and Claude Code plugin for HTML presentation creation.
