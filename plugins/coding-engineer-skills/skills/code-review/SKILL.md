@@ -67,6 +67,8 @@ Each smell reads *what it is* → *how to fix*; match it against the diff:
 
 Issue both sub-agent calls together, in the foreground, and aggregate the reports they return.
 
+Tell each sub-agent that it reviews one axis only: it must not load this skill again or spawn further sub-agents, and it returns its report directly.
+
 **Standards sub-agent prompt** should include:
 
 - The full diff command and commit list.

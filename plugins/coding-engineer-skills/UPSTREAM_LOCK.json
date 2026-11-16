@@ -14,14 +14,15 @@
       "status": "reviewed-current-source",
       "adaptations": [
         "SKILL.md: scope the trigger description to committed fixed-point changes",
-        "SKILL.md: discover tracker workflows and specs without requiring a setup skill"
+        "SKILL.md: discover tracker workflows and specs without requiring a setup skill",
+        "SKILL.md: limit each axis sub-agent to its own report without reloading the skill or spawning sub-agents"
       ],
       "files": {
         "SKILL.md": {
           "source_commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
           "source_path": "skills/engineering/code-review/SKILL.md",
           "upstream_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
-          "local_sha256": "22d3f3286fcc46eef02c19e665244f3cbbec119d37565e126a03389e85e5cfa0",
+          "local_sha256": "5d9cde5482d384548d8a2c68862d0f144d2c1bbed8f530c72f6dc0b26798fe88",
           "mapping": "adapted",
           "raw_source_regions": [
             {
