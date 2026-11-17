@@ -12,7 +12,7 @@ the user home or OurSkills root describe this machine, not an installer.
 | Power Gates | `CoginePowerGates/cogine-power-gates`, main at `d95315b` | Copy runtime Markdown to Coding; preserve each host's agents metadata. Global copy remains disabled in Codex. |
 | Other Cogine role skills | This repository's `plugins/<role>/skills` | Publish reviewed source, refresh the native catalog, install the desired version and verify hashes. Never edit an installed cache. |
 | AI Slide Templates | External `cogine-ai/ai-slide-templates` workflow/templates; Marketplace plugin packaging | Pin the library commit and review workflow adaptations. Preserve existing skillset copies and local entries; no automatic disabling. |
-| CogineX plugin | This repository's `plugins/coginex` | Codex and Claude Code share five skills and direct HTTP MCP config; preserve separate native manifests and Codex App mappings. Existing standalone MCP entries are not automatically replaced. |
+| CogineX plugin | This repository's `plugins/coginex` | Codex and Claude Code share five skills and direct HTTP MCP config; preserve separate native manifests and Codex App mappings. Cursor uses the shared package through its existing loading path. Existing standalone MCP entries are not automatically replaced. |
 | Shared grilling, backlog, spec and ticket Markdown | Coding package | Product retains distribution aliases required by existing namespace calls; synchronize shared Markdown while preserving agents metadata. |
 | Shared Founder Office Hours | Product package | Founder/CEO retains its namespace alias and metadata. |
 | Shared Stack Diagram | Product package | Synchronize the workflow, references, scripts, assets and licenses to Founder/CEO. Preserve its namespace and host metadata. |

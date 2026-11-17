@@ -28,6 +28,8 @@ description: 在 CogineX 中查找、创建、编辑和推进任务，设置负�
 
 先取得创建结果中的任务 ID，再填写正文和属性。某一步失败时，报告已经完成的部分并从失败处继续，不用重新创建任务来补后续字段。
 
+服务提供 `AttachXTaskDocument` / `DetachXTaskDocument` 时，用它们关联或移除任务文档；正文里贴链接不等于完成文档关联。关联要求当前用户独立拥有目标文档的查看权限，任务查看者会获得关联文档的 View 权限；沿用用户指定的任务和文档范围，并按返回结果说明实际关联状态。
+
 ## 状态与任务更新
 
 `GetXTaskStatus` 返回规范状态和版本；`SetXTaskStatus` 当前专用于带版本比较的 `inProgress → inReview`。其他受支持的状态编辑使用 `SetEntityProperty` 的当前 schema。出现版本冲突时先读取现状，重新判断用户的目标，不覆盖并发变更。

@@ -28,7 +28,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 
 | Plugin | Skills | Focus |
 | --- | ---: | --- |
-| [`coginex`](plugins/coginex/README.md) | 5 | Internal CogineX tasks, documents, search, communication, calendar, bots, and CRM through the complete remote MCP toolset. Codex and Claude Code; native OAuth. |
+| [`coginex`](plugins/coginex/README.md) | 5 | CogineX tasks, documents, images, communication, calendar, routines, bots, and CRM through the remote MCP toolset. Shared skills and native OAuth; Codex, Claude Code and Cursor guidance. |
 | `design-engineer-skills` | 8 | UI prototyping, supplementary marketing-page candidates, frontend library selection, polish, animation review, and motion design. |
 | `coding-engineer-skills` | 36 | Specs, implementation, domain and architecture design, isolated worktrees, frontend and React work, debugging, testing, independent review, security, Git/CI, and multi-repository orchestration. |
 | `product-manager-skills` | 17 | Strategy, product judgment, discovery, research, PRDs, prototypes, roadmaps, metrics, design, architecture diagrams, UX audits, specs, and tickets. |
@@ -73,9 +73,9 @@ further delegation. Grok 4.6 xhigh fast remains the execution model. See the
 
 ## Source maintenance
 
-CogineX 0.2.0 prepares native account integration and five shared skills on 2026-10-30. It
-connects directly to the existing CogineX MCP server, exposes its full toolset,
-and includes account setup, task, knowledge and collaboration guidance, plus a source capability review and known gaps. See its
+CogineX 0.2.2 adds Cursor connection guidance on 2026-11-17. It retains the
+existing five shared skills, direct MCP configuration and host manifests,
+with refreshed task, knowledge and collaboration guidance. See its
 [installation and acceptance notes](plugins/coginex/README.md). This checkout
 prepares the plugin; remote catalog availability depends on publication.
 
@@ -106,6 +106,9 @@ native Claude Code manifests while sharing the same skill folders:
 - Codex manifests: `plugins/*/.codex-plugin/plugin.json`
 - Claude Code catalog: `.claude-plugin/marketplace.json`
 - Claude Code manifests: `plugins/*/.claude-plugin/plugin.json`
+
+Cursor can use the existing CogineX package through its current Marketplace
+loading path; see the plugin's connection and restart notes.
 
 ## Update
 

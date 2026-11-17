@@ -1,4 +1,40 @@
-# 能力清单与服务端缺口
+# 能力参考与历史盘点
+
+## 2026-11-17 源码参考
+
+本次只读对照 CogineX 远程主线
+[`bf882a1c790ad2bf6df2bf4e482a422b5d7263e9`](https://github.com/cogine-ai/CogineX-mono/tree/bf882a1c790ad2bf6df2bf4e482a422b5d7263e9)。
+插件不固定工具数量；当前连接的完整 `tools/list`、实时 schema 和调用结果才是实际能力依据。源码有工具不代表已部署或当前账户有权使用。
+
+当前 [服务级 catalog](https://github.com/cogine-ai/CogineX-mono/blob/bf882a1c790ad2bf6df2bf4e482a422b5d7263e9/services/mcp_service/src/catalog.rs)
+统一组合共享与 MCP 专有工具，发现和离线文档导出共用该入口；
+[生成的工具参考](https://github.com/cogine-ai/CogineX-mono/blob/bf882a1c790ad2bf6df2bf4e482a422b5d7263e9/apps/docs/AI/mcp/tools/index.mdx)
+包含可选能力说明。旧生成器遗漏 MCP 专有工具的问题不能继续作为当前限制。
+
+| 场景 | 本次源码已包含的代表能力 | 使用指导 |
+| --- | --- | --- |
+| 连接与账户 | `GetXConnectionContext`、可选 `GetProfile` | 先核对工具发现，再读取身份；Profile 源码存在不证明当前连接已提供。 |
+| 任务 | 创建、正文、属性、状态、讨论、历史与 `AttachXTaskDocument` / `DetachXTaskDocument` | 保留已有幂等、CAS 和权限契约；关联文档会向任务查看者授予 View。 |
+| 文档与图片 | `ReadContent`、`ReadImages`、表格 / Word / 演示文稿专用读取与编辑 | 文字与图片分别读取；保留图片的 `fileOnly`、分页和截断提示。 |
+| 同事消息 | `ListColleagueMessages`、`SendColleagueMessage` | 列表限 ask 协议消息；发送使用 UUIDv7 操作 ID，不把它当作无去重的频道发送。 |
+| 日历 | 个人事件读写、团队事件与忙闲、共享设置、Booking | 续读当前游标；团队忙闲投影 ID 不能用于修改个人事件。 |
+| CRM | 公司 / 联系人创建、Pipeline、CSV 导入导出 | 使用实际公司与选项 ID，保留部分成功范围。 |
+| 定时工作与 Agent | Routine、Coding Agent 委派和会话读取 / 管理 | 区分提醒通知与执行工作；托管执行不代表本机文件已改变。 |
+| 导入 | Notion 计划与导入、Import Entity 等 | 外部 MCP 的 `reviewUrl` 交给用户在 CogineX 审阅批准；不绕过原计划执行。 |
+
+这些是指导入口，不是插件白名单。更多数据库、表单、Initiative、Skill 等工具直接按当前发现和 schema 使用。
+
+## 当前仍需区分的边界
+
+- **宿主与服务**：本插件分发共享连接配置和使用指导，不生成或改写服务端 `tools/list`。Cursor 更新后工具不可见时，先完整退出并重启，再看新连接的实际结果；不能用旧进程的历史 schema 报错认定当前服务仍有问题。
+- **凭据**：Bot 凭据工具仍只是准备请求；外部宿主沿用返回的设置链接完成交接，不能宣称已返回 secret。
+- **邮件与文件**：本次公开 MCP 组合仍排除 `SendEmail`；通用文件上传 / 删除等依当前发现判断，不从其他运行时工具推断已开放。
+- **本地历史**：五个 Skill 和上传接口不包含 Codex、Claude Code 或 Cursor 聊天记录的自动采集、选择及同步实现。
+- **验收**：用户确认既有 Cursor 插件在完整重启后已可用。本次只更新共享指导与文档，未改变包构成、MCP 配置或打包脚本；没有逐项重新验收全部业务工具，也没有修改或部署 CogineX 服务。
+
+## 2026-10-29 / 30 历史盘点
+
+以下保留最初固定版本的源码和验收证据，文中“当前”均指当时的版本。历史工具数、未合并状态和缺口不定义今天的服务能力。
 
 本清单来自 2026-10-29 的 CogineX 源码审查，固定版本为
 [`cf473c41cf6b432c3d7a0c50790a3322c0564906`](https://github.com/cogine-ai/CogineX-mono/tree/cf473c41cf6b432c3d7a0c50790a3322c0564906)。
