@@ -6,7 +6,7 @@
   "marketplace_plugin_sources": [
     {
       "name": "coginex",
-      "reviewed_on": "2026-10-30",
+      "reviewed_on": "2026-11-17",
       "authority": {
         "kind": "marketplace maintained source",
         "path": "plugins/coginex"
@@ -15,7 +15,7 @@
         "plugins/coginex/.codex-plugin/plugin.json",
         "plugins/coginex/.claude-plugin/plugin.json"
       ],
-      "distribution_rule": "Edit this Marketplace source. The canonical package has no personal App ID; use prepare_package.py for deliberate App binding in a new consumer package with an origin receipt. Both native hosts share five skills and direct MCP; preserve host manifests, existing Marketplace origins and credentials. Verify replacement before disabling old entries.",
+      "distribution_rule": "Edit this Marketplace source. The canonical package has no personal App ID; use prepare_package.py for deliberate App binding in a new consumer package with an origin receipt. Both native hosts share five skills and direct MCP; preserve host manifests, existing Marketplace origins and credentials. Cursor uses the shared package through its existing loading path. Verify replacement before disabling old entries.",
       "shared_host_entries": [
         "plugins/coginex/skills/coginex/SKILL.md",
         "plugins/coginex/skills/setup/SKILL.md",

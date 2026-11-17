@@ -1,6 +1,6 @@
 # 账户、连接与 Skill 开关
 
-插件声明能力及连接入口，宿主管理每个用户的授权状态。安装插件、连接账户、启用 Skill，以及拥有某个实体的访问权限，应分别验证。
+插件声明能力及连接入口，宿主管理每个用户的授权状态。安装插件、连接账户、发现业务工具、启用 Skill，以及拥有某个实体的访问权限，应分别验证。
 
 ## Codex
 
@@ -28,11 +28,17 @@ claude mcp logout plugin:coginex:coginex
 
 终端的 MCP 管理界面不同于 Codex 的 App 账户页面。使用宿主实际提供的连接和重连入口；不复制 Codex、CogineWork 或浏览器保存的 token。
 
+## Cursor
+
+Cursor 通过当前有效的 Marketplace 加载方式使用共用的五个 Skill 与直接 HTTP MCP。源码保留既有 Codex / Claude manifest 和打包方式；Codex 的 `.app.json` 不作为 Cursor 的账户配置，不需要另做一套 CogineX 工具实现。
+
+使用当前 MCP / 插件设置里的实际服务名称完成 OAuth，不照搬 Claude 的命名空间。更新后业务工具不可见时，完整退出并重启 Cursor，按新进程的工具列表和实际调用核对。用户已确认本次通过完整重启恢复；不能继续用重启前的旧日志归因服务端或 Cursor 故障。连接排查见 [setup](../skills/setup/SKILL.md)。
+
 ## 账户标签与凭据
 
-配套 CogineX 服务变更新增只读 `GetProfile`，接受空参数并返回当前已验证账户的 `{id, email}`。`id` 是稳定的账户 UUID，邮箱只用于显示；工具用 `_meta["openai/profile"]: true` 标记，发布精确输出 schema。部署并刷新连接器前，不将其视为线上已有能力。
+CogineX 服务源码已有只读 `GetProfile`，接受空参数并返回当前已验证账户的 `{id, email}`。`id` 是稳定的账户 UUID，邮箱只用于显示；工具用 `_meta["openai/profile"]: true` 标记，发布精确输出 schema。实际是否可用以当前连接发现为准，不能只凭源码或历史验收推断线上状态。
 
-Profile 改善账户标签和重新连接识别，本身不创建账户管理界面，也不是多账户功能的启用开关。登录与凭据由宿主管理，不存入插件源码。两种宿主分别授权，插件不跨宿主复制 token。
+Profile 改善账户标签和重新连接识别，本身不创建账户管理界面，也不是多账户功能的启用开关。登录与凭据由各宿主管理，不存入插件源码，插件不跨宿主复制 token。
 
 断开一个连接、清除本地宿主凭据、退出 CogineX 网站，以及服务端撤销 refresh family，有不同作用。当前 `/revoke` 契约包含 resource 参数，不能仅凭本地 logout 成功就宣称服务端 revoke 已验收。
 

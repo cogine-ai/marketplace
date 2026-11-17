@@ -1,5 +1,12 @@
 # Changelog
 
+## CogineX 0.2.2 candidate — 2026-11-17
+
+- Retain the existing shared package structure; add Cursor connection guidance without host-specific packaging changes.
+- Distinguish OAuth, tool discovery and object access; fully restart Cursor after stale-process discovery failures and evaluate fresh logs before attributing errors to the service.
+- Refresh guidance for images, task document links, colleague messages, team calendars, routines, agents, CRM and Notion import review.
+- Mark October capability and deployment notes as historical; preserve existing manifests, root catalogs, invocation metadata and installed origins. The user confirmed Cursor resumed working after a full process restart; broader business-tool coverage remains untested.
+
 ## Coding Engineer Skills 0.5.3 candidate — 2026-11-17
 
 - Keep `code-review` axis sub-agents to their own report: they no longer reload
