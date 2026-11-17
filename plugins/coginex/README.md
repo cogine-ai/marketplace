@@ -1,6 +1,6 @@
 # CogineX for Codex / Claude Code / Cursor
 
-内部自用插件，当前候选版本 `0.2.2`。通过 CogineX 实时 MCP 工具集处理任务、文档、图片、搜索、讨论、日历、提醒、Bot 和 CRM 工作。本版更新共享使用指导，补充 Cursor 重启与工具发现排查，保留既有包构成。
+内部自用插件，当前候选版本 `0.2.3`。通过 CogineX 实时 MCP 工具集处理任务、文档、图片、搜索、讨论、日历、提醒、Bot 和 CRM 工作。本版更新共享使用指导，补充 Cursor 重启与工具发现排查，保留既有包构成。
 
 ## 账户连接与管理
 
@@ -32,6 +32,14 @@ claude plugin install coginex@cogine-ai
 ```
 
 已有同名远程 Marketplace 时，本地候选版使用独立开发 Marketplace，保留原来源。远程发布后可刷新原 Marketplace 再升级；本地文件和安装测试不代表远程已发布。Claude Code 也可运行 `claude --plugin-dir ./plugins/coginex`。安装或更新后在新会话中使用。
+
+### Cursor 安装
+
+在 Cursor 的 Customize / Plugins 中打开 Marketplace 管理入口，将 `https://github.com/cogine-ai/marketplace.git` 添加为仓库来源；在该来源中找到 `coginex`，安装并启用。团队来源由有权限的成员在 Dashboard → Plugins & MCPs → Add Marketplace → Import from Repo 添加，再由用户在 Customize 中安装。入口随版本和账户权限不同，以当前界面为准；详见 [Cursor 插件文档](https://cursor.com/docs/plugins)。
+
+本机 CLI 的 `agent plugin marketplace add https://github.com/cogine-ai/marketplace.git` 只登记来源，不等于安装插件；不支持上述 `add .`，也没有 `agent plugin install` 子命令。需要临时测试本地源码时，从本仓库运行 `agent --plugin-dir ./plugins/coginex`，仅对该 CLI 会话加载，不代表 IDE 已安装。
+
+安装后在 MCP / 插件设置确认实际服务和五个 Skill 已加载，完成该服务的 OAuth，再读取工具列表和 `GetXConnectionContext`。本轮核对了 CLI 帮助与官方说明，未重新执行全新账户的安装验收；已有安装恢复的用户反馈见下文。
 
 ## Cursor 使用与工具发现
 

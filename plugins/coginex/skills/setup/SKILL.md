@@ -40,6 +40,8 @@ claude mcp logout plugin:coginex:coginex
 
 ## Cursor
 
+首次使用先按 [Cursor 安装说明](../../README.md#cursor-安装) 加载插件，再检查连接。
+
 在当前 Cursor 的 MCP / 插件设置中选择实际加载的 CogineX 服务，使用原生 OAuth 入口认证。插件服务名可能带 `plugin-` 前缀；以宿主显示的完整名称为准，不照搬 Claude 的 `plugin:coginex:coginex` 或 Codex 的 App 管理命令。
 
 认证后查看该服务的工具列表，再在当前对话发现并调用 `GetXConnectionContext`。更新后若只剩登录入口或业务服务未进入对话，先完整退出并重启 Cursor，再在新对话核对；仅刷新窗口可能仍沿用旧后台进程。只有登录工具或服务器列表里没有业务服务时，不能声称已读到任务、文档或收件箱。
