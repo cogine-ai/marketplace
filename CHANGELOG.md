@@ -1,5 +1,10 @@
 # Changelog
 
+## CogineX 0.2.3 candidate — 2026-11-17
+
+- Correct Bot credential handoff and separate Pipeline entry fields from company properties.
+- Clarify Cursor installation boundaries, Agent session routing and historical capability headings.
+
 ## CogineX 0.2.2 candidate — 2026-11-17
 
 - Retain the existing shared package structure; add Cursor connection guidance without host-specific packaging changes.

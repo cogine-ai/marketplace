@@ -16,7 +16,7 @@ description: 使用 CogineX 完成跨任务、知识与协作的工作，或在�
 | 登录、查看当前账户、重连、切换账户或退出 | [setup](../setup/SKILL.md) |
 | 查任务、创建和推进任务、改属性、写任务更新 | [tasks](../tasks/SKILL.md) |
 | 找资料、读取图片、读写文档、追溯讨论和任务历史 | [knowledge](../knowledge/SKILL.md) |
-| 频道或同事沟通、日历、提醒、定时工作、通知、Bot、CRM | [collaboration](../collaboration/SKILL.md) |
+| 频道或同事沟通、日历、提醒、定时工作、Agent 会话、通知、Bot、CRM | [collaboration](../collaboration/SKILL.md) |
 
 不要把已关闭或未发现的场景技能当作参考文件自动读取，也不要因链接存在就视为已启用。技能开关控制场景指导的加载，不关闭 CogineX MCP 工具；仍可直接使用宿主当前提供的工具完成请求。
 

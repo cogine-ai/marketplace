@@ -1,6 +1,6 @@
 ---
 name: collaboration
-description: 使用 CogineX 处理频道和同事沟通、日历、提醒、定时工作、通知、邮件、通话记录、Bot 和 CRM 工作。
+description: 使用 CogineX 处理频道和同事沟通、日历、提醒、定时工作、Agent 会话、通知、邮件、通话记录、Bot 和 CRM 工作。
 ---
 
 # CogineX 协作
@@ -37,9 +37,11 @@ description: 使用 CogineX 处理频道和同事沟通、日历、提醒、定�
 
 `ListBots` 找到 Bot，按请求使用 `CreateBot`、`ConfigureBot`、`ManageBotChannelAccess`、`GetBotWebhooks`、`DeleteBot`。更新配置只传本次需要变化的字段；Bot 的稳定 handle 可能被集成和提及引用，按工具描述处理改名影响。
 
-`IssueBotCredential` 当前仅准备创建凭据的请求，不直接生成或返回 secret。本地宿主没有 CogineX 的凭据卡片时，优先沿用返回的设置链接，引导用户在 CogineX Bot settings 中完成，不能报告 token 已签发，也不要把现有 OAuth token 当 Bot 凭据搬用。
+`IssueBotCredential` 当前仅准备创建凭据的请求，不直接生成或返回 secret。本地宿主没有 CogineX 的凭据卡片时，引导用户在 CogineX 中打开该 Bot 的设置创建 token；此工具不返回设置页链接，不自行拼接 URL，不能报告 token 已签发，也不要把现有 OAuth token 当 Bot 凭据搬用。
 
-`ListCompanies`、`GetCompany` 读取 CRM 公司。服务提供 `CreateCompany` / `CreateContact` 时，先定位已有公司，再按用户要求新增公司或联系人。阶段、负责人、收入等通过 `GetEntityProperties` / `SetEntityProperty` 编辑；团队可以定制阶段，因此从实际结果取得选项 ID。Pipeline、CSV 导入等使用当前发现的专用工具，按实际结果报告创建、导入及部分失败范围。
+`ListCompanies`、`GetCompany` 读取 CRM 公司。服务提供 `CreateCompany` / `CreateContact` 时，先定位已有公司，再按用户要求新增公司或联系人。编辑公司自身属性时使用 `GetEntityProperties` / `SetEntityProperty`。
+
+用户提到 deal、Pipeline、阶段或移动公司 / 联系人时，先用 `ListPipelines` 获取实际 Pipeline、字段名和阶段选项，再用 `FindPipelineEntries` 定位条目，按请求使用 `AddToPipeline` / `UpdatePipelineEntries`。阶段、负责人、收入属于 Pipeline 条目的字段时，不改公司自身属性；多个 Pipeline 都可能匹配时再澄清目标。CSV 导入使用当前发现的专用工具，按实际结果报告导入及部分失败范围。
 
 ## 操作结果
 

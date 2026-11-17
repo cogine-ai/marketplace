@@ -1,3 +1,11 @@
+# 0.2.3 Council 修正 — 2026-11-17
+
+修正 Bot 凭据交接与 Pipeline 条目路由，补充 Cursor 安装边界、Agent 会话发现入口，并将历史能力章节置于历史父节下。工具合同继续对照下文固定的 `bf882a1c790ad2bf6df2bf4e482a422b5d7263e9`。
+
+- 15 项打包测试、五个 Skill 结构校验、JSON 与包内相对链接检查、`git diff --check` 通过。
+- CLI 帮助确认 `agent plugin marketplace add <gitUrl>` 只登记来源，`agent --plugin-dir` 可临时加载；安装界面参考 Cursor 官方文档，未执行全新账户安装或业务工具验收。
+- 保留 MCP / App 配置、打包脚本与调用元数据；未修改服务、安装缓存或凭据。
+
 # 0.2.2 共享指导更新 — 2026-11-17
 
 本版保留五个 Skill、直接 HTTP MCP 配置、既有 Codex / Claude manifest 与打包脚本，只更新共享使用指导和说明，版本提升到 `0.2.2`。

@@ -30,6 +30,8 @@ claude mcp logout plugin:coginex:coginex
 
 ## Cursor
 
+首次使用先按 [Cursor 安装说明](../README.md#cursor-安装) 加载插件，再检查连接。
+
 Cursor 通过当前有效的 Marketplace 加载方式使用共用的五个 Skill 与直接 HTTP MCP。源码保留既有 Codex / Claude manifest 和打包方式；Codex 的 `.app.json` 不作为 Cursor 的账户配置，不需要另做一套 CogineX 工具实现。
 
 使用当前 MCP / 插件设置里的实际服务名称完成 OAuth，不照搬 Claude 的命名空间。更新后业务工具不可见时，完整退出并重启 Cursor，按新进程的工具列表和实际调用核对。用户已确认本次通过完整重启恢复；不能继续用重启前的旧日志归因服务端或 Cursor 故障。连接排查见 [setup](../skills/setup/SKILL.md)。
