@@ -26,7 +26,7 @@ Decision order:
 
 **Never `ease-in` on UI.** It starts slow, delaying the exact moment the user is watching. `ease-out` at 200ms *feels* faster than `ease-in` at 200ms.
 
-Built-in CSS easings are too weak. Use strong custom curves:
+Sonner-style toasts use `ease`. For other deliberate motion, use strong custom curves:
 
 ```css
 --ease-out: cubic-bezier(0.23, 1, 0.32, 1);        /* strong ease-out for UI */
@@ -44,9 +44,10 @@ Find curves at [easing.dev](https://easing.dev/) or [easings.co](https://easings
 | Tooltips, small popovers | 125–200ms |
 | Dropdowns, selects | 150–250ms |
 | Modals, drawers | 200–500ms |
+| Sonner-style toasts | 400ms, `ease` |
 | Marketing / explanatory | Can be longer |
 
-**Rule: UI animations stay under 300ms.** A 180ms dropdown feels more responsive than a 400ms one. Faster spinners make load feel faster (same actual time). Instant tooltips after the first (skip delay + animation) make a toolbar feel faster.
+**Use the per-element budgets above.** Most UI transitions finish within 300ms. A 180ms dropdown feels more responsive than a 400ms one. Faster spinners make load feel faster (same actual time). Instant tooltips after the first (skip delay + animation) make a toolbar feel faster.
 
 ## Physicality
 

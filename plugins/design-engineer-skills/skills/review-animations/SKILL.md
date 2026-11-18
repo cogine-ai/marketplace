@@ -31,9 +31,9 @@ Every animation in the diff is measured against these. A violation is a finding.
 
 2. **Frequency-appropriate.** Match motion to how often it's seen. Keyboard-initiated and 100+/day actions get **no** animation. Tens/day gets reduced motion. Occasional gets standard. Rare/first-time can have delight.
 
-3. **Responsive easing.** Entering/exiting elements use `ease-out` or a strong custom curve. `ease-in` on UI is a block — it delays the moment the user watches most. Built-in CSS easings are too weak; expect custom cubic-beziers.
+3. **Responsive easing.** Entering/exiting elements use `ease-out` or a strong custom curve. `ease-in` on UI is a block — it delays the moment the user watches most. Sonner-style toasts use the built-in `ease` curve.
 
-4. **Sub-300ms UI.** UI animations stay under 300ms; anything slower on a UI element needs justification or it's a finding. Per-element budgets live in [STANDARDS.md](STANDARDS.md).
+4. **Component duration.** Check the per-element budgets in [STANDARDS.md](STANDARDS.md). Most UI stays within 300ms. Modals and drawers allow 200–500ms, and Sonner-style toasts use 400ms.
 
 5. **Origin & physical correctness.** Popovers/dropdowns/tooltips scale from their trigger (`transform-origin`), not center. Never animate from `scale(0)` — start from `scale(0.9–0.97)` + opacity (Modals are exempt — they stay centered.)
 
@@ -53,9 +53,9 @@ Flag these on sight, hard:
 
 - `transition: all` (unbounded property animation)
 - `scale(0)` or pure-fade entrances with no initial transform
-- `ease-in` on any UI interaction; weak built-in easing on a deliberate animation
+- `ease-in` on any UI interaction; weak built-in easing on a deliberate animation outside the documented toast treatment
 - Animation on a keyboard shortcut, command-palette toggle, or 100+/day action
-- UI duration > 300ms with no stated reason
+- Duration outside the component’s budget with no stated reason
 - `transform-origin: center` on a trigger-anchored popover/dropdown/tooltip
 - Keyframes on toasts, toggles, or anything added/triggered rapidly
 - Animating layout properties (`width`/`height`/`margin`/`padding`/`top`/`left`)
