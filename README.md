@@ -35,7 +35,7 @@ Adding the Marketplace registers its catalog; it does not install every plugin.
 | `growth-and-gtm-skills` | 18 | Product marketing, growth models, channels, acquisition, conversion, retention, measurement, PLG sales assist, and recurring execution. |
 | `sales-skills` | 12 | Founder-led selling, first customers, prospecting, outreach, calls, enablement, enterprise accounts, pipeline review, and PLG sales integration. |
 | `founder-ceo-skills` | 17 | Founder judgment, product-market fit, strategy, decisions, planning, architecture diagrams, organization, finance, fundraising, and board communication. |
-| [`ai-slide-templates`](plugins/ai-slide-templates/README.md) | 1 | Create HTML presentations from 81 templates, with outline preparation, visual previews and browser verification. Codex and Claude Code. |
+| [`ai-slide-templates`](plugins/ai-slide-templates/README.md) | 1 | Create HTML presentations from 87 templates, with outline preparation, visual previews and browser verification. Codex and Claude Code. |
 | [`cursourcing`](https://github.com/cogine-ai/cursourcing) | 1 | **Your Codex just hired Cursor.** Cursor delivers the first complete result; Codex takes over acceptance and local corrections. Codex only. |
 
 The Codex catalog contains nine plugins. AI Slide Templates, CogineX and the six role-based skill

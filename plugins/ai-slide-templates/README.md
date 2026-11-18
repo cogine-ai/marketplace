@@ -1,6 +1,6 @@
 # AI Slide Templates
 
-Turn real content into a finished HTML presentation using 81 distinct slide
+Turn real content into a finished HTML presentation using 87 distinct slide
 systems. The skill can shape raw notes into an outline, recommend suitable
 templates, show cover previews, adapt a complete deck, and check it in a browser.
 
@@ -33,11 +33,11 @@ Node.js 22+, Git, network access for the first library download, and an agent
 with filesystem and browser access. No API key, account or MCP service is needed.
 The agent runs the bundled setup helper; the user does not need to clone a repo.
 
-The plugin contains the skill and setup helper. The roughly 186 MB template
+The plugin contains the skill and setup helper. The roughly 217 MiB template
 library is downloaded separately at the exact commit in `library.json` into
 `~/.cache/cogine-ai/ai-slide-templates/<commit>/`. Later tasks verify and reuse
 that local version without fetching updates. Some older templates load remote
-fonts or media, and two recent video layouts link to online playback; cached
+fonts or media, and some video layouts link to online playback; cached
 library availability does not guarantee every deck works entirely offline.
 
 For manual setup or a different cache location:
@@ -57,7 +57,7 @@ The plugin and library cache are source material, not working output folders.
 
 ## Deliverable
 
-Version 0.1.0 produces browser-openable HTML, with editable text and layout.
+Version 0.1.1 produces browser-openable HTML, with editable text and layout.
 Native PowerPoint (`.pptx`) export is outside this version. Browser verification
 checks the actual finished deck; if browser access is unavailable, the agent
 must state that verification was not performed.
@@ -77,4 +77,4 @@ node --test plugins/ai-slide-templates/scripts/*.test.mjs
 claude plugin validate plugins/ai-slide-templates --strict
 ```
 
-See [VALIDATION.md](VALIDATION.md) for the 0.1.0 acceptance scope.
+See [VALIDATION.md](VALIDATION.md) for the 0.1.1 acceptance scope.

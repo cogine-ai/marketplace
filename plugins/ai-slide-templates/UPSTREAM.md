@@ -1,10 +1,10 @@
 # Distribution source
 
 - Canonical workflow/templates: https://github.com/cogine-ai/ai-slide-templates
-- Reviewed commit: `32d18ffa7d5c2c8c04cb5d94e621e21dafdae772`
+- Reviewed commit: `7d0f48d6a37af48856e6143c70cdbc1b88d4e91a`
 - Upstream skill: `skills/ai-slide-templates/SKILL.md`
-- Plugin version: `0.1.0`
-- Library selection: `library.json` (81 templates, 1,183 demo slides)
+- Plugin version: `0.1.1`
+- Library selection: `library.json` (87 templates, 1,334 demo slides)
 
 This is a lightweight consumer package. Templates and their notices are fetched
 from the pinned source rather than copied into the Marketplace. The MIT LICENSE

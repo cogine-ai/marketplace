@@ -1,5 +1,9 @@
 # Changelog
 
+## AI Slide Templates 0.1.1 — 2026-11-19
+
+- Add six template systems and 151 example slides. The pinned library now includes 87 templates and 1,334 example slides.
+
 ## CogineX 0.2.3 candidate — 2026-11-17
 
 - Correct Bot credential handoff and separate Pipeline entry fields from company properties.

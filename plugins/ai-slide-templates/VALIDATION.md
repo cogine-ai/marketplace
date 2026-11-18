@@ -1,4 +1,10 @@
-# Version 0.1.0 validation
+# Version 0.1.1 validation
+
+Verified on macOS on 2026-11-19. Both Codex and Claude Code installed the candidate from the local Marketplace in isolated host configurations. The setup helper fetched the exact upstream commit on first use and passed all seven regression tests. Claude strict validation passed for the plugin and the Marketplace catalog.
+
+The pinned library passed structural validation with 87 templates and 1,334 example slides. All six additions (151 slides) passed the upstream Chrome visual validator at 1280 × 720 on copies outside the library. A Plotwise copy with adapted cover text also passed keyboard navigation through all 16 slides and back to the cover without page errors.
+
+## Version 0.1.0 validation
 
 2026-11-16; macOS, Node.js 24.22.1, Google Chrome at 1280×720.
 
