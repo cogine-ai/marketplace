@@ -33,7 +33,7 @@ Decision order for easing:
 --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);     /* iOS-like drawer curve */
 ```
 
-Duration budgets — **UI animations stay under 300ms**:
+Use the component’s duration budget:
 
 | Element | Duration |
 | --- | --- |
@@ -41,9 +41,11 @@ Duration budgets — **UI animations stay under 300ms**:
 | Tooltips, small popovers | 125–200ms |
 | Dropdowns, selects | 150–250ms |
 | Modals, drawers | 200–500ms |
+| Sonner-style toasts | 400ms, `ease` |
 | Marketing / explanatory | Can be longer |
+| Other UI transitions (e.g., accordions, ordinary toasts) | Up to 300ms |
 
-Hunt for: `ease-in` anywhere, bare `ease`/`linear` on entrances, durations > 300ms on UI elements, tooltip delay + animation on every tooltip in a toolbar (after the first, they should be instant).
+Hunt for: `ease-in` anywhere, bare `ease`/`linear` on entrances other than Sonner-style toast `ease`, durations outside the component’s budget, tooltip delay + animation on every tooltip in a toolbar (after the first, they should be instant).
 
 ## 3. Physicality & origin
 

@@ -18,7 +18,7 @@ Point out anything that looks internal — hostnames, IPs, customer or company n
 python3 "$skill_root/scripts/share.py" submit out.png out-dark.png --title "..." --stack "..." --name "..." [--github LOGIN] [--icons DIR]
 ```
 
-`--stack` lists the technologies, comma-separated, by their official names. Write `Name=key` to show a technology's logo beside it in the gallery. `key` is its entry in the icon directory's `manifest.json`, and `--icons` takes that directory. A name without `=` goes without a logo, for example `--stack "Next.js=nextjs,Hono=hono,Neon" --icons <icons-dir>`. The gallery shows logos from svgl, gilbarbara/logos and devicon.
+`--stack` lists the technologies, comma-separated, by their official names. Write `Name=key` to show a technology's logo beside it in the gallery. `key` is its entry in the icon directory's `manifest.json`, and `--icons` takes that directory. A name without `=` goes without a logo, for example `--stack "Next.js=nextjs,Hono=hono,Neon" --icons <icons-dir>`. The gallery shows logos from svgl, gilbarbara/logos, devicon, Kubernetes Community icons and CNCF Artwork; AWS, Google Cloud, Azure and Databricks product icons, Lucide and logos from a brand's own site or repo go without one.
 
 If `share.py` rejects a PNG as too large, re-render with a lower `--scale` and show the new pair before sending.
 

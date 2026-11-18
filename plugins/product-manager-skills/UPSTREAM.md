@@ -1,5 +1,13 @@
 # Upstream sources
 
+## Stack Diagram icon sources — 0.2.8
+
+The icon fetcher and gallery helper match [stack-diagram at da46c0e](https://github.com/caru-ini/stack-diagram/tree/da46c0e9fc5e293e0990324cb37c3e3e8d423cad/skills/stack-diagram). The technical icon reference, footer credits and gallery reference cover Kubernetes, CNCF and Databricks.
+
+## Web input method guidance — 0.2.7
+
+Adapted the searchable rule and keyboard cases from [upstream #562](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/pull/562). The textarea example uses the [Chrome guide’s legacy 229 fallback](https://github.com/GoogleChrome/modern-web-guidance-src/blob/main/guides/forms/ime-safe-enter-submit/guide.md). It checks composition before canceling Enter to preserve the [default IME action](https://www.w3.org/TR/uievents/#events-composition-canceling).
+
 ## Stack Diagram — 2026-11-11 (package 0.2.6)
 
 `stack-diagram` is adapted from [caru-ini/stack-diagram](https://github.com/caru-ini/stack-diagram/tree/5af3b095fff7109c905c5284dc510dc06588bade/skills/stack-diagram)

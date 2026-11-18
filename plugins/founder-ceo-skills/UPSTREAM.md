@@ -1,5 +1,9 @@
 # Upstream sources
 
+## Stack Diagram icon sources — 0.1.5
+
+The shared diagram skill follows [Product Manager Skills 0.2.8](../product-manager-skills/UPSTREAM.md#stack-diagram-icon-sources--028).
+
 ## Stack Diagram — 2026-11-11 (package 0.1.4)
 
 The Founder/CEO bundle distributes `stack-diagram` from the
