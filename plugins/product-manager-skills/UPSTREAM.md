@@ -1,5 +1,9 @@
 # Upstream sources
 
+## Web input method guidance — 0.2.7
+
+Adapted the searchable rule and keyboard cases from [upstream #562](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/pull/562). The textarea example uses the [Chrome guide’s legacy 229 fallback](https://github.com/GoogleChrome/modern-web-guidance-src/blob/main/guides/forms/ime-safe-enter-submit/guide.md). It checks composition before canceling Enter to preserve the [default IME action](https://www.w3.org/TR/uievents/#events-composition-canceling).
+
 ## Stack Diagram — 2026-11-11 (package 0.2.6)
 
 `stack-diagram` is adapted from [caru-ini/stack-diagram](https://github.com/caru-ini/stack-diagram/tree/5af3b095fff7109c905c5284dc510dc06588bade/skills/stack-diagram)

@@ -58,7 +58,7 @@ The answer must be one of these, named explicitly:
 
 ### 3. Speed — can it stay inside budget?
 
-The suggestion must work within the standard budgets (UI under 300ms):
+Use the budget for the suggested component:
 
 | Element | Duration |
 | --- | --- |
@@ -66,6 +66,7 @@ The suggestion must work within the standard budgets (UI under 300ms):
 | Tooltips, small popovers | 125–200ms |
 | Dropdowns, selects | 150–250ms |
 | Modals, drawers | 200–500ms |
+| Sonner-style toasts | 400ms, `ease` |
 | Marketing / explanatory | Can be longer |
 
 If the moment only "works" as a slow, showy animation, it fails the gate.

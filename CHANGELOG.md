@@ -1,5 +1,10 @@
 # Changelog
 
+## Product Manager Skills 0.2.7 and Design Engineer Skills 0.2.1 — 2026-11-19
+
+- Document IME-safe Enter handling in web textareas and add a searchable rule.
+- Correct the Motion spring example and align component timing guidance across design and review skills.
+
 ## CogineX 0.2.3 candidate — 2026-11-17
 
 - Correct Bot credential handoff and separate Pipeline entry fields from company properties.

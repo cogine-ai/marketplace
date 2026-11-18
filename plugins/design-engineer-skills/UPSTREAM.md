@@ -1,5 +1,9 @@
 # Upstream source
 
+## Motion guidance — 0.2.1
+
+Selectively adapted the spring API and component timing corrections from [Emil’s review](https://github.com/emilkowalski/skills/pull/51). Generation, audits, review and prototype guidance share the modal, drawer and Sonner-style toast budgets.
+
 ## Marketplace retirement — 2026-11-11 (package 0.2.0)
 
 `animation-vocabulary` is retired from both Marketplace bundles. The dated

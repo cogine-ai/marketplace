@@ -17,7 +17,7 @@
       "name": "design-engineer-skills",
       "source": "./plugins/design-engineer-skills",
       "description": "Eight design-engineering skills for UI prototyping, candidate marketing pages, library selection, polish, and motion.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "development"
     },
     {
@@ -31,7 +31,7 @@
       "name": "product-manager-skills",
       "source": "./plugins/product-manager-skills",
       "description": "Seventeen focused product-management skills for strategy, product judgment, discovery, research, design, architecture diagrams, UX audits, planning, and delivery handoff.",
-      "version": "0.2.6",
+      "version": "0.2.7",
       "category": "productivity"
     },
     {

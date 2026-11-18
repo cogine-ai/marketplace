@@ -105,7 +105,7 @@ Is the element entering or exiting?
       Yes → linear
     Default → ease-out
 
-**Critical: use custom easing curves.** The built-in CSS easings are too weak. They lack the punch that makes animations feel intentional.
+**Critical: use custom easing curves.** Sonner-style toasts use the built-in `ease` curve. For other deliberate motion, use the curves below. They lack the punch that makes animations feel intentional.
 
 ```css
 /* Strong ease-out for UI interactions */
@@ -130,9 +130,11 @@ Is the element entering or exiting?
 | Tooltips, small popovers | 125-200ms     |
 | Dropdowns, selects       | 150-250ms     |
 | Modals, drawers          | 200-500ms     |
+| Sonner-style toasts | 400ms, `ease` |
 | Marketing/explanatory    | Can be longer |
+| Other UI transitions (e.g., accordions, ordinary toasts) | Up to 300ms |
 
-**Rule: UI animations should stay under 300ms.** A 180ms dropdown feels more responsive than a 400ms one. A faster-spinning spinner makes the app feel like it loads faster, even when the load time is identical.
+**Use the component’s duration budget above.** Most UI transitions finish within 300ms. A 180ms dropdown feels more responsive than a 400ms one. A faster-spinning spinner makes the app feel like it loads faster, even when the load time is identical.
 
 ### Perceived performance
 
@@ -160,13 +162,11 @@ Springs feel more natural than duration-based animations because they simulate r
 Tying visual changes directly to mouse position feels artificial because it lacks motion. Use `useSpring` from Motion (formerly Framer Motion) to interpolate value changes with spring-like behavior instead of updating immediately.
 
 ```jsx
-import { useSpring } from 'framer-motion';
+import { useSpring, useTransform } from 'motion/react';
 
-// Without spring: feels artificial, instant
-const rotation = mouseX * 0.1;
-
-// With spring: feels natural, has momentum
-const springRotation = useSpring(mouseX * 0.1, {
+// Inside a component, mouseX is a MotionValue updated on pointer movement.
+const rotation = useTransform(mouseX, x => x * 0.1);
+const springRotation = useSpring(rotation, {
   stiffness: 100,
   damping: 10,
 });
@@ -668,7 +668,7 @@ When reviewing UI code, check for:
 | `ease-in` on UI element                    | Switch to `ease-out` or custom curve                             |
 | `transform-origin: center` on popover      | Set to trigger location or use Base UI's `var(--transform-origin)` (modals are exempt — keep centered) |
 | Animation on keyboard action               | Remove animation entirely                                        |
-| Duration > 300ms on UI element             | Reduce to 150-250ms                                              |
+| Duration exceeds the component’s budget | Shorten to its range in the duration table |
 | Hover animation without media query        | Add `@media (hover: hover) and (pointer: fine)`                  |
 | Keyframes on rapidly-triggered element     | Use CSS transitions for interruptibility                         |
 | Motion `x`/`y` props under load (pre-14.2) | Upgrade to 14.2+, or use `transform: "translateX()"`             |

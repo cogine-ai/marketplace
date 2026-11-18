@@ -93,7 +93,7 @@ Apple deliberately replaced the physics triplet (mass/stiffness/damping) with tw
 | Rotation | `0.8` | `0.4` |
 | Drawer / sheet | `0.8` | `0.3` |
 
-**Web mapping (Motion / Framer Motion):** the `bounce` + `duration` spring API maps closely to Apple's damping + response. A safe house style is `damping: 1.0` springs everywhere by default; reserve bounce for momentum-driven, physical interactions.
+**Web mapping (Motion / Framer Motion):** the `bounce` + `duration` spring API maps closely to Apple's damping + response. For a duration-based Motion spring, use `bounce: 0` by default. Motion’s physics-based `damping` is a coefficient. Apple's damping ratio of 1.0 describes critical damping and cannot be copied directly into that field.
 
 ```js
 import { animate } from 'motion';
