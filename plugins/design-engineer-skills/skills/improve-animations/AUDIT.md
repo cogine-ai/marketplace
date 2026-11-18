@@ -43,6 +43,7 @@ Use the component’s duration budget:
 | Modals, drawers | 200–500ms |
 | Sonner-style toasts | 400ms, `ease` |
 | Marketing / explanatory | Can be longer |
+| Other UI transitions (e.g., accordions, ordinary toasts) | Up to 300ms |
 
 Hunt for: `ease-in` anywhere, bare `ease`/`linear` on entrances other than Sonner-style toast `ease`, durations outside the component’s budget, tooltip delay + animation on every tooltip in a toolbar (after the first, they should be instant).
 

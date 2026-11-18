@@ -161,7 +161,7 @@ Load this file when doing a UI review/audit pass, or when you need the full chec
 
 ### 8. Forms & Feedback (MEDIUM)
 
-- `ime-composition-enter` - For custom web Enter shortcuts, cancel the handled Enter default before the isComposing/229 guard; keep IME confirmation separate from submission, preserve newline/modifier policy, and provide an explicit submit button
+- `ime-composition-enter` - For custom web Enter shortcuts, return on `isComposing` or legacy `keyCode === 229` so the IME can confirm text; call `preventDefault()` only for the handled shortcut, preserve newline/modifier policy, and provide an explicit submit button
 
 - `input-labels` - Visible label per input (not placeholder-only)
 - `error-placement` - Show a specific error below the related field and connect it with aria-describedby

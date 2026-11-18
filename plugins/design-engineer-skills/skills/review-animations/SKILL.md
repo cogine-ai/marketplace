@@ -33,7 +33,7 @@ Every animation in the diff is measured against these. A violation is a finding.
 
 3. **Responsive easing.** Entering/exiting elements use `ease-out` or a strong custom curve. `ease-in` on UI is a block — it delays the moment the user watches most. Sonner-style toasts use the built-in `ease` curve.
 
-4. **Component duration.** Check the per-element budgets in [STANDARDS.md](STANDARDS.md). Most UI stays within 300ms. Modals and drawers allow 200–500ms, and Sonner-style toasts use 400ms.
+4. **Component duration.** Check the per-element budgets in [STANDARDS.md](STANDARDS.md). Use a 300ms maximum for unlisted UI transitions. Modals and drawers allow 200–500ms, and Sonner-style toasts use 400ms.
 
 5. **Origin & physical correctness.** Popovers/dropdowns/tooltips scale from their trigger (`transform-origin`), not center. Never animate from `scale(0)` — start from `scale(0.9–0.97)` + opacity (Modals are exempt — they stay centered.)
 

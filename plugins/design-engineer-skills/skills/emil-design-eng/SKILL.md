@@ -132,6 +132,7 @@ Is the element entering or exiting?
 | Modals, drawers          | 200-500ms     |
 | Sonner-style toasts | 400ms, `ease` |
 | Marketing/explanatory    | Can be longer |
+| Other UI transitions (e.g., accordions, ordinary toasts) | Up to 300ms |
 
 **Use the component’s duration budget above.** Most UI transitions finish within 300ms. A 180ms dropdown feels more responsive than a 400ms one. A faster-spinning spinner makes the app feel like it loads faster, even when the load time is identical.
 
