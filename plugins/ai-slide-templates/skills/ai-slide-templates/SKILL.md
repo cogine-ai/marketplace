@@ -16,7 +16,7 @@ https://github.com/cogine-ai/ai-slide-templates
 Use `AGENTS.md` from the pinned library version for deck selection and assembly.
 The plugin setup below selects that version; do not fetch or switch to the latest
 branch during a task. Output is HTML. If the user asks for PPT/PPTX, explain the
-HTML deliverable before building; native `.pptx` export is outside version 0.1.0.
+HTML deliverable before building. The plugin produces HTML presentations only.
 
 ## Core Workflow
 

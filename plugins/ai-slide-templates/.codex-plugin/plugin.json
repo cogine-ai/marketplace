@@ -1,7 +1,7 @@
 {
   "name": "ai-slide-templates",
-  "version": "0.1.0",
-  "description": "Turn real content into browser-openable HTML presentations with 81 Cogine AI slide templates.",
+  "version": "0.1.1",
+  "description": "Turn real content into browser-openable HTML presentations with 87 Cogine AI slide templates.",
   "author": {
     "name": "Cogine AI",
     "url": "https://github.com/cogine-ai"
@@ -18,7 +18,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AI Slide Templates",
-    "shortDescription": "Create HTML presentations from 81 distinct templates.",
+    "shortDescription": "Create HTML presentations from 87 distinct templates.",
     "longDescription": "Shape notes into a slide outline, compare visual directions, and build a finished HTML presentation. Downloads a versioned template library on first use and checks the finished deck in a browser. Requires Node.js 22+, Git and browser access.",
     "developerName": "Cogine AI",
     "category": "Productivity",

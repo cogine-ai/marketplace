@@ -1,5 +1,9 @@
 # Changelog
 
+## AI Slide Templates 0.1.1 — 2026-11-19
+
+- Add six template systems and 151 example slides. The pinned library now includes 87 templates and 1,334 example slides.
+
 ## Design Engineer Skills 0.2.2, Product Manager Skills 0.2.8 and Founder/CEO Skills 0.1.5 — 2026-11-19
 
 - Fall back to the first prototype variant for out-of-range links and identify SVG as Satori’s output format.
