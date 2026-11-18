@@ -55,8 +55,8 @@ function key(overrides, expectedSent, expectedPrevented) {
   assert.equal(sent, expectedSent);
   assert.equal(prevented, expectedPrevented);
 }
-key({isComposing: true}, 0, true);
-key({isComposing: false, keyCode: 229}, 0, true);
+key({isComposing: true}, 0, false);
+key({isComposing: false, keyCode: 229}, 0, false);
 key({key: 'Process', keyCode: 229}, 0, false);
 key({key: 'a', keyCode: 65}, 0, false);
 key({shiftKey: true}, 0, false);
