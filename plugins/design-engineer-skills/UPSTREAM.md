@@ -1,5 +1,9 @@
 # Upstream source
 
+## Prototype selection and Satori — 0.2.2
+
+The initial variant selection in `prototype/PICKER.md` and the Satori output entry in `pick-ui-library/SKILL.md` follow [Emil’s skills at 64eb3de](https://github.com/emilkowalski/skills/tree/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills).
+
 ## Motion guidance — 0.2.1
 
 Selectively adapted the spring API and component timing corrections from [Emil’s review](https://github.com/emilkowalski/skills/pull/51). Generation, audits, review and prototype guidance share the modal, drawer and Sonner-style toast budgets.

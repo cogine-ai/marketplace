@@ -1,5 +1,10 @@
 # Changelog
 
+## Design Engineer Skills 0.2.2, Product Manager Skills 0.2.8 and Founder/CEO Skills 0.1.5 — 2026-11-19
+
+- Fall back to the first prototype variant for out-of-range links and identify SVG as Satori’s output format.
+- Add Kubernetes, CNCF and Databricks diagram icons, with gallery logo support for Kubernetes and CNCF.
+
 ## Product Manager Skills 0.2.7 and Design Engineer Skills 0.2.1 — 2026-11-19
 
 - Document IME-safe Enter handling in web textareas and add a searchable rule.

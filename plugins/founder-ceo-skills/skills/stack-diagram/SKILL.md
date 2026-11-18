@@ -27,7 +27,7 @@ Use `%%ICON_<name>%%` for icon references and leave the bundled font placeholder
 python3 "$skill_root/scripts/build.py" draft.html "$icons_dir" diagram.html --fonts "$skill_root/assets/fonts"
 ```
 
-Credit the icon sources actually used and keep the template's upstream attribution. If an official logo is unavailable, use a visibly generic icon and keep the service name on the node. Preserve the actual brand marks where available.
+In the footer, credit the icon sources actually used — the `source` field of each entry in the icons dir's `manifest.json` (e.g. `icons: svgl / devicon / Lucide`; source `aws` reads `AWS Architecture Icons`, source `gcp` reads `Google Cloud product icons`, source `azure` reads `Azure Public Service Icons`, source `databricks` reads `Databricks artwork via databricks-architecture-icons`, source `k8s` reads `Kubernetes Community Icons`, source `cncf` reads `CNCF Artwork`). Keep the template's upstream attribution. If an official logo is unavailable, use a visibly generic icon and keep the service name on the node. Preserve the actual brand marks where available.
 
 ## 3. Inspect and deliver
 
