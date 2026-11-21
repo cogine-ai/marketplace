@@ -18,10 +18,13 @@ example Claude Opus, GPT Sol, and Gemini Pro.
 
 In T3 Code, use `orchestrator_capabilities` to resolve the models, then
 `delegate_task` to start one delegate per model in parallel. Elsewhere, use
-the harness's subagent tools. If you cannot reach three providers, or a named
-member is unavailable, report it instead of substituting.
+the harness's subagent tools. Claude Opus can also be invoked through Cursor
+or Antigravity.
 
-Claude Opus can also be invoked through Cursor.
+If none of the available routes can run Claude Opus, use Grok from xAI in
+its place unless the user requires Opus or xAI is already represented on the
+council. Report any unavailable required member or inability to reach three
+distinct providers.
 
 Give each delegate the request and relevant context. For review or feedback,
 keep their work read-only. Collect their responses and summarize the useful
@@ -33,7 +36,8 @@ files while a delegate still reviews the same checkout. If the user's
 instructions mark a delegate as non-blocking, do not wait for it; treat a
 late result as feedback and do not record its score.
 
-For a code review, ask each delegate for a score out of 10.
+For a code review, ask each delegate for a score out of 10. Attribute each
+score to the model that gave it.
 Count each full review pass as one round.
 A fresh review after fixes starts a new round.
 
