@@ -21,7 +21,8 @@ The skills are `code-review`, `codebase-design`, `diagnosing-bugs`,
 are copied from
 [t3dotgg/tstack at 11e37a7](https://github.com/t3dotgg/tstack/tree/11e37a74d0a6868c121cd0910ab2b3bd9873b92a).
 Their `SKILL.md` files are unmodified. `council` comes from the same revision
-with one added sentence about invoking Claude Opus through Cursor.
+with local guidance for invoking Claude Opus through Cursor or Antigravity
+and using Grok as a fallback reviewer.
 `full-stop` retains the upstream body and uses explicit invocation on both
 hosts. The `file-pr` and `babysit-pr` entry points are local adaptations of
 the same workflows.

@@ -1,5 +1,10 @@
 # Changelog
 
+## Coding Engineer Skills 0.5.4 — 2026-11-21
+
+- Allow `council` to invoke Claude Opus through Cursor or Antigravity and use
+  Grok as a fallback reviewer when Opus is unavailable.
+
 ## AI Slide Templates 0.1.1 — 2026-11-19
 
 - Add six template systems and 151 example slides. The pinned library now includes 87 templates and 1,334 example slides.

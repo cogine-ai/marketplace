@@ -21,10 +21,10 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(len(list((ROLE/'skills').glob('*/SKILL.md'))), 36)
         for host in ['.codex-plugin', '.claude-plugin']:
             metadata = json.loads((ROLE/host/'plugin.json').read_text())
-            self.assertEqual(metadata['version'], '0.5.3')
+            self.assertEqual(metadata['version'], '0.5.4')
             self.assertIn('Thirty-six', metadata['description'])
         claude = json.loads((ROOT/'.claude-plugin/marketplace.json').read_text())
-        self.assertEqual(next(p for p in claude['plugins'] if p['name']=='coding-engineer-skills')['version'], '0.5.3')
+        self.assertEqual(next(p for p in claude['plugins'] if p['name']=='coding-engineer-skills')['version'], '0.5.4')
         native = json.loads((ROOT/'.agents/plugins/marketplace.json').read_text())
         entries = [p for p in native['plugins'] if p['name']=='coding-engineer-skills']
         self.assertEqual(len(entries), 1)
